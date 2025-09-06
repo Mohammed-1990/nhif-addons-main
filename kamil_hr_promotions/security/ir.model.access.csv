@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_promotions,hr_promotions,model_hr_promotions,,1,1,1,1
+access_promotions_timeline,promotions_timeline,model_promotions_timeline,,1,1,1,1
+access_promotions_timeline_line,promotions_timeline_line,model_promotions_timeline_line,,1,1,1,1
+,,,,,,,
+access_promotion_criteria_ratios,promotion_criteria_ratios,model_promotion_criteria_ratios,,1,1,1,1
+access_promotion_criteria_ratios_line,access_promotion_criteria_ratios_line,model_promotion_criteria_ratios_line,,1,1,1,1

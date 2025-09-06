@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<report id="general_contract_report" 
+		string="Contract" 
+		model="kamil.contracts.contract" 
+		report_type="qweb-html" 
+		file="kamil_contracts.contract_report" 
+		name="kamil_contracts.contract_report"
+		groups="base.group_user"
+		
+		/>	
+
+		
+	</data>
+</odoo>

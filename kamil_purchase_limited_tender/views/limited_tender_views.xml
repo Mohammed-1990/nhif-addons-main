@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Form Limited Tender-->
+	<record id="view_limited_tender" model="ir.ui.view">
+		<field name="name">limited.tender.form</field>
+		<field name="model">purchase.requisition</field>
+		<field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='action_announce_send']" position="after">
+				<button 
+					name="action_confirm_announcment" 
+					type="object"  
+					string="Confirm" 
+					class="btn-primary"  
+					attrs="{'invisible':['|',('type','!=','limited_tender'),('state','!=','draft')]}"
+					groups="kamil_purchase_qualifiying_suppliers.group_announcement" />
+
+
+					<!-- <button name="create_books" type="object" string="Create Tender Books" class="btn-primary" attrs="{'invisible':['|',('type','!=','limited_tender'),('type','!=','public_tender')]}" />	 -->
+
+			</xpath>
+
+			<xpath expr="//notebook/page[@name='announcement']" position="after">
+				<page
+            		string="Qualifier suppliers sent to"
+            		attrs="{'invisible':[('type','!=','limited_tender')]}">
+            		<separator string="Suppliers sent to"/>
+            		<group>
+            			<field 
+            				name="recipients_ids"
+            				string="Qualifier suppliers"
+            				widget="many2many_tags" 
+            				domain="[('qualified','=',True)]"
+            				options="{'no_create':'1'}"
+            				attrs="{'required':[('type','=','limited_tender'),('state',
+            				'=','comm_decided')],'readonly':[('state','!=','draft')]}" />
+            			<field name="announ_attach"/>
+            		</group>
+            	</page>
+			</xpath>
+		</field>
+	</record>
+	
+	<!-- Action Limited Tender-->
+	<record id="action_limited_tender" model="ir.actions.act_window">
+		<field name="name">Limited Tender</field>
+		<field name="res_model">purchase.requisition</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,kanban,form</field>
+		<field name="context">{'default_type':'limited_tender',}
+		</field>		
+		<field name="domain">[('type','=','limited_tender')]</field>
+	</record>
+
+
+	
+</odoo>

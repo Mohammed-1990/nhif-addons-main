@@ -1,0 +1,936 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_revenues_collection
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-16 20:17+0000\n"
+"PO-Revision-Date: 2019-11-16 20:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+msgid "67 Issued"
+msgstr "تم إصدار اورنيك 67"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+msgid "67 Permited"
+msgstr "تمت إجازة اورنيك 67"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_collection_receipt_67
+msgid "67 Receipt"
+msgstr "اورنيك 67"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\">  إسم المتحصل </strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> إسم بنك الشيك </strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> التاريخ </strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> الموقع </strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> تعليق</strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> رقم التحويلة </strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> رقم الشيك </strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> نوع التحصيل </strong>\n"
+"										<span style=\"float:right;margin-right:20px\">\n"
+"											شيك\n"
+"										</span>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> نوع التحصيل </strong>\n"
+"										<span style=\"float:right;margin-right:20px\">\n"
+"											نقد\n"
+"										</span>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> نوع التحصيل </strong>\n"
+"										<span style=\"float:right;margin-right:20px\">\n"
+"										تحويل بنكي\n"
+"										</span>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> نوع التحصيل </strong>\n"
+"										<span style=\"float:right;margin-right:20px\">\n"
+"										شيك مصرفي\n"
+"										</span>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong style=\"float:right\"> وصل من </strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__access_warning
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__access_warning
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__access_warning
+msgid "Access warning"
+msgstr "خطأ بالوصول"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_needaction
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_needaction
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__activity_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__activity_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__activity_state
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__activity_state
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:188
+#, python-format
+msgid "Add Amount More than Zero!"
+msgstr "إضف مبلغ اكبر من الصفر"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__amount
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_tree_view
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__amount_in_words
+msgid "Amount In Words"
+msgstr "المبلغ بالاحرف"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "الوسوم التحليلية"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Audit"
+msgstr "مراجعة"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+#: selection:collection.receipt_67,state:0
+msgid "Audited"
+msgstr "تمت المراجعة"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,collection_type:0
+msgid "Bank Transfer"
+msgstr "تحويل بنكي"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__journal_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__journal_id
+msgid "Bank/Cash"
+msgstr "البنك/الخزينة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_money_supply
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Bank/Save Supply"
+msgstr "تغذية بنك/خزينة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__branch_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__budget_item_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__analytic_account_id
+msgid "Budget Item"
+msgstr "البند"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Budget Items"
+msgstr "بنود الموازنة"
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:108
+#, python-format
+msgid "Can not Duplicate This Record, Please create a new Record"
+msgstr "لا تستطيع نسخ هذا المستند, رجاءاً انشي مستند جديد"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+msgid "Canceled"
+msgstr "تم اﻹلغاء"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__card_id
+msgid "Card"
+msgstr "البطاقة"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,collection_type:0
+msgid "Cash"
+msgstr "نقد"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,collection_type:0
+msgid "Cheque"
+msgstr "شيك"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__cheque_bank
+msgid "Cheque Bank"
+msgstr "إسم بنك الشيك"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__cheque_number
+msgid "Cheque Number"
+msgstr "رقم الشيك"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+msgid "Cheque/Transfer Bank Name"
+msgstr "إسم البنك"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+msgid "Cheque/Transfer No."
+msgstr "رقم الشيك/التحويل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__city
+msgid "City"
+msgstr "المدينة"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+msgid "Collected"
+msgstr "تم التحصيل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_account_move__collection_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__collection_ids
+msgid "Collection"
+msgstr "التحصيل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__date
+msgid "Collection Date"
+msgstr "تاريخ التحصيل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__collection_move_id
+msgid "Collection Move"
+msgstr "حركة التحصيل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__collection_type
+msgid "Collection Type"
+msgstr "نوع التحصيل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__collector_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__collector_id
+msgid "Collector"
+msgstr "المتحصل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__collector_account_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_hr_employee__collector_account_id
+msgid "Collector Account"
+msgstr "حساب المتحصل"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collector_view
+msgid "Collector Information"
+msgstr "بيانات المتحصل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.actions.act_window,name:kamil_accounting_revenues_collection.action_collector
+#: model:ir.ui.menu,name:kamil_accounting_revenues_collection.collector_menu
+msgid "Collectors"
+msgstr "المتحصلين"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+#: selection:collection.receipt_67,state:0
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__cost_center_id
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,collection_type:0
+msgid "Counter Cheque"
+msgstr "شيك مصرفي"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__access_url
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__access_url
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العملاء"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,operation_type:0
+msgid "Customization"
+msgstr "تخصيص"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__subscription_date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__subscription_date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_account_move__document_number
+msgid "Document Number"
+msgstr "رقم المستند"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+#: selection:collection.receipt_67,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__e_15_no
+msgid "E15 Number"
+msgstr "رقم إيصال 15 الإلكتروني"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__expire_date
+msgid "Expire Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank__id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__message_unread
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__message_unread
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__message_needaction
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__message_needaction
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__message_has_error
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__message_has_error
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.actions.act_window,name:kamil_accounting_revenues_collection.action_insured
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_res_partner__insured_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_res_users__insured_ids
+#: model:ir.ui.menu,name:kamil_accounting_revenues_collection.insured_menu
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.subsciber_view
+msgid "Insured"
+msgstr "المؤمن عليهم"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__insured_name
+msgid "Insured Name"
+msgstr "إسم المؤمن عليه"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+msgid "Internal Auditor Audit"
+msgstr "مراجعة المراجع الداخلي"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_hr_employee__is_collector
+msgid "Is Collector ?"
+msgstr "هل هو متحصل ؟"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_is_follower
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_is_follower
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_res_partner__is_subscriber
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_res_users__is_subscriber
+msgid "Is Subscriber"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+msgid "Journal Enteries"
+msgstr "قيود اليومية"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_account_move
+msgid "Journal Entries"
+msgstr "قيود اليومية"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__line_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_has_error
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_has_error
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cheque_bank__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط القادم"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__activity_summary
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__activity_summary
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط القادم"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__activity_type_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__activity_type_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__ref
+msgid "Number"
+msgstr "الرقم"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__message_needaction_counter
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__message_needaction_counter
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__message_has_error_counter
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__message_has_error_counter
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__message_unread_counter
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__message_unread_counter
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,operation_type:0
+msgid "Other Revenues"
+msgstr "إيرادات أخرى"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,activity_state:0
+#: selection:collection.collection.line,activity_state:0
+#: selection:collection.receipt_67,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__partner_id
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.actions.act_window,name:kamil_accounting_revenues_collection.action_partners
+#: model:ir.ui.menu,name:kamil_accounting_revenues_collection.partners_menu
+msgid "Partners"
+msgstr "الجهات"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+msgid "Period"
+msgstr "فترة"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Permit"
+msgstr "إجازة"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.receipt_67,state:0
+msgid "Permited"
+msgstr "تمت الإجازة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_subscriber__phone
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,activity_state:0
+#: selection:collection.collection.line,activity_state:0
+#: selection:collection.receipt_67,activity_state:0
+msgid "Planned"
+msgstr "المخطط"
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:185
+#, python-format
+msgid "Please Add Lines!"
+msgstr "رجاءاً ادخل التفاصيل"
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:213
+#, python-format
+msgid "Please Provide Debit Account for the Journal"
+msgstr "رجاءاً اضف حساب مدينين لليومية"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__access_url
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__access_url
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.actions.act_window,name:kamil_accounting_revenues_collection.action_receipt_67
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__receipt_67_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_money_supply__receipt_67_id
+#: model:ir.ui.menu,name:kamil_accounting_revenues_collection.receipt_67_menu
+msgid "Receipt 67"
+msgstr "اورنيك 67"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__partner_id
+msgid "Receipt From"
+msgstr "وصل من"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__ref
+msgid "Recipt Number"
+msgstr "رقم اﻹيصال"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__activity_user_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__activity_user_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Return To Collector"
+msgstr "إرجاع للمتحصل"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "Return To Supervisor"
+msgstr "إرجاع للمشرف"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+msgid "Returned To Collector"
+msgstr "تم الإرجاع للمتحصل"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,state:0
+msgid "Returned To Supervisor"
+msgstr "تم الإرجاع للمشرف"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.receipt_67,state:0
+msgid "Returned to Collector"
+msgstr "تم الإرجاع للمتحصل"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.receipt_67,state:0
+msgid "Returned to Supervisor"
+msgstr "تم الإرجاع للمشرف"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.actions.report,name:kamil_accounting_revenues_collection.revenue_receipt_report
+msgid "Revenue Receipt"
+msgstr "طباعة اﻹيصال"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.actions.act_window,name:kamil_accounting_revenues_collection.action_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_collection_collection
+#: model:ir.ui.menu,name:kamil_accounting_revenues_collection.revenues_collection_main_menu
+#: model:ir.ui.menu,name:kamil_accounting_revenues_collection.revenues_collection_menu
+msgid "Revenues Collection"
+msgstr "تحصيل الإيرادات"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__access_token
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__access_token
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__state
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__state_id
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__activity_state
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__activity_state
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,operation_type:0
+msgid "Subscription"
+msgstr "الاشتراكات"
+
+#. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,activity_state:0
+#: selection:collection.collection.line,activity_state:0
+#: selection:collection.receipt_67,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__amount
+msgid "Total Amount"
+msgstr "القيمة الكلية"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_unread
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_unread
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__website_message_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__website_message_ids
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection__website_message_ids
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_collection_line__website_message_ids
+#: model:ir.model.fields,help:kamil_accounting_revenues_collection.field_collection_receipt_67__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
+msgid "amount"
+msgstr "القيمة"
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_cheque_bank
+msgid "cheque.bank"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_collection_collection_line
+msgid "collection.collection.line"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model,name:kamil_accounting_revenues_collection.model_collection_subscriber
+msgid "collection.subscriber"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__journal_account_id
+msgid "journal Account"
+msgstr "حساب اليومية"
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:182
+#, python-format
+msgid "the period dates are not correct!"
+msgstr "الرجاء مراجعة تواريخ الفترة"
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "المبلغ"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "ايصال رقم"
+msgstr ""
+

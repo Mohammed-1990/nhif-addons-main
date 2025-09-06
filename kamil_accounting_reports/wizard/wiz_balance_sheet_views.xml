@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form wiz balance sheet report -->
+	<record id="view_wiz_balance_sheet_form" model="ir.ui.view">
+		<field name="name">wiz.balance.sheet.form</field>
+		<field name="model">wiz.balance.sheet</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group > 
+						<field name="date_to" />
+					</group>
+					<group>
+						<field name="revenue_account_id"  attrs="{'invisible':True}"/>
+						<field name="date_from_" attrs="{'invisible':True}"/>
+						<field name="date_to_" attrs="{'invisible':True}"/>
+					</group>
+					<group>
+						<field name="company_ids" widget="many2many_tags" options="{'no_create':True}"  groups="kamil_accounting_financial_ratification.hq_group"/>
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Wiz balance sheet-->
+	<act_window
+		id="action_wiz_balance_sheet"
+		name="Balance Sheet Report"
+		res_model="wiz.balance.sheet"
+		view_mode="form"
+		target="new"
+	/>
+
+		<menuitem 
+		id="menu_wiz_balance_sheet" 
+		sequence="3"
+		parent="kamil_accounting_reports.menu_account_report_1"
+	 	action="action_wiz_balance_sheet"/>
+
+
+</odoo>

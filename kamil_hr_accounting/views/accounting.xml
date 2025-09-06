@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="ratification_list_form_view_benefits" model="ir.ui.view">
+			<field name="name">ratification.list.inherit.benefits</field>
+			<field name="model">ratification.list</field>
+			<field name="inherit_id" ref="kamil_accounting_financial_ratification.ratification_list_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='set_to_draft']" position="after">
+					<button name="return_to_ia" string="Return to the internal auditor" type="object" attrs="{'invisible':['|',('state','not in',['draft','canceled']),'|',('from_hr','=',False)]}"/>
+					<field name="from_hr" invisible="True"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="ratification_form_view_benefits" model="ir.ui.view">
+			<field name="name">ratification.ratification.inherit.benefits</field>
+			<field name="model">ratification.ratification</field>
+			<field name="inherit_id" ref="kamil_accounting_financial_ratification.ratification_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='do_reset_to_draft']" position="after">
+					<button name="return_to_ia" string="Return to the internal auditor" type="object" attrs="{'invisible':['|',('state','not in',['draft','canceled']),'|',('from_hr','=',False)]}"/>
+					<field name="from_hr" invisible="True"/>
+					<field name="loan_id" force_save="1" invisible="True"/>
+					<field name="incentive_id" force_save="1" invisible="True"/>
+					<field name="payslip_id" force_save="1" invisible="True"/>
+				</xpath>
+			</field>
+		</record>
+
+
+		<record id="payment_form_view_benefits" model="ir.ui.view">
+			<field name="name">ratification.payment.inherit.benefits</field>
+			<field name="model">ratification.payment</field>
+			<field name="inherit_id" ref="kamil_accounting_financial_ratification.payment_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount_in_words']" position="after">
+					<field name="loan_id" force_save="1" invisible="True"/>
+					<field name="incentive_id" force_save="1" invisible="True"/>
+					<field name="payslip_id" force_save="1" invisible="True"/>
+				</xpath>
+				<xpath expr="//field[@name='line_ids']//field[@name='partner_id']" position="after">
+					<field name="loan_id" force_save="1" invisible="True"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

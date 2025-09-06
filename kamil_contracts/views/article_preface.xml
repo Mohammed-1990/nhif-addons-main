@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="kamil_contracts_article_preface_list">
+      <field name="name">contracts Article preface tree view</field>
+      <field name="model">kamil.contracts.article.preface</field>
+      <field name="arch" type="xml">
+        <tree string="preface">
+          <field name="name" string="Name"/>
+          <field name="category_sel" string="Category"/>
+          <field name="content_p" string="Content" widget="html"/>          
+        </tree>
+      </field>
+    </record>
+    
+   
+    <!-- actions opening views on models -->
+    <record model="ir.ui.view" id="kamil_contract_article_preface_form">
+      <field name="name">Preface</field>
+      <field name="model">kamil.contracts.article.preface</field>      
+      <field name="arch" type="xml">
+        <form string="preface form">        
+          
+          <sheet>
+            <group>
+               
+            <field name="name" String="Preface name ..." />
+            
+            <!-- <field name="category_sel" string="Category"/> -->
+            
+            <field name="content_p" string="Content" widget="html"/>          
+            </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+
+    <!--Contract Working agreement tree view -->
+    
+    <record model="ir.actions.act_window" id="kamil_contracts_article_preface_action_tree_view">
+      <field name="name">preface</field>
+      <field name="res_model">kamil.contracts.article.preface</field>
+      <field name="view_mode">tree,form</field>
+      <field eval="0" name="sequence"/>
+    </record>
+
+
+<!--Contract Working agreement form view -->
+    <record model="ir.actions.act_window" id="kamil_contracts_article_preface_form">
+      <field name="name">kamil contract window</field>
+      <field name="res_model">kamil.contracts.article.preface</field>
+      <field name="view_mode">form</field>
+      <field eval="1" name="sequence"/>
+    </record>
+    <!-- Main contract tree view -->
+    
+    <!-- Top menu item -->
+   
+    <!-- Upload contract term teplates -->
+     <menuitem name="Preface" id="kamil_contract_upload_preface_menu" parent="kamil_contract_upload_template_menu" action="kamil_contracts_article_preface_action_tree_view"
+      sequence="1"/>
+
+
+
+
+
+  </data>
+</odoo>

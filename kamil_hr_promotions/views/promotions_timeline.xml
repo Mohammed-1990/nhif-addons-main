@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+
+    <!--  promotions timeline tree view -->    
+    <record model="ir.ui.view" id="promotions_timeline_tree_view">
+      <field name="name">promotions.timeline.tree</field>
+      <field name="model">promotions.timeline</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="state"/>
+          </tree>
+      </field>
+    </record>
+
+
+    <!--  promotions timeline form view -->    
+    <record model="ir.ui.view" id="promotions_timeline_form_view">
+      <field name="name">promotions.timeline.form</field>
+      <field name="model">promotions.timeline</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_validate" string="Validate" type="object" class="btn btn-primary" states="draft"/>
+              <button name="do_cancel" string="Cancel" type="object" class="btn btn-primary" states="validated"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,validated"/>
+            </header>
+            <sheet>
+              <h1>
+                <field name="name" placeholder="Description" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </h1><br/><br/>
+              <notebook>
+                <page string="Details">
+                  <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                    <tree editable="bottom">
+                      <field name="category_id" widget="many2many_tags" options="{'no_create':1}"/>
+                      <field name="from_degree_id" options="{'no_create':1}"/>
+                      <field name="to_degree_id" options="{'no_create':1}"/>
+                      <field name="years"/>
+                    </tree>
+                  </field>
+                </page>
+              </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+          </form>
+        </field>
+      </record>
+
+
+   <!-- action promotions timeline -->
+   <record  id="action_promotions_timeline" model="ir.actions.act_window">
+      <field name="name">Promotions Timeline</field>
+      <field name="res_model">promotions.timeline</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <menuitem name="Promotions Timeline" id="promotions_timeline_menu" parent="hr_promotions_main_menu" action="action_promotions_timeline" sequence="2" groups="kamil_hr_security.hr_employment_department_group"/>
+
+
+
+  </data>
+</odoo>

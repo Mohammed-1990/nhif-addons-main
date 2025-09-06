@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Asset Category Sequence -->
+	<record id="seq_asset_catg" model="ir.sequence">
+		<field name="name">Asset Category</field>
+		<field name="code">account.asset.category</field>
+		<!-- <field name="prefix">AC</field> -->
+		<field name="padding">3</field>
+	</record>
+
+
+	<!-- Asset Sequence-->
+	<record id="seq_asset" model="ir.sequence">
+		<field name="name">Account Asset</field>
+		<field name="code">account.asset</field>
+		<field name="prefix">%(range_year)s/</field>
+		<field name="padding">5</field>
+	</record>
+</odoo>

@@ -1,0 +1,1441 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_allowances
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-29 11:05+0000\n"
+"PO-Revision-Date: 2021-11-29 11:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "<strong>قسم الاجور والمزايا</strong>\n"
+"                            <span>\n"
+"                                ...............................................................\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <strong>اعتماد شئون العاملين</strong>\n"
+"                            <span>\n"
+"                                ............................................................\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <strong>المراجعة</strong>\n"
+"                            <span>\n"
+"                                ...................................................................................\n"
+"                            </span>"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__account_number
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__account_number
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__account_number
+msgid "Account Number"
+msgstr "رقم الحساب"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,state:0
+#: selection:allowance.allowance.line,state:0
+#: selection:inclination.allowance,state:0
+#: selection:inclination.allowance.line,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_config_form_view
+#: selection:meal.allowance,state:0
+#: selection:meal.allowance.line,state:0
+#: selection:special.allowance,state:0
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__after_service_benefits
+msgid "After Service Benefits"
+msgstr "فؤائد مابعد الخدمة"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_account_config_form_view
+msgid "After service benefits"
+msgstr "فوائد مابعد الخدمة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__config_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__allowance
+msgid "Allowance"
+msgstr "البدل"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.act_window,name:kamil_hr_allowances.action_allowance_allowance_config
+#: model:ir.ui.menu,name:kamil_hr_allowances.menu_allowance_allowance_config
+msgid "Allowance Config"
+msgstr "اعدادات البدلات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__allowance_allowance_id
+msgid "Allowance Name"
+msgstr "اسم البدل"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__amount
+msgid "Allowance amount"
+msgstr "قيمه البدل"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.act_window,name:kamil_hr_allowances.action_allowance_allowance
+#: model:ir.ui.menu,name:kamil_hr_allowances.hr_allowance_main_menu
+#: model:ir.ui.menu,name:kamil_hr_allowances.menu_allowance_allowance
+msgid "Allowances"
+msgstr "البدلات"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.report,name:kamil_hr_allowances.allowances_report
+msgid "Allowances Report"
+msgstr "تقرير البدلات"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.act_window,name:kamil_hr_allowances.action_alternative_allowance
+#: model:ir.ui.menu,name:kamil_hr_allowances.menu_alternative_allowance
+msgid "Alternative Allowance"
+msgstr "بدل إنابه"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__alternative_degree
+msgid "Alternative Degree"
+msgstr "درجة الإنابه"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__amount
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,eligible:0
+#: selection:meal.allowance,eligible:0
+msgid "Appointment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__appointment_type_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__appointment_type_ids
+msgid "Appointment types"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.alternative_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: kamil_hr_allowances
+#: selection:alternative.allowance,state:0
+msgid "Approved"
+msgstr "موكده"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__merit_baggage_relay
+msgid "Baggage Relay"
+msgstr "ترحيل الأمتعة"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,state:0
+#: selection:allowance.allowance.line,state:0
+#: selection:inclination.allowance,state:0
+#: selection:inclination.allowance.line,state:0
+#: selection:meal.allowance,state:0
+#: selection:meal.allowance.line,state:0
+#: selection:special.allowance,state:0
+msgid "Benefits and wages"
+msgstr "المزايا والاجور"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__branch_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__company_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__company_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__company_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__company_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__company_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,eligible:0
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__company_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__company_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: selection:meal.allowance,eligible:0
+msgid "Branchs"
+msgstr "الفروع"
+
+#. module: kamil_hr_allowances
+#: code:addons/kamil_hr_allowances/models/allowance_allowance.py:48
+#: code:addons/kamil_hr_allowances/models/inclination_allowance.py:35
+#: code:addons/kamil_hr_allowances/models/meal_allowance.py:47
+#: code:addons/kamil_hr_allowances/models/special_allowance.py:33
+#, python-format
+msgid "Cannot be deleted in a case other than draft"
+msgstr "لا يمكن الحذف الا في حالة مسودة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__merit_cash_alternative
+msgid "Cash Alternative"
+msgstr "بديل نقدي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__central
+msgid "Central"
+msgstr "مركزي"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "Compute Allowance"
+msgstr "حساب البدل"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.alternative_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__date_from
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__date_from
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__date_from
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__date_from
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__date_to
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__date_to
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__date_to
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__date_to
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__days_leave
+msgid "Days Leave"
+msgstr "أيام الإجازة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__deduction_amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__deduction_amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__deductions
+msgid "Deduction Amount"
+msgstr "قيمة الخصم"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,eligible:0
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__degree_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__degree_id
+msgid "Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__degree_ids
+msgid "Degrees"
+msgstr "الدرجات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__department_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__department_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__department_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,eligible:0
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__department_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__department_ids
+#: selection:meal.allowance,eligible:0
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__marital_status
+msgid "Depends on marital status"
+msgstr "يعتمد على الحاله الاجتماعيه"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_config_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__line_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_config_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__discount
+msgid "Discount"
+msgstr "خصم الإجازة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance.config.line,marital:0
+#: selection:allowance.allowance.line,marital:0
+msgid "Divorced"
+msgstr "مطلقه"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,state:0
+#: selection:allowance.allowance.line,state:0
+#: selection:alternative.allowance,state:0
+#: selection:inclination.allowance,state:0
+#: selection:inclination.allowance.line,state:0
+#: selection:meal.allowance,state:0
+#: selection:meal.allowance.line,state:0
+#: selection:special.allowance,state:0
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__eligible
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__eligible
+msgid "Eligible"
+msgstr "الإستحقاق"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__emp_number
+msgid "Emp Number"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_allowances
+#: model:ir.ui.menu,name:kamil_hr_allowances.employee_allowance_main_menu
+msgid "Employee Allowances"
+msgstr "بدلات الموظفين"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__employee_no
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__employee_no
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance_line__account_number
+msgid "Employee bank salary account"
+msgstr "الحساب البنكي لراتب الموظف"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,eligible:0
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__employee_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__employee_ids
+#: selection:meal.allowance,eligible:0
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__line_ids
+msgid "Employees Allowances"
+msgstr "بدلات الموظفيين"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__end_service_rewards
+msgid "End of service benefits"
+msgstr "مكافأت نهايه الخدمه"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Ex: Special Allowance for year 2020"
+msgstr "مثال: البدل الخاص لعام 2020"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__from_salary
+msgid "From Salary"
+msgstr "من المرتب"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+msgid "From salary"
+msgstr "من المرتب"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__current_degree
+msgid "Functional Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,state:0
+#: selection:allowance.allowance.line,state:0
+#: selection:alternative.allowance,state:0
+#: selection:inclination.allowance,state:0
+#: selection:inclination.allowance.line,state:0
+#: selection:meal.allowance,state:0
+#: selection:meal.allowance.line,state:0
+#: selection:special.allowance,state:0
+msgid "General Directorate of Human Resources"
+msgstr "الاداره العامه للموارد البشريه"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.act_window,name:kamil_hr_allowances.action_hr_account_config
+#: model:ir.ui.menu,name:kamil_hr_allowances.menu_hr_account_config
+msgid "HR Account Config"
+msgstr "اعداد حسابات الموارد البشرية"
+
+#. module: kamil_hr_allowances
+#: selection:alternative.allowance,state:0
+msgid "Human Resources Sub-Manager"
+msgstr "مدير الادراه الفرعيه"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__message_unread
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__message_unread
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__message_unread
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__message_unread
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__message_unread
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__message_unread
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__message_needaction
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__message_needaction
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__message_needaction
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__message_needaction
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__message_needaction
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__message_needaction
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__message_has_error
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__message_has_error
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__message_has_error
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__message_has_error
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__message_has_error
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__message_has_error
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.act_window,name:kamil_hr_allowances.action_inclination_allowance
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__inclination_allowance
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__inclination_allowance_id
+#: model:ir.ui.menu,name:kamil_hr_allowances.menu_inclination_allowance
+msgid "Inclination Allowance"
+msgstr "بدل الميل"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.report,name:kamil_hr_allowances.inclination_allowance_report
+msgid "Inclination allowance Report"
+msgstr "تقرير بدل الميل"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,state:0
+#: selection:allowance.allowance.line,state:0
+#: selection:inclination.allowance,state:0
+#: selection:inclination.allowance.line,state:0
+#: selection:meal.allowance,state:0
+#: selection:meal.allowance.line,state:0
+#: selection:special.allowance,state:0
+msgid "Internal Auditor"
+msgstr "المراجع الداخلي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__is_active
+msgid "Is Active"
+msgstr "هل هو نشط"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_allowances
+#: code:addons/kamil_hr_allowances/models/hr_account_config.py:36
+#, python-format
+msgid "It is not possible to create more than one account preparation record for branch (%s)"
+msgstr "لا يمكن انشاء اكثر من سجل اعداد الحسابات للفرع (%s)  "
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__job_title_id
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__line_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__managment_id
+msgid "Managment"
+msgstr "الإدارة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__marital
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__marital
+msgid "Marital"
+msgstr "الحالة الاجتماعيه"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance.config.line,marital:0
+#: selection:allowance.allowance.line,marital:0
+msgid "Married"
+msgstr "متزوج/ه"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance.config.line,marital:0
+#: selection:allowance.allowance.line,marital:0
+msgid "Married  and have kids"
+msgstr "متزوج وله ابناء"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.act_window,name:kamil_hr_allowances.action_meal_allowance
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__meal_allowance
+#: model:ir.ui.menu,name:kamil_hr_allowances.menu_meal_allowance
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_account_config_form_view
+msgid "Meal Allowance"
+msgstr "بدل وجبه"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__meal_allowance_honesty
+msgid "Meal Allowance Honesty"
+msgstr "امانات بدل الوجبه"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__meal_leave_deduction
+msgid "Meal Leave Deduction"
+msgstr "خصم الاجازه"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.report,name:kamil_hr_allowances.meal_allowance_report
+msgid "Meal allowance Report"
+msgstr "تقرير بدل الوجبه"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "Meal allowance for month jan"
+msgstr "بدل الوجبه لشهر يناير"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__mission_allowance
+msgid "Mission Allowance"
+msgstr "بدل المأمورية"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__mission_petty_cash
+msgid "Mission Petty Cash"
+msgstr "نثرية المامورية"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__name
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__net
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__net
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__net
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__net
+msgid "Net"
+msgstr "الصافي"
+
+#. module: kamil_hr_allowances
+#: code:addons/kamil_hr_allowances/models/special_allowance.py:59
+#, python-format
+msgid "Net amount can not be zero"
+msgstr "الصافي لايمكن ان يكون صفر"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__no_months
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__no_months
+msgid "No Months"
+msgstr "عدد الشهور"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__notes
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__notes
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__notes
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__notes
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__notes
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.alternative_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,activity_state:0
+#: selection:allowance.allowance.config,activity_state:0
+#: selection:alternative.allowance,activity_state:0
+#: selection:hr.account.config,activity_state:0
+#: selection:inclination.allowance,activity_state:0
+#: selection:meal.allowance,activity_state:0
+#: selection:special.allowance,activity_state:0
+msgid "Overdue"
+msgstr "متاخر"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,state:0
+#: selection:allowance.allowance.line,state:0
+#: selection:alternative.allowance,state:0
+#: selection:inclination.allowance,state:0
+#: selection:inclination.allowance.line,state:0
+#: selection:meal.allowance,state:0
+#: selection:meal.allowance.line,state:0
+#: selection:special.allowance,state:0
+msgid "Personnel"
+msgstr "شؤون العاملين"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,activity_state:0
+#: selection:allowance.allowance.config,activity_state:0
+#: selection:alternative.allowance,activity_state:0
+#: selection:hr.account.config,activity_state:0
+#: selection:inclination.allowance,activity_state:0
+#: selection:meal.allowance,activity_state:0
+#: selection:special.allowance,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_hr_allowances
+#: code:addons/kamil_hr_allowances/models/allowance_allowance.py:146
+#: code:addons/kamil_hr_allowances/models/meal_allowance.py:159
+#: code:addons/kamil_hr_allowances/models/special_allowance.py:57
+#, python-format
+msgid "Please enter allowance details"
+msgstr "يرجي ادخال تفاصيل البدل"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__receivable
+msgid "Receivable"
+msgstr "المستحق"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__remove_diffrences
+msgid "Remove Diffrences"
+msgstr "ازالة مفارقات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.alternative_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+msgid "Return"
+msgstr "الترجيع"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Return1"
+msgstr "إرجاع"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "Return11"
+msgstr "إرجاع"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Return2"
+msgstr "إرجاع"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Return3"
+msgstr "ارجاع"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Returnn"
+msgstr "الترجيع"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance.config.line,marital:0
+#: selection:allowance.allowance.line,marital:0
+msgid "SINHLE"
+msgstr "اعزب/عزباء"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config_line__salary_rule_id
+msgid "Salary Rule"
+msgstr "قاعدة المرتب"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.alternative_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Send"
+msgstr "إرسال"
+
+#. module: kamil_hr_allowances
+#: model:ir.actions.act_window,name:kamil_hr_allowances.action_special_allowance
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__special_allowance
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance_line__special_allowance_id
+#: model:ir.ui.menu,name:kamil_hr_allowances.menu_special_allowance
+msgid "Special Allowance"
+msgstr "البدل الخاص"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__stamp
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__stamp
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__stamp
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__stamp
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__stamp
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__stamp
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__stamp
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__stamp
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+msgid "Stamp"
+msgstr "الدمغة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_line__state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance_line__state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__state
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__activity_state
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__activity_state
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__activity_state
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__activity_state
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__activity_state
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__activity_state
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.alternative_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_hr_allowances
+#: code:addons/kamil_hr_allowances/models/inclination_allowance.py:50
+#: code:addons/kamil_hr_allowances/models/meal_allowance.py:61
+#: code:addons/kamil_hr_allowances/models/meal_allowance.py:121
+#, python-format
+msgid "The amount cannot be zero"
+msgstr "قيمه البدل لايمكن ان تكون صفرا"
+
+#. module: kamil_hr_allowances
+#: code:addons/kamil_hr_allowances/models/allowance_allowance.py:375
+#, python-format
+msgid "The setting of this allowance can only be modified in the presidency"
+msgstr "لا يمكن تعديل اعداد البدل الا في الرئاسه"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance,activity_state:0
+#: selection:allowance.allowance.config,activity_state:0
+#: selection:alternative.allowance,activity_state:0
+#: selection:hr.account.config,activity_state:0
+#: selection:inclination.allowance,activity_state:0
+#: selection:meal.allowance,activity_state:0
+#: selection:special.allowance,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__total
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__total_amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__total_amount
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__total_amount
+msgid "Total Amount"
+msgstr "القيمة الكلية"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance_line__total_deductions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "Total Deductions"
+msgstr "اجمالي الاستقطاعات"
+
+#. module: kamil_hr_allowances
+#: code:addons/kamil_hr_allowances/models/allowance_allowance.py:148
+#: code:addons/kamil_hr_allowances/models/inclination_allowance.py:71
+#, python-format
+msgid "Total amount can not be zero"
+msgstr "القيمة الكليه لا يمكن ان تكون صفر"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_account_config_form_view
+msgid "Training"
+msgstr "التدريب"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__training_allowance
+msgid "Training Allowance"
+msgstr "بدل التدريب"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__training_expenses
+msgid "Training Expenses"
+msgstr "مصروفات البعثة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "Update Allowance"
+msgstr "تعديل البدل"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_allowance_allowance_config__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_alternative_allowance__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_hr_account_config__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_inclination_allowance__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_meal_allowance__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_allowances.field_special_allowance__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_allowances
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_allowances.field_allowance_allowance_config__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_allowances.field_alternative_allowance__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_allowances.field_hr_account_config__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_allowances.field_inclination_allowance__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_allowances.field_meal_allowance__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_allowances.field_special_allowance__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_allowances
+#: selection:allowance.allowance.config.line,marital:0
+#: selection:allowance.allowance.line,marital:0
+msgid "Widowre"
+msgstr "ارملة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_allowance_allowance
+msgid "allowance.allowance"
+msgstr "البدلات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_allowance_allowance_config
+msgid "allowance.allowance.config"
+msgstr "اعدادات البدلات"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_allowance_allowance_config_line
+msgid "allowance.allowance.config.line"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_allowance_allowance_line
+msgid "allowance.allowance.line"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_alternative_allowance
+msgid "alternative.allowance"
+msgstr "البديل النقدي"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.special_allowance_form_view
+msgid "amount"
+msgstr "القيمة"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "deductions"
+msgstr "الخصومات"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "discount"
+msgstr "خصم الاجازة"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_hr_account_config
+msgid "hr.account.config"
+msgstr "اعدادات حسابات الموارد"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+msgid "inclination allowance for month jan"
+msgstr "بدل الميل لشهر يناير"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_inclination_allowance
+msgid "inclination.allowance"
+msgstr "بدل الميل"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_inclination_allowance_line
+msgid "inclination.allowance.line"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_meal_allowance
+msgid "meal.allowance"
+msgstr "بدل الوجبه"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_meal_allowance_line
+msgid "meal.allowance.line"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.allowance_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "net"
+msgstr "الصافي"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "receivable"
+msgstr "المستخق"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_special_allowance
+msgid "special.allowance"
+msgstr "البدل الخاص"
+
+#. module: kamil_hr_allowances
+#: model:ir.model,name:kamil_hr_allowances.model_special_allowance_line
+msgid "special.allowance.line"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "stamp"
+msgstr "الدمغة"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_form_view
+msgid "total"
+msgstr "الإجمالي"
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "اجمالي الاستقطاعات"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "الاجمالي"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                        <br/>\n"
+"                        قسم الاجور والمزايا<br/>"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+msgid "الادارة العامة للموارد البشرية<br/>\n"
+"                      قسم الاجور والمزايا<br/>"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+msgid "الدرجه الوظيفيه"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "الدمغة"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "الصافي"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+msgid "القسم"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+msgid "المبلغ"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "المستحق"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.inclination_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "الموظف"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "ايام الاجازة"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "خصم الاجازة"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+msgid "عدد الشهور"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.meal_allowance_report_view
+msgid "قيمة البدل"
+msgstr ""
+
+#. module: kamil_hr_allowances
+#: model_terms:ir.ui.view,arch_db:kamil_hr_allowances.hr_allowances_report_view
+msgid "من المرتب"
+msgstr ""
+

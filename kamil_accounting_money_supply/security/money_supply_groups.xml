@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        
+
+        <record id="kamil_accounting_Bank_or_cash_supply_group" model="ir.module.category">
+            <field name="name">Accounting - Cash/Bank Supply</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Right</field>
+        </record>
+
+
+
+        <record id="money_supply_group" model="res.groups">
+            <field name="name">Money Supply</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_Bank_or_cash_supply_group"/>
+        </record>
+
+        <!-- 
+        <record id="supervisor_group" model="res.groups">
+            <field name="name">Supervisor</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_revenues_collection.kamil_accounting_group"/> 
+         </record> -->
+
+    </data>
+</odoo>

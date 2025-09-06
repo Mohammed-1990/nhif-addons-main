@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="missions_assigned_form_view">
+      <field name="name">missions.assigned.form</field>
+      <field name="model">missions.assigned</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="submit" states="draft" string="Submit" type="object" class="oe_highlight" groups="kamil_hr_security.hr_executive_office_group"/>
+              <button name="confirm" states="submit" string="Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_executive_office_group"/>
+              <button name="reject" states="draft,submit,confirmed" string="Reject" type="object" groups="kamil_hr_security.hr_executive_office_group"/>
+
+
+              <button name="set_to_draft" states="reject" string="Set to draft" type="object" groups="kamil_hr_security.hr_executive_office_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,submit,confirmed"/>
+          </header>
+
+            <sheet>
+                <h1>
+                  <field name="name"/><br/>
+                  <field name="missions_side" attrs="{'readonly':[('state','!=','draft')]}"  placeholder="Missions Side"/>
+                </h1>
+                <group>             
+                 </group>
+                 <group col="4">
+                   <field name="missions_type" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="statee_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                 </group>
+                 <group col="4">
+                  <field name="assigned" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="assigned_date" autocomplete="off" attrs="{'readonly':[('state','!=','draft')]}"/>
+                 </group>
+                 <group col="4">
+                   <field name="date_from" autocomplete="off" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="date_to" autocomplete="off" attrs="{'readonly':[('state','!=','draft')]}"/>
+                 </group>
+                 <group>
+                  <group>
+                     <field name="team_leader" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   </group>
+                 </group>
+                 <group>
+                   <field name="mission_purpose" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </group>
+               
+
+                 <notebook>
+                    <page string="Employees">               
+                    	<field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                     	 <tree editable="bottom">
+                       	 <field name="employee_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                         <field name="degree_id"/>
+                         <field name="job_title_id"/>
+                         <field name="department_id"/>
+                    	  </tree>
+                   		 </field>
+                    </page> 
+
+                    <page string="Participants">               
+                      <field name="line_ids2" attrs="{'readonly':[('state','!=','draft')]}">
+                       <tree editable="bottom">
+                         <field name="name"/>
+                        </tree>
+                       </field>
+                    </page> 
+                    <page string="Notes">
+                      <field name="notes"/>
+                    </page>
+             	   </notebook> 
+             </sheet>
+             <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+             </div> 
+          </form>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="missions_categories_petty_form_view">
+      <field name="name">missions categories petty</field>
+      <field name="model">missions.categories.petty</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <div>
+              <h1>
+                 <field name="name" placeholder="Mission Categories and Petty"/>
+              </h1>
+               </div>
+
+                 <group>
+                    <group>
+                      <field name="missions_type"/>
+                    </group>
+                 </group>
+
+           <notebook>
+              <page string="Details">
+                <field name="line_ids">
+                  <tree editable="bottom">
+                    <field name="job_title_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                    <field name="petty"/>
+                    <field name="mission_allowance"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="mission_petty_tree_view">
+          <field name="name">mission.petty.tree</field>
+          <field name="model">mission.petty</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="mission_id"/>
+              <field name="total"/>
+              <field name="state"/>
+            </tree>
+          </field>
+      </record>
+
+     <record model="ir.ui.view" id="mission_petty_form_view">
+      <field name="name">mission.petty.form</field>
+      <field name="model">mission.petty</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_submit" string="Submit" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_financial_group"/>
+              <button name="do_confirm" string="Confirm" type="object" class="btn btn-primary" states="submitted" groups="kamil_hr_security.hr_financial_group"/>
+              <button name="reject" states="draft,submitted" string="Reject" type="object" groups="kamil_hr_security.hr_financial_group"/>
+              <button name="set_to_draft" states="reject" string="Set to draft" type="object" groups="kamil_hr_security.hr_financial_group"/>
+              <field name="state" widget="statusbar" statusbar_visible="draft,submitted,confirmed"/>
+            </header>
+            <sheet>
+              <div>
+                <h1>
+                  <field name="name"/>
+                </h1>
+                <group col="4">   
+                   <field name="mission_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="no_days" force_save="1"/>
+                   <field name="means_of_travel" attrs="{'readonly':[('state','!=','draft')]}"/><newline/><newline/>
+                   <field name="cost_travel_fuel" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="departure_fee" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="cost_visas" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="visa_cost_officer" attrs="{'readonly':[('state','!=','draft')],'required':[('cost_visas','>',0.00)]}" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                   <field name="total"/>
+                </group>
+
+                  <notebook>
+                    <page string="Details">               
+                      <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                       <tree editable="bottom">
+                         <field name="employee_id" options="{'no_create':True,'no_open':True,'no_edit':True}" force_save="1"/>
+                         <field name="job_title_id" force_save="1"/>
+                         <field name="amount" force_save="1"/>
+                         <field name="total" force_save="1"/>
+                        </tree>
+                       </field>
+                    </page> 
+                 </notebook> 
+               </div>
+             </sheet>
+              <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+             </div> 
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="mission_filtering_tree_view">
+          <field name="name">mission.filtering.tree</field>
+          <field name="model">mission.filtering</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="mission_id"/>
+              <field name="petty_id"/>
+              <field name="total"/>
+              <field name="state"/>
+            </tree>
+          </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="mission_filtering_form_view">
+      <field name="name">mission.filtering.form</field>
+      <field name="model">mission.filtering</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_submit" string="Submit" type="object" class="btn btn-primary" states="draft"/>
+              <button name="do_confirm" string="Confirm" type="object" class="btn btn-primary" states="submitted"/>
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+              <div>
+                <h1>
+                  <field name="name"/>
+                </h1>
+                <group col="4">   
+                   <field name="mission_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>         
+                   <field name="petty_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="date" autocomplete="off"/>
+                   <field name="attachment" attrs="{'readonly':[('state','!=','draft')]}"/>
+                   <field name="petty_amount"/>
+                   <field name="total" force_save="1"/>
+                   
+                </group>
+
+                  <notebook>
+                    <page string="Details">               
+                      <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                       <tree editable="bottom">
+                         <field name="item"/>
+                         <field name="amount"/>
+                        </tree>
+                       </field>
+                    </page> 
+                 </notebook> 
+               </div>
+             </sheet>
+          </form>
+        </field>
+      </record>
+
+
+       <record model="ir.ui.view" id="mission_extend_tree_view">
+          <field name="name">mission.extend.tree</field>
+          <field name="model">mission.extend</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="user_id"/>
+              <field name="mission_id"/>
+              <field name="team_leader"/>
+              <field name="extend_to"/>
+              <field name="extend_reason"/>
+            </tree>
+          </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="mission_extend_form_view">
+      <field name="name">mission.extend.form</field>
+      <field name="model">mission.extend</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+           
+              <button name="gm_confirm" string="Send" type="object" class="btn btn-primary" states="draft"/>
+
+              <button name="finance" states="gm_confirm" string="Manager Confirm" type="object" class="oe_highlight"/>
+
+              <button name="confirmed" states="finance" string="general Manger Confirm" type="object" class="oe_highlight"/>
+
+              <button name="action_reject" type="object" string="Reject" states="gm_confirm" class="oe_highlight"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,gm_confirm,finance,confirmed"/>
+            </header>
+            <sheet>
+                <group col="4"> 
+                   <field name="user_id"/>  
+                   <field name="mission_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>         
+                   <field name="team_leader" />
+                   <field name="area"/>
+
+
+                 </group>
+                 <group col="4">
+                   <field name="date_from" autocomplete="off"/>
+                   <field name="date_to" autocomplete="off"/>
+                 </group>
+
+                 <group>
+                  <field name="mission_purpose"/>
+                 </group>
+                
+                 <group>
+                   
+                   <group>
+                    <field name="extend_to" string="Extend To" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  </group>
+                 </group>
+
+                 <group>
+                    <field name="extend_reason" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="reason_refuse" attrs="{'readonly':[('state','!=','gm_confirm')]}"/>
+                 </group>
+                 
+             </sheet>
+             <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+             </div> 
+          </form>
+        </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="mission_report_tree_view">
+          <field name="name">mission.report.tree</field>
+          <field name="model">mission.report</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="mission_id"/>
+              <field name="team_leader"/>
+              <field name="state"/>
+              <field name="date_from"/>
+              <field name="date_to"/>
+            </tree>
+          </field>
+      </record>
+
+   <record model="ir.ui.view" id="mission_report_form_view">
+      <field name="name">mission.report.form</field>
+      <field name="model">mission.report</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="gm_confirm" string="Submit" type="object" class="btn btn-primary" states="draft"/>
+              <button name="do_confirm" string="Confirm" type="object" class="btn btn-primary" states="gm_confirm"/>
+
+              <button name="action_reject" type="object" string="Reject" states="gm_confirm" class="oe_highlight"/>
+              <field name="state" widget="statusbar" statusbar_visible="draft,gm_confirm,confirmed"/>
+            </header>
+            <sheet>
+                <group col="4">   
+                   <field name="mission_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>         
+                   <field name="team_leader"/>
+                   <field name="area"/>
+
+                   <field name="name" invisible="True"/>
+                 </group>
+                 <group col="4">
+                   <field name="date_from" autocomplete="off"/>
+                   <field name="date_to" autocomplete="off"/>
+                 </group>
+                 <group>
+                   <field name="mission_purpose"/>
+                 </group>
+                 <group col="2">
+                   <field name="report_date" string="Date" autocomplete="off"/>
+                 </group>
+
+                 <group>
+                   <field name="mission_details" attrs="{'readonly':[('state','!=','draft')]}"/>
+                 </group>
+                 <group>
+                   <field name="summary_tasks_completed" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </group>
+             </sheet>
+             <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+             </div> 
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="mission_allowance_tree_view">
+          <field name="name">mission.allowance.tree</field>
+          <field name="model">mission.allowance</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="mission_id"/>
+              <field name="date"/>
+              <field name="no_days"/>
+              <field name="total"/>
+              <field name="state"/>
+            </tree>
+          </field>
+      </record>
+
+    <record model="ir.ui.view" id="mission_allowance_form_view">
+      <field name="name">mission.allowance.form</field>
+      <field name="model">mission.allowance</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="benefits_wages" string="Send" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+              <button name="hr_m" string="Confirm" type="object" class="btn btn-primary" states="benefits_wages"/>
+              <button name="general_hr" string="Submit" type="object" class="btn btn-primary" states="hr_m" />
+               <button name="internal_auditor" string="Submit" type="object" class="btn btn-primary" states="general_hr"/>
+              <button name="send_to_account" string="Send to accounting" type="object" class="btn btn-primary" states="internal_auditor"/>
+              <button name="do_return" string="Returnn" type="object" attrs="{'invisible':[('state','in',['draft','accounting'])]}"/>
+
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+                <group col="4">   
+                   <field name="mission_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>  
+                   <field name="date" autocomplete="off" attrs="{'readonly':[('state','!=','draft')]}" required="True"/>
+                   <field name="stamp" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                   <field name="no_days" force_save="1"/>
+                   <field name="total"/>
+                   <field name="name" invisible="True"/>
+                </group>
+                  <notebook>
+                    <page string="Details">               
+                      <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                        <tree editable="bottom">
+                           <field name="employee_id"/>
+                           <field name="job_title_id"/>
+                           <field name="amount"/>
+                           <field name="no_days" force_save="1"/>
+                           <field name="total"/>
+                           <field name="stamp"/>
+                           <field name="net"/>
+                        </tree>
+                       </field>
+                    </page> 
+                 </notebook> 
+             </sheet>
+              <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+             </div> 
+          </form>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="missions_assigned_tree_view">
+      <field name="name">missions.assigned.tree</field>
+      <field name="model">missions.assigned</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="missions_side"/>
+          <field name="missions_type"/>
+          <field name="date_from"/>
+          <field name="date_to"/>
+          <field name="team_leader"/>
+          <field name="state"/>
+        </tree>
+      </field>
+  </record>
+
+
+  <record  id="action_missions_assigned" model="ir.actions.act_window">
+      <field name="name">Missions Assigned</field>
+      <field name="res_model">missions.assigned</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+
+    <record  id="action_missions_categories_petty" model="ir.actions.act_window">
+      <field name="name">missions categories petty</field>
+      <field name="res_model">missions.categories.petty</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <record  id="action_mission_petty" model="ir.actions.act_window">
+      <field name="name">Mission petty</field>
+      <field name="res_model">mission.petty</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_mission_filtering" model="ir.actions.act_window">
+      <field name="name">Petty cash clearance</field>
+      <field name="res_model">mission.filtering</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_mission_extend" model="ir.actions.act_window">
+      <field name="name">Mission extend</field>
+      <field name="res_model">mission.extend</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_mission_report" model="ir.actions.act_window">
+      <field name="name">Mission report</field>
+      <field name="res_model">mission.report</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_mission_allowance" model="ir.actions.act_window">
+      <field name="name">Mission allowance</field>
+      <field name="res_model">mission.allowance</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  <menuitem name="Missions" parent="kamil_hr_benefits_wages.benefits_wages_menu" id="hr_missions_menu" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_executive_office_group,kamil_hr_security.hr_financial_group"
+    />
+
+  <menuitem name="Missions Assigned" parent="hr_missions_menu" id="menu_missions_assigned" action="action_missions_assigned" sequence="1" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_executive_office_group,kamil_hr_security.hr_financial_group"/>
+  
+  <menuitem name="Mission Categories And Petty" parent="hr_missions_menu" id="menu_missions_categories_petty" action="action_missions_categories_petty" sequence="10" groups="kamil_hr_security.hr_financial_group"/>
+
+   <menuitem name="Mission Petty" parent="hr_missions_menu" id="menu_mission_petty" action="action_mission_petty" sequence="3" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_executive_office_group,kamil_hr_security.hr_financial_group"/>
+
+    <menuitem name="Mission Extend" parent="hr_missions_menu" id="menu_mission_extend" action="action_mission_extend" sequence="5"/>
+
+    <menuitem name="Mission Report" parent="hr_missions_menu" id="menu_mission_report" action="action_mission_report" sequence="6" groups="kamil_hr_security.hr_executive_office_group"/>
+
+   <menuitem name="Mission Allowance" parent="hr_missions_menu" id="menu_mission_allowance" action="action_mission_allowance" sequence="7" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_executive_office_group"/>
+
+  </data>
+</odoo>

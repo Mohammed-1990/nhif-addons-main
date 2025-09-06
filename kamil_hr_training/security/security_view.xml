@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="model_apply_training_comp_rule" model="ir.rule">
+            <field name="name">Apply Training multi company rule</field>
+            <field name="model_id" ref="model_apply_training"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record> 
+
+         <record id="model_evaluation_candidates_comp_rule" model="ir.rule">
+            <field name="name">Evaluation Candidates multi company rule</field>
+            <field name="model_id" ref="model_evaluation_candidates"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record> 
+
+         <record id="model_study_mission_comp_rule" model="ir.rule">
+            <field name="name">Study Mission multi company rule</field>
+            <field name="model_id" ref="model_study_mission"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record> 
+
+		<record id="model_training_expenses_comp_rule" model="ir.rule">
+            <field name="name">Training Expenses multi company rule</field>
+            <field name="model_id" ref="model_training_expenses"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record> 
+
+        <record id="model_program_execution_comp_rule" model="ir.rule">
+            <field name="name">program execution multi company rule</field>
+            <field name="model_id" ref="model_program_execution"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+        </record> 
+
+        <record id="model_study_training_extension_comp_rule" model="ir.rule">
+            <field name="name">Study Training Expenses multi company rule</field>
+            <field name="model_id" ref="model_study_training_extension"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record id="model_study_training_interrupt_comp_rule" model="ir.rule">
+            <field name="name">Study Training Interrupt multi company rule</field>
+            <field name="model_id" ref="model_study_training_interrupt"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record> 
+
+        <record id="model_training_needs_comp_rule" model="ir.rule">
+            <field name="name">Training Needs multi company rule</field>
+            <field name="model_id" ref="model_training_needs"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record> 
+    </data>
+</odoo>

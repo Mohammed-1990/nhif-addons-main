@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form Wiz expenses journal report -->
+	<record id="view_wiz_expenses_journal_form" model="ir.ui.view">
+		<field name="name">wiz.expenses.journal.form</field>
+		<field name="model">wiz.expenses.journal</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="4">
+						<field name="date_from" required="1"/>
+						<field name="date_to" required="2"/>
+						<field name="group_id" options="{'no_create':'1'}" required="1" string="Choose Account/Group"/>
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Wiz expenses Journal-->
+	<act_window
+		id="action_wiz_expenses_journal"
+		name="Expenses Journa Report"
+		res_model="wiz.expenses.journal"
+		view_mode="form"
+		target="new"
+	/>
+
+
+
+		<menuitem 
+		id="menu_expenses_journal" 
+		sequence="8"
+		parent="kamil_accounting_reports.menu_report_payment"
+	 	action="action_wiz_expenses_journal"/>
+
+
+</odoo>

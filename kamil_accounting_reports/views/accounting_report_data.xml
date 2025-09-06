@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<template id="kamil_account_reports_backend" inherit_id="web.assets_backend" active="True">
+	
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/kamil_accounting_reports/static/src/js/account_reports.js"></script>
+			<link rel="stylesheet" type="text/scss" href="/kamil_accounting_reports/static/src/scss/account_financial_report.scss"/>
+
+		</xpath>
+	
+	</template>
+</odoo>

@@ -1,0 +1,112 @@
+<odoo>
+    <report id="limited_tender_report_pdf"
+            model="limited.tender.wizard"
+            string="Report Limited Tender"
+            report_type="qweb-html"
+            name="kamil_purchase_limited_tender.limited_tender_report_view"
+            menu="False"/>
+
+    <template id="limited_tender_report_view">
+            <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <br/>
+                 <div class="text-center" style="font:500;">
+                    <strong>الصندوق القومي للتامين الصحي
+                    <br/>
+                        قسم المشتريات
+                        <br/>
+                    تقرير المناقصات المحدودة</strong>
+                     <br/>
+                     <p>
+                         في الفترة من <span t-esc="date_from"/> الي<span t-esc="date_to"/>
+                     </p>
+                </div>
+                <br/>
+                <br/>
+                <div class="page">
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                          <thead style="display: table-header-group;">
+                                <th class="text-center fit">#</th>
+                                <th class="text-center fit">تاريخ الطلب</th>
+                                <th class="text-center fit">الرقم المتسلسل</th>
+                                <th class="text-center fit">البيان</th>
+                                <th class="text-center fit">المسؤول</th>
+                                <th class="text-center fit">رقم الكراسة المختارة</th>
+                                <!-- <th class="text-center fit">ممثل الحضور</th> -->
+                                <th class="text-center fit">المورد</th>
+                                <th class="text-center fit">المنتجات</th>
+                                <th class="text-center fit">الكمية المطلوبة</th>
+                                <th class="text-center fit">الضرائب</th>
+                                <th class="text-center fit">اجمالي المبلغ</th>
+                          </thead>
+                        <t t-set="count" t-value="1"/>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr style="page-break-inside: avoid;">
+                                    <td class="text-center" heidht="5">
+                                        <span t-esc="count"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['date']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['sequence']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['name']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['user']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['invoice_no']"/>
+                                    </td>
+
+                                    <!-- <td class="text-center">
+                                        <span t-esc="doc['attendee_name']"/>
+                                    </td> -->
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['partner']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['product']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['product_qty']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['taxes']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['total']"/>
+                                    </td>
+
+                                </tr>
+                            <t t-set="count" t-value="count+1"/>
+                            </t>
+                    </table>
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                        <tr>
+                            <td class="text-center">
+                                المجموع
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="'{0:,.2f}'.format(float( sum([doc['total'] for doc in docs]) ))"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+            </t>
+    </template>
+
+</odoo>

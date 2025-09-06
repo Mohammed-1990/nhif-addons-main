@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+		<record id="record_job_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Record Job</field>
+			<field name='model'>record.job.wizard</field>
+			<field name='arch' type='xml'>
+			<form string="Report Record Job">
+			  <sheet>
+			       <group colspan='4'>
+			         <field name="date_from"/>
+			         <field name="date_to"/>
+			       </group>
+			  </sheet>
+
+             <footer>
+              <button name='print_report' string='print' type='object' class="oe_highlight"/>
+              <button string="Cancel" special="cancel"/>
+
+             </footer>
+           </form>
+    	</field>
+    </record>
+
+    <record id="action_record_job_wizard" model="ir.actions.act_window">
+        <field name="name">Report Record</field>
+        <field name="res_model">record.job.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+<menuitem name="Record Job Report" id="menu_report_record" parent="kamil_hr.main_menu_jobs" action="action_record_job_wizard"/>
+
+	</data>
+</odoo>

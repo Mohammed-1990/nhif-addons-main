@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+
+	<act_window
+		id="action_view_contract"
+		name="Contracts"
+		res_model="kamil.contracts.contract"
+		view_mode="tree,form"
+		target="current"
+		domain="[('purchase_order_id','=',active_id)]"
+		context="{'create':False}"
+	/>
+
+	<!-- Form Public Tender Book -->
+	<record id="purchase_order_form_inherit" model="ir.ui.view">
+		<field name="name">purchase.order.inherit</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form"/>
+		<field name="arch" type="xml">
+			<field name="company_id" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<xpath expr="//div[@class='oe_title']" position="replace">
+				<div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+			</xpath>
+			          
+                 
+			<field name="requisition_id" position="after">
+				<field name="type" invisible="1" />
+				<field name="rfq_id" string="Request" readonly="1" attrs="{'invisible':[('type','in',('public_tender','limited_tender'))]}"/>
+			</field>
+			<xpath expr="//button[@name='button_done']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='state']" position="after">
+				<field name="rfq_id" invisible="1"/>
+			    <field 
+			    	name="state_rfq"
+			    	widget="statusbar" 
+			    	statusbar_visible="draft,purchase_department,branch_manager,gen_man_appr,finance_admin_manager,finance_manager" 
+			    	readonly="1"
+			    	attrs="{'invisible': [('type','!=','request_for_quotaion')]}"/>
+			    <field 
+			    	name="state_dp"
+			    	widget="statusbar" 
+			    	statusbar_visible="draft,purchase_department,gen_man_appr,finance_admin_manager,finance_manager" 
+			    	readonly="1"
+			    	attrs="{'invisible': [('type','!=','direct_purchase')]}"/>
+			</xpath>
+			<xpath expr="//button[@name='button_confirm']" position="replace">
+			</xpath>
+			<xpath expr="//button[@name='button_confirm'][1]" position="replace">
+			</xpath>
+			<field name="partner_id" position="attributes">
+				<attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+			</field>
+			<field name="date_order" position="attributes">
+				<attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+			</field>
+			<xpath expr="//button[1]" position="before">
+				<field name="is_contract" invisible="1"/>
+				<button 
+					name="confirm_rfq" 
+					type="object" 
+					attrs="{'invisible':['|',('state','!=','draft'),('rfq_id','=',False)]}" 
+					class="oe_highlight"
+					string="Confirm" 
+				/>
+				<button 
+					name="confirm_purchase_department" 
+					type="object" 
+					class="btn-primary"
+					attrs="{'invisible':['|',('state','!=','purchase_department'),('rfq_id','=',False)]}" 
+					string="Confirm" 
+				/>
+				<button 
+					name="button_confirm" 
+					type="object"
+					class="btn-primary" 
+					attrs="{'invisible':[('state','!=','finance_manager')]}"
+					string="Confirm" 
+				/>
+			</xpath>
+				
+			<xpath expr="//field[@name='date_order']" position="after">
+				<field 
+					name="purchase_department_attch"
+					attrs="{
+					'invisible':['|',('rfq_id','=',False),('state','in',('draft'))],
+					'readonly':[('state','in',('branch_manager','gen_man_appr','finance_admin_manager','finance_manager','purchase','done'))],
+					'required':[('state','=','purchase_department')]}"/>
+			</xpath>
+
+			<xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+				<attribute name="readonly">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="attributes">
+				<attribute name="readonly">1</attribute>
+				<attribute name="force_save">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree/field[@name='date_planned']" position="attributes">
+				<attribute name="readonly">1</attribute>
+				<attribute name="force_save">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree/field[@name='product_qty']" position="attributes">
+				<attribute name="readonly">1</attribute>
+				<attribute name="force_save">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree" position="attributes">
+				<attribute name="create">0</attribute>
+			</xpath>
+			<xpath expr="//button[@name='create_ratification']" position="after">
+			<button 
+					name="action_create_contract" 
+					type="object" 
+					string="Create Contract" 
+					attrs="{'invisible':['|','|',('state','!=','purchase'),('type','not in',('request_for_quotaion'),('is_contract','=',True))]}"
+				/>
+			</xpath>
+			<xpath expr="//div[@name='button_box']" position="inside">
+                <button 
+					name="%(action_view_contract)d"
+					type="action" 
+					string="Create Contract"
+					class="oe_stat_button" 
+					icon="fa-book" 
+					attrs="{'invisible':['|','|',('state','not in',('finance_manager','to approve')),('type','not in',('direct_purchase','public_tender','limited_tender')),('state_tender','!=','purchase')]}"
+					/>
+			</xpath>
+		</field>
+	</record>
+
+
+	<record id="view_purchase_order_filter_inherit" model="ir.ui.view">
+        <field name="name">request.quotation.select.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+        <field name="arch" type="xml">
+        	<field name="product_id" position="after">
+        		<field name="rfq_id" string="Request"/>
+        		<field name="origin"/>
+        	</field>
+        </field>
+    </record>
+
+</odoo>

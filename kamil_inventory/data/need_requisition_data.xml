@@ -1,0 +1,12 @@
+
+<odoo>
+  <data >
+  		<record id="need_request_seq" model="ir.sequence">
+			<field name="name">need request seq</field>
+	    	<field name="code">need.requisition.seq</field>
+			<field name="prefix">NR</field>
+	    	<field name="padding">4</field>
+			<field name="company_id"  eval="False"/>
+		</record>
+  </data>
+</odoo>

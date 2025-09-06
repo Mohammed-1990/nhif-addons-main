@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Temporary receipts -->
+		<record id="action_view_hr_payslip_temporary" model="ir.actions.act_window">
+	        <field name="name">Temporary Payslips</field>
+	        <field name="res_model">hr.payslip</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="context">{'default_is_temporary':True,'create':False,}</field>
+	        <field name="domain">[('is_temporary','=',True)]</field>
+	    </record>
+
+		<menuitem 
+			action="action_view_hr_payslip_temporary" 
+			id="menu_hr_payslip_temporary" 
+			parent="hr_payroll.menu_hr_payroll_root" 
+			string="Temporary Payslips"
+			sequence="3"
+		    />
+
+
+		<record id="action_view_hr_payslip_run_temporary" model="ir.actions.act_window">
+	        <field name="name">Temporary Batches</field>
+	        <field name="res_model">hr.payslip.run</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="context">{'default_is_temporary':True,}</field>
+	        <field name="domain">[('is_temporary','=',True)]</field>
+	    </record>
+
+		<menuitem 
+			action="action_view_hr_payslip_run_temporary" 
+			id="menu_hr_payslip_run_temporary" 
+			parent="hr_payroll.menu_hr_payroll_root" 
+			string="Temporary Batches"
+			sequence="4"
+		    />
+
+	</data>
+</openerp>

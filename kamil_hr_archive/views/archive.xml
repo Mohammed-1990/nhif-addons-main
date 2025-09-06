@@ -1,0 +1,190 @@
+<odoo>
+  <data>
+              <!-- Archive - Employee Data -->
+
+    <record model="ir.ui.view" id="archive_form_view">
+      <field name="name">archive.archive.form</field>
+      <field name="model">archive.archive</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <div>
+                <separator string="Employee Data" />
+                <group col="4">
+                    <field name="employee_no" />
+                    <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+                    <field name="branch_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                 </group>
+                  <separator string="File Data" />
+                 <group>
+                  <group>
+                      <field name="file_no"/>
+                      <field name="closet_no"/>
+                      <field name="box_no"/>
+                  </group>
+                 </group>
+               </div>
+
+              <notebook>
+              <page string="Certificates Of Study">
+                <field name="certificates_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                    
+                  </tree>
+                </field>
+              </page>
+
+               <page string="Appointment Documents">
+                <field name="appdocuments_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  
+                  </tree>
+                </field>
+              </page>
+
+              <page string="Promotions">
+                <field name="promotions_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+
+                  </tree>
+                </field>
+              </page>
+
+              <page string="Vacations">
+                <field name="vacations_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+
+
+              <page string="Bonuses">
+                <field name="bonuses_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+
+              <page string="Movements">
+                <field name="movements_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+
+              <page string="End Of Service">
+                <field name="endservice_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+
+              <page string="Service Record">
+                <field name="servicerecord_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Medical">
+                <field name="medical_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Training And Missions">
+                <field name="training_misssions_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+
+              <page string="Accounting Procedures">
+                <field name="accounting_procedures_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+
+              <page string="Secret Reports">
+                <field name="secret_report_id">
+                  <tree editable="bottom">
+                    <field name="doc_name"/>
+                    <field name="doc"/>
+                  </tree>
+                </field>
+              </page>
+
+            </notebook>
+
+            </sheet>
+             <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+
+          </form>
+        </field>
+      </record>
+      <record model="ir.ui.view" id="archive_tree_view">
+      <field name="name">archive.archive.tree</field>
+      <field name="model">archive.archive</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="employee_no"/>      
+            <field name="employee_id"/>
+            <field name="branch_id"/>
+            <field name="file_no" />
+            <field name="closet_no"/>
+            <field name="box_no" />
+        </tree>
+      </field>
+    </record>
+    
+
+    <record id="action_emp" model="ir.actions.act_window">
+      <field name="name">Archive</field>
+      <field name="res_model">archive.archive</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem 
+      name="Archive" 
+      id="archive_root_menu"
+      parent="hr.menu_hr_root"
+      sequence="6"
+      groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_career_path_section_group,kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+
+    <menuitem 
+      name="Archive" 
+      id="archive_menu"
+      parent="archive_root_menu"
+      action="action_emp" 
+      sequence="1"
+      />
+
+  </data>
+</odoo>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="tree_hr_incentive_view" model="ir.ui.view">
+			<field name="name">hr.incentive.tree</field>
+			<field name="model">hr.incentive</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="date_from"/>
+					<field name="date_to"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="view_hr_incentive_form" model="ir.ui.view">
+			<field name="name">hr.incentive.form</field>
+			<field name="model">hr.incentive</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+					  <button type="object" name="compute_incentive_line" string="Compute Incentive" icon="fa-gears" colspan="2" attrs="{'invisible':[('state','!=','draft')]}" class="oe_highlight" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+					  <button type="object" name="update_incentive_line" string="Update Incentive" icon="fa-gears" colspan="2" attrs="{'invisible':[('state','!=','draft')]}" class="oe_highlight" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+					  <button name="do_submit" string="Send" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+		              <button name="do_confirm" string="Submit" type="object" class="btn btn-primary" states="benefits_wages" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+		              <button name="do_gd_confirm" string="Confirm" type="object" class="btn btn-primary" states="general_directorate" groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group"/>
+		              <button name="do_ia_confirm" string="Approve" type="object" class="btn btn-primary" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+		              <button name="do_return1" string="Return" type="object" states="benefits_wages" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+		              <button name="do_return2" string="Return" type="object" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+		              <button name="do_return3" string="Return" type="object" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+					  <field name="state" widget="statusbar" />
+					</header>
+					<sheet>
+						<h1>
+							<field name="name" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</h1>
+						<group col="4">
+							<field name="user_id" readonly="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+							<field name="incentive" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group>
+							<group>
+								<field name="calculation_method" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="amount" attrs="{'invisible':[('calculation_method','!=','fixed')],'readonly':[('state','!=','draft')]}"/>
+								<field name="salary_rule" attrs="{'invisible':[('calculation_method','not in',['salary','salary_job_title'])],'required':[('calculation_method','in',['salary','salary_job_title'])],'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+								<field name="no_months" attrs="{'invisible':[('calculation_method','!=','salary')],'readonly':[('state','!=','draft')]}"/>
+							</group>
+							<group>
+								<field name="eligible" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="company_ids" attrs="{'invisible':[('eligible','!=','branchs')],'required':[('eligible','=','branchs')],'readonly':[('state','!=','draft')]}" widget="many2many_tags" string='Branchs' options="{'no_create':True,'no_edit':True,'no_open':True}" />
+								<field name="employee_ids" attrs="{'invisible':[('eligible','!=','employees')],'required':[('eligible','=','employees')],'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}">
+									<tree editable="bottom">
+										<field name="name"/>
+									</tree>
+								</field>
+								<field name="department_ids" attrs="{'invisible':[('eligible','!=','departments')],'required':[('eligible','=','departments')],'readonly':[('state','!=','draft')]}" widget="many2many_tags" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+								<field name="appointment_type_ids" attrs="{'invisible':[('eligible','!=','appointment_types')], 'required':[('eligible','=','appointment_types')],'readonly':[('state','!=','draft')]}" widget="many2many_tags" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+							</group>
+						</group>
+						<group col="4">
+							<field name="stamp" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+							<field name="tax_percentage" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+							<field name="deduct_leaves" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}" widget="many2many_tags"/>
+						</group>
+						<group>
+							<group>
+								<field name="degree_line_ids" attrs="{'invisible':[('calculation_method','!=','fixed_degree')],'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="degree_ids" widget="many2many_tags" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+										<field name="amount"/>
+									</tree>
+								</field>
+								<field name="job_line_ids" attrs="{'invisible':[('calculation_method','not in',['fixed_job_title','salary_job_title'])],'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="job_ids" widget="many2many_tags" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+										<field name="amount"/>
+
+									</tree>
+								</field>
+							</group>
+						</group>
+						<notebook>
+							<page string="Details">
+								<field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="employee_id" required="1"/>
+										<field name="department_id"/>
+										<field name="degree_id"/>
+										<field name="salary_amount"/>
+										<field name="amount" force_save="1" sum="المبلغ"/>
+										<field name="leave_deduction_amount"/>
+										<field name="deduction_percentage" force_save="1"/>
+										<field name="deduction_amount" force_save="1"/>
+										<field name="card" force_save="1" sum="Card"/>
+										<field name="projects" force_save="1" sum="Projects"/>
+										<field name="loans" force_save="1" sum="Loans"/>
+										<field name="violations_deduction" force_save="1"/>
+										<field name="stamp" force_save="1" sum="Stamp"/>
+										<field name="tax_id" force_save="1" sum="Tax"/>
+										<field name="total_deductions" force_save="1" sum="Total Deductions" />
+										<field name="net" force_save="1" sum="Net"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Notes">
+				              <div>
+				                <field name="notes"/>
+				              </div>
+				            </page>
+						</notebook>
+						
+					</sheet>
+					<div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div> 
+				</form>
+			</field>
+		</record>
+		
+
+		<record id="action_incentives" model="ir.actions.act_window">
+			<field name="name">Incentives</field>
+			<field name="res_model">hr.incentive</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+	          <p class="o_view_nocontent_smiling_face">
+	            Click create button to create new incentive
+	          </p>
+       		 </field>
+		</record>
+
+		
+		
+		<record id="hr_incentive_type_form" model="ir.ui.view">
+			<field name="name">incentive Type Form</field>
+			<field name="model">incentive.type</field>
+			<field name="arch" type="xml">
+				<form string="Hr Loan Type">
+					<sheet>
+						<div>
+			              <h1>
+			                <field name="name" placeholder="Incentive Name"/>
+			              </h1>
+			            </div>
+						<group col="4">
+							<field name="duration"/>
+							<field name="monthly_performance_discount" attrs="{'invisible':[('duration','!=','monthly')]}"/>
+							<field name="monthly_performance_account" attrs="{'invisible':[('monthly_performance_discount','=',False)],'required':[('monthly_performance_discount','=',True)]}" options="{'no_edit':True,'no_open':True,'no_create':True}"/>
+							<field name="account_id" options="{'no_edit':True,'no_open':True,'no_create':True}"/>
+							<field name="leave_deduction_id" options="{'no_edit':True,'no_open':True,'no_create':True}"/>
+							<field name="is_salary"/>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div> 
+				</form>
+			</field>
+		</record>
+
+
+		<record id="hr_incentive_type_tree" model="ir.ui.view">
+			<field name="name">incentive Type Tree</field>
+			<field name="model">incentive.type</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="duration"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_hr_incentives_type" model="ir.actions.act_window">
+			<field name="name">Incentive Setting</field>
+			<field name="res_model">incentive.type</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+	          <p class="o_view_nocontent_smiling_face">
+	            Click create button to create new incentive name
+	          </p>
+       		 </field>
+		</record>
+
+		<record model="ir.ui.view" id="hr_employee_incentive_form_view">
+	      <field name="name">Employees Incentives</field>
+	      <field name="model">hr.incentive.line</field>
+	      <field name="arch" type="xml">
+	          <form>
+	            <sheet>
+	              <group col="4" string="Employee Info">
+	                <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+	                <field name="employee_no"/>
+	                <field name="department_id" force_save="1" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+	                <field name="degree_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+	              </group>
+	              <group col="4" string="Incentive Info">
+	                <field name="date_from" force_save="1"/>
+	                <field name="date_to" force_save="1"/>
+	                <field name="name"/>
+					<field name="incentive" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+	            </group>
+	            <group col="4">
+	                <field name="amount" force_save="1"/>
+	                <field name="leave_deduction_amount"  force_save="1"/>
+	                <field name="deduction_percentage"  force_save="1"/>
+	                <field name="deduction_amount"  force_save="1"/>
+	            </group>
+	            <group col="4">
+	                <field name="card"  force_save="1"/>
+	                <field name="projects"  force_save="1"/>
+	                <field name="violations_deduction" force_save="1"/>
+	            </group>
+	            <group col="4">
+	                <field name="stamp" force_save="1"/>
+	                <field name="tax_id" force_save="1"/>
+	                <field name="total_deductions" force_save="1"/>
+	                <field name="net" force_save="1"/>
+	              </group>
+	            </sheet>
+	          </form>
+	        </field>
+	      </record>
+
+		<record id="tree_hr_employee_incentive_view" model="ir.ui.view">
+			<field name="name">hr.incentive.employee.tree</field>
+			<field name="model">hr.incentive.line</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="employee_id"/>
+					<field name="name"/>
+					<field name="incentive"/>
+					<field name="date_from"/>
+					<field name="date_to"/>
+					<field name="amount"/>
+					<field name="total_deductions"/>
+					<field name="net"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_employees_incentives" model="ir.actions.act_window">
+			<field name="name">Employees Incentives</field>
+			<field name="res_model">hr.incentive.line</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+	          <p class="o_view_nocontent_smiling_face">
+	            There is no incentives
+	          </p>
+       		</field>
+       		<field name="context">{'create':False,'edit':False,'delete':False}</field>
+       		<field name="domain">[('employee_id.user_id','=',uid), ('state','=','accounting')]</field>
+		</record>
+		
+		<menuitem name="Incentives" parent="benefits_wages_menu" id="hr_incentives_menu" sequence="3" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+				
+		<menuitem name="Incentives Menus" parent="hr_incentives_menu" id="menu_incentive" action="action_incentives" sequence="2" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+		
+		<menuitem name="Incentive Setting" parent="hr_incentives_menu" id="incentives_types_menu" action="action_hr_incentives_type" sequence="4" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+	</data>
+</odoo>

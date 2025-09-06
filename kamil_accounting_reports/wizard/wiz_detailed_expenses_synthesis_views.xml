@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form Wiz detailed.revenues.synthesis report -->
+	<record id="view_detailed_expenses_synthesis_form" model="ir.ui.view">
+		<field name="name">detailed.expenses.synthesis.wizard.form</field>
+		<field name="model">detailed.expenses.synthesis.wizard</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="4">
+						<field name="account_id"  options="{'no_create':'1'}" />
+						<field name="company_ids" widget="many2many_tags"  options="{'no_create':'1'}" />
+						<!-- <field name="year"/> -->
+					</group>
+					<group col="4">
+						<field name="date_from" required="1"/>
+						<field name="date_to" required="1"/>
+					</group>
+					<footer>
+						<button name="get_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Wiz expenses-->
+	<act_window
+		id="action_detailed_expenses_synthesis_wizard"
+		name="Detailed Expenses Synthesis Report"
+		res_model="detailed.expenses.synthesis.wizard"
+		view_mode="form"
+		target="new"
+	/>
+
+
+	<menuitem 
+		id="menu_detailed_expenses_synthesis_wizard" 
+		sequence="10"
+		parent="kamil_accounting_reports.menu_report_payment"
+	 	action="action_detailed_expenses_synthesis_wizard"/>
+
+
+</odoo>

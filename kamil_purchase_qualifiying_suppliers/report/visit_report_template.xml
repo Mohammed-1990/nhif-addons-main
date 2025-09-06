@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_visit_template_document">
+			<t t-call="web.external_layout">
+				<div class="page">
+					<div class="oe_structure"/>
+					<div class="header">
+						<h3 style="font-family:Calibri;" class="text-center">تقرير الزيارات الميدانية</h3>
+					</div>
+					<br/><br/><br/><br/>
+					<table class="text-right table table-condensed table-hover" border="1">
+						<thead>
+							<tr>
+								<td><strong>الرقم</strong></td>
+								<td><strong>المعيار</strong></td>
+								<td><strong>الدرجات المطلوبة</strong></td>
+								<td><strong>الدرجات المتحصل عليها</strong></td>
+								<td><strong>ملاحظات</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-foreach="o.requisition_id.visit_id.visit_ids" t-as="l">
+								<tr>
+									<td>
+										<t t-esc="l_index + 1"/>
+									</td>
+									<td>
+										<span t-field="l.criteria_id"/>
+									</td>
+									<td>
+										<span t-field="l.required_score"/>
+									</td>
+									<td></td>
+									<td>
+										<span t-field="l.note"/>
+									</td>
+								</tr>
+							</t>
+							<tr>
+								<th colspan="2"><b>مجموع الدرجات المطلوبة</b></th>
+                        		<td colspan="3">
+                        			<t t-esc="'{0:,.2f}'.format(float(sum([v.required_score for v in o.requisition_id.visit_id.visit_ids])))"/>
+                        		</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<br/><br/><br/><br/>
+					<strong>أعضاء اللجنة</strong>
+					<br/>
+					<table class="text-right table table-condensed table-hover" border="1">
+						<thead>
+							<tr>
+								<td><strong>الرقم</strong></td>
+								<td><strong>الاسم</strong></td>
+								<td><strong>الوظيفة</strong></td>
+								<td><strong>التوقيع</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-foreach="o.committee_ids" t-as="c">
+								<tr>
+									<td>
+										<t t-esc="c_index + 1"/>
+									</td>
+									<td>
+										<span t-field="c.employee"/>
+									</td>
+									<td>
+										<span t-field="c.role"/>
+									</td>
+									<td></td>
+								</tr>
+							</t>
+						</tbody>
+					</table> 
+				</div>
+			</t>
+		</template>
+
+		<template id="report_visit_template">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="kamil_purchase_qualifiying_suppliers.report_visit_template_document" />				
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>

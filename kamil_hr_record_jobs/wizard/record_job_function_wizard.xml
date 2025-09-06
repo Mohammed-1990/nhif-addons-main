@@ -1,0 +1,47 @@
+<odoo>
+	<data>
+		<record id="record_jobs_wizard_form" model="ir.ui.view">
+  			<field name='name'>Report by function</field>
+  			<field name='model'>function.wizard</field>
+  			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+                  <group>
+        	            <group>
+                          <field name="record_jobs_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                      </group>
+        	        </group>
+                  <footer>
+                      <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                      <button string="Cancel" special="cancel"/>
+                  </footer>
+        			</sheet>
+                </form>
+    	  </field>
+      </record>
+
+
+
+
+
+    <record id="action_record_jobs_wizard" model="ir.actions.act_window">
+        <field name="name">Report by function</field>
+        <field name="res_model">function.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <menuitem name="Reports" 
+              id="record_jobs_reports_menu" 
+              parent="record_job_main_menu" 
+              sequence="2"/>
+
+
+    <menuitem name="Report by function" 
+              id="menu_report_record" 
+              parent="record_jobs_reports_menu" 
+              action="action_record_jobs_wizard"/>
+
+	</data>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Form-->
+	<record id="view_wiz_area_rehabilitaion_form" model="ir.ui.view">
+		<field name="name">wiz.area.rehabiliaition.form</field>
+		<field name="model">wiz.area.rehabilitaion</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="book_id" invisible="1"/>
+						<field name="area_ids" widget="many2many_tags" options="{'no_create':'1'}"/>
+					</group>
+					<footer>
+						<button name="action_confirm" type="object" string="Confirm" class="btn-primary"/>
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- Action-->
+	<act_window
+		id="action_area_rehabiliation_confirm"
+		name="Area of Rehabilitaion Confirm"
+		res_model="wiz.area.rehabilitaion" src_model="tender.book"
+		view_mode="form"
+		target="new"
+		context="{'default_book_id':active_id}"
+		/>
+
+</odoo>

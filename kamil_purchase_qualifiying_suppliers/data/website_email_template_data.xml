@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		  <record id="email_template_wabsite_qualifying_supplier" model="mail.template">
+            <field name="name">Tender Book</field>
+            <field name="model_id" ref="purchase_requisition.model_purchase_requisition"/>
+            <field name="subject">Tender Book</field>
+            <field name="email_from">${object.create_uid.email_formatted | safe}</field>
+            <field name="email_to">muram@almedtech.com</field>
+            <field name="body_html" >
+                <![CDATA[
+                    ${object.announcement}
+                    
+                ]]>
+            </field>
+            <field name="user_signature" eval="False"/>
+            <field name="auto_delete" eval="True"/>
+        </record>
+	</data>
+</odoo>

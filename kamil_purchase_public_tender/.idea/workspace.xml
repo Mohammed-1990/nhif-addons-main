@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4aec1299-4e4d-4c35-bc81-51e845caf823" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../kamil_committees/i18n/ar_AA.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_archive/i18n/ar_SY.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/i18n/ar_AA.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/advance_salary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/advance_salary.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_leaves/models/request_leave_programming.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_leaves/views/request_leave_programming.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_missions/i18n/ar_AA.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_missions/security/.~lock.ir.model.access.csv#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kamil_hr_personal/i18n/ar_SY.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/controllers/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/demo/report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/de.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/es.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/es_CL.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/fr.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/hr.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/hr_HR.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/it.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/nl_NL.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/pt.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/pt_PT.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/i18n/tr.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/models/ir_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/readme/CONTRIBUTORS.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/readme/DESCRIPTION.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/readme/INSTALL.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/readme/USAGE.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/report/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/report/report_partner_xlsx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/report/report_xlsx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/static/description/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/static/description/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/static/src/js/report/action_manager_report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/tests/test_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../report_xlsx/views/webclient_templates.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_committees/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_committees/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_accounting/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_accounting/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_accounting/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_accounting/models/accounting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_accounting/views/accounting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/accounting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/allowance_allowance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/models/allowance_allowance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/hr_account_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/models/hr_account_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/inclination_allowance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/models/inclination_allowance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/meal_allowance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/models/meal_allowance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/models/special_allowance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/models/special_allowance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/report/allowances_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/report/allowances_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/report/inclination_allowance_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/report/inclination_allowance_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/report/meal_allowance_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/report/meal_allowance_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/security/security_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/security/security_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/views/allowance_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/views/allowance_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/views/hr_account_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/views/hr_account_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/views/hr_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/views/hr_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/views/inclination_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/views/inclination_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/views/meal_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/views/meal_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_allowances/views/special_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_allowances/views/special_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_archive/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_archive/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_archive/report/employee_file_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_archive/report/employee_file_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_archive/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_archive/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_archive/views/archive.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_archive/views/archive.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_archive/wizard/employee_file_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_archive/wizard/employee_file_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/data/hr_payroll.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/data/hr_payroll.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/accounting.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/accounting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_incentive.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_incentive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_loan.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_loan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_payroll.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_payroll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_projects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_projects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_projects_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/models/hr_projects_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/balancing_salaries_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/balancing_salaries_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/balancing_salaries_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/balancing_salaries_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/housing_form_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/housing_form_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_loan_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_loan_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_loan_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_loan_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_payslips_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_payslips_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_projects_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/hr_projects_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template_dup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template_dup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template_dup2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template_dup2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template_dup3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/incentive_template_dup3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/salary_certificate_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/salary_certificate_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/settlement_report_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/settlement_report_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/settlement_report_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/report/settlement_report_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/security/security_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/security/security_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/accounting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/accounting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_incentive.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_incentive.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_loan_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_loan_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_payroll.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_payroll.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_projects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_projects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_projects_request.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/hr_projects_request.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/views/temporary_payroll.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/hr_loan_wizard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/hr_loan_wizard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/hr_loan_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/hr_loan_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/hr_projects_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/hr_projects_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/settlement_report_wizard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/settlement_report_wizard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/settlement_report_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_benefits_wages/wizard/settlement_report_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/models/career.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/models/career.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/report/career_per_distribution_activities_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/report/career_per_distribution_activities_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/report/competencie_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/report/competencie_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/report/general_performance_report_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/report/general_performance_report_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/report/monthly_performance_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/report/monthly_performance_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/report/technical_performance_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/report/technical_performance_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_career/views/career.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_career/views/career.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_configurations/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/i18n/ar_AA.po.mine" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/i18n/ar_AA.po.r82" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/i18n/ar_AA.po.r83" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_configurations/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/models/configurations_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_configurations/models/configurations_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/security/.~lock.ir.model.access.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_configurations/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_configurations/views/configurations_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_configurations/views/configurations_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/models/removing_differences.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/models/removing_differences.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/report/removing_differ_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/report/removing_differ_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/views/hr_contract.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/views/hr_contract.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_contract/views/removing_differences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_contract/views/removing_differences.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/models/employee_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/models/employee_profile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/models/res_company.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/models/res_partner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/models/res_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/report/work_certificate_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/report/work_certificate_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/security/security_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/security/security_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/views/employee_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_employee_profile/views/employee_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/views/res_company.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_employee_profile/views/res_partner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/models/after_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/models/after_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/report/en_experience_certificate_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/report/en_experience_certificate_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/report/en_experience_certificate_template1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/report/en_experience_certificate_template1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/report/experience_certificate_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/report/experience_certificate_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/report/experience_certificate_template1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/report/experience_certificate_template1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/views/after_service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/views/after_service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_end_service/views/views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_end_service/views/views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_install/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_install/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/models/leave_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/models/leave_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/models/leaves_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/models/leaves_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/report/leave_certificate_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/report/leave_certificate_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/report/leave_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/report/leave_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/report/work_directly_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/report/work_directly_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/security/.~lock.ir.model.access.csv#" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/security/.~lock.ir.model.access.csv#" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/views/leaves_request.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/views/leaves_request.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/views/leaves_type.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/views/leaves_type.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_leaves/wizard/leave_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_leaves/wizard/leave_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/models/hr_missions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/models/hr_missions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/report/mission_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/report/mission_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/report/mission_petty.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/report/mission_petty.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/report/missions_assigned_report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/report/missions_assigned_report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/security/security_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/security/security_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_missions/views/hr_missions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_missions/views/hr_missions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_personal/models/work_injuries.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_personal/models/work_injuries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_personal/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_personal/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_personal/views/work_injuries.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_personal/views/work_injuries.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/models/hr_promotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/models/hr_promotions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/models/promotion_criteria_ratios.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/report/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/eligible_promotion_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/report/eligible_promotion_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/final_promotion_assessment_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/final_promotion_assessment_template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/implemented_promotions_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/report/implemented_promotions_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/jobs_gradients_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/report/jobs_gradients_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/qualification_detect_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/qualification_detect_template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/seniority_appoiontment_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/seniority_appoiontment_template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/seniority_degree_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/seniority_degree_template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/report/seniority_detection_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/report/seniority_detection_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/views/hr_promotions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/views/hr_promotions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/views/promotion_criteria_ratios.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/jobs_gradients_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/jobs_gradients_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/qualification_detect_wizard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/qualification_detect_wizard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/seniority_appoiontment_wizard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/seniority_appoiontment_wizard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/seniority_degree_wizard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_promotions/wizard/seniority_degree_wizard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/models/record_jobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/models/record_jobs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/report/record_jobs_per_function_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/report/record_jobs_per_function_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/report/record_jobs_per_vacancies_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/report/record_jobs_per_vacancies_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/report/record_jobs_per_vacancy_and_busy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/report/record_jobs_per_vacancy_and_busy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/views/record_jobs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/views/record_jobs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/wizard/record_job_function_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/wizard/record_job_function_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/wizard/record_job_vacancies_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/wizard/record_job_vacancies_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_record_jobs/wizard/record_job_vacancy_and_busy_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_record_jobs/wizard/record_job_vacancy_and_busy_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_security/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_security/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_security/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_security/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_security/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_security/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_security/security/hr_groups.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_security/security/hr_groups.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_security/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_security/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/models/hr_department.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/models/hr_department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/report/administrative_structure_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/report/administrative_structure_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/report/administrative_structure_report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/report/administrative_structure_report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/views/hr_department.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/views/hr_department.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/views/salary_structure.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/views/salary_structure.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/wizard/administrative_structure_wizard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/wizard/administrative_structure_wizard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_structure/wizard/administrative_structure_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_structure/wizard/administrative_structure_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/models/inevitable_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/models/inevitable_training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/models/program_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/models/program_execution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/models/short_training_allowance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/models/short_training_allowance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/models/study_mission.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/models/study_mission.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/models/training_course_design.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/models/training_course_design.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/report/brief_postgraduate_studies_report_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/report/brief_postgraduate_studies_report_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/report/competencie_gap_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/report/competencie_gap_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/report/detailed_postgraduate_studies_report_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/report/detailed_postgraduate_studies_report_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/report/total_executed_report_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/report/total_executed_report_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/report/training_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/report/training_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/report/training_record_report_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/report/training_record_report_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/views/launch_training_program.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/views/launch_training_program.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/views/program_execution.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/views/program_execution.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/views/short_training_allowance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/views/short_training_allowance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/views/study_mission.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/views/study_mission.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/wizard/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/wizard/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/wizard/competencie_gap_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/wizard/competencie_gap_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_training/wizard/competencie_wizard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_training/wizard/competencie_wizard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_transfer/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_transfer/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_transfer/models/final_transfer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_transfer/models/final_transfer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_transfer/models/internal_transfer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_transfer/models/internal_transfer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_transfer/security/security_view.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_transfer/views/final_transfer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_transfer/views/final_transfer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/model/contravention.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/model/contravention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/model/warring.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/model/warring.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/security/security_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/security/security_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/contravention.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/contravention.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/general_operations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/general_operations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/hr_investigation_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/hr_investigation_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/warring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_hr_violation_sanction/views/warring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/i18n/ar_AA.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/i18n/ar_AA.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/i18n/ar_SY.po" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/i18n/ar_SY.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/models/need_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/models/need_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/report/item_card.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/report/item_card.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/report/item_card_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/report/item_card_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/security/inventory_security_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/security/inventory_security_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/views/adjustment_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/views/adjustment_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/views/need_request_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/views/need_request_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/views/stock_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/views/stock_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kamil_inventory/wizard/item_card_wizard_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kamil_inventory/wizard/item_card_wizard_views.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1yUJwkgrRrsnpMUFMwuofjujzMr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4aec1299-4e4d-4c35-bc81-51e845caf823" name="Changes" comment="" />
+      <created>1632300474288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632300474288</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="seq_qualifying_suppliers" model="ir.sequence">
+			<field name="name">Qualifying Suppliers</field>
+			<field name="code">purchase.requisitioin.qualifying.suppliers</field>
+			<field name="prefix">QS-%(range_year)s-</field>
+			<field name="padding">4</field>
+		</record>
+
+		<record id="seq_qs_tender_book" model="ir.sequence">
+			<field name="name">Tender Book</field>
+			<field name="code">qualifying.suppliers.tender.book</field>
+			<field name="prefix">TB</field>
+			<field name="padding">4</field>
+			<field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        	<field eval="True" name="use_date_range"/>
+		</record>
+
+		<record id="seq_tender_book_visit" model="ir.sequence">
+			<field name="name">Tender Book Visit</field>
+			<field name="code">tender.book.visit</field>
+			<field name="prefix">FV</field>
+			<field name="padding">4</field>
+			<field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        	<field eval="True" name="use_date_range"/>
+		</record>
+
+
+
+		<record id="seq_visit_template" model="ir.sequence">
+			<field name="name">visit.template</field>
+			<field name="code">visit.template</field>
+			<field name="prefix">VT</field>
+			<field name="padding">4</field>
+			<field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+		</record>
+	</data>
+</odoo>

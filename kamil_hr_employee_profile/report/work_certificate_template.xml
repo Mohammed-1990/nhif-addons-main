@@ -1,0 +1,65 @@
+<odoo>
+
+    <record id="paperformat_a4_for_employee" model="report.paperformat">
+        <field name="name">A4 for hr employee</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">15</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">80</field>
+    </record>
+ 
+    <report id="work_certificate_report"
+            model="hr.employee"
+            string="شهادة عمل"
+            report_type="qweb-html"
+            name="kamil_hr_employee_profile.work_certificate_view"
+            paperformat="paperformat_a4_for_employee"
+            groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_employment_department_group"
+        />
+
+    <template id="work_certificate_view">
+        <t t-foreach="docs" t-as="doc">
+          <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                
+                    <page dir="rtl" style="page-break-inside: avoid;font-family:courier">
+                      <br/><br/><br/>
+                      <strong>
+                        <div class="text-right" style="font:600;">
+                            <p>التاريخ: <span t-esc="context_timestamp(datetime.datetime.today()).strftime('%Y-%m-%d')"/>  </p>
+                            إلي من يهمه الأمر.
+                        </div><br/><br/><br/>
+                        <div class="text-center" style="font:800;">
+                            شهادة عمل (خدمة)
+                        </div><br/><br/><br/><br/>
+                        <div class="text-right" style="font:600;line-height:26pt;">
+                                    يشهد الصندوق القومي للتامين الصحي بأن السيد/ة <span t-esc="doc.name"/> يعمل بهذا الطرف منذ تاريخ التعيين <span t-esc="doc.entry_date"/> وحتي تاريخة.
+                            <br/><br/>
+                            وخلال فترة عمله/ها معنا‫‪،‬‬ وجدنا أن السيد/ة <span t-esc="doc.name"/> شخص مجتهد وينفذ كافة الواجبات المطلوبة منه،‬‬ حسن السير والسلوك،‬‬ وهذه أبرز المزايا التي يتمتع بها علي سبيل المثال لا الحصر.
+                        </div>
+                        <div class="text-right" style="font:600;"><br/><br/>
+                            وحررت هذه الشهادة بناء علي طلبه.
+                        </div><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        <div class="text-right" style="font:600;">
+                            مدير ادارة الموارد البشرية ....................................... 
+                           <br/><br/> التوقيع ...............................................
+                            <br/><br/><br/><br/><br/>
+                        </div>
+                        <div class="text-center" style="font:600;">
+                            ختم الصندوق 
+                        </div><br/><br/><br/><br/><br/>
+                      </strong>
+                    </page>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

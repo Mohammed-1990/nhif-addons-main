@@ -1,0 +1,145 @@
+<odoo>
+
+    <record model="report.paperformat" id="paperformat_training_landscape_report">
+        <field name="name">paperformat.distribution_activities.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="training_record_report"
+            model="training.record.wizard"
+            string="Training Record Report"
+            report_type="qweb-html"
+            name="kamil_hr_training.training_record_report_view"
+            paperformat="paperformat_training_landscape_report"
+            menu="False"/>
+
+    <template id="training_record_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            
+             <div class="page" style="page-break-inside: avoid;"><br/><br/>
+                <div class="text-center" style="font:500;">
+                    <p>تقرير السجل التدريبي</p>
+                </div>
+                <br/>
+               <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered" >       
+                 <thead class="table-active" style="display: table-header-group;">
+
+                <tr>
+                    <th class="text-center fit" rowspan="2">اسم الدورة</th>
+                    <th class="text-center fit" rowspan="2">تاريخ البداية</th>
+                    <th class="text-center fit" rowspan="2">تاريخ النهاية</th>
+                    <th class="text-center fit" rowspan="2">مركز التدريب</th>
+                    <th class="text-center fit" rowspan="2">الدولة</th>
+                    <th class="text-center fit" rowspan="2">المدينة</th>
+                    <th class="text-center fit" rowspan="2">منفذ الدورة</th>
+                    <th class="text-center fit" rowspan="2">عدد الأيام</th>
+                    <th class="text-center fit" rowspan="2">عدد الساعات</th>
+                    <th class="text-center fit" rowspan="2">تكلفة الدراسة</th>
+                    <th class="text-center fit" rowspan="2">النوع</th>
+                    
+                    <th class="text-center fit" rowspan="2">عدد المشاركين</th>
+                    <th class="text-center fit" colspan="4">بيانات المشاركين</th>
+                </tr>
+                <tr>
+                    <th class="text-center fit">الموظف</th>
+                    <th class="text-center fit">الفرع</th>
+                    <th class="text-center fit">القسم</th>
+                    <th class="text-center fit">المسمى الوظيفي</th>
+                </tr>
+              </thead>
+
+                <tbody>
+                    <t t-foreach="docs" t-as="doc">
+                        <tr style="page-break-inside: avoid;">
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['name']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['date_from']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['date_to']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['training_center']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['country']"/>
+                            </td>
+                             <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['city_id']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['financier_name']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['no_days']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['no_hours']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['total_cost']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['type']"/>
+                            </td>
+                            <td class="text-center" t-att-rowspan="doc['employees_count']">
+                                <span t-esc="doc['employees_count']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['employee']"/>
+                            </td>
+                             <td class="text-center">
+                                <span t-esc="doc['branch']"/>
+                            </td>
+                             <td class="text-center">
+                                <span t-esc="doc['department']"/>
+                            </td>
+                             <td class="text-center">
+                                <span t-esc="doc['job_title']"/>
+                            </td>
+                        <t t-foreach="doc['employee_data']" t-as="emp">
+                            <tr>
+                                <td class="text-center">
+                                    <span t-esc="emp['employee']"/>
+                                </td>
+                                 <td class="text-center">
+                                    <span t-esc="emp['branch']"/>
+                                </td>
+                                 <td class="text-center">
+                                    <span t-esc="emp['department']"/>
+                                </td>
+                                 <td class="text-center">
+                                    <span t-esc="emp['job_title']"/>
+                                </td>
+                            </tr>
+                        </t>
+                        </tr>
+
+    
+                    </t>
+                    <t t-if="docs==[]">
+                        <tr>
+                            <td colspan="14" class="text-center">لا توجد بيانات</td>
+                        </tr>
+                    </t>
+                </tbody>
+                </table>
+            </div>
+        </t>
+        </t>
+    </template>
+</odoo>

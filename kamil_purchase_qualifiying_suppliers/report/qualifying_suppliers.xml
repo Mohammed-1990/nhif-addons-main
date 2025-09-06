@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report
+			id="action_report_qualifying_suppliers"
+			string="Qualifying Suppliers"
+			model="purchase.requisition"
+			report_type="qweb-html"
+			file="kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers"
+			name="kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers"
+			print_report_name="'Qualifying Suppliers(%s) - %s' % (object.year,object.name)"
+		/>
+	</data>
+</odoo>

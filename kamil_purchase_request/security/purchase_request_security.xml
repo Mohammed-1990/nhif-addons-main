@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="group_purchase_branch_only" model="res.groups">
+        <field name="name">Purchase Branch Only</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="base.module_category_purchase_management"/>
+    </record>
+
+
+
+	<record id="purchase_request_comp_rule" model="ir.rule">
+        <field name="name">Purchase Request multi-company</field>
+        <field name="model_id" ref="model_purchase_request"/>
+        <field name="groups" eval="[(4, ref('group_purchase_branch_only'))]"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('state','not in',['purchase_department2'])]</field>
+    </record>
+
+
+
+	<record id="purchase_request_line_comp_rule" model="ir.rule">
+        <field name="name">Purchase Request Line multi-company</field>
+        <field name="model_id" ref="model_purchase_request_line"/>
+        <field name="groups" eval="[(4, ref('group_purchase_branch_only'))]"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+
+
+</odoo>

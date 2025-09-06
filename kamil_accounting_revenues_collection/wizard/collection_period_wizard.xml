@@ -1,0 +1,36 @@
+<odoo>
+	<data>
+		<record id="record_collection_period_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Collection Period</field>
+			<field name='model'>collection.period.wizard</field>
+			<field name='arch' type='xml'>
+				<form>
+					<sheet>
+						<group col="4">
+							<field name="date_from"/>
+							<field name="date_to"/>
+						</group>
+						<footer>
+						<button name='get_report' string='Print' type='object' class="oe_highlight"/>
+							<button string="Cancel" special="cancel"/>
+						</footer>
+					</sheet>
+				</form>
+			</field>
+	</record>
+
+	<record id="action_collection_period_wizard" model="ir.actions.act_window">
+		<field name="name">Report Collection Period</field>
+		<field name="res_model">collection.period.wizard</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+<!-- 	<menuitem name="Reports" id="record_jobs_reports_menu" parent="record_job_main_menu" sequence="2"/> -->
+
+
+	<menuitem name="Report Collection Period" id="menu_collection_period_report" parent="revenues_collection_main_menu" action="action_collection_period_wizard"/>
+
+	</data>
+</odoo>

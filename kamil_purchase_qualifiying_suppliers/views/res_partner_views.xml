@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+        <!-- Action book visit Partner-->
+    <act_window 
+        id="action_book_visit_partner"
+        name="Tender Book Field Visit Report"
+        res_model="tender.book.visit"
+        view_mode="tree"
+        domain="[('partner_id','=',active_id)]"
+    />  
+
+ 	<record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+        	<field name="category_id" position="before">
+        		<field name="qualified" invisible="0"/>
+                <field name="area_rehabilitation_ids" widget="many2many_tags"/>
+        	</field>
+
+        	<field name="category_id" position="attributes">
+        		<attribute name="string">Category</attribute>
+        		<attribute name="attrs">{'readonly': [('qualified', '=', True)]}</attribute>
+        	</field>
+
+<!--            <xpath expr="//button[@class='oe_stat_button o_res_partner_tip_opp']" position="attributes">-->
+<!--                <attribute name="invisible">1</attribute>-->
+<!--            </xpath>-->
+
+<!--            <xpath expr="//button[@name='schedule_meeting']" position="attributes">-->
+<!--                <attribute name="invisible">1</attribute>-->
+<!--            </xpath>-->
+
+           
+
+            <!-- <xpath expr="//button[@name='%(purchase.act_res_partner_2_purchase_order)d']" position="before">
+                <button class="oe_stat_button" type="action" name="%(action_book_visit_partner)d" string="Field Visit Report" attrs="{'invisible': [('customer', '=', False)]}" icon="fa-pencil-square-o"/>
+            </xpath> -->
+        </field>
+    </record>
+
+
+
+</odoo>

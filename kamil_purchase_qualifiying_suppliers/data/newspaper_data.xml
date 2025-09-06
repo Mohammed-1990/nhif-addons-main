@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record id="newspaper1" model="announcement.newspaper">
+			<field name="name">الوان</field>
+		</record>
+		<record id="newspaper2" model="announcement.newspaper">
+			<field name="name">الانتباهه</field>
+		</record>
+	</data>
+</odoo>

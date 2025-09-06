@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Revenues Collection-->
+	<record id="collection_form_view_inherit" model="ir.ui.view">
+		<field name="name">collection.form.inherit</field>
+		<field name="model">collection.collection</field>
+		<field name="inherit_id" ref="kamil_accounting_revenues_collection.collection_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='collection_type']" position="after">
+				<field 
+					name="tender_id" 
+					attrs="{
+					'invisible':[('operation_type','not in',('qualifying_suppliers','public_tender','limited_tender'))],
+					'required':[('operation_type','in',('qualifying_suppliers','public_tender','limited_tender'))]}"
+					options="{'no_create':'1'}"
+					domain="[('type','=',operation_type),('state','=','comm_decided')]"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

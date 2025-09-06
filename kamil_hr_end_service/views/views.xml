@@ -1,0 +1,228 @@
+<odoo>
+    <data>
+    
+
+     
+       <!--reason termination_service form view-->
+      <record model="ir.ui.view" id="reason_termination_service_form_view">
+      <field name="name">reason termination service form</field>
+      <field name="model">reason.termination.service</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <h1>
+                <field name="name" placeholder="Termination Reason"/>
+              </h1>
+
+             <group>
+              <field name="resignation"/>
+            </group>
+                         
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+
+      <!-- reason termination_service tree view-->
+          <record model="ir.ui.view" id="reason_termination_service_tree_view">
+            <field name="name">Termination Service Reason</field>
+            <field name="model">reason.termination.service</field>
+            <field name="arch" type="xml">
+                <tree>
+                      <field name="name"/>
+                </tree>
+              </field>
+          </record>
+
+
+
+      <!-- Action reason termination service-->
+   <record  id="action_reason_termination_service" model="ir.actions.act_window">
+      <field name="name">Termination Service Reason</field>
+      <field name="res_model">reason.termination.service</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!--termination_service form view-->
+      <record model="ir.ui.view" id="termination_service_form_view">
+      <field name="name">termination service form</field>
+      <field name="model">termination.service</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+
+              <button name="do_confirm" states="draft" string="Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>              
+
+              <button name="do_hr_confirm" states="gm_confirm" string="GM approval" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_manager_group"/>
+            
+              <button name="do_hr_g_confirm" states="hr_confirm" string="Human resource approval" type="object" class="oe_highlight" groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_management_group"/>
+            
+              <button name="hr_user_confirm" states="hr_g_confirm" string="Human Resources General Department" type="object" class="oe_highlight" groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group"/>
+              
+              <button name="do_confirm2" states="hr_user_confirm" string="HR User Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+        
+
+              <button name="action_reject1" type="object" string="Reject" states="gm_confirm" groups="kamil_hr_security.hr_general_manager_group"/>
+
+              <button name="action_reject2" type="object" string="Reject" states="hr_confirm" groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_management_group"/>
+
+              <button name="action_reject3" type="object" string="Reject" states="hr_g_confirm" groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,gm_confirm,hr_confirm,hr_g_confirm,hr_user_confirm"/>
+            </header>
+            <sheet>
+               <group col="4">
+                <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="unit_id" options="{'no_create':True,'no_edit':True,'no_open':True}" readonly="True" force_save="1"/>
+                <field name="department_id" options="{'no_create':True,'no_edit':True,'no_open':True}" readonly="True" force_save="1"/>
+                <field name="appoiontment_type" options="{'no_create':True,'no_edit':True,'no_open':True}" readonly="True" force_save="1"/>
+
+              </group>
+              <group col="4">
+                <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="termination_id" string="Reasonn Termination" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}" required="True"/>
+               </group>
+
+               <group>
+                <field name="reason_refuse" attrs="{'readonly':[('state','=','draft')]}"/>
+
+                <field name="attach" required="True" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+             
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+          </form>
+        </field>
+      </record>
+
+       
+
+
+          <!-- termination_service tree view-->
+          <record model="ir.ui.view" id="termination_service_tree_view">
+            <field name="name">termination service tree</field>
+            <field name="model">termination.service</field>
+            <field name="arch" type="xml">
+                <tree>
+                  
+                  <field name="employee_no"/>
+                  <field name="employee_id"/>
+                  <field name="department_id"/>
+                  <field name="appoiontment_type"/>
+                  <field name="date"/>
+                  <field name="state"/>
+                  
+                </tree>
+              </field>
+          </record>
+
+
+          <!--termination_service action-->
+
+      <record  id="action_termination_service" model="ir.actions.act_window">
+            <field name="name">Termination Service</field>
+            <field name="res_model">termination.service</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">{'termination_id.resignation':False}</field>
+      </record>
+
+      <!--resignation form view-->
+      <record model="ir.ui.view" id="resignation_resignation_form_view">
+      <field name="name">resignation resignation form</field>
+      <field name="model">resignation.resignation</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="manger_confirm" states="draft" string="Send" type="object" class="oe_highlight"/>
+
+              <button name="general_manager_confirm" states="manger_confirm" string="Manager Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_head_department_group"/>
+
+              <button name="human_resource_confirm" states="general_manager_confirm" string="General Manager Confirmm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_manager_group" />
+
+               <button name="hr2_user_confirm" states="human_resource_confirm" string="Human Resource Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_management_group"/>
+              
+               <button name="action_reject" type="object" string="Reject" states="manger_confirm" groups="kamil_hr_security.hr_head_department_group"/>
+
+               <button name="action_reject1" type="object" string="Reject" states="general_manager_confirm" groups="kamil_hr_security.hr_general_manager_group"/>
+
+               <button name="action_reject2" type="object" string="Reject" states="human_resource_confirm" groups="kamil_hr_security.hr_management_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,manger_confirm,general_manager_confirm,human_resource_confirm,hr2_user_confirm"/>
+            </header>
+            <sheet>
+               <group col="4">
+                <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="department_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="request_date"/>
+              </group>
+              <group col="4">
+                <field name="last_day_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="termination_id" string="Reason for end service" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}" required="True"/>
+               </group>
+
+               <group>
+                <field name="reason_refuse" attrs="{'readonly':[('state','=','draft')]}"/>
+              </group>
+             
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+          </form>
+        </field>
+      </record>
+
+       <!--resignation service tree-->
+      <record model="ir.ui.view" id="termination_service_tree_view2">
+            <field name="name">resignation resignation tree</field>
+            <field name="model">resignation.resignation</field>
+            <field name="arch" type="xml">
+                <tree>
+                  
+                  <field name="employee_no"/>
+                  <field name="employee_id"/>
+                  <field name="department_id"/>
+                  <field name="last_day_date"/>
+                  <field name="state"/>
+                  
+                </tree>
+              </field>
+          </record>
+
+
+       <!--resignation resignation action2-->
+
+      <record  id="action_resignation_resignation" model="ir.actions.act_window">
+            <field name="name">Resignation</field>
+            <field name="res_model">resignation.resignation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">{'termination_id.resignation':True}</field>
+      </record>
+
+
+
+
+ 
+    <menuitem name="Termination Service" id="main_menu_jobs" parent="kamil_hr_personal.personal_menu" sequence="100"/>
+    
+
+    <menuitem name="Termination Service Reason" id="menu_reason_termination_service" parent="main_menu_jobs" action="action_reason_termination_service" sequence="4" groups="kamil_hr_security.hr_employment_department_hq_group"/>
+
+    <menuitem name="Termination Service" id="menu_termination_service" parent="main_menu_jobs" action="action_termination_service" sequence="1"/>
+
+    <menuitem name="Resignation" id="menu_resignation_service2" parent="main_menu_jobs" action="action_resignation_resignation" sequence="2"/>
+
+
+  </data>
+</odoo>

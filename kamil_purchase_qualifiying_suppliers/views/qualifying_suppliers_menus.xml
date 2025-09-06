@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+
+	<!-- Menu Qualifying Suppliers  Root-->
+	<menuitem id="menu_qualifying_suppliers_root" name="Qualifying Suppliers" parent="purchase.menu_purchase_root" sequence="3" />
+
+	<!-- Menu Qualifying Suppliers-->
+	<menuitem id="menu_qualifying_suppliers" parent="menu_qualifying_suppliers_root" sequence="1" action="action_qualifying_suppliers_request"/>
+
+	<menuitem id="menu_vendor_quailfying" parent="menu_qualifying_suppliers_root" action="kamil_purchase_qualifiying_suppliers.action_qualified_suppliers" sequence="7"/>
+
+	<!-- Menu Tender Configuration-->
+	<menuitem id="menu_tender_config_purchase" name="Tenders" parent="purchase.menu_purchase_config" sequence="20" />
+
+
+	<!-- Manu General Conditions-->
+	<menuitem id="menu_general_conditions" parent="menu_tender_config_purchase" sequence="2" action="action_general_conditions" />
+
+
+	<!-- Menu Area Reahbilitation-->
+	<menuitem id="area_rehabilitation" parent="menu_tender_config_purchase"  name="Area Of Rehabilitation" sequence="20" action="action_area_rehabilitation" />
+
+	<!-- Menu Field Visit Report Criteria-->
+	<menuitem id="menu_book_visit_criteria" parent="menu_tender_config_purchase" name="Field Visit Report Criteria" action="kamil_purchase_qualifiying_suppliers.action_book_visit_criteria" sequence="50" />
+
+	<!-- Menu Field Visit Report -->
+	<!-- <menuitem id="menu_book_visit" parent="menu_tender_config_purchase" action="kamil_purchase_qualifiying_suppliers.action_book_visit" sequence="30" /> -->
+
+	<menuitem id="menu_newspaper" parent="menu_tender_config_purchase" action="kamil_purchase_qualifiying_suppliers.action_menu_newspaper" sequence="40"/>
+
+	<delete model="ir.ui.menu" id="purchase_requisition.menu_purchase_requisition_pro_mgt"/>
+
+
+	<delete model="ir.ui.menu" id="purchase_requisition.menu_purchase_requisition_type
+"/>
+<!-- 
+
+	<delete model="ir.ui.menu" id="purchase.menu_procurement_management_pending_invoice
+	"/> -->
+
+
+	<!-- <delete model="ir.ui.menu" id="purchase_stock.menu_action_picking_tree_in_move
+	"/>
+
+	<delete model="ir.ui.menu" id="purchase.menu_purchase_control
+	"/> -->
+
+
+
+	<!--  <menuitem string="Muram" id=".purchasemenu_purchase_control" name="Control" parent="purchase.menu_purchase_root" sequence="4"/> -->
+
+
+</odoo>

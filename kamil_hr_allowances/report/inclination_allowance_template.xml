@@ -1,0 +1,94 @@
+<odoo>
+
+   
+    <report id="inclination_allowance_report"
+            model="inclination.allowance"
+            string="Inclination allowance Report"
+            report_type="qweb-html"
+            name="kamil_hr_allowances.inclination_allowance_report_view"
+            paperformat="paperformat_a4_for_hr"
+        />
+
+    <template id="inclination_allowance_report_view">
+         <t t-foreach="docs" t-as="doc">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                   
+                    <div class="text-center" style="font:500;">
+                        <p>الادارة العامة للموارد البشرية
+                        <br/>
+                        قسم الاجور والمزايا<br/>
+                        <span t-esc="doc.name"/>
+                        </p>
+                    </div><br/>
+                   <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                        <thead class="table-active" style="display: table-header-group;">
+                            <tr class="table-active">
+                                <td class="text-center fit">#</td>
+                                <td class="text-center fit">الموظف</td>
+                                <td class="text-center fit">القسم</td>
+                                <td class="text-center fit">المبلغ</td>
+                                <td class="text-center fit">الدمغة</td>
+                                <td class="text-center fit">الصافي</td>
+                            </tr>
+                        </thead>
+                        <div class="page">
+                            <t t-set="count" t-value="1"/> 
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <tr style="page-break-inside: avoid;">
+                                    <td class="text-center">
+                                        <span t-esc="count"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.employee_id.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.department_id.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.amount))"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.stamp"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.net))"/>
+                                    </td>
+                                </tr>
+                                <t t-set="count" t-value="count+1"/>
+                            </t>
+                        </div>
+                        <tr style="page-break-inside: avoid;" class="table-active">
+                            <th colspan="3" class="text-center table-active">الاجمالي</th>
+                            <th class="text-center">
+                                <span t-esc="sum([line['amount'] for line in doc.line_ids])" class="text-center"/>
+                            </th>
+                            <th class="text-center">
+                                <span t-esc="sum([line['stamp'] for line in doc.line_ids])" class="text-center"/>
+                            </th>
+                            <th class="text-center">
+                                <span t-esc="sum([line['net'] for line in doc.line_ids])" class="text-center"/>
+                            </th>
+                        </tr>
+                    </table><br/>
+                     <p style="font:600;" dir="rtl" >
+                            <strong>قسم الاجور والمزايا</strong>
+                            <span>
+                                ...............................................................
+                            </span>
+                            <br/>
+                            <strong>اعتماد شئون العاملين</strong>
+                            <span>
+                                ............................................................
+                            </span>
+                            <br/>
+                            <strong>المراجعة</strong>
+                            <span>
+                                ...................................................................................
+                            </span>
+                    </p>
+               </t>
+            </t>
+        </t>
+    </template>
+</odoo>

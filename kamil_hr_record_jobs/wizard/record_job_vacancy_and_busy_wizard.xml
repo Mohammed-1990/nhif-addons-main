@@ -1,0 +1,37 @@
+<odoo>
+	<data>
+		<record id="record_jobs_vacancy_busy_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Record jobs Vacancy and Busy</field>
+			<field name='model'>vacancy.busy.wizard</field>
+			<field name='arch' type='xml'>
+          <form>
+              <sheet>
+                  <group>
+                      <group>
+                          <field name="record_jobs" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                      </group>
+                  </group>
+                  <footer>
+                      <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                      <button string="Cancel" special="cancel"/>
+                  </footer>
+              </sheet>
+                </form>
+        </field>
+       </record>
+       
+    <record id="action_record_jobs_vacancy_busy_wizard" model="ir.actions.act_window">
+        <field name="name">Report Record jobs Vacancy and Busy</field>
+        <field name="res_model">vacancy.busy.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <menuitem name="Report by Vacancy and Busy"
+              id="menu_report_vacancy_busy" 
+              parent="record_jobs_reports_menu" 
+              action="action_record_jobs_vacancy_busy_wizard"/>
+
+	</data>
+</odoo>

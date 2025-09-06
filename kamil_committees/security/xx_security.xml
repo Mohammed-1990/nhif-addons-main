@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+ <data noupdate="0">
+        <record model="ir.module.category" id="module_category_group_contract_terms">
+            <field name="name">contract_terms</field>
+            <field name="description">contract terms</field>
+            <field name="sequence">20</field>
+        </record>
+        <record model="res.groups" id="group_contract_terms_menu">
+            <field name="name">menuitems</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="contract.module_category_group_contract_terms"/>
+            <field name="comment">Access to contract_terms</field>
+           
+        </record>
+        <record model="res.groups" id="group_contract_terms_one_menu">
+            <field name="name">menuitemsone</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="contract.module_category_group_contract_terms"/>
+            <field name="comment">Access to contract_terms</field>
+           
+        </record>
+
+        <record id="committee_company_rule" model="ir.rule">
+            <field name="name">Commitee multi-company</field>
+            <field name="model_id" ref="model_committee_committee"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+
+    </data>
+</openerp>
+

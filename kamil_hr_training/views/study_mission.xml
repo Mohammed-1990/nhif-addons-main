@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+     <odoo>			
+ 	    <data>
+
+
+
+
+		<record id="action_study_mission" model="ir.actions.act_window">
+			<field name="name">studies.missions</field>
+			<field name="res_model">study.mission</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+       <record id="study_mission_form" model="ir.ui.view">
+			<field name="name">study.mission.form</field>
+			<field name="model">study.mission</field>
+			<field name="arch" type="xml">
+			<form>
+			<header>
+			  <button name="do_submit" states="draft" 
+               string="Submit" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+			  <button name="gm_confirm" states="submitted" string="General Manager Approve" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_manager_group"/>
+
+              <button name="university_apply" states="gm_confirm" string="Apply to the University" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+               <button name="institution_approval" states="university_apply" string="Approval of the educational institution" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="ntc_approval" states="institution_approval" string="National Training Council Approva" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="create_contract" states="ntc_approval" string="Legal Contract" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+			  <button name="action_reject" states="submitted" string="Reject" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_manager_group"/>
+
+			  <button name="action_reject1" states="gm_confirm,university_apply,institution_approval,ntc_approval" string="Reject" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+			  
+			  <button name="set_to_draft" states="rejected" string="Set to Draft" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,submitted,gm_confirm,university_apply,ntc_approval,legal_contract,institution_approval,confirmed"/>
+            </header>
+				<sheet>
+					<div name='button_box' class="oe_button_box">
+						<button name="open_contract"
+							string="Legal Contract"
+	                        type="object"  
+	                        class="oe_stat_button" 
+	                        icon="fa-pencil-square-o"
+	                        attrs="{'invisible':[('state','not in',['legal_contract','confirmed','interrupted','canceled'])]}"
+	                        >
+	                    </button>
+	                    <button name="study_expenses"
+	                        type="object"  
+	                        class="oe_stat_button" 
+	                        icon="fa-money"
+	                        attrs="{'invisible':[('state','not in',['confirmed','interrupted','canceled'])]}"
+	                        >
+	                        <field string="Study Expenses" name="expenses_count" widget="statinfo"/>
+	                    </button>
+	                    <button name="study_extension"
+	                        type="object"  
+	                        class="oe_stat_button" 
+	                        icon="fa-arrows-h"
+	                        attrs="{'invisible':[('state','not in',['confirmed','interrupted','canceled'])]}"
+	                        >
+	                        <field string="Study Extension" name="extension_count" widget="statinfo"/>
+	                    </button>
+	                    <button name="study_interrupt"
+	                        type="object"  
+	                        class="oe_stat_button" 
+	                        icon="fa-times-circle"
+	                        attrs="{'invisible':[('state','not in',['confirmed','interrupted','canceled'])]}"
+	                        >
+	                        <field string="Study Interrupt" name="interrupt_count" widget="statinfo"/>
+	                    </button>
+	                </div>
+					<div>
+         			   <group col="4">
+            			  <h1>
+           				    <field name="name" placeholder="Mission No"/>
+           			      </h1>
+        		       </group>
+
+					<group col="4">
+					 <field name="training_program" options="{'no_create':True}"  attrs="{'readonly':[('state','!=','draft')]}" /><separator/><separator/>
+				    </group>
+				    <separator string="Employee Data" /><newline/><newline/>
+					<group col="4" >
+					 <field name="employee_id"  options="{'no_create':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+					 <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+					 <field name="department_id"  force_save="1"/>
+					 <field name="functional_id"  force_save="1"/>
+					</group>
+				    <group col="4">
+					 <field name="escorts" widget="radio"/>
+					 <field name="children_number" attrs="{'invisible':[('escorts','!=','wife_children')],'required':[('escorts','=','wife_children')]}"/>
+				    </group>
+                <notebook>
+				 <page string="study mission Information">
+				 	<group col="4">
+				 	<field name="country" force_save="1"/>
+				 	<field name="specialization" force_save="1"/>
+				 	<field name="university_id" force_save="1"/>
+				 </group>
+				 <group col="4">
+				 	<field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+				 	<field name="date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+				 </group>
+				 </page>
+				 
+				  <page string="Documents Missions">
+				  	 <field name="doc_line_id">
+                    <tree editable="bottom">
+				 	<field name="document_id" />
+				 	<field name="doc"/>
+                    </tree>
+                </field>
+				
+				  </page>
+				  <page string="Notes">
+				  	<div>
+				  	<field name="notes" attrs="{'readonly':[('state','!=','draft')]}"/>
+				  	</div>
+				  </page>
+				</notebook>
+					</div>
+			        </sheet>
+			        <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+
+
+				</form>
+			</field>
+		</record>
+
+    <record model="ir.ui.view" id="studies_missions_tree_view">
+      <field name="name">studies.missions.tree</field>
+      <field name="model">study.mission</field>
+      <field name="arch" type="xml">
+      	<tree>
+      		<field name="name" string="mission no"/>
+      		<field name="employee_id"/>
+      		<field name="training_program"/>
+      		<field name="country"/>
+      		<field name="state" string="Status"/>
+      	</tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="studies_missions_search_view">
+      <field name="name">studies.missions.search</field>
+      <field name="model">study.mission</field>
+      <field name="arch" type="xml">
+      	<search>
+      		<field name="employee_id"/>
+      		<field name="training_program"/>
+      	</search>
+      </field>
+    </record>
+
+ <menuitem name="Studies Missions"
+		id="study_mission_menu"
+     	parent="menu_long_training"
+     	action="action_study_mission"
+        sequence="4"
+        groups="kamil_hr_security.hr_training_department_hq_group"
+		 	/>
+
+
+
+						
+	</data>
+</odoo>

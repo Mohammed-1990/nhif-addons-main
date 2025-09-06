@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form wiz general journal report -->
+	<record id="view_wiz_general_journal_form" model="ir.ui.view">
+		<field name="name">wiz.profit.loss.form</field>
+		<field name="model">wiz.general.journal</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="4">
+						<field name="date_from"/>
+						<field name="date_to"/>
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Wiz Generl Journa-->
+	<act_window
+		id="action_wiz_general_journal"
+		name="General Journal Report"
+		res_model="wiz.general.journal"
+		view_mode="form"
+		target="new"
+	/>
+
+		<menuitem 
+		id="menu_wiz_general_journal" 
+		sequence="4"
+		parent="kamil_accounting_reports.menu_account_report_1"
+	 	action="action_wiz_general_journal"/>
+
+
+</odoo>

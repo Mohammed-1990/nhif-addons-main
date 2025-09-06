@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record id="area_1" model="area.rehabilitation">
+			<field name="name">الحاسوب</field>
+		</record>
+		<record id="area_2" model="area.rehabilitation">
+			<field name="name">ادوات مكتبية</field>
+		</record>
+	</data>
+</odoo>

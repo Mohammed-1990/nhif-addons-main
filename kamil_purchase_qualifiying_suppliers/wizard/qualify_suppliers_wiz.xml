@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="qualifiying_suppliers_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Qualifiying Suppliers</field>
+			<field name='model'>qualifiy.suppliers.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+            	        <group col="4">
+							<p>
+								اضغط علي زر طباعة لطباعة الموردين المؤهلين
+							</p>
+            	        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+        </record>
+
+        <act_window
+		id="action_qualifiying_suppliers_wizard"
+		name="Report Qualifiying Suppliers"
+		res_model="qualifiy.suppliers.wizard"
+		view_mode="form"
+		target="new"
+	    />
+
+        <menuitem name="Report Qualifiying Suppliers"
+                  id="menu_report_qualifiying_suppliers"
+                  parent="purchase.purchase_report"
+                  action="action_qualifiying_suppliers_wizard"
+				  sequence="3"
+        />
+
+    </data>
+</odoo>

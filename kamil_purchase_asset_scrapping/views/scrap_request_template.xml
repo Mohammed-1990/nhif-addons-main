@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="scrap request" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/kamil_purchase_asset_scrapping/static/src/scss/scrap_request.scss"/>
+            <script type="text/javascript" src="/kamil_purchase_asset_scrapping/static/src/js/scrap_request.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,30 @@
+<!-- <?xml version="1.0"?>
+<odoo>
+	<data>
+	<record model="ir.module.categorty" id="project_management_access_categ">
+		<filed name="name">Project Management</filed>
+		<filed name="description">Project Management</filed>
+		<filed name="sequence">10</filed>
+	</record>
+</data>
+ -->
+	<!-- <record id="project_management_access_categ" model="ir.module.categorty">
+ 		<filed name="name">Project Management</filed>
+ 		<filed name="description">Project Management</filed>
+ 		<filed name="sequence">1</filed>
+ 	</record> -->
+
+
+
+ <!-- 	<record id="managemant_access_group" model="res.groups">
+ 		<filed name="name">project management</filed>
+ 		<filed name="comment">Access to project_terms</filed>
+ 		<filed name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+ 		<filed name="category_id" ref="project_management_access_categ"/>
+	</record> -->
+<!-- </odoo>
+ -->
+
+
+
+ 

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_asset_evaluation,asset.evaluation,model_asset_evaluation,,1,1,1,1
+access_wiz_account_asset_report,wiz.account.asset.report,model_wiz_account_asset_report,,1,1,1,1
+
+
+access_asset_operation,access_asset_operation,model_account_asset_operation,,1,1,1,1

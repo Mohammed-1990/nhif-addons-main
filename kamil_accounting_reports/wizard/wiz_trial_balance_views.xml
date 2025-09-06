@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form wiz trial balance report -->
+	<record id="view_wiz_trial_balance_form" model="ir.ui.view">
+		<field name="name">wiz.trial.balance.form</field>
+		<field name="model">wiz.trial.balance</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="type" widget="radio"  options="{'horizontal': true}"/>
+					</group>
+					<group col="4">
+						<field name="date_from" attrs="{'invisible':[('type','!=','totals')],'required':[('type','=','totals')]}"/>
+						<field name="date_to" attrs="{'invisible':[('type','!=','totals')],'required':[('type','=','totals')]}"/>
+					</group>
+					<group>
+						<field name="date_to" string="By Date" attrs="{'invisible':[('type','!=','balances')],'required':[('type','=','balances')]}"/>
+					</group>
+					<group>
+						<field name="company_ids" widget="many2many_tags"  options="{'no_create':True}"  groups="kamil_accounting_financial_ratification.hq_group"/>
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Wiz trial balance-->
+	<act_window
+		id="action_wiz_trial_balance"
+		name="Trial Balance Report"
+		res_model="wiz.trial.balance"
+		view_mode="form"
+		target="new"
+	/>
+
+		<menuitem 
+		id="menu_account_report_1"
+		name="Report" 
+		sequence="0"
+		parent="account.menu_finance_reports"/>
+
+
+		<menuitem 
+		id="menu_wiz_trial_balance" 
+		sequence="1"
+		parent="menu_account_report_1"
+	 	action="action_wiz_trial_balance"/>
+
+
+</odoo>

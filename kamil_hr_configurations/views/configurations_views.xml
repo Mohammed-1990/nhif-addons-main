@@ -1,0 +1,798 @@
+<odoo>
+    <data>
+
+    <record model="ir.ui.view" id="job_title_tree_view">
+      <field name="name">job.title.tree</field>
+      <field name="model">job.title</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="job_title_form_view">
+      <field name="name">job.title.form</field>
+      <field name="model">job.title</field>
+      <field name="arch" type="xml">
+        <form >
+          <sheet>
+            <h1>
+              <field name="name" placeholder="Job Title Name"/>
+            </h1>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="state_model_tree_view">
+      <field name="name">state.model.tree</field>
+      <field name="model">state.model</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="state_model_form">
+      <field name="name">state.model.form</field>
+      <field name="model">state.model</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="document_tree_view">
+      <field name="name">document.tree</field>
+      <field name="model">document.document</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="document_form_view">
+      <field name="name">document.document.form</field>
+      <field name="model">document.document</field>
+      <field name="arch" type="xml">
+         <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="city_city_tree_view">
+      <field name="name">city.city.tree</field>
+      <field name="model">city.city</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+           <field name="state_id"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="city_city_search_view">
+      <field name="name">city.city.tree</field>
+      <field name="model">city.city</field>
+      <field name="arch" type="xml">
+         <search>
+           <field name="name"/>
+           <field name="state_id"/>
+         </search>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="university_model_tree_view">
+      <field name="name">university.model.tree</field>
+      <field name="model">university.model</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="university_model_from_view">
+      <field name="name">university.model.from</field>
+      <field name="model">university.model</field>
+      <field name="arch" type="xml">
+         <form>
+          <sheet>
+            <h1>
+              <field name="name" placeholder="University Name"/>
+            </h1>
+            <group>
+              <group>
+                <field name="city_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+              </group>
+            </group>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+         </form>
+      </field>
+    </record>
+
+        <record model="ir.ui.view" id="university_specialization_tree_view">
+      <field name="name">university.specialization.tree</field>
+      <field name="model">university.specialization</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+         </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="university_specialization_from_view">
+      <field name="name">university.specialization.from</field>
+      <field name="model">university.specialization</field>
+      <field name="arch" type="xml">
+         <form>
+          <sheet>
+              <group>
+                <field name="name" />
+              </group>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+         </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="functional_degree_tree_view">
+      <field name="name">functional.degree.tree</field>
+      <field name="model">functional.degree</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name" />
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="functional_degree_form_view">
+      <field name="name">functional.degree.form</field>
+      <field name="model">functional.degree</field>
+      <field name="arch" type="xml">
+         <form>
+          <sheet>
+            <h1>
+             <field name="name" placeholder="Degree Name"/>
+            </h1>
+            <!-- <group>
+              <group>
+                <field name="annual_leaves_days" />
+              </group>
+            </group> -->
+         </sheet>
+         <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="cards_tree_view">
+      <field name="name">cards.cards.tree</field>
+      <field name="model">cards.cards</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+           <field name="amount"/>
+           <field name ="tax_id"/>
+           <field name="incentive_type_id"/>
+         </tree>
+      </field>
+    </record>
+
+     
+    <record model="ir.ui.view" id="functional_category_form_view">
+      <field name="name">functional.category.form</field>
+      <field name="model">functional.category</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <div>
+                <!-- <button name="users_update" string="Users Updates" type="object"/> -->
+                <!-- <button name="upade_partner_account" string="Partner account Updates" type="object"/> -->
+                
+                  <h1>
+                    <field name="name" placeholder="Name Of Functional Category"/>
+                  </h1>
+                  <group>
+                    <group>
+                      <field name="bonus_no"/>
+                    </group>
+                  </group>
+               </div>
+            </sheet>
+            <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="functional_category_tree_view">
+      <field name="name">functional.category.tree</field>
+      <field name="model">functional.category</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="name" />
+              <field name="bonus_no"/>
+          </tree>
+        </field>
+      </record>
+
+
+
+    <record model="ir.ui.view" id="functional_task_tree_view">
+      <field name="name">functional.task.tree</field>
+      <field name="model">functional.task</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+          </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="functional_task_form_view">
+      <field name="name">functional_task.form</field>
+      <field name="model">functional.task</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="city_city_form_view">
+      <field name="name">city.city.form</field>
+      <field name="model">city.city</field>
+      <field name="arch" type="xml">
+         <form>
+            <sheet>
+
+           <h1>
+              <field name="name" placeholder='City Name'/>
+            </h1>
+            <group>
+              <group>
+                <field name="state_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+              </group>
+            </group>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+         </form>
+      </field>
+    </record>
+
+          
+        <!-- Name Of Competencie -->
+   <record model="ir.ui.view" id="competencie_model_form_view">
+      <field name="name">competencie.model.form</field>
+      <field name="model">competencie.model</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <div>
+                <h1>
+                  <field name="name" placeholder="Name Of Competencie"/>
+                </h1>
+                <group>
+                  <field name="definition"/>
+                  <field name="indicators"/>
+                </group>
+               </div>
+            </sheet>
+             <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+          </form>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="religion_model_tree_view">
+      <field name="name">religion.model.tree</field>
+      <field name="model">religion.model</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name" />
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="religion_model_form">
+      <field name="name">religion.model.form</field>
+      <field name="model">religion.model</field>
+      <field name="arch" type="xml">
+        <form >
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+           <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+        <!-- hr function -->
+   <record model="ir.ui.view" id="hr_function_form_view">
+      <field name="name">hr_function.form</field>
+      <field name="model">hr.function</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <div>
+                  <h1>
+                    <field name="name" placeholder="Function Name"/>
+                  </h1>
+               </div>
+
+              <notebook>
+              <page string="Job Requirements">
+                <div>
+                  <field name="job_requirements"/>
+                </div>
+              </page>
+              <page string="Functional Tasks">
+                <field name="task_line_ids">
+                  <tree editable="bottom">
+                    <field name="task_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                  </tree>
+                </field>
+              </page>
+
+               <page string="Competencies">
+                <field name="competencie_line_ids">
+                  <tree  editable="bottom">
+                    <field name="competencie_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                    <field name="required_degree"/>
+                  </tree>
+                </field>
+              </page >
+            </notebook>
+
+            </sheet>
+            <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+          </form>
+        </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="competencie_model_tree_view">
+        <field name="name">competencie.model.tree</field>
+        <field name="model">competencie.model</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="name" />
+            <field name="definition"/>
+            <field name="indicators"/>
+          </tree>
+         </field>
+       </record>
+
+    <record model="ir.ui.view" id="appointment_type_tree_view">
+      <field name="name">appointment.type.tree</field>
+      <field name="model">appointment.type</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="eligible"/>
+          </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="appointment_type_form_view">
+      <field name="name">appointment.type.form</field>
+      <field name="model">appointment.type</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <h1>
+                <field name="name" placeholder="Appointment type name"/>
+              </h1>
+              <group>
+                <group>
+                  <field name="eligible"/>
+                </group>
+              </group>
+            </sheet>
+             <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+          </form>
+      </field>
+    </record>
+
+     <record model="ir.ui.view" id="qualifcation_type_form_view">
+      <field name="name">qualifcation.type.form</field>
+      <field name="model">qualifcation.type</field>
+      <field name="arch" type="xml">
+         <form>
+            <sheet>
+              <div>
+                <h1>
+                <field name="name"/>
+                </h1>
+                <group>
+                 <field name="amount"/>
+                </group>
+               </div>
+            </sheet>
+            <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+          </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="functional_record_tree_view">
+      <field name="name">functional.record.tree</field>
+      <field name="model">functional.record</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name" />
+         </tree>
+      </field>
+    </record>
+
+      <record model="ir.ui.view" id="functional_record_form_view">
+      <field name="name">functional.record.form</field>
+      <field name="model">functional.record</field>
+      <field name="arch" type="xml">
+        <form>
+         <sheet>
+              <div>
+                  <group>
+                 <field name="name"/>
+                </group>
+               </div>
+            </sheet>
+           <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="allowances_form_view">
+      <field name="name">allowances.allowances.form</field>
+      <field name="model">allowances.allowances</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <div>
+                  <h1>
+                    <field name="name" placeholder="Social allowances"/>
+                  </h1>
+                  <group>
+                 <field name="amount"/>
+                </group>
+               </div>
+            </sheet>
+            <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+          </form>
+        </field>
+      </record>
+
+     <record model="ir.ui.view" id="cards_form_view">
+      <field name="name">cards.cards.form</field>
+      <field name="model">cards.cards</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <div>
+                <h1>
+                  <field name="name" placeholder="Warranty Name"/>
+                </h1>
+                <group col="4">
+                  <field name="amount"/>
+                  <field name = "tax_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                  <field name="incentive_type_id"  options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                </group>
+               </div>
+            </sheet>
+            <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+          </form>
+        </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="retirement_age_tree_view">
+      <field name="name">retirement.age.tree</field>
+      <field name="model">retirement.age</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="retirement_age"/>
+            <field name="appointment_type"/>
+            <field name="is_active"/>
+          </tree>
+        </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="retirement_age_form_view">
+      <field name="name">retirement.age.form</field>
+      <field name="model">retirement.age</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+                <div class="oe_button_box" name="button_box">
+                     <button name="toggle_active" type="object" 
+                          class="oe_stat_button" icon="fa-archive">
+                          <field name="is_active" widget="boolean_button"
+                              options='{"terminology": "archive"}'/>
+                      </button>
+               </div>
+              <div>
+                <h1>
+                  <field name="name" readonly="1"/>
+                  </h1>
+                <group col="4">
+                  <field name="appointment_type" widget="many2many_tags"  options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                  <field name="retirement_age"/>
+                </group>
+               </div>
+            </sheet>
+            <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+          </form>
+        </field>
+      </record>
+   
+    
+    <record  id="action_job_title" model="ir.actions.act_window">
+      <field name="name">Job Title</field>
+      <field name="res_model">job.title</field>
+     <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <record  id="action_religion_model" model="ir.actions.act_window">
+      <field name="name">Religion</field>
+      <field name="res_model">religion.model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record  id="action_state_model" model="ir.actions.act_window">
+      <field name="name">States</field>
+      <field name="res_model">state.model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_document" model="ir.actions.act_window">
+      <field name="name">Documents</field>
+      <field name="res_model">document.document</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record  id="action_city_city" model="ir.actions.act_window">
+      <field name="name">Citys</field>
+      <field name="res_model">city.city</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_university_model" model="ir.actions.act_window">
+      <field name="name">Universitys</field>
+      <field name="res_model">university.model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+     <record  id="action_university_specialization" model="ir.actions.act_window">
+      <field name="name">University Specialization</field>
+      <field name="res_model">university.specialization</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record  id="action_functional_category" model="ir.actions.act_window">
+      <field name="name">Functional Catogry</field>
+      <field name="res_model">functional.category</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record  id="action_functional_task" model="ir.actions.act_window">
+      <field name="name">Functional Tasks</field>
+      <field name="res_model">functional.task</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <record  id="action_competencie" model="ir.actions.act_window">
+      <field name="name">Competencie</field>
+      <field name="res_model">competencie.model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <record  id="action_hr_function" model="ir.actions.act_window">
+      <field name="name">Function</field>
+      <field name="res_model">hr.function</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_functional_degree" model="ir.actions.act_window">
+      <field name="name">Functional Degrees</field>
+      <field name="res_model">functional.degree</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_appointment_type" model="ir.actions.act_window">
+      <field name="name">Appointment Type</field>
+      <field name="res_model">appointment.type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+     <record  id="action_qualifcation_type" model="ir.actions.act_window">
+      <field name="name">Qualifcation Type</field>
+      <field name="res_model">qualifcation.type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_record_functional" model="ir.actions.act_window">
+      <field name="name">Record Functional</field>
+      <field name="res_model">functional.record</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_allowances" model="ir.actions.act_window">
+      <field name="name">Social allowances</field>
+      <field name="res_model">allowances.allowances</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_cards" model="ir.actions.act_window">
+      <field name="name">Sponsorship</field>
+      <field name="res_model">cards.cards</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_retirement" model="ir.actions.act_window">
+      <field name="name">Retirement Age </field>
+      <field name="res_model">retirement.age</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+    <!-- Menus -->
+
+  
+    <record model='ir.ui.menu' id='hr.menu_human_resources_configuration'>
+        <field name="groups_id" eval="[(4,ref('kamil_hr_security.hr_benefits_wages_section_hq_group'))]"/>
+    </record>
+
+    <record id="hr.menu_human_resources_configuration" model="ir.ui.menu">
+      <field name="groups_id" eval="[(4,ref('kamil_hr_security.hr_benefits_wages_section_hq_group'))]" />
+    </record>
+
+
+    
+    <menuitem name="Job Title" id="job_title_menu" parent="hr.menu_human_resources_configuration" action="action_job_title" sequence="1"/>
+   
+   <menuitem name="Functionals Degrees" id="functional_degree_menu" parent="hr.menu_human_resources_configuration" action="action_functional_degree" sequence="2"/>
+    
+    <menuitem name="Functional Cateogry" id="functional_category_menu" parent="hr.menu_human_resources_configuration" action="action_functional_category" sequence="3"  groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+    <menuitem name="Appointment Type" id="appointment_type_menu" parent="hr.menu_human_resources_configuration" action="action_appointment_type" sequence="4"/>
+    
+    <menuitem name="Functional Tasks" id="functional_task_menu" parent="hr.menu_human_resources_configuration" action="action_functional_task" sequence="5"/>
+    
+    <menuitem name="Competencie" id="competencie_menu" parent="hr.menu_human_resources_configuration" action="action_competencie" sequence="6"/>
+    
+    <menuitem name="Function" id="hr_function_menu" parent="hr.menu_human_resources_configuration" action="action_hr_function" sequence="7"/>
+    
+    <menuitem name="Religion" id="hr_religion_model_menu" parent="hr.menu_human_resources_configuration" action="action_religion_model" sequence="8"/>
+    
+    <menuitem name="Stateses" id="state_model_menu" parent="hr.menu_human_resources_configuration" action="action_state_model" sequence="9"/>
+
+    <menuitem name="Citys" id="city_city_model_menu" parent="hr.menu_human_resources_configuration" action="action_city_city" sequence="10"/>
+    
+    <menuitem name="Documents" id="document_menu" parent="hr.menu_human_resources_configuration" action="action_document" sequence="11"/>
+
+
+       
+    
+    
+    <menuitem name="Qualifcation Type" id="qualifcation_type_menu" parent="hr.menu_human_resources_configuration" action="action_qualifcation_type" sequence="12"/>
+
+    <menuitem name="Record Functional" id="record_functional_menu" parent="hr.menu_human_resources_configuration" action="action_record_functional" sequence="13"/>
+
+     <menuitem name="Social allowances" id="social_allowances_menu" parent="hr.menu_human_resources_configuration" action="action_allowances" sequence="14"/>
+
+     <menuitem name="Sponsorship" id="cards_menu" parent="hr.menu_human_resources_configuration" action="action_cards" sequence="15"/>
+
+     <menuitem name="Universitys" id="university_menu" parent="hr.menu_human_resources_configuration" action="action_university_model" sequence="16"/>
+
+     <menuitem name="Universitys Specialization" id="university_secialization_menu" parent="hr.menu_human_resources_configuration" action="action_university_specialization" sequence="17"/>
+
+      <menuitem name="Retirement Age" id="Retirement_age_menu" parent="hr.menu_human_resources_configuration" action="action_retirement" sequence="18"/>
+
+
+     
+  </data>
+</odoo>

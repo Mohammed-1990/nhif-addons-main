@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- graph public tender--> 
+     <record id="view_public_tender_graph" model="ir.ui.view">
+          <field name="name">public.tender.report.graph</field>
+          <field name="model">purchase.report</field>
+          <field name="arch" type="xml">
+              <graph string="Pipeline Analysis" stacked="True">
+                  <field name="requisition_id" type="row"/>
+                  <field name="price_total" type="measure"/>
+              </graph>
+          </field>
+      </record>
+
+    <!-- Pivot public tender--> 
+    <record id="view_public_tender_pivot" model="ir.ui.view">
+         <field name="name">public.tender.report.pivot</field>
+         <field name="model">purchase.report</field>
+         <field name="arch" type="xml">
+             <pivot string="Public Tender Analysis" disable_linking="True">
+                <field name="requisition_id"  type="col"/>
+                <field name="partner_id" type="col"/>
+                <field name="product_id" type="col"/>
+                <field name="ordering_date" type="row"/>
+                <field name="price_total" type="measure"/>
+             </pivot>
+         </field>
+    </record>
+
+    <!-- Secarch Public Tender-->
+    <record id="view_public_tender_report_search" model="ir.ui.view">
+        <field name="name">public.tender.report.search</field>
+        <field name="model">purchase.request</field>
+        <field name="arch" type="xml">
+            <search string="Purchase Orders">
+                <field name="partner_id"/>
+                <filter string="Purchase confirm" name="purchase" domain="[('state','=','purchase')]"/>
+                <group expand="0" string="Extended Filters">
+                </group>
+                <group expand="1" string="Group By">
+                    <filter string="Tender" name="tender" context="{'group_by':'requisition_id'}"/>
+                    <filter string="Vendor" name="group_partner_id" context="{'group_by':'partner_id'}"/>
+
+                    <filter string="Status" name="status" context="{'group_by':'state'}"/>
+                   <separator/>
+                    <filter string="Order Date" name="order_month" context="{'group_by': 'ordering_date:month'}"/>
+                    <!-- <filter string="Deadline Date" name="deadline" context="{'group_by': 'deadline_date:month'}"/> -->
+
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+        <!-- Action Public Tender -->
+    <record id="action_public_tender_report" model="ir.actions.act_window">
+        <field name="name">Public Tender Report</field>
+        <field name="res_model">purchase.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <!-- <field name="view_id" ref="view_public_tender_pivot"/> -->
+        <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_public_tender_pivot')}),
+                          (0, 0, {'view_mode': 'graph', 'view_id': ref('view_public_tender_graph')})]"/>
+        <field name="search_view_id" ref="view_public_tender_report_search"/>
+        <field name="domain">[('requisition_id.type','=','public_tender')]</field>
+        <field name="context">{'search_default_purchase':1}</field>
+    </record>
+
+
+    <menuitem id="menu_public_tender_report" action="action_public_tender_report" sequence="4" parent="purchase.purchase_report"/>
+</odoo>

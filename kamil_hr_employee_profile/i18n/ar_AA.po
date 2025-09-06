@@ -1,0 +1,1244 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_employee_profile
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-02 09:58+0000\n"
+"PO-Revision-Date: 2021-02-02 09:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "<br/><br/>\n"
+"                            وحررت هذه الشهادة بناء علي طلبه."
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,blood_type:0
+msgid "AB+"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,blood_type:0
+msgid "AB-"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Address Details"
+msgstr "تفاصيل السكن"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__allowance_type
+msgid "Allowance Type"
+msgstr "نوع العلاوة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__allowances_lines
+msgid "Allowances Lines"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__amount
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Appointment Qualification"
+msgstr "المؤهل عند التعيين"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__appoiontment_date
+msgid "Appoiontment Date"
+msgstr "تاريخ التعيين"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__appoiontment_type
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_search_inherit
+msgid "Appoiontment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "Approved"
+msgstr "مقبول"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__area
+msgid "Area"
+msgstr "المنطقة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__account_number
+msgid "Bank Account Number"
+msgstr "رقم الحساب البنكي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__bank_branch_name
+msgid "Bank Branch Name"
+msgstr "إسم فرع البنك"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__bank_name
+msgid "Bank Name"
+msgstr "اسم البنك"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__beneficiary
+msgid "Beneficiary"
+msgstr "الجهة المستفيدة"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,birth_certifiiate:0
+msgid "Birth Certifiiate"
+msgstr "شهادة الميلاد"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__birth_certifiiate_date
+msgid "Birth Certifiiate Date"
+msgstr "تاريخ شهادة الميلاد"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__blood_type
+msgid "Blood Type"
+msgstr "فصيله الدم"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__bonus
+msgid "Bonus"
+msgstr "العلاوة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__branch_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.employee_tree_view_inherit
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__cards_line_ids
+msgid "Cards Line"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__childs_number
+msgid "Childs Number"
+msgstr "عدد الاطفال"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Chronic diseases"
+msgstr "الأمراض المزمنة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__city
+msgid "City"
+msgstr "المدينة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__count
+msgid "Count"
+msgstr "عدد"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease__create_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__create_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__create_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__create_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__current_leave_state
+msgid "Current Leave Status"
+msgstr "حالات الإجازة الحالية"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__date_to
+msgid "Date to"
+msgstr "الاستحقاق إلى"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__appoiontment_degree
+msgid "Degree upon appoiontment"
+msgstr "الدرجة عن التعيين"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "Department Manger Confirm"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__disease_name
+msgid "Disease Name"
+msgstr "اسم المرض"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease__display_name
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__display_name
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__display_name
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__display_name
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,marital:0
+msgid "Divorced"
+msgstr "مطلّق"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__document
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__document
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__document
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__document
+msgid "Document"
+msgstr "مستند"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "Draft"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__driving_attch
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__driving_license
+msgid "Driving License"
+msgstr "رقم رخصة القيادة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__date_from
+msgid "Due Date from"
+msgstr "الإستحقاق من"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__education_lines
+msgid "Education Lines"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Eighth Bonus"
+msgstr "العلاوة الثامنة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_res_users__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_hr_employee
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__number
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_hr_employee__account_number
+msgid "Employee bank salary account"
+msgstr "الحساب البنكي لراتب الموظف"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Employee number"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "End"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__entry_date
+msgid "Entry Date"
+msgstr "تاريخ الإلتحاق"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Family members"
+msgstr "افراد الاسرة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__fellowship
+msgid "Fellowship"
+msgstr "لديه زمالة"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,gender:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Fifth Bonus"
+msgstr "العلاوة الخامسة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__fingerprint_number
+msgid "Fingerprint number"
+msgstr "رقم البصمة"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "First Bonus"
+msgstr "العلاوة الأولى"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Fourth Bonus"
+msgstr "العلاوة الرابعة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__functional_id
+msgid "Functional"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Functional data"
+msgstr "بيانات الوظيفة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,license_type:0
+msgid "General"
+msgstr "عام"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__graduation_date
+msgid "Graduation Date"
+msgstr "تاريخ التخرج"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.actions.server,name:kamil_hr_employee_profile.hr_next_allowance_date_cron_ir_actions_server
+#: model:ir.cron,cron_name:kamil_hr_employee_profile.hr_next_allowance_date_cron
+#: model:ir.cron,name:kamil_hr_employee_profile.hr_next_allowance_date_cron
+msgid "HR Employee Profile: Check employee's next bonus date"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.actions.server,name:kamil_hr_employee_profile.hr_promotion_cron_ir_actions_server
+#: model:ir.cron,cron_name:kamil_hr_employee_profile.hr_promotion_cron
+#: model:ir.cron,name:kamil_hr_employee_profile.hr_promotion_cron
+msgid "HR Employee Profile: Check employee's promotion date"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.actions.server,name:kamil_hr_employee_profile.hr_termination_date_cron_ir_actions_server
+#: model:ir.cron,cron_name:kamil_hr_employee_profile.hr_termination_date_cron
+#: model:ir.cron,name:kamil_hr_employee_profile.hr_termination_date_cron
+msgid "HR Employee Profile: Check employee's termination date"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "HR Manger"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__home_address
+msgid "Home Address"
+msgstr "عنوان المنزل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease__id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__identification_id
+msgid "Identification No"
+msgstr "الرقم القومي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__message_unread
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__message_unread
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__message_unread
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__message_unread
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__message_needaction
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__message_needaction
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__message_needaction
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__message_needaction
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__message_has_error
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__message_has_error
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__message_has_error
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__message_has_error
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "In service qualifications"
+msgstr "المؤهل أثناء الخدمة"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Inclination allowance"
+msgstr "بدل الميل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__index_number
+msgid "Index Number"
+msgstr "رقم الفهرس"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__initiatives_line_id
+msgid "Initiatives Line"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Initiatives and Tributes"
+msgstr "المبادرات والإشادات"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,medical_state:0
+msgid "Intace"
+msgstr "سليم"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_res_partner__is_employee
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_res_users__is_employee
+msgid "Is Employee"
+msgstr "هل هو موظف؟"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__job_title_id
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__last_bonus_date
+msgid "Last Bonus Date"
+msgstr "تاريخ آخر علاوة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease____last_update
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card____last_update
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education____last_update
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes____last_update
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__last_promotion_date
+msgid "Last Promotion Date"
+msgstr "تاريخ آخر ترقية"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease__write_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__write_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__write_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__write_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__license_type
+msgid "License Type"
+msgstr "نوع الرخصة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__line_ids
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__marital
+msgid "Marital Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,marital:0
+msgid "Married"
+msgstr "متزوّج"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,marital:0
+msgid "Married  and have kids"
+msgstr "متزوّج/متزوجة و له/لها  اطفال "
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__medical_line_ids
+msgid "Medical Line"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__medical_report
+msgid "Medical Report"
+msgstr "التقرير الطبي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__medical_state
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Medical State"
+msgstr "الحالة الصحية"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Mobile phone"
+msgstr "الهاتف المحمول"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__mother_name
+msgid "Mother Name"
+msgstr "اسم الأم"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_disease_disease__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__name_eng
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Name in English"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__relatives
+msgid "Name of wife/child"
+msgstr "اسم الزوج/ة او الطفل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__country_id
+msgid "Nationality (Country)"
+msgstr "الجنسية (البلد)"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__nclination_deserved
+msgid "Nclination Deserved"
+msgstr "مستحق بدل ميل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__nearest_landmark
+msgid "Nearest landmark"
+msgstr "اقرب معلم بارز"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Ninth Bonus"
+msgstr "العلاوة التاسعة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_employee_profile
+#: selection:employee.card,activity_state:0
+#: selection:employee.education,activity_state:0
+#: selection:initiatives.tributes,activity_state:0
+#: selection:medical.state.line,activity_state:0
+#: selection:social.allowances,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__partner_id
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__passport_id
+msgid "Passport No"
+msgstr "رقم جواز السفر"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "People can refer to them"
+msgstr "اشخاص يمكن الرجوع اليهم"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Personal Information"
+msgstr "البيانات الشخصيه"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__phone_numbre
+msgid "Phone Numbre"
+msgstr "رقم الهاتف"
+
+#. module: kamil_hr_employee_profile
+#: selection:employee.card,activity_state:0
+#: selection:employee.education,activity_state:0
+#: selection:initiatives.tributes,activity_state:0
+#: selection:medical.state.line,activity_state:0
+#: selection:social.allowances,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__qualifcat_type
+msgid "Qualifcat Type"
+msgstr "نوع المؤهل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__appointment_qualification
+msgid "Qualification"
+msgstr "المؤهل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__qualifying_allowance
+msgid "Qualifying Allowance"
+msgstr "بدل المؤهل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_hr_employee__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "اسم المستخدم المرتبط بالمورد لإدارة وصوله."
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__relative_relation
+msgid "Relative Relation"
+msgstr "صلة القرابة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__religion
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__retirement_date
+msgid "Retirement Date"
+msgstr "تاريخ التقاعد"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,marital:0
+msgid "SINHLE"
+msgstr "اعزب/عزباء"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Scientific Qualifications"
+msgstr "المؤهلات العلمية"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__search_certificate
+msgid "Search certificate"
+msgstr "شهادة البحث"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "Second Approval"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Second Bonus"
+msgstr "العلاوة الثانية"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Seventh Bonus"
+msgstr "العلاوة السابعة"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Sixth Bonus"
+msgstr "العلاوة السادسة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__social_allowance
+msgid "Social Allowance"
+msgstr "علاوة اجتماعية"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,medical_state:0
+msgid "Speccial Needs"
+msgstr "ذوي الإحتياجات الخاصة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__speccial_needs_type
+msgid "Speccial Needs Type"
+msgstr "نوع الإعاقه"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__specialization
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__specialization
+msgid "Specialization"
+msgstr "التخصص"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,license_type:0
+msgid "Specliall"
+msgstr "خاص"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__card_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Sponsorship"
+msgstr "الكفالة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__state
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Statee"
+msgstr "الولاية"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__activity_state
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__activity_state
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__activity_state
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__activity_state
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__tax_exempt
+msgid "Tax Exempt"
+msgstr "معفي ضريبياً"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Tax exemption"
+msgstr "الإعفاء الضريبي"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,birth_certifiiate:0
+msgid "Teething"
+msgstr "تسنين"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__termination_date
+msgid "Termination Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "The approval of a designee"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,bonus:0
+msgid "Third Bonus"
+msgstr "العلاوة الثالثة"
+
+#. module: kamil_hr_employee_profile
+#: selection:employee.card,activity_state:0
+#: selection:employee.education,activity_state:0
+#: selection:initiatives.tributes,activity_state:0
+#: selection:medical.state.line,activity_state:0
+#: selection:social.allowances,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__total_cards_amount
+msgid "Total Cards Amount"
+msgstr "اجمالي قيم البطاقات"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "Total Sponsorship Amount"
+msgstr "إجمالي قيم الكفالات"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__training_number
+msgid "Training Number"
+msgstr "الرقم التدريبي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__birth_certifiiate
+msgid "Type of birth certifiiate"
+msgstr "نوع شهادة الميلاد"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__unit_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_search_inherit
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,current_leave_state:0
+msgid "Unit Manger Confirm"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__university
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__university
+msgid "University"
+msgstr "الجامعة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_education__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_initiatives_tributes__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_medical_state_line__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_social_allowances__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_card__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_employee_education__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_initiatives_tributes__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_medical_state_line__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_employee_profile.field_social_allowances__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_employee_profile
+#: selection:hr.employee,marital:0
+msgid "Widowre"
+msgstr "ارملة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__work_email
+msgid "Work Email"
+msgstr "البريد الإلكتروني للعمل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__work_location
+msgid "Work Locationt"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__mobile_phone
+msgid "Work Mobile"
+msgstr "الهاتف المحمول للعمل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__work_phone
+msgid "Work Phone"
+msgstr "هاتف العمل"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_employee_card__amount
+msgid "cards.cards"
+msgstr "القيمة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_disease_disease
+msgid "disease.disease"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_employee_card
+msgid "employee.card"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_employee_education
+msgid "employee.education"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_initiatives_tributes
+msgid "initiatives.tributes"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "license Numner"
+msgstr "رقم رخصة القيادة"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_medical_state_line
+msgid "medical.state.line"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__relative_name
+msgid "name"
+msgstr "الاسم"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model,name:kamil_hr_employee_profile.model_social_allowances
+msgid "social.allowances"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "spouse/wife_complete_name"
+msgstr "اسم الزوج/الزوجة"
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.view_employee_form_inherit
+msgid "type"
+msgstr "النوع"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__is_union
+msgid "union"
+msgstr "نقابي"
+
+#. module: kamil_hr_employee_profile
+#: model:ir.model.fields,field_description:kamil_hr_employee_profile.field_hr_employee__user_id
+msgid "user"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "إلي من يهمه الأمر."
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "التاريخ:"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "ختم الصندوق"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "شخص مجتهد وينفذ كافة الواجبات المطلوبة منه،‬‬ حسن السير والسلوك،‬‬ وهذه أبرز المزايا التي يتمتع بها علي سبيل المثال لا الحصر."
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model:ir.actions.report,name:kamil_hr_employee_profile.work_certificate_report
+msgid "شهادة عمل"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "شهادة عمل (خدمة)"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "مدير ادارة الموارد البشرية ....................................... \n"
+"                           <br/><br/> التوقيع ...............................................\n"
+"                            <br/><br/><br/><br/><br/>"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "وحتي تاريخة.\n"
+"                            <br/><br/>\n"
+"                            وخلال فترة عمله/ها معنا‫‪،‬‬ وجدنا أن السيد/ة"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "يشهد الصندوق القومي للتامين الصحي بأن السيد/ة"
+msgstr ""
+
+#. module: kamil_hr_employee_profile
+#: model_terms:ir.ui.view,arch_db:kamil_hr_employee_profile.work_certificate_view
+msgid "يعمل بهذا الطرف منذ تاريخ التعيين"
+msgstr ""
+

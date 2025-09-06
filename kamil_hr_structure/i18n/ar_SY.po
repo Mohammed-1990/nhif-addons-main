@@ -1,0 +1,377 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_structure
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-09 12:01+0000\n"
+"PO-Revision-Date: 2022-04-09 12:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__is_active
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.salary_structure_form_view
+msgid "Active"
+msgstr "نشط"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__appoiontment_type_ids
+msgid "Appoiontment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.department_tree_view_inherit
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.view_department_form_inherit
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_structure
+#: code:addons/kamil_hr_structure/models/salary_structure.py:19
+#, python-format
+msgid "Can not add more than one old structure"
+msgstr "لا يمكن تعيين اكثر من هيكل قديم"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.administrative_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "Center"
+msgstr "مركز"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.actions.act_window,help:kamil_hr_structure.management_departments_action
+msgid "Create a new department"
+msgstr "إنشاء قسم جديد"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__create_date
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__degree_id
+msgid "Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "Department"
+msgstr "قسم"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_hr_department__name
+msgid "Department Name"
+msgstr "اسم القسم"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__deportation_allowance
+msgid "Deportation Allowance"
+msgstr "بدل الترحيل"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__name
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.salary_structure_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__detail_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.salary_structure_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_report_kamil_hr_structure_administrative_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__display_name
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__eighth_bonus
+msgid "Eighth Bonus"
+msgstr "العلاوة الثامنة"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "Executive unit"
+msgstr "وحدة تنفيذية"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__fifth_bonus
+msgid "Fifth Bonus"
+msgstr "العلاوة الخامسة"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__fourth_bonus
+msgid "Fourth Bonus"
+msgstr "العلاوة الرابعة"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "General Administration"
+msgstr "إدارة عامة"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "General Manger"
+msgstr "المدير العام"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.hr_department_search_inherit
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_hr_structure
+#: model:ir.model,name:kamil_hr_structure.model_hr_department
+msgid "HR Department"
+msgstr "قسم الموارد البشرية"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__high_cost
+msgid "High cost of living"
+msgstr "غلاء المعيشة"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__housing_allowance
+msgid "Housing Allowance"
+msgstr "بدل السكن"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_report_kamil_hr_structure_administrative_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__id
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__ironically_removed
+msgid "Ironically Removed"
+msgstr "إزالة المفارقات"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__is_old_structure
+msgid "Is Old Structure"
+msgstr "تعيين ك هيكل قديم؟"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "Lab"
+msgstr "معمل"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_report_kamil_hr_structure_administrative_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure____last_update
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__write_date
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure__line_ids
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_administrative_wizard__department_id
+msgid "Management/Department"
+msgstr "الادارة/القسم"
+
+#. module: kamil_hr_structure
+#: model:ir.actions.act_window,name:kamil_hr_structure.management_departments_action
+#: model:ir.ui.menu,name:kamil_hr_structure.managements_departments_menu
+#: model:ir.ui.menu,name:kamil_hr_structure.menu_hr_department_root
+msgid "Managements and Departments"
+msgstr "الإدارات والأقسام"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__minimum_bonus
+msgid "Minimum Bonus"
+msgstr "علاوة الحد الأدنى"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.view_department_form_inherit
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__ninth_bonus
+msgid "Ninth Bonus"
+msgstr "العلاوة التاسعة"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.administrative_report_view
+msgid "No Data"
+msgstr "لا توجد بيانات"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_hr_department__parent_id
+msgid "Parent Department"
+msgstr "قسم رئيسي"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.department_tree_view_inherit
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.view_department_form_inherit
+msgid "Parent Management"
+msgstr "الإدارة الرئيسيه"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "Pharmacy"
+msgstr "صيدلية"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__primary_category
+msgid "Primary Category"
+msgstr "الفئة الإبتدائية"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.administrative_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_hr_structure
+#: model:ir.actions.act_window,name:kamil_hr_structure.action_administrative_wizard
+#: model:ir.actions.report,name:kamil_hr_structure.administrative_report
+#: model:ir.ui.menu,name:kamil_hr_structure.menu_report_administrative
+msgid "Report Administrative Structure"
+msgstr "تقرير الهيكل الإداري"
+
+#. module: kamil_hr_structure
+#: model:ir.ui.menu,name:kamil_hr_structure.departments_reports_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__representation_allowance
+msgid "Representation Allowance"
+msgstr "بدل تمثيل"
+
+#. module: kamil_hr_structure
+#: model:ir.actions.act_window,name:kamil_hr_structure.action_salary_structure
+#: model:ir.ui.menu,name:kamil_hr_structure.record_salary_menu
+msgid "Salary Structure"
+msgstr "الهيكل الراتبي"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__second_bonus
+msgid "Second Bonus"
+msgstr "العلاوة الثانية"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__seventh_bonus
+msgid "Seventh Bonus"
+msgstr "العلاوة السابعة"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__sixth_bonus
+msgid "Sixth Bonus"
+msgstr "العلاوة السادسة"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__special_bonus
+msgid "Special Bonus"
+msgstr "العلاوة الخاصة"
+
+#. module: kamil_hr_structure
+#: selection:hr.department,type:0
+msgid "Sub - management"
+msgstr "إدارة فرعية"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_salary_structure_line__third_bonus
+msgid "Third Bonus"
+msgstr "العلاوة الثالثة"
+
+#. module: kamil_hr_structure
+#: model:ir.model.fields,field_description:kamil_hr_structure.field_hr_department__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.salary_structure_form_view
+msgid "Update all contract"
+msgstr "تحديث قيم العقود"
+
+#. module: kamil_hr_structure
+#: code:addons/kamil_hr_structure/models/salary_structure.py:86
+#, python-format
+msgid "You can't activate more than one salary structure"
+msgstr "لا يمكنك تنشيط أكثر من هيكل راتبي واحد"
+
+#. module: kamil_hr_structure
+#: model:ir.model,name:kamil_hr_structure.model_administrative_wizard
+msgid "administrative.wizard"
+msgstr ""
+
+#. module: kamil_hr_structure
+#: model:ir.model,name:kamil_hr_structure.model_report_kamil_hr_structure_administrative_report_view
+msgid "report.kamil_hr_structure.administrative_report_view"
+msgstr ""
+
+#. module: kamil_hr_structure
+#: model:ir.model,name:kamil_hr_structure.model_salary_structure
+msgid "salary.structure"
+msgstr "هيكل راتبي"
+
+#. module: kamil_hr_structure
+#: model:ir.model,name:kamil_hr_structure.model_salary_structure_line
+msgid "salary.structure.line"
+msgstr ""
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.administrative_report_view
+msgid "الادارة الرئيسية"
+msgstr ""
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.administrative_report_view
+msgid "القسم"
+msgstr ""
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.administrative_report_view
+msgid "المدير"
+msgstr ""
+
+#. module: kamil_hr_structure
+#: model_terms:ir.ui.view,arch_db:kamil_hr_structure.administrative_report_view
+msgid "تقرير الهيكل الاداري"
+msgstr ""
+

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="report.paperformat" id="paperformat_book_report">
+        <field name="name">Book Summary</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+	</record>
+
+   <report 
+   		id="book_qs_report"
+        model="tender.book"
+        string="Books Report"
+        report_type="qweb-pdf"
+        name="kamil_purchase_qualifiying_suppliers.book_qs_report_view_documents"
+        menu="False"
+        paperformat="paperformat_book_report"
+
+        />
+
+    <template id="book_qs_report_view">
+        <t t-call="web.html_container">
+            <div class="header">
+              <h3 style="font-family:Calibri;" class="text-center">كراسة العطاء</h3>
+            </div>
+            
+            <br/> <br/>
+            <div class="article">
+                <br/><br/><br/>
+                <table class="table table-condensed table-bordered" style="width: 100%">
+                     <tr>
+                        <td><b>رقم العطاء</b></td>
+                        <td><span t-esc="o.requisition_id.name"/></td>
+                    </tr>
+                     <tr>
+                        <td><b>رقم الكراسة</b></td>
+                        <td><span t-esc="o.sequence"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>إسم الشركة</b></td>
+                        <td><span t-esc="o.partner_id.name"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>الايميل</b></td>
+                        <td><span t-esc="o.partner_id.email"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>الهاتف</b></td>
+                        <td><span t-esc="o.partner_id.phone"/></td>
+                    </tr>
+                </table>
+                <br/><br/><br/><br/>
+                <table class="text-right table table-condensed table-hover">
+                    <tr>
+                        <td>
+                            <strong style="float:right"> التاريخ </strong>
+                            <span style="float:right;margin-right:20px" t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer">
+                <div class="row text-center" style="border-top: 1px solid black;">
+                    <div class="col col-3 offset-9 text-right">
+                        <ul class="list-inline mt-2">
+                            <li class="list-inline-item">Page:</li>
+                            <li class="list-inline-item">
+                                <span class="page"/>
+                            </li>
+                            <li class="list-inline-item">/</li>
+                            <li class="list-inline-item">
+                                <span class="topage"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+     <template id="book_qs_report_view_documents">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="kamil_purchase_qualifiying_suppliers.book_qs_report_view"/>
+            </t>
+        </t>
+    </template>
+
+
+      <report 
+        id="book_done_report"
+        model="tender.book"
+        string="Books Report"
+        report_type="qweb-pdf"
+        name="kamil_purchase_qualifiying_suppliers.book_done_report_view_documents"
+        print_report_name="'Book_(%s) ' % (object.sequence)"
+        menu="False"
+        />
+
+    <template id="book_done_report_view">
+        <t t-call="web.html_container">
+           <div class="header">
+              <h3 style="font-family:Calibri;" class="text-center">كراسة العطاء</h3>
+            </div>
+            <br/><br/><br/>
+            <div class="article">
+                <table class="text-right table table-condensed table-hover">
+                    <tr>
+                        <th>
+                            <strong style="float:right">رقم العطاء</strong>
+                        </th>
+                        <td>
+                            <span style="float:right;margin-right:20px" t-esc="o.requisition_id.name"></span>
+                        </td>
+                        <th>
+                            <strong style="float:right">رقم الكراسة</strong>
+                        </th>
+                        <td>
+                            <span style="float:right;margin-right:20px" t-esc="o.sequence"></span>
+                        </td>
+                    </tr>
+                </table>
+                <br/><br/><br/>
+                <table class="table table-condensed table-bordered" style="width: 100%">
+                    <tr>
+                        <td><b>إسم الشركة</b></td>
+                        <td><span t-esc="o.partner_id.name"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>الايميل</b></td>
+                        <td><span t-esc="o.partner_id.email"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>الهاتف</b></td>
+                        <td><span t-esc="o.partner_id.phone"/></td>
+                    </tr>
+                    <tr>
+                        <t t-set="count" t-value=""/>
+                        <td><b>مجالات التأهيل</b></td>
+                        <t t-foreach="o.area_rehab_ids" t-as="l">
+                            <td>
+                                <span t-esc="l.name"/>
+                            </td>
+                        </t>
+                    </tr>
+                </table>
+                <br/><br/><br/><br/>
+                <table class="text-right table table-condensed table-hover">
+                    <tr>
+                        <td>
+                            <strong style="float:right"> التاريخ </strong>
+                            <span style="float:right;margin-right:20px" t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer">
+                <div class="row text-center" style="border-top: 1px solid black;">
+                    <div class="col col-3 offset-9 text-right">
+                        <ul class="list-inline mt-2">
+                            <li class="list-inline-item">الصفحة:</li>
+                            <li class="list-inline-item">
+                                <span class="page"/>
+                            </li>
+                            <li class="list-inline-item">/</li>
+                            <li class="list-inline-item">
+                                <span class="topage"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+     <template id="book_done_report_view_documents">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="kamil_purchase_qualifiying_suppliers.book_done_report_view"/>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="gc_qulifying_suppliers" model="general.conditions">
+			<field name="name">Qualifying Suppliers</field>
+			<field name="type">qualifying_suppliers</field>
+			<field name="general_conditions_lines" 
+				eval="[(5,0), 
+					(0, 0, {'name':'خلو طرف من الضرائب' }),
+					(0, 0, {'name':'إبراء زمة من  الذكاة' }),
+					(0, 0, {'name':'شهادة التسجيل' }),
+					(0, 0, {'name':'الدمغة القانونية' }),
+					(0, 0, {'name':'القيمة المضافة' }),
+					(0, 0, {'name':'الرقم التعريفي' }),
+					(0, 0, {'name':'مقدرة مالية' }),
+					(0, 0, {'name':'السيرة الذاتية' }),
+					(0, 0, {'name':'شهادة الرقم الضريبي' }),
+					(0, 0, {'name':'التأمين المبدئي' }),
+														
+					]"/>
+
+		</record>
+
+	</data>
+</odoo>

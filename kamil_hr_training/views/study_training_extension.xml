@@ -1,0 +1,694 @@
+<odoo>
+  <data>    
+
+    <record model="ir.ui.view" id="training_expenses_form_view">
+      <field name="name">training expenses</field>
+      <field name="model">training.expenses</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+                <button name="do_confirm" string="Confirm" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+                <button name="do_accounting" string="Send to accounting" type="object" class="btn btn-primary" states="confirmed" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+                <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+                <h1>
+                    <field name="name" placeholder="Description" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </h1>
+                <separator string="Employee Data"/>
+                <group col="4">
+                  <field name="employee_no" force_save="1"/>
+                  <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" readonly="True"/>
+                  <field name="department_id" options="{'no_create':True,'no_edit':True,'no_open':True}" force_save="1"/>
+                  <field name="job_id" options="{'no_create':True,'no_edit':True,'no_open':True}" force_save="1"/>
+                </group> 
+                <group col="4">
+                     <field name="study_mission" options="{'no_create':True,'no_edit':True,'no_open':True}" force_save="1"/>
+                     <field name="total_amount" />
+                </group>
+                <separator string="Program Details"/>
+                <group col="4">
+                  <field name="training_program" />
+                  <field name="country" />
+                  <field name="city_id" />
+                  <field name="university_id" />
+                  <field name="specialization" />
+                </group> 
+           <notebook>
+              <page string="Support Data">
+                <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                 <tree editable="bottom">
+                  <field name="support_type" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                  <field name="support_value"/>
+                  <field name="document"/>
+                  <field name="notes"/>
+                  </tree>
+                </field>
+                </page> 
+               </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+
+
+          </form>
+        </field>
+      </record>
+
+
+
+    <record model="ir.ui.view" id="training_setting_form_view">
+    <field name="name">Preparation of training allowance</field>
+    <field name="model">training.setting</field>
+    <field name="arch" type="xml">
+          <form>
+
+            <sheet>
+                <h1>
+                  <field name="name" placeholder="Preparation of training allowance"/>
+                </h1>
+                
+              <notebook>
+                  <page string="Internal Short Training">
+                      <field name="internal_short_lines">
+                        <tree editable="bottom">
+                          <field name="amount" required="1"/>
+                        </tree>
+                      </field>
+                 </page>
+
+                  <page string="Internal Tall Training">
+                      <field name="internal_tall_lines">
+                        <tree editable="bottom">
+                          <field name="status" required="1"/>
+                          <field name="amount" required="1"/>
+                        </tree>
+                      </field>
+                 </page>
+
+                 <page string="External Short Training">
+                      <field name="external_short_lines">
+                        <tree editable="bottom">
+                          <field name="country" required="1"/>
+                          <field name="amount" required="1"/>
+                          <field name="currency"/>
+                        </tree>
+
+                      </field>
+                 </page>
+
+                 <page string="External Tall Training">
+                      <field name="external_tall_lines">
+                        <tree editable="bottom">
+                          <field name="country" required="1"/>
+                          <field name="status" required="1"/>
+                          <field name="amount" required="1"/>
+                          <field name="currency" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                        </tree>
+                      </field>
+                 </page>
+
+
+
+               </notebook>
+            </sheet>
+            
+
+          </form>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="study_training_extension_form_view">
+    <field name="name">study.training.extension</field>
+    <field name="model">study.training.extension</field>
+    <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_submit" states="draft" string="Send" type="object" class="oe_highlight"/>
+              <button name="dep_training" states="submitted" string="Approve" type="object" class="oe_highlight"/>
+              <button name="dep_hr" states="dep_training" string="HR Department Confirm" type="object" class="oe_highlight"/>
+              <button name="gm_confirm" states="dep_hr" string="General manager confirm" type="object" class="oe_highlight"/>
+              <button name="do_return" states="submitted,dep_training,dep_hr" string="Return" type="object" />
+              <button name="do_reject" states="dep_hr" string="Reject" type="object"/>
+              <field name="state" widget="statusbar" />
+            </header>
+            <sheet>
+                <group col="4">
+                  <field name="employee_no"/>
+                  <field name="employee_id" options="{'no_create':True}"/>
+                  <field name="department_id" />
+                  <field name="job_id"/>
+                </group>
+                <group col="4">
+                  <field name="study_id" options="{'no_create':True}" force_save="1"/>
+                  <field name="country"/>
+                  <field name="from_date"/>
+                  <field name="to_date" force_save="1"/>
+                </group>
+
+                <separator string="extension Training Data"/>
+                  <group col="4">
+                    <field name="to_date" string="From Date" force_save="1"/>
+                    <field name="to_date_extension" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="reason_extension" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="document"/>
+                  </group>
+                <notebook>
+                  <page string="Notes">
+                    <div>
+                      <field name="notes"/>
+                    </div>
+                  </page>
+                </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div> 
+
+
+          </form>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="study_training_interrupt_form_view">
+    <field name="name">study.training.interrupt</field>
+    <field name="model">study.training.interrupt</field>
+    <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_submit" string="Submit" type="object" class="btn btn-primary" states="draft"/>
+              <button name="hr_development" string="Confirm" type="object" class="btn btn-primary" states="dep_training" groups="kamil_hr_security.hr_training_department_group"/>
+
+              <button name="general_directorate" string="Submit" type="object" class="btn btn-primary" states="hr_development" groups="kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="gm_confirm" string="Confirm" type="object" class="btn btn-primary" states="general_directorate" groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_management_group"/>
+
+              <button name="do_reject" states="general_directorate" string="Reject" type="object" groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_management_group"/>
+              <field name="state" widget="statusbar"/>
+            </header>
+
+            <sheet>
+               <separator string="study Training Data"/>
+                  <group col="4">
+                    <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="study_id" options="{'no_create':True,'no_edit':True,'no_open':True}" force_save="1"/>
+                    <field name="country" force_save="1"/>
+                    <field name="from_date" force_save="1"/>
+                    <field name="to_date" force_save="1"/>                    
+                  </group>
+                  <group col="4">
+                    <field name="type_interrupt" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="document" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  </group>
+                  <group>
+                    <field name="reason" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  </group>
+                  <notebook>
+                  <page string="Notes">
+                    <div>
+                      <field name="notes"/>
+                    </div>
+                  </page>
+                </notebook>
+
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+
+
+          </form>
+        </field>
+      </record>
+
+
+
+    <record model="ir.ui.view" id="criteria_evaluation_form_view">
+    <field name="name">criteria.evaluation</field>
+    <field name="model">criteria.evaluation</field>
+    <field name="arch" type="xml">
+          <form>
+           <sheet>
+       
+            <h1>
+             <field name="name" placeholder="Domain Name"/>
+           </h1>
+
+
+         <group>
+           <field name="domain_type" widget="radio"/>
+         </group>
+            </sheet>
+          </form>
+      </field>
+    </record>
+
+
+
+    <record model="ir.ui.view" id="criteria_name_form_view">
+    <field name="name">criteria.name</field>
+    <field name="model">criteria.name</field>
+    <field name="arch" type="xml">
+          <form>
+           <sheet>
+       
+            <h1>
+             <field name="name" placeholder="Criteria Name"/>
+           </h1>
+
+
+         <group>
+           <field name="scop" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+           <field name="percentage"/>
+         </group>
+            </sheet>
+          </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="coach_record_form_view">
+    <field name="name">coach.record</field>
+    <field name="model">coach.record</field>
+    <field name="arch" type="xml">
+          <form>
+           
+             <header>
+                <button name="approved" string="Approved" type="object" class="btn btn-primary" states="draft"  groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+                <button name="rejected" string="Rejected" type="object" class="btn btn-primary" states="approved"  groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+                <field name="state" widget="statusbar" />
+            </header>
+            <sheet>
+            <h1>
+             <field name="name" placeholder="Coach Name"  attrs="{'readonly':[('state','=','rejected')]}"/>
+           </h1>
+
+
+         <group col="4" >
+           <field name="emp_phone" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="email" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="birthday" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="address" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="document" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="total_degree" attrs="{'readonly':[('state','=','rejected')]}"/>
+         </group>
+
+         <notebook>
+          <page string="Evaluation">
+                      <field name="evaluation_lines" attrs="{'readonly':[('state','=','rejected')]}">
+                        <tree editable="bottom">
+                          <field name="scop" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                          <field name="criteria" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                          <field name="percentage"/>
+                          <field name="evaluation"/>
+                        </tree>
+
+                      </field>
+                 </page>
+                 <page string="Evaluation of implemented courses">
+                      <field name="evaluation_lines2" attrs="{'readonly':[('state','=','rejected')]}">
+                        <tree editable="bottom">
+                          <field name="course_name" options="{'no_create':True, 'no_edit':True}"/>
+                          <field name="rating_ratio"/>
+                          <field name="notes"/>
+                        </tree>
+
+                      </field>
+                 </page>
+         </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+
+
+          </form>
+      </field>
+    </record>
+
+
+
+
+
+
+    <record model="ir.ui.view" id="training_center_form_view">
+    <field name="name">training.center</field>
+    <field name="model">training.center</field>
+    <field name="arch" type="xml">
+          <form>
+             <header>
+                <button name="approved" string="Approved" type="object" class="btn btn-primary" states="draft"  groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+                <button name="rejected" string="Rejected" type="object" class="btn btn-primary" states="approved"  groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+                <field name="state" widget="statusbar"/>
+            </header>
+           <sheet>
+       
+            <h1>
+             <field name="name" placeholder="Training Center" attrs="{'readonly':[('state','=','rejected')]}"/>
+           </h1>
+
+           <group col="4">
+            <field name="country" attrs="{'readonly':[('state','=','rejected')]}"/>
+            <field name="city" attrs="{'readonly':[('state','=','rejected')]}"/>
+          </group>
+          <group col="4">
+            <field name="num_first" attrs="{'readonly':[('state','=','rejected')]}"/>
+            <field name="num_second" attrs="{'readonly':[('state','=','rejected')]}"/>
+            <field name="num_third" attrs="{'readonly':[('state','=','rejected')]}"/>
+           </group>
+
+
+         <group col="4">
+           <field name="email" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="address" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="document" attrs="{'readonly':[('state','=','rejected')]}"/>
+           <field name="total_degree" attrs="{'readonly':[('state','=','rejected')]}"/>
+         </group>
+
+         <notebook>
+          <page string="Evaluation">
+                      <field name="evaluation_lines" attrs="{'readonly':[('state','=','rejected')]}">
+                        <tree editable="bottom" delete="false">
+                          <field name="scop" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                          <field name="criteria" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                          <field name="percentage"/>
+                          <field name="evaluation"/>
+                        </tree>
+
+                      </field>
+                 </page>
+              <page string="Evaluation of implemented courses">
+                      <field name="evaluation_lines2" attrs="{'readonly':[('state','=','rejected')]}"> 
+                        <tree editable="bottom" delete="false">
+                          <field name="course_name" options="{'no_create':True, 'no_edit':True,}"/>
+                          <field name="rating_ratio"/>
+                          <field name="notes"/>
+                        </tree>
+
+                      </field>
+                 </page>
+         </notebook>
+            </sheet>
+             <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+          
+
+          </form>
+      </field>
+    </record>
+
+
+
+     <record model="ir.ui.view" id="types_short_training_tree_view">
+      <field name="name">types.short.training</field>
+      <field name="model">types.short.training</field>
+      <field name="arch" type="xml">
+          <tree editable="bottom">
+              <field name="name"/>
+          </tree>
+        </field>
+      </record>
+
+
+
+
+
+
+
+
+   <!--hr payroll tree view-->
+      <record model="ir.ui.view" id="training_expenses_tree_view">
+      <field name="name">training.expenses</field>
+      <field name="model">training.expenses</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="study_mission"/>
+              <field name="training_program" />
+              <field name="employee_id"/>
+              <field name="total_amount" sum="Total Amount"/>
+              <field name="state"/>
+          </tree>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="support_training_tree_view">
+    <field name="name">support training</field>
+    <field name="model">support.training</field>
+      <field name="arch" type="xml">
+          <tree  editable="bottom">
+              <field name="name"/>
+          </tree>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="training_setting_tree_view">
+      <field name="name">training.setting</field>
+      <field name="model">training.setting</field>
+      <field name="arch" type="xml">
+          <tree>
+            
+              <field name="name"/>
+             
+          </tree>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="study_training_extension_tree_view">
+    <field name="name">study.training.extension</field>
+    <field name="model">study.training.extension</field>
+    <field name="arch" type="xml">
+          <tree>
+            
+                <field name="employee_id"/>
+                <field name="study_id"/>
+                <field name="to_date" string="From Date"/>
+                <field name="to_date_extension"/>
+                <field name="state"/>
+        </tree>
+        </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="study_training_interrupt_tree_view">
+        <field name="name">study.training.interrupt</field>
+        <field name="model">study.training.interrupt</field>
+        <field name="arch" type="xml">
+              <tree>
+                
+                    <field name="employee_id"/>
+                    <field name="study_id"/>
+                    <field name="date"/>
+                    <field name="type_interrupt"/>
+                    <field name="reason"/>
+                    <field name="state"/>
+            </tree>
+            </field>
+      </record>
+
+      <record model="ir.ui.view" id="criteria_evaluation_tree_view">
+        <field name="name">criteria.evaluation</field>
+        <field name="model">criteria.evaluation</field>
+        <field name="arch" type="xml">
+              <tree>
+                    <field name="name"/>
+                    <field name="domain_type"/>
+            </tree>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="criteria_name_tree_view">
+        <field name="name">criteria.name</field>
+        <field name="model">criteria.name</field>
+        <field name="arch" type="xml">
+              <tree>
+                
+                    <field name="name"/>
+                    <field name="scop" />
+                    <field name="percentage"/>
+                    
+            </tree>
+            </field>
+      </record>
+
+
+
+    <record model="ir.ui.view" id="coach_record_tree_view">
+        <field name="name">coach.record</field>
+        <field name="model">coach.record</field>
+        <field name="arch" type="xml">
+              <tree>
+                <field name="name"/>
+                <field name="emp_phone"/>
+                <field name="email"/>
+                <field name="state"/>
+            </tree>
+            </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="training_center_tree_view">
+        <field name="name">training.center</field>
+        <field name="model">training.center</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="num_first"/>
+                <field name="email"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+   
+
+      <!-- Action leave interrput -->
+  
+    <record  id="action_training_expenses" model="ir.actions.act_window">
+      <field name="name">training.expenses</field>
+      <field name="res_model">training.expenses</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'group_by':['employee_id','study_mission']}</field>
+    </record>
+    <!-- 'create':False,'edit':False, -->
+
+
+    <record id="action_support_training" model="ir.actions.act_window">
+      <field name="name">Support Training</field>
+      <field name="res_model">support.training</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+
+    <record  id="action_training_setting" model="ir.actions.act_window">
+      <field name="name">Preparation of training allowance</field>
+      <field name="res_model">training.setting</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+    <record  id="action_study_training_extension" model="ir.actions.act_window">
+      <field name="name">study.training.extension</field>
+      <field name="res_model">study.training.extension</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'group_by':['employee_id','study_id']}</field>
+      
+    </record>
+
+
+    <record  id="action_study_training_interrupt" model="ir.actions.act_window">
+      <field name="name">study.training.interrupt</field>
+      <field name="res_model">study.training.interrupt</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'group_by':['employee_id','study_id']}</field>
+      
+    </record>
+
+    <record  id="action_criteria_evaluation" model="ir.actions.act_window">
+      <field name="name">Areas of assessment of centers and trainers</field>
+      <field name="res_model">criteria.evaluation</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+    <record  id="action_criteria_name" model="ir.actions.act_window">
+      <field name="name">Criteria for evaluating centers and trainers</field>
+      <field name="res_model">criteria.name</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+  
+
+  <record  id="action_coach_record" model="ir.actions.act_window">
+      <field name="name">coach.record</field>
+      <field name="res_model">coach.record</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+    <record  id="action_training_center" model="ir.actions.act_window">
+      <field name="name">training.center</field>
+      <field name="res_model">training.center</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+ <record id="action_types_short_training" model="ir.actions.act_window">
+      <field name="name">Types of Short Training</field>
+      <field name="res_model">types.short.training</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+
+
+<!--menu leave interrput-->
+
+
+<!-- <menuitem name="Training" id="hr_training_main_menu"/>
+ -->
+<menuitem name="Training Expenses" id="menu_training_expenses" action="action_training_expenses" parent="menu_long_training" sequence="5" groups="kamil_hr_security.hr_training_department_hq_group"/>
+
+<menuitem name="Study Training Extension" id="menu_study_training_extension" action="action_study_training_extension" parent="menu_long_training" sequence="6" groups="kamil_hr_security.hr_training_department_hq_group"/>
+
+<menuitem name="Study Training Interrupt / Cancel" id="menu_study_training_interrupt" action="action_study_training_interrupt" parent="menu_long_training" sequence="7" groups="kamil_hr_security.hr_training_department_hq_group"/>
+
+<menuitem name="Areas of assessment of centers and trainers
+" id="menu_criteria_evaluation" action="action_criteria_evaluation" parent="kamil_hr_training.training_configurarions_main_menu"/>
+
+<menuitem name="Criteria for evaluating centers and trainers" id="menu_criteria_name" action="action_criteria_name" parent="kamil_hr_training.training_configurarions_main_menu"/>
+
+<menuitem name="Coach Record" id="menu_coach_record" action="action_coach_record" parent="menu_short_training" sequence="7"  groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+<menuitem name="Training Center" id="menu_training_center" action="action_training_center" parent="menu_short_training" sequence="8" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+
+
+<menuitem name="Support Training" 
+          id="menu_support_training" 
+          action="action_support_training"
+          parent="kamil_hr_training.training_configurarions_main_menu"/>
+
+<menuitem name="Types of Short Training" 
+          id="menu_Types_of_short_training" 
+          action="action_types_short_training"
+          parent="kamil_hr_training.training_configurarions_main_menu"/>
+
+
+<!-- <menuitem name="Preparation of training allowance" 
+          id="menu_training_setting" 
+          action="action_training_setting" 
+          parent="kamil_hr_training.training_configurarions_main_menu"/>
+ -->
+
+
+  </data>
+</odoo>

@@ -1,0 +1,14 @@
+<odoo>
+	<data>
+
+		<report
+            id="report_record_job_id"
+            string="Record Job Report"
+            model="record.job.wizard"
+            report_type="qweb-pdf"
+            name="kamil_hr.record_job_report"
+            file="kamil_hr.record_job_template"
+               />
+
+	</data>
+</odoo>

@@ -1,0 +1,1007 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_leaves
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-02 13:24+0000\n"
+"PO-Revision-Date: 2020-12-02 13:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave_type__allocation_type
+msgid "	Fixed by HR: allocated by HR and cannot be bypassed; users can request leaves;	Fixed by HR + allocation request: allocated by HR and users can request leaves and allocations;	No allocation: no allocation by default, users can freely request leaves;"
+msgstr "	مثبت من قبل الموارد البشرية: قام قسم الموارد البشرية بتثبيته ولا يمكن تجاوزه؛ يمكن للمستخدمين طلب إجازات؛	مثبت من قبل الموارد البشرية مع إمكانية طلب التخصيص: قام قسم الموارد البشرية بتثبيته ويمكن للمستخدمين طلب إجازات ومخصصات؛	لا توجد مخصصات: لا توجد مخصصات افتراضيًا؛ يمكن للمستخدمين طلب إجازات حسب الرغبة؛"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.work_directly_view
+msgid ") بتاريخ ..../..../.......م.  \n"
+"                            <br/>\n"
+"                            و لم يتأخر / وقد تأخر مدة .......... وذلك للأسباب التالية:\n"
+"                            <br/>\n"
+"                            1- ...............................<br/>\n"
+"                            2- ...............................<br/>\n"
+"                            3- ...............................<br/>"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.hr_leave_view_kanban_inherit
+msgid "<br/>\n"
+"                                    الي تاريخ  :"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.hr_leave_view_kanban_inherit
+msgid "<br/>\n"
+"                                    عدد الايام  :"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.hr_leave_view_kanban_inherit
+msgid "<br/>\n"
+"                                    من تاريخ  :"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.work_directly_view
+msgid "<br/>\n"
+"                            وجزاكم الله خير"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "<br/>     الدرجة الوظيفية:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "<br/>     بداية الاجازة:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "<br/>   التاريخ المتوقع لمباشرة العمل:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "<br/>   المسمي الوظيفي:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "<br/>   ايام الاجازة:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "<br/>  عنوان الموظف بالاجازة:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "<br/><br/>    اجازة سعيدة نتمناها لكم."
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+msgid "<span>\n"
+"                        <strong class=\"text-center\">قسم شؤون العاملين</strong>\n"
+"                            ......................................................................\n"
+"                        </span>\n"
+"                        <span><br/><br/>\n"
+"                        <strong class=\"text-center\">الادارة العامة للموارد البشرية</strong>\n"
+"                            ......................................................................\n"
+"                        </span>"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "Address"
+msgstr "العنوان"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__allocate_duration
+msgid "Allocation Days"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__name
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.hr_leave_allocation_view_form_manager_inherit
+msgid "Allocation Mode"
+msgstr "وضع تخصيص رصيد الإجازات"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/hr_leave_allocation.py:91
+#, python-format
+msgid "Allocation of %s : %.2f %s to %s"
+msgstr "تخصيص اجازات %s : %.2f %s الي %s"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave_allocation__holiday_type
+msgid "Allow to create requests in batchs:\n"
+"- By Employee: for a specific employee\n"
+"- By Company: all employees of the specified company\n"
+"- By Department: all employees of the specified department\n"
+"- By Employee Tag: all employees of the specific employee group category"
+msgstr "السماح بإنشاء طلبات في دفعات:\n"
+"- للموظف: لموظف معين\n"
+"- للمؤسسة: لجميع موظفي مؤسسة معينة\n"
+"- للقسم: لجميع موظفي قسم معين\n"
+"- لوسم الموظف: لجميع الموظفين التابعين لفئة معينة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__annually
+msgid "Annually"
+msgstr "سنوي"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__appoiontment_type
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__appoiontment_type
+msgid "Appoiontment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+msgid "Approved"
+msgstr "مقبول"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__attach
+msgid "Attach"
+msgstr "المستند"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__allocation_type
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_type_tree
+msgid "Balance Type"
+msgstr "نوع الرصيد"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.hr_leave_allocation_view_form_manager_inherit
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,holiday_type:0
+msgid "By Appointment Type"
+msgstr "حسب نوع التعيين"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,holiday_type:0
+msgid "By Branch"
+msgstr "حسب الفرع"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,holiday_type:0
+msgid "By Degrees"
+msgstr "حسب الدرجة الوظيفية"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,holiday_type:0
+msgid "By Department"
+msgstr "حسب القسم"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,holiday_type:0
+msgid "By Employeee"
+msgstr "حسب الموظف"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,holiday_type:0
+msgid "By Functional Category"
+msgstr "حسب الفئه الوظيفية"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__can_acting
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__can_acting
+msgid "Can Acting"
+msgstr "هل تطلب من ينوب"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__can_cut
+msgid "Can Cut"
+msgstr "هل يمكن قطعها"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__can_saved
+msgid "Can be saved"
+msgstr "هل يمكن حفظها"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__save_remaining
+msgid "Can save the remaining"
+msgstr "هل يمكن حفظ الباقي"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.record_leave_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+#: selection:hr.leave.allocation,state:0
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_interrput_form_view
+#: selection:leave.interrupt,state:0
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.actions.act_window,help:kamil_hr_leaves.hr_leave_action_request
+msgid "Create a new leave request"
+msgstr "إنشاء طلب إجازة جديد"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__create_date
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__date_direct_action
+msgid "Date Direct Action"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+msgid "Days Number"
+msgstr "عدد الأيام"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__department_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+#: selection:leave.interrupt,state:0
+msgid "Department Manger Confirm"
+msgstr "تأكيد مدير القسم"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_hr_leaves
+#: selection:leave.interrupt,state:0
+msgid "Direct Manger"
+msgstr "رئيس القسم"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__display_name
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__display_name
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_report_kamil_hr_leaves_leave_report_view__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,marital:0
+msgid "Divorced"
+msgstr "مطلّقة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__document_ids
+msgid "Document"
+msgstr "المستند"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__document
+msgid "Documents Names"
+msgstr "اسماء المستندات"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+#: selection:leave.interrupt,state:0
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__number_of_days
+msgid "Duration (Days)"
+msgstr "المدة (بالأيام)"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__number_of_days_display
+msgid "Duration in days"
+msgstr "المدة بالأيام"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__duration
+msgid "Duration of preservation in months"
+msgstr "مدة الحفظ بالاشهر"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__holiday_type
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.hr_leave_allocation_view_form_manager_inherit
+msgid "Eligible"
+msgstr "الإستحقاق"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__employee_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__employee_no
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__date_to
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__end_date
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__date_end
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,gender:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave__duration_display
+msgid "Field allowing to see the leave request duration in days or hours depending on the leave_type_request_unit"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,allocation_type:0
+msgid "Fixed by HR"
+msgstr "مثبت من قبل الموارد البشرية"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__fun_category_ids
+msgid "Functional Category"
+msgstr "الفئة الوظيفية"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__degree_ids
+msgid "Functional Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,state:0
+msgid "General Directorate of Human Resources"
+msgstr "الادارة العامة للموارد البشرية"
+
+#. module: kamil_hr_leaves
+#: selection:leave.interrupt,state:0
+msgid "General Manger Confirm"
+msgstr "تأكيد المدير العام"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__timesheet_generate
+msgid "Generate Timesheet"
+msgstr "إنشاء سجل نشاط"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+#: selection:leave.interrupt,state:0
+msgid "HR Manger"
+msgstr "مدير الموارد البشرية"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,state:0
+msgid "Human Resource Management"
+msgstr "ادارة الموارد البشرية"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__id
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__id
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_report_kamil_hr_leaves_leave_report_view__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave_type__timesheet_generate
+msgid "If checked, when validating a leave, timesheet will be generated in the Vacation Project of the company."
+msgstr "إذا كان محددًا، عند اعتماد إجازة، سيتم إنشاء سجل نشاط في مشروع العطلة الخاص بالمؤسسة."
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+msgid "Interrupted"
+msgstr "تم القطع"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__date_interrupt
+msgid "Interruption Date"
+msgstr "تاريخ القطع"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__unpaid
+msgid "Is Unpaid"
+msgstr "هو غير مدفوع"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__religion
+msgid "Is it a specific religion"
+msgstr "هل هي لديانة محدده"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__available_gender
+msgid "Is it for a specific gender"
+msgstr "هل هي لجنس محدد"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__available_marital
+msgid "Is it for a specific marital"
+msgstr "هل هي لحالة اجتماعية محددة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt____last_update
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document____last_update
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_report_kamil_hr_leaves_leave_report_view____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__write_date
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_leaves
+#: model:ir.model,name:kamil_hr_leaves.model_hr_leave
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_wizard__leave_id
+msgid "Leave"
+msgstr "إجازة"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_type
+msgid "Leave Cancel"
+msgstr "قطع الإجازة"
+
+#. module: kamil_hr_leaves
+#: model:ir.actions.report,name:kamil_hr_leaves.leave_certificate_report
+msgid "Leave Certificate"
+msgstr "شهادة اجازة"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+msgid "Leave Days"
+msgstr "ايام الاجازه الكليه"
+
+#. module: kamil_hr_leaves
+#: model:ir.ui.menu,name:kamil_hr_leaves.menu_leave_interrput
+msgid "Leave Interrput"
+msgstr "قطع الإجازة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__leave_request_id
+msgid "Leave Request"
+msgstr "طلب الإجازة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model,name:kamil_hr_leaves.model_hr_leave_type
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__name
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_type_tree
+msgid "Leave Type"
+msgstr "نوع الإجازة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model,name:kamil_hr_leaves.model_hr_leave_allocation
+msgid "Leaves Allocation"
+msgstr "تخصيص رصيد إجازات"
+
+#. module: kamil_hr_leaves
+#: model:ir.actions.act_window,name:kamil_hr_leaves.hr_leave_action_request
+msgid "Leaves Requests"
+msgstr "الإجازات المطلوبة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__local
+msgid "Local"
+msgstr "محليه"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__marital
+msgid "Marital"
+msgstr "الحالة الاجتماعيه"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_type
+msgid "Marital and Religion"
+msgstr "الحالة الاجتماعيه والديانه"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,marital:0
+msgid "Married"
+msgstr "متزوّج/متزوجة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__request_duration
+msgid "Maximum request duration by months"
+msgstr "اقصى مدة للطلب الواحد بالاشهر"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "My Leaves"
+msgstr "إجازاتي"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__name
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leaves_document__document_id
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,available_gender:0
+#: selection:hr.leave.type,available_marital:0
+#: selection:hr.leave.type,can_acting:0
+#: selection:hr.leave.type,can_cut:0
+#: selection:hr.leave.type,can_saved:0
+#: selection:hr.leave.type,religion:0
+#: selection:hr.leave.type,save_remaining:0
+#: selection:hr.leave.type,stop_incentive:0
+msgid "No"
+msgstr "لا"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,allocation_type:0
+msgid "No allocation"
+msgstr "لا يوجد تخصيص"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.hr_leave_allocation_view_tree_manager_inherit
+msgid "Number of days"
+msgstr "عدد الايام"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave__number_of_days
+msgid "Number of days of the leave request according to your working schedule."
+msgstr "عدد أيام طلب الإجازة حسب جدول أعمالك."
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.allocation,state:0
+msgid "Personnel"
+msgstr "شؤون العاملين"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/leaves_request.py:121
+#, python-format
+msgid "Please attach all required documents"
+msgstr "يرجي ارفاق جميع المستندات المطلوبه"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.record_leave_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__reason
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Reason"
+msgstr "السبب"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+#: selection:hr.leave.allocation,state:0
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "اسم المستخدم المرتبط بالمورد لإدارة وصوله."
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__religion_id
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: kamil_hr_leaves
+#: model:ir.actions.act_window,name:kamil_hr_leaves.action_leave_wizard
+#: model:ir.actions.report,name:kamil_hr_leaves.leave_report
+#: model:ir.ui.menu,name:kamil_hr_leaves.menu_report_leave
+msgid "Report Employee Leave"
+msgstr "تقرير إجازات الموظفين"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__request_date_to
+msgid "Request End Date"
+msgstr "تاريخ نهاية الطلب"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__request_date_from
+msgid "Request Start Date"
+msgstr "تاريخ بداية الطلب"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__duration_display
+msgid "Requested (Days/Hours)"
+msgstr "عدد الايام"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__user_id
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__manager_id
+msgid "Requestor"
+msgstr "مقدم الطلب"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__documents
+msgid "Requires attaching documents"
+msgstr "يتطلب ارفاق مستندات"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__restored_days
+msgid "Restored Days"
+msgstr "الايام المسترجعه"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Returnn"
+msgstr "الترجيع"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,marital:0
+msgid "SINHLE"
+msgstr "اعزب/عزباء"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+#: selection:hr.leave.allocation,state:0
+msgid "Second Approval"
+msgstr "الموافقة الثانية"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Send"
+msgstr "إرسال"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/leave_interrupt.py:72
+#, python-format
+msgid "Sorry! Interruption Date Should be between The Start and End Dates."
+msgstr "عفوا! تاريخ القطع يجب ان يكون بين تاريخ بداية ونهاية الاجازة"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/leaves_request.py:81
+#, python-format
+msgid "Sorry!,you can not request for more paid leave than permitted years"
+msgstr "عفوا ! لا يمكن طلب نوع الاجازة غير المدفوعه الا بعدد السنين المستحقة للطلب الواحد"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__date_from
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__start_date
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__date_start
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__state
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_allocation__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__stop_incentive
+msgid "Stop the incentive"
+msgstr "هل يتطلب ايقاف حافز"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+msgid "The approval of a designee"
+msgstr "موافقة من ينوب"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/leave_interrupt.py:92
+#, python-format
+msgid "The employee (%s) on a leave (%s) the  interruption is not allowed"
+msgstr "الموظف (%s) في اجازة (%s) لايمكن قطعها"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__address
+msgid "The employee's leave address"
+msgstr "عنوان الموظف بالاجازة"
+
+#. module: kamil_hr_leaves
+#: sql_constraint:hr.leave.allocation:0
+msgid "The employee, department, company or employee category of this request is missing. Please make sure that your user login is linked to an employee."
+msgstr "إحدى الخانات: الموظف، أو القسم، أو المؤسسة، أو فئة الموظف، مفقود في طلبك. برجاء التأكد من أن بيانات تسجيل دخولك مرتبطة بموظف."
+
+#. module: kamil_hr_leaves
+#: sql_constraint:hr.leave.allocation:0
+msgid "The interval number should be greater than 0"
+msgstr "يجب أن يكون رقم الفترة أكبر من 0"
+
+#. module: kamil_hr_leaves
+#: sql_constraint:hr.leave.allocation:0
+msgid "The number of days must be greater than 0."
+msgstr "عدد الأيام يجب أن يكون أكبر من 0."
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_leave_interrupt__days
+msgid "The number of leave days"
+msgstr "عدد أيام الإجازة"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/leaves_request.py:64
+#, python-format
+msgid "The number of remaining leaves is not sufficient for this leave type.\n"
+""
+msgstr "العدد المتبقية لا يكفي لهذا النوع من الإجازات"
+
+#. module: kamil_hr_leaves
+#: sql_constraint:hr.leave.allocation:0
+msgid "The number per interval should be greater than 0"
+msgstr "يجب أن يكون الرقم لكل فترة أكبر من 0"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave__state
+#: model:ir.model.fields,help:kamil_hr_leaves.field_hr_leave_allocation__state
+msgid "The status is set to 'To Submit', when a leave request is created.\n"
+"The status is 'To Approve', when leave request is confirmed by user.\n"
+"The status is 'Refused', when leave request is refused by manager.\n"
+"The status is 'Approved', when leave request is approved by manager."
+msgstr "عند إنشاء طلب إجازة، تصبح حالته 'مطلوب تقديمه'.\n"
+"بعدما يقوم المستخدم بتأكيد طلب الإجازة، تصبح حالته 'مطلوب الموافقة عليه'.\n"
+"في حال رفض المدير طلب الإجازة، تصبح حالته 'مرفوض'.\n"
+"في حال موافقة المدير على طلب الإجازة، تصبح حالته 'مقبول'."
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave_type__union_leave
+msgid "Trade union leave"
+msgstr "إجازة النقابي"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.view_hr_holidays_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave,state:0
+msgid "Unit Manger Confirm"
+msgstr "تأكيد مدير الادارة"
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leaves_request
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: kamil_hr_leaves
+#: model:ir.model.fields,field_description:kamil_hr_leaves.field_hr_leave__who_acting
+msgid "Who is acting"
+msgstr "من ينوب"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,marital:0
+msgid "Widowre"
+msgstr "ارملة"
+
+#. module: kamil_hr_leaves
+#: selection:hr.leave.type,available_gender:0
+#: selection:hr.leave.type,available_marital:0
+#: selection:hr.leave.type,can_acting:0
+#: selection:hr.leave.type,can_cut:0
+#: selection:hr.leave.type,can_saved:0
+#: selection:hr.leave.type,religion:0
+#: selection:hr.leave.type,save_remaining:0
+#: selection:hr.leave.type,stop_incentive:0
+msgid "Yes"
+msgstr "نعم"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/leaves_request.py:186
+#, python-format
+msgid "You can not have 2 leaves that overlaps on the same day."
+msgstr "لايمكن ان تتداخل اجازتين في نفس اليوم"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/leaves_request.py:88
+#, python-format
+msgid "You can not request this type leave,becaudr the entitlement for days fell"
+msgstr "عفوا! لا يمكن طلب هذه الاجازة لان رصيدك لهذا الاجازة قد سقط"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/hr_leave_allocation.py:94
+#, python-format
+msgid "days"
+msgstr "ايام"
+
+#. module: kamil_hr_leaves
+#: code:addons/kamil_hr_leaves/models/hr_leave_allocation.py:94
+#, python-format
+msgid "hours"
+msgstr "ساعات"
+
+#. module: kamil_hr_leaves
+#: model:ir.actions.act_window,name:kamil_hr_leaves.action_leave_interrput
+msgid "leave interrput"
+msgstr "قطع إجازة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model,name:kamil_hr_leaves.model_leave_interrupt
+msgid "leave.interrupt"
+msgstr "قطع إجازة"
+
+#. module: kamil_hr_leaves
+#: model:ir.model,name:kamil_hr_leaves.model_leave_wizard
+msgid "leave.wizard"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model:ir.model,name:kamil_hr_leaves.model_leaves_document
+msgid "leaves.document"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model:ir.model,name:kamil_hr_leaves.model_report_kamil_hr_leaves_leave_report_view
+msgid "report.kamil_hr_leaves.leave_report_view"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.work_directly_view
+msgid "اسم مدير الادارة العامة/الوحدة: ....................................... \n"
+"                           <br/><br/> التوقيع: ...............................................\n"
+"                            <br/><br/><br/><br/>\n"
+"                            الختم\n"
+"                            <br/>"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_report_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                <br/>\n"
+"                تقرير الاجازات"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "الاسم:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.work_directly_view
+msgid "التاريخ:"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "شهادة اجازة("
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model:ir.ui.menu,name:kamil_hr_leaves.hr_leave_menu_requests
+msgid "طلبات الإجازات"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.work_directly_view
+msgid "قد باشر العمل. بعد انتهاء اجازتة ("
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model:ir.actions.report,name:kamil_hr_leaves.work_directly_report
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.work_directly_view
+msgid "مباشرة عمل"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "مدير شؤون العاملين: ....................................... \n"
+"                           <br/><br/>   التوقيع: ...............................................\n"
+"                            <br/><br/>  صورة الي:<br/>      - الادارة المعنية<br/>      - الموظف<br/>       - الأجور والمزايا<br/>      - الملف\n"
+"                            <br/>"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.work_directly_view
+msgid "نفيد سيادتكم بأن الموظف"
+msgstr ""
+
+#. module: kamil_hr_leaves
+#: model_terms:ir.ui.view,arch_db:kamil_hr_leaves.leave_certificate_view
+msgid "نهاية الاجازة:"
+msgstr ""
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_tender_order_graph">
+            <field name="name">product.month.graph</field>
+            <field name="model">purchase.report</field>
+            <field name="arch" type="xml">
+                <graph string="Purchase Orders Statistics">
+                    <field name="partner_id" type="row"/>
+                    <field name="date_order" interval="month" type="col"/>
+                    <field name="price_average" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+	
+	   <record model="ir.ui.view" id="view_tender_pivot">
+            <field name="name">product.month.pivot</field>
+            <field name="model">purchase.report</field>
+            <field name="arch" type="xml">
+                <pivot string="Purchase Orders Statistics" disable_linking="True">
+                	<field name="product_id" type="row"/>
+                    <field name="partner_id" type="row"/>
+                    <field name="category_id" type="col"/>
+                    <field name="product_id" type="col"/>
+                    <field name="date_order" interval="month" type="col"/>
+                    <field name="price_total" type="measure"/>
+                    <field name="unit_quantity" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_tender_search" model="ir.ui.view">
+        <field name="name">report.tender.search</field>
+        <field name="model">purchase.report</field>
+        <field name="arch" type="xml">
+            <search string="Purchase Orders">
+                <field  name="requisition_id" domain="[('requisition_id','=',active_id)]"/>
+                <filter string="Quotations" name="quotes" domain="[('state','in',['to approve']),('price_total','!=','0.0')]"/>
+                <filter string="Orders" name="orders" domain="[('state','!=','draft'),('state','!=','cancel')]"/>
+                <filter string="Purchased Last 365 Days" name="last_year_purchase"
+                        domain="[('date_order', '&gt;', (context_today() - relativedelta(days=365)).strftime('%Y-%m-%d'))]"/>
+                <field name="partner_id"/>
+                <field name="product_id"/>
+                <group expand="0" string="Extended Filters">
+                	<field name="product_id"/>
+                    <filter string="Tender" name="requisition_id" context="{'group_by':'requisition_id'}"/>
+
+                    <field name="user_id"/>
+                    <field name="company_id"/>
+                    <field name="date_order"/>
+                    <field name="date_approve"/>
+                    <field name="category_id" filter_domain="[('category_id', 'child_of', self)]"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_tree" model="ir.ui.view">
+        <field name="name">purchase.report.tree</field>
+        <field name="model">purchase.report</field>
+        <field name="arch" type="xml">
+            <tree limit="5">
+            <field name="product_id"/>
+            <field name="partner_id"/>
+            <field name="price_total"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_purchase_order_valuation" model="ir.actions.act_window">
+        <field name="name">Purchase Analysis</field>
+        <field name="res_model">purchase.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('requisition_id', '=', active_id)]</field>
+        <field name="search_view_id" ref="view_tender_search"/>
+        <field name="context">{'group_by': ['product_id'],'search_default_quotes':1}</field>
+        <field name="help">Purchase Analysis allows you to easily check and analyse your company purchase history and performance. From this menu you can track your negotiation performance, the delivery performance of your vendors, etc.</field>
+	</record>
+
+
+
+</odoo>

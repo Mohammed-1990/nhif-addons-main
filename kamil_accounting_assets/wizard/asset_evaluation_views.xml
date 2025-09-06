@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Form Asset Evaluation-->
+	<record id="view_asset_evaluation_form" model="ir.ui.view">
+		<field name="name">asset.evaluation.form</field>
+		<field name="model">asset.evaluation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="evaluation" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					</group>
+					<footer>
+						<button name="action_evaluation" type="object" string="Confirm" class="btn-primary"/>
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<!-- Action Asset Evaluation -->
+	<act_window
+		id="action_asset_evaluation"
+		name="Asset Evaluation"
+		res_model="asset.evaluation" src_model="account.asset.asset"
+		view_mode="form"
+		target="new"
+	/>
+
+
+</odoo>

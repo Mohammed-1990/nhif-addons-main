@@ -1,0 +1,175 @@
+<odoo>
+
+    <!-- <record id="hr_housing_landscape_paperformat" model="report.paperformat">
+        <field name="name">hr.housing.landscape.paperformat</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">15</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">0</field>
+    </record> -->
+
+
+    <report id="housing_form"
+            model="housing.form.wizard"
+            string="Housing Form"
+            report_type="qweb-html"
+            name="kamil_hr_benefits_wages.housing_form_view"
+            paperformat="kamil_hr_benefits_wages.paperformat_a4_for_hr"
+            menu="False"/>
+
+    <template id="housing_form_view">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.html_container">
+            
+                <div class="page"><br/><br/>
+                    <div>
+                        <div class="text-center" style="font:500;">
+                            <p>جمهورية الســـودان
+                            <br/>
+                            وزارة العمل والإصلاح الإداري<br/>
+
+                            ديوان شؤون الخدمة المدنية <br/>
+                            إستمارة تسكين بموجب منشور شؤون الخدمة رقم (1/2022)
+                            </p>
+                        </div>
+                        <div class="text-right" style="font:400;">
+                            <p>
+                                الوحدة: الصـنـــدوق الــقــومي للتأمـــين الـصـحــي<br/>
+                               اسم العامل: <span t-esc="doc['employee']"/>
+                               <br/>
+                               عنوان الوظيفة: <span t-esc="doc['functional']"/>
+                               <br/>
+                               الدرجة: <span t-esc="doc['degree']"/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                        <tr class="table-active">
+                            <th class="text-center" style="font:300;" colspan="3">الأجر الأساسي
+                            </th>
+                            <th class="text-center" style="font:300;" rowspan="2">
+                                إجمالي الأجر الأساسي الجديد
+                            </th>
+                        </tr>
+                        <tr class="table-active">
+                            <th class="text-center" style="font:300; ">بيان
+                            </th>
+                            <th class="text-center" style="font:300; ">الفئة الإبتدائية
+                            </th>
+                            <th class="text-center" style="font:300; ">غلاء المعيشة
+                            </th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" style="font:300; ">الأجر الأساسي الجديد</td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['new_basic']"/>
+                                </td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['new_high_cost']"/>
+                                </td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['new_salary']"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="font:300; ">الأجر الأساسي القديم</td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['old_basic']"/>
+                                </td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['old_high_cost']"/>
+                                </td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['old_salary']"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="font:300; ">الفرق المستحق</td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['diff_basic']"/>
+                                </td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['diff_high_cost']"/>
+                                </td>
+                                <td class="text-center" style="font:300; ">
+                                    <span t-esc="doc['diff_salary']"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><br/>
+                    <div class="text-right" style="font:500;">
+                        <p>
+                            في حالة حدوث أي خطأ في التسكين تنتج عنه زيادات غير مستحقة سوف تخصم حال إكتشافها
+                        </p>
+                    </div>
+                    <br/><br/>
+
+                    <table border="0" dir="rtl" class="text-right table borderless">                        
+                            <tr>
+                                <td>
+                                    <strong style="float:right"> أعده</strong>
+                                </td>
+                                <td>
+                                    <strong style="float:right"> راجعة</strong>
+                                </td>
+                                <td>
+                                    <strong style="float:right"> إعتــماد مدير شـؤون العـاملـين</strong>
+                                </td>
+                            </tr>                            
+                            <tr>
+                                <td>
+                                    <strong style="float:right"> الاسم</strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................
+                                    </span>
+                                </td>                             
+                                <td>
+                                    <strong style="float:right"> الاسم</strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................
+                                    </span>
+                                </td>  
+                                <td>
+                                    <strong style="float:right"> الاسم</strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................
+                                    </span>
+                                </td>  
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong style="float:right"> التوقــيع</strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................
+                                    </span>
+                                </td>                             
+                                <td>
+                                    <strong style="float:right"> التوقــيع</strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................
+                                    </span>
+                                </td>  
+                                <td>
+                                    <strong style="float:right"> التوقــيع</strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................
+                                    </span>
+                                </td>  
+                            </tr>
+                        </table>
+
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

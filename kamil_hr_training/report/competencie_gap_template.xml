@@ -1,0 +1,87 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_competencie_report">
+        <field name="name">paperformat.functions.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="competencie_gap_report"
+            model="competencie.gap.wizard"
+            string="Competencie gap report"
+            report_type="qweb-html"
+            name="kamil_hr_training.competencie_gap_report_view"
+            paperformat="paperformat_competencie_report"
+            menu="False"/>
+
+    <template id="competencie_gap_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            
+            <div class="page"><br/><br/>
+                <div class="text-center">
+                    <p> تقرير فجوات الجدارات</p>
+                <t t-if="date_from != False and date_to != False">
+                   في الفترة من<t t-esc="date_from"/>إلى<t t-esc="date_to"/>
+                </t>
+            </div>
+                <br/>
+            <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered" >       
+                 <thead class="table-active" style="display: table-header-group;">
+
+                        <th class="text-center fit">الموظف</th>
+                        <th class="text-center fit">القسم</th>
+                        <th class="text-center fit">الجدارة</th>
+                        <th class="text-center fit">مستوي الموظف</th>
+                        <th class="text-center fit">وجود فجوه</th>
+                        <th class="text-center fit">نسبة الفجوة</th>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr>
+                                <td class="text-center">
+                                    <span t-esc="doc['employee']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['department']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['competencie']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['employee_level']"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-if="doc['gap']==True">
+                                        <span>يوجد</span>
+                                    </t>
+                                    <t t-if="doc['gap']==False">
+                                        <span>لا يوجد</span>
+                                    </t>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['gap_percentage']"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-if="docs==[]">
+                            <tr>
+                                <td colspan="6" class="text-center">لا توجد بيانات</td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

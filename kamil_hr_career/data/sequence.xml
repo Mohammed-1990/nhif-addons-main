@@ -1,0 +1,24 @@
+<odoo>
+	<data noupdate="1">
+		<record id="ir_seq_monthly_performance" model="ir.sequence">
+			<field name="name">monthly performance</field>
+			<field name="code">sequence.monthly.performance</field>
+			<field name="prefix">%(year)s-%(month)s-</field>
+			<field name="padding">5</field>
+			<field name="number_increment">1</field>
+			<field name="number_next_actual">1</field>
+			<field name="implementation">standard</field>
+		</record>
+
+		<record id="ir_seq_evaluating_merits" model="ir.sequence">
+			<field name="name">Evaluating Merits</field>
+			<field name="code">sequence.evaluating.merits</field>
+			<field name="prefix">%(year)s-%(month)s-</field>
+			<field name="padding">5</field>
+			<field name="number_increment">1</field>
+			<field name="number_next_actual">1</field>
+			<field name="implementation">standard</field>
+		</record>
+
+	</data>
+</odoo>

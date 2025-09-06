@@ -1,0 +1,43 @@
+<odoo>
+	<data>
+	
+		<record id="claim_multi_company_rule" model="ir.rule">
+			<field name="name">Claim multi-company</field>
+			<field ref="model_claim_claim" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="claim_line_multi_company_rule" model="ir.rule">
+			<field name="name">Claim Line multi-company</field>
+			<field ref="model_claim_line" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="claim_complex_multi_company_rule" model="ir.rule">
+			<field name="name">Claim Complex multi-company</field>
+			<field ref="model_claim_complex" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="claim_complex_line_multi_company_rule" model="ir.rule">
+			<field name="name">Claim Complex Line multi-company</field>
+			<field ref="model_claim_complex_line" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="integration_info_multi_company_rule" model="ir.rule">
+			<field name="name">kamil.integration.info multi-company</field>
+			<field ref="model_kamil_integration_info" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+	</data>
+</odoo>

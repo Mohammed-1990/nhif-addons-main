@@ -1,0 +1,122 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-31 08:54+0000\n"
+"PO-Revision-Date: 2021-08-31 08:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__allowance_id
+msgid "Allowance"
+msgstr "البدل"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__from_hr
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_ratification__from_hr
+msgid "From Hr"
+msgstr "من الموارد"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__incentive_id
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_payment__incentive_id
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_ratification__incentive_id
+msgid "Incentive"
+msgstr "الحافز"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__inclination_allowance_id
+msgid "Inclination Allowance"
+msgstr "بدل الميل"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_payment_ratification_line__loan_id
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_line__loan_id
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_payment__loan_id
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_ratification__loan_id
+msgid "Loan"
+msgstr "سلفية"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__meal_allowance_id
+msgid "Meal Allowance"
+msgstr "بدل وجبه"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__mission_allowance_id
+msgid "Mission Allowance"
+msgstr "بدل المأمورية"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__payslip_id
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_payment__payslip_id
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_ratification__payslip_id
+msgid "Payslip"
+msgstr ""
+
+#. module: kamil_hr_accounting
+#: model:ir.model,name:kamil_hr_accounting.model_ratification_ratification
+msgid "Ratification"
+msgstr "التصديق"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_ratification__removing_differences_id
+msgid "Removing Differences"
+msgstr ""
+
+#. module: kamil_hr_accounting
+#: model_terms:ir.ui.view,arch_db:kamil_hr_accounting.ratification_form_view_benefits
+#: model_terms:ir.ui.view,arch_db:kamil_hr_accounting.ratification_list_form_view_benefits
+msgid "Return to the internal auditor"
+msgstr "ارجاع للمراجع الداخلي"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_ratification__special_allowance_id
+msgid "Special Allowance"
+msgstr "البدل الخاص"
+
+#. module: kamil_hr_accounting
+#: model:ir.model,name:kamil_hr_accounting.model_ratification_payment
+msgid "The Payments"
+msgstr "الدفعيات"
+
+#. module: kamil_hr_accounting
+#: code:addons/kamil_hr_accounting/models/accounting.py:22
+#, python-format
+msgid "The financial ratification must be canceled or draft"
+msgstr "يجب ان يكون التصديق ملغي او مسودة"
+
+#. module: kamil_hr_accounting
+#: model:ir.model.fields,field_description:kamil_hr_accounting.field_ratification_list__training_allowance_id
+msgid "Training Allowance"
+msgstr ""
+
+#. module: kamil_hr_accounting
+#: model:ir.model,name:kamil_hr_accounting.model_payment_ratification_line
+msgid "payment.ratification.line"
+msgstr ""
+
+#. module: kamil_hr_accounting
+#: model:ir.model,name:kamil_hr_accounting.model_ratification_line
+msgid "ratification.line"
+msgstr ""
+
+#. module: kamil_hr_accounting
+#: model:ir.model,name:kamil_hr_accounting.model_ratification_list
+msgid "ratification.list"
+msgstr ""
+
+#. module: kamil_hr_accounting
+#: model:ir.model,name:kamil_hr_accounting.model_wizard_payment_cancel
+msgid "wizard.payment.cancel"
+msgstr ""
+

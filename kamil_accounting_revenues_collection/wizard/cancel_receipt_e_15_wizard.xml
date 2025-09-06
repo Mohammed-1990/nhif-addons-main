@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="record_cancel_receipt_e15_wizard_form" model="ir.ui.view">
+            <field name='name'>Cancel Receipt e15</field>
+            <field name='model'>cancel.receipt.e15.wizard</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group col="4">
+                            <field name="date_cancel"/>
+                            <field name="collection_id"/>
+                        </group>
+                        <group>
+                            <field name="cancel_reason"/>
+
+                        </group>
+                        <footer>
+                            <button name='get_cancel_receipt_e15' string='Send request' type='object'
+                                    class="oe_highlight" confirm="انت تقوم بارسال طلب الالقاء الايصال هل انت متاكد ؟"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_cancel_receipt_e15_wizard" model="ir.actions.act_window">
+            <field name='name'>Cancel Receipt e15</field>
+            <field name="res_model">cancel.receipt.e15.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+    </data>
+</odoo>

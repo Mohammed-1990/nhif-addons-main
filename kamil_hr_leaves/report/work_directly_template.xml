@@ -1,0 +1,54 @@
+<odoo>
+
+    
+ 
+    <report id="work_directly_report"
+            model="hr.leave"
+            string="مباشرة عمل"
+            report_type="qweb-html"
+            name="kamil_hr_leaves.work_directly_view"
+            paperformat="paperformat_a4_for_leave"
+            groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_employment_department_group"
+        />
+
+    <template id="work_directly_view">
+        <t t-foreach="docs" t-as="doc">
+         <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                
+                    <page dir="rtl" style="page-break-inside: avoid;font-family:courier">
+                      <br/><br/><br/>
+                      <strong>
+                        <div class="text-right" style="font:600;">
+                            <p>التاريخ: <span t-esc="context_timestamp(datetime.datetime.today()).strftime('%Y-%m-%d')"/>  </p>
+                        </div><br/><br/>
+                        <div class="text-center" style="font:800;">
+                            مباشرة عمل
+                        </div><br/><br/><br/>
+                        <div class="text-right" style="font:600;line-height:25pt;">
+                           نفيد سيادتكم بأن الموظف  <span t-esc="doc.employee_id.name"/> قد باشر العمل. بعد انتهاء اجازتة (<span t-esc="doc.holiday_status_id.name"/>) بتاريخ ..../..../.......م.  
+                            <br/>
+                            و لم يتأخر / وقد تأخر مدة .......... وذلك للأسباب التالية:
+                            <br/>
+                            1- ...............................<br/>
+                            2- ...............................<br/>
+                            3- ...............................<br/>
+                            <newline/>
+                        </div>
+                        <div class="text-right" style="font:600;"><br/>
+                            وجزاكم الله خير
+                        </div><br/><br/><br/><br/><br/><br/>
+                        <div class="text-right" style="font:600;">
+                            اسم مدير الادارة العامة/الوحدة: ....................................... 
+                           <br/><br/> التوقيع: ...............................................
+                            <br/><br/><br/><br/>
+                            الختم
+                            <br/>
+                        </div>
+                      </strong>
+                    </page>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

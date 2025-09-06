@@ -1,0 +1,2464 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_purchase_qualifiying_suppliers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200223\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-26 11:18+0000\n"
+"PO-Revision-Date: 2021-09-26 11:18+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:mail.template,body_html:kamil_purchase_qualifiying_suppliers.email_template_announcement
+msgid "\n"
+"                \n"
+"                    ${object.announcement}\n"
+"                    <a href=\"mailto:${object.email_to}\" style=\"text-decoration:none; color: black;\">${object.email_to}</a>\n"
+"                \n"
+"            "
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__order_id
+msgid " Book Number"
+msgstr "رقم الكراسة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__book_id
+msgid "# Books"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__requisition_id
+msgid "# Tender"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:mail.template,subject:kamil_purchase_qualifiying_suppliers.email_template_announcement
+msgid "${object.company_id.name} Announcement (Ref ${object.name or 'n/a' })"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:mail.template,subject:kamil_purchase_qualifiying_suppliers.email_template_qs_tender_book
+msgid "${object.company_id.name} Book (Ref ${object.sequence or 'n/a' })"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:mail.template,subject:kamil_purchase_qualifiying_suppliers.email_template_done_tender_book
+msgid "${object.company_id.name} Done Book (Ref ${object.sequence or 'n/a' })"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.success
+msgid "&amp;times;"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+msgid "<b>إسم الشركة</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+msgid "<b>الايميل</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+msgid "<b>المستندات المطلوبة</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+msgid "<b>الهاتف</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+msgid "<b>رقم العطاء</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+msgid "<b>رقم الكراسة</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+msgid "<b>مجالات التأهيل</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<b>مجموع الدرجات المطلوبة</b>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+msgid "<br/><br/>\n"
+"				<strong style=\"float:right\">أعضاء اللجنة</strong>\n"
+"				<br/><br/>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<br/><br/><br/><br/>\n"
+"					<strong>أعضاء اللجنة</strong>\n"
+"					<br/>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:mail.template,body_html:kamil_purchase_qualifiying_suppliers.email_template_qs_tender_book
+msgid "<div style=\"margin: 0px; padding: 0px;\">\n"
+"        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"            Dear ${object.partner_id.name}\n"
+"            % if object.partner_id.parent_id:\n"
+"                (${object.partner_id.parent_id.name})\n"
+"            % endif\n"
+"           \n"
+"            <br/><br/>\n"
+"             % set website_url = object.env['ir.config_parameter'].sudo().get_param('web.base.url')\n"
+"        <center>\n"
+"          <a href=\"${website_url}/tenderbook/${object.id}\" style=\"background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Click the link:</a>\n"
+"            <br/><br/>\n"
+"            <span style=\"color:#888888\">(or view attached PDF)</span>\n"
+"        </center>\n"
+"       \n"
+"            Best regards,\n"
+"        </p>\n"
+"    </div>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:mail.template,body_html:kamil_purchase_qualifiying_suppliers.email_template_done_tender_book
+msgid "<div style=\"margin: 0px; padding: 0px;\">\n"
+"        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"            Dear ${object.partner_id.name}\n"
+"            % if object.partner_id.parent_id:\n"
+"                (${object.partner_id.parent_id.name})\n"
+"            % endif\n"
+"            <p>Tender Number is :${object.requisition_id.name}</p><br/>\n"
+"            <p>Book Number is : ${object.sequence}</p>\n"
+"            <br/><br/>\n"
+"             % set website_url = object.env['ir.config_parameter'].sudo().get_param('web.base.url')\n"
+"        <center>\n"
+"          <a href=\"${website_url}/tenderbook/${object.id}\" style=\"background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Click the link:</a>\n"
+"            <br/><br/>\n"
+"            <span style=\"color:#888888\">(or view attached PDF)</span>\n"
+"        </center>\n"
+"       \n"
+"            Best regards,\n"
+"        </p>\n"
+"    </div>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+msgid "<strong style=\"float:right\"> التاريخ </strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+msgid "<strong style=\"float:right\">رقم العطاء</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+msgid "<strong style=\"float:right\">رقم الكراسة</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.area_template
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers_document
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+msgid "<strong>إسم الشركة</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+msgid "<strong>إسم العضو</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>الاسم</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>التوقيع</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>الدرجات المتحصل عليها</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>الدرجات المطلوبة</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.area_template
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers_document
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>الرقم</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.suppliers_view
+msgid "<strong>الصندوق القومي للتامين الصحي\n"
+"                    <br/>\n"
+"                        قسم المشتريات\n"
+"                        <br/>\n"
+"                    تقرير الموردين المؤهلين</strong>\n"
+"                     <br/>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>المعيار</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.area_template
+msgid "<strong>المندوب</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.area_template
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers_document
+msgid "<strong>الهاتف</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>الوظيفة</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers_document
+msgid "<strong>عنوان الشركة</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.area_template
+msgid "<strong>عنولن الشركة</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers_document
+msgid "<strong>مجال التأهيل</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_required_documents_doc
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "<strong>ملاحظات</strong>"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__access_warning
+msgid "Access warning"
+msgstr "تحذير من خطأ بالوصول"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#. openerp-web
+#: code:addons/kamil_purchase_qualifiying_suppliers/static/src/js/suppliers_valuation.js:52
+#, python-format
+msgid "Accounting entries waiting for manual verification"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_qualifyied_tender_book
+msgid "Active Tender Books"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+msgid "Address"
+msgstr "العنوان"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__admin_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__admin_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+msgid "Administration"
+msgstr "اﻹدارة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Administration and Financial Manager /Purchase Department"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Administration and Financial Manager Approval"
+msgstr "موافقة مدير الشؤون الادارية والمالية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__announcement_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__announcement
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__announcement
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Announcement"
+msgstr "الاعلان"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_announcement_form
+msgid "Announcement ..."
+msgstr "الاعلان"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__announ_attach
+msgid "Announcement Attach File"
+msgstr "مرفقات الاعلات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_announcement
+msgid "Announcement Department"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_announcement_newspaper_line
+msgid "Announcement NewsPaper Line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Announcement Text"
+msgstr "نص الاعلان"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_announcement
+msgid "Announcment"
+msgstr "الاعلان"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Approved Finance Adminstration"
+msgstr "موافقة مدير الشؤون المالية والادارية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__area_ids
+msgid "Area"
+msgstr "مجال التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Area Of Rehabiliation"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_area_rehabilitation
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__name
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.area_rehabilitation
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Area Of Rehabilitation"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.report,name:kamil_purchase_qualifiying_suppliers.report_area
+msgid "Area Of rehabilitaion"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__area_rehab_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__area_rehab_ids
+msgid "Area Rehab"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_area_rehabilitation
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__area_rehabilitation_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__area_rehabilitation_line_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_partner__area_rehabilitation_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_users__area_rehabilitation_ids
+msgid "Area Rehabilitation"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_area_rehabilitation_line
+msgid "Area Rehabilitation Line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Area of Rehabilitaion"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_area_rehabiliation_confirm
+msgid "Area of Rehabilitaion Confirm"
+msgstr "تأكيد مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_area_rehabiliation_report
+msgid "Area of Rehabilitaion Report"
+msgstr "تقرير مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Area of Rehabilitation"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__area_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__area_rehabilitation_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__area_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__area_id
+msgid "Area of rehabilitation"
+msgstr "مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__attach
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__attachments
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__attach
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__announ_attach
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Attachmentes"
+msgstr "المرفقات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Bid Selection"
+msgstr "طريقة الاختيار"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__book_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__book_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__book_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__book_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__book_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__book_id
+msgid "Book"
+msgstr "الكراسة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__book_count
+msgid "Book Count"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__collection_id
+msgid "Book Fees"
+msgstr "رسوم الكراسة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__book_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__book_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Book Number"
+msgstr "رقم الكراسة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__order_id
+msgid "Book Order"
+msgstr "رقم الكراسة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__book_state
+msgid "Book State"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_book_visit
+msgid "Book Visit"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:mail.template,report_name:kamil_purchase_qualifiying_suppliers.email_template_done_tender_book
+#: model:mail.template,report_name:kamil_purchase_qualifiying_suppliers.email_template_qs_tender_book
+msgid "Book_${(object.sequence or '').replace('/','_')}"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Books"
+msgstr "الكراسات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.report,name:kamil_purchase_qualifiying_suppliers.book_done_report
+#: model:ir.actions.report,name:kamil_purchase_qualifiying_suppliers.book_qs_report
+msgid "Books Report"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__company_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_branch_manager
+msgid "Branch Manager"
+msgstr "مدير الفرع"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.qualifiying_suppliers_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_announcement_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_announcement_newspeper_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_visit_template_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_visit_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_visit_template_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_wiz_area_rehabilitaion_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_wiz_general_conditions_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_wiz_qualifying_suppliers_form
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+#: selection:tender.book,state:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_partner_form_inherit
+msgid "Category"
+msgstr "الفئة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__check_book
+msgid "Check Book"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_wiz_general_conditions
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Check General Conditions"
+msgstr "التحقق من الشروط العامة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__city
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__city
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+msgid "City"
+msgstr "المدينة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__color
+msgid "Color Index"
+msgstr "اللون"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Comittee Selection"
+msgstr "لجنة الفرز"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Commitee Member"
+msgstr "اعضاء اللجنة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_comm_decided
+msgid "Committee Decided"
+msgstr "مقرر اللجنة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__committee_member_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__committee_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Committee Members"
+msgstr "إعضاء اللجنة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__commitee_report
+msgid "Committee Report"
+msgstr "تقرير اللجنة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__commitee_selection_id
+msgid "Committee Selection"
+msgstr "لجنة الفرز"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_committee_members
+msgid "Committee members"
+msgstr "اعضاء اللجنة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__company_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__partner_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Company Name"
+msgstr "اسم المؤسسة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:350
+#, python-format
+msgid "Compose Email"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__name
+msgid "Conditions"
+msgstr "الشروط"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__condtions_ids
+msgid "Condtions"
+msgstr "الشروط"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_announcement_newspeper_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_wiz_area_rehabilitaion_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_wiz_general_conditions_form
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:tender.book,state:0
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Confirm General Conditions"
+msgstr "تأكيد الشروط العامة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Confirm General Manager"
+msgstr "تصديق المدير العام"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Confirm Internal Treansfer"
+msgstr "تصديق المراجع الداخلي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__count_partner
+msgid "Count Partner"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__country_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__country_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__country_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__country_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+msgid "Country"
+msgstr "دولة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_visit_template_form
+msgid "Create"
+msgstr "إنشاء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_announcement_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Create Announcement"
+msgstr "إنشاء إعلان"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_announcement_newspeper_form
+msgid "Create Newspeper"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_visit_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_visit_template_form
+msgid "Create Report of the field visit"
+msgstr "إنشاء تقرير الزيارات الميدانية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+msgid "Create Representative Attendance"
+msgstr "إنشاء ممثل الحضور"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Create Visit Template"
+msgstr "إنشاء نموزج الزيارات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_qualifiy_suppliers_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_qualifiy_suppliers_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__criteria_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__criteria_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__criteria_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__criteria_id
+msgid "Criteria"
+msgstr "معيار"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العملاء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:collection.collection,operation_type:0
+msgid "Customization"
+msgstr "تخصيص"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__deadline_date
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+msgid "Deadline Date"
+msgstr "التاريخ النهائي للمناقصه"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__dept_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__dept_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+msgid "Description ..."
+msgstr "الوصف ..."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.requisition,type:0
+msgid "Direct Purchase"
+msgstr "الشراء المباشر"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_dicrecor_finance_admin
+msgid "Director of finance and administrative"
+msgstr "مدير الشؤون الادارية والمالية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_qualifiy_suppliers_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_report_kamil_purchase_qualifiying_suppliers_suppliers_view__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+#: selection:tender.book,state:0
+msgid "Done"
+msgstr "تم"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+#: selection:tender.book,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__email
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__email
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__email
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__email_to
+msgid "Email To"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__email
+msgid "Email address of the contact"
+msgstr "البريد الالكتروني لجهة الاتصال"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__exist
+msgid "Exist"
+msgstr "موجود"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Field Visit Report"
+msgstr "تقرير الزيارات الميدانية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_book_visit_criteria
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_book_visit_criteria
+msgid "Field Visit Report Criteria"
+msgstr "معايير تقرير الزيارات الميدانية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_visit_form
+msgid "Field visit report Criteria"
+msgstr "معايير تقرير الزيارات الميدانية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_field_visit_template
+msgid "FieldsVisitTempate"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_suppliers_valuation_form
+msgid "Filter by Area"
+msgstr "التجميع بواسطة المجالات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_finance_manager
+msgid "Finance Manager"
+msgstr "مدير الشؤون المالية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__finance_admin_signature
+msgid "Financial Administration Signature"
+msgstr "توقيع مدير الشؤون الادارية والمالية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_general_conditions
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_general_conditions
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__general_conditions_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__general_conditions_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__general_conditions_ids
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_general_conditions
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "General Conditions"
+msgstr "الشروط العامة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_general_conditions_line
+msgid "General Conditions Line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__general_conditions_lines
+msgid "General Conditions Lines"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__general_conditions_selection
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+#: selection:tender.book,state:0
+msgid "General Conditions Selection"
+msgstr "مطابقة الشروط العامة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: sql_constraint:general.conditions:0
+msgid "General Conditions type is Name exist!!!!"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: sql_constraint:general.conditions:0
+msgid "General Conditions type is already exist!!!!"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_general_conditions_form
+msgid "General Conditions:"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_general_conditions_form
+msgid "General Conditons"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_general_manager
+msgid "General Manager"
+msgstr "المدير العام"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "General Manager Approval"
+msgstr "موافقة المدير العام"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__gm_signature
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "General Manager Signature"
+msgstr "توقيع المدير العام"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_qualifiy_suppliers_wizard__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_report_kamil_purchase_qualifiying_suppliers_suppliers_view__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "In Progress"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Information"
+msgstr "المعلومات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Insert Newspapers"
+msgstr "إدخال الصحف 	"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_internal_refrance
+msgid "Internal Refrance"
+msgstr "المراجع الداخلي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__internal_refrance_signature
+msgid "Internal Transfer Signature"
+msgstr "توقيع المراجع الداخلي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_partner__qualified
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_users__qualified
+msgid "Is Qualified"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__issuing_date
+msgid "Issuing Date"
+msgstr "تاريخ الإصدار"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_qualifiy_suppliers_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_report_kamil_purchase_qualifiying_suppliers_suppliers_view____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_qualifiy_suppliers_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_qualifiy_suppliers_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_area_rehabilitaion__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:collection.collection,operation_type:0
+#: selection:general.conditions,type:0
+#: selection:purchase.requisition,type:0
+msgid "Limited Tender"
+msgstr "المناقصه المحدودة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_manager_director
+msgid "Manager Director"
+msgstr "مدير الادارة العامة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/suppliers_valuation.py:47
+#, python-format
+msgid "Matching"
+msgstr "مطابق"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__mobile
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__mobile
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__move_check
+msgid "Move Check"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__move_posted_check
+msgid "Move Posted Check"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper__name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_suppliers_valuation__name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_criteria__name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__name
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_tree
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_announcement_newspaper
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__newsPaper_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__announcement_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__newsPaper_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__newspaper_ids
+msgid "NewsPaper"
+msgstr "الصحيفة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_announcement_newspaper
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_menu_newspaper
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_newspaper
+msgid "Newspapers"
+msgstr "الصحف"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_announcement_newspeper_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Newspapers that were advertised"
+msgstr "الصحف التي تم الاعلان فيها"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/suppliers_valuation.py:45
+#, python-format
+msgid "Not matching"
+msgstr "غير مطابق"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__note
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__note
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__note
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__sequence
+msgid "Number"
+msgstr "الرقم"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__announ_number
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__count
+msgid "Number Of Announcement"
+msgstr "عدد النشرات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__obtained_score
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__obtained_score
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__obtained_score
+msgid "Obtained Score"
+msgstr "الدرجات التي تم الحصول عليها"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Ongoing"
+msgstr "جاري"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_collection_collection__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__date
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+msgid "Order Date"
+msgstr "تاريخ الأمر"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__ordering_date
+msgid "Ordering Date"
+msgstr "تاريخ الطلب"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__other_features
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Other Features"
+msgstr "مميزات آخرى"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Other Features ..."
+msgstr "مميزات آخرى..."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Other Features...."
+msgstr "مميزات آخرى ...."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:collection.collection,operation_type:0
+msgid "Other Revenues"
+msgstr "إيرادات أخرى"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:tender.book,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+msgid "Page:"
+msgstr "صفحة: "
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation__partner_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__partner_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__partner_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__partner_ids
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__phone
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__phone
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__phone
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Phone:"
+msgstr "الهاتف:"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:tender.book,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__role
+msgid "Position"
+msgstr "الوظيفة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#. openerp-web
+#: code:addons/kamil_purchase_qualifiying_suppliers/static/src/js/suppliers_valuation.js:49
+#, python-format
+msgid "Posted"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.qualifiying_suppliers_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_wiz_qualifying_suppliers_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Print Report Qualifying Suppliers"
+msgstr "طباعة تقرير تأهيل الموردين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Print Required Documents Report"
+msgstr "طباعة تقرير المستندات المطلوبة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Print area of Rehabilitation"
+msgstr "طباعة مجالات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Private Conditiond"
+msgstr "الشروط الخاصة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__private_conditions
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__private_conditions
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Private Conditions"
+msgstr "الشروط الخاصة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Private Conditions ......."
+msgstr "الشروط الخاصة ......"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:collection.collection,operation_type:0
+#: selection:general.conditions,type:0
+#: selection:purchase.requisition,type:0
+msgid "Public Tender"
+msgstr "المناقصة العامة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:res.groups,name:kamil_purchase_qualifiying_suppliers.group_purch_dept
+msgid "Purchase Department Manager"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:347
+#, python-format
+msgid "Purchase Order"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_purchase_requisition
+msgid "Purchase Requisition"
+msgstr "طلب الشراء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_purchase_requisition_announcement
+msgid "Purchase Requisition Announcement"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_pr_general_conditions
+msgid "Purchase Requisition General Conditions"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_qualified_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_qualified_suppliers_list
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_vendor_quailfying
+msgid "Qualified Suppliers"
+msgstr "الموردين المؤهلين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/suppliers_valuation.py:50
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__qualifier
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:tender.book,state:0
+#, python-format
+msgid "Qualifier"
+msgstr "مؤهل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__count_partner
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Qualifiers"
+msgstr "المؤهلين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.report,name:kamil_purchase_qualifiying_suppliers.qualifiying_suppliers_report_pdf
+msgid "Qualifiying Suppliers Tender"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:collection.collection,operation_type:0
+#: selection:general.conditions,type:0
+#: model:ir.actions.report,name:kamil_purchase_qualifiying_suppliers.action_report_qualifying_suppliers
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_qualifying_suppliers_root
+#: selection:purchase.requisition,type:0
+msgid "Qualifying Suppliers"
+msgstr "تأهيل الموردين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_purchase_qualifying_suppliers_report
+msgid "Qualifying Suppliers Report"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_qualifying_suppliers_request
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_qualifying_suppliers
+msgid "Qualifying Suppliers Request"
+msgstr "طلبات تأهيل الموردين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Qualifying Suppliers Valuation"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__received_date
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+msgid "Received Date"
+msgstr "تاريخ الاستلام"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__release_date
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__release_date
+msgid "Release Date"
+msgstr "تاريخ الاصدار"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_announcement_newspaper_line__release_number
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__release_number
+msgid "Release Number"
+msgstr "رقم الاصدار"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__rep_attendee_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__rep_attendee_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Rep Attendee"
+msgstr "ممثلين الحضور"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__rep_attendee_count
+msgid "Rep Attendee Count"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__rep_attendee_id
+msgid "Rep attendee"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_qualifiying_suppliers_wizard
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_report_qualifiying_suppliers
+msgid "Report Qualifiying Suppliers"
+msgstr "تقرير تأهيل الموردين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_field_visit_template
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_visit
+msgid "Report of the field visit"
+msgstr "تقرير الزيارات الميدانية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Representative"
+msgstr "المسؤول"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_rep_attendance
+msgid "Representative Attendance"
+msgstr "ممثل الحضور"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_book_rep_attendee
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_rep_attendee
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+msgid "Representative Attendee"
+msgstr "ممثل الحضور"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_rep_attendee
+msgid "Representative attendee"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__sequence
+msgid "Request ID"
+msgstr "الرقم المتسلسل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Request ID:"
+msgstr "رقم الطلب :"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:345
+#, python-format
+msgid "Request for Quotation"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__committee_attach
+msgid "Required Documents Signature Attachment"
+msgstr "مرفقات المستندات المطلوبة موقعة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__required_score
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__required_score
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__required_score
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__required_score
+msgid "Required Score"
+msgstr "الدرجات المطلوبة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.report,name:kamil_purchase_qualifiying_suppliers.action_required_documents_report
+msgid "Required documents"
+msgstr "المستندات المطلوبة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_committee_members__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_pr_general_conditions__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition_announcement__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_announcement__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_qualifying_suppliers__requisition_id
+msgid "Requisition"
+msgstr "الطلب"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__visit_result
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__visit_result
+msgid "Result"
+msgstr "النتيجة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_collection_collection
+msgid "Revenues Collection"
+msgstr "تحصيل الإيرادات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Role"
+msgstr "الدور"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:general.conditions,type:0
+msgid "Scrap Request"
+msgstr "التخلص من الفائض"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__select_all
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__select_all
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_wiz_general_conditions_form
+msgid "Select All"
+msgstr "تحديد الكل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:232
+#, python-format
+msgid "Select at least one book qualifier.!!!!!"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:224
+#, python-format
+msgid "Select because at least one book to purchase."
+msgstr "!!قم بإختيار  مورد واحد على الاقل "
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Send By Email"
+msgstr "إرسال بواسطة الايميل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__qualifier
+msgid "Set qualifier to false to hide the Tender Book Tag without removing it."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_filter__state
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__state_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__state_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__state_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__state_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "State ..."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__state_blanket_order
+msgid "State Blanket Order"
+msgstr "حالة العقد الشامل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__state
+msgid "States"
+msgstr "المحافظات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__state
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_requisition_filter
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__street
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__street
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Street"
+msgstr "الشارع"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Street 2"
+msgstr "الشارع 2"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+msgid "Street 2..."
+msgstr "الشارع 2..."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+msgid "Street..."
+msgstr "الشارع..."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__street2
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__street2
+msgid "Street2"
+msgstr "الشارع 2"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:collection.collection,operation_type:0
+msgid "Subscription"
+msgstr "الاشتراكات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.success
+msgid "Success"
+msgstr "نجاح"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__partner_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__partner_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__partner_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__partner_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__partner_ids
+msgid "Suppliers"
+msgstr "الموردين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_suppliers_valuation
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_suppliers_valuation
+#: selection:purchase.qualifying.suppliers.report,pr_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+msgid "Suppliers Valuation"
+msgstr "تقييم الموردين"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__technical_report
+msgid "Technical Report"
+msgstr "التقرير الفني"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:purchase.requisition,state:0
+#: selection:purchase.requisition,state_blanket_order:0
+#: selection:tender.book,state:0
+msgid "Technical Selection"
+msgstr "الفرز الفني"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_collection_collection__tender_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__tender_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__tender_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_partner__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_users__requisition_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__requisition_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+msgid "Tender"
+msgstr "العطاء"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_tender_announcement
+msgid "Tender Announcement"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_tender_book
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_tender_book
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__tender_book_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_partner__book_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_users__book_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Tender Book"
+msgstr "كراسات التأهيل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_book_visit
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_book_visit_partner
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_field_visit
+msgid "Tender Book Field Visit Report"
+msgstr "تقارير الزيارات الميدانية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_tender_book_visit
+msgid "Tender Book Visit"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_tender_book_visit_line
+msgid "Tender Book Visit Line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Tender Book:"
+msgstr "الكراسات :"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_requisition_tender_book
+msgid "Tender Books"
+msgstr "كراسات المناقصات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__pr_state
+msgid "Tender State"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_tender_visit_line
+msgid "Tender visit Line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_tender_visit_template
+msgid "Tender visit template"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.ui.menu,name:kamil_purchase_qualifiying_suppliers.menu_tender_config_purchase
+msgid "Tenders"
+msgstr "المناقصات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__tendor_book_id
+msgid "Tendor Book"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__terms
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Terms"
+msgstr "شروط السداد"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Terms...."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.success
+msgid "Thanks!"
+msgstr "شكرا"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:195
+#, python-format
+msgid "The Announcement is not exist please entered."
+msgstr "الاعلان غير موجود الرجاء ارفاقة!!"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:133
+#, python-format
+msgid "The Area Rehabilitation is not exist please entered."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/announcement.py:71
+#, python-format
+msgid "The Relase date is not valid '%s' because is larg than aggrement end date."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/announcement.py:73
+#, python-format
+msgid "The Relase date is not valid '%s' because is less than aggrement ordering date."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:210
+#, python-format
+msgid "The Representative attendee is not exist please entered."
+msgstr "لايوجد ممثلين حضور الرجاء ادخال واحد على الاقل !!!"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:198
+#, python-format
+msgid "The Visit is not exist please entered."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/announcement.py:21
+#, python-format
+msgid "The announcement number is not exist please entered."
+msgstr "عدد النشرات غير موجود الرجاء إدخالة."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:250
+#, python-format
+msgid "The committee attachment is not exist please entered."
+msgstr "مرفقات اعضاء اللجنة غير موجود الرجاء ارفاقة!!"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:252
+#, python-format
+msgid "The committee member is not exist please entered."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/models/qualifying_suppliers.py:220
+#, python-format
+msgid "The finance admin signature attachment is not exist please entered."
+msgstr "الرجاء ارفاق موافقة مدير الشؤون المالية والادارية"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/announcement.py:37
+#, python-format
+msgid "The newspaper is not exist please entered."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/visit_template.py:18
+#, python-format
+msgid "The visit line is not exist please entered."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/general_conditions.py:41
+#, python-format
+msgid "This order is missing '%s' attachments."
+msgstr "مرفق '%s' غير موجود."
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/general_conditions.py:39
+#, python-format
+msgid "This order is not check '%s' exist."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__title
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__title
+msgid "Title"
+msgstr "العنوان"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:tender.book,state:0
+msgid "To Approve"
+msgstr "للموافقة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: selection:tender.book,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_visit_template_form
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_visit_form
+msgid "Total Obtained Score"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_visit_form
+msgid "Total Required Score"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_visit_form
+msgid "Total obtained score"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_visit_form
+msgid "Total required score"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_general_conditions__type
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__type
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__type
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#. openerp-web
+#: code:addons/kamil_purchase_qualifiying_suppliers/static/src/js/suppliers_valuation.js:55
+#, python-format
+msgid "Unposted"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/suppliers_valuation.py:42
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_book_search
+#: selection:purchase.qualifying.suppliers.report,book_state:0
+#: selection:tender.book,state:0
+#, python-format
+msgid "Unqualifier"
+msgstr "غير مؤهل"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__user_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_qualifying_suppliers_form
+msgid "Valuation"
+msgstr "تقييم"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__vendor_email
+msgid "Vendor Email"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__vendor_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__vendor_name
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__vendor_name
+msgid "Vendor Name"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__vendor_phone
+msgid "Vendor Phone"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_area_rehabilitation_line__vendor_rehabilitation_id
+msgid "Vendor Rehabilitation"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__visit_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_partner__visit_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_res_users__visit_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__visit_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit_line__visit_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_template__visit_ids
+msgid "Visit"
+msgstr "الزيارات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__visit_attach
+msgid "Visit Attachment"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__visit_line_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_field_visit_template__visit_line_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__visit_line_ids
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_template__visit_line_ids
+msgid "Visit Line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.report,name:kamil_purchase_qualifiying_suppliers.action_visit_report
+msgid "Visit Report"
+msgstr "تقرير الزيارات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_tender_visit_tempate
+#: model:ir.actions.act_window,name:kamil_purchase_qualifiying_suppliers.action_visit_template
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_visit_template
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit_line__visit_template_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__visit_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_visit_line__visit_template_id
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_visit_line__visit_template_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_tender_visit_template_form
+msgid "Visit Template"
+msgstr "نموزج الزيارات"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_purchase_visit_template_form
+msgid "Visits Template"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.success
+msgid "We will get back to you shortly."
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.index
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,help:kamil_purchase_qualifiying_suppliers.field_tender_book__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_wiz_general_conditions
+msgid "Wiz general conditions"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_wiz_qualifying_suppliers
+msgid "Wiz qualifying suppliers"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_book_visit__year
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_requisition__year
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_tender_book_visit__year
+msgid "Year"
+msgstr "السنة"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: code:addons/kamil_purchase_qualifiying_suppliers/wizard/announcement.py:24
+#, python-format
+msgid "You cannot confirm Announcement because there is no Announcement or Attachment."
+msgstr "لايمكن تأكيد الاعلان لأنة لايوجد نص الاعلان او مرفق قم بإدخال احدهم!!!"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.success
+msgid "Your message has been sent successfully."
+msgstr "نم ارسال الرسالة بنجاح"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_rep_attendee_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.view_representative_attendance_form
+msgid "ZIP"
+msgstr "الرمز البريدي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_rep_attendee__zip
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_representative_attendance__zip
+msgid "Zip"
+msgstr "الرمز البريدي"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_book_visit_line
+msgid "book visit line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_book_filter
+msgid "book.filter"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_purchase_qualifying_suppliers_report__deadline_date
+msgid "deadline Date"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_qualifiy_suppliers_wizard
+msgid "qualifiy.suppliers.wizard"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_report_kamil_purchase_qualifiying_suppliers_suppliers_view
+msgid "report.kamil_purchase_qualifiying_suppliers.suppliers_view"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_representative_attendance
+msgid "representative attendance"
+msgstr "ممثل الحضور"
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model.fields,field_description:kamil_purchase_qualifiying_suppliers.field_wiz_general_conditions__book_id
+msgid "tender"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_tender_book_visit_criteria
+msgid "tender book visit criteria"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_visit_line
+msgid "visit Line"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model:ir.model,name:kamil_purchase_qualifiying_suppliers.model_wiz_area_rehabilitaion
+msgid "wiz.area.rehabilitaion"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.suppliers_view
+msgid "اسم المورد"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.qualifiying_suppliers_wizard_form
+msgid "اضغط علي زر طباعة لطباعة الموردين المؤهلين"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+msgid "الصفحة:"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.area_template
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_qualifying_suppliers_document
+msgid "تأهيل موردين للعام"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.report_visit_template_document
+msgid "تقرير الزيارات الميدانية"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_done_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.book_qs_report_view
+msgid "كراسة العطاء"
+msgstr ""
+
+#. module: kamil_purchase_qualifiying_suppliers
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_qualifiying_suppliers.suppliers_view
+msgid "مجالات التأهيل"
+msgstr ""
+

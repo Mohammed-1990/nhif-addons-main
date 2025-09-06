@@ -1,0 +1,1548 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_career
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-04 08:25+0000\n"
+"PO-Revision-Date: 2021-03-04 08:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "<br/>\n"
+"                         القسم:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "<br/>\n"
+"                         الوظيفة:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "<span>توجد</span>"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__absence_ratio
+msgid "Absence Ratio"
+msgstr "نسبه الغياب"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__activity_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_form_view
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__activities_line_ids
+msgid "Activities Line"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__activity
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__activity
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__weight
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__weight
+msgid "Activity weight"
+msgstr "وزن النشاط"
+
+#. module: kamil_hr_career
+#: selection:monthly.performance,eligible:0
+msgid "Appointment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__appointment_type_ids
+msgid "Appointment types"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: kamil_hr_career
+#: selection:monthly.performance,state:0
+msgid "Approved"
+msgstr "موكده"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.assessing_merits_menu
+msgid "Assessing the merits for the employee"
+msgstr "تقييم الجدارات"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__attachment
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__attachment
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__attendance_hours
+msgid "Attendance Hours"
+msgstr "ساعات الحضور"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__branch_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__branch_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__branch_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_career
+#: selection:permission.request,state:0
+msgid "Branch Manager Confirm"
+msgstr "موافقة الادارة الفرعيه للموارد البشرية"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.permission_request_form_view
+msgid "Branch manager Confirm"
+msgstr "موافقة الادارة الفرعيه للموارد البشرية"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__company_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+#: selection:monthly.performance,eligible:0
+msgid "Branchs"
+msgstr "الفروع"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.competencie_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,state:0
+#: selection:monthly.performance,state:0
+msgid "Career"
+msgstr "قسم المسار الوظيفي"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.indicators_performance_form_view
+msgid "Clarify the indicator"
+msgstr "توضيح المؤشر"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_competencie_wizard
+#: model:ir.ui.menu,name:kamil_hr_career.menu_competencie
+msgid "Competencie report"
+msgstr "تقرير الجدارات"
+
+#. module: kamil_hr_career
+#: model:ir.actions.report,name:kamil_hr_career.hr_competencie_report
+msgid "Competencies report"
+msgstr "تقرير الجدارات"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Compute Details"
+msgstr "حساب التفاصيل"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.configurations_main_menu
+msgid "Configurations"
+msgstr "الإعدادات"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_career
+#: selection:technical.performance,state:0
+msgid "Confirmed"
+msgstr "مؤكده"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__date_from
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__date_from
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__date_from
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__date_from
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__date_from
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__date_from
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__date_to
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__date_to
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__date_to
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__date_to
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__date_to
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__date_to
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:265
+#, python-format
+msgid "Deletion is only possible if state is draft"
+msgstr "لا يمكن الحذف الا في حالة مسودة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__department_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__department_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_career
+#: selection:technical.performance,state:0
+msgid "Department Manger Confirm"
+msgstr "مدير الأدارة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__department_ids
+#: selection:monthly.performance,eligible:0
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_career
+#: selection:technical.performance,state:0
+msgid "Direct Manger"
+msgstr "المدير المباشر"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.permission_request_form_view
+#: selection:permission.request,state:0
+msgid "Director Public Confirm"
+msgstr "موافقة الادارة العامة للموارد البشرية"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__discount_percentage
+msgid "Discount Percentage"
+msgstr "نسبه الخصم"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_distribution_activities_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_general_performance_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_hr_competencie_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_technical_performance_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,state:0
+#: selection:monthly.performance,state:0
+#: selection:permission.request,state:0
+#: selection:technical.performance,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__eligible
+msgid "Eligible"
+msgstr "الإستحقاق"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__employee_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__employee_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_search_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.evaluating_merits_form_view
+msgid "Employee Confirm"
+msgstr "تأكيد الموظف"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__employee_level
+msgid "Employee Level"
+msgstr "مستوي الموظف"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__employee_no
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,state:0
+msgid "Employee notification"
+msgstr "إخطار الموظف"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__employee_ids
+#: selection:monthly.performance,eligible:0
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:466
+#: model:ir.actions.act_window,name:kamil_hr_career.action_evaluating_merits
+#: model:ir.model,name:kamil_hr_career.model_evaluating_merits
+#, python-format
+msgid "Evaluating merits"
+msgstr "تقييم الجدارات بالنسبة للموظف"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__evaluation
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__evaluation
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.evaluating_merits_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_form_view
+msgid "Evaluation"
+msgstr "تقييم"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_evaluation_criteria
+msgid "Evaluation Criteria"
+msgstr "معايير التقييم"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__evaluation_line_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__evaluation_line_ids
+msgid "Evaluation Line"
+msgstr ""
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:371
+#: code:addons/kamil_hr_career/models/career.py:393
+#, python-format
+msgid "Evaluation cannot exceed the activitys weight"
+msgstr "تقييم النشاط لا يمكن ان يتجازو زون النشاط"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Ex: Monthly Performance for Jan"
+msgstr "مثال: تقييم الاداء الشهري لشهر يناير"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__execution_date
+msgid "Execution Date"
+msgstr "تاريخ التنفيذ"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__job_id
+msgid "Functional"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.evaluating_merits_form_view
+msgid "G Manager Confirm"
+msgstr "موافقة الاداره العامة للموارد البشرية"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__gap
+msgid "Gap"
+msgstr "وجود فجوه"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__gap_percentage
+msgid "Gap Percentage"
+msgstr "نسبه الفجوه"
+
+#. module: kamil_hr_career
+#: selection:monthly.performance,state:0
+msgid "General Directorate of Human Resources"
+msgstr "الاداره العامه للموارد البشريه"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_general_performance_wizard
+#: model:ir.actions.report,name:kamil_hr_career.general_performance_report
+#: model:ir.ui.menu,name:kamil_hr_career.menu_general_performance
+msgid "General Performance Report"
+msgstr "تقرير الاداء العام"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,state:0
+msgid "General department Confirm"
+msgstr "الاداره العامة للموارد البشرية"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.permission_request_form_view
+msgid "HD Confirm"
+msgstr "موافقة المدير المباشر"
+
+#. module: kamil_hr_career
+#: selection:permission.request,state:0
+msgid "HR"
+msgstr "الموارد البشرية"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.career_menu
+msgid "HR Career"
+msgstr "المسار الوظيفي"
+
+#. module: kamil_hr_career
+#: selection:permission.request,state:0
+msgid "Head Department Confirm"
+msgstr "موافقة رئيس القسم"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__hours_allowed
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__hours_allowed
+msgid "Hours Allowed"
+msgstr "ساعات السماح"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__hours_form
+msgid "Hours Form"
+msgstr "من الساعة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__hours_leave
+msgid "Hours Leave"
+msgstr "ساعات الاجازه"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__hours_permissions
+msgid "Hours Permissions"
+msgstr "ساعات الاذونات"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__hours_to
+msgid "Hours To"
+msgstr "إلى الساعة"
+
+#. module: kamil_hr_career
+#: selection:monthly.performance,state:0
+msgid "Human Resources Sub-Manager"
+msgstr "الاداره الفرعيه للموارد البشريه"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_distribution_activities_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_general_performance_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_hr_competencie_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_technical_performance_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__message_unread
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__message_unread
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__message_unread
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__message_needaction
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__message_needaction
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__message_needaction
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__message_has_error
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__message_has_error
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__message_has_error
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__indicator_name
+msgid "Indicator Name"
+msgstr "إسم المؤشر"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__indicator_text
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__indicator_text
+msgid "Indicator Text"
+msgstr "توضيح المؤشر"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__indicator_type
+msgid "Indicator Type"
+msgstr "نوع المؤشر"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_indicators_performance
+#: model:ir.ui.menu,name:kamil_hr_career.indicators_performance_menu
+msgid "Indicators Performance"
+msgstr "موشرات الاداء الفني"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__job_title_id
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_distribution_activities_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_general_performance_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_hr_competencie_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_report_kamil_hr_career_technical_performance_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_career
+#: selection:indicators.performance,indicator_type:0
+msgid "Main"
+msgstr "رئيسي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__main_activity
+msgid "Main Activity"
+msgstr "النشاط الرئيسي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__merit
+msgid "Merit"
+msgstr "الجدارة"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.merit_main_menu
+msgid "Merits"
+msgstr "الجدارات"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__missions
+msgid "Missions"
+msgstr "المأموريات"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_monthly_performance
+#: model:ir.ui.menu,name:kamil_hr_career.monthly_performance_menu
+msgid "Monthly performance"
+msgstr "تقييم الأداء الشهري"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_criteria__name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_type__name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.indicators_performance_form_view
+msgid "Name of the indicator"
+msgstr "اسم المؤشر"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__normative
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__normative
+msgid "Normative"
+msgstr "الساعات المعياريه"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__notes
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__notes
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__notes
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__notes
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__name
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__name
+msgid "Numer"
+msgstr "الرقم"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,activity_state:0
+#: selection:indicators.performance,activity_state:0
+#: selection:permission.request,activity_state:0
+#: selection:technical.performance,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__percentage
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__performance_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_evaluation_line__performance_id
+msgid "Performance"
+msgstr "الأداء"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.evaluation_criteria_menu
+msgid "Performance Evaluation Criteria"
+msgstr "معايير تقييم الأداء"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.performance_evaluation_main_menu
+msgid "Performance evaluation"
+msgstr "تقييم الأداء"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__permission_date
+msgid "Permission Date"
+msgstr "تاريخ الإذن"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__permission_reason
+msgid "Permission Reason"
+msgstr "سبب الإذن"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.permission_request_menu
+msgid "Permission Request"
+msgstr "طلب الإذن"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_permission_type
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__permission_type
+#: model:ir.ui.menu,name:kamil_hr_career.permission_type_main_menu
+msgid "Permission Type"
+msgstr "نوع الإذن"
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:584
+#, python-format
+msgid "Permission cannot be deleted in a case other than draft"
+msgstr "لا يمكن حذف الاذن الا اذا كان في حاله المسودة"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.permission_main_menu
+msgid "Permissions"
+msgstr "الاذونات"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,activity_state:0
+#: selection:indicators.performance,activity_state:0
+#: selection:permission.request,activity_state:0
+#: selection:technical.performance,activity_state:0
+msgid "Planned"
+msgstr "خطط"
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:299
+#, python-format
+msgid "Please contact the performance department to prepare performance indicators for the system"
+msgstr "يرجي التواصل مع قسم الاداء لاعداد معايير التقييم في النظام"
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:270
+#, python-format
+msgid "Please enter activities details"
+msgstr "يرجي ادخال تفاصيل الانشطة"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.competencie_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_hr_career
+#: model:ir.actions.report,name:kamil_hr_career.report_monthly_performance
+msgid "Report Monthly Performance"
+msgstr "تقرير الاداء الشهري"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_distribution_activities_wizard
+#: model:ir.actions.report,name:kamil_hr_career.distribution_activities_report
+#: model:ir.ui.menu,name:kamil_hr_career.menu_distribution_activities
+msgid "Report by Distribution Activities"
+msgstr "تقرير توزيع الأنشطة"
+
+#. module: kamil_hr_career
+#: model:ir.ui.menu,name:kamil_hr_career.competencie_reports_menu
+#: model:ir.ui.menu,name:kamil_hr_career.performance_evaluation_reports_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluation_evaluation__required_level
+msgid "Required Level"
+msgstr "المستوى المطلوب"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_form_view
+msgid "Return"
+msgstr "إرجاع"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Return1"
+msgstr "إرجاع"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Return2"
+msgstr "إرجاع"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.permission_request_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_form_view
+msgid "Send"
+msgstr "إرسال"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.evaluating_merits_form_view
+msgid "Send Employee Notification"
+msgstr "إرسال إخطار للموظف"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__standard
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__standard
+msgid "Standard"
+msgstr "معيار"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__state
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__state
+msgid "States"
+msgstr "المحافظات"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance__state
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_search_view
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__activity_state
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__activity_state
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__activity_state
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_career
+#: selection:indicators.performance,indicator_type:0
+msgid "Sub"
+msgstr "فرعي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_activities_activities__sub_activity
+msgid "Sub Activity"
+msgstr "النشاط الفرعي"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.evaluating_merits_form_view
+msgid "Sub Confirm"
+msgstr "موافقة الادارة الفرعية"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_sub_indicators__sub_indicators_id
+msgid "Sub Indicators"
+msgstr "مؤشر فرعي"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,state:0
+msgid "Sub-Manager Confirm"
+msgstr "الادارة الفرعيه للموارد البشرية"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.indicators_performance_form_view
+msgid "Sub-indicators"
+msgstr "المؤشرات الفرعية"
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.monthly_performance_form_view
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__system_attend
+msgid "System Attend"
+msgstr "حضور النظام"
+
+#. module: kamil_hr_career
+#: model:ir.actions.report,name:kamil_hr_career.technical_performance_report
+msgid "Tchnical Performance Report"
+msgstr "تقرير الاداء الفني"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__technical_performance_ratio
+msgid "Technical Performance Ratio"
+msgstr "نسبه الاداء الفني"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_technical_performance_wizard
+#: model:ir.ui.menu,name:kamil_hr_career.menu_technical_performance
+msgid "Technical Performance Report"
+msgstr "تقرير الاداء الفني"
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_technical_performance
+#: model:ir.ui.menu,name:kamil_hr_career.technical_performance_menu
+msgid "Technical performance evaluation"
+msgstr "تقييم الاداء الفني"
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:80
+#, python-format
+msgid "The normative cannot be zero"
+msgstr "الساعات المعياريه لايمكن ان تساوي صفرا"
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:229
+#, python-format
+msgid "The total percentages of sub-activities cannot exceed the percentage of the main activity"
+msgstr "لا يمكن أن تتجاوز النسبة المئوية الإجمالية للأنشطة الفرعية النسبة المئوية للنشاط الرئيسي"
+
+#. module: kamil_hr_career
+#: selection:evaluating.merits,activity_state:0
+#: selection:indicators.performance,activity_state:0
+#: selection:permission.request,activity_state:0
+#: selection:technical.performance,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__total_evaluation
+msgid "Total Evaluation"
+msgstr "النسبه الكليه"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__total_hours
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__hours_number_permission
+msgid "Total Hours"
+msgstr "الساعات الكليه"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__total_ratio
+msgid "Total Ratio"
+msgstr "نسبه الاداء الكلي"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__trainings
+msgid "Trainings"
+msgstr "التدريب"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_competencie_wizard_career__unit_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_distribution_activities__unit_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_general_performance_wizard__unit_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_monthly_performance_line__unit_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__unit_id
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance_wizard__unit_id
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,field_description:kamil_hr_career.field_evaluating_merits__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_indicators_performance__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_permission_request__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_career.field_technical_performance__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_career
+#: model:ir.model.fields,help:kamil_hr_career.field_evaluating_merits__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_career.field_indicators_performance__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_career.field_permission_request__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_career.field_technical_performance__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_activities_activities
+msgid "activities.activities"
+msgstr ""
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:324
+#, python-format
+msgid "activitys weights cannot exceed the main activity weight"
+msgstr "وزن النشاط لا يمكن ان يتجاوز وزن النشاط الرئيسي"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_competencie_wizard_career
+msgid "competencie.wizard.career"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_distribution_activities
+msgid "distribution.activities"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_evaluation_criteria
+msgid "evaluation.criteria"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_evaluation_evaluation
+msgid "evaluation.evaluation"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_general_performance_wizard
+msgid "general.performance.wizard"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_indicators_performance
+msgid "indicators.performance"
+msgstr "مؤشر اداء فني"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_monthly_performance
+msgid "monthly.performance"
+msgstr "الأداء الشهري"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_monthly_performance_line
+msgid "monthly.performance.line"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.actions.act_window,name:kamil_hr_career.action_permission_request
+msgid "permission request"
+msgstr "طلب الاذن"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_permission_request
+msgid "permission.request"
+msgstr "طلب اذن"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_permission_type
+msgid "permission.type"
+msgstr "نوع الاذن"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_report_kamil_hr_career_distribution_activities_report_view
+msgid "report.kamil_hr_career.distribution_activities_report_view"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_report_kamil_hr_career_general_performance_report_view
+msgid "report.kamil_hr_career.general_performance_report_view"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_report_kamil_hr_career_hr_competencie_report_view
+msgid "report.kamil_hr_career.hr_competencie_report_view"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_report_kamil_hr_career_technical_performance_report_view
+msgid "report.kamil_hr_career.technical_performance_report_view"
+msgstr ""
+
+#. module: kamil_hr_career
+#: code:addons/kamil_hr_career/models/career.py:310
+#: code:addons/kamil_hr_career/models/career.py:497
+#, python-format
+msgid "start date cannot be greater than end date"
+msgstr "تاريخ النهايه لا يمكن ان يكون اقل من تاريخ البداية"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_sub_indicators
+msgid "sub.indicators"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_technical_evaluation_line
+msgid "technical.evaluation.line"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_technical_performance
+msgid "technical.performance"
+msgstr "الأداء الشهري"
+
+#. module: kamil_hr_career
+#: model:ir.model,name:kamil_hr_career.model_technical_performance_wizard
+msgid "technical.performance.wizard"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "إلى"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "إلى تاريخ"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "إلى:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_report_view
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "اسم الموظف:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "الإجازات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "الإدارة"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "الادارة"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "الاذونات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "التدريب"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "التنفيذ الفعلي"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "الجدارة"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "الساعات المعياريه:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "القسم:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "المأموريات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "المبادرات والإشادات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "المستوي المطلوب"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "الموظف"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "النشاط الرئيسي"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "الوزن"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "الوظيفة:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_report_view
+msgid "الي تاريخ :"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "الي تاريخ:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "تقرير الاداء الشهري"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "تقرير الاداء العام"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_report_view
+msgid "تقرير الاداء الفني"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "تقرير الجدارات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "تقرير توزيع الأنشطة"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "ساعات الحضور"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "في الفترة من"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_report_view
+msgid "لا تـوجـــد بيــانات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "لا توجد بيانات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "متوسط الاداء العام"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+msgid "متوسط تقييم الجدارات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "مستوي الموظف"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "ملاحظات"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "من :"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "من تاريخ"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.general_performance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.technical_performance_report_view
+msgid "من تاريخ :"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "من تاريخ:"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "نسبه الاداء الفني"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "نسبه الاداء الكلي"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "نسبه الخصم"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.report_monthly_performance_view
+msgid "نسبه الغياب"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "نسبه الفجوه"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.hr_competencie_report_view
+msgid "وجود فجوه"
+msgstr ""
+
+#. module: kamil_hr_career
+#: model_terms:ir.ui.view,arch_db:kamil_hr_career.distribution_activities_report_view
+msgid "وصف النشاط"
+msgstr ""
+

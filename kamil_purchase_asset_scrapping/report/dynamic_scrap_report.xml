@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+	<report 
+		id="report_dynamic_scrap"
+		model="scrap.request"
+		string="Dynamic Scrap"
+		report_type="qweb-html"
+		name="kamil_purchase_asset_scrapping.dynamic_scrap_template"
+	/>
+
+
+	<template id="dynamic_scrap_template">
+		<t t-call="web.html_container">
+           	<t t-call="web.external_layout">
+				<div class="page">
+					<div>
+						<h3 style="font-family:Calibri;" class="text-center">
+							<b>التخلص من الفائض</b>
+							<br/>
+							<b t-esc="docs[0]['state']" /> <b t-esc="docs[0]['auction_date']" />
+						</h3>				
+						<br/>
+						<!-- <p class="text-right">
+							<strong style="float:right">فرع ولاية :</strong>
+							<span style="float:right;margin-right:20px" t-esc="docs[0]['state']"></span>
+						</p> -->
+					</div>
+					<br/><br/>
+					<table class="text-right table table-condensed table-hover" border="1">
+						<thead>
+							<tr>
+								<th>الكوم</th>
+								<th>الصنف</th>
+								<th>الساشي</th>
+								<th>الماكينة</th>
+								<th>اللوحة</th>
+								<th>الموديل</th>
+								<th>اللون</th>
+								<th>الوقود</th>
+								<th>المنشاء</th>
+								<th>قيمة البيع</th>
+								<th>المشتري</th>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-foreach="docs[0]['data']" t-as="doc">
+								<tr>
+									<td>
+										<t t-esc="doc_index + 1"/>
+									</td>
+									<td>
+										<t t-esc="doc['product_name']"/>
+									</td>
+									<td>
+										<t t-esc="doc['shasea_number']"/>
+									</td>
+									<td>
+										<t t-esc="doc['machine']"/>
+									</td>
+									<td>
+										<t t-esc="doc['palte_number']"/>
+									</td>
+									<td>
+										<t t-esc="doc['car_model']"/>
+									</td>
+									<td>
+										<t t-esc="doc['color']"/>
+									</td>
+									<td>
+										<t t-esc="doc['fuel']"/>
+									</td>
+									<td>
+										<t t-esc="doc['origin']"/>
+									</td>
+									<td>
+										<t t-esc="doc['sales_value']"/>
+									</td>
+									<td>
+										<t t-esc="doc['partner']"/>
+									</td>
+								</tr>
+
+							</t>
+							<tr class="table-active">
+	                        	<td  colspan="9" class="text-center">
+	                        		<b>
+	                        			الجملة
+	                        		</b>
+	                        	</td>
+	                        	<td>
+	                        		<b>
+	                        			<t t-esc="'{0:,.2f}'.format(float(sum( doc['sales_value']for doc in docs[0]['data'])))"/>
+	                        		</b>
+	                        	</td>
+	                        	<td></td>
+	                        </tr>
+						</tbody>
+					</table>
+	
+				</div>
+			</t>
+		</t>
+	</template>
+
+</odoo>

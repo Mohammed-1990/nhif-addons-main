@@ -1,0 +1,133 @@
+<odoo>
+	<data>
+		<record model="ir.module.category" id="human_resources_category">
+			<field name="name">الموارد البشرية</field>
+			<field name="sequence">1</field>
+		</record>
+		<record id="hr_kamil_payroll" model="res.groups">
+			<field name="name">Kamil Payroll</field>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+		</record>
+		<record id="hr_committee_of_loans_group" model="res.groups">
+			<field name="name">لجنة السلفيات</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+		</record>
+		<record id="hr_unions_group" model="res.groups">
+			<field name="name">لجنة المشاريع</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+		</record>
+		<record id="hr_head_of_hr_dept_group" model="res.groups">
+			<field name="name">Head of the Human Resources Department</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+		</record>
+	    <record id="hr_internal_auditor_group" model="res.groups">
+			<field name="name">Internal Auditor</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_director_public_administration_group" model="res.groups">
+			<field name="name">Director of public administration</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_sub_manager_group" model="res.groups">
+			<field name="name">Sub-manager</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+        <record id="hr_head_department_group" model="res.groups">
+			<field name="name">Head of the Department</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_employee_group" model="res.groups">
+			<field name="name">Employee</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+        <record id="hr_employment_department_group" model="res.groups">
+			<field name="name">Employment Department</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_benefits_wages_section_group" model="res.groups">
+			<field name="name">Benefits and fees section</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="implied_ids" eval="[(4, ref('hr_payroll.group_hr_payroll_manager'))]"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_career_path_section_group" model="res.groups">
+			<field name="name">Career path section</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_training_department_group" model="res.groups">
+			<field name="name">training department</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_management_group" model="res.groups">
+			<field name="name">Human Resource Management</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_development_and_training_group" model="res.groups">
+			<field name="name">Human Resources Development and Training Department</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_general_department_group" model="res.groups">
+			<field name="name">Human Resources General Department</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_general_manager_group" model="res.groups">
+			<field name="name">General Manger</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+
+	    <record id="hr_branch_manager_group" model="res.groups">
+			<field name="name">Branch Manager</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_executive_office_group" model="res.groups">
+			<field name="name">Executive Office</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_financial_group" model="res.groups">
+			<field name="name">Financial and Administrative Affairs</field>
+			<field name="category_id" ref="human_resources_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+
+	    <record model="ir.module.category" id="human_resources_hq_category">
+			<field name="name">الموارد البشرية الرئاسه</field>
+			<field name="sequence">2</field>
+		</record>
+		<record id="hr_employment_department_hq_group" model="res.groups">
+			<field name="name">Employment Department HQ</field>
+			<field name="category_id" ref="human_resources_hq_category"/> 
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_training_department_hq_group" model="res.groups">
+			<field name="name">Training Department HQ</field>
+			<field name="category_id" ref="human_resources_hq_category"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+	    <record id="hr_benefits_wages_section_hq_group" model="res.groups">
+			<field name="name">Benefits and fees section HQ</field>
+			<field name="category_id" ref="human_resources_hq_category"/>
+			<field name="implied_ids" eval="[(4, ref('hr_payroll.group_hr_payroll_manager'))]"/>
+			<field name="users" eval="[(4, ref('base.user_admin'))]"/>
+	    </record>
+
+	   
+		
+	</data>
+</odoo>

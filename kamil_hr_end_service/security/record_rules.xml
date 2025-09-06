@@ -1,0 +1,55 @@
+<odoo>
+	<data>
+<!-- 
+		<record id="hr_employee_gm" model="ir.rule">
+			<field name="name">HR Employee general manger</field>
+			<field name="model_id" ref="hr.model_hr_employee"/>
+			<field name="perm_read" eval="1"/>
+			<field name="perm_write" eval="0"/>
+			<field name="perm_create" eval="0"/>
+			<field name="perm_unlink" eval="0"/>
+			<field name="domain_force">[]
+		    </field>
+	        <field name="groups" eval="[(4,ref('kamil_hr_security.gm_security_groups'))]"/>
+	    </record>
+ -->
+
+
+		<!-- <record id="termination_service_gm" model="ir.rule">
+			<field name="name">termination service gm</field>
+			<field name="model_id" ref="kamil_hr.model_termination_service"/>
+			<field name="domain_force">[('state','in',['gm_confirm','hr_confirm','hr_g_confirm'])]</field>
+			<field name="perm_read" eval="1"/>
+			<field name="perm_write" eval="1"/>
+			<field name="perm_create" eval="1"/>
+			<field name="perm_unlink" eval="1"/>
+			<field name="groups" eval="[(4,ref('kamil_hr_security.gm_security_groups'))]"/>
+		</record> -->
+
+		<!-- <record id="termination_service_gm" model="ir.rule">
+			<field name="name">termination service gm</field>
+			<field name="model_id" ref="kamil_hr.model_termination_service"/>
+			<field name="domain_force">[('state','!=','draft')]</field>
+			<field name="perm_read" eval="1"/>
+			<field name="perm_write" eval="0"/>
+			<field name="perm_create" eval="0"/>
+			<field name="perm_unlink" eval="0"/>
+			<field name="groups" eval="[(4,ref('kamil_hr_security.gm_security_groups'))]"/>
+		</record> -->
+
+
+		<!-- <record id="inherit_termination_service" model="ir.ui.view">
+        	<field name="name">termination service</field>
+        	<field name="model">termination.service</field>
+        	<field name="inherit_id" ref="kamil_hr.termination_service_form_view"/>
+        	<field name="arch" type="xml">
+
+        		<xpath expr="//button[@name='gm_confirm']" position="attributes">
+        			<attribute name="groups">kamil_hr_security.gm_security_groups</attribute>
+        	   </xpath>
+        	</field>
+        </record> -->
+
+
+	</data>
+</odoo>

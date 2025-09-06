@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- Payment Report-->
+	<report 
+		id="collection_period_report"
+		model="collection.period.wizard"
+		string="Collection Period Report"
+		report_type="qweb-pdf"
+		name="kamil_accounting_revenues_collection.collection_period_report"
+	/>
+
+
+	<!-- Payment Report Template-->
+	<template id="collection_period_report">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+					<div class="page">
+						<div class="header">
+							<h3 class="text-right">Collection Report</h3>				
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Account</th>
+									<th>Estimated Collection</th>
+									<th>Acctual Collected</th>
+									<th>Deviation</th>
+									<th>Percentage</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="docs" t-as="doc">
+									<tr>
+										<td>
+											<t t-esc="doc_index + 1"/>
+										</td>
+										<td>
+											<t t-esc="doc['account']"/>
+										</td>
+										<td>
+											<t t-esc="doc['estimated_collection']"/>
+										</td>
+										<td>
+											<t t-esc="doc['acctual_collected']"/>
+										</td>
+										<td>
+											<t t-esc="doc['deviation']"/>
+										</td>
+										<td>
+											<t t-esc="doc['percentage']"/>
+										</td>
+										
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+			</t>
+		</t>
+	</template>
+
+
+</odoo>

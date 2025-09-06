@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="public_tender_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Public Tender</field>
+			<field name='model'>public.tender.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+            	        <group col="4">
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+            	        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+        </record>
+
+        <act_window
+		id="action_public_tender_wizard"
+		name="Report Public Tender"
+		res_model="public.tender.wizard"
+		view_mode="form"
+		target="new"
+	    />
+
+        <menuitem name="Report Public Tender"
+                  id="menu_report_public_tender"
+                  parent="purchase.purchase_report"
+                  action="action_public_tender_wizard"
+				  sequence="4"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_expenses_budget_pivot" model="ir.ui.view">
+         <field name="name">account.move.line.pivot</field>
+         <field name="model">crossovered.budget.lines</field>
+         <field name="arch" type="xml">
+             <pivot string="Expenses Budget Analysis" disable_linking="True">
+                <field name="revenues_budget_id" type="row"/>
+                 <field name="analytic_account_id" type="row"/>
+                 <field name="planned_amount" type="measure"/>
+                 <field name="practical_amount" type="measure"/>
+                  <field name="remaining_value" type="measure"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="view_expenses_budget_graph" model="ir.ui.view">
+         <field name="name">account.move.line.graph</field>
+         <field name="model">crossovered.budget.lines</field>
+         <field name="arch" type="xml">
+             <graph string="Expenses Budget Analysis" type="line">
+                 <field name="revenues_budget_id" type="row"/>
+                 <field name="analytic_account_id" type="row"/>
+                 <field name="planned_amount" type="measure"/>
+                 <field name="practical_amount" type="measure"/>
+                  <field name="remaining_value" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+
+    <record id="view_expenses_budget_search" model="ir.ui.view">
+        <field name="name">crossovered.budget.lines.search</field>
+        <field name="model">crossovered.budget.lines</field>
+        <field name="arch" type="xml">
+            <search string="Revenues Budget">
+                <filter string="Expenses" name="expenses" domain="[('expenses_line_ids','!=',False)]"/>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="action_expenses_budget" model="ir.actions.act_window">
+        <field name="name">Expenses Budget</field>
+        <field name="res_model">crossovered.budget.lines</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_expenses_budget_pivot')}),
+                          (0, 0, {'view_mode': 'graph', 'view_id': ref('view_expenses_budget_graph')})]"/>
+        <field name="context">{'search_default_expenses': 1}</field>
+        <field name="domain">[('expenses_budget_id','!=',False)]</field>
+        <field name="view_id" ref="view_expenses_budget_search"></field> 
+        <field name="help">This report performs analysis on your quotations and sales orders. Analysis check your sales revenues and sort it by different group criteria (salesman, partner, product, etc.) Use this report to perform analysis on sales not having invoiced yet. If you want to analyse your turnover, you should use the Invoice Analysis report in the Accounting application.</field>
+    </record>
+
+
+    <menuitem 
+        id="menu_expenses_budget" 
+        sequence="3"
+        parent="account_reports.account_reports_audit_reports_menu"
+        action="action_expenses_budget"/>
+
+    
+
+</odoo>

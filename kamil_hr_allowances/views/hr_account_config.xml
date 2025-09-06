@@ -1,0 +1,64 @@
+<odoo>
+  <data>
+ 
+
+    <record model="ir.ui.view" id="hr_account_config_form_view">
+    <field name="name">HR Account Config</field>
+    <field name="model">hr.account.config</field>
+    <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <h1>
+                <field name="name" readonly="1"/>
+              </h1>
+              <group col="4">
+                <field name="company_id" options="{'no_create':True}"/>
+                <field name="inclination_allowance" options="{'no_create':True}"/>
+                <field name="special_allowance" options="{'no_create':True}"/>
+                <field name="mission_petty_cash" options="{'no_create':True}"/>
+                <field name="mission_allowance" options="{'no_create':True}"/>
+                <field name="remove_diffrences" options="{'no_create':True}"/>
+              </group>
+              <group string="Training" col="4">
+                <field name="training_allowance" options="{'no_create':True}"/>
+                <field name="training_expenses" options="{'no_create':True}"/>
+              </group> 
+              <group string="After service benefits" col="4">
+                <field name="merit_cash_alternative" options="{'no_create':True}"/>
+                <field name="merit_baggage_relay" options="{'no_create':True}"/>
+                <field name="end_service_rewards" options="{'no_create':True}"/>
+              </group>
+              <group string="Meal Allowance"  col="4">
+                <field name="meal_allowance" options="{'no_create':True}"/>
+                <field name="meal_leave_deduction" options="{'no_create':True}"/>
+                <field name="meal_allowance_honesty" options="{'no_create':True}"/>
+                <field name="deduction_amount" options="{'no_create':True}"/>
+              </group>
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+            </div> 
+          </form>
+        </field>
+      </record>
+
+  
+
+
+    <record  id="action_hr_account_config" model="ir.actions.act_window">
+      <field name="name">HR Account Config</field>
+      <field name="res_model">hr.account.config</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  
+
+    <menuitem name="HR Account Config" id="menu_hr_account_config" action="action_hr_account_config" parent="account.menu_finance_configuration" sequence="12"/>
+
+
+
+  </data>
+</odoo>

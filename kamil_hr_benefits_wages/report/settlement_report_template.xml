@@ -1,0 +1,100 @@
+<odoo>
+
+
+
+    <!-- <record id="paperformat_a3_for_settelment_report" model="report.paperformat">
+        <field name="name">A3</field>
+        <field name="default" eval="True"/>
+        <field name="format">A3</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">20</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">25</field>
+        <field name="dpi">80</field>
+    </record> -->
+   
+
+    <report id="settlement_report"
+            model="settlement.report.wizard"
+            string="Settlement Report"
+            report_type="qweb-html"
+            name="kamil_hr_benefits_wages.settlement_report_view"
+            paperformat="hr_landscape_paperformat"
+            menu="False"/>
+
+    <template id="settlement_report_view">
+        <t t-call="web.html_container">
+           <t t-call="web.external_layout">
+            
+            <br/><br/>
+
+                <div class="text-center" style="font:500;">
+                    <p>الادارة العامة للموارد البشرية
+                    <br/>
+                    قسم الاجور والمزايا<br/>
+
+                    تقرير التسوية <br/>
+                    <span class="text-center">في الفترة من <t t-esc="date_from"/> الي <t t-esc="date_to"/></span>
+                </p>
+                </div>
+
+                <t t-if="docs!=[]">
+                   <table dir="rtl" class="table-bordered" style="margin: 0px auto;">
+                        <thead style="display: table-header-group;">
+                            <th class="text-center">البند</th>
+                            <t t-foreach="states_list" t-as="state">
+                                <th class="text-center"><span t-esc="state"/></th>
+                            </t>
+                            <th class="text-center">الاجمالي</th>
+                        </thead>
+                        <tbody>
+                            <div class="page" dir="rtl"><br/>
+                                <t t-foreach="docs" t-as="doc">
+                                    <tr style="page-break-inside: avoid;">
+                                        <td class="text-center">
+                                            <span t-esc="doc['rule']"/>
+                                        </td>
+                                        <t t-foreach="doc['rules']" t-as="rule">
+                                            <td class="text-center">
+                                                <t t-esc="'{0:,.2f}'.format(float(rule))"/>
+                                            </td>
+                                        </t>
+                                    </tr>
+                                </t>
+                            </div>
+                        </tbody>
+                    </table><br/><br/>
+                    <table dir="rtl" class="table table-condensed" border="1" style="width: 70%;margin: 0px auto;">
+                            <tr>
+                                <td>
+                                    إعداد
+                                </td>
+                                <td>
+                                    ................................................................................
+                                </td>
+                                <td>التاريخ</td>
+                                <td>
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime(' %H:%M   %d-%m-%Y')"/>   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> اعتماد </td>
+                                <td>................................................................................</td>
+                                <td> مراجعة </td>
+                                <td>................................................................................</td>
+                            </tr>
+                        </table>
+                </t>
+                <t t-if="docs==[]">
+                    <br/><br/><br/><br/>
+                    <div class="text-center"><h1>No Data</h1></div>
+                </t>
+            </t>
+        </t>
+        </template>
+</odoo>

@@ -1,0 +1,50 @@
+<odoo>
+
+    
+ 
+    <report id="en_experience_certificate_report1"
+            model="resignation.resignation"
+            string="Experience Certificate"
+            report_type="qweb-html"
+            name="kamil_hr_end_service.en_experience_certificate_view1"
+            paperformat="paperformat_a4_for_end_service"
+            groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_employment_department_group"
+        />
+
+    <template id="en_experience_certificate_view1">
+        <t t-foreach="docs" t-as="doc">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                
+                    <page style="page-break-inside: avoid;font-family:courier">
+                      <br/><br/><br/>
+                      <strong>
+                        <div class="text-left" style="font:600;">
+                            <p>Date: <span t-esc="context_timestamp(datetime.datetime.today()).strftime('%Y-%m-%d')"/>  </p>
+                            To Whom It May Concern.
+                        </div><br/><br/>
+                        <div class="text-center" style="font:800;">
+                            Experience Certificate
+                        </div><br/><br/><br/>
+                        <div class="text-left" style="font:600;line-height:25pt;">
+                            Mr./Ms. <span t-esc="doc.employee_id.name_eng"/> was employed with National Health Insurance Fund from <span t-esc="doc.employee_id.entry_date"/> to <span t-esc="doc.last_day_date"/>. During his/her tenure with us, he/she ably handled major responsibilities in ________________________. His/her major responsibilities included: 
+                            <br/>
+                            - ...............................<br/>
+                            - ...............................<br/>
+                            - ...............................<br/>
+                            - ...............................<br/>
+                            <newline/>
+                            We have found him/her to be a self starter who is motivated, duty bound, a highly committed team player with strong conceptual knowledge of ________________________.<br/>
+                            We wish him/her all success in his/her future endeavors.
+                        </div><br/><br/>
+                        <div class="text-left" style="font:600;">
+                            Manager- HRD  
+                            <br/><br/><br/>
+                        </div>
+                      </strong>
+                    </page>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

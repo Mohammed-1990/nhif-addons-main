@@ -1,0 +1,142 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_security
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200315\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-31 10:39+0000\n"
+"PO-Revision-Date: 2020-03-31 10:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_benefits_wages_section_group
+msgid "Benefits and fees section"
+msgstr "قسم الاجور والمزايا"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_benefits_wages_section_hq_group
+msgid "Benefits and fees section HQ"
+msgstr "قسم الاجور والمزايا - الرئاسة"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_branch_manager_group
+msgid "Branch Manager"
+msgstr "مدير الفرع"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_career_path_section_group
+msgid "Career path section"
+msgstr "قسم المسار الوظيفي"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_director_public_administration_group
+msgid "Director of public administration"
+msgstr "مدير اداره عامه"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_employee_group
+msgid "Employee"
+msgstr "موظف"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_employment_department_group
+msgid "Employment Department"
+msgstr "قسم التوظيف"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_employment_department_hq_group
+msgid "Employment Department HQ"
+msgstr "قسم التوظيف - الرئاسه"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_executive_office_group
+msgid "Executive Office"
+msgstr "المكتب التنفيذي/وحدات المدير"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_financial_group
+msgid "Financial and Administrative Affairs"
+msgstr "الشؤون المالية"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_general_manager_group
+msgid "General Manger"
+msgstr "المدير العام"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_head_department_group
+msgid "Head of the Department"
+msgstr "رئيس قسم"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_head_of_hr_dept_group
+msgid "Head of the Human Resources Department"
+msgstr "قسم الموارد البشرية"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_management_group
+msgid "Human Resource Management"
+msgstr "ادارة الموارد البشرية"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_development_and_training_group
+msgid "Human Resources Development and Training Department"
+msgstr "ادارة تنمية الموارد والتدريب"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_general_department_group
+msgid "Human Resources General Department"
+msgstr "الادارة العامة للموارد البشرية"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_internal_auditor_group
+msgid "Internal Auditor"
+msgstr "المراجع الداخلي"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_kamil_payroll
+msgid "Kamil Payroll"
+msgstr ""
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_sub_manager_group
+msgid "Sub-manager"
+msgstr "مدير ادارة فرعية"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_training_department_hq_group
+msgid "Training Department HQ"
+msgstr "قسم التدريب - الرئاسة"
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_training_department_group
+msgid "training department"
+msgstr "قسم التدريب"
+
+#. module: kamil_hr_security
+#: model:ir.module.category,name:kamil_hr_security.human_resources_category
+msgid "الموارد البشرية"
+msgstr ""
+
+#. module: kamil_hr_security
+#: model:ir.module.category,name:kamil_hr_security.human_resources_hq_category
+msgid "الموارد البشرية الرئاسه"
+msgstr ""
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_committee_of_loans_group
+msgid "لجنة السلفيات"
+msgstr ""
+
+#. module: kamil_hr_security
+#: model:res.groups,name:kamil_hr_security.hr_unions_group
+msgid "لجنة المشاريع"
+msgstr ""
+

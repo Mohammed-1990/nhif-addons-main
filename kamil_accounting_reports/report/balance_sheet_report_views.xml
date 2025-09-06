@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- balance sheet Report-->
+	<report 
+		id="balance_sheet_report"
+		model="wiz.balance.sheet"
+		string="Balance Sheet Report"
+		report_type="qweb-html"
+		name="kamil_accounting_reports.balance_sheet_template"
+	/>
+
+
+	<!-- balance sheet Template-->
+	<template id="balance_sheet_template">
+
+			<t t-call="web.html_container">
+			
+				<div class="page">
+				<div class="text-center">
+					<img t-if="company_id_logo" t-att-src="image_data_uri(company_id_logo)" class="img-fluid oe_slides_channel_thumbnail" alt="Logo"/>
+				</div>
+				<br/><br/>
+
+					<div dir="rtl" style="float:right;text-align:start;">
+						<a href="#" target="_blank">
+							<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-printer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 2H5a1 1 0 0 0-1 1v2H3V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h-1V3a1 1 0 0 0-1-1zm3 4H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v1H2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+								<path fill-rule="evenodd" d="M11 9H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM5 8a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5z"/>
+								<path d="M3 7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+							</svg>
+						</a>
+					</div>
+					<br/><br/>
+
+					<div class="text-center">
+						<strong>
+							<b>
+								<t t-if="date_to">
+									الميزانية العمومية في تاريخ  
+									<t t-esc="date_to"/>
+								</t>
+							</b>
+						</strong>
+						<br/><br/>
+					</div>
+
+					<div dir="rtl" style="float:right;text-align:start;">
+                        <strong>
+                        	<t t-if="len(selected_company_names) == 1">
+                        		الفرع :
+                        	</t>
+
+                        	<t t-if="len(selected_company_names) > 1">
+                        		الفروع :
+                        	</t>
+                        	<t t-foreach="selected_company_names" t-as="company_name">
+                        		<t t-esc="company_name"/>,
+                        	</t>
+                        </strong>
+                        <br/>
+                    </div>
+					<div class="table-responsive">
+					<table dir="rtl" border="1" class="text-right  table-bordered" style="float:right;text-align:start;">
+
+                    	<thead style="display: table-header-group;">
+                        	<tr style="page-break-inside: avoid;" class="table-active">
+                        		<td class="text-center fit" rowspan="2" style=" white-space: nowrap;width: 1%; padding:5px;"><b>البيان</b></td>
+                        		<td class="text-center fit" rowspan="2" style="font:300; white-space: nowrap;width: 1%; padding:5px;"><b> رقم الايضاح</b> </td>
+
+                    		
+                        		<td colspan="2" class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+                        			<div class="text-center">
+	                        			<b>
+											العام المالي  
+											<t t-esc="current_year"/>
+										</b>
+									</div>
+                        		</td>
+
+                        		<td colspan="2" class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+                        			<div class="text-center">
+	                        			<b>
+											العام المالي  
+											<t t-esc="last_year"/>
+										</b>
+									</div>
+                        		</td>
+                        	
+                        	
+                        	</tr>
+
+                        	<tr style="page-break-inside: avoid;" class="table-active text-center">
+                        		<td style="font:300; white-space: nowrap;width: 1%; padding:5px;"><b>جزئي</b></td>
+                        		<td style="font:300; white-space: nowrap;width: 1%; padding:5px;"><b>كلي</b></td>
+                        		<td style="font:300; white-space: nowrap;width: 1%; padding:5px;"><b>جزئي</b></td>
+                        		<td style="font:300; white-space: nowrap;width: 1%; padding:5px;"><b>كلي</b></td>
+                        	</tr>
+                        </thead>
+                    
+
+                        <tbody>
+
+                        	<t t-foreach="account_lines" t-as="account_line">
+
+                        		
+                        		<tr t-att-class="account_line['class']" style="page-break-inside: avoid;">
+
+
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">			
+										<div t-attf-style="margin-right: #{account_line['level']}px;">
+											<a data-toggle="collapse" t-attf-href="#col#{account_line['id']}" aria-expanded="false" style="float:right;text-align:start;">
+												<t class="text-center" t-esc="account_line['name']"/>
+											</a>
+										</div>
+										
+									</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;" class="text-center">
+										<t t-esc="account_line['clarification_number']"/>
+									</td>
+									
+									<t t-if="account_line['is_line'] == True">
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="account_line['current_account_balance']"/>
+										</td>
+										<td></td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="account_line['last_account_balance']"/>
+										</td>
+										<td></td>
+									</t>
+									<t t-if="account_line['is_line'] == False">
+										<td></td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="account_line['current_account_balance']"/>
+										</td>
+										<td></td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="account_line['last_account_balance']"/>
+										</td>
+									</t>
+								</tr>
+
+
+								<tr class="collapse out" t-attf-id="col#{account_line['id']}">
+									<t t-foreach="account_line['branches_balance_list']" t-as="branch_line">
+										<tr class="collapse out" t-attf-id="col#{account_line['id']}" >
+											<td colspan="2" style="font:300; white-space: nowrap;width: 1%; padding:5px;" class="text-center" >
+												<t t-esc="branch_line['branch_name']"/>
+											</td>
+
+											<t t-if="account_line['is_line'] == False">
+												<td></td> 
+											</t>
+
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="margin-right:50px;">
+													<t t-esc="branch_line['current_balance']"/>
+												</div>
+											</td>
+
+											<t t-if="account_line['is_line'] == False">
+												<td></td> 
+											</t>
+
+											<t t-if="account_line['is_line'] == True">
+												<td></td> 
+											</t>
+
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="margin-right:50px;">
+													<t t-esc="branch_line['last_balance']"/>
+												</div>
+											</td>
+
+											<t t-if="account_line['is_line'] == True">
+												<td></td> 
+											</t>
+
+										</tr>
+									</t>
+								</tr>
+
+
+
+
+                        		
+                        	</t>
+                        	
+                        </tbody>
+
+
+                    </table>
+                	</div>
+                   	
+                    <div dir="rtl" style="float:right;text-align:start;">
+	                    <br/><br/><br/>
+	                    <strong>
+	                    	التوقيعات
+	                    </strong>
+	                </div>
+
+                     
+                    <hr/>
+                    <hr/>
+                    <p></p>
+                    <table dir="rtl" border="1" class="text-right  table table-bordered" style="float:right;text-align:start;">
+						<tr class="table-active">
+							<td> المدير المالي </td>
+							<td> مدير الشؤون المالية والادارية </td>
+							<td> المدير العام/مدير الفرع </td>
+						</tr>
+
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+
+
+                </div>
+			</t>
+
+	</template>
+
+
+</odoo>

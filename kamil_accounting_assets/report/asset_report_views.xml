@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- Asset Report-->
+	<report 
+		id="asset_report"
+		model="wiz.account.asset.report"
+		string="Asset Report"
+		report_type="qweb-pdf"
+		name="kamil_accounting_assets.asset_report_template"
+	/>
+
+
+	<!-- Asset Report Template-->
+	<template id="asset_report_template">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="doc">
+                    <div class="page">
+
+						<div dir="rtl" style="float:right;text-align:start;">
+							<a href="#" target="_blank">
+								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-printer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 2H5a1 1 0 0 0-1 1v2H3V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h-1V3a1 1 0 0 0-1-1zm3 4H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v1H2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+									<path fill-rule="evenodd" d="M11 9H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM5 8a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5z"/>
+									<path d="M3 7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+								</svg>
+							</a>
+						</div>
+
+
+						<div class="header">
+							<h3 class="text-right">Asset</h3>				
+						</div>
+                        <table class="table table-bordered">
+                        	<thead style="display: table-header-group;">
+	                        	<tr>
+	                        		<th>No</th>
+	                        		<th>Name</th>
+	                        		<th>Balance 1/1</th>
+	                        		<th>Addition</th>
+	                        		<th>Exclusion</th>
+	                        		<th>Annual Depreciation Ratio</th>
+	                        		<th>Annual Depreciation Value</th>
+	                        		<th>Value</th>
+	                        	</tr>
+	                        </thead>
+	                        <tbody>
+	                        	<t t-foreach="docs" t-as="doc">
+		                        	<tr>
+		                        		<td>
+											<t t-esc="doc_index + 1"/>
+										</td>
+		                        		<td>
+		                                    <t t-esc="doc['name']"/>
+		                                </td>
+		                                <td>
+		                                    <t t-esc="doc['balance_1_1']"/>
+		                                </td>
+		                                <td>
+		                                    <t t-esc="doc['additions']"/>
+		                                </td>
+		                                <td>
+		                                    <t t-esc="doc['exclusion']"/>
+		                                </td>
+		                                <td>
+		                                    <t t-esc="doc['annual_dep_ratio']"/>
+		                                </td>
+		                                <td>
+		                                    <t t-esc="doc['annual_dep_value']"/>
+		                                </td>
+		                                <td>
+		                                    <t t-esc="doc['value']"/>
+		                                </td>
+		                        	</tr>
+		                        </t>
+	                        </tbody>
+                        </table>
+                    </div>
+                </t>    
+			</t>
+		</t>
+	</template>
+
+
+</odoo>

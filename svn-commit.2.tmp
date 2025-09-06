@@ -1,0 +1,11 @@
+
+--This line, and those below, will be ignored--
+
+M    kamil_inventory/__manifest__.py
+M    kamil_inventory/data/stock_picking_data.xml
+M    kamil_inventory/models/__init__.py
+M    kamil_inventory/models/adjustment.py
+M    kamil_inventory/models/committee.py
+M    kamil_inventory/models/need_request.py
+M    kamil_inventory/views/adjustment_views.xml
+M    kamil_inventory/views/need_request_views.xml

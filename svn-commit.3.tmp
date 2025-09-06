@@ -1,0 +1,13 @@
+
+--This line, and those below, will be ignored--
+
+M    kamil_accounting_base/models/base.py
+M    kamil_inventory/models/stock.py
+M    kamil_inventory/views/stock_views.xml
+A    kamil_inventory_accounting
+A    kamil_inventory_accounting/__init__.py
+A    kamil_inventory_accounting/__manifest__.py
+A    kamil_inventory_accounting/models
+A    kamil_inventory_accounting/models/__init__.py
+A    kamil_inventory_accounting/models/models.py
+A    kamil_inventory_accounting/views

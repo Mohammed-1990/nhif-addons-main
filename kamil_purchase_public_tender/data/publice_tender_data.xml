@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="seq_public_tenders" model="ir.sequence">
+			<field name="name">Public Tenders</field>
+			<field name="code">purchase.requisitioin.public.tenders</field>
+			<field name="prefix">PT-%(range_year)s-</field>
+			<field name="padding">4</field>
+			<field name="company_id" eval="1"/>
+		</record>
+
+		<record id="public_tender" model="general.conditions">
+			<field name="name">Public Tender</field>
+			<field name="type">public_tender</field>
+			<field name="general_conditions_lines" 
+				eval="[(5,0), 
+					(0, 0, {'name':'خلو طرف من الضرائب' }),
+					(0, 0, {'name':'إبراء زمة من  الذكاة'}),
+					(0, 0, {'name':'شهادة التسجيل' }),
+					(0, 0, {'name':'الدمغة القانونية' }),
+					(0, 0, {'name':'القيمة المضافة' }),
+					(0, 0, {'name':'الرقم التعريفي' }),
+					(0, 0, {'name':'مقدرة مالية' }),
+					(0, 0, {'name':'السيرة الذاتية' }),
+					(0, 0, {'name':'شهادة الرقم الضريبي' }),
+					(0, 0, {'name':'التأمين المبدئي' }),
+														
+					]"/>
+		</record>
+
+		<record id="seq_tender_book" model="ir.sequence">
+			<field name="name">Tender Book</field>
+			<field name="code">tender.book</field>
+			<field name="prefix">TB</field>
+			<field name="padding">4</field>
+			<field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        	<field eval="True" name="use_date_range"/>
+		</record>
+
+
+	</data>
+</odoo>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+	<!-- Action Purchase Order List-->
+	<act_window 
+		id="action_purchase_order_list"
+		name="Purchase Order"
+		res_model="purchase.order"
+		view_type="form"
+		view_mode="tree,form"
+		domain="[('rfq_id','=',active_id)]"
+		context="{'default_rfq_id':active_id}"
+		
+
+	/>
+
+	<!-- Action Purchase Order to so-->
+	<act_window 
+		id="action_purchase_order_to_so"
+		name="Purchase Order"
+		res_model="purchase.order"
+		view_type="form"
+		view_mode="form"
+		context="{'default_rfq_id':active_id,'default_partner_id':partner_id}"
+		
+
+	/>
+	
+	<!-- Form Purchase Request-->
+	<record id="view_purchase_rfq_form" model="ir.ui.view">
+		 <field name="name">purchase.rfq.form</field>
+		 <field name="model">purchase.rfq</field>
+		 <field name="arch" type="xml">
+		 	<form>
+		 		<header>
+		 			
+		 			<button 
+	 					name="action_purchase_order_to_so" 
+	 					type="object"
+	 					string="Create New Invoice"
+	 					attrs="{'invisible':['|',('type','in',('public_tender','limited_tender')),('state','not in',('purchase_department','bransh'
+	 						))]}" 
+	 					class="btn-primary" 
+	 				/>
+	 				<button 
+		 				name="action_confirm_pd" 
+		 				type="object" 
+		 				states="purchase_department,bransh" 
+		 				string="Confirm" 
+		 				class="btn-primary" 
+		 				groups="kamil_purchase_qualifiying_suppliers.group_purch_dept"
+		 			/>
+
+		 			<button 
+		 				name="action_cancel" 
+		 				type="object" 
+		 				string="Cancel" 
+		 				states="draft,dept_manager,manager_director,director_finance_admin,gen_man_appr,branch_manager,purchase_department"
+		 			/>
+		 			<field name="state" widget="statusbar" statusbar_visible="purchase_department"/>
+		 		</header>
+		 		<sheet>
+		 			<div class="oe_button_box" name="button_box">
+		 				<button 
+		 					name="%(action_purchase_order_list)d" 
+		 					type="action" 
+		 					class="oe_stat_button" 
+		 					icon="fa-list-alt"
+		 					states="purchase_department,bransh,done,cancel"
+		 					>
+		 					<field name="order_count" widget="statinfo" string="Invoices"/>
+		 				</button>
+		 			</div>
+		 			
+		 			<div class="oe_title">
+		 				<h3>
+							<label for="sequence" string="Request ID: "/>
+							<field name="sequence"/>
+						</h3>
+			 			<h1><field name="name" placeholder="Description ..." /></h1>
+			 		</div>
+			 	
+		 			<group >
+		 				<group>
+		 					<field name="user_id"/>
+			 				<field name="admin_id"/>
+			 				<field name="dept_id"/>
+			 				<field 
+			 					name="type" 
+			 					widget="radio" 
+			 					attrs="{'required':[('state','=','director_finance_admin_comm_decided')]}"
+			 					invisible="1"/>
+			 			</group>
+			 			<group>
+			 				<field name="ordering_date"/>
+			 				<field 
+			 					name="partner_id" 
+			 					attrs="{'invisible':['|',('state','!=','purchase_department'),('type','!=','direct_purchase')],'required':[('state','=','purchase_department'),('type','=','direct_purchase')]}"/>
+			 				
+			 				<field name="request_ids" widget="many2many_tags" readonly="1"/>
+
+		 				</group>	
+		 			</group>
+		 			<notebook>
+		 				<page string="product">
+	 						<button
+								name="%(kamil_purchase_public_tender.action_request_filter)d"
+								type="action"
+								string="Requests Collecting"
+								icon="fa-plus"
+								states="purchase_department"
+								class="btn-primary"
+							/>
+		 					<field name="line_ids">
+		 						<tree editable="bottom" create="0">
+		 							<field name="product_id"/>
+		 							<field name="product_uom_id"/>
+		 							<field name="product_qty"/>
+		 						</tree>
+		 					</field>
+		 				</page>
+
+		 			</notebook>
+		 		</sheet>
+		 		<div class="oe_chatter">
+	              <field name="message_follower_ids" widget="mail_followers"/>
+	              <field name="activity_ids" widget="mail_activity"/>
+	              <field name="message_ids" widget="mail_thread"/>
+	            </div>
+		 	</form>
+		 </field>
+	</record>
+
+	<!-- Tree Purchase rfq -->
+	<record id="view_purchase_rfq_tree" model="ir.ui.view">
+		<field name="name">purcahse.rfq.tree</field>
+		<field name="model">purchase.rfq</field>
+		<field name="arch" type="xml">
+			<tree 
+				decoration-muted="state == 'cancel'" 
+				decoration-danger="state == 'purchase_department'" 
+				string="Purchase rfq">
+				<field name="sequence"/>
+				<field name="name" string="Description"/>
+				<field name="user_id"/>
+				<field name="admin_id"/>
+				<field name="dept_id"/>
+				<field name="ordering_date"/>
+				<field name="company_id" />
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+
+	<!-- Search Purchase rfq -->
+	<record id="view_purchase_rfq_search" model="ir.ui.view">
+		<field name="name">purcahse.rfq.search</field>
+		<field name="model">purchase.rfq</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="sequence"/>
+				<field name="name"/>
+				<field name="admin_id" />
+				<field name="dept_id" />
+				<filter string="My Request" name="my_rfq" domain="[('user_id','=', uid)]"/>
+				<separator/>
+				<filter string="Draft" name="draft" domain="[('state','=','draft')]"/>
+				<filter string="Done" name="done" domain="[('state','=','done')]" /> 
+
+				<group string="Group By">
+					<filter string="Administrative" name="admin_id" domain="[]" context="{'group_by':'admin_id'}" />
+					<filter string="Department" name="dept_id" domain="[]" context="{'group_by':'dept_id'}"/>
+					<filter string="Requester" name="requester" domain="[]" context="{'group_by':'user_id'}"/>
+					<filter string="Status" name="state" domain="[]" context="{'group_by':'state'}"/>
+					<filter string="Date" name="Date" domain="[]" context="{'group_by':'ordering_date'}"/>
+				
+				</group>
+			</search>
+		</field>
+	</record>
+
+
+	<!-- Pivot Purchase rfq -->
+	<record id="view_purchase_rfq_pivot" model="ir.ui.view">
+		<field name="name">purcahse.rfq.tree</field>
+		<field name="model">purchase.rfq</field>
+		<field name="arch" type="xml">
+			<pivot>
+				<field name="name" type="row"/>
+			</pivot>
+		</field>
+	</record>
+
+
+	<!-- Action Purchase Request-->
+	<record id="action_purchase_rfq" model="ir.actions.act_window">
+		<field name="name">Purchase RFQ</field>
+		<field name="res_model">purchase.rfq</field>
+		<field name="view_type=">form</field>
+		<field name="view_mode">tree,form,pivot</field>
+		<field name="search_view_id" ref="view_purchase_rfq_search"/>
+		<field name="domain">[('type','=','request_for_quotaion')]</field>
+		<field name="context">{'default_type':'request_for_quotaion', 'search_default_my_rfq':1}</field>
+	</record>
+
+	<record id="action_direct_purchase" model="ir.actions.act_window">
+		<field name="name">Direct Purchase</field>
+		<field name="res_model">purchase.rfq</field>
+		<field name="view_type=">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_purchase_rfq_search"/>
+		<!-- <field name="domain">[('type','=','direct_purchase')]</field> -->
+		<field name="context">{'default_type':'direct_purchase','search_default_my_rfq':1}</field>
+
+	</record>
+
+
+ 	 <record id="purchase_rfq2" model="ir.actions.act_window">
+            <field name="name">Requests for Quotation invoice</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+            <!-- <field name="domain">[('type','=','request_for_quotaion')]</field> -->
+        </record>
+
+
+ 	 <record id="direct_purchase2" model="ir.actions.act_window">
+            <field name="name">Direct Purchase invoice</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+            <field name="domain">[('type','=','direct_purchase')]</field>
+        </record>
+
+
+	
+
+
+	<!-- Menu Purchse Request  Root-->
+	<menuitem id="menu_purchase_rfq_root" name="Purchse RFQ" parent="kamil_purchase_request.menu_purchase_process" sequence="1" />
+
+	<menuitem id="menu_purchase_rfq" parent="menu_purchase_rfq_root" sequence="1"  action="action_purchase_rfq"/>
+
+	<menuitem id="menu_rfq_invoice" parent="menu_purchase_rfq_root" sequence="2"  action="purchase_rfq2"/>
+
+
+
+	<menuitem id="menu_diect_purchase_root" name="Direct Purchse" parent="kamil_purchase_request.menu_purchase_process" sequence="2"/>
+
+	<menuitem id="menu_diect_purchase" name="Direct Purchse" parent="menu_diect_purchase_root" sequence="1"  action="action_direct_purchase"/>
+
+	<menuitem id="menu_direct_invoice" parent="menu_diect_purchase_root" sequence="2"  action="direct_purchase2"/>
+
+	<delete model="ir.ui.menu" id="purchase.menu_purchase_rfq"/>
+	<delete model="ir.ui.menu" id="purchase.menu_purchase_form_action"/>
+
+
+
+</odoo>

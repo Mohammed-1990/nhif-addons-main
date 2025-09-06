@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+	<report 
+		id="bank_transfer_report_for_partner"
+		model="ratification.payment"
+		string="Bank Transfer For Partner Report"
+		report_type="qweb-html"
+		name="kamil_accounting_financial_ratification.report_bank_trnasfer_for_partner_template"
+	/>
+
+
+	<template id="report_bank_trnasfer_for_partner_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+
+
+						<div dir="rtl" style="float:right;text-align:start;">
+							<a href="#" target="_blank">
+								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-printer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 2H5a1 1 0 0 0-1 1v2H3V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h-1V3a1 1 0 0 0-1-1zm3 4H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v1H2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+									<path fill-rule="evenodd" d="M11 9H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM5 8a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5z"/>
+									<path d="M3 7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+								</svg>
+							</a>
+						</div>
+						<br/><br/>
+							
+							
+						
+						<t t-if="o.payment_type == 'bank_transfer'">
+
+							<p class="text-right">
+								<strong style="float:right"> التاريخ </strong>
+								<span style="float:right;margin-right:20px" t-esc="o.date"></span>
+							</p>
+							<br/>
+							<p class="text-right">
+								<strong style="float:right"> السيد مدير  </strong>
+
+								<t t-if="o.journal_id.full_name">
+									<span style="float:right;margin-right:20px" t-esc="o.journal_id.full_name"></span>	
+								</t>
+								<t t-if="not o.journal_id.full_name">
+									<span style="float:right;margin-right:20px" t-esc="o.journal_id.name"></span>	
+								</t>
+							</p>
+							<br/>
+							<p class="text-center">
+								السلام عليكم ورحمة الله 
+							</p>
+
+							<br/>
+							<br/>
+							<p class="text-center">
+								<strong class="text-center">
+									<u>
+										الموضوع/تحويل من حسابنا طرفكم
+									</u>
+								</strong>
+							</p>
+
+							<div style="float:right;text-align:start;">
+								<strong style="float:right">
+								باﻹشارة للموضوع اعلاه نرجو شاكرين التكرم بتحويل مبلغ  <t t-esc="'{0:,.2f}'.format(float(o.net_amount))"/>   ( <t t-esc="o.net_amount_in_words"/> ) من حسابنا طرفكم بالرقم ( <t t-esc="o.account_number"/> ) الى الجهة المذكورة ادناه
+							
+								</strong>
+							</div>
+
+							<br/>
+							<br/>
+							<br/>
+
+
+						<t t-if="o.ratification_id.ratification_list_id.is_complex">
+							<table dir="rtl" border="1" class="text-right  table-bordered" style="float:right;text-align:start;">
+								<thead>
+									<tr style="page-break-inside: avoid;" class="table-active">
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">م.</td>
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">اسم المستفيد</td>
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">اسم البنك</td>
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">الفرع</td>
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">رقم الحساب</td>
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">المبلغ</td>
+									</tr>
+								</thead>
+								<tbody>
+
+									<t t-set="count" t-value="1"/>
+									<t t-set="total" t-value="0"/>
+
+
+									<t t-foreach="o.ratification_id.ratification_list_id.partners_net_ids" t-as="partner_line">
+										<tr style="page-break-inside: avoid;">
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+													<t t-esc="count"/>
+													<t t-set="count" t-value="count + 1"/>
+												</div>
+											</td>
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+													<t t-esc="partner_line.partner_id.name"/>
+												</div>
+											</td>
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+													<t t-esc="partner_line.partner_id.bank_name"/>
+												</div>
+											</td>
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+													<t t-esc="partner_line.partner_id.bank_branch_name"/>
+												</div>
+											</td>
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+													<t t-esc="partner_line.partner_id.account_number"/>
+												</div>
+											</td>
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+													<t t-esc="'{0:,.2f}'.format(float(partner_line.net_amount))"/> 
+													<t t-set="total" t-value="total + partner_line.net_amount"/>
+												</div>
+											</td>
+										</tr>
+									</t>
+									<tr class="table-active">
+										<td class="text-center" colspan="5">
+											<strong>
+												الإجمالي
+											</strong>
+										</td>
+										<td class="text-center">
+											<div style="float:right;text-align:start;">
+												<t t-esc="'{0:,.2f}'.format(float(total))"/>
+											</div> 
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</t>
+
+
+						<table dir="rtl" border="1" class="text-right  table-bordered" style="float:right;text-align:start;">
+							<thead>
+								<tr style="page-break-inside: avoid;" class="table-active">
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">م.</td>
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">اسم المستفيد</td>
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">اسم البنك</td>
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">الفرع</td>
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">رقم الحساب</td>
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">المبلغ</td>
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr style="page-break-inside: avoid;">
+									<td>
+										<div style="float:right;text-align:start;">
+										1
+										</div>
+									</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										<div style="float:right;text-align:start;">
+											<t t-esc="o.partner_id.name"/>
+										</div>
+									</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										<div style="float:right;text-align:start;">
+											<t t-esc="o.partner_id.bank_name"/>
+										</div>
+									</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										<div style="float:right;text-align:start;">
+											<t t-esc="o.partner_id.bank_branch_name"/>
+										</div>
+									</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										<div style="float:right;text-align:start;">
+											<t t-esc="o.partner_id.account_number"/>
+										</div>
+									</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										<div style="float:right;text-align:start;">
+											<t t-esc="'{0:,.2f}'.format(float(o.net_amount))"/> 
+										</div>cd
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					
+
+
+
+
+							<p class="text-right">
+								<strong style="float:right"> 
+									<t t-if="o.deduct_commission == 'account'">
+										مع مراعاة خصم العمولة من الحساب
+									</t>
+									<t t-if="o.deduct_commission == 'amount'">
+										مع مراعاة خصم العمولة من المبلغ
+									</t>
+									<br/>
+								</strong>
+							</p>
+							<br/>
+							
+
+							<div class="text-right" style="float:right;text-align:start;">
+								<br/>
+								<t t-esc="o.ratification_id.name"/>
+							</div>
+
+							<br/><br/><br/><br/>
+							<div>
+								<table class="text-right table table-condensed table-hover">
+									<tr>
+										<td>
+											<strong style="float:right"> توقيع اول </strong>
+											<span style="float:right;margin-right:20px">
+												................................................................................
+											</span>
+										</td>
+										<td>
+											<strong style="float:right"> توقيع ثاني </strong>
+											<span style="float:right;margin-right:20px">
+												................................................................................
+											</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+
+								
+
+
+						</t>
+
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+
+
+
+</odoo>
+
+
+

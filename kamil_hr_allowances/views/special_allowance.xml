@@ -1,0 +1,98 @@
+<odoo>
+  <data>
+ 
+
+    <record model="ir.ui.view" id="special_allowance_form_view">
+    <field name="name">Special Allowance</field>
+    <field name="model">special.allowance</field>
+    <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_submit" string="Send" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_confirm" string="Submit" type="object" class="btn btn-primary" states="benefits_wages" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_personnel_confirm" string="Confirm" type="object" class="btn btn-primary" states="personnel" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+              <button name="do_gd_confirm" string="Confirm" type="object" class="btn btn-primary" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <button name="do_ia_confirm" string="Approve" type="object" class="btn btn-primary" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+
+              <button name="do_return" string="Returnn" type="object" states="benefits_wages" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_return1" string="Return1" type="object" states="personnel" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+
+              <button name="do_return2" string="Return2" type="object" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+              <button name="do_return3" string="Return3" type="object" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+              
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+              <h1>
+                <field name="name" placeholder="Ex: Special Allowance for year 2020" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </h1>
+              <group col="4">
+                <field name="job_title_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="stamp" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="total"/>
+                <field name="net"/>
+              </group> 
+              <notebook>
+                  <page string="Details">
+                      <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                          <tree  editable="bottom">
+                              <field name="allowance"/>
+                              <field name="amount" sum="amount"/>
+                          </tree>
+                      </field>
+                  </page> 
+                  <page string="Notes">
+                    <div>
+                      <field name="notes"/>
+                    </div>
+                  </page>
+              </notebook>          
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+            </div> 
+          </form>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="special_allowance_tree_view">
+    <field name="name">special allowance</field>
+    <field name="model">special.allowance</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="name"/>
+              <field name="employee_id"/>
+              <field name="date"/>
+              <field name="total"/>
+              <field name="net"/>
+              <field name="state"/>
+          </tree>
+        </field>
+      </record>
+
+
+
+    <record  id="action_special_allowance" model="ir.actions.act_window">
+      <field name="name">Special Allowance</field>
+      <field name="res_model">special.allowance</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  
+
+    <menuitem name="Special Allowance" id="menu_special_allowance" action="action_special_allowance" parent="hr_allowance_main_menu" sequence="3" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+
+
+  </data>
+</odoo>

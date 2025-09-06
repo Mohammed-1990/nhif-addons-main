@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+	 <record model="ir.ui.view" id="view_contacts_form_inherit">
+        <field name="name">inherit contacts</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+        	  <xpath expr="//field[@name='name']" position="after">
+        	  	<field name="part" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
+            </xpath>
+        </field>
+    </record>
+</data>
+</odoo>

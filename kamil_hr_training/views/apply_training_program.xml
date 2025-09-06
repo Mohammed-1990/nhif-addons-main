@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+
+ 		<record id="action_apply_trainings" model="ir.actions.act_window">
+			<field name="name">Apply training programs</field>
+			<field name="res_model">apply.training</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record id="apply_training_program_form" model="ir.ui.view">
+			<field name="name">apply.training.program.form</field>
+			<field name="model">apply.training</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+			              <button name="do_send" string="Send" type="object" class="btn btn-primary" states="draft"/>
+			              <button name="do_approve" string="Approve" type="object" class="btn btn-primary" states="submitted" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+			              <button name="do_reject" string="Reject" type="object" states="submitted" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+			              <field name="state" widget="statusbar"/>
+		            </header>
+					<sheet>
+						<div name='button_box' class="oe_button_box" attrs="{'invisible':[('training_program','=',False)]}">
+			                <button name="open_training_program"
+		                        string="See the program"
+		                        type="object"  
+		                        class="oe_stat_button"
+		                        icon="fa-eye"
+		                        />
+		                    <button name="do_approve_program_terms" 
+		                    	string="Agree to the terms" 
+		                    	type="object" 
+		                    	class="oe_stat_button"
+		                    	icon="fa-check-square"
+		                    	/>
+		                </div>
+						<h1>
+							<field name="name"/>
+						</h1>
+		                <div>
+		                	<h2 attrs="{'invisible':[('approve_program_terms','=',False)]}" style="color:red;">
+		                		The terms of the training program have been approved
+		                	</h2><br/>
+		                </div>
+						<separator string="Training program Data" /><newline/><newline/>
+				        <group col="4">
+						    <field name="training_program" options="{'no_create':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+						    <field name="university_id" force_save="1" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+						    <field name="specialization" force_save="1" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+					    </group>
+						<separator string="Employee Data" /><newline/><newline/>
+						<group col="4" >
+							 <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+							 <field name="employee_id" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+							 <field name="name_eng" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+		                     <field name="mobile_phone" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                     <field name="work_email" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+							 <field name="marital" force_save="1"/>
+							 <field name="age" force_save="1"/>
+					    </group>
+	 					<separator string="Qualification" /><newline/><newline/>
+		 				<group col="4">
+			 				 <field name="university"  attrs="{'readonly':[('state','!=','draft')]}"/>
+							 <field name="graduation_date"  attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+	      				<separator string="Function Data" /><newline/><newline/>
+	     
+			         	<group col="4">
+				      	     <field name="appoiontment_type" force_save="1"/>
+							 <field name="appoiontment_date" force_save="1"/>
+							 <field name="functional_id" force_save="1" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+							 <field name="department_id" force_save="1" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+						</group>
+      					<separator string="Old training Data" /><newline/><newline/>
+			            <group col="4">
+			             	<field name="the_field" attrs="{'readonly':[('state','!=','draft')]}"/>
+						    <field name="special" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+				 
+						
+		                <field name="is_open_training_program" invisible="True" force_save="1"/>
+		                <field name="approve_program_terms" invisible="True" force_save="1"/>
+
+						<notebook>
+						 	<page string="Required Documents">
+					            <field name="doc_line_id" attrs="{'readonly':[('state','!=','draft')]}">
+								 	<tree editable="bottom" delete="0">
+					                    <field name="doc_name"  options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+					                   	<field name="doc" options="{'no_create':True,'no_open':True,'no_edit':True}" required="True"/>
+				                    </tree>
+				                </field>
+						 	</page>
+						</notebook>
+					</sheet>
+					
+				<div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="apply_training_program_tree_view">
+		    <field name="name">apply.training.program.tree</field>
+		    <field name="model">apply.training</field>
+		    <field name="arch" type="xml">
+		        <tree>
+		            <field name="training_program"/>
+		            <field name="employee_id"/>
+		            <field name="university_id"/>
+		            <field name="specialization"/>
+		            <field name="state"/>
+		        </tree>
+	        </field>
+	    </record>
+
+
+
+
+
+
+	    <menuitem name="Apply training programs"
+			id="apply_training"
+	     	parent="menu_long_training"
+	     	action="action_apply_trainings"
+	        sequence="2"
+			 	/>
+	</data>
+</odoo>					

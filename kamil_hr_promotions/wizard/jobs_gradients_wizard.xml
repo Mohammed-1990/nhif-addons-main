@@ -1,0 +1,41 @@
+<odoo>
+	<data>
+		<record id="jobs_gradients_wizard_form" model="ir.ui.view">
+			<field name='name'>Report jobs gradients</field>
+			<field name='model'>jobs.gradients.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+                        <group>
+                	        <group>
+                               <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                	        </group>
+                          </group>
+                         <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+       </record>
+
+
+
+
+
+    <record id="action_jobs_gradients_wizard" model="ir.actions.act_window">
+        <field name="name">Report jobs gradients</field>
+        <field name="res_model">jobs.gradients.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <menuitem name="Reports" id="promotions_reports_menu" parent="hr_promotions_main_menu" sequence="5" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_career_path_section_group,kamil_hr_security.hr_training_department_group"/>
+
+
+    <menuitem name="Jobs Gradients Report" id="menu_report_jobs_gradients" parent="promotions_reports_menu" action="action_jobs_gradients_wizard" sequence="2"/>
+
+	</data>
+</odoo>

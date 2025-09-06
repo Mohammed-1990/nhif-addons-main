@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- Payment Report-->
+	<report 
+		id="budget_month_report"
+		model="budget.month.wizard"
+		string="Budget Month Report"
+		report_type="qweb-pdf"
+		name="kamil_accounting_budget.budget_month_template"
+	/>
+
+
+	<!-- Payment Report Template-->
+	<template id="budgetmonth_template">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+					<div class="page">
+						<div class="header">
+							<h3 class="text-right">Payment</h3>				
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Budget Item</th>
+									<th>Planned Amount</th>
+									<th>January</th>
+									<th>February</th>
+									<th>March</th>
+									<th>April</th>
+									<th>May</th>
+									<th>June</th>
+									<th>July</th>
+									<th>August</th>
+									<th>September</th>
+									<th>October</th>
+									<th>November</th>
+									<th>December</th>
+									<th>percentage</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="docs" t-as="doc">
+									<tr>
+										<td>
+											<t t-esc="doc_index + 1"/>
+										</td>
+										<td>
+											<t t-esc="doc['analytic_account_id']"/>
+										</td>
+										<td>
+											<t t-esc="doc['planned_amount']"/>
+										</td>
+										<td>
+											<t t-esc="doc['month']"/>
+										</td>
+										<td>
+											<t t-esc="doc['percentage']"/>
+										</td>
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+			</t>
+		</t>
+	</template>
+
+
+</odoo>

@@ -1,0 +1,240 @@
+<odoo>
+	<data>
+			
+		<record id="bank_cash_balance_sheet_tree_view" model="ir.ui.view">
+			<field name="name">bank_cash_balance_sheet</field>
+			<field name="model">bank.cash.balance.sheet</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="month"/>
+					<field name="year"/>
+					<field name="total_revenues"/>
+					<field name="total_expenses"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="bank_cash_balance_sheet_form_view" model="ir.ui.view">
+			<field name="name">bank_cash_balance_sheet</field>
+			<field name="model">bank.cash.balance.sheet</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+
+						<button name="do_calculate" string="Calculate" type="object" states="draft" class="oe_highlight"/>
+						
+						<button name="do_save_changes" string="Save Changes" type="object" states="draft" class="oe_highlight"/>
+
+						<button name="do_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+
+						<button name="do_set_to_draft" string="Set to Draft" type="object"  states="confirm"/>
+						
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+
+						<field name="type" invisible="1"/>
+						<div dir="rtl" style="float:right; text-align:start;">
+							<h2>
+								<label for="name"/><br/>
+								<field name="name" attrs="{'readonly':[('state','not in',['draft'])]}" required="1" options="{'no_create':True}"/>
+							</h2>
+						</div>
+
+						<group>
+							<field name="operation_date" required="1" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+						</group>
+						<group col="4">
+							<field name="month" required="1" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+							<field name="year" required="1" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+						</group>
+
+						<hr/>
+						<group col="4" attrs="{'invisible':[('type','!=','bank')]}">
+							<field name="balance_according_to_bank_statement"  attrs="{'required':[('type','=','bank')],'readonly':[('state','not in',['draft'])] }" 
+								/>					
+							<field name="revenues_under_collection" readonly="1"/>
+							<field name="total" readonly="1"/>					
+						</group>
+
+						<hr/>
+
+						<group string="Other Additions or Subtractions">
+							<field name="addition_ids" nolabel="1">
+								<tree editable="bottom">
+									<field name="the_type" required="1"/>
+									<field name="amount" required="1"/>
+									<field name="name" required="1"/>
+								</tree>
+							</field>
+							<!-- <field name="other_revenues"/> -->
+							<!-- <field name="other_expenses"/> -->
+						</group>
+
+						<hr attrs="{'invisible':[('type','!=','bank')]}"/>
+						<group col="4" attrs="{'invisible':[('type','!=','bank')]}">
+							<field name="cheques_not_provided_for_exchange" readonly="1"/>
+							<field name="bank_balance" readonly="1"/>
+						</group>
+						<hr attrs="{'invisible':[('type','!=','bank')]}"/>
+						<group>
+							<field name="previous_balance_book" />
+							<field name="total_revenues" readonly="1"/>
+							<field name="total_expenses" readonly="1"/>
+							<field name="current_balance_book" readonly="1"/>
+						</group>
+						<notebook>
+
+							<page string="Moves In Current Month">
+								<field name="move_ids" attrs="{'readonly':[('state','not in',['draft'])]}">
+									<tree editable="bottom" create="0" delete="0" decoration-danger="is_more_than_6_month == 1">
+										<field name="date" readonly="1"/>
+										<field name="partner_id" string="الجهة" readonly="1"/>
+										<field name="document_number" readonly="1"/>
+										<field name="name" readonly="1" string="Description"/>
+										<field name="debit" sum="Debit" readonly="1"/>
+										<field name="credit" sum="Credit" readonly="1"/>
+										<field name="paid_off" string="تم الصرف / التحصيل" />
+										
+										<field name="canceled" string="Cancel" invisible="1"/>
+
+										<field name="is_more_than_6_month" invisible="1"/>
+
+										<field name="move_line_id"/>
+
+										<button type="object" name="do_cancel_entery" string="Cancel" icon="fa-remove"/>
+
+									</tree>
+								</field>
+							</page>
+							<page string="Previous Moves">
+
+								<div dir="rtl" style="float:right; text-align:start;">
+									<button name="do_show_all_moves" string="Show All Moves" type="object" class="oe_highlight" style="margin:5px;" />
+									<button name="do_hide_paid_off" string="Hide Paid Off" type="object" class="oe_highlight"/>
+								</div>
+								
+								<field name="previous_move_ids" attrs="{'readonly':[('state','not in',['draft'])]}">
+									<tree editable="bottom" create="0" delete="0" decoration-danger="is_more_than_6_month == 1">
+										<field name="date" readonly="1"/>
+										<field name="partner_id" string="الجهة" readonly="1"/>
+										<field name="document_number" readonly="1"/>
+										<field name="name" readonly="1" string="Description"/>
+										<field name="debit" sum="Debit" readonly="1"/>
+										<field name="credit" sum="Credit" readonly="1"/>
+										<field name="paid_off" string="تم الصرف / التحصيل" />
+										
+										<field name="canceled" string="Cancel" invisible="1"/>
+
+										<field name="is_more_than_6_month" invisible="1"/>
+
+										<button type="object" name="do_cancel_entery" string="Cancel" icon="fa-remove"/>
+
+									</tree>
+								</field>
+							</page>
+
+
+						</notebook>
+					</sheet>
+						
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+
+				</form>		
+			</field>
+		</record>
+		
+
+
+		<record id="cancel_entert_form_view" model="ir.ui.view">
+			<field name="name">cancel Entery</field>
+			<field name="model">account.move.cancel</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="operation_type"  widget="radio" options="{'horizontal': true}" required="1" />
+							<field name="date" required="1"/>
+						</group>
+						<group>
+							<field name="account_id" options="{'no_create':'1'}" attrs="{'invisible':[('operation_type','!=','add_liability')],'required':[('operation_type','=','add_liability')]}" domain="[('is_group','=','sub_account'),('code','=ilike','4%')]"/>
+							<field name="description" attrs="{'invisible':[('operation_type','!=','add_liability')],'required':[('operation_type','=','add_liability')]}"  />
+						</group>
+						<footer>
+							<button name='do_execute_cancel_move' string='Execute' type='object' class="oe_highlight"/>
+							<button string="Cancel" special="cancel"/>
+						</footer>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_bank_cash_balance_sheet" model="ir.actions.act_window">
+			<field name="name">Bank/Cash Balance Sheet</field>
+			<field name="res_model">bank.cash.balance.sheet</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="bank_cash_balance_sheet_menu" name="Bank/Sheet Balance Sheet" parent="kamil_accounting_base.accounting_operations_menu" action="action_bank_cash_balance_sheet" sequence="2" groups="kamil_accounting_base.bank_cash_balance_sheet_manager_group"/>
+
+
+
+
+		<record id="account_move_form" model="ir.ui.view">
+			<field name="name">Account Move Form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form"/>
+			<field name="arch" type="xml">
+				
+				<xpath expr="//notebook/page[1]/field/tree/field[@name='credit']" position="after">
+					<field name="document_number"/>
+				</xpath>
+				<xpath expr="//notebook/page[1]/field/tree/field[@name='tax_ids']" position="replace">
+				</xpath>
+			
+			</field>
+		</record>
+
+
+<!--		<record id="account_move_line_tree" model="ir.ui.view">-->
+<!--			<field name="name">Account Move Line Tree</field>-->
+<!--			<field name="model">account.move.line</field>-->
+<!--			<field name="inherit_id" ref="account.view_move_line_tree"/>-->
+<!--			<field name="arch" type="xml">-->
+<!--				-->
+<!--				<field name="credit" position="after">-->
+<!--					<field name="document_number"/>-->
+<!--					<field name="diffrence"/>-->
+<!--	            	<field name="sec_diffrence"/>-->
+<!--				</field>-->
+
+<!--			</field>-->
+<!--		</record>-->
+
+		
+
+		<record id="account_move_line_form" model="ir.ui.view">
+			<field name="name">Account Move Line Form</field>
+			<field name="model">account.move.line</field>
+			<field name="inherit_id" ref="account.view_move_line_form"/>
+			<field name="arch" type="xml">
+				<field name="quantity" position="after">
+					<field name="paid_off" string="Is it Paid Off" readonly="1"/>
+					<field name="diffrence"/>
+	            	<field name="sec_diffrence"/>
+				</field>
+			</field>
+		</record>
+		
+
+
+
+
+	</data>
+</odoo>

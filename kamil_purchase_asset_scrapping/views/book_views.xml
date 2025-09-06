@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Tender book-->
+	<record id="view_tender_book_form_inherit" model="ir.ui.view">
+		<field name="name">tender.book.form.inherit</field>
+		<field name="model">tender.book</field>
+		<field name="inherit_id"  ref="kamil_purchase_qualifiying_suppliers.view_tender_book_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//group[2]" position="after">
+				<group>
+					<field name="scrap_id" attrs="{'invisible':[('scrap_id','=',False)]}" readdonly="1"/>
+				</group>
+			</xpath>
+			<xpath expr="//page[1]" position="before">
+				<page string="Assets" attrs="{'invisible':[('scrap_id','=',False)]}">
+					<field name="asset_line_ids">
+						<tree editable="bottom">
+							<field name="asset_id"/>
+						</tree>
+					</field>
+				</page>
+			</xpath>
+			<xpath expr="//button[@name='print_visit_template']" position="after">
+				<button 
+					name="action_confirm" 
+					type="object"
+					string="Confirm"
+					attrs="{'invisible':['|',('state','!=','confirm'),('scrap_id','=',False)]}"
+					class="btn-primary"
+					/>
+				<button 
+					name="action_cancel" 
+					type="object"
+					string="Cancel"
+					attrs="{'invisible':['|',('state','!=','confirm'),('scrap_id','=',False)]}"
+				/>
+			</xpath>
+		</field>
+	</record>
+
+	<!-- Action Tender Book -->
+	<act_window
+		id="action_scrap_tender_book"
+		name="Tender Book"
+		res_model="tender.book"
+		view_type="form"
+		view_mode="tree,form"
+		domain="[('scrap_id','!=',False)]"
+
+	/>
+
+
+
+	<!-- Menu Scrap Request -->
+<!-- 	<menuitem id="menu_book_scrap_request" parent="menu_scrap_request_root" sequence="2" action="action_scrap_tender_book"/>
+ -->
+
+</odoo>

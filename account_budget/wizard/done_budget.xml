@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="done_budget_form_view" model="ir.ui.view">
+            <field name="name">done_budget.form</field>
+            <field name="model">done.budget</field>
+            <field name="arch" type="xml">
+                <form string="Done Budget">
+                    <sheet>
+                        <div class="oe_title">
+                            <h4>Are you sure you want to close</h4>
+                            <label for="budget"/>
+                            <h1>
+                                <field name="budget" placeholder="Title"/>
+                            </h1>
+                        </div>
+
+                    </sheet>
+                    <footer>
+                        <button name="close_budget" type="object" string="Done" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_done_budget_wizards" model="ir.actions.act_window">
+            <field name="name">Done Budget</field>
+            <field name="res_model">done.budget</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+<!--        <menuitem name="ModelTitle" id="ModelName_menu" parent="your_root_menu" action="ModelName_act_window"/>-->
+
+    </data>
+</odoo>

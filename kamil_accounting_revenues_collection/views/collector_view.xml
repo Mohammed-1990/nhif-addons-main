@@ -1,0 +1,40 @@
+<odoo>
+	<data>
+			
+		<record id="collector_view" model="ir.ui.view">
+			<field name="name">Collector From</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_form"/>
+			<field name="arch" type="xml">
+				<notebook position="inside">
+					<page string="Collector Information">
+						<group>	
+							<field name="is_collector"/>
+							<field name="collector_account_id" attrs="{'required':[('is_collector','=',True)]}" options="{'no_create':True}"/>
+						</group>
+					</page>
+				</notebook>
+				<field name="user_id" position="attributes">
+					<attribute name="attrs">
+						{'required':[('is_collector','=',True)]}
+					</attribute>
+				</field>
+			</field>
+		</record>
+
+		<record id="action_collector" model="ir.actions.act_window">
+			<field name="name">Collectors</field>
+			<field name="res_model">hr.employee</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="domain">[('is_collector','=',True)]</field>
+			<field name="context">{'default_is_collector':True}</field>
+		</record>
+
+		<menuitem id="collector_menu" parent="kamil_accounting_revenues_collection.revenues_collection_main_menu" name="Collectors" action="action_collector" sequence="30"/>
+
+	</data>
+</odoo>
+
+
+
+

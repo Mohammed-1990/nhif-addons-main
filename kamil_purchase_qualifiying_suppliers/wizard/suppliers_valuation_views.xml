@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Form Suppliers Valuation -->
+	<record id="view_suppliers_valuation_form" model="ir.ui.view">
+		<field name="name">suppliers.valuation.form</field>
+		<field name="model">suppliers.valuation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="area_ids" widget="many2many_tags" options="{'no_create':'1'}"/>
+					</group>
+					<button 
+						name="filter_area" 
+						string="Filter by Area"  
+						type="object"
+						class="btn-primary" 
+						/>
+					<!-- <separator string="Valuation"/> -->
+					<field name="book_ids">
+						<tree create="0">
+							<field name="book_id"/>
+							<field name="partner_id"/>
+							<field name="area_rehab_ids" widget="many2many_tags"/>
+							<field name="general_conditions_selection"/>
+							<field name="visit_result"/>
+							<field name="state"/>
+							<field name="move_check" widget="deprec_lines_toggler" />
+                            <field name="move_posted_check" invisible="1"/>
+						</tree>
+						<form>
+							<sheet>
+								<group col="4">
+									<field name="book_id"/>
+									<field name="partner_id"/>
+									<field name="area_rehab_ids" widget="many2many_tags"/>
+									<field name="general_conditions_selection"/>
+									<field name="visit_result"/>
+									<field name="state"/>
+								</group>
+							</sheet>
+						</form>
+					</field>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<!-- Action Suppliers Valuation-->
+	<act_window
+		id="action_suppliers_valuation"
+		name="Suppliers Valuation"
+		res_model="suppliers.valuation"
+		view_mode="form"
+		target="current"
+	/>
+</odoo>

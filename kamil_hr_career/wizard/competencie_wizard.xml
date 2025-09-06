@@ -1,0 +1,52 @@
+<odoo>
+	<data>
+		<record id="competencie_wizard_form" model="ir.ui.view">
+			<field name='name'>Report competencie</field>
+			<field name='model'>competencie.wizard.career</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+            	 <group col="4">
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                  </group>
+                  <group  col="4">
+                  <field name="employee_ids" widget="many2many_tags" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                    <field name="unit_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+            	  </group>
+
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+       </record>
+
+
+
+
+
+    <record id="action_competencie_wizard" model="ir.actions.act_window">
+        <field name="name">Competencie report</field>
+        <field name="res_model">competencie.wizard.career</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <menuitem name="Reports" 
+              id="competencie_reports_menu" 
+              parent="merit_main_menu" 
+              sequence="3"
+              groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_career_path_section_group,kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_director_public_administration_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_sub_manager_group,kamil_hr_security.hr_head_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_development_and_training_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+
+    <menuitem name="Competencie report" 
+              id="menu_competencie" 
+              parent="competencie_reports_menu" 
+              action="action_competencie_wizard"/>
+
+	</data>
+</odoo>

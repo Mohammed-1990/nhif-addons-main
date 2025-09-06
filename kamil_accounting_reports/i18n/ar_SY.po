@@ -1,0 +1,2613 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-10 11:35+0000\n"
+"PO-Revision-Date: 2021-05-10 11:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+msgid "<b>\n"
+"										الرصيد الحالي\n"
+"									</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+msgid "<b>\n"
+"									تقرير المصروفات تفصيلي تجميعي\n"
+"								</b>\n"
+"								<br/>\n"
+"								للفترة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+msgid "<b>\n"
+"									نموذج تحليل مفردات المصروفات\n"
+"								</b>\n"
+"								<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+msgid "<b>\n"
+"									نموذج دفتر يومية المصروفات\n"
+"								</b>\n"
+"								<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+msgid "<b>\n"
+"		                        			الجملة\n"
+"		                        		</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+msgid "<b>\n"
+"	                        			الجملة\n"
+"	                        		</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "<b> الإجمالي </b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b> الجهة </b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b> الرصيد الافتتاحي </b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "<b> رقم الايضاح</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "<b>Revenues Budget</b>"
+msgstr "تقرير الايرادات لفترة محددة"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "<b>Total</b>"
+msgstr "الاجمالي"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b>إسم الحساب </b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b>إسم المجموعة \n"
+"							</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "<b>الإجمالي</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "<b>الاجمالي</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "<b>البيان</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b>الربط المقدر </b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b>الرصيد</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b>المبلغ المصدق </b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+msgid "<b>تقرير الايرادات تفصيلي تجميعي</b>\n"
+"							<br/>\n"
+"							للفترة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+msgid "<b>تقرير الدفعيات</b>\n"
+"								<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+msgid "<b>تقرير اليومية العامة</b>\n"
+"							<br/>\n"
+"							للفترة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+msgid "<b>تقرير قائمة قيود التسوية</b>\n"
+"							<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "<b>تقرير مقارنة الايرادات خلال فترات مختلفة</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+msgid "<b>تقرير مقارنة المصروفات خلال فترات مختلفة</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "<b>جزئي</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "<b>حساب التشغيل</b>\n"
+"							<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "<b>صافي المدة</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "<b>كلي</b>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "<b>ميزان المراجعة بالارصدة </b>\n"
+"											<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "<b>ميزان المراجعة بالمجاميع</b>\n"
+"										<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+msgid "<b>نموذج تحليل مفردات الايرادات</b>\n"
+"							<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+msgid "<b>نموذج دفتر يومية الايرادات</b>\n"
+"							<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+msgid "<br/>\n"
+"							الفترة السابقة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "<br/>\n"
+"						الفترة السابقة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "<br/>\n"
+"                            إسم الحساب :"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "<br/>\n"
+"                            إسم المجموعة :"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "<br/><br/><br/>\n"
+"	                    <strong>\n"
+"	                    	التوقيعات\n"
+"	                    </strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.accounting_dashboard_inherit
+msgid "<span title=\"Balance\">Balance</span>"
+msgstr "<span title=\"Balance\">الرصيد</span>"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+msgid "<strong style=\"float:right\">\n"
+"											الرصيد الافتتاحي\n"
+"										</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "<strong>\n"
+"												الإجمالي\n"
+"											</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+msgid "<strong>\n"
+"										الإجمالي\n"
+"									</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+msgid "<strong>\n"
+"										الاجمالي\n"
+"									</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+msgid "<strong>\n"
+"										الربط المقدر\n"
+"									</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+msgid "<strong>\n"
+"										الصرف الفعلي\n"
+"									</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+msgid "<strong>\n"
+"										المتحصل الفعلي\n"
+"									</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+msgid "<strong>\n"
+"										المصدق\n"
+"									</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+msgid "<strong>\n"
+"										النسبة\n"
+"									</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+msgid "<strong>\n"
+"									الاجمالي\n"
+"								</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "<strong>\n"
+"							<b>‫\n"
+"								تقرير مقارنة المصروفات بين الفترات للفروع والمركز\n"
+"							</b>\n"
+"						</strong>			\n"
+"						<br/>\n"
+"						الفترة الحالية من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+msgid "<strong>\n"
+"							الاجمالي\n"
+"						</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "<strong>\n"
+"	                        			الإجمالي\n"
+"	                        		</strong>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_account_account
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__account_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_reports
+#: selection:account.statement.wizard,type:0
+msgid "Account Group"
+msgstr "كشف مجموعة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_account_move
+#: model:ir.actions.report,name:kamil_accounting_reports.account_move_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_account_move
+msgid "Account Move Report"
+msgstr "تقرير قائمة قيود التسوية لفترة "
+
+#. module: kamil_accounting_reports
+#: selection:account.statement.wizard,type:0
+#: selection:consolidated.group.statement.wizard,report_type:0
+msgid "Account Statement"
+msgstr "كشف حساب"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.account_statement_report
+msgid "Account Statement Report"
+msgstr "تقرير كشف حساب"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_account_move_line
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_account_move_line_graph
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_account_move_line_pivot
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_revenues_budget_graph
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_revenues_budget_pivot
+msgid "Account Statment Analysis"
+msgstr "تحليل كشف الحساب"
+
+#. module: kamil_accounting_reports
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_account_move_line
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_account_statement_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_account_statement_report_for_ratifications
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_payment_account_statement_report
+msgid "Account/Group Statement"
+msgstr "كشف حساب/مجموعة"
+
+#. module: kamil_accounting_reports
+#. openerp-web
+#: code:addons/kamil_accounting_reports/static/src/js/account_reports.js:487
+#, python-format
+msgid "Add a note"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "Annual"
+msgstr "سنوي"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__is_approved
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_balance_sheet
+#: model:ir.actions.report,name:kamil_accounting_reports.balance_sheet_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_balance_sheet
+msgid "Balance Sheet Report"
+msgstr "تقرير الميزانية العمومية"
+
+#. module: kamil_accounting_reports
+#: selection:wiz.trial.balance,type:0
+msgid "Balances"
+msgstr "بالارصدة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__bank_id
+msgid "Bank Selected"
+msgstr "إختر البنك"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_bank_statement_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_bank_statement_report
+msgid "Bank Statement Report"
+msgstr "كشف حساب البنك"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__budget_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__budget_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__budget_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__budget_id
+msgid "Budget"
+msgstr "الموازنة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__budget_item_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Budget Item"
+msgstr "البند"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__budget_item_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__budget_item_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__budget_item_ids
+msgid "Budget Items"
+msgstr "البند"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_budget_monthly
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_budget_monthly
+msgid "Budget Monthly Report"
+msgstr "تقرير الموازنة بالشهور"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.budget_monthly_report
+msgid "Budget Monthy Report"
+msgstr "تقرير الموازنة بالشهور"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__budget_ids
+msgid "Budget items"
+msgstr "البنود"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__budget_ids
+msgid "Budgets"
+msgstr "الموازنة"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_trial_balance_form
+msgid "By Date"
+msgstr "بتاريخ"
+
+#. module: kamil_accounting_reports
+#: selection:wiz.trial.balance,type:0
+msgid "By Totals"
+msgstr "بالمجاميع"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_account_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.record_account_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_expenses_period_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_specified_period_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_compaies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_rcompare_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_detailed_expenses_synthesis_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_detailed_revenues_synthesis_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_payment_wiz_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_list_wiz_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_wiz_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_rcompare_compare_compaies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_revenues_budget_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_account_move_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_balance_sheet_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_bank_statement_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_budget_monthly_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_clarifications_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_expenses_analysis_subgroups_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_expenses_journal_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_general_journal_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_profit_loss_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_revenues_analysis_subgroups_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_revenues_journal_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_trial_balance_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__group_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__group_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_account_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.record_account_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_expenses_period_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_specified_period_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_rcompare_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_expenses_journal_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_revenues_journal_form
+msgid "Choose Account/Group"
+msgstr "اختر الحساب/المجموعة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__clarification_number
+msgid "Clarification Number"
+msgstr "رقم الإيضاح"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_clarifications
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_clarifications
+msgid "Clarifications"
+msgstr "الإيـضــاحات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.clarifications_report
+msgid "Clarifications Report"
+msgstr "تقرير الإيضاحات"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_res_company
+msgid "Companies"
+msgstr "المؤسسات"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_compare_companies_wizard
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_compare_companies
+msgid "Compare Companies Revenues"
+msgstr "مقارنة الايرادات بين الفترات للفروع والمركز"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.compare_companies_report
+msgid "Compare Companies Revenues Report"
+msgstr "تقرير مقارنة الايرادات بين الفترات للفروع والمركز"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_compare_expenses_wizard
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_compare_expenses
+msgid "Compare Expenses"
+msgstr "مقارنة المصروفات لفترات مختلفة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.compare_expense_report
+msgid "Compare Expenses Report"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_compare_revenues_wizard
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_compare_revenues
+msgid "Compare Revenues"
+msgstr "مقارنة الايرادات لفترات مختلفة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.compare_revenues_report
+msgid "Compare Revenues Report"
+msgstr "تقرير مقارنة الايرادات لفترات مختلفة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.consolidated_account_statement_report
+msgid "Consolidated Account Statement"
+msgstr "كشف حساب تجميعي"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_group_statement_wizard
+#: model:ir.actions.report,name:kamil_accounting_reports.consolidated_group_statement_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_consolidated_group_statement
+msgid "Consolidated Group Statement"
+msgstr "كشف مجموعة تجميعي"
+
+#. module: kamil_accounting_reports
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_consolidated_reports
+msgid "Consolidated Reports"
+msgstr "التقارير التجميعية"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_compaies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_rcompare_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_rcompare_compare_compaies_wizard_form
+msgid "Current Perid"
+msgstr "الفترة الحالية"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_accounting_reports
+#. openerp-web
+#: code:addons/kamil_accounting_reports/static/src/js/account_reports.js:339
+#: code:addons/kamil_accounting_reports/static/src/js/account_reports.js:389
+#, python-format
+msgid "Date cannot be empty"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__date_to
+msgid "Deadline Date"
+msgstr "التاريخ النهائي للمناقصه"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_detailed_expenses_synthesis_wizard
+#: model:ir.actions.report,name:kamil_accounting_reports.detail_exp_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_detailed_expenses_synthesis_wizard
+msgid "Detailed Expenses Synthesis Report"
+msgstr "تقرير المصروفات تفصيلي تجميعي"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_detailed_revenues_synthesis_wizard
+#: model:ir.actions.report,name:kamil_accounting_reports.detail_rev_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_detailed_revenues_synthesis_wizard
+msgid "Detailed Revenues Synthesis Report"
+msgstr "تقرير الايرادات تفصيلي تجميعي"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_account_move_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_balance_sheet_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_bank_statement_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_budget_monthly_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_clarifications_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_companies_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_exp_comp_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_expenses_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_revenues_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_consolidated_a_stm_temp__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_consolidated_g_stm_temp__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_detail_exp_temp__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_detail_rev_temp__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_exp_analysis_sub_temp__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_expenses_journal_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_expenses_period_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_general_journal_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_payment_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_profit_loss_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_ratification_list_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_ratification_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_rev_analysis_sub_temp__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_budget_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_journal_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_period_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_statement_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_trial_balance_tempate__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__is_draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__is_executed
+msgid "Executed"
+msgstr "قيد التنفيذ"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.expenses_specified_period_report
+msgid "Expense Specified Period Report"
+msgstr "تقرير المصروفات خلال فترة محددة"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_expenses_budget_search
+msgid "Expenses"
+msgstr "المصروفات"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__expenses_account_ids
+msgid "Expenses Account"
+msgstr "حساب/مجموعة المصروفات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_expenses_analysis_subgroups
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_expenses_analysis_subgroups
+msgid "Expenses Analysis Subgroups Report"
+msgstr "تحليل مفردات المصروفات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.exp_analysis_sub_report
+msgid "Expenses Analysis subgroups Report"
+msgstr "تحليل مفردات المصروفات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_expenses_budget
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_expenses_budget
+msgid "Expenses Budget"
+msgstr "موازنة المصروفات"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_expenses_budget_graph
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_expenses_budget_pivot
+msgid "Expenses Budget Analysis"
+msgstr "تحليل موازنة المصروفات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_expenses_journal
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_expenses_journal
+msgid "Expenses Journa Report"
+msgstr "دفتر يومية المصروفات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.expenses_journal_report
+msgid "Expenses Journal Report"
+msgstr "دفتر يومية المصروفات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_expenses_specified_period_wizard
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_expenses_specified_period_wizard
+msgid "Expenses Specified Period"
+msgstr "تقرير المصروفات خلال فترة محددة"
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "First Quarter"
+msgstr "الربع الاول"
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "Fourth Quarter"
+msgstr "الربع الرابع"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__date_from1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__date_from2
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__date_from1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__date_from2
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__date_from1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__date_from2
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__date_from1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__date_from2
+msgid "From"
+msgstr "مِن"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_general_journal
+#: model:ir.actions.report,name:kamil_accounting_reports.general_journal_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_general_journal
+msgid "General Journal Report"
+msgstr "تقرير اليومية العامة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__account_id
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_accounting_reports
+#: selection:account.statement.wizard,report_type:0
+msgid "Group By Account"
+msgstr "تجميع بالبنود"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__is_group_by_partners
+msgid "Group By Partners"
+msgstr "عرض بالجهات"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_account__group_by_partners_in_reports
+msgid "Group By Partners In Reports"
+msgstr "تجميع بالجهات في التقارير"
+
+#. module: kamil_accounting_reports
+#: selection:consolidated.group.statement.wizard,report_type:0
+msgid "Group Statement"
+msgstr "كشف مجموعة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__group_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__group_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__group_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__group_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__group_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__group_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__group_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__group_id
+msgid "Groups"
+msgstr "المجموعات"
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "Half Year First"
+msgstr "نصف السنة الاول"
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "Half Year Second"
+msgstr "نصف السنة الثاني"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_account_move_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_balance_sheet_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_bank_statement_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_budget_monthly_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_clarifications_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_companies_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_exp_comp_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_expenses_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_revenues_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_consolidated_a_stm_temp__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_consolidated_g_stm_temp__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_detail_exp_temp__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_detail_rev_temp__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_exp_analysis_sub_temp__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_expenses_journal_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_expenses_period_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_general_journal_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_payment_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_profit_loss_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_ratification_list_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_ratification_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_rev_analysis_sub_temp__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_budget_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_journal_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_period_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_statement_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_trial_balance_tempate__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__is_canceled
+msgid "Is Cancel"
+msgstr "ملغي"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_account__is_inventory_account
+msgid "Is Inventory Account"
+msgstr "هل هو حساب مخزن"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__account_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "Item"
+msgstr "البند"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_account_move_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_balance_sheet_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_bank_statement_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_budget_monthly_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_clarifications_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_companies_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_exp_comp_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_expenses_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_compare_revenues_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_consolidated_a_stm_temp____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_consolidated_g_stm_temp____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_detail_exp_temp____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_detail_rev_temp____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_exp_analysis_sub_temp____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_expenses_journal_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_expenses_period_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_general_journal_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_payment_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_profit_loss_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_ratification_list_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_ratification_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_rev_analysis_sub_temp____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_budget_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_journal_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_revenues_period_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_statement_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_report_kamil_accounting_reports_trial_balance_tempate____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_compaies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_rcompare_compare_compaies_wizard_form
+msgid "Last Perid"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_account_move__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_clarifications__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_analysis_subgroups__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_expenses_journal__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_general_journal__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_analysis_subgroups__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_revenues_journal__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_bank_statement_report__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_budget_monthly_report__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "Monthly"
+msgstr "شهري"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "No"
+msgstr "م"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_res_company__account_opening_move_id
+msgid "Opening Journal Entry"
+msgstr "قيد اليومية الافتتاحي"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__date_from
+msgid "Ordering Date"
+msgstr "تاريخ الطلب"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__is_paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: kamil_accounting_reports
+#. openerp-web
+#: code:addons/kamil_accounting_reports/static/src/js/account_reports.js:414
+#, python-format
+msgid "Partners"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__is_payment_confirmed
+msgid "Payment Confirmed"
+msgstr "تم تاكيد الدفعية"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__is_payment_created
+msgid "Payment Created"
+msgstr "تم تحرير الدفعية"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__partner_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_payment_report__partner_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_list_report__partner_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wizard_ratification_report__partner_ids
+msgid "Payment For"
+msgstr "المدفوع له"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_payment_report
+#: model:ir.actions.report,name:kamil_accounting_reports.bank_statement_report
+#: model:ir.actions.report,name:kamil_accounting_reports.payment_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_payment_report
+msgid "Payment Report"
+msgstr "تقرير الدفعيات"
+
+#. module: kamil_accounting_reports
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_payment_root
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: kamil_accounting_reports
+#: selection:account.statement.wizard,report_type:0
+msgid "Per Partner"
+msgstr "عرض بالجهات"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__percentage
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__planned_amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "Planned Amount"
+msgstr "المبلغ المخطط"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__practical_amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "Practical Amount"
+msgstr "المبلغ الفعلى"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_rcompare_revenues_wizard_form
+msgid "Previous Perid"
+msgstr "الفترة السابقة"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_account_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.record_account_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_expenses_period_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_specified_period_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_compaies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_expenses_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_compare_rcompare_revenues_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_rcompare_compare_compaies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_revenues_budget_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_profit_loss
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_profit_loss
+msgid "Profit Loss Report"
+msgstr "تقرير حساب التشغيل"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.profit_loss_report
+msgid "Profit loss Report"
+msgstr "تقرير حساب التشغيل"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Ratification"
+msgstr "التصديق"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_graph
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_pivot
+msgid "Ratification Analysis"
+msgstr "تحليل التصاديق"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.ratification_list_report
+msgid "Ratification List Report"
+msgstr "تقرير المسير"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+msgid "Ratification Type"
+msgstr "نوع التصديق"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_ratification_list_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_ratification_list_report
+msgid "Ratification list Report"
+msgstr "تقرير المسير"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_ratification_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_ratification_report
+msgid "Ratifications Report for a Specific Period"
+msgstr "تقرير التصاديق خلال فترة محددة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.ratification_report
+msgid "Ratifications Report in a Specific Period"
+msgstr "تقرير التصاديق خلال فترة محددة"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_budget_template
+msgid "Remaining Value"
+msgstr "الانحراف"
+
+#. module: kamil_accounting_reports
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_account_report_1
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_report_payment
+msgid "Report"
+msgstr "التقارير"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_account_statement_wizard
+msgid "Report Account Statement"
+msgstr "تقرير كشف حساب"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__report_type
+msgid "Report Type"
+msgstr "نوع التقرير"
+
+#. module: kamil_accounting_reports
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_accounting_report
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__revenue_account_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__revenue_account_ids
+msgid "Revenue Account"
+msgstr "حساب الايراد"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_revenues_budget_search
+msgid "Revenues"
+msgstr "الايرادات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_revenues_analysis_subgroups
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_revenues_analysis_subgroups
+msgid "Revenues Analysis Subgroups Report"
+msgstr "تحليل مفردات الايرادات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.rev_analysis_sub_report
+msgid "Revenues Analysis subgroups Report"
+msgstr "تقرير تحليل مفردات الايرادات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_revenues_budget
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_revenues_budget_wizard
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_revenues_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_expenses_budget_search
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_line_search
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_revenues_budget_search
+msgid "Revenues Budget"
+msgstr "الايرادات لفترة محددة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.revenues_budget_report
+msgid "Revenues Budget Report"
+msgstr "تقرير الايرادات لفترة محددة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_revenues_journal
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_revenues_journal
+msgid "Revenues Journa Report"
+msgstr "دفتر يومية الايرادات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.revenues_journal_report
+msgid "Revenues Journal Report"
+msgstr "تقرير دفتر يومية الايرادات"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_revenues_specified_period_wizard
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_revenues_specified_period_wizard
+msgid "Revenues Specified Period"
+msgstr "الايرادات خلال فترة محددة"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.report,name:kamil_accounting_reports.revenues_specified_period_report
+msgid "Revenues Specified Period Report"
+msgstr "تقرير الايرادات خلال فترة محددة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_revenues_budget_report
+msgid "Scrap Report"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "Second Quarter"
+msgstr "الربع الثاني"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__account_id
+msgid "Select Group"
+msgstr "إختر المجموعة"
+
+#. module: kamil_accounting_reports
+#. openerp-web
+#: code:addons/kamil_accounting_reports/static/src/js/account_reports.js:421
+#, python-format
+msgid "Tags"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_balance_sheet__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_profit_loss__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__company_ids
+msgid "The Companies"
+msgstr "الفروع"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_expenses_period_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_specified_period_wizard_form
+msgid "The Period"
+msgstr "الفترة"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_wiz_report_form
+msgid "The States"
+msgstr "الحالات"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,help:kamil_accounting_reports.field_res_company__account_opening_move_id
+msgid "The journal entry containing the initial balance of all this company's accounts."
+msgstr "قيد اليومية المحتوي الرصيد الابتدائي لجميع حسابات المؤسسة المُختارة."
+
+#. module: kamil_accounting_reports
+#: selection:expenses.specified.period.wizard,type:0
+#: selection:revenues.specified.period.wizard,type:0
+msgid "Third Quarter"
+msgstr "الربع الثالث"
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.actions.act_window,help:kamil_accounting_reports.action_account_move_line
+#: model_terms:ir.actions.act_window,help:kamil_accounting_reports.action_expenses_budget
+#: model_terms:ir.actions.act_window,help:kamil_accounting_reports.action_revenues_budget
+msgid "This report performs analysis on your quotations and sales orders. Analysis check your sales revenues and sort it by different group criteria (salesman, partner, product, etc.) Use this report to perform analysis on sales not having invoiced yet. If you want to analyse your turnover, you should use the Invoice Analysis report in the Accounting application."
+msgstr "سيقوم النظام تلقائيابتحليل اسعارك واوامر المبيعات. يتحقق التحليل من عوائد المبيعات الخاصة بك ويصنفها بمعايير المجموعة المختلفة (ندوب مبيعات، شريك، والمنتج، الخ.) استخدم هذا التقرير للقيام بتحليل المبيعات التي ليس لديها فواتير بعد.إذا كنت ترغب في تحليل دوران الخاص بك، يجب عليك استخدام تقرير تحليل الفاتورة في تطبيق المحاسبة."
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__date_to1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_companies_wizard__date_to2
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__date_to1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_expenses_wizard__date_to2
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__date_to1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_companies_wizard__date_to2
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__date_to1
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_compare_revenues_wizard__date_to2
+msgid "To"
+msgstr "إلى"
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_wiz_trial_balance
+#: model:ir.actions.report,name:kamil_accounting_reports.trial_balance_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_wiz_trial_balance
+msgid "Trial Balance Report"
+msgstr "تقرير ميزان المراجعة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_account_statement_wizard__type
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_consolidated_group_statement_wizard__report_type
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_expenses_specified_period_wizard__type
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_specified_period_wizard__type
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_wiz_trial_balance__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wizard_bank_statement_report
+msgid "Wizard Bank Statement Report"
+msgstr "كشف حساب البنك"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wizard_budget_monthly_report
+msgid "Wizard Budget Month Report"
+msgstr "تقرير الموازنة بالشهور"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wizard_payment_report
+msgid "Wizard Payment Report"
+msgstr "تقرير الدفعيات"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wizard_ratification_list_report
+msgid "Wizard Ratification List Report"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wizard_ratification_report
+msgid "Wizard Ratification Report"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_expenses_synthesis_wizard__year
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_detailed_revenues_synthesis_wizard__year
+msgid "Year"
+msgstr "السنة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_account_statement_wizard
+msgid "account.statement.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_compare_expenses_companies_wizard
+msgid "compare.expenses.companies.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_compare_expenses_wizard
+msgid "compare.expenses.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_compare_revenues_companies_wizard
+msgid "compare.revenues.companies.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_compare_revenues_wizard
+msgid "compare.revenues.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_consolidated_group_statement_wizard
+msgid "consolidated.group.statement.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_detailed_expenses_synthesis_wizard
+msgid "detailed.expenses.synthesis.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_detailed_revenues_synthesis_wizard
+msgid "detailed.revenues.synthesis.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_expenses_specified_period_wizard
+msgid "expenses.specified.period.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_detailed_expenses_synthesis_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_detailed_revenues_synthesis_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_payment_wiz_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_list_wiz_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_ratification_wiz_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_account_move_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_balance_sheet_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_bank_statement_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_budget_monthly_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_clarifications_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_expenses_analysis_subgroups_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_expenses_journal_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_general_journal_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_profit_loss_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_revenues_analysis_subgroups_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_revenues_journal_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.view_wiz_trial_balance_form
+msgid "print"
+msgstr "طباعة"
+
+#. module: kamil_accounting_reports
+#: model:ir.model.fields,field_description:kamil_accounting_reports.field_revenues_budget_report__remaining_value
+msgid "remaining Value"
+msgstr "الانحراف"
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_account_move_template
+msgid "report.kamil_accounting_reports.account_move_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_balance_sheet_template
+msgid "report.kamil_accounting_reports.balance_sheet_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_bank_statement_template
+msgid "report.kamil_accounting_reports.bank_statement_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_budget_monthly_template
+msgid "report.kamil_accounting_reports.budget_monthly_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_clarifications_template
+msgid "report.kamil_accounting_reports.clarifications_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_compare_companies_template
+msgid "report.kamil_accounting_reports.compare_companies_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_compare_exp_comp_template
+msgid "report.kamil_accounting_reports.compare_exp_comp_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_compare_expenses_template
+msgid "report.kamil_accounting_reports.compare_expenses_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_compare_revenues_template
+msgid "report.kamil_accounting_reports.compare_revenues_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_consolidated_a_stm_temp
+msgid "report.kamil_accounting_reports.consolidated_a_stm_temp"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_consolidated_g_stm_temp
+msgid "report.kamil_accounting_reports.consolidated_g_stm_temp"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_detail_exp_temp
+msgid "report.kamil_accounting_reports.detail_exp_temp"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_detail_rev_temp
+msgid "report.kamil_accounting_reports.detail_rev_temp"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_exp_analysis_sub_temp
+msgid "report.kamil_accounting_reports.exp_analysis_sub_temp"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_expenses_journal_template
+msgid "report.kamil_accounting_reports.expenses_journal_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_expenses_period_template
+msgid "report.kamil_accounting_reports.expenses_period_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_general_journal_template
+msgid "report.kamil_accounting_reports.general_journal_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_payment_template
+msgid "report.kamil_accounting_reports.payment_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_profit_loss_template
+msgid "report.kamil_accounting_reports.profit_loss_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_ratification_list_template
+msgid "report.kamil_accounting_reports.ratification_list_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_ratification_template
+msgid "report.kamil_accounting_reports.ratification_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_rev_analysis_sub_temp
+msgid "report.kamil_accounting_reports.rev_analysis_sub_temp"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_revenues_budget_template
+msgid "report.kamil_accounting_reports.revenues_budget_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_revenues_journal_template
+msgid "report.kamil_accounting_reports.revenues_journal_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_revenues_period_template
+msgid "report.kamil_accounting_reports.revenues_period_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_statement_template
+msgid "report.kamil_accounting_reports.statement_template"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_report_kamil_accounting_reports_trial_balance_tempate
+msgid "report.kamil_accounting_reports.trial_balance_tempate"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_revenues_budget_wizard
+msgid "revenues.budget.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_revenues_specified_period_wizard
+msgid "revenues.specified.period.wizard"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_account_move
+msgid "wiz.account.move"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_balance_sheet
+msgid "wiz.balance.sheet"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_clarifications
+msgid "wiz.clarifications"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_expenses_analysis_subgroups
+msgid "wiz.expenses.analysis.subgroups"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_expenses_journal
+msgid "wiz.expenses.journal"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_general_journal
+msgid "wiz.general.journal"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_profit_loss
+msgid "wiz.profit.loss"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_revenues_analysis_subgroups
+msgid "wiz.revenues.analysis.subgroups"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_revenues_journal
+msgid "wiz.revenues.journal"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.model,name:kamil_accounting_reports.model_wiz_trial_balance
+msgid "wiz.trial.balance"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "أغسطس"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "إجمالي الفرع"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "إجمالي المصروفات"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "إجمالي الموارد"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "إسم المجموعة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "ابريل"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "اكتوبر"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "الإجمالي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.clarifications_template
+msgid "الإجمـــالي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+msgid "الاجمالي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "الاستقطاع"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "الانحراف"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "البند"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.clarifications_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "التاريخ"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "التحصيل"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "الجهة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "الجهه الطالبة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "الحساب"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "الدائن"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "الدفعية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "الربط السنوي المقدر"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "الربط المقدر"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "الربط المقدر :"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "الربط خلال الفترة الحالية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "الربط خلال الفترة السابقة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "الرصيد"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "الرصيد الإفتتاحي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "الرصيد الإفتتاحي :"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "الرصيد الافتتاحي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.clarifications_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+msgid "الرقم"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "الصافي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+msgid "الصرف الفعلي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "الصرف الفعلي خلال الفترة الحالية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "الصرف الفعلي خلال الفترة السابقة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+msgid "الصرف المقدر"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "العام المالي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+msgid "الفترة الحالية\n"
+"										<br/>\n"
+"										من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "الفترة الحالية\n"
+"									<br/>\n"
+"									من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+msgid "الفترة الحالية من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+msgid "الفترة السابقة\n"
+"										<br/>\n"
+"										من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "الفترة السابقة\n"
+"									<br/>\n"
+"									من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "الفرع"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "الفرع :"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "الفروع :"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "القيد"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+msgid "القيمة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "القيمة المعتمدة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.clarifications_template
+msgid "المبلغ"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "المبلغ المصدق :"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "المبلغ المصديق"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+msgid "المتبقي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "المتبقي / الانحراف"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "المتحصل الفعلي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "المتحصل خلال الفترة الحالية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "المتحصل خلال الفترة السابقة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+msgid "المدفوع له"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "المدير العام/مدير الفرع"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "المدير المالي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "المدين"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+msgid "المصدق"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+msgid "المصدق السنوي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "المصدق خلال الفترة الحالية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "المصدق خلال الفترة السابقة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "المصروفات"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "المقارنة بالنسب"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "الموارد"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+msgid "الميزانية العمومية في تاريخ"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "النسبة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "الى"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_exp_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.detail_rev_temp
+msgid "الي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.clarifications_template
+msgid "ايضاح رقم ("
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "بتاريخ"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "بند الموازنة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+msgid "تاريخ التصديق"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "تاريخ الدفعية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.record_account_statement_wizard_form
+msgid "تجميع بالجهات"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "تحويل بنكي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_period_template
+msgid "تقرير الايرادات في الفترة<br/>\n"
+"	  					     من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "تقرير المسيرات\n"
+"								<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_period_template
+msgid "تقرير المصروفات في الفترة<br/>\n"
+"							من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "تقرير الموازنة بالشهور<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "تقرير كشف حساب\n"
+"									<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "تقرير كشف حساب\n"
+"                            <br/>\n"
+"                            للفترة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "تقرير كشف مجموعة\n"
+"									<br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "تقرير كشف مجموعة\n"
+"							<br/>\n"
+"							للفترة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+msgid "تقرير مقارنة الايرادات بين الفترات للفروع والمركز"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+msgid "حركة نقود"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "دائن"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "ديسمبر"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "رقم الايضاح"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+msgid "رقم التصديق"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "رقم الدفعية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+msgid "رقم القيد"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "رقم المستند"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "سبتمر"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "شيك"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "شيك مصرفي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_g_stm_temp
+msgid "صافي المدة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "صافي رصيد التشغيل"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "فبراير"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+msgid "قائمة التصاديق <br/>"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+msgid "كشف حساب البنك"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.clarifications_template
+msgid "لا تـــــوجد بيـــانات"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.account_move_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "للفترة من"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "مارس"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "مايو"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.balance_sheet_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.profit_loss_template
+msgid "مدير الشؤون المالية والادارية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.exp_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.expenses_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.general_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.rev_analysis_sub_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.revenues_journal_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.trial_balance_tempate
+msgid "مدين"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "نسبة التحصيل في الفترة الحالية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_companies_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_revenues_template
+msgid "نسبة التحصيل في الفترة السابقة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_expenses_template
+msgid "نسبة الصرف الفعلي"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "نسبة الصرف الفعلي في الفترة الحالية"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.compare_exp_comp_template
+msgid "نسبة الصرف الفعلي في الفترة السابقة"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "نقد"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.payment_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.ratification_list_template
+msgid "نوع السداد"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.bank_statement_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.consolidated_a_stm_temp
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.statement_template
+msgid "نوع المستند"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "نوفمبر"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "يناير"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "يوليو"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_reports.budget_monthly_template
+msgid "يونيو"
+msgstr ""
+
+#. module: kamil_accounting_reports
+#: model:ir.actions.act_window,name:kamil_accounting_reports.action_compare_expenses_companies_wizard
+#: model:ir.actions.report,name:kamil_accounting_reports.compare_expens_comp_report
+#: model:ir.ui.menu,name:kamil_accounting_reports.menu_compare_expenses_companies
+msgid "‫ تقرير مقارنة المصروفات بين الفترات للفروع والمركز"
+msgstr ""
+

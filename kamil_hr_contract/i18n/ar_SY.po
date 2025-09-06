@@ -1,0 +1,790 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-02 20:17+0000\n"
+"PO-Revision-Date: 2021-02-02 20:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "<strong>قسم الاجور والمزايا</strong>\n"
+"                            <span>\n"
+"                                ......................................................................\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <strong>اعتماد شئون العاملين</strong>\n"
+"                            <span>\n"
+"                                ......................................................................\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <strong>المراجعة</strong>\n"
+"                            <span>\n"
+"                                ......................................................................\n"
+"                            </span>"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,state:0
+msgid "Accounts"
+msgstr "الحسابات"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__allowance_type
+msgid "Allowance Type"
+msgstr "نوع العلاوة"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,type:0
+msgid "Alternative allowance"
+msgstr "بدل الانابة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,type:0
+msgid "Annual bonus"
+msgstr "العلاوه السنويه"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__appoiontment_type
+msgid "Appoiontment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,state:0
+msgid "Benefits and Fees Department"
+msgstr "قسم المزايا والاجور"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__bonus_amount
+msgid "Bonus Amount"
+msgstr "المبلغ"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.view_hr_contract_form_inherit
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__create_date
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__implementation_date
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_search_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_tree_view
+msgid "Date of Exception"
+msgstr "تاريخ التنفيذ"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__days
+msgid "Days"
+msgstr "عدد الأيام"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__degree_id
+msgid "Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__department_id
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__department_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_search_view
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__deportation_allowance
+msgid "Deportation Allowance"
+msgstr "بدل الترحيل"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__differnce_amount
+msgid "Differnce Amount"
+msgstr "مبلغ الفرق"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__display_name
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__document
+msgid "Document"
+msgstr "مستند"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__upgrade_date
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_search_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_tree_view
+msgid "Due date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__education_amount
+msgid "Education Amount"
+msgstr "مبلغ التعليم"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__eighth_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Eighth Bonus"
+msgstr "العلاوة الثامنة"
+
+#. module: kamil_hr_contract
+#: model:ir.model,name:kamil_hr_contract.model_hr_employee
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__employee_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_search_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_contract
+#: model:ir.model,name:kamil_hr_contract.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__num_emp
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__fifth_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Fifth Bonus"
+msgstr "العلاوة الخامسة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__financial_difference
+msgid "Financial Difference"
+msgstr "الفرق المالي"
+
+#. module: kamil_hr_contract
+#: code:addons/kamil_hr_contract/models/removing_differences.py:410
+#, python-format
+msgid "Financial difference can not be zero"
+msgstr "الفرق المالي لا يمكن ان يكون صفر"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "First / Second Class"
+msgstr "فصل اول/ثاني"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__first_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "First Bonus"
+msgstr "العلاوه الاولي"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,promotion_type:0
+msgid "First Class"
+msgstr "الفصل الاول"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__first_qualification
+msgid "First Qualification"
+msgstr "المؤهل الاول"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__fourth_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Fourth Bonus"
+msgstr "العلاوة الرابعة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__functional_id
+msgid "Functional"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__category_id
+msgid "Functional Category"
+msgstr "الفئة الوظيفية"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,state:0
+msgid "General Directorate of Human Resources"
+msgstr "الادارة العامة للموارد البشرية"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__high_cost
+msgid "High cost of living"
+msgstr "غلاء المعيشة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__housing_allowance
+msgid "Housing Allowance"
+msgstr "بدل السكن"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__id
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_search_view
+msgid "Implementation Date"
+msgstr "تاريخ التنفيذ"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,state:0
+msgid "Internal Auditor"
+msgstr "المراجع الداخلي"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__ironically_removed
+msgid "Ironically Removed"
+msgstr "إزالة المفارقات"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.view_hr_contract_form_inherit
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences____last_update
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__write_date
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__line_ids
+msgid "Line ids"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__meal_amount
+msgid "Meal Amount"
+msgstr "مبلغ بدل الميل"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,type:0
+msgid "Meal allowance"
+msgstr "بدل الميل"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__new_total
+msgid "New Total"
+msgstr "الاجمالي الجديد"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__ninth_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Ninth Bonus"
+msgstr "العلاوة التاسعة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__no_of_months
+msgid "No Of Months"
+msgstr "عدد الشهور"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__notes
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__old_total
+msgid "Old Total"
+msgstr "الاجمالي القديم"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__one_day_value
+msgid "One Day Value"
+msgstr "قيمة اليوم الواحد"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_hr_contract
+#: model:ir.model,name:kamil_hr_contract.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال المرتب"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,state:0
+msgid "Personnel"
+msgstr "شؤون العاملين"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__primary
+msgid "Primary"
+msgstr "اساسي"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__primary_category
+msgid "Primary Category"
+msgstr "الفئة الإبتدائية"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,type:0
+msgid "Promotion"
+msgstr "الترقيه"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__promotion_type
+msgid "Promotion Type"
+msgstr "نوع الترقيه"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__promotions_number
+msgid "Promotions Number"
+msgstr "رقم الترقية"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,type:0
+msgid "Qualification bonus"
+msgstr "علاوة المؤهل"
+
+#. module: kamil_hr_contract
+#: model:ir.actions.act_window,name:kamil_hr_contract.action_removing_differences
+#: model:ir.ui.menu,name:kamil_hr_contract.removing_differences_menu
+msgid "Removing Differences"
+msgstr "الفروقات"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__representation_allowance
+msgid "Representation Allowance"
+msgstr "بدل تمثيل"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Return1"
+msgstr "إرجاع"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Return2"
+msgstr "إرجاع"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Return3"
+msgstr "ارجاع"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Returnn"
+msgstr "الترجيع"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences_line__rule
+msgid "Rule"
+msgstr "قاعدة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__second_bonus
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__second_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Second Bonus"
+msgstr "العلاوة الثانية"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,promotion_type:0
+msgid "Second Class"
+msgstr "الفصل الثاني"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__second_qualification
+msgid "Second Qualification"
+msgstr "المؤهل الثاني"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__seventh_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Seventh Bonus"
+msgstr "العلاوة السابعة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__sixth_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Sixth Bonus"
+msgstr "العلاوة السادسة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__socail_amount
+msgid "Socail Amount"
+msgstr "المبلغ الاجتماعي"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,type:0
+msgid "Social bonus"
+msgstr "العلاوه الاجتماعيه"
+
+#. module: kamil_hr_contract
+#: code:addons/kamil_hr_contract/models/removing_differences.py:123
+#, python-format
+msgid "Sorry!! The upgrade date cannot be greater than the execution date"
+msgstr "لا يمكن ان يكون تاريخ الاستحقاق اكبر من تاريخ التنفيذ"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__special_bonus
+msgid "Special Bonus"
+msgstr "العلاوة الخاصة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_hr_contract
+#: code:addons/kamil_hr_contract/models/removing_differences.py:127
+#, python-format
+msgid "The Perform the upgradecan not be carried out after more than 36 months"
+msgstr "لا يمكن إجراء الترقية بعد أكثر من 36 شهرًا"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_hr_contract__third_bonus
+#: selection:removing.differences,first_bonus:0
+#: selection:removing.differences,second_bonus:0
+msgid "Third Bonus"
+msgstr "العلاوة الثالثة"
+
+#. module: kamil_hr_contract
+#: selection:removing.differences,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_search_view
+msgid "Upgrade Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__upgrade_degree
+msgid "Upgrade Degree"
+msgstr "درجة الترقية"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,help:kamil_hr_contract.field_removing_differences__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_form_view
+msgid "aproved"
+msgstr "تمت الموافقة"
+
+#. module: kamil_hr_contract
+#: model:ir.model.fields,field_description:kamil_hr_contract.field_removing_differences__current_degree
+msgid "old degree"
+msgstr "الدرجة السابقة"
+
+#. module: kamil_hr_contract
+#: model:ir.model,name:kamil_hr_contract.model_removing_differences
+msgid "removing.differences"
+msgstr "الفروقات"
+
+#. module: kamil_hr_contract
+#: model:ir.model,name:kamil_hr_contract.model_removing_differences_line
+msgid "removing.differences.line"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                                <br/>\n"
+"                                قسم الاجور والمزايا<br/>"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "البـيان"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "الجديد"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "الفرق"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "القديم"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "القسم"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "المبلغ"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "تاريخ الاستحقاق"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "تاريخ التنفيذ"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model:ir.actions.report,name:kamil_hr_contract.removing_differences_details
+msgid "تقرير الفروقات"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "عدد الايام"
+msgstr ""
+
+#. module: kamil_hr_contract
+#: model_terms:ir.ui.view,arch_db:kamil_hr_contract.removing_differences_view
+msgid "قيمة اليوم الواحد"
+msgstr ""
+

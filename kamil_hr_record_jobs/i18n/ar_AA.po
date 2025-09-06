@@ -1,0 +1,364 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_record_jobs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200315\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-22 18:17+0000\n"
+"PO-Revision-Date: 2020-03-22 18:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_job_form_view
+#: selection:record.jobs,state:0
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancy_and_busy_report_view
+msgid "Busy"
+msgstr "المشغول"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_jobs_vacancies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_jobs_vacancy_busy_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_jobs_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_job_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_record_jobs
+#: selection:record.jobs,state:0
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.functions_report_view
+msgid "Count"
+msgstr "العدد"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__create_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__current_salary
+msgid "Current Salary"
+msgstr "المرتب الحالي"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancies_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancy_and_busy_report_view
+msgid "Degree"
+msgstr "الدرجة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__line_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_job_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__display_name
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_functions_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_vacancies_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_vacancy_and_busy_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_record_jobs
+#: selection:record.jobs,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__employee_id
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__employee_degree
+msgid "Employee degree"
+msgstr "درجة الموظف"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__job
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.functions_report_view
+msgid "Function"
+msgstr "وظيفة"
+
+#. module: kamil_hr_record_jobs
+#: code:addons/kamil_hr_record_jobs/models/record_jobs.py:26
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_job_form_view
+#, python-format
+msgid "Functions"
+msgstr "الوظائف"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__functions_count
+msgid "Functions Count"
+msgstr "الوظائف"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_functions_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_vacancies_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_vacancy_and_busy_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancy_and_busy_report_view
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancies_report_view
+msgid "Job Name"
+msgstr "إسم الوظيفة"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancies_report_view
+msgid "Job No"
+msgstr "رقم الوظيفة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__job_number
+msgid "Job Number"
+msgstr "رقم الوظيفة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs____last_update
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_functions_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_vacancies_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_report_kamil_hr_record_jobs_vacancy_and_busy_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__write_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__number
+msgid "Number"
+msgstr "الرقم"
+
+#. module: kamil_hr_record_jobs
+#: code:addons/kamil_hr_record_jobs/models/record_jobs.py:37
+#, python-format
+msgid "Please enter functions details"
+msgstr "الرجاء إدخال تفاصيل الوظائف"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_jobs_vacancies_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_jobs_vacancy_busy_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_jobs_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_hr_record_jobs
+#: selection:record.jobs,record_type:0
+msgid "Record Inside"
+msgstr "داخل السجل"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__name
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.record_job_form_view
+msgid "Record Job"
+msgstr "سجل الوظائف"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.actions.act_window,name:kamil_hr_record_jobs.action_record_job
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_function_wizard__record_jobs_id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__record_jobs_id
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancies_wizard__record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_vacancy_busy_wizard__record_jobs
+#: model:ir.ui.menu,name:kamil_hr_record_jobs.record_job_main_menu
+#: model:ir.ui.menu,name:kamil_hr_record_jobs.record_job_menu
+msgid "Record Jobs"
+msgstr "سجل الوظائف"
+
+#. module: kamil_hr_record_jobs
+#: selection:record.jobs,record_type:0
+msgid "Record Outside"
+msgstr "خارج السجل"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__record_type
+msgid "Record Type"
+msgstr "نوع السجل"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.actions.act_window,name:kamil_hr_record_jobs.action_record_jobs_vacancy_busy_wizard
+msgid "Report Record jobs Vacancy and Busy"
+msgstr "تقرير الشاغر والمشغول"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.actions.report,name:kamil_hr_record_jobs.vacancy_and_busy_report
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancy_and_busy_report_view
+msgid "Report by Vacancie and Busy"
+msgstr "تقرير الشاغر والمشغول"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.actions.act_window,name:kamil_hr_record_jobs.action_record_jobs_vacancies_wizard
+#: model:ir.actions.report,name:kamil_hr_record_jobs.vacancies_report
+#: model:ir.ui.menu,name:kamil_hr_record_jobs.menu_report_vacancies
+msgid "Report by Vacancies"
+msgstr "تقرير حسب الوظيفة الشاغرة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.ui.menu,name:kamil_hr_record_jobs.menu_report_vacancy_busy
+msgid "Report by Vacancy and Busy"
+msgstr "تقرير الشاغر والمشغول"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.actions.act_window,name:kamil_hr_record_jobs.action_record_jobs_wizard
+#: model:ir.actions.report,name:kamil_hr_record_jobs.functions_report
+#: model:ir.ui.menu,name:kamil_hr_record_jobs.menu_report_record
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.functions_report_view
+msgid "Report by function"
+msgstr "تقرير حسب الوظيفة"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancies_report_view
+msgid "Report by vacancies"
+msgstr "تقرير حسب الوظيفة الشاغرة"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.ui.menu,name:kamil_hr_record_jobs.record_jobs_reports_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs_line__section
+msgid "Section"
+msgstr "القطاع"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancies_report_view
+msgid "Serial Number"
+msgstr "الرقم التسلسلي"
+
+#. module: kamil_hr_record_jobs
+#: code:addons/kamil_hr_record_jobs/models/record_jobs.py:39
+#, python-format
+msgid "Sorry! you can't confirmed two jobs records, please archived other jobs records to confirmed this"
+msgstr "آسف! لا يمكنك تأكيد سجلين للوظائف ، يرجى أرشفة سجلات الوظائف الأخرى لتأكيد هذا"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model.fields,field_description:kamil_hr_record_jobs.field_record_jobs__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancy_and_busy_report_view
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_hr_record_jobs
+#: model_terms:ir.ui.view,arch_db:kamil_hr_record_jobs.vacancy_and_busy_report_view
+msgid "Vacancy"
+msgstr "الشاغر"
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_function_wizard
+msgid "function.wizard"
+msgstr ""
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_record_jobs
+msgid "record.jobs"
+msgstr ""
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_record_jobs_line
+msgid "record.jobs.line"
+msgstr ""
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_report_kamil_hr_record_jobs_functions_report_view
+msgid "report.kamil_hr_record_jobs.functions_report_view"
+msgstr ""
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_report_kamil_hr_record_jobs_vacancies_report_view
+msgid "report.kamil_hr_record_jobs.vacancies_report_view"
+msgstr ""
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_report_kamil_hr_record_jobs_vacancy_and_busy_report_view
+msgid "report.kamil_hr_record_jobs.vacancy_and_busy_report_view"
+msgstr ""
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_vacancies_wizard
+msgid "vacancies.wizard"
+msgstr ""
+
+#. module: kamil_hr_record_jobs
+#: model:ir.model,name:kamil_hr_record_jobs.model_vacancy_busy_wizard
+msgid "vacancy.busy.wizard"
+msgstr ""
+

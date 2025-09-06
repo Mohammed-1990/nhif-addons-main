@@ -1,0 +1,228 @@
+<odoo>
+  <data>
+
+  <menuitem id="employee_general_operantions_main_mneu" sequence="0" name="General Operantions" />
+                    <!-- Actions -->
+
+     <record id="action_employee_profile" model="ir.actions.act_window">
+      <field name="name">Employee Own Profile</field>
+      <field name="res_model">hr.employee</field>
+      <field name="view_mode">kanban,tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('user_id','=',uid),]</field>
+    </record>
+
+    <record id="action_employee_leave_request" model="ir.actions.act_window">
+      <field name="name">Leave Request</field>
+      <field name="res_model">hr.leave</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Click create button to create leave request
+            </p>
+           </field>
+    </record>
+
+    <record id="action_employee_payslip" model="ir.actions.act_window">
+      <field name="name">Employee payslip</field>
+      <field name="res_model">hr.payslip</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('employee_id.user_id','=',uid),('state','=','done')]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Not Found Payslip
+            </p>
+           </field>
+    </record>
+
+    <record id="action_hr_contravention" model="ir.actions.act_window">
+      <field name="name">Contravention</field>
+      <field name="res_model">hr.contravention</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Not Found Contravention
+            </p>
+           </field>
+    </record>
+
+
+     <record id="action_investigation" model="ir.actions.act_window">
+      <field name="name">investigation</field>
+      <field name="res_model">hr.investigation</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('employee_id.user_id','=',uid),('state','!=','draft')]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Not Found Investigation
+            </p>
+           </field>
+    </record>
+
+    <record id="action_warnning" model="ir.actions.act_window">
+      <field name="name">warning</field>
+      <field name="res_model">warning.warning</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Not Found Warning
+            </p>
+           </field>
+    </record>
+
+    <record id="action_project_request" model="ir.actions.act_window">
+      <field name="name">project request</field>
+      <field name="res_model">hr.projects.request</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Click create button to project request
+            </p>
+           </field>
+    </record>
+    
+    <record id="action_loan" model="ir.actions.act_window">
+      <field name="name">Loan Request</field>
+      <field name="res_model">hr.loan</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Click create button to Loan request
+            </p>
+           </field>
+    </record>
+    
+
+    <record id="action_resignation" model="ir.actions.act_window">
+      <field name="name">resignation</field>
+      <field name="res_model">resignation.resignation</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            There is no Resignation
+          </p>
+      </field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+    </record>
+
+    <record id="action_employee_permission" model="ir.actions.act_window">
+      <field name="name">permission request</field>
+      <field name="res_model">permission.request</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Click create button to permission request
+            </p>
+           </field>
+    </record>
+
+
+
+    <record id="action_need_requisition_general" model="ir.actions.act_window">
+      <field name="name">Need Requisition</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">need.requisition</field>
+      <field name="view_type">form</field>
+      <field name="view_id" eval="False"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to define a new Need Requisition.
+        </p>
+      </field>
+    </record>
+
+
+    <record id="action_training_needs_operation" model="ir.actions.act_window">
+      <field name="name">Training Needs</field>
+      <field name="res_model">training.needs</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Click create button to Training Needs
+            </p>
+           </field>
+    </record>
+
+      <record id="action_apply_training_operation" model="ir.actions.act_window">
+      <field name="name">Apply Training</field>
+      <field name="res_model">apply.training</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('employee_id.user_id','=',uid),]</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Click create button to Apply Training
+            </p>
+           </field>
+    </record>
+
+    
+
+
+
+
+
+                     <!-- <Menus> -->
+    <menuitem parent="employee_general_operantions_main_mneu" sequence="1" name="Employee Profile" action="action_employee_profile" id="menu_employee_profile"/>
+
+    <menuitem parent="employee_general_operantions_main_mneu" sequence="2" name="Leave Request" action="action_employee_leave_request" id="menu_employee_leave_request"/>
+    
+    <menuitem parent="employee_general_operantions_main_mneu" sequence="3" name="Permission Request" action="action_employee_permission" id="menu_employee_permission_request"/>
+
+    
+
+
+      <menuitem name="Loan Request" parent="employee_general_operantions_main_mneu" id="hr_loan_request_main_menu" action="action_loan" sequence="4"/>
+      
+      <menuitem name="Project Request" parent="employee_general_operantions_main_mneu" id="hr_projects_request_main_menu" action="action_project_request" sequence="5" />
+
+       <menuitem name="Need Request" parent="employee_general_operantions_main_mneu" id="menu_need_request_g" action="action_need_requisition_general" sequence="6" />
+
+      <menuitem name="Employees Incentives" parent="employee_general_operantions_main_mneu" id="kamil_hr_benefits_wages.hr_employees_incentives_menu" action="kamil_hr_benefits_wages.action_employees_incentives" sequence="8"/>
+
+
+     <menuitem parent="employee_general_operantions_main_mneu" sequence="9" name="Employee Payslip" action="action_employee_payslip" id="menu_employee_payslip"/>
+
+
+      <menuitem id="hr_violation_sanction_main_menu" name="Violation and Sanction" parent="employee_general_operantions_main_mneu" sequence="10"/>
+      
+      <menuitem
+        name="Contraventions" 
+        id="contravention_employee_menu"
+       action="action_hr_contravention"
+       parent="hr_violation_sanction_main_menu" sequence="1"/>
+
+      <menuitem id="menu_employee_investigation" name="Investigations" parent="hr_violation_sanction_main_menu" action="action_investigation"
+          sequence="2"/>
+
+      <menuitem name="Warnings"
+      id="warning_employee_menu"
+      parent="hr_violation_sanction_main_menu"
+      action="action_warnning"
+      sequence="3"
+      />
+
+      <menuitem name="Resignation" id="resignation_main_menu" parent="employee_general_operantions_main_mneu" action="action_resignation" sequence="11"/>
+
+
+      <menuitem id="hr_training_main_menu" name="Training" parent="employee_general_operantions_main_mneu" sequence="12"/>
+
+      <menuitem parent="hr_training_main_menu" name="Training Need Request" action="action_training_needs_operation" id="menu_training_need_request"/>
+
+    <menuitem parent="hr_training_main_menu" name="Apply Training Request" action="action_apply_training_operation" id="menu_apply_training_request"/>
+
+  </data>
+</odoo>
+
+ 

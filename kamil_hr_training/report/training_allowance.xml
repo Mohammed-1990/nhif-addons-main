@@ -1,0 +1,103 @@
+<odoo>
+ 
+    <report id="training_allowance_report"
+            model="training.allowance"
+            string="بدل التدريب"
+            report_type="qweb-html"
+            name="kamil_hr_training.training_allowance_report_view"
+        />
+
+    <template id="training_allowance_report_view">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+            
+            
+                    <br/>
+                    <div class="text-center" style="font:600;">
+                            <p>الادارة العامة للموارد البشرية
+                            <br/>
+                            قسم الاجور والمزايا<br/>
+                            <span t-esc="doc.name"/>
+                            </p>
+                    </div>
+                    <br/><br/>
+                 <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                  <thead style="display: table-header-group;">
+                            <tr class="table-active">
+                               
+                                <th class="text-center fit">#</th>
+                                <th class="text-center fit">الموظف</th>
+                                <th class="text-center fit">المسمي الوظيفي</th>
+                                <th class="text-center fit">قيمة البدل</th>
+                                <th class="text-center fit">عدد الايام</th>
+                                <th class="text-center fit">الاجمالي</th>
+                                <th class="text-center fit">الدمغة</th>
+                                <th class="text-center fit">الصافي</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <div class="page">
+                            <t t-set="count" t-value="1"/> 
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <tr style="page-break-inside: avoid;">
+
+                                    <td class="text-center">
+                                        <span t-esc="count"/>
+                                        <t t-set="count" t-value="count+1"/> 
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.sudo().employee_id.name"/>
+                                    </td>
+
+                                     <td class="text-center">
+                                        <span t-esc="line.job_title_id.name"/>
+                                    </td>
+
+                                      <td class="text-center">
+                                        <span t-esc="line.amount"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                      <span t-esc="line.no_days"/>
+                                    </td>
+
+                                     <td class="text-center">
+                                        <span t-esc="line.total"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="line.stamp"/>
+                                    </td>                                  
+
+                                    <td class="text-center">
+                                        <span t-esc="line.net"/>
+                                    </td>
+
+                                </tr>
+                            </t>
+                        </div>
+                    </table><br/><br/><br/><br/><br/><br/>
+                        <p style="font:600;" dir="rtl" >
+                            <strong>قسم الاجور والمزايا</strong>
+                            <span>
+                                .........................................................................
+                            </span>
+                            <br/><br/>
+                            <strong> الادارة العامة للموارد البشرية</strong>
+                            <span>
+                                .........................................................
+                            </span>
+                            <br/><br/>
+                            <strong>المراجعة</strong>
+                            <span>
+                                .............................................................................................
+                            </span>
+                    </p>
+                  </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,146 @@
+<odoo>
+
+
+
+
+    <record id="paperformat_a3_for_payrol" model="report.paperformat">
+        <field name="name">paperformat_a3_for_payrol</field>
+        <field name="default" eval="True"/>
+        <field name="format">A3</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">40</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <report id="payslip_sheet_report_id"
+            model="hr.payslip.run"
+            string="كـــشــف المرتب"
+            report_type="qweb-html"
+            name="kamil_hr_benefits_wages.hr_payslip_run_view"
+            paperformat="paperformat_a3_for_payrol"
+        />
+    
+
+    <template id="kamil_hr_benefits_wages.hr_payslip_run_view">
+        <t t-call="web.html_container">
+          <t t-call="web.external_layout">
+            <t t-foreach="docs" t-as="doc">
+             <br/><br/>
+                  <div class="page">
+                            
+                            <div class="text-center" style="font:600;">
+                                <strong class="text-center">
+                                    <p>الادارة العامة للموارد البشرية
+                                    <br/>
+                                    قسم الاجور والمزايا<br/>
+                                    <span t-esc="doc.name"/><br/>
+                                    </p>
+                                </strong>
+                            </div>
+                            <br/>
+                            <table style="margin:10px;" dir="rtl" class="table-bordered">
+                                    <thead class="table-active" style="display: table-header-group;page-break-inside: avoid;">
+                                      <tr>
+                                        <td class="text-center">#</td>
+                                        <td class="text-center  fit">اسم الموظف</td>
+                                        <td class="text-center  fit">الدرجة الوظيفية</td>
+                                        <t t-set="flag" t-value="0"/>
+                                        <t t-foreach="doc.slip_ids" t-as="slip">
+                                            <t t-if="flag==0">
+                                                <t t-foreach="slip.line_ids" t-as="line">
+                                                    <td class="text-center"><span t-esc="line.name"/></td>
+                                                </t>
+                                            </t>
+                                            <t t-set="flag" t-value="1"/>
+                                        </t>
+                                      </tr>
+                                    </thead>
+                               <t t-set="count" t-value="1"/>
+                               <t t-foreach="doc.slip_ids" t-as="slip">
+                                    <tr style="page-break-inside: avoid;">
+                                        <td class="text-center" heidht="5">
+                                            <span t-esc="count"/>
+                                        </td>
+                                        <td class="text-center " style="font:300; white-space: nowrap;width: 1%;">
+                                            <span t-esc="slip.sudo().employee_id.name"/>
+                                        </td>
+                                        <td class="text-center " style="font:300; white-space: nowrap;width: 1%;">
+                                            <span t-esc="slip.sudo().employee_id.degree_id.name"/>
+                                        </td>
+                                        <t t-foreach="slip.line_ids" t-as="line">
+                                            <t t-if="line.category_id.code != 'GMALW'">
+                                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                                    <t t-esc="'{0:,.2f}'.format(float(line.total))"/>
+                                                </td>
+                                            </t>
+                                        </t>
+                                        <t t-set="count" t-value="count+1"/>
+                                    </tr>
+                                </t>
+                                <tr class="table-active" style="page-break-inside: avoid;">
+                                    <td class="text-center" colspan="3">الاجمالي</td>
+                                    <t t-set="flag" t-value="0"/>
+                                    <t t-foreach="doc.slip_ids" t-as="slip">
+                                        <t t-if="flag==0">
+                                            <t t-foreach="slip.line_ids" t-as="line">
+                                                <t t-set="coun" t-value="0"/>
+                                                <t t-foreach="doc.slip_ids" t-as="slip1">
+                                                    <t t-foreach="slip1.line_ids" t-as="line1">
+                                                        <t t-if="line1.salary_rule_id.id == line.salary_rule_id.id">
+                                                            <t t-if="line.category_id.code != 'GMALW'">
+                                                                <t t-set="coun" t-value="coun+line1.total"/>
+                                                            </t>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%; padding:2px;"><t t-esc="'{0:,.2f}'.format(float(coun))"/></td>
+                                            </t>
+                                        </t>
+                                        <t t-set="flag" t-value="1"/>
+                                    </t>
+                                </tr>
+                            </table>
+                        <br/><br/><br/>
+
+                        <table border="0" dir="rtl" class="text-right table borderless">
+                            <tr>
+                                <td>
+                                    <strong style="float:right">  رئيس قسم المزايا والاجور </strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................................................................................
+                                    </span>
+                                </td>
+                                <td>
+                                    <strong style="float:right"> إعتماد شئون العاملين  </strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................................................................................
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+
+                                <td>
+                                <strong style="float:right"> المراجعة  </strong>
+                                    <span style="float:right;margin-right:20px">
+                                        ................................................................................................................................................................
+                                    </span>
+                              </td>
+                              <td/>
+                            </tr>
+                            
+                        </table>
+                      </div>
+                   </t>
+                </t>
+        </t>
+    </template>
+
+</odoo>

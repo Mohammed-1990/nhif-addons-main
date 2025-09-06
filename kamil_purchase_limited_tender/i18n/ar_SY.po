@@ -1,0 +1,271 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_purchase_limited_tender
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200223\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-26 09:35+0000\n"
+"PO-Revision-Date: 2021-09-26 09:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "<strong>الصندوق القومي للتامين الصحي\n"
+"                    <br/>\n"
+"                        قسم المشتريات\n"
+"                        <br/>\n"
+"                    تقرير المناقصات المحدودة</strong>\n"
+"                     <br/>"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_report_kamil_purchase_limited_tender_limited_tender_report_view__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Extended Filters"
+msgstr "الفلاتر التفصيلية"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__id
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_report_kamil_purchase_limited_tender_limited_tender_report_view__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_report_kamil_purchase_limited_tender_limited_tender_report_view____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_limited_tender_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.actions.act_window,name:kamil_purchase_limited_tender.action_limited_tender
+#: model:ir.ui.menu,name:kamil_purchase_limited_tender.menu_limited_tender
+#: model:ir.ui.menu,name:kamil_purchase_limited_tender.menu_limited_tender_root
+msgid "Limited Tender"
+msgstr "العطاء المحدود"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.actions.act_window,name:kamil_purchase_limited_tender.action_limited_tender_book
+msgid "Limited Tender Book"
+msgstr "كراسات العطاء المحدود"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.actions.act_window,name:kamil_purchase_limited_tender.action_limited_tender_report
+#: model:ir.ui.menu,name:kamil_purchase_limited_tender.menu_limited_tender_report
+msgid "Limited Tender Report"
+msgstr "تقرير العطاءات المحدودة"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Order Date"
+msgstr "تاريخ الأمر"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_graph
+msgid "Pipeline Analysis"
+msgstr "تحليل دورة المبيعات"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Purchase Orders"
+msgstr "أوامر الشراء"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model,name:kamil_purchase_limited_tender.model_purchase_requisition
+msgid "Purchase Requisition"
+msgstr "طلب الشراء"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Purchase confirm"
+msgstr "الفواتير المؤكدة"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model.fields,field_description:kamil_purchase_limited_tender.field_purchase_requisition__recipients_ids
+msgid "Qualifier Suppliers"
+msgstr "الموردين المؤهلين"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender
+msgid "Qualifier suppliers"
+msgstr "الموردين المؤهلين"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender
+msgid "Qualifier suppliers sent to"
+msgstr "الموردين المؤهلين الذين تم الارسال اليهم"
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.actions.act_window,name:kamil_purchase_limited_tender.action_limited_tender_wizard
+#: model:ir.actions.report,name:kamil_purchase_limited_tender.limited_tender_report_pdf
+#: model:ir.ui.menu,name:kamil_purchase_limited_tender.menu_report_limited_tender
+msgid "Report Limited Tender"
+msgstr "تقرير المناقصات المحدودة"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender
+msgid "Suppliers sent to"
+msgstr "الموردين الذين تم الارسال اليهم"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Tender"
+msgstr "العطاء"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_report_search
+msgid "Vendor"
+msgstr "المورّد"
+
+#. module: kamil_purchase_limited_tender
+#: code:addons/kamil_purchase_limited_tender/models/limited_tender.py:38
+#, python-format
+msgid "You have to set at least one qualifier suppliers !"
+msgstr "يجب اختيار مورد مؤهل واحد على الاقل!!"
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.view_limited_tender_pivot
+msgid "limited Tender Analysis"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model,name:kamil_purchase_limited_tender.model_limited_tender_wizard
+msgid "limited.tender.wizard"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model:ir.model,name:kamil_purchase_limited_tender.model_report_kamil_purchase_limited_tender_limited_tender_report_view
+msgid "report.kamil_purchase_limited_tender.limited_tender_report_view"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "اجمالي المبلغ"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "الرقم المتسلسل"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "الضرائب"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "الكمية المطلوبة"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "المسؤول"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "المنتجات"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "المورد"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "الي"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "تاريخ الطلب"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "رقم الكراسة المختارة"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "في الفترة من"
+msgstr ""
+
+#. module: kamil_purchase_limited_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_limited_tender.limited_tender_report_view
+msgid "ممثل الحضور"
+msgstr ""
+

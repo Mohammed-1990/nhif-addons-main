@@ -1,0 +1,187 @@
+<odoo>
+  <data>
+
+    <!-- Allowances -->
+
+    <record model="ir.ui.view" id="employee_allowance_form_view">
+      <field name="name">Allowances</field>
+      <field name="model">allowance.allowance.line</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <group col="4" string="Employee Info">
+                <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="employee_no"/>
+                <field name="department_id" force_save="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="degree_id" force_save="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+              </group>
+              <group col="4">
+                <field name="marital" force_save="1"/>
+                <field name="account_number"/>
+              </group>
+              <group col="4" string="Allowance Info">
+                <field name="allowance_allowance_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="date"/>
+                <field name="amount" force_save="1"/>
+                <field name="stamp"  force_save="1"/>
+                <field name="net" force_save="1" sum="net"/>
+                <field name="state" invisible="True"/>
+                
+              </group>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+    <record  id="action_employee_allowance" model="ir.actions.act_window">
+      <field name="name">Allowances</field>
+      <field name="res_model">allowance.allowance.line</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('employee_id.user_id','=',uid),('state','=','accounting')]</field>
+    </record>
+
+    <record model="ir.ui.view" id="employee_allowance_tree_view">
+      <field name="name">Allowances</field>
+      <field name="model">allowance.allowance.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="allowance_allowance_id"/>
+                <field name="date"/>
+                <field name="amount"/>
+                <field name="stamp"/>
+                <field name="net"/>
+                <field name="state" invisible="True"/>
+
+            </tree>
+        </field>
+      </record>
+
+
+
+    <menuitem name="Allowances" id="menu_employee_allowance" parent="employee_general_operantions_main_mneu" sequence="7"/>
+
+    <menuitem name="Allowances" id="menu_employee_allowance_allowance" action="action_employee_allowance" parent="menu_employee_allowance" sequence="0"/>
+
+
+    <!-- Meal Allowance -->
+    <record model="ir.ui.view" id="employee_meal_allowance_form_view">
+      <field name="name">Meal Allowance</field>
+      <field name="model">meal.allowance.line</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <group col="4" string="Employee Info">
+                <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="employee_no"/>
+                <field name="department_id" force_save="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="account_number"/>
+              </group>
+              <group col="4" string="Allowance Info">
+                <field name="date_from" force_save="1"/>
+                <field name="date_to" force_save="1"/>
+                <field name="amount" force_save="1"/>
+                <field name="days_leave"  force_save="1"/>
+                <field name="discount"  force_save="1"/>
+                <field name="receivable"  force_save="1"/>
+                <field name="deductions"  force_save="1"/>
+                <field name="stamp"  force_save="1"/>
+                <field name="net" force_save="1"/>
+                <field name="state" invisible="True"/>
+
+              </group>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="employee_meal_allowance_tree_view">
+      <field name="name">Meal Allowance</field>
+      <field name="model">meal.allowance.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="amount"/>
+                <field name="net"/>
+                <field name="state" invisible="True"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record  id="action_employee_meal_allowance" model="ir.actions.act_window">
+      <field name="name">Meal Allowance</field>
+      <field name="res_model">meal.allowance.line</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('employee_id.user_id','=',uid), ('state','=','accounting')]</field>
+    </record>
+
+
+    <menuitem name="Meal Allowance" id="menu_employee_meal_allowance" action="action_employee_meal_allowance" parent="menu_employee_allowance" sequence="1"/>
+
+  
+      <!-- inclination Allowance -->
+     <record model="ir.ui.view" id="employee_inclination_allowance_form_view">
+      <field name="name">Inclination Allowance</field>
+      <field name="model">inclination.allowance.line</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <group col="4" string="Employee Info">
+                <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="employee_no"/>
+                <field name="department_id" force_save="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="account_number"/>
+              </group>
+              <group col="4" string="Allowance Info">
+                <field name="date_from" force_save="1"/>
+                <field name="date_to" force_save="1"/>
+                <field name="amount" force_save="1"/>
+                <field name="stamp"  force_save="1"/>
+                <field name="net" force_save="1"/>
+                <field name="state" invisible="True"/>
+
+              </group>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="employee_inclination_allowance_tree_view">
+      <field name="name">Inclination Allowance</field>
+      <field name="model">inclination.allowance.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="amount"/>
+                <field name="stamp"/>
+                <field name="net"/>
+                <field name="state" invisible="True"/>
+            </tree>
+        </field>
+    </record>
+
+    <record  id="action_employee_inclination_allowance" model="ir.actions.act_window">
+      <field name="name">Inclination Allowance</field>
+      <field name="res_model">inclination.allowance.line</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'create':False,'edit':False,'delete':False}</field>
+      <field name="domain">[('employee_id.user_id','=',uid), ('state','=','accounting')]</field>
+    </record>
+
+
+    <menuitem name="Inclination Allowance" id="menu_employee_inclination_allowance" action="action_employee_inclination_allowance" parent="menu_employee_allowance" sequence="2"/>
+
+  </data>
+</odoo>

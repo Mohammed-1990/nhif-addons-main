@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Form Rejection-->
+	<record id="view_rejection_from" model="ir.ui.view">
+		<field name="name">rejection.form</field>
+		<field name="model">book.rejection</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="name"/>
+					</group>
+					<footer>
+						<button name="action_confirm" type="object" string="Confirm" class="btn-primary"/>
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<!-- Action Rejection -->
+	<act_window
+		id="action_rejection"
+		name="Rejection"
+		res_model="book.rejection" src_model="purchase.order"
+		view_mode="form"
+		target="new"
+
+		/>
+
+
+</odoo>

@@ -1,0 +1,795 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_budget
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-17 11:49+0000\n"
+"PO-Revision-Date: 2021-03-17 11:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__access_warning
+msgid "Access warning"
+msgstr "تحذير من خطأ بالوصول"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_account_account
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_analytic_account__account_ids
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.analytic_account_inherit_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "Accounts"
+msgstr "الحسابات"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_post__accounts_value_ids
+msgid "Accounts Value"
+msgstr "قيمة الحسابات"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Actual Expense"
+msgstr "الصرف الفعلى"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "Actual Expense/Actual Revenue"
+msgstr "الصرف/المتحصل الفعلي"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Actual Revenues"
+msgstr "المتحصل الفعلى"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,operation_type:0
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Addition"
+msgstr "إضافة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__addition_value
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__addition_value
+msgid "Addition Amount"
+msgstr "قيمة الاضافة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_operation_form_view
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_account_analytic_account
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__analytic_account_id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Approved"
+msgstr "موافقة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__approved_value
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__approved_value
+msgid "Approved Amount"
+msgstr "المبلغ المعتمد"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Branch/Center"
+msgstr "الفرع/المركز"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_crossovered_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__budget_id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__crossovered_budget_id
+msgid "Budget"
+msgstr "الموازنة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_post__analytic_account_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Budget Item"
+msgstr "البند"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__budget_item_details_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Budget Item Details"
+msgstr "تفاصيل البند"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_crossovered_budget_lines
+msgid "Budget Line"
+msgstr "خط الموازنة"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Budget Lines"
+msgstr "خطوط الموازنة"
+
+#. module: kamil_accounting_budget
+#: model:ir.actions.act_window,name:kamil_accounting_budget.action_budget_operations
+#: model:ir.ui.menu,name:kamil_accounting_budget.menu_budget_operation
+msgid "Budget Operations"
+msgstr "عمليات الموازنة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_account_budget_post
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__budgetary_position_id
+msgid "Budgetary Position"
+msgstr "وضع الموازنة"
+
+#. module: kamil_accounting_budget
+#: model:ir.ui.menu,name:kamil_accounting_budget.menu_budget_report_main
+msgid "Budgets Reports"
+msgstr "تقارير الموازنة"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_operation_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_buget_items_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,state:0
+msgid "Canceled"
+msgstr "تم اﻹلغاء"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_buget_items_wizard_form
+msgid "Choose Account/Group"
+msgstr "اختر الحساب/المجموعة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__company_id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__company_id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_operation_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,state:0
+msgid "Confirmed"
+msgstr "تم التاكيد"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العملاء"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_post__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_post__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_operation_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Deviation"
+msgstr "اﻹنحراف"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_report_kamil_accounting_budget_expenses_budget_items_template__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget__date_to
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__date_to
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Entries..."
+msgstr "الحركات"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "Estimated Expense/Estimated Revenue"
+msgstr "الربط المقدر/الصرف المعتمد"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Estimated Expenses"
+msgstr "الصرف المقدر"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Estimated Revenue"
+msgstr "الربط المقدر"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget__expenses_line_ids
+msgid "Expenses"
+msgstr "المصروفات"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__expenses_budget_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Expenses Budget"
+msgstr "موازنة المصروفات"
+
+#. module: kamil_accounting_budget
+#: model:ir.actions.act_window,name:kamil_accounting_budget.action_expenses_budget_items_wizards
+#: model:ir.actions.report,name:kamil_accounting_budget.expenses_budget_items_budget_report
+#: model:ir.ui.menu,name:kamil_accounting_budget.menu_expenses_budget_items
+msgid "Expenses Budget Items Report"
+msgstr "تقرير بنود الموازنة في الصرف"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__id
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_report_kamil_accounting_budget_expenses_budget_items_template__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_account__is_inventory_account
+msgid "Is Inventory Account"
+msgstr "هل هو حساب مخزن"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget__is_started
+msgid "Is Started"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_report_kamil_accounting_budget_expenses_budget_items_template____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__line_ids
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__operation_type
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,activity_state:0
+msgid "Overdue"
+msgstr "المتأخرات"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "Period"
+msgstr "فترة"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,activity_state:0
+msgid "Planned"
+msgstr "المخطط"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__planned_value
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__planned_amount
+msgid "Planned Amount"
+msgstr "المبلغ المخطط"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "Practical"
+msgstr "المنقذ"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__practical_value
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__practical_amount
+msgid "Practical Amount"
+msgstr "المبلغ الفعلى"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_buget_items_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_accounting_budget
+#: code:addons/kamil_accounting_budget/models/budget_operations.py:74
+#, python-format
+msgid "Record can only be deleted in draft or cancel status"
+msgstr "لا يمكن الحذف الا في حالة مسوده او ملغي"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Remaining"
+msgstr "المتبقي"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__remaining_value
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__remaining_value
+msgid "Remaining Amount"
+msgstr "القيمة المتبقية"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__approved_value
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_operation_form_view
+msgid "Remaining Amount in the Account"
+msgstr "القيمة المتبقية في الحساب"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "Remaining Amount/Deviation"
+msgstr "القيمة المتبقية/اﻹنحراف"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Reserved"
+msgstr "محجوز"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__reserved_value
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__reserved_value
+msgid "Reserved Amount"
+msgstr "مبلغ قيد التنفيذ"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Reset to Draft"
+msgstr "إعادة التعيين لمسودة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget__revenues_line_ids
+msgid "Revenues"
+msgstr "الإيرادات"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__revenues_budget_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Revenues Budget"
+msgstr "موازنة الإيرادات"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Start"
+msgstr "بدء"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget__date_from
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__date_from
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_expenses_items_budget_wizard__company_ids
+msgid "The Companies"
+msgstr "الفروع"
+
+#. module: kamil_accounting_budget
+#: code:addons/kamil_accounting_budget/models/account_budget.py:406
+#, python-format
+msgid "There is No Budget Found"
+msgstr "لا توجد موازنة"
+
+#. module: kamil_accounting_budget
+#: code:addons/kamil_accounting_budget/models/budget_operations.py:21
+#, python-format
+msgid "There is No Enough Budget in the account "
+msgstr "لا توجد موازنة كافية في الحساب "
+
+#. module: kamil_accounting_budget
+#: code:addons/kamil_accounting_budget/models/account_budget.py:408
+#, python-format
+msgid "There no budget for the Account "
+msgstr "لا توجد موازنة للحساب"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__to_account_id
+msgid "To Account"
+msgstr "الى حساب"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation_line__to_budget_item_details_id
+msgid "To Budget Item"
+msgstr "الى بند"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,operation_type:0
+msgid "Transfer"
+msgstr "مناقلة"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Under Execution Amount"
+msgstr "مبلغ تحت التنفيذ"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_operation_form_view
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: kamil_accounting_budget
+#: selection:account.budget.operation,state:0
+msgid "Validated"
+msgstr "تم الاعتماد"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_account_budget_operation__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,help:kamil_accounting_budget.field_account_budget_operation__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budget_inherit_view
+msgid "Withdraw"
+msgstr "الخصم"
+
+#. module: kamil_accounting_budget
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_budget_account_value__withdraw_value
+#: model:ir.model.fields,field_description:kamil_accounting_budget.field_crossovered_budget_lines__withdraw_value
+msgid "Withdraw Amount"
+msgstr "قيمة الخصم"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_account_budget_operation
+msgid "account.budget.operation"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_account_budget_operation_line
+msgid "account.budget.operation.line"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "addition_value"
+msgstr "المبلغ المضاف"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "approved_value"
+msgstr "القيمة المعتمدة"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_budget_account_value
+msgid "budget.account.value"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_expenses_items_budget_wizard
+msgid "expenses.items.budget.wizard"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "planned_value"
+msgstr "المبلغ المخطط"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "remaining_value"
+msgstr "المبلغ المتبقي"
+
+#. module: kamil_accounting_budget
+#: model:ir.model,name:kamil_accounting_budget.model_report_kamil_accounting_budget_expenses_budget_items_template
+msgid "report.kamil_accounting_budget.expenses_budget_items_template"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "reserved_value"
+msgstr "المبلغ المحجوز"
+
+#. module: kamil_accounting_budget
+#: code:addons/kamil_accounting_budget/models/account_budget.py:355
+#: code:addons/kamil_accounting_budget/models/account_budget.py:358
+#: code:addons/kamil_accounting_budget/models/account_budget.py:390
+#: code:addons/kamil_accounting_budget/models/account_budget.py:393
+#, python-format
+msgid "there is no enough budget for the account "
+msgstr "لا توجد موازنة كافية للحساب "
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.budgetary_position_inherit_view
+msgid "withdraw_value"
+msgstr "القيمة المسحوبة"
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "الإجمالي"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "الفرع :"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "الفروع :"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "القيمة المسحوبة"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "القيمة المصدقة"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "المتبقي"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "النسبة"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "الى"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "بند الموازنة"
+msgstr ""
+
+#. module: kamil_accounting_budget
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_budget.expenses_budget_items_template
+msgid "تقرير بنود الموازنة في الصرف<br/>\n"
+"							 من"
+msgstr ""
+

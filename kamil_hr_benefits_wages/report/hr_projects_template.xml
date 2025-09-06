@@ -1,0 +1,79 @@
+<odoo>
+
+
+    <report id="hr_project_report"
+            model="hr.project.wizard"
+            string="Projects Report"
+            report_type="qweb-html"
+            name="kamil_hr_benefits_wages.hr_project_report_view"
+            paperformat="hr_landscape_paperformat"
+            menu="False"/>
+
+    <template id="hr_project_report_view">
+         <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            <div class="page" style="page-break-inside: avoid;">
+                <div class="text-center" style="font:500;">
+                        <p>الادارة العامة للموارد البشرية
+                        <br/>
+                        قسم الاجور والمزايا<br/>
+                        تقرير المشاريع</p>
+                    </div><br/>
+                <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                      <thead class="table-active" style="display: table-header-group;">
+                        <td class="text-center fit">#</td>
+                        <th class="text-center fit">الموظف</th>
+                        <th class="text-center fit">الادارة</th>
+                        <th class="text-center fit">المسمي الوظيفي</th>
+                        <th class="text-center fit">المشروع</th>
+                        <th class="text-center fit" style="width:10%;">التاريخ</th>
+                        <th class="text-center fit">إجمالي المبلغ</th>
+                        <th class="text-center fit">المبلغ المدفوع</th>
+                        <th class="text-center fit">المتبقي</th>
+                    </thead>
+                    <tbody>
+                      <t t-set="count" t-value="1"/> 
+                        <t t-foreach="docs" t-as="doc">
+                            <tr style="page-break-inside: avoid;">
+                                <td class="text-center">
+                                    <span t-esc="count"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['employee']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['unit']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['job_title']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['project']"/>
+                                </td>
+                                <td class="text-center" style="width:10%;">
+                                    <span t-esc="doc['date']"/>
+                                </td>
+                                <td class="text-center">
+                                  <t t-esc="'{0:,.2f}'.format(float(doc['amount']))"/>
+                                </td>
+                                <td class="text-center">
+                                  <t t-esc="'{0:,.2f}'.format(float(doc['paid_amount']))"/>
+                                </td>
+                                <td class="text-center">
+                                  <t t-esc="'{0:,.2f}'.format(float(doc['balance']))"/>
+                                </td>
+                            </tr>
+                            <t t-set="count" t-value="count+1"/>
+                        </t>
+                        <t t-if="docs==[]">
+                            <tr>
+                                <td colspan="9" class="text-center">لا تـــوجـــــــد بيــانات</td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

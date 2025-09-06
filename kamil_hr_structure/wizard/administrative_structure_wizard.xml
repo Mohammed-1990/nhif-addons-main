@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+		<record id="administrative_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Administrative</field>
+			<field name='model'>administrative.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+            	        <group>
+                           <field name="department_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+            	        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+    </record>
+
+    <record id="action_administrative_wizard" model="ir.actions.act_window">
+        <field name="name">Report Administrative Structure</field>
+        <field name="res_model">administrative.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <menuitem name="Reports" id="departments_reports_menu" parent="menu_hr_department_root" sequence="2"/>
+
+
+    <menuitem name="Report Administrative Structure" id="menu_report_administrative" parent="departments_reports_menu" action="action_administrative_wizard"/>
+
+	</data>
+</odoo>

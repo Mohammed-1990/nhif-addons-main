@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form Wiz Ratification report -->
+	<record id="view_ratification_list_wiz_report_form" model="ir.ui.view">
+		<field name="name">ratification.list.report.form</field>
+		<field name="model">wizard.ratification.list.report</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="4">
+						<field name="date_from" required="1"/>
+						<field name="date_to" required="1"/>
+						<field name="partner_ids" widget="many2many_tags" options="{'no_create':'1'}" required="1"/>
+						<!-- <field name="group_id" string="Group/Budget Item"  options="{'no_create':'1'}"/> -->
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Action Ratification list report-->
+	<act_window
+		id="action_ratification_list_report"
+		name="Ratification list Report"
+		res_model="wizard.ratification.list.report"
+		view_mode="form"
+		target="new"
+	/>
+
+
+
+	<menuitem id="menu_ratification_list_report"  sequence="3" parent="menu_report" action="action_ratification_list_report"/>
+
+</odoo>

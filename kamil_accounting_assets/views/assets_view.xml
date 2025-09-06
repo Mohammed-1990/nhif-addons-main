@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+	<record id="account_account_form_inherit" model="ir.ui.view">
+		<field name="name">account.account.form</field>
+		<field name="model">account.account</field>
+		<field name="inherit_id" ref="account.view_account_form"/>
+		<field name="arch" type="xml">
+			<field name="tax_ids" position="before">
+				<field name="is_asset_account"/>
+				<field name="asset_category_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'invisible':[('is_asset_account','=',False)], 'required':[('is_asset_account','=',True)]}"/>
+			</field>
+		</field>
+	</record>
+
+	<!-- Asset Inherit-->
+	<record id="asset_form_inherit" model="ir.ui.view">
+		<field name="name">asset form inhert</field>
+		<field name="model">account.asset.asset</field>
+		<field name="inherit_id" ref="account_asset.view_account_asset_asset_form" />
+		<field name="arch" type="xml">
+			<field name="name" position="replace">
+				<h1>
+					<field name="name" placeholder="Asset Name"/>
+				</h1>
+			</field>
+			<label for="name" position="before">
+				<h3>
+					<field name="code" class="float-right" readonly="1"/><br/>
+				</h3>
+			
+			</label>
+			<xpath expr="//sheet/group[1]/group/field[@name='code']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<group position="attributes">
+				<attribute name="invisible">1</attribute>
+			</group>
+			<group position="before">
+				<group col="4">
+					<field name="product_id" domain="[('type','!=','service')]" options="{'no_create':True,'no_edit':True,'no_open':True}"/><newline/><newline/>
+					<field name="admin_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+					<field name="dept_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+					<field name="category_id"/>
+					<field name="count" required="1"/>
+				</group>
+				<group col="4">
+					<field name="date" string="Purchase Date"/>
+					<field name="first_depreciation_manual_date" required="1"/>
+				</group>
+				<group col="4">
+					<field name="value"/>
+					<field name="last_revaluation_value" readonly="1"/>
+					<field name="salvage" readonly="1"/>
+					<field name="annual_dep_ratio"/>
+					<field name="annual_dep_value"/>
+					<field name="value_residual" string="Current Value"/>
+				</group>
+				<group>
+					<field name="company_id" string="Branch" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+				</group>
+			</group>
+
+			<xpath expr="//notebook/page[2]" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+
+
+			<notebook position="inside">
+				<page name="inventory" string="Inventory Info">
+					<group col="4">
+						<field name="location_id" required="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+						<field name="inv_account_id" required="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+					</group>
+				</page>
+			</notebook>
+			<header position="replace">
+				<header>
+					<button name="do_add_asset" string="Add Asset" type="object" class="oe_highlight" states="draft"/>
+					<button name="set_to_draft" string="Set to Draft" type="object" attrs="{'invisible': [('state', '!=', 'open')]}"/>
+
+					<button name="do_asset_revaluation" string="Asset Re-evaluation" type="object" class="oe_highlight" states="open"/> 
+
+					<button name="do_asset_dispose" string="Asset Dispose" type="object" class="oe_highlight" states="open"/>
+
+					<button name="do_asset_freez" string="Asset Freez" type="object" class="oe_highlight" states="open"/> 
+					
+					<button name="do_asset_unfreez" string="Asset unFreez" type="object" class="oe_highlight" states="freez"/> 
+
+					<field name="state" widget="statusbar" statusbar_visible="draft,open"/>
+				</header>
+			</header>                            
+		</field>
+	</record>
+
+
+	<record id="asset_operation_form" model="ir.ui.view">
+		<field name="name">asset operation inhert</field>
+		<field name="model">account.asset.operation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<div>
+						<h4>
+							<p class="float-right">Operation</p>
+							<br/>
+							<field name="type" class="float-right" readonly="1"/>
+							<br/>
+							<br/>
+						</h4>
+					</div>
+
+
+
+					<group>
+						<field name="dispose_type" widget="radio" options="{'horizontal': true}" attrs="{'invisible':[('type','!=','dispose')]}"/>
+
+						<field name="value" required="1" attrs="{'invisible':[('type','=','dispose'),('dispose_type','!=','sale'),'|',('type','=','freez')]}"/>
+						<field name="date" string="Operation Date" required="1"/>
+					</group>
+				</sheet>	
+				<footer>
+					<button string="Process" name="do_operation" type="object" class="btn-primary"/>
+					<button string="Cancel" class="btn-secondary" special="cancel"/>
+				</footer>
+					
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Asset Category-->
+	<record id="asset_category_form_inherit" model="ir.ui.view">
+		<field name="name">asset category form inhert</field>
+		<field name="model">account.asset.category</field>
+		<field name="inherit_id" ref="account_asset.view_account_asset_category_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//sheet/group/group[3]" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//sheet/group/group[4]" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//sheet/group/group[5]" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='journal_id']" position="attributes">
+				<attribute name="options">{'no_create':True,'no_edit':True,'no_open':True}</attribute>
+			</xpath>
+			<xpath expr="//field[@name='account_asset_id']" position="attributes">
+				<attribute name="options">{'no_create':True,'no_edit':True,'no_open':True}</attribute>
+			</xpath>
+			<xpath expr="//field[@name='account_depreciation_id']" position="attributes">
+				<attribute name="options">{'no_create':True,'no_edit':True,'no_open':True}</attribute>
+			</xpath>
+			<xpath expr="//field[@name='account_depreciation_expense_id']" position="attributes">
+				<attribute name="options">{'no_create':True,'no_edit':True,'no_open':True}</attribute>
+			</xpath>
+			<xpath expr="//field[@name='account_analytic_id']" position="attributes">
+				<attribute name="options">{'no_create':True,'no_edit':True,'no_open':True}</attribute>
+			</xpath>
+			<group position="after">
+				<group>
+					<field name="percentage"/>
+				</group>
+				<group col="4">
+					<field name="revaluation_account_id" options="{'no_create':True,'no_edit':True,'no_open':True}" domain="[('is_group','=','sub_account')]"/>
+
+					<field name="accusition_earning_account_id" options="{'no_create':True,'no_edit':True,'no_open':True}" domain="[('is_group','=','sub_account')]"/>
+
+					<field name="acqusition_lost_account_id" options="{'no_create':True,'no_edit':True,'no_open':True}" domain="[('is_group','=','sub_account')]"/>
+
+					<field name="grant_account_id" options="{'no_create':True,'no_edit':True,'no_open':True}" domain="[('is_group','=','sub_account')]"/>
+				</group>
+			</group>
+		</field>
+	</record>
+
+
+
+		
+
+</odoo>

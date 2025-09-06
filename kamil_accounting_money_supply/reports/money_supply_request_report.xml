@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+	<report 
+		id="money_supply_request_report"
+		model="money.supply.request"
+		string="Money Supply Request Report"
+		report_type="qweb-html"
+		name="kamil_accounting_money_supply.money_supply_request_template"
+	/>
+
+
+	<template id="money_supply_request_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+
+						<br/><br/><br/>
+
+
+						<p class="text-right">
+							<strong style="float:right"> التاريخ </strong>
+							<span style="float:right;margin-right:20px" t-esc="o.date"/>
+						</p>
+						<br/><br/>
+						<div class="text-right" style="font:1200;" >
+							<strong style="float:right"> 
+								السيد / مدير الشؤون الماليه والاداريه
+							</strong>
+						</div>
+						<br/><br/><br/>
+						<div class="text-center">
+							<p>
+								السلام عليكم ورحمة الله
+							</p>
+						</div>
+						<br/>
+						<div class="text-center" style="font:2000;" >
+								<strong>
+								  <i>
+								    <u>
+											الموضوع / تغذية خزينة
+										</u>
+									</i>
+								</strong>
+						</div>
+						<br/><br/><br/>
+						<div dir="rtl" style="float:right;text-align:start;font:1200;line-height:30pt;">
+								اشاره للموضوع اعلاه نرجو التكرم بالتصديق بمبلغ <t t-esc="'{0:,.2f}'.format(float(o.amount))"/> جنيه ( <t t-esc="o.amount_in_words"/> ) لتغذية الخزينه لمقابلة الصرف اليومي من <t t-esc="o.bank_journal_id.name"/>
+						</div>
+						<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+						<div class="text-center">
+							<p>
+								وجزاكم الله خيراً
+							</p>
+						</div>
+
+						<br/><br/><br/><br/><br/>
+
+						
+						<p class="text-left">
+							مدير الشؤون الماليه
+						</p>
+
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+
+
+
+</odoo>
+
+
+

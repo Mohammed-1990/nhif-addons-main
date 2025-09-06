@@ -1,0 +1,88 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_missions_assigned">
+        <field name="name">paperformat.functions.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="missions_assigned_report"
+            model="missions.assigned"
+            string="Missions Assigned"
+            report_type="qweb-html"
+            name="kamil_hr_missions.missions_assigned_view"
+            paperformat="paperformat_missions_assigned"
+           />
+
+    <template id="missions_assigned_view">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.external_layout">
+            <t t-call="web.html_container">
+                <div class="page">
+                    <br/><br/><br/><br/>
+                    <div class="text-right" style="font:600;">
+                        المكتب التنفيذي<br/>
+                      النمرة : ص ق ت ص / م ت
+                    </div><br/><br/>
+                    <div  class="text-left"  style="font:600;">
+                      بتاريخ:<t t-esc="doc.assigned_date"/>
+                    </div><br/><br/>
+                    <div class="text-center" style="font:900;line-height:20pt;">
+                      <b> امر تكليف مأمورية </b><br/>
+                      <t t-esc="doc.name"/>
+                    </div>
+                    <br/> <br/><br/>
+                    <div  style="font:1900;line-height:26pt;">
+                        بالإشارة للموضوع أعلاه وتكليف السيد/ المدير العام بأمر المأمورية رقم: <t t-esc="doc.name"/> , بتاريخ:<t t-esc="doc.assigned_date"/> , الخاص بسفر محدد أدناه لولاية <t t-esc="doc.statee_id.name"/>, إعتباراً من: <t t-esc="doc.date_from"/> الي <t t-esc="doc.date_to"/>
+                    </div>
+
+                    <br/><br/>
+                    <h6 class="text-center"> نرجو كريم تفضلكم بإجراء اللازم وإستخراج مستحقات نثريه مأمورية حسب ما هو معمول به</h6>
+                    <br/><br/>
+
+               
+
+                 <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    <thead>
+                        <th class="text-center">الولاية</th>
+                        <th class="text-center">اسم الموظف</th>
+                        <th class="text-center">التاريخ</th>
+                        <th class="text-center">الملاحظات</th>
+                       
+                    </thead>
+                    <tr>
+                        <td class="text-center"><t t-esc="doc.statee_id.name"/></td>
+
+
+                        <td class="text-center">
+                            <t t-esc="doc.team_leader.name"/><br/>
+                            <t t-foreach="doc.line_ids" t-as="line">
+                             <t t-esc="line.employee_id.name"/><br/>
+                            </t>
+                         </td>
+
+                        <td class="text-center">من <t t-esc="doc.date_from"/> <br/><br/> الي <t t-esc="doc.date_to"/></td>
+                        <td class="text-center"><t t-esc="doc.notes"/></td>
+
+                    </tr>
+                    </table>
+                    <br/><br/> <br/>
+                    <h6 class="text-center">مع جزيل الشكر </h6> <br/><br/><br/><br/>
+                    <h6 class="text-right"><t t-esc="doc.assigned.name"/></h6>
+                    <h6 class="text-right"> المكتب التنفيذي</h6>
+
+                </div>
+               </t>
+            </t>
+        </t>
+    </template>
+</odoo>

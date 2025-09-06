@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="hr_projects_request_form" model="ir.ui.view">
+			<field name="name">Projects Request</field>
+			<field name="model">hr.projects.request</field>
+			<field name="arch" type="xml">
+				<form string="Hr Loan Type ">
+					<header>
+						<button type="object" name="compute_installments_line" string="Compute Installments" icon="fa-gears" colspan="2" states="draft" class="oe_highlight"/>
+						<button name="action_submit" type="object" string="Send to submit" states="draft" class="oe_highlight"/>
+					
+						<button name="action_confirm" type="object" string="Confirm" states="benefits_wages" class="oe_highlight" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+					
+						<button name="action_approve" type="object" string="Approve" states="project_manager" class="oe_highlight" groups="kamil_hr_security.hr_unions_group"/>
+					
+						<button name="action_receipt_confirmation" type="object" string="Receipt confirmation" states="receipt_confirmation" class="oe_highlight" groups="kamil_hr_security.hr_unions_group"/>
+
+						<button name="action_start_payments" type="object" string="Start Payments" states="done_registered_payment" class="oe_highlight" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+
+						<button name="action_reject" type="object" string="Reject" states="project_manager" class="oe_highlight" groups="kamil_hr_security.hr_unions_group"/>
+
+
+						<button name="action_reject1" type="object" string="Reject1" states="benefits_wages" class="oe_highlight" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+
+						<field name="state" widget="statusbar" statusbar_visible="draft,benefits_wages,project_manager,receipt_confirmation,done_registered_payment,start_payments,paid"/>
+					</header>
+					<sheet>
+			            <group col="4">
+							<field name="user_id" readonly="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+							<field name="date"/>
+							<field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="employee_id" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}" /><newline/><newline/>
+							<field name="department_id" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+							<field name="functional_id" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+						</group>
+						 <group col="4">
+							<field name="project_id" options="{'no_create':True,'no_edit':True,'no_open':True}"  attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="incentive_id" options="{'no_create':True,'no_edit':True,'no_open':True}"  force_save="1"/>
+							<field name="amount" attrs="{'invisible':[('number_varieties','=',True)],'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+							<field name="max_quantity" attrs="{'invisible':[('number_varieties','=',True)]}"/>
+							<field name="no_month" attrs="{'invisible':[('number_varieties','=',True)],'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group col="4">
+							<field name="required_quantity" attrs="{'invisible':[('number_varieties','=',True)],'readonly':[('state','!=','draft')],'required':[('number_varieties','!=',True)]}"/>
+							<field name="total_amount"/>
+							<field name="installment_amount" force_save="1" decoration-danger="color==True"/>
+							<field name="last_net_incentive" force_save="1" decoration-danger="color==True"/>
+							<field name="number_varieties" invisible="True"/>
+							<field name="color" invisible="True"/>
+						</group>
+						<group col="4">
+							<field name="received_date" attrs="{'readonly':[('state','!=','confirmed')],'required':[('state','=','confirmed')]}" force_save="1"/>
+							<field name="receipt_attachment" attrs="{'required':[('state','=','receipt_confirmation')]}"/>
+							<field name="payment_start_date" attrs="{'readonly':[('state','!=','done_registered_payment')],'required':[('state','=','done_registered_payment')]}" force_save="1" autocomplete="off"/>
+						</group>
+						<notebook >
+							<page string="Varieties" attrs="{'invisible':[('number_varieties','=',False)]}">
+								<field name="line_ids">
+									<tree editable="bottom" create="false">
+										<field name="name" force_save="1"/>
+										<field name="amount" force_save="1"/>
+										<field name="max_quantity" force_save="1"/>
+										<field name="no_month" force_save="1"/>
+										<field name="required_quantity"/>
+										<field name="total_amount" force_save="1"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Installments">
+							<field name="installments_line_ids" attrs="{'readonly':[('state','!=','start_payments')]}">
+									<tree editable="false" create="false" delete="false">
+										<field name="varietie_name" force_save="1" />
+										<field name="payment_date" force_save="1"/>
+										<field name="amount" force_save="1"/>
+										<field name="payment_method" attrs="{'readonly':[('paid','=',True)]}"/>
+										<field name="paid" force_save="1" attrs="{'readonly':[('payment_method','=','system')],'required':[('payment_method','=','manually')]}"/>
+										<field name="payment_attachment" attrs="{'required':[('payment_method','=','manually')]}"/>
+										<field name="notes" attrs="{'required':[('payment_method','=','manually')]}"/>
+									</tree>
+								</field>
+								<group class="oe_subtotal_footer oe_right">
+									<field name="total_amount" widget="monetary"/>
+									<div>
+										<label for="total_paid_amount"/>
+									</div>
+									<field name="total_paid_amount" nolabel="1" widget="monetary" />
+									<field name="balance_amount" class="oe_subtotal_footer_separator" widget="monetary"   />
+								</group>
+								<div class="oe_inline"/>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div> 
+				</form>
+			</field>
+		</record>
+
+		<record id="hr_projects_request_tree" model="ir.ui.view">
+			<field name="name">Projects Request</field>
+			<field name="model">hr.projects.request</field>
+			<field name="arch" type="xml">
+				<tree string="Hr Loan Type">
+					<field name="employee_id"/>
+					<field name="project_id"/>
+					<field name="total_amount"/>
+					<field name="total_paid_amount"/>
+					<field name="balance_amount"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_hr_projects_request" model="ir.actions.act_window">
+			<field name="name">Projects Request</field>
+			<field name="res_model">hr.projects.request</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{'group_by':'project_id'}</field>
+			<field name="help" type="html">
+	          <p class="o_view_nocontent_smiling_face">
+	            Click create button to create new project request
+	          </p>
+       		 </field>
+		</record>
+
+		<menuitem name="Projects Request" parent="hr_projects_main_menu" id="menu_hr_projects_request" action="action_hr_projects_request" sequence="1" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_unions_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+	</data>
+</odoo>

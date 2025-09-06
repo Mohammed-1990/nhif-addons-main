@@ -1,0 +1,191 @@
+<odoo>
+  <data>
+
+    <!-- View for Hr Employee Line Form-->
+    <record id="view_hr_employee_line_form" model="ir.ui.view">
+        <field name="name">view.hr.employee.line.form</field>
+        <field name="model">hr.employee.line</field>
+        <field name="arch" type="xml">
+            <form string="Committee Member">
+              <sheet>
+                  <group colspan="4">
+                    <group>
+                      <field name="employee" style="width:60%%"/>
+                    </group>
+                    <group>
+                      <field name="role" style="width:60%%"/>
+                    </group>
+                  </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+        <!-- View for Committee Types Form-->
+
+    <record id="view_committee_type_config_form" model="ir.ui.view">
+        <field name="name">view.committee.configuration.form</field>
+        <field name="model">committee.configuration</field>
+        <field name="arch" type="xml">
+            <form string="Committee Types">
+              <sheet>
+                  <group colspan="4">
+                    <field name="name" style="width:40%%"/>
+                    <field name="types" style="width:40%%"/>
+                  </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+        <!-- View for Committee Types Tree-->
+
+
+  <record id="view_committee_type_config_tree" model="ir.ui.view">
+      <field name="name">view.committee.configuration.tree</field>
+      <field name="model">committee.configuration</field>
+      <field name="arch" type="xml">
+          <tree string="Committee Types">
+              <field name="name"/>
+              <field name="types"/>
+          </tree>
+      </field>
+    </record>
+    
+    
+        <!-- View for Committee Types Creation Form-->
+
+    <record id="view_committee_type_creation_form" model="ir.ui.view">
+        <field name="name">view.committee.creation.form</field>
+        <field name="model">committee.committee</field>
+        <field name="arch" type="xml">
+          <form string="Committee Creation">
+            <header>
+              <button name="accept_team" string="Activate" type="object" states="draft" groups="stock.group_stock_manager" class="oe_highlight oe_read_only"/>
+              <button name="cancel_team" string="Cancel" type="object" states="draft,active" groups="stock.group_stock_manager" class="oe_read_only"/>
+              <field name="state" widget="statusbar" statusbar_visible="draft,active,cancelled,expired"/>
+            </header>
+            <sheet>
+              <label for="committee_type" string="Committee Type" class="oe_edit_only"/>
+                <h1>
+                  <field name="committee_type" widget="selection" style="width:40%%" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </h1>
+              <group colspan="4">
+                <group>
+                  <field name="start_date" style="width:40%%" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </group>
+                <group>
+                  <field name="end_date" style="width:40%%" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </group>
+              </group>
+              <notebook>
+                <page name='pg_committee' string="Committee Members">
+                  <field name="committee_member" attrs="{'readonly':[('state','!=','draft')]}">
+                    <tree editable="bottom">
+                      <field name="employee" string="Name"/>
+                      <field name="role" string="Role"/>
+                    </tree>
+                  </field>
+                </page>
+              </notebook>
+            </sheet>
+          </form>
+        </field>
+    </record>
+
+
+        <!-- View for Committee Types Creation Tree-->
+
+
+  <record id="view_committee_type_creation_tree" model="ir.ui.view">
+      <field name="name">view.committee.creation.tree</field>
+      <field name="model">committee.committee</field>
+      <field name="arch" type="xml">
+          <tree string="Committee Creation">
+              <field name="committee_type"/>
+              <field name="start_date"/>
+              <field name="end_date"/>
+              <field name="state"/>
+          </tree>
+      </field>
+    </record>
+
+
+
+        <!-- Action for Committee Types Configuration-->
+
+    <record id="action_committee_type_config" model="ir.actions.act_window">
+      <field name="name">Committee Types Configuration</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">committee.configuration</field>
+      <field name="view_type">form</field>
+      <field name="view_id" eval="False"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to create a new Committee Type.
+        </p>
+      </field>
+    </record>
+
+
+        <record id="action_committee_type_config_view2" model="ir.actions.act_window.view">
+          <field eval="1" name="sequence"/>
+          <field name="view_mode">tree</field>
+          <field name="view_id" ref="view_committee_type_config_tree"/>
+          <field name="act_window_id" ref="action_committee_type_config"/>
+        </record>
+
+
+        <record id="action_committee_type_config_view1" model="ir.actions.act_window.view">
+          <field eval="2" name="sequence"/>
+          <field name="view_mode">form</field>
+          <field name="view_id" ref="view_committee_type_config_form"/>
+          <field name="act_window_id" ref="action_committee_type_config"/>
+        </record>
+
+        <!-- Action for Committee creation Configuration-->
+
+    <record id="action_committee_type_creation" model="ir.actions.act_window">
+      <field name="name">Committee Type Creation</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">committee.committee</field>
+      <field name="view_type">form</field>
+      <field name="view_id" eval="False"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to define a new Committee Type.
+        </p>
+      </field>
+    </record>
+
+
+        <record id="action_committee_type_creation_view1" model="ir.actions.act_window.view">
+          <field eval="1" name="sequence"/>
+          <field name="view_mode">tree</field>
+          <field name="view_id" ref="view_committee_type_creation_tree"/>
+          <field name="act_window_id" ref="action_committee_type_creation"/>
+        </record>
+
+
+        <record id="action_committee_type_creation_view2" model="ir.actions.act_window.view">
+          <field eval="2" name="sequence"/>
+          <field name="view_mode">form</field>
+          <field name="view_id" ref="view_committee_type_creation_form"/>
+          <field name="act_window_id" ref="action_committee_type_creation"/>
+        </record>
+
+
+        <!-- Menus for Committee Types Configuration-->
+
+  <menuitem id="menu_committee_type_configuration" name="Committee Configuration" parent="stock.menu_stock_config_settings" sequence="10" groups="stock.group_stock_manager"/>
+
+  <menuitem id="sub_menu_committee_type_configuration" parent="menu_committee_type_configuration" name="Committees' Types" sequence="0" groups="stock.group_stock_manager" action="action_committee_type_config"/>
+
+        <!-- Menus for Committee Creation Configuration-->
+
+  <menuitem id="menu_committee_creation" sequence="1" parent="menu_committee_type_configuration" name="Committees" groups="stock.group_stock_manager,stock.group_stock_user" action="action_committee_type_creation"/>
+
+              
+  </data>
+</odoo>

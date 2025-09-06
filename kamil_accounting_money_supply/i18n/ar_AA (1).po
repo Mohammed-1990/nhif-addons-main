@@ -1,0 +1,382 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_money_supply
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-10 08:20+0000\n"
+"PO-Revision-Date: 2019-09-10 08:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,supply_type:0
+msgid "39 Receipt"
+msgstr "أورنيك 39"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__access_warning
+msgid "Access warning"
+msgstr "تحذير الوصول"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__account_number
+msgid "Account Number"
+msgstr "رقم الحساب"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.module.category,name:kamil_accounting_money_supply.kamil_accounting_Bank_or_cash_supply_group
+msgid "Accounting - Cash/Bank Supply"
+msgstr "الحسابات - تغذية بنك/خزينة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.module.category,description:kamil_accounting_money_supply.kamil_accounting_Bank_or_cash_supply_group
+msgid "Accounting Access Right"
+msgstr ""
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__amount_in_words
+msgid "Amount In Words"
+msgstr "المبلغ بالاحرف"
+
+#. module: kamil_accounting_money_supply
+#: code:addons/kamil_accounting_money_supply/models/money_supply.py:71
+#, python-format
+msgid "Amount Must be more than Zero"
+msgstr "المبلغ لابد من ان يكون اكبر من صفر"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,supply_type:0
+msgid "Bank Supply"
+msgstr "تغذية بنك"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__bank_or_cash_account_id
+msgid "Bank/Cash Account"
+msgstr "حساب البنك/الخزينة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__journal_id
+msgid "Bank/Save Journal"
+msgstr "يومية البنك/الخزينة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.actions.act_window,name:kamil_accounting_money_supply.action_money_supply
+#: model:ir.model,name:kamil_accounting_money_supply.model_money_supply
+#: model:ir.ui.menu,name:kamil_accounting_money_supply.money_supply_menu
+msgid "Bank/Save Supply"
+msgstr "تغذية بنك/خزينة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__clipboard_number
+msgid "Clipboard Number"
+msgstr "رقم الحافظة"
+
+#. module: kamil_accounting_money_supply
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_money_supply.money_supply_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,state:0
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العميل"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_accounting_money_supply
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_money_supply.money_supply_form_view
+msgid "Journal Enteries"
+msgstr "قيود اليومية"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model,name:kamil_accounting_money_supply.model_account_move
+msgid "Journal Entries"
+msgstr "قيود اليومية"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_account_move__money_supply_id
+#: model:res.groups,name:kamil_accounting_money_supply.money_supply_group
+msgid "Money Supply"
+msgstr "تغذية البنك/الخزينة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__move_id
+msgid "Move"
+msgstr "الحركة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__ref
+msgid "Number"
+msgstr "الرقم"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,activity_state:0
+msgid "Overdue"
+msgstr "المتأخرة"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,activity_state:0
+msgid "Planned"
+msgstr "المخططة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__partner_id
+msgid "Receipt From"
+msgstr "وصل من"
+
+#. module: kamil_accounting_money_supply
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_money_supply.money_supply_form_view
+msgid "Reset To Draft"
+msgstr "إعادة لمسودة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__supply_type
+msgid "Supply Type"
+msgstr "نوع التغذية"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_money_supply
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_money_supply.money_supply_form_view
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: kamil_accounting_money_supply
+#: selection:money.supply,state:0
+msgid "Validated"
+msgstr "معتمد"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,field_description:kamil_accounting_money_supply.field_money_supply__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_accounting_money_supply
+#: model:ir.model.fields,help:kamil_accounting_money_supply.field_money_supply__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+

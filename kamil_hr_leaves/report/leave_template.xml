@@ -1,0 +1,79 @@
+<odoo>
+
+    <report id="leave_report"
+            model="leave.wizard"
+            string="Report Employee Leave"
+            report_type="qweb-html"
+            name="kamil_hr_leaves.leave_report_view"
+            menu="False"/>
+
+    <template id="leave_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            
+            <br/>
+             <div class="text-center" style="font:500;">
+                <p>الادارة العامة للموارد البشرية
+                <br/>
+                تقرير الاجازات</p>
+            </div>
+            <br/>
+            <div class="page">
+                <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                      <thead style="display: table-header-group;" class="table-active">
+                            <th class="text-center fit">#</th>
+                            <th class="text-center fit">Employee Name</th>
+                            <th class="text-center fit">Department</th>
+                            <th class="text-center fit">Leave Type</th>
+                            <th class="text-center fit">Leave Days</th>
+                            <th class="text-center fit">Days Number</th>
+                            <th class="text-center fit" style="width:10%;">Start Date</th>
+                            <th class="text-center fit" style="width:10%;">End Date</th>
+                        </thead>
+                            <t t-set="count" t-value="1"/>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr style="page-break-inside: avoid;">
+                                    <td class="text-center" heidht="5">
+                                        <span t-esc="count"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['employee']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['department']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['leave']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['days_number']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['month_days_number']"/>
+                                    </td>
+                                    <td class="text-center" style="width:10%;">
+                                        <span t-esc="doc['date_from']"/>
+                                    </td>
+                                    <td class="text-center" style="width:10%;">
+                                        <span t-esc="doc['date_to']"/>
+                                    </td>
+                                </tr>
+                                <t t-set="count" t-value="count+1"/>
+                            </t>
+                    </table>
+                    <br/><br/><br/>
+                    <p style="font:600;" dir="rtl">
+                        <span>
+                        <strong class="text-center">قسم شؤون العاملين</strong>
+                            ......................................................................
+                        </span>
+                        <span><br/><br/>
+                        <strong class="text-center">الادارة العامة للموارد البشرية</strong>
+                            ......................................................................
+                        </span>
+                    </p>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

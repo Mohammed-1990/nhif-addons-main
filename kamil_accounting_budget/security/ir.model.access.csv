@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_budget_account_value,access_budget_account_value,model_budget_account_value,account.group_account_user,1,1,1,1
+
+
+,,,,,,,
+access_budget_operation,access_budget_operation,model_account_budget_operation,account.group_account_user,1,1,1,1
+
+
+access_budget_operation_line,access_budget_operation_line,model_account_budget_operation_line,account.group_account_user,1,1,1,1

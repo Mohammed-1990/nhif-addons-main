@@ -1,0 +1,1014 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_assets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-26 13:26+0000\n"
+"PO-Revision-Date: 2020-06-26 13:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "<b>\n"
+"											الاجمالي\n"
+"										</b>"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "<b>تقرير الاصول</b><br/> <br/>"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "<b>سجل الاصول</b><br/> في"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "<b>ملخص الاصول</b><br/> في"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_account_account
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__accusition_earning_account_id
+msgid "Acqusition Earnings Account"
+msgstr "حساب مكاسب الحيازة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__acqusition_lost_account_id
+msgid "Acqusition Losts Account"
+msgstr "حساب خسائر الحيازة"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:45
+#: code:addons/kamil_accounting_assets/models/asset.py:51
+#: code:addons/kamil_accounting_assets/models/asset.py:57
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+#, python-format
+msgid "Add Asset"
+msgstr "إضافة الاصل"
+
+#. module: kamil_accounting_assets
+#: selection:asset.operations.report,operation_type:0
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Addition"
+msgstr "إضافة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__additions
+msgid "Additions"
+msgstr "الإضافات"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__admin_id
+msgid "Administration"
+msgstr "اﻹدارة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__amount_firt_period
+msgid "Amount first Period"
+msgstr "المبلغ أول المدة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__percentage
+msgid "Annual Depreciation Percentage"
+msgstr "نسبة الاهلاك السنوية"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__annual_dep_ratio
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Annual Depreciation Ratio"
+msgstr "نسبة الاهلاك السنوية %"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Annual Depreciation Value"
+msgstr "قيمة الاهلاك السنوي"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__annual_dep_value
+msgid "Annual Depreciation value"
+msgstr "قيمة الاهلاك السنوي %"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__asset_id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_move__asset_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Asset"
+msgstr "الأصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:543
+#: code:addons/kamil_accounting_assets/models/asset.py:578
+#, python-format
+msgid "Asset Asset"
+msgstr "الاصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_account_asset_category
+msgid "Asset Category"
+msgstr "فئة الأصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__depreciation_id
+msgid "Asset Depreciation"
+msgstr "إهلاك الأصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:107
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+#, python-format
+msgid "Asset Dispose"
+msgstr "التخلص من الاصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.actions.act_window,name:kamil_accounting_assets.action_asset_evaluation
+#: model:ir.model,name:kamil_accounting_assets.model_asset_evaluation
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__asset_evaluation
+msgid "Asset Evaluation"
+msgstr "تقييم الأصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:127
+#: code:addons/kamil_accounting_assets/models/asset.py:531
+#: code:addons/kamil_accounting_assets/models/asset.py:537
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+#, python-format
+msgid "Asset Freez"
+msgstr "تجمييد الاصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:467
+#, python-format
+msgid "Asset Grant"
+msgstr "منح الاصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:500
+#, python-format
+msgid "Asset Lost"
+msgstr "فقد اصل او تلفه"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__name
+msgid "Asset Name"
+msgstr "اسم الأصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:85
+#: code:addons/kamil_accounting_assets/models/asset.py:252
+#: code:addons/kamil_accounting_assets/models/asset.py:259
+#: code:addons/kamil_accounting_assets/models/asset.py:267
+#: code:addons/kamil_accounting_assets/models/asset.py:278
+#: code:addons/kamil_accounting_assets/models/asset.py:284
+#: code:addons/kamil_accounting_assets/models/asset.py:292
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+#, python-format
+msgid "Asset Re-evaluation"
+msgstr "إعادة تقييم الأصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.actions.act_window,name:kamil_accounting_assets.action_wiz_asset_report
+#: model:ir.actions.report,name:kamil_accounting_assets.asset_report
+msgid "Asset Report"
+msgstr "تقرير الأصول"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:367
+#: code:addons/kamil_accounting_assets/models/asset.py:391
+#: code:addons/kamil_accounting_assets/models/asset.py:414
+#: code:addons/kamil_accounting_assets/models/asset.py:424
+#, python-format
+msgid "Asset Sale"
+msgstr "بيع اصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__account_loss_id
+msgid "Asset Scrap :Lost Account"
+msgstr "تخريد الأصل : خسائر حيازة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__account_profit_id
+msgid "Asset Scrap :Profit Account"
+msgstr "تخريد الأصل : مكاسب حيازة"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:149
+#: code:addons/kamil_accounting_assets/models/asset.py:566
+#: code:addons/kamil_accounting_assets/models/asset.py:572
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+#, python-format
+msgid "Asset unFreez"
+msgstr "فك تجميد الاصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_account_asset_asset
+msgid "Asset/Revenue Recognition"
+msgstr "إثبات الأصل/الربح"
+
+#. module: kamil_accounting_assets
+#: model:ir.actions.act_window,name:kamil_accounting_assets.action_asset_operations_report
+#: model:ir.ui.menu,name:kamil_accounting_assets.report_assets_operations_menu
+msgid "Assets Operations Report"
+msgstr "تقرير عمليات الاصول"
+
+#. module: kamil_accounting_assets
+#: model:ir.actions.act_window,name:kamil_accounting_assets.action_asset_registry_report
+#: model:ir.actions.report,name:kamil_accounting_assets.assets_registry_report
+#: model:ir.ui.menu,name:kamil_accounting_assets.report_assets_registry_menu
+msgid "Assets Registry Report"
+msgstr "تقرير سجل الاصول"
+
+#. module: kamil_accounting_assets
+#: model:ir.actions.act_window,name:kamil_accounting_assets.action_asset_report
+#: model:ir.actions.report,name:kamil_accounting_assets.assets_operations_report
+#: model:ir.actions.report,name:kamil_accounting_assets.assets_summary_report
+#: model:ir.ui.menu,name:kamil_accounting_assets.report_assets_menu
+msgid "Assets Report"
+msgstr "تقرير ملخص الاصول"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__balance_1_1
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Balance 1/1"
+msgstr "رصيد 1/1"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_operation_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_evaluation_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_operations_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_registry_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_wiz_asset_report_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__category_id
+msgid "Category"
+msgstr "الفئة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__asset_category_ids
+msgid "Catgories"
+msgstr "الانواع"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/account_asset.py:271
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__collection_id
+#, python-format
+msgid "Collection"
+msgstr "تجميع"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__company_id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_evaluation_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__count
+msgid "Count"
+msgstr "عدد"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+msgid "Current Value"
+msgstr "القيمة الحالية"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__inv_move_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__dept_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__depreciation_sum_value
+msgid "Depreciation Sum Value"
+msgstr "قيمة مجموع الإهلاك"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__depreciation_value
+msgid "Depreciation Value"
+msgstr "قيمة الإستهلاك"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__dep_firt_period
+msgid "Depreciation first Period"
+msgstr "إهلاك أول المدة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__dep_last_period
+msgid "Depreciation last Period"
+msgstr "إهلاك آخر المدة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_asset_report_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_operations_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_registry_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.operation,type:0
+#: selection:asset.operations.report,operation_type:0
+msgid "Dispose"
+msgstr "تخلص"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__dispose_type
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__dispose_type
+msgid "Dispose Type"
+msgstr "نوع التخلص"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.asset,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation__evaluation
+msgid "Evaluation"
+msgstr "تقييم"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__account_evaluation_id
+msgid "Evaluation Account"
+msgstr "حساب تقييم الاصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__exclusion
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Exclusion"
+msgstr "إقصاء"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.operation,type:0
+#: selection:asset.operations.report,operation_type:0
+msgid "Freez"
+msgstr "تجمييد"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.asset,state:0
+msgid "Freezed"
+msgstr "مجمد"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.operation,dispose_type:0
+#: selection:asset.operations.report,dispose_type:0
+msgid "Grant"
+msgstr "منح"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__grant_account_id
+msgid "Grant Account"
+msgstr "حساب المنح"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__account_grant_kind_id
+msgid "Grant Kind Account"
+msgstr "منحة حساب النوع"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.asset,state:0
+msgid "Granted"
+msgstr "تم منحه"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_asset_report_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_operations_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_registry_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__inv_account_id
+msgid "Inventory Account"
+msgstr "حساب المخزن"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+msgid "Inventory Info"
+msgstr "معلومات المخزن"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__inv_move_id
+msgid "Inventory Journal Entry"
+msgstr "يومية المخزن"
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_stock_location
+msgid "Inventory Locations"
+msgstr "مكان الجرد"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_product_product__is_asset
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_product_template__is_asset
+msgid "Is Asset"
+msgstr "هل هو أصل ؟"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_account__is_asset_account
+msgid "Is Asset Account"
+msgstr "هل هو حساب اصل ؟"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/account_asset.py:289
+#: model:ir.model,name:kamil_accounting_assets.model_account_move
+#, python-format
+msgid "Journal Entries"
+msgstr "قيود اليومية"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_asset_report_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_operations_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_registry_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_report_kamil_accounting_assets_assets_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__last_revaluation_value
+msgid "Last Revaluation Value"
+msgstr "قيمة اخر اعادة تقييم"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_evaluation__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_registry_report__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_report__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_wiz_account_asset_report__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__location_id
+msgid "Location"
+msgstr "المكان"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_stock_location__account_id
+msgid "Location Account"
+msgstr "حساب المخزن"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.asset,state:0
+#: selection:account.asset.operation,dispose_type:0
+#: selection:asset.operations.report,dispose_type:0
+msgid "Lost or Damaged"
+msgstr "فقد او تلف"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__account_maintenance_id
+msgid "Mainteneance Asset Account"
+msgstr "حساب صيانة الاصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__name
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "No"
+msgstr "م"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__old_value
+msgid "Old Value"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.asset,state:0
+msgid "Open"
+msgstr "جاري"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__operation_ids
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_operation_form
+msgid "Operation"
+msgstr "العملية"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_operation_form
+msgid "Operation Date"
+msgstr "تاريخ العملية"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_asset_operations_report__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:363
+#: code:addons/kamil_accounting_assets/models/asset.py:387
+#, python-format
+msgid "Please Add Acqusition Earnings Account to the Category"
+msgstr "رجاءاً اضف حساب ارباح الحيازة لفئة الاصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:410
+#: code:addons/kamil_accounting_assets/models/asset.py:497
+#, python-format
+msgid "Please Add Acqusition Lost Account to the Category"
+msgstr " رجاءاً اضف حساب خسائر الحيازة لفئة الاصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:463
+#, python-format
+msgid "Please Add Grants Account to the Category"
+msgstr "رجاءاً اضف حساب المنح لفئة الاصل"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:71
+#: code:addons/kamil_accounting_assets/models/asset.py:556
+#: code:addons/kamil_accounting_assets/models/asset.py:593
+#, python-format
+msgid "Please Add Inventory Account !"
+msgstr "الرجاء إضافة حساب المخزن!"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/asset.py:209
+#, python-format
+msgid "Please Add Re-evaluation Account to the Category"
+msgstr "رجاءاً اضف حساب اعادة التقييم لفئة الاصل"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_operations_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_registry_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_asset_report_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.view_wiz_asset_report_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_operation_form
+msgid "Process"
+msgstr "العملية"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_product_template
+msgid "Product Template"
+msgstr "قالب الصنف"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+msgid "Purchase Date"
+msgstr "تاريخ الشراء"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.operation,type:0
+#: selection:asset.operations.report,operation_type:0
+msgid "Re-evaluation"
+msgstr "إعادة تقييم"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__revaluation_account_id
+msgid "Re-evaluation Account"
+msgstr "حساب اعادة التقييم"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__code
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_category__code
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_collection_collection
+msgid "Revenues Collection"
+msgstr "تحصيل الإيرادات"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.operation,dispose_type:0
+#: selection:asset.operations.report,dispose_type:0
+msgid "Sale"
+msgstr "بيع"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__salvage
+msgid "Salvage"
+msgstr "القيمة التخريدية"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__scrap_count
+msgid "Scrap Count"
+msgstr "عدد الخردة"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_form_inherit
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.asset,state:0
+msgid "Sold"
+msgstr "تم البيع"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/account_asset.py:146
+#: code:addons/kamil_accounting_assets/models/account_asset.py:162
+#: code:addons/kamil_accounting_assets/models/account_asset.py:180
+#: code:addons/kamil_accounting_assets/models/account_asset.py:196
+#: code:addons/kamil_accounting_assets/models/account_asset.py:214
+#, python-format
+msgid "The Location is not exsist!!!"
+msgstr "المخزن غير موجود"
+
+#. module: kamil_accounting_assets
+#: code:addons/kamil_accounting_assets/models/account_asset.py:144
+#: code:addons/kamil_accounting_assets/models/account_asset.py:160
+#: code:addons/kamil_accounting_assets/models/account_asset.py:178
+#: code:addons/kamil_accounting_assets/models/account_asset.py:194
+#: code:addons/kamil_accounting_assets/models/account_asset.py:212
+#, python-format
+msgid "The salvage value is not exsist!!!"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_operation__value
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.asset_report_template
+msgid "Value"
+msgstr "القيمة"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,help:kamil_accounting_assets.field_account_asset_asset__state
+msgid "When an asset is created, the status is 'Draft'.\n"
+"If the asset is confirmed, the status goes in 'Running' and the depreciation lines can be posted in the accounting.\n"
+"You can manually close an asset when the depreciation is over. If the last line of depreciation is posted, the asset automatically goes in that status."
+msgstr "عند إنشاء أصل، فإن حالته تكون 'مسودة'.\n"
+"إذا تم تأكيد الأصل، فإن حالته تتحول إلى 'جاري'، ويمكن ترحيل بنود الإهلاك في الحسابات.\n"
+"يمكنك إقفال الأصل يدويًا عندما ينتهي الإهلاك. إذا تم ترحيل آخر بند قيد إهلاك، ستتغير حالة الأصل تلقائيًا إلى مقفل."
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_wiz_account_asset_report
+msgid "Wizard Account Asset Report"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__depreciation_year
+msgid "Year Depreciation"
+msgstr "اهلاك العام"
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_account_asset_asset__years_use
+msgid "Years of use"
+msgstr "عدد سنوات الاستخدام"
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_account_asset_operation
+msgid "account.asset.operation"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model.fields,field_description:kamil_accounting_assets.field_collection_collection__asset_id
+msgid "asset"
+msgstr "الاصل"
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_asset_operations_report
+msgid "asset.operations.report"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_asset_registry_report
+msgid "asset.registry.report"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_asset_report
+msgid "asset.report"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_report_kamil_accounting_assets_asset_report_template
+msgid "report.kamil_accounting_assets.asset_report_template"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_report_kamil_accounting_assets_assets_operations_template
+msgid "report.kamil_accounting_assets.assets_operations_template"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_report_kamil_accounting_assets_assets_registry_template
+msgid "report.kamil_accounting_assets.assets_registry_template"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_report_kamil_accounting_assets_assets_template
+msgid "report.kamil_accounting_assets.assets_template"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model:ir.model,name:kamil_accounting_assets.model_report_kamil_accounting_reports_assets_template
+msgid "report.kamil_accounting_reports.assets_template"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: selection:account.asset.operation,type:0
+#: selection:asset.operations.report,operation_type:0
+msgid "unFreez"
+msgstr "فك التجميد"
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "إسم الاصل"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "إهلاك 1/1"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "إهلاك العام"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "استبعاد العام"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "اضافة العام"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "الإدارة"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "الإهلاك السنوي"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "الادارة"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "الاستبعاد"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "الاضافات"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "التكلفة التاريخية"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "العمر الافتراضي"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "الفئة"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "القسم"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "القيمة الاجمالية"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "القيمة الحالية"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "القيمة الدفترية اخر المدة"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "القيمة الدفترية اول المدة"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "القيمة عند التخلص"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "اﻹجمالي"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "تاريخ إعادة التقييم"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "تاريخ التخلص"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "تاريخ الشراء"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "رصيد 1/1"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "رصيد 31/12"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "رقم الاصل"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "سنوات الاستخدام حتى الان"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "صافي اﻷصل"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "قيمة اخر إعادة تقييم"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "قيمة اعادة التقييم"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "قيمة الاهلاك السنوية"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "مجمع اﻹهلاك"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "مخصص الاهلاك اخر المدة"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "مخصص الاهلاك اول المدة"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_template
+msgid "معدل اﻹهلاك"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_operations_template
+msgid "نسبة الاهلاك السنوية"
+msgstr ""
+
+#. module: kamil_accounting_assets
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_assets.assets_registry_template
+msgid "نوع الاصل"
+msgstr ""
+

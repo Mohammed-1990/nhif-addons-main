@@ -1,0 +1,289 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_personal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20191127\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-11 11:58+0000\n"
+"PO-Revision-Date: 2019-12-11 11:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__cause_injury
+msgid "Cause Injury"
+msgstr "سبب الإصابه"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__employee_no
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__job_id
+msgid "Functional"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_personal
+#: model:ir.ui.menu,name:kamil_hr_personal.personal_menu
+msgid "HR Personal"
+msgstr "شؤون العاملين"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_personal
+#: model_terms:ir.ui.view,arch_db:kamil_hr_personal.work_injuries_form_view
+msgid "Injurie No"
+msgstr "رقم الإصابه"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__name
+msgid "Injurie Number"
+msgstr "رقم الإصابة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__medical_report
+msgid "Medical report"
+msgstr "التقرير الطبي"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط القادم"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط القادم"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_personal
+#: selection:work.injuries,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: kamil_hr_personal
+#: selection:work.injuries,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_personal
+#: selection:work.injuries,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__type_injury
+msgid "Type Injury"
+msgstr "نوع الاصابه"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__unit_id
+msgid "Unit"
+msgstr "الادارة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,field_description:kamil_hr_personal.field_work_injuries__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_personal
+#: model:ir.model.fields,help:kamil_hr_personal.field_work_injuries__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_personal
+#: model:ir.actions.act_window,name:kamil_hr_personal.action_work_injuries
+#: model:ir.ui.menu,name:kamil_hr_personal.work_injuries_menu
+msgid "Work Injuries"
+msgstr "إصابات العمل"
+
+#. module: kamil_hr_personal
+#: model:ir.model,name:kamil_hr_personal.model_work_injuries
+msgid "work.injuries"
+msgstr ""
+

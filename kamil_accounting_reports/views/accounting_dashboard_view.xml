@@ -1,0 +1,40 @@
+<odoo>
+	<data>
+
+
+
+		<record id="accounting_dashboard_inherit" model="ir.ui.view">
+			<field name="name">Accounting Dashboard Inherit</field>
+			<field name="model">account.journal</field>
+			<field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
+			<field name="arch" type="xml">
+			
+				<div class="col-5 o_kanban_primary_left" position="replace">
+					<div class="col-5 o_kanban_primary_left">
+
+						<div class="row">
+                            <div class="col-7">
+                                <span title="Balance">Balance</span>
+                            </div>
+                            <div class="col-5 text-right">
+                                <span>
+                                	<field name="available_balance_str"/>
+                                </span>
+                            </div>
+                        </div>
+					</div>
+				</div>
+
+				<div class="col-7 o_kanban_primary_right" position="replace">
+					<div class="col-7 o_kanban_primary_right">
+						
+					</div>
+				</div>
+
+
+			</field>
+		</record>
+
+	</data>
+</odoo>
+

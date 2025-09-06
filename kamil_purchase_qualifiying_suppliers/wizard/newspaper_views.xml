@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Form Announcement-->
+	<record id="view_announcement_newspeper_form" model="ir.ui.view">
+		<field name="name">announcement.newspeper.form</field>
+		<field name="model">tender.announcement</field>
+		<field name="arch" type="xml">
+			<form string="Create Newspeper">
+				<sheet>
+					<field name="newspaper_ids"  string="Newspapers that were advertised"  >
+	    				<tree editable="buttom" >
+	    					<field name="newsPaper_id" required="1" options="{'no_create':'1'}"/>
+	    					<field name="release_date" required="1"/>
+	    					<field name="release_number" required="1"/>
+	    					<field name="attach" required="1"/>
+	    				</tree>
+	    			</field>
+					<footer>
+						<button name="action_newspaper" string="Confirm" type="object" class="btn-primary" />
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>	
+			</form>
+		</field>
+	</record>
+
+
+	<!-- Action Newspeper-->
+	<act_window 
+		id="action_announcement_newspaper"
+		name="Newspapers"
+		res_model="tender.announcement" src_model="purchase.requisition"
+		view_mode="form"
+		view_id="view_announcement_newspeper_form"
+		target="new"
+	/>
+
+
+</odoo>
+
+
+

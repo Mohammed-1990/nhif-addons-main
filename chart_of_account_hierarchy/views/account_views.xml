@@ -1,0 +1,62 @@
+<odoo>
+
+    <record id="account_account_form_lucky" model="ir.ui.view">
+        <field name="name">account.account.form.lucky</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+        <data>
+
+            <xpath expr="//sheet/group" position="before">
+				<div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" groups="hr.group_hr_user" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+			</xpath>
+
+            <field name="code" position="before">
+                <field name="parent_id" domain="[('id', 'not in', [active_id])]"/>
+            </field>
+
+
+            <field name="group_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+
+            <field name="deprecated" position="after">
+                <field name="child_ids">
+                   <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                   </tree>
+                </field>
+            </field>
+        </data>
+        </field>
+    </record>
+
+    <record id="account_tree_hierarchy_lucky" model="ir.ui.view">
+        <field name="name">account.account.tree.hierarchy.lucky</field>
+        <field name="model">account.account</field>
+        <field name="field_parent">child_ids</field>
+        <field name="arch" type="xml">
+            <tree string="Chart of accounts" toolbar="1" >
+                <field name="code" context="{'form_view_ref': 'account.view_account_form'}"/>
+                <field name="name"/>
+                <field name="user_type_id"/>
+                <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+<!--     <record id="action_account_hierarchy_lucky2" model="ir.actions.act_window">
+        <field name="name">Chart of Accounts</field>
+        <field name="res_model">account.account</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('parent_id','=',False)]</field>
+    </record>
+
+    <menuitem action="action_account_hierarchy_lucky2" id="menu_action_account_hierarchy_lucky2" parent="account.menu_analytic_accounting" name="Chart of Accounts" sequence="105"/> -->
+</odoo>

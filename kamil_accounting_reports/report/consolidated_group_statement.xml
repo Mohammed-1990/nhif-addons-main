@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+
+	<report 
+		id="consolidated_group_statement_report"
+		model="consolidated.group.statement.wizard"
+		string="Consolidated Group Statement"
+		report_type="qweb-html"
+		name="kamil_accounting_reports.consolidated_g_stm_temp"
+	/>
+
+
+
+	<template id="consolidated_g_stm_temp">
+
+			<t t-call="web.html_container">
+				<div class="page" >
+					<div class="text-center">
+						<img t-if="company_id_logo" t-att-src="image_data_uri(company_id_logo)" class="img-fluid oe_slides_channel_thumbnail" alt="Logo"/>
+					</div>
+					<br/><br/>
+				<div dir="rtl" style="float:right;text-align:start;">
+					<a href="#" target="_blank">
+						<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-printer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11 2H5a1 1 0 0 0-1 1v2H3V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h-1V3a1 1 0 0 0-1-1zm3 4H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v1H2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+							<path fill-rule="evenodd" d="M11 9H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM5 8a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5z"/>
+							<path d="M3 7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+						</svg>
+					</a>
+				</div>
+				<br/><br/>					
+					<div class="text-center">
+						<strong>
+							تقرير كشف مجموعة
+							<br/>
+							للفترة من <t t-esc="date_from"/>
+							الى <t t-esc="date_to"/>
+						</strong>
+					</div>
+
+
+				<div dir="rtl" style="float:right;text-align:start;">
+                        <strong>
+                        	<br/>
+                            إسم المجموعة : <t t-esc="account_name"/>
+                            <br/>
+                            <t t-if="len(selected_company_names) == 1">
+                        		الفرع :
+                        	</t>
+
+                        	<t t-if="len(selected_company_names) > 1">
+                        		الفروع :
+                        	</t>
+                        	<t t-foreach="selected_company_names" t-as="company_name">
+                        		<t t-esc="company_name"/>,
+                        	</t>
+                        </strong>
+                    </div>
+                    <br/>
+
+					<div class="text-center">
+
+						<table dir="rtl" border="1" class="text-right  table-bordered" style="float:right;text-align:start;">
+							<thead>
+								<tr style="page-break-inside: avoid;" class="table-active">
+									
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										#
+									</td>
+
+									<t t-if="companies_len > 1">
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											الفرع
+										</td>
+									</t>
+
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										الحساب
+									</td>
+
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										رقم الايضاح
+									</td>
+
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										<t t-if="account_type == 'revenues'">
+											الربط المقدر
+										</t>
+										<t t-if="account_type == 'expenses'">
+											المبلغ المصديق
+										</t>
+										<t t-if="account_type in ['assets','liabilities'] ">
+											الرصيد الإفتتاحي
+										</t>
+									</td>
+
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										المدين
+									</td>
+
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										الدائن
+									</td>
+									<t t-if="account_type in ['assets','liabilities']">
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											صافي المدة
+										</td>
+									</t>
+									<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										الرصيد
+									</td>
+									<t t-if="companies_len > 1">
+										<td class="text-center fit" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											إجمالي الفرع
+										</td>
+									</t>
+
+								</tr>
+							</thead>
+							<tbody>
+								<t t-set="count" t-value="1"/>
+
+								<t t-if="companies_len == 1">
+								<t t-foreach="group_account_lines" t-as="doc">
+									
+									<tr style="page-break-inside: avoid;">
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center fit" t-esc="count"/>
+											<t t-set="count" t-value="count + 1"/>
+											</div>
+										</td>
+
+										<t t-if="companies_len > 1">
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['branch']"/>
+												</div>
+											</td>
+										</t>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">											
+											<a data-toggle="collapse" t-attf-href="#col#{doc['account_id']}" aria-expanded="false" >
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['account_name']"/>
+												</div>
+											</a>
+										</td>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px; text-center">
+
+											<t t-esc="doc['clarification_number']"/>
+										</td>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-if="account_type in ['revenues','expenses']">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['budget_value']"/>
+												</div>
+											</t>
+											<t t-if="account_type in ['assets','liabilities']">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['opening_balance']"/>
+												</div>
+											</t>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc['total_debit']"/>
+											</div>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc['total_credit']"/>
+											</div>
+										</td>
+
+										<t t-if="account_type in ['assets','liabilities']">
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['period_net']"/>
+												</div>
+											</td>
+										</t>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc['total_balance']"/>
+											</div>
+										</td>
+										<t t-if="companies_len > 1">
+
+											<t t-if="not doc['is_state_total_added'] ">
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;" t-att-rowspan="state_account_count_dict[ doc['branch_id'] ]">
+													<strong>
+														<div style="float:right;text-align:start;">
+														<t t-esc="branch_total_dict[ doc['branch_id'] ]"/>
+														</div>
+													</strong>
+
+
+												</td>
+											</t>
+										</t>
+									</tr>
+									<tr class="collapse out" t-attf-id="col#{doc['account_id']}">
+										<t t-foreach="doc['account_lines']" t-as="account_line">
+											<tr class="collapse out" t-attf-id="col#{doc['account_id']}">
+												<td></td>
+												<t t-if="companies_len > 1">
+													<td></td>
+												</t>
+											
+												<t t-if="account_line['group_by_partners_in_reports'] == True">
+													<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">											
+														<a data-toggle="collapse" t-attf-href="#col#{account_line['account_id']}" aria-expanded="false" >
+															<div style="margin-right:50px;">
+																<t class="text-center" t-esc="account_line['account_name']"/>
+															</div>
+														</a>
+													</td>
+												</t>
+												<t t-if="account_line['group_by_partners_in_reports'] == False">
+													<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+														<div style="margin-right:50px;">
+															<t t-esc="account_line['account_name']"/>
+														</div>
+													</td>
+												</t>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">	
+													<t class="text-center" t-esc="account_line['clarification_number']"/>
+												</td>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<t t-if="account_type in ['revenues','expenses']">
+															<t class="text-center" t-esc="account_line['budget_value']"/>
+														</t>
+														<t t-if="account_type in ['assets','liabilities']">
+															<t class="text-center" t-esc="account_line['opening_balance']"/>
+														</t>
+													</div>
+												</td>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<div style="float:right;text-align:start;">
+															<t t-esc="account_line['total_debit']"/>
+														</div>
+													</div>
+												</td>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<div style="float:right;text-align:start;">
+															<t t-esc="account_line['total_credit']"/>
+														</div>
+													</div>
+												</td>
+												
+												<t t-if="account_type in ['assets','liabilities']">
+													<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+														<div style="margin-right:50px;">
+															<div style="float:right;text-align:start;">
+																<t class="text-center" t-esc="account_line['period_net']"/>
+															</div>
+														</div>
+													</td>
+												</t>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<div style="float:right;text-align:start;">
+															<t t-esc="account_line['total_balance']"/>
+														</div>
+													</div>
+												</td>
+											</tr>
+
+											<tr class="collapse out" t-attf-id="col#{account_line['account_id']}">
+												<t t-foreach="account_line['partners_balance_lines']" t-as="partner_line">
+													<tr class="collapse out" t-attf-id="col#{account_line['account_id']}">
+														
+
+														<td></td>
+														<t t-if="companies_len > 1">
+															<td></td>
+														</t>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_name']"/>
+																</div>
+															</div>
+														</td>
+														<td/>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_opening_balance']"/>
+																</div>
+															</div>
+														</td>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_total_debit']"/>
+																</div>
+															</div>
+														</td>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_total_credit']"/>
+																</div>
+															</div>
+														</td>
+
+														<t t-if="account_type in ['assets','liabilities']">
+															<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+																<div style="margin-right:50px;">
+																	<div style="float:right;text-align:start;">
+																		<t class="text-center" t-esc="partner_line['partner_period_net']"/>
+																	</div>
+																</div>
+															</td>
+														</t>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_total_balance']"/>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</t>
+											</tr>
+										</t>
+									</tr>
+								</t>
+								</t>
+
+
+								<t t-if="companies_len > 1">
+								<t t-set="count_" t-value="1"/>
+								<t t-foreach="group_account_lines_all" t-as="doc_all">
+
+									<tr style="page-break-inside: avoid;">
+										<t t-if="doc_all['is_group'] == 'group'">
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center fit" t-esc="count_"/>
+											<t t-set="count_" t-value="count_ + 1"/>
+											</div>
+										</td>
+										<td colspan="2" style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<a data-toggle="collapse" t-attf-href="#col#{doc_all['account_id']}" aria-expanded="false" >
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc_all['account_name']"/>
+												</div>
+											</a>
+										</td>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px; text-center">
+
+											<t t-esc="doc_all['clarification_number']"/>
+										</td>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-if="account_type in ['revenues','expenses']">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc_all['budget_value']"/>
+												</div>
+											</t>
+											<t t-if="account_type in ['assets','liabilities']">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc_all['opening_balance']"/>
+												</div>
+											</t>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc_all['total_debit']"/>
+											</div>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc_all['total_credit']"/>
+											</div>
+										</td>
+
+										<t t-if="account_type in ['assets','liabilities']">
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc_all['period_net']"/>
+												</div>
+											</td>
+										</t>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc_all['total_balance']"/>
+											</div>
+										</td>
+										</t>
+									</tr>
+
+								<tr class="collapse out" t-attf-id="col#{doc_all['account_id']}">
+								<t t-foreach="group_account_lines" t-as="doc">
+									<t t-if="doc_all['account_code'] == doc['account_code']">
+									<tr class="collapse out" t-attf-id="col#{doc_all['account_id']}">
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+
+											</div>
+										</td>
+
+
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['branch']"/>
+												</div>
+											</td>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<a data-toggle="collapse" t-attf-href="#col#{doc['branch_id_code']}" aria-expanded="false" >
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['account_name']"/>
+												</div>
+											</a>
+										</td>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px; text-center">
+
+											<t t-esc="doc['clarification_number']"/>
+										</td>
+
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-if="account_type in ['revenues','expenses']">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['budget_value']"/>
+												</div>
+											</t>
+											<t t-if="account_type in ['assets','liabilities']">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['opening_balance']"/>
+												</div>
+											</t>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc['total_debit']"/>
+											</div>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc['total_credit']"/>
+											</div>
+										</td>
+
+										<t t-if="account_type in ['assets','liabilities']">
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<div style="float:right;text-align:start;">
+												<t class="text-center" t-esc="doc['period_net']"/>
+												</div>
+											</td>
+										</t>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<div style="float:right;text-align:start;">
+											<t class="text-center" t-esc="doc['total_balance']"/>
+											</div>
+										</td>
+
+												<td>
+													<strong>
+														<div style="float:right;text-align:start;">
+														<t t-esc="branch_total_dict[ doc['branch_id'] ]"/>
+														</div>
+													</strong>
+
+
+												</td>
+									</tr>
+									<tr class="collapse out" t-attf-id="col#{doc['branch_id_code']}">
+										<t t-foreach="doc['account_lines']" t-as="account_line">
+											<tr class="collapse out" t-attf-id="col#{doc['branch_id_code']}">
+												<td></td>
+												<td></td>
+
+												<t t-if="account_line['group_by_partners_in_reports'] == True">
+													<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+														<a data-toggle="collapse" t-attf-href="#col#{account_line['account_id']}" aria-expanded="false" >
+															<div style="margin-right:50px;">
+																<t class="text-center" t-esc="account_line['account_name']"/>
+															</div>
+														</a>
+													</td>
+												</t>
+												<t t-if="account_line['group_by_partners_in_reports'] == False">
+													<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+														<div style="margin-right:50px;">
+															<t t-esc="account_line['account_name']"/>
+														</div>
+													</td>
+												</t>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<t class="text-center" t-esc="account_line['clarification_number']"/>
+												</td>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<t t-if="account_type in ['revenues','expenses']">
+															<t class="text-center" t-esc="account_line['budget_value']"/>
+														</t>
+														<t t-if="account_type in ['assets','liabilities']">
+															<t class="text-center" t-esc="account_line['opening_balance']"/>
+														</t>
+													</div>
+												</td>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<div style="float:right;text-align:start;">
+															<t t-esc="account_line['total_debit']"/>
+														</div>
+													</div>
+												</td>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<div style="float:right;text-align:start;">
+															<t t-esc="account_line['total_credit']"/>
+														</div>
+													</div>
+												</td>
+
+												<t t-if="account_type in ['assets','liabilities']">
+													<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+														<div style="margin-right:50px;">
+															<div style="float:right;text-align:start;">
+																<t class="text-center" t-esc="account_line['period_net']"/>
+															</div>
+														</div>
+													</td>
+												</t>
+
+												<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+													<div style="margin-right:50px;">
+														<div style="float:right;text-align:start;">
+															<t t-esc="account_line['total_balance']"/>
+														</div>
+													</div>
+												</td>
+											</tr>
+
+											<tr class="collapse out" t-attf-id="col#{account_line['account_id']}">
+												<t t-foreach="account_line['partners_balance_lines']" t-as="partner_line">
+													<tr class="collapse out" t-attf-id="col#{account_line['account_id']}">
+
+
+														<td></td>
+														<td></td>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_name']"/>
+																</div>
+															</div>
+														</td>
+														<td/>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_opening_balance']"/>
+																</div>
+															</div>
+														</td>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_total_debit']"/>
+																</div>
+															</div>
+														</td>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_total_credit']"/>
+																</div>
+															</div>
+														</td>
+
+														<t t-if="account_type in ['assets','liabilities']">
+															<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+																<div style="margin-right:50px;">
+																	<div style="float:right;text-align:start;">
+																		<t class="text-center" t-esc="partner_line['partner_period_net']"/>
+																	</div>
+																</div>
+															</td>
+														</t>
+														<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+															<div style="margin-right:70px;">
+																<div style="float:right;text-align:start;">
+																	<t t-esc="partner_line['partner_total_balance']"/>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</t>
+											</tr>
+										</t>
+									</tr>
+								</t>
+								</t>
+									</tr>
+							</t>
+								</t>
+								<tr class="table-active">
+									<t t-if="companies_len > 1">
+										<td colspan="3" class="text-center">
+											<strong>
+												الإجمالي
+											</strong>
+										</td>
+									</t>
+									<t t-if="companies_len == 1">
+										<td colspan="2" class="text-center">
+											<strong>
+												الإجمالي
+											</strong>
+										</td>
+									</t>
+									<td/>
+
+									<td class="text-center fit">
+										<t t-if="account_type in ['revenues','expenses']">
+											<t t-esc="total_budget_value"/>
+										</t>
+										<t t-if="account_type in ['assets','liabilities'] ">
+											<t t-esc="total_opening_balance"/>
+										</t>
+									</td>
+									<td class="text-center fit">
+										<t t-esc="total_total_debit"/>
+									</td>
+									<td class="text-center fit">
+										<t t-esc="total_total_credit"/>
+									</td>
+									<t t-if="account_type in ['assets','liabilities']">
+										<td class="text-center fit">
+											<t t-esc="total_period_net"/>
+										</td>
+									</t>
+									<td class="text-center fit">
+										<t t-esc="total_total_balance"/>
+									</td>
+									<t t-if="companies_len > 1">
+										<td class="text-center fit">
+											<t t-esc="total_total_balance"/>
+										</td>
+									</t>
+
+								</tr>
+							</tbody>
+						</table>
+						<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+						<br/><br/><br/><br/>
+						.
+					</div>
+				</div>
+			</t>
+	</template>
+
+
+	<record id="account_account_form_inheritss" model="ir.ui.view">
+		<field name="name">account.account.forminheritss</field>
+		<field name="model">account.account</field>
+		<field name="inherit_id" ref="account.view_account_form"/>
+		<field name="arch" type="xml">
+			<field name="tax_ids" position="before">
+				<field name="group_by_partners_in_reports"/>
+			</field>
+		</field>
+	</record>
+
+
+
+</odoo>

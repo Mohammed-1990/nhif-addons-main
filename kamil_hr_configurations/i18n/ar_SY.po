@@ -1,0 +1,1389 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_configurations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-02 08:59+0000\n"
+"PO-Revision-Date: 2021-03-02 08:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__is_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_configurations
+#: selection:incentive.type,duration:0
+msgid "Annual"
+msgstr "سنوي"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__annual_leaves_days
+msgid "Annual Leaves Days"
+msgstr "عدد ايام الاجازه السنويه"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_appointment_type
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__appointment_type
+#: model:ir.ui.menu,name:kamil_hr_configurations.appointment_type_menu
+msgid "Appointment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_configurations
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.appointment_type_form_view
+msgid "Appointment type name"
+msgstr "اسم نوع التعيين"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__branch_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_configurations
+#: sql_constraint:allowances.allowances:0
+#: sql_constraint:appointment.type:0
+#: sql_constraint:city.city:0
+#: sql_constraint:competencie.model:0
+#: sql_constraint:document.document:0
+#: sql_constraint:functional.category:0
+#: sql_constraint:functional.degree:0
+#: sql_constraint:functional.record:0
+#: sql_constraint:functional.task:0
+#: sql_constraint:hr.employee:0
+#: sql_constraint:hr.function:0
+#: sql_constraint:qualifcation.type:0
+#: sql_constraint:religion.model:0
+#: sql_constraint:state.model:0
+#: sql_constraint:university.model:0
+#: sql_constraint:university.specialization:0
+msgid "Can not create two records with the same name!"
+msgstr "لا يمكن إنشاء اكثر من سجل بنفس الاسم"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__amount
+msgid "Card Amount"
+msgstr "القيمة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__city_id
+msgid "City"
+msgstr "المدينة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__name
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.city_city_form_view
+msgid "City Name"
+msgstr "إسم المدينة"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_city_city
+#: model:ir.ui.menu,name:kamil_hr_configurations.city_city_model_menu
+msgid "Citys"
+msgstr "المدن"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_competencie
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__competencie_id
+#: model:ir.ui.menu,name:kamil_hr_configurations.competencie_menu
+msgid "Competencie"
+msgstr "الجدارة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__competencie_line_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.hr_function_form_view
+msgid "Competencies"
+msgstr "الجدارات"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__create_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__tax_id
+msgid "Deduction"
+msgstr "الخصم"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__definition
+msgid "Definition"
+msgstr "تعريف"
+
+#. module: kamil_hr_configurations
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.functional_degree_form_view
+msgid "Degree Name"
+msgstr "اسم الدرجة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__display_name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_document
+#: model:ir.ui.menu,name:kamil_hr_configurations.document_menu
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__eligible
+msgid "Eligible"
+msgstr "الإستحقاق"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_hr_employee
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__employee_ids
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__employee_ids
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: kamil_hr_configurations
+#: selection:appointment.type,eligible:0
+msgid "First and Second Class"
+msgstr "فصل اول وثاني"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_hr_function
+#: model:ir.ui.menu,name:kamil_hr_configurations.hr_function_menu
+msgid "Function"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_configurations
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.hr_function_form_view
+msgid "Function Name"
+msgstr "اسم الوظيفة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_employee__category_id
+msgid "Functional Category"
+msgstr "الفئة الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.ui.menu,name:kamil_hr_configurations.functional_category_menu
+msgid "Functional Cateogry"
+msgstr "الفئه الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_functional_category
+msgid "Functional Catogry"
+msgstr "الفئه الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_employee__degree_id
+msgid "Functional Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_functional_degree
+msgid "Functional Degrees"
+msgstr "الدرجات الوظيفيه"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__task_id
+msgid "Functional Task"
+msgstr "المهمة الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_functional_task
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__task_line_ids
+#: model:ir.ui.menu,name:kamil_hr_configurations.functional_task_menu
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.hr_function_form_view
+msgid "Functional Tasks"
+msgstr "المهام الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.ui.menu,name:kamil_hr_configurations.functional_degree_menu
+msgid "Functionals Degrees"
+msgstr "الدرجات الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__message_unread
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__message_needaction
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__message_has_error
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__incentive_type_id
+msgid "Incentive name"
+msgstr "اسم الحافز"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__indicators
+msgid "Indicators"
+msgstr "المؤشرات"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__job_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__job_requirements
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.hr_function_form_view
+msgid "Job Requirements"
+msgstr "متطلبات الوظيفة"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_job_title
+#: model:ir.ui.menu,name:kamil_hr_configurations.job_title_menu
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model____last_update
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__write_date
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_configurations
+#: selection:incentive.type,duration:0
+msgid "Midterm"
+msgstr "نص سنوي"
+
+#. module: kamil_hr_configurations
+#: selection:incentive.type,duration:0
+msgid "Monthly"
+msgstr "شهري"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_incentive_type__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__name
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_configurations
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.competencie_model_form_view
+msgid "Name Of Competencie"
+msgstr "اسم الجدارة"
+
+#. module: kamil_hr_configurations
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.functional_category_form_view
+msgid "Name Of Functional Category"
+msgstr "اسم الفئه الوظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__bonus_no
+msgid "Nature Of Work Allowance Percentage"
+msgstr "نسبه علاوه طبيعه العمل"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_configurations
+#: selection:incentive.type,duration:0
+msgid "Other"
+msgstr "أخرى"
+
+#. module: kamil_hr_configurations
+#: selection:allowances.allowances,activity_state:0
+#: selection:appointment.type,activity_state:0
+#: selection:cards.cards,activity_state:0
+#: selection:city.city,activity_state:0
+#: selection:competencie.model,activity_state:0
+#: selection:document.document,activity_state:0
+#: selection:functional.category,activity_state:0
+#: selection:functional.degree,activity_state:0
+#: selection:functional.record,activity_state:0
+#: selection:functional.task,activity_state:0
+#: selection:hr.function,activity_state:0
+#: selection:job.title,activity_state:0
+#: selection:qualifcation.type,activity_state:0
+#: selection:religion.model,activity_state:0
+#: selection:retirement.age,activity_state:0
+#: selection:state.model,activity_state:0
+#: selection:university.model,activity_state:0
+#: selection:university.specialization,activity_state:0
+msgid "Overdue"
+msgstr "متاخر"
+
+#. module: kamil_hr_configurations
+#: selection:allowances.allowances,activity_state:0
+#: selection:appointment.type,activity_state:0
+#: selection:cards.cards,activity_state:0
+#: selection:city.city,activity_state:0
+#: selection:competencie.model,activity_state:0
+#: selection:document.document,activity_state:0
+#: selection:functional.category,activity_state:0
+#: selection:functional.degree,activity_state:0
+#: selection:functional.record,activity_state:0
+#: selection:functional.task,activity_state:0
+#: selection:hr.function,activity_state:0
+#: selection:job.title,activity_state:0
+#: selection:qualifcation.type,activity_state:0
+#: selection:religion.model,activity_state:0
+#: selection:retirement.age,activity_state:0
+#: selection:state.model,activity_state:0
+#: selection:university.model,activity_state:0
+#: selection:university.specialization,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_qualifcation_type
+#: model:ir.ui.menu,name:kamil_hr_configurations.qualifcation_type_menu
+msgid "Qualifcation Type"
+msgstr "نوع المؤهل"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__amount
+msgid "Qualifcation allowance amount"
+msgstr "قيمه بدل المؤهل"
+
+#. module: kamil_hr_configurations
+#: selection:incentive.type,duration:0
+msgid "Quarterly"
+msgstr "ربع سنوي"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_record_functional
+#: model:ir.ui.menu,name:kamil_hr_configurations.record_functional_menu
+msgid "Record Functional"
+msgstr "وظائف السجل"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_religion_model
+#: model:ir.ui.menu,name:kamil_hr_configurations.hr_religion_model_menu
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_line__required_degree
+msgid "Required Degree"
+msgstr "الدرجة المطلوبة"
+
+#. module: kamil_hr_configurations
+#: code:addons/kamil_hr_configurations/models/configurations_models.py:163
+#, python-format
+msgid "Required degree for \"%s\" can not be zero"
+msgstr "النسبه المطلوبه لا يمكن ان تكون صفر"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__retirement_age
+#: model:ir.ui.menu,name:kamil_hr_configurations.Retirement_age_menu
+msgid "Retirement Age"
+msgstr "سن التقاعد"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_retirement
+msgid "Retirement Age "
+msgstr "سن التقاعد"
+
+#. module: kamil_hr_configurations
+#: code:addons/kamil_hr_configurations/models/configurations_models.py:259
+#, python-format
+msgid "Retirement age can't be zero"
+msgstr "لا يمكن أن يكون سن التقاعد صفرًا"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__amount
+msgid "Social allowance amount"
+msgstr "قيمه العلاوه "
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_allowances
+#: model:ir.ui.menu,name:kamil_hr_configurations.social_allowances_menu
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.allowances_form_view
+msgid "Social allowances"
+msgstr "علاوات إجتماعية"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_cards
+#: model:ir.ui.menu,name:kamil_hr_configurations.cards_menu
+msgid "Sponsorship"
+msgstr "الكفالة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__state_id
+msgid "Statee"
+msgstr "الولاية"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_state_model
+msgid "States"
+msgstr "الولايات"
+
+#. module: kamil_hr_configurations
+#: model:ir.ui.menu,name:kamil_hr_configurations.state_model_menu
+msgid "Stateses"
+msgstr "الولايات"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__activity_state
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_configurations
+#: selection:allowances.allowances,activity_state:0
+#: selection:appointment.type,activity_state:0
+#: selection:cards.cards,activity_state:0
+#: selection:city.city,activity_state:0
+#: selection:competencie.model,activity_state:0
+#: selection:document.document,activity_state:0
+#: selection:functional.category,activity_state:0
+#: selection:functional.degree,activity_state:0
+#: selection:functional.record,activity_state:0
+#: selection:functional.task,activity_state:0
+#: selection:hr.function,activity_state:0
+#: selection:job.title,activity_state:0
+#: selection:qualifcation.type,activity_state:0
+#: selection:religion.model,activity_state:0
+#: selection:retirement.age,activity_state:0
+#: selection:state.model,activity_state:0
+#: selection:university.model,activity_state:0
+#: selection:university.specialization,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_configurations
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.university_model_from_view
+msgid "University Name"
+msgstr "اسم الجامعه"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_university_specialization
+msgid "University Specialization"
+msgstr "التخصص الجامعي"
+
+#. module: kamil_hr_configurations
+#: model:ir.actions.act_window,name:kamil_hr_configurations.action_university_model
+#: model:ir.ui.menu,name:kamil_hr_configurations.university_menu
+msgid "Universitys"
+msgstr "الجامعات"
+
+#. module: kamil_hr_configurations
+#: model:ir.ui.menu,name:kamil_hr_configurations.university_secialization_menu
+msgid "Universitys Specialization"
+msgstr "التخصصات"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_configurations
+#: model_terms:ir.ui.view,arch_db:kamil_hr_configurations.cards_form_view
+msgid "Warranty Name"
+msgstr "إسم الكفالة"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_allowances_allowances__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_appointment_type__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_cards_cards__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_city_city__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_competencie_model__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_document_document__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_category__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_degree__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_record__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_functional_task__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_hr_function__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_job_title__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_qualifcation_type__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_religion_model__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_retirement_age__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_state_model__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_model__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_configurations.field_university_specialization__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_configurations
+#: model:ir.model.fields,help:kamil_hr_configurations.field_allowances_allowances__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_appointment_type__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_cards_cards__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_city_city__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_competencie_model__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_document_document__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_category__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_degree__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_record__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_functional_task__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_hr_function__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_job_title__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_qualifcation_type__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_religion_model__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_retirement_age__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_state_model__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_model__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_configurations.field_university_specialization__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_configurations
+#: selection:appointment.type,eligible:0
+msgid "Without First Class"
+msgstr "بدون فصل اول"
+
+#. module: kamil_hr_configurations
+#: selection:appointment.type,eligible:0
+msgid "Without Second Class"
+msgstr "بدون فصل ثاني"
+
+#. module: kamil_hr_configurations
+#: code:addons/kamil_hr_configurations/models/configurations_models.py:257
+#, python-format
+msgid "You can't activate more than one"
+msgstr "لا يمكنك تنشيط أكثر من واحد"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_allowances_allowances
+msgid "allowances.allowances"
+msgstr "علاوة اجتماعيه"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_appointment_type
+msgid "appointment.type"
+msgstr "نوع تعيين"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_cards_cards
+msgid "cards.cards"
+msgstr "كفاله"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_city_city
+msgid "city.city"
+msgstr "مدينه"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_competencie_line
+msgid "competencie.line"
+msgstr ""
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_competencie_model
+msgid "competencie.model"
+msgstr "جداره"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_document_document
+msgid "document.document"
+msgstr "مستند"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_functional_category
+msgid "functional.category"
+msgstr "فئه وظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_functional_degree
+msgid "functional.degree"
+msgstr "درجة وظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_functional_record
+msgid "functional.record"
+msgstr "وظيفة سجل"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_functional_task
+msgid "functional.task"
+msgstr "مهام وظيفية"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_functional_task_line
+msgid "functional.task.line"
+msgstr ""
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_hr_function
+msgid "hr.function"
+msgstr "وظيفه"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_incentive_type
+msgid "incentive.type"
+msgstr "نوع الحافز"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_job_title
+msgid "job.title"
+msgstr "مسمي وظيفي"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_qualifcation_type
+msgid "qualifcation.type"
+msgstr "نوع المؤهل"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_religion_model
+msgid "religion.model"
+msgstr "ديانه"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_retirement_age
+msgid "retirement.age"
+msgstr "سن التقاعد"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_state_model
+msgid "state.model"
+msgstr "ولايه"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_university_model
+msgid "university.model"
+msgstr "جامعه"
+
+#. module: kamil_hr_configurations
+#: model:ir.model,name:kamil_hr_configurations.model_university_specialization
+msgid "university.specialization"
+msgstr "التخصص الجامعي"
+

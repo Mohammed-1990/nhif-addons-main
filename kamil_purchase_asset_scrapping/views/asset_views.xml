@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Asset Inherit-->
+	<record id="product_template_only_form_view_inherit" model="ir.ui.view">
+		<field name="name">product.template.product.form.inherit</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_only_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='options']/div[3]" position="after">
+				<div>
+					<field name="is_car"/>
+					<label for="is_car"/>
+				</div>
+			</xpath>
+
+			<xpath expr="//notebook/page[1]" position="after">
+				<page string="Car Inf" attrs="{'invisible':[('is_car','=',False)]}">
+					<group col="4">
+						<field name="car_name" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="car_number" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="shasea_number" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="palte_number" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="car_model" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="machine" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="car_color" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="fuel" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="origin" attrs="{'required':[('is_car','=',True)]}"/>
+						<field name="branch_id" options="{'no_create':'1'}" attrs="{'required':[('is_car','=',True)]}"/>
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
+
+	
+</odoo>

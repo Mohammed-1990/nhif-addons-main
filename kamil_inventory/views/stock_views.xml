@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Stock Picking Inherit Tree -->
+    <record id="receipt_operation_tree" model="ir.ui.view">
+      <field name="name">Receipt Operation tree</field>
+      <field name="model">stock.picking</field>
+      <field name="inherit_id" ref="stock.vpicktree"/>
+      <field name="arch" type="xml">
+
+        <field name="state" position="before">
+          <field name="picking_type_code" invisible="1"/>
+          <field name="custome_state" string="Current Operation" attrs="{'invisible': [('picking_type_code','not in',['incoming'])]}"/>
+        </field>
+      </field>
+    </record>
+
+    <!-- Stock Picking Inherit Form -->
+    <record id="view_stock_picking_form_inherit" model="ir.ui.view">
+      <field name="name">view.stock.picking.form.inherit</field>
+      <field name="model">stock.picking</field>
+      <field name="inherit_id" ref="stock.view_picking_form"/>
+      <field name="arch" type="xml">
+        <header position="inside">
+          
+          <button name="do_receipt" string="Do Receipt" type="object" attrs="{'invisible':['|',('custome_state','!=','initial'),('picking_type_code','!=','incoming')]}" class="oe_highlight"/>
+
+          <button name="do_quality" string="Do Quality Check" type="object" attrs="{'invisible':['|',('custome_state','!=','quality'),('picking_type_code','!=','incoming')]}" class="oe_highlight"/>
+        </header>
+
+        <xpath expr="//button[@name='action_toggle_is_locked']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+
+        <xpath expr="//button[@name='button_scrap']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+
+
+        <button name="do_quality" string="Do Quality Check" type="object" attrs="{'invisible':['|',('custome_state','!=','quality'),('picking_type_code','!=','incoming')]}" class="oe_highlight"/>
+
+
+        <xpath expr="//field[@name='location_id']" position="before">
+          <field name="type_field" invisible="1"/>
+          <field name="final_state" invisible="1"/>
+          <field name="hide_validate_button" invisible="1"/>
+          <field name="need_request_id" readonly="1" attrs="{'invisible':[('need_request_id','=',False)]}"/>
+          <field name="internal_transfer_type" attrs="{'invisible':[('picking_type_code','!=','internal')],'required':[('picking_type_code','=','internal')],'readonly':[('state','!=','draft')]}"/>
+        </xpath>
+<!--        <xpath expr="//field[@name='scheduled_date']" position="after">-->
+<!--          <field name="twilve_seen"-->
+<!--            attrs="{'invisible':['|','|',-->
+<!--            ('picking_type_code','not in',['internal','incoming']),-->
+<!--            ('state','not in',['confirmed','done'])],-->
+<!--            'required':[('picking_type_code','in',['internal','incoming']),('state','=','confirmed'),'|',('final_state','=',True)],-->
+<!--            'readonly':[('state','=','done')]}"/>-->
+<!--        </xpath>-->
+
+       <xpath expr="//button[@name='button_validate']" position="attributes">
+          <attribute name='attrs'>{'invisible':['|',('hide_validate_button','=',True),('state','not in','assigned')]}</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='picking_type_id']" position="attributes">
+          <attribute name="readonly">'1'</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='picking_type_id']" position="after">
+          <field name="vendor_invoice" attrs="{'required':[('custome_state','in',['initial']),('type_field','=',True)], 'readonly':[('custome_state','in',['quality','final','done'])], 'invisible':[('type_field','=',False)]}"/>
+
+          <field name="vendor_invoice_file" attrs="{'required':[('custome_state','in',['initial']),('type_field','=',True)], 'readonly':[('custome_state','in',['quality','final','done'])], 'invisible':[('type_field','=',False)]}"/> 
+        </xpath>
+
+        <xpath expr="//field[@name='origin']" position="after">
+
+          <field name="twilve_seen"
+            attrs="{'required':[('custome_state','in',['final']),('type_field','=',True)], 'readonly':[('custome_state','in',['initial','quality','done'])], 'invisible':['|',('type_field','=',False),('custome_state','not in',('final','done'))]}"/>
+          <field name="final_invoice" attrs="{'required':[('custome_state','in',['final']),('type_field','=',True)], 'readonly':[('custome_state','in',['initial','quality','done'])], 'invisible':['|',('type_field','=',False),('custome_state','not in',('final','done'))]}"/>
+
+          <field name="final_invoice_file" attrs="{'required':[('custome_state','in',['final']),('type_field','=',True)], 'readonly':[('custome_state','in',['initial','quality','done'])], 'invisible':['|',('type_field','=',False),('custome_state','not in',('final','done'))]}"/>
+
+          <field name="twilve_seen2" 
+            attrs="{
+            'required':[('custome_state','in',['draft']),('picking_type_code','!=','internal'),'|',('state','in',['assigned','done'])]
+            ,'invisible':['|',('picking_type_code','!=','internal'),('internal_transfer_type','=','local')],'readonly':[('state','!=','draft')]}"/>
+        </xpath>                                                                                    
+        <xpath expr="//field[@name='partner_id']" position="attributes">
+          <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+        </xpath>
+        
+        <xpath expr="//field[@name='scheduled_date']" position="attributes">
+          <attribute name="readonly">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='origin']" position="attributes">
+          <attribute name="readonly">1</attribute>
+          <attribute name="attrs">{'invisible':[('internal_transfer_type','=','local')]}</attribute>
+        </xpath>
+
+        <xpath expr="//notebook/page[1]" position="before">
+          <page string="Branch Transfer Information" name="branch_transfer" attrs="{'invisible':['|',('picking_type_code','!=','internal'),('internal_transfer_type','=','local')]}">
+            <group col="4">
+              <field name="info_company_id" readonly="1"/>
+              <field name="info_location_id" readonly="1"/>
+
+              <field name="branch_id" domain="[('id','!=',company_id)]" attrs="{'required':[('internal_transfer_type','=','branch')],'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+              <field name="branch_location" attrs="{'required':[('internal_transfer_type','=','branch')],'readonly':['|',('branch_id','=',False),('state','!=','draft')]}" domain="[('company_id','=',branch_id),('usage','in',['internal'])]" options="{'no_create':True}"/>
+
+              <field name="branch_scheduled_date" attrs="{'required':[('internal_transfer_type','=','branch')],'readonly':[('state','!=','draft')]}" domain="[('company_id','=',branch_id)]"/>
+            </group>
+          </page>
+        </xpath>
+
+        <xpath expr="//field[@name='state']" position="attributes">
+          <attribute name="attrs">{'invisible':[('type_field','=',True)]}</attribute>
+        </xpath>
+        
+        <xpath expr="//header" position="inside">
+          <field name="custome_state" widget="statusbar" attrs="{'invisible':[('type_field','=',False)]}"/>
+        </xpath>
+
+        <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='quantity_done']" position="replace">
+           <field 
+            name="quantity_done" 
+            string="Done" attrs="{'readonly':[('parent.custome_state','!=','final')]}"/>
+         </xpath>
+        
+        <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_uom_qty']" position="after">
+          
+          <field name="initial_qty" attrs="{'required':[('parent.custome_state','in',['initial'])],'readonly':[('parent.custome_state','not in',['initial'])],'column_invisible':[('parent.type_field','=',False)]}"/>
+          
+          <field name="qc_qty" attrs="{'required':[('parent.custome_state','in',['quality'])],'readonly':[('parent.custome_state','not in',['quality'])],'column_invisible':[('parent.type_field','=',False)]}"/>
+        </xpath>
+
+        <xpath expr="//notebook/page[2]" position="after">
+          <page string="QC Committee" attrs="{'invisible':[('custome_state','in', ['initial'])]}">
+            <group>
+              <field name="qc_committee_id" attrs="{'readonly':[('custome_state','!=','quality')]}" options="{'no_create':'1'}"/>
+            </group>
+            <field name="qc_committee_member_ids" attrs="{'readonly':[('custome_state','!=','quality')]}" >
+              <tree create="0">
+                <field name="employee"/>
+                <field name="role"/>
+              </tree>
+            </field>
+          </page>
+          <page string="QC Result" attrs="{'invisible':[('custome_state','in', ['initial'])]}">
+            <group>
+              <field name="qc_file" attrs="{'required':[('custome_state','in',['quality'])]}"/>
+              <field name="qc_result"/>
+            </group>
+          </page>
+        </xpath>
+        
+        <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="attributes">
+          <attribute name="options">{'no_create':True}</attribute>
+        </xpath>
+
+        <xpath expr="//button[@name='action_confirm']" position="attributes">
+          <attribute name="groups">kamil_inventory.group_inventory_employee</attribute>
+        </xpath>
+
+        <xpath expr="//button[@name='action_picking_move_tree']" position="after">
+          <div class="oe_button_box" name="button_box">
+              <button class="oe_stat_button" type="object" name="show_moves" icon="fa-bars"  string="Journal Enteries" attrs="{'invisible':['|',('state','not in',['done']),('picking_type_code','not in',['outgoing'])]}"/>
+          </div>
+        </xpath>
+      </field>
+    </record>
+
+
+    <!-- Stock picking type form inherit -->
+    <record id="view_stock_picking_type_form_inherit" model="ir.ui.view">
+      <field name="name">view.stock.picking.type.form.inherit</field>
+      <field name="model">stock.picking.type</field>
+      <field name="inherit_id" ref="stock.view_picking_type_form"/>
+      <field name="arch" type="xml">
+        <field name="barcode" position="after">
+          <field name="for_emloyees_request"/>
+        </field>
+      </field>
+    </record>
+
+
+    <!-- Stock location form inherit -->
+    <record id="view_stock_location_form_inherit" model="ir.ui.view">
+      <field name="name">view.stock.lcoation.form.inherit</field>
+      <field name="model">stock.location</field>
+      <field name="inherit_id" ref="stock.view_location_form"/>
+      <field name="arch" type="xml">
+        <field name="return_location" position="after">
+          <field name="is_for_internal_transfer"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="product_move_search" model="ir.ui.view">
+        <field name="name">stock.move.line.search</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.stock_move_line_view_search"/>
+        <field name="arch" type="xml">
+                <xpath expr="//search" position="replace">
+                        <search string="Stock Moves">
+                <field name="picking_id" string="Reference"/>
+                <field name="product_id"/>
+                <field name="location_id" groups="stock.group_stock_multi_locations"/>
+                <field name="location_dest_id" groups="stock.group_stock_multi_locations"/>
+                <separator/>
+                <filter string="To Do" name="todo" domain="[('state','not in', ['done', 'draft'])]"/>
+                <filter string="Done" name="done" domain="[('state','=','done')]"/>
+                <separator/>
+                <filter string="Receptions" name="incoming" domain="[('picking_id.picking_type_id.code','=','incoming')]"/>
+                <filter string="Deliveries" name="outgoing" domain="[('picking_id.picking_type_id.code','=','outgoing')]"/>
+                <filter string="Internal" name="internal" domain="[('picking_id.picking_type_id.code','=','internal')]"/>
+                <filter string="Manufacturing" name="manufacturing" domain="[('picking_id.picking_type_id.code','=','mrp_operation')]"/>
+
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Status" name="by_state" domain="[]"  context="{'group_by':'state'}"/>
+                    <filter string="Product" name="groupby_product_id" domain="[]" context="{'group_by': 'product_id'}"/>
+                    <filter string="location" name="groupby_location_id" domain="[]" context="{'group_by': 'location_id'}"/>
+                </group>
+            </search>
+                </xpath>
+        </field>
+    </record>
+    
+
+</odoo>

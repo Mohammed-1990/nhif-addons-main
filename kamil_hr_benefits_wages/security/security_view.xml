@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <!-- Loans -->
+        <record id="loan_comp_rule" model="ir.rule">
+            <field name="name">Loan multi company rule</field>
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record id="loan_line_comp_rule" model="ir.rule">
+            <field name="name">Loan line multi company rule</field>
+            <field name="model_id" ref="model_hr_loan_line"/>
+            <field name="domain_force">[('company_id','child_of',[user.company_id.id]),('loan_id','!=',False)]</field>
+        </record>
+
+        <record id="loan_type_comp_rule" model="ir.rule">
+            <field name="name">Loan type multi company rule</field>
+            <field name="model_id" ref="model_loan_type"/>
+            <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <!-- Projects -->
+
+        <record id="hr_projects_comp_rule" model="ir.rule">
+            <field name="name">Projects multi company rule</field>
+            <field name="model_id" ref="model_hr_projects_request"/>
+            <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record id="project_type_comp_rule" model="ir.rule">
+            <field name="name">Projects type multi company rule</field>
+            <field name="model_id" ref="model_hr_projects"/>
+            <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <!-- incentives -->
+
+        <record id="hr_incentive_comp_rule" model="ir.rule">
+            <field name="name">hr incentive multi company rule</field>
+            <field name="model_id" ref="model_hr_incentive"/>
+            <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record id="hr_incentive_type_comp_rule" model="ir.rule">
+            <field name="name">hr incentive type multi company rule</field>
+            <field name="model_id" ref="model_incentive_type"/>
+            <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <!-- payroll -->
+
+        <record id="hr_payslip_multi_comp_rule" model="ir.rule">
+            <field name="name">hr payslip multi company rule</field>
+            <field name="model_id" ref="hr_payroll.model_hr_payslip"/>
+            <field name="domain_force">['|',('branch_id','=',[user.company_id.id]),('payslip_run_id.branch_id','child_of',[user.company_id.id]),]</field>
+        </record>
+
+        <record id="hr_payslip_run_multi_comp_rule" model="ir.rule">
+            <field name="name">hr payslip run multi company rule</field>
+            <field name="model_id" ref="hr_payroll.model_hr_payslip_run"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+	</data>
+</odoo>

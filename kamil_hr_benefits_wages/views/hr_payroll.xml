@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<menuitem 
+			id="benefits_wages_menu" 
+			name="Benefits and Wages" 
+			groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_executive_office_group,kamil_hr_security.hr_financial_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group,kamil_hr_security.hr_committee_of_loans_group"/>
+		
+		<menuitem 
+			id="hr_payroll.menu_hr_payroll_root" 
+			name="Payrolll" 
+			sequence="45"  
+			parent="benefits_wages_menu"
+			groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_benefits_wages_section_hq_group,kamil_hr_security.hr_internal_auditor_group"
+			/>
+
+		<menuitem 
+			id="hr_payroll.menu_hr_payroll_configuration" 
+			name="Configuration" 
+			parent="hr_payroll.menu_hr_payroll_root"
+            sequence="100" 
+            groups="kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+		<!-- Salaries of the inhabitants -->
+		<record id="action_hr_payslip_run_inhabitants" model="ir.actions.act_window">
+	        <field name="name">Inhabitants Batches</field>
+	        <field name="res_model">hr.payslip.run</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="hr_payroll.hr_payslip_run_filter"/>
+	        <field name="context">{'default_is_temporary':False,}</field>
+	        <field name="domain">[('is_temporary','=',False)]</field>
+	    </record>
+
+        <menuitem 
+        	action="action_hr_payslip_run_inhabitants" 
+        	id="menu_hr_payslip_run_inhabitants" 
+        	parent="hr_payroll.menu_hr_payroll_root"
+        	string="Inhabitants Batches"
+        	groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group"
+        	sequence="2"
+        	/>
+
+
+        <record id="action_view_hr_payslip_inhabitants" model="ir.actions.act_window">
+	        <field name="name">Inhabitants Payslips</field>
+	        <field name="res_model">hr.payslip</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="hr_payroll.view_hr_payslip_filter"/>
+	    	<field name="context">{'default_is_temporary':False,'create':False}</field>
+	    	<field name="domain">[('is_temporary','=',False)]</field>
+	    </record>
+        	
+		<menuitem 
+			action="action_view_hr_payslip_inhabitants" 
+			id="menu_hr_payslip_inhabitants" 
+			parent="hr_payroll.menu_hr_payroll_root" 
+			string="Inhabitants Payslips"
+			groups="kamil_hr_security.hr_benefits_wages_section_hq_group"
+			sequence="1"
+			/>
+			
+
+
+		<!-- hide these menus -->
+
+		<record model="ir.ui.menu" id="hr_payroll.menu_department_tree">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_no_one')])]"/>
+		</record>
+
+
+		<record model="ir.ui.menu" id="hr_payroll.menu_hr_payslip_run">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_no_one')])]"/>
+		</record>
+
+
+		<menuitem
+	        id="hr_payroll.hr_contract_advantage_template_menu_action"
+	        action="hr_payroll.hr_contract_advantage_template_action"
+	        parent="hr_payroll.menu_hr_payroll_configuration"
+	        sequence="50"
+	        groups="base.group_no_one"
+	    />
+
+	    <menuitem 
+	    	id="hr_payroll.menu_hr_payroll_global_settings" 
+	    	name="Settings"
+            parent="hr_payroll.menu_hr_payroll_configuration" sequence="0" 
+            action="hr_payroll.action_hr_payroll_configuration" 
+            groups="base.group_no_one"/>
+
+	    <menuitem
+	        id="hr_payroll.menu_action_hr_contribution_register_form"
+	        action="hr_payroll.action_contribution_register_form"
+	        parent="hr_payroll.menu_hr_payroll_configuration"
+	        sequence="14"
+	        groups="base.group_no_one"
+	    />
+
+	    <menuitem 
+	    	id="hr_payroll.menu_hr_payroll_global_settings" 
+	    	name="Settings"
+            parent="hr_payroll.menu_hr_payroll_configuration" 
+            sequence="0" 
+            action="hr_payroll.action_hr_payroll_configuration" 
+            groups="base.group_no_one"
+        />
+
+        <record id="hr_salary_form_inherit_view" model="ir.ui.view">
+			<field name="name">hr_salary_rule_form</field>
+			<field name="model">hr.salary.rule</field>
+			<field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//form" position="inside">
+				  <div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div>
+				</xpath>
+                <xpath expr="//notebook[@colspan='6']//page[3]" position="replace">
+                </xpath>
+
+	    		<xpath expr="//page[@name='rules']" position="replace">
+	    			<page string="Accounting Info">
+	    				<group col="4">
+                            <field name="account_id" options="{'no_create':True}"/>
+	        		  		<field name="tax_id"/>
+	        		  	</group>
+	    			</page>
+	        	</xpath>
+
+	        	<xpath expr="//notebook//page[1]//group" position="replace">
+	        		<group >
+	        			<group>
+                            <separator string="Conditions"/>
+                            <field name="condition_select"/><newline/>
+                            <field name="condition_python" attrs="{'invisible':[('condition_select','!=','python')], 'required': [('condition_select','=','python')]}"/> <newline/>
+                            <field name="condition_range" attrs="{'invisible':[('condition_select','!=','range')], 'required':[('condition_select','=','range')]}"/><newline/>
+                            <field name="condition_range_min" colspan="2" attrs="{'invisible':[('condition_select','!=','range')], 'required':[('condition_select','=','range')]}"/><newline/>
+                            <field name="condition_range_max" colspan="2" attrs="{'invisible':[('condition_select','!=','range')], 'required':[('condition_select','=','range')]}"/><newline/>
+                            <separator string="Computation"/>
+                            <field name="amount_select"/><newline/>
+                            <field name="amount_percentage_base" attrs="{'invisible':[('amount_select','!=','percentage')], 'required': [('amount_select','=','percentage')]}"/><newline/>
+                            <field name="quantity" attrs="{'invisible':[('amount_select','=','code')], 'required':[('amount_select','!=','code')]}"/><newline/>
+                            <field name="amount_fix"  attrs="{'invisible':[('amount_select','!=','fix')], 'required':[('amount_select','=','fix')]}"/><newline/>
+                            <field name="amount_python_compute" attrs="{'invisible':[('amount_select','!=','code')], 'required':[('amount_select','=','code')]}"/>
+                            <field name="amount_percentage" attrs="{'invisible':[('amount_select','!=','percentage')], 'required':[('amount_select','=','percentage')]}"/>
+                        </group>
+                    </group>
+	            </xpath>
+		    </field>
+		</record>
+
+		 <record id="hr_salary_tree_inherit_view" model="ir.ui.view">
+			<field name="name">hr_salary_rule_tree</field>
+			<field name="model">hr.salary.rule</field>
+			<field name="inherit_id" ref="hr_payroll.hr_salary_rule_list"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='register_id']" position="replace">
+					<field name="account_id"/>
+                </xpath>
+			</field>
+		</record>
+
+
+		<record id="hr_payslip_form_inherit_view" model="ir.ui.view">
+			<field name="name">hr.payslip.inherit.form</field>
+			<field name="model">hr.payslip</field>
+			<field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="replace">
+				</xpath>
+				<xpath expr="//field[@name='contract_id']" position="attributes">
+	            	<attribute name="options">{'no_create':True,'no_open':True,'no_edit':True}</attribute>
+	            </xpath>
+	            <xpath expr="//field[@name='struct_id']" position="attributes">
+	            	<attribute name="options">{'no_create':True,'no_open':True,'no_edit':True}</attribute>
+	            </xpath>
+				<xpath expr="//field[@name='employee_id']" position="attributes">
+	              <attribute name="options">{'no_create':True}</attribute>
+	            </xpath>
+
+	            <xpath expr="//field[@name='number']" position="replace">
+	            	<field name="old_salary_id" invisible="True"/>
+           		 </xpath>
+
+	            <xpath expr="//notebook//page[2]//field[@name='salary_rule_id']" position="replace">
+	            </xpath>
+	            <xpath expr="//notebook//page[2]//field[@name='code']" position="replace">
+	            </xpath>
+	             <xpath expr="//notebook//page[3]//field[@name='code']" position="replace">
+	            </xpath>
+	            <xpath expr="//notebook//page[4]" position="replace">
+	            </xpath>
+	            <xpath expr="//sheet//notebook//page[1]" position="after">
+	            </xpath>
+				<xpath expr="//field[@name='credit_note']" position="replace"> 
+	            </xpath>
+	            <xpath expr="//notebook//page[2]" position="attributes">
+	            	<attribute name='string'>Payslip Details</attribute>
+	            </xpath>
+	            <xpath expr="//notebook//page[2]//field[@name='amount']" position="attributes"> 
+		            	<attribute name='invisible'>True</attribute>
+		        </xpath>
+		        <xpath expr="//notebook//page[2]//field[@name='total']" position="attributes"> 
+		            	<attribute name='readonly'>False</attribute>
+		        </xpath>
+		        <xpath expr="//notebook//page[3]" position="replace">
+		        </xpath>
+				<xpath expr="//sheet//notebook//page[1]" position="after">
+					<page string="Loans">
+						 <field name="loan_ids">
+							<tree string="Loans" edit="false" open="false" create="false" delete="false">
+								<field name="loan_id"/>
+								<field name="date"/>
+								<field name="amount"/>
+							</tree>
+						</field>
+						<group class="oe_subtotal_footer oe_right">
+							<field name="total_loan_amount"/>
+						</group> 
+					</page>
+				</xpath>
+				<xpath expr="//field[@name='quantity']" position="replace"> 
+	            </xpath>
+
+
+				<xpath expr="//field[@name='rate']" position="replace"> 
+	            </xpath>
+	            <xpath expr="//header" position="replace">
+	            	<header>
+		              <button name="compute_sheet" string="Compute Details" type="object" class="btn btn-primary" states="draft"  groups="kamil_hr_security.hr_kamil_payroll"/>
+		              <field name="state" widget="statusbar"/>
+		            </header>
+	            </xpath>
+	            <xpath expr="//sheet" position="after">
+	            	<div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div> 
+	            </xpath>
+			</field>
+		</record>
+
+		<menuitem 
+			id="payroll_reports_main_menu" 
+			name="Reports" 
+			parent="hr_payroll.menu_hr_payroll_root"
+			groups="kamil_hr_security.hr_benefits_wages_section_group"
+			sequence="90"
+			/>
+
+
+		<record id="inherit_form_hr_payslip_run_view" model="ir.ui.view">
+	      <field name="name">payslip run form inherit</field>
+	      <field name="model">hr.payslip.run</field>
+	      <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+	      <field name="arch" type="xml">
+
+			<xpath expr="//field[@name='credit_note']" position="replace"> 
+				<field name="branch_id" options="{'no_create':True}" attrs="{'readonly':[('state','!=','draft')], }"/>
+				<field name="appoiontment_type" options="{'no_create':True}" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')], }"/>
+				<field name="is_temporary" invisible="True"/>
+	        </xpath>
+
+          <xpath expr="//header" position="replace">
+            	<header>
+	              <button name="do_submit" string="Send" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="do_details" string="Compute details" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="do_compute_sheet" string="Re-Compute details" type="object" states="draft" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="%(hr_payroll.action_hr_payslip_by_employees)d" type="action" states="draft" string="Select Employees" class="oe_highlight" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="do_confirm" string="Submit" type="object" class="btn btn-primary" states="benefits_wages" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="do_personnel_confirm" string="Confirm" type="object" class="btn btn-primary" states="personnel" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="do_gd_confirm" string="Confirm" type="object" class="btn btn-primary" states="general_directorate" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="action_accounting" string="Approve" type="object" class="btn btn-primary" states="internal_auditor" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <button name="do_return" string="Return" type="object" states="benefits_wages,personnel,general_directorate,internal_auditor" groups="kamil_hr_security.hr_kamil_payroll"/>
+	              <field name="state" widget="statusbar"/>
+	            </header>
+            </xpath>
+            <xpath expr="//field[@name='slip_ids']" position="after">
+            	<group string="Notes"/>
+            	<div>
+            		<field name="notes"/>
+            	</div>
+            </xpath>
+            <xpath expr="//sheet" position="after">
+            	<div class="oe_chatter">
+	                <field name="message_follower_ids" widget="mail_followers"/>
+	                <field name="activity_ids" widget="mail_activity"/>
+	                <field name="message_ids" widget="mail_thread"/>
+	            </div> 
+            </xpath>
+
+      </field>
+    </record>
+
+    <record id="inherit_tree_hr_payslip_run_view" model="ir.ui.view">
+      <field name="name">payslip run tree inherit</field>
+      <field name="model">hr.payslip.run</field>
+      <field name="inherit_id" ref="hr_payroll.hr_payslip_run_tree"/>
+      <field name="arch" type="xml">
+
+			<xpath expr="//field[@name='credit_note']" position="replace"> 
+            </xpath>
+
+        </field>
+    </record>
+
+     <record id="inherit_tree_hr_payslip_view" model="ir.ui.view">
+        <field name="name">payslip tree inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree"/>
+        <field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="replace">
+				<field name="branch_id" options="{'no_create':True}"/>
+            </xpath>
+            <xpath expr="//field[@name='number']" position="attributes">
+            	<attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    	<record id="view_hr_employee_grade_form_inherit_view" model="ir.ui.view">
+			<field name="name">hr.payroll.structure.form</field>
+			<field name="model">hr.payroll.structure</field>
+			<field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//form//group" position="before">
+					<header>
+					  <button type="object" name="set_contracts_structure" string="Set contracts structure" icon="fa-gears" colspan="2" class="oe_highlight"/>
+					</header>
+				</xpath>
+				<xpath expr="//field[@name='company_id']" position="replace">
+		         	 <field name="company_id" string="Branch" options="{'no_create':True}" groups="base.group_multi_company"/>
+		        </xpath>
+		        <xpath expr="//field[@name='code']" position="replace">
+		         	 <field name="code" string="Code"/>
+		        </xpath>
+
+		        <xpath expr="//field[@name='register_id']" position="replace">
+		        </xpath>
+
+		        <xpath expr="//field[@name='parent_id']" position="replace" >
+		         	 <field name="appoiontment_type_ids" widget="many2many_tags" options="{'no_create':True}"/>
+		         	 <field name="category_ids" widget="many2many_tags" options="{'no_create':True}"/>
+		        </xpath>
+			</field>
+		</record>
+
+	
+	</data>
+</openerp>

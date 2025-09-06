@@ -1,0 +1,131 @@
+<odoo>
+	<data>
+
+    <record model="ir.ui.view" id="training_course_design_tree_view">
+      <field name="name">training.course.design.tree</field>
+      <field name="model">training.course.design</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="training_type"/>
+            <field name="date_from"/>
+            <field name="date_to"/>
+            <field name="no_hours"/>
+            <field name="state" string="Status"/>
+          </tree>
+        </field>
+      </record>
+      
+     <record model="ir.ui.view" id="training_course_design_form_view">
+      <field name="name">training.course.design.form</field>
+      <field name="model">training.course.design</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="td_confirm" states="draft" string="Confirm the training department" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="hr_confirm" states="td_confirm" string="HR Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+              <button name="gm_confirm" states="hr_confirm" string="General Manager" type="object" class="oe_highlight" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+              <button name="do_return" states="td_confirm" string="Return" type="object" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+               <button name="do_return1" states="hr_confirm" string="Return1" type="object" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group" />
+
+              <button name="do_reject" states="td_confirm" string="Reject" type="object" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <button name="do_reject1" states="hr_confirm" string="Reject1" type="object" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,td_confirm,hr_confirm,gm_confirm"/>
+            </header>
+            <sheet>
+              <h1>
+                  <field name="name" placeholder="Name of the training course" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </h1>
+              <group>
+                <group>
+                  <field name="training_type" attrs="{'readonly':[('state','!=','draft')]}"  options="{'no_create':True}"/>
+                </group>
+              </group>
+              <group col="4">
+                  <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="no_hours" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="attachment"/>
+                </group>
+
+              <notebook>
+               <page string="Participants">
+                <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                  <tree editable="bottom">
+                    <field name="employee_id"  options="{'no_create':True}"/>
+                    <field name="department_id" force_save="1"/>
+                    <field name="degree_id" force_save="1"/>
+                    <field name="job_id" force_save="1"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Competencies">
+                 <button name="get_participants" states="draft" string="Get participants" type="object" class="oe_highlight"/>
+                <group col="4">
+                  <field name="competencie_date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="competencie_date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="gap_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="gap_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="competencie_id" options="{'no_create':True}" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </group>
+                <field name="competencie_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                  <tree editable="bottom">
+                    <field name="competencie_id" options="{'no_create':True}"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Program Components">
+                <div>
+                  <field name="program_components" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </div>
+              </page>
+              <page string="Target Of Program">
+                <div>
+                  <field name="target_of_program" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </div>
+              </page>
+              <page string="Outputs">
+                <div>
+                  <field name="outputs" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </div>
+              </page>
+              <page string="Notes">
+                <div>
+                  <field name="notes"/>
+                </div>
+              </page>
+            </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div> 
+          </form>
+        </field>
+      </record>
+
+      
+
+     <record  id="action_training_course_design" model="ir.actions.act_window">
+      <field name="name">Training Course Design</field>
+      <field name="res_model">training.course.design</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+		<menuitem name="Training Course Design"
+		id="training_course_design_menu"
+     	parent="menu_short_training"
+     	action="action_training_course_design"
+        sequence="3"
+        groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"
+		 	/>
+
+  </data>
+</odoo>

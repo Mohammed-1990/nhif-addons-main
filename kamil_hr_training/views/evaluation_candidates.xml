@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="evaluation_candidates_form_view">
+			<field name="name">evaluation.candidates.form</field>
+			<field name="model">evaluation.candidates</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+			              <button name="do_approved" string="Approve" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+			              <button name="do_rejected" string="Reject" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+			              <button name="do_cancel" string="Cancel" type="object" class="btn btn-primary" states="approved" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+			              <field name="state" widget="statusbar"/>
+		            </header>
+					<sheet>
+						<hr1>
+							<field name="name" readonly="True"/>
+						</hr1>
+						<div>
+					    	 <separator string="Program Details" /><br></br>
+
+						<group col="4">
+							 <field name="training_program" options="{'no_create':True}" readonly="True"/>
+							 <field name="specialization"/>
+							  <field name="university_id" options="{'no_create':True}"/>
+							  <field name="city_id" options="{'no_create':True}"/>
+					    </group> 
+					    </div>           			 	
+					    <div>
+					    	 <separator string="Candidates Details" /><br></br>
+					    	<group col="4">
+	              			   <field name="employee_id" options="{'no_create':True}" readonly="True"/>
+			               		<field name="department_id" options="{'no_create':True}"/>
+			        		 	<field name="qualification_type"/>
+			               		<field name="job_id" options="{'no_create':True}"/>
+			        		 	<field name="age"/>
+			               	</group>
+			               	<group>
+			               		<group>
+			      					<field name="total_degree"/>
+			      				</group>
+			      			</group>
+
+            	 			</div>
+            	 			<notebook>			
+              				 <page string="Evaluation">
+              					  <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}" >
+              					    <tree editable="bottom" create="false">
+              					      <field name="standard" options="{'no_create':True}" readonly="True"/>
+               					      <field name="ratio" readonly="True" options="{'no_create':True}"/>
+              					      <field name="evaluation" 
+              					      	options="{'no_Delete':True}" />
+            	 					 </tree>
+             					  </field>
+             					   
+           					   </page>
+
+           				</notebook>
+					   </sheet>
+					   <div class="oe_chatter">
+			              <field name="message_follower_ids" widget="mail_followers"/>
+			              <field name="activity_ids" widget="mail_activity"/>
+			              <field name="message_ids" widget="mail_thread"/>
+			          </div> 
+
+
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="evaluation_candidates_tree_view">
+		      <field name="name">evaluation.candidates.tree</field>
+		      <field name="model">evaluation.candidates</field>
+		      <field name="arch" type="xml">
+		      	    <tree>
+			      		<field name="employee_id"/>
+			      		<field name="training_program"/>
+			      		<field name="total_degree"/>
+			      		<field name="state"/>
+		      		</tree>
+		      </field>
+		  </record>
+
+
+      <record id="action_evaluation_candidates" model="ir.actions.act_window">
+			<field name="name">evaluation.candidates</field>
+			<field name="res_model">evaluation.candidates</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{'create':0}</field>
+		</record>
+
+	<menuitem name="Configurarions" id="training_configurarions_main_menu" parent="hr_training" sequence="3" groups="kamil_hr_security.hr_training_department_group"/>
+
+	
+
+    <menuitem name="Universitys" id="university_model_menu" parent="training_configurarions_main_menu" action="kamil_hr_configurations.action_university_model" sequence="0"/>
+
+    <menuitem name="University Specialization" id="university_specialization_train_menu" parent="training_configurarions_main_menu" action="kamil_hr_configurations.action_university_specialization" sequence="1"/>
+
+    <menuitem name="Citys" id="city_city_model_menu" parent="training_configurarions_main_menu" action="kamil_hr_configurations.action_city_city" sequence="2"/>
+    
+    <menuitem name="Stateses" id="state_model_training_menu" parent="training_configurarions_main_menu" action="kamil_hr_configurations.action_state_model" sequence="3"/>
+
+    <menuitem 
+    	name="Documents" 
+    	id="document_menu" 
+    	parent="training_configurarions_main_menu" 
+    	action="kamil_hr_configurations.action_document" 
+    	sequence="4"/>
+    
+
+    <menuitem 
+    	name="Evaluation Candidates"
+		id="evaluation_candidates_main_menu"
+     	parent="menu_long_training"
+     	action="action_evaluation_candidates"
+        sequence="5"
+        />
+
+
+
+
+	</data>
+</odoo>
+
+
+
+
+
+
+
+
+
+
+

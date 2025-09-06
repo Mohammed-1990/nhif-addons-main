@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="report_recipients_performance"
+                model="recipients.performance.wiz"
+                string="Recipients performance report"
+                name="kamil_accounting_reports.recipients_performance_template"
+                report_type="qweb-html"/>
+
+        <template id="recipients_performance_template">
+            <t t-call="web.html_container">
+                <div class="page">
+                    <t t-set="count" t-value="1"/>
+                    <div class="text-center">
+						<img t-if="company_id_logo" t-att-src="image_data_uri(company_id_logo)" class="img-fluid oe_slides_channel_thumbnail" alt="Logo"/>
+					</div>
+					<br/><br/>
+                    <div class="text-center" dir="rtl" style="font:500;">
+                        <p> تقرير أداء المتحصلين
+                        <br/>
+						</p>
+                        <p dir="rtl">
+                            المتحصل : <t dir="rtl" class="text-center" t-esc="str(data['from']['collector_name'])"/>
+                        </p>
+                    </div>
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    <thead style="display: table-header-group;">
+                        <tr style="page-break-inside: avoid;" class="table-active">
+                            <th>#</th>
+                            <th class="text-center">رقم الإيصال</th>
+                            <th class="text-center">وصل من</th>
+                            <th class="text-center">التاريخ</th>
+                            <th class="text-center">القيمة</th>
+                            <th class="text-center">العملة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="get_template_data(str(data['from']['collector_id']), data['from']['date_from'], data['from']['date_to'])" t-as="acc">
+                            <td t-esc="count"/>
+                            <td class="text-center" t-esc="acc[0]"/>
+                            <td class="text-center" t-esc="acc[1]"/>
+                            <td class="text-center" t-esc="acc[2]"/>
+                            <td class="text-center" t-esc="acc[3]"/>
+                            <td class="text-center" t-esc="acc[4]"/>
+                            <t t-set="count" t-value="count + 1"/>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>
+
+
+
+
+
+<!--    -->
+<!--        <tr t-foreach="o.OBJECTS" t-as="OBJECT">-->
+<!--            <t t-if="len(taxline['level']) > 5">-->
+<!--                <t t-set="style" t-value="'font-weight:normal;'"/>-->
+<!--            </t>-->
+<!--            <t t-if="not len(taxline['level']) > 5">-->
+<!--                <t t-set="style" t-value="'font-weight:bold;'"/>-->
+<!--            </t>-->
+
+<!--            <td></td>-->
+<!--        </tr>        -->
+<!--    -->
+

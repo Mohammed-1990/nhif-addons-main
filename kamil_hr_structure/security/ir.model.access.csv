@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_salary_structure_all,salary.structure_all,model_salary_structure,,1,0,0,0
+access_salary_structure,salary.structure,model_salary_structure,kamil_hr_security.hr_employment_department_group,1,1,1,1
+,,,,,,,
+access_salary_structure_line_all,salary.structure.line_all,model_salary_structure_line,,1,0,0,0
+access_salary_structure_line,salary.structure.line,model_salary_structure_line,kamil_hr_security.hr_employment_department_group,1,1,1,1
+,,,,,,,
+access_hr_department_all,hr_department_all,model_hr_department,,1,0,0,0
+access_hr_department,hr_department,model_hr_department,kamil_hr_security.hr_employment_department_group,1,1,1,1

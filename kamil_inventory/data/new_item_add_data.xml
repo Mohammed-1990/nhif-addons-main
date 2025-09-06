@@ -1,0 +1,12 @@
+<odoo>
+ 	<data >
+
+	  	<record id="add_new_item_request_sequence" model="ir.sequence">
+		    <field name="name">new_request</field>
+		    <field name="code">add.new.product</field>
+		    <field name="prefix">NI</field>
+		    <field name="padding">5</field>
+		    <field name="company_id" eval="False"/>
+		</record>
+	</data>
+</odoo>

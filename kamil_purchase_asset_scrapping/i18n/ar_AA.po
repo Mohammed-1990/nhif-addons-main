@@ -1,0 +1,939 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_purchase_asset_scrapping
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-01 11:58+0000\n"
+"PO-Revision-Date: 2020-01-01 11:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "<b>\n"
+"	                        			الجملة\n"
+"	                        		</b>"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "<b>التخلص من الفائض</b>\n"
+"							<br/>"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__access_warning
+msgid "Access warning"
+msgstr "خطأ بالوصول"
+
+#. module: kamil_purchase_asset_scrapping
+#. openerp-web
+#: code:addons/kamil_purchase_asset_scrapping/static/src/js/scrap_request.js:52
+#, python-format
+msgid "Accounting entries waiting for manual verification"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__admin_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__admin_id
+msgid "Administration"
+msgstr "اﻹدارة"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.request,state:0
+msgid "Administration and Financial Manager"
+msgstr "مدير الشؤون الادارية والمالية"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+msgid "Administration and Financial Manager Approval"
+msgstr "موافقة مدير الشؤون الادارية والمالية"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_search
+msgid "Administrative"
+msgstr "اﻹدارة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__announcement
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Announcement"
+msgstr "الاعلان"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__announ_attach
+msgid "Announcement Attach File"
+msgstr "مرفقات الاعلات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Announcement Text"
+msgstr "نص الاعلان"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__asset_ids
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__asset_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_search
+msgid "Asset"
+msgstr "الأصل"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.actions.act_window,name:kamil_purchase_asset_scrapping.action_scrap_report
+#: model:ir.ui.menu,name:kamil_purchase_asset_scrapping.menu_scrap_report
+msgid "Asset Scrap Report"
+msgstr "تقرير التخلص من الفائض"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_scrap_request
+msgid "Asset Scrap Request"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__asset_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__asset_line_ids
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__asset_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Assets"
+msgstr "الأصول"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Attachments"
+msgstr "المُرفقات"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Auction"
+msgstr "المزاد"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__auction_date
+msgid "Auction Date"
+msgstr "تاريخ المزاد"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_search
+msgid "Book"
+msgstr "الكراسة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__book_id
+msgid "Books"
+msgstr "الكراسات"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:product.template,fuel:0
+msgid "Boys"
+msgstr "بنزين"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__branch_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__branch_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.product_template_only_form_view_inherit
+msgid "Car Inf"
+msgstr "معلومات العربة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__car_model
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__car_model
+msgid "Car Model"
+msgstr "موديل العربة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__car_name
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__car_name
+msgid "Car Name"
+msgstr "اسم العربة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__car_number
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__car_number
+msgid "Car Number"
+msgstr "رقم العربة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__categ_id
+msgid "Category"
+msgstr "الفئة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__collection_count
+msgid "Collection Count"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__car_color
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__car_color
+msgid "Color"
+msgstr "اللون"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Commitee Members"
+msgstr "اعضاء اللجنة"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Committee Decided"
+msgstr "مقرر اللجنة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__committee_member_ids
+msgid "Committee Members"
+msgstr "إعضاء اللجنة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__commitee_selection_id
+msgid "Committee Selection"
+msgstr "لجنة الفرز"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_committee_members
+msgid "Committee members"
+msgstr "اعضاء اللجنة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Confirm Auction"
+msgstr "تأكيد المزاد"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__control_attach
+msgid "Control Attachment"
+msgstr "مرفقات الرقابة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Create Announcement"
+msgstr "إنشاء إعلان"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__partner_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_search
+msgid "Customer"
+msgstr "العميل"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العملاء"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__dept_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__dept_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_search
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Director and finance and administrative"
+msgstr "مدير الشؤون الإدارية والمالية"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_report_kamil_purchase_asset_scrapping_dynamic_scrap_template__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Done"
+msgstr "تم"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.request,type:0
+msgid "Dynamic"
+msgstr "متحركات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.actions.report,name:kamil_purchase_asset_scrapping.report_dynamic_scrap
+msgid "Dynamic Scrap"
+msgstr "كشف العربات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__estimated_value
+msgid "Estimated Value"
+msgstr "القيمة المتوقعه"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__finance_admin_attach
+msgid "Finance Administration Attach"
+msgstr "مرفقات الشؤون الادارية والمالية"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__finance_attach
+msgid "Finance Attachment"
+msgstr "موافقة المالية"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__finance_manager_attach
+msgid "Finance Manager Attach"
+msgstr "مرفقات المالية"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.request,state:0
+msgid "Financial Manager"
+msgstr "مدير الشؤون المالية"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+msgid "Financial Manager Approval"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__fuel
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__fuel
+msgid "Fuel"
+msgstr "الوقود"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__general_conditions_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "General Conditions"
+msgstr "الشروط العامة"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.request,state:0
+msgid "General Manager"
+msgstr "المدير العام"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+msgid "General Manager Approval"
+msgstr "موافقة المدير العام"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_search
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_report_kamil_purchase_asset_scrapping_dynamic_scrap_template__id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Insert Newspapers"
+msgstr "إدخال الصحف 	"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__is_car
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__is_car
+msgid "Is Car"
+msgstr "عربة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_report_kamil_purchase_asset_scrapping_dynamic_scrap_template____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__machine
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__machine
+msgid "Machine"
+msgstr "الماكينة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.report,state:0
+#: selection:scrap.request,state:0
+msgid "Manager Director"
+msgstr "مدير الفرع"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__move_check
+msgid "Move Check"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__move_posted_check
+msgid "Move Posted Check"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__announcement_ids
+msgid "NewsPaper"
+msgstr "الصحيفة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Newspapers that were advertised"
+msgstr "الصحف التي تم الاعلان فيها"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط القادم"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط القادم"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__announ_number
+msgid "Number Of Announcement"
+msgstr "عدد النشرات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_search
+msgid "Order Date"
+msgstr "التاريخ"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__ordering_date
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__ordering_date
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_search
+msgid "Ordering Date"
+msgstr "تاريخ الطلب"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__user_id
+msgid "Organization"
+msgstr "الجهه الطالبة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__origin
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__origin
+msgid "Origin"
+msgstr "بلد المنشاء"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.request,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.request,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__palte_number
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__palte_number
+msgid "Plate Number"
+msgstr "رقم اللوحة"
+
+#. module: kamil_purchase_asset_scrapping
+#: code:addons/kamil_purchase_asset_scrapping/models/asset_scrapping.py:168
+#, python-format
+msgid "Please sale at least one asset !!!"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_purchase_asset_scrapping
+#. openerp-web
+#: code:addons/kamil_purchase_asset_scrapping/static/src/js/scrap_request.js:49
+#, python-format
+msgid "Posted"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__private_conditions
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Private Conditions"
+msgstr "الشروط الخاصة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Private Conditions ......."
+msgstr "الشروط الخاصة ......"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.actions.act_window,help:kamil_purchase_asset_scrapping.action_scrap_report
+msgid "Purchase Analysis allows you to easily check and analyse your company purchase history and performance. From this menu you can track your negotiation performance, the delivery performance of your vendors, etc."
+msgstr "يسمح لك تحليل الشراء بالتحقق من تاريخ مشتريات وأداء مؤسستك وتحليلهما. من هذه القائمة، يمكنك تتبع أداء عملية المفاوضات وأداء تسليم مورديك، إلخ."
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_purchase_requisition_announcement
+msgid "Purchase Requisition Announcement"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__partner_id
+msgid "Purchaser"
+msgstr "المشتري"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__user_id
+msgid "Representative"
+msgstr "المسؤول"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Reset to Draft"
+msgstr "إعادة التعيين لمسودة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Revenues"
+msgstr "الايرادات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_collection_collection
+msgid "Revenues Collection"
+msgstr "تحصيل الإيرادات"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_form
+msgid "Role"
+msgstr "الصفة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_purchase_requisition_announcement__scarp_request_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__scarp_request_id
+msgid "Scarp Request"
+msgstr "طلب التخلص من الفائض"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_asset_request__scrap_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_collection_collection__scrap_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_committee_members__scrap_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__scrap_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_search
+#: selection:scrap.request,type:0
+msgid "Scrap"
+msgstr "تالف"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_collection_collection__scrap_line_id
+msgid "Scrap Line"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__name
+msgid "Scrap Name"
+msgstr "الرقم المتسلسل"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_report_pivot
+msgid "Scrap Order Statistics"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_scrap_report
+msgid "Scrap Report"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.ui.menu,name:kamil_purchase_asset_scrapping.menu_scrap_request_root
+msgid "Scrap Request"
+msgstr "طلب إتلاف"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_scrap_request_line
+msgid "Scrap Request Line"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.actions.act_window,name:kamil_purchase_asset_scrapping.action_scrap_request
+msgid "Scrap Requset"
+msgstr "طلب التخلص من الفائض"
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_report_graph
+msgid "Scrap Statistics"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request_line__sales_value
+msgid "Selling Value"
+msgstr "القيمة الحقيقة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_product__shasea_number
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_product_template__shasea_number
+msgid "Shasea Number"
+msgstr "رقم الشاسي"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_report__state
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_request_search
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.view_scrap_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__tech_report_attach
+msgid "Technical Report Attachment"
+msgstr "التقرير الفني"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_tender_announcement
+msgid "Tender Announcement"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.actions.act_window,name:kamil_purchase_asset_scrapping.action_scrap_tender_book
+msgid "Tender Books"
+msgstr "كراسات المناقصات"
+
+#. module: kamil_purchase_asset_scrapping
+#: code:addons/kamil_purchase_asset_scrapping/models/asset_scrapping.py:143
+#, python-format
+msgid "The Announcement is not exist please entered."
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: code:addons/kamil_purchase_asset_scrapping/models/asset_scrapping.py:133
+#, python-format
+msgid "The committee members not exist!!"
+msgstr "اعضاء اللجنة غير موجودين الرجاء ادخالهم !!"
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:scrap.request,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_purchase_asset_scrapping
+#. openerp-web
+#: code:addons/kamil_purchase_asset_scrapping/static/src/js/scrap_request.js:55
+#, python-format
+msgid "Unposted"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,field_description:kamil_purchase_asset_scrapping.field_scrap_request__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model.fields,help:kamil_purchase_asset_scrapping.field_scrap_request__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_purchase_asset_scrapping
+#: code:addons/kamil_purchase_asset_scrapping/models/asset_scrapping.py:112
+#, python-format
+msgid "You cannot confirm Request '%s' because there is no Asset line."
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: code:addons/kamil_purchase_asset_scrapping/models/asset_scrapping.py:84
+#, python-format
+msgid "You cannot confirm Request '%s' because there is no valid date."
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_asset_request
+msgid "asset.request"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: selection:product.template,fuel:0
+msgid "jazz"
+msgstr "جاز"
+
+#. module: kamil_purchase_asset_scrapping
+#: model:ir.model,name:kamil_purchase_asset_scrapping.model_report_kamil_purchase_asset_scrapping_dynamic_scrap_template
+msgid "report.kamil_purchase_asset_scrapping.dynamic_scrap_template"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "الساشي"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "الصنف"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "الكوم"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "اللوحة"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "اللون"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "الماكينة"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "المشتري"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "المنشاء"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "الموديل"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "الوقود"
+msgstr ""
+
+#. module: kamil_purchase_asset_scrapping
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_asset_scrapping.dynamic_scrap_template
+msgid "قيمة البيع"
+msgstr ""
+

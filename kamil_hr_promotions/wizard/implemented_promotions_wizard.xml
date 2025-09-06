@@ -1,0 +1,37 @@
+<odoo>
+	<data>
+		<record id="implemented_promotion_wizard_form" model="ir.ui.view">
+			<field name='name'>Implemented Promotion Report</field>
+			<field name='model'>implemented.promotion.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+            	        <group col="4">
+                           <field name="date_from"/>
+                           <field name="date_to"/>
+            	        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+       </record>
+
+
+
+
+
+    <record id="action_implemented_promotion_wizard" model="ir.actions.act_window">
+        <field name="name">Implemented Promotion Report</field>
+        <field name="res_model">implemented.promotion.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <menuitem name="Implemented Promotion Report" id="menu_report_implemented_promotion" parent="promotions_reports_menu" action="action_implemented_promotion_wizard" sequence="1"/>
+
+	</data>
+</odoo>

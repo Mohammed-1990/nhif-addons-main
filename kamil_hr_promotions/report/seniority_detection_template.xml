@@ -1,0 +1,85 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_report">
+        <field name="name">paperformat.functions.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field> 
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="seniority_detection_report"
+            model="seniority.detection.wizard"
+            string="Seniority Detection Report"
+            report_type="qweb-html"
+            name="kamil_hr_promotions.seniority_detection_view"
+            paperformat="paperformat_report"
+            menu="False"/>
+               
+
+    <template id="seniority_detection_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            
+            <div class="page">
+                 <div ><br/><br/>
+                    <div class="text-center" style="font:500;">
+                        <p>تقرير كشف الأقدمية<br/>
+                        </p>
+                    </div>
+                </div><br/><br/>
+                <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    <thead class="table-active" style="display: table-header-group;">
+                        <th class="text-center">#</th>
+                        <th class="text-center">الفرع</th>
+                        <th class="text-center">الموظف</th>
+                        <th class="text-center">تاريخ الميلاد</th>
+                        <th class="text-center">تاريخ التعيين</th>
+                        <th class="text-center">تاريخ اخر ترقية</th>
+                        <th class="text-center">المؤهل</th>
+                    </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="doc['number']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['branch']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['employee']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['birthday']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['appoiontment_date']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['last_promotion_date']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['appointment_qualification']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                        <t t-if="docs==[]">
+                            <tr class="text-center">
+                                <td colspan="7">لا توجد بيانات</td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+	<report 
+		id="collection_report"
+		model="collection.collection"
+		string="Collection Report"
+		report_type="qweb-html"
+		name="kamil_accounting_revenues_collection.report_collection_template"
+	/>
+
+	<template id="report_collection_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<div>
+							<h3 style="font-family:Calibri;" class="text-center">
+								<b>
+								تحصيل إيراد
+								</b>
+							</h3>
+							<br/>
+							<p class="text-right">
+								<strong style="float:right">التاريخ </strong>
+								<span style="float:right;margin-right:20px" t-esc="o.date"></span>
+							</p>
+						</div>
+
+						<table class="text-right table table-condensed table-hover">
+							<tr>
+								<td>
+									<strong style="float:right"> رقم التحصيل</strong>
+									<span style="float:right;margin-right:20px" t-esc="o.ref"></span>
+								</td>
+								<td>
+									<strong style="float:right"> وصل من </strong>
+									<span style="float:right;margin-right:20px" t-esc="o.partner_id.name"></span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="text-center">
+										<strong>
+											حصلت ـ <t t-esc="o.collection_type"/>
+											<br/>
+										</strong>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<br/>
+						
+						<!-- <div style="float:right">
+							<strong> البيان </strong>
+							<br/>
+							<span style="float:right;margin-right:20px" t-esc="o.name"></span>
+						</div>
+						 --><br/>
+
+						<table class="text-right table table-condensed table-hover">
+							<tr>
+								<td>
+									<strong style="float:right"> البيان</strong>
+									<span style="float:right;margin-right:20px" t-esc="o.name"></span>
+								</td>
+							</tr>
+						</table>
+
+
+						<div>
+							<strong style="float:right">
+								بهذا فقد تم تحصيل   <t t-esc="'{0:,.2f}'.format(float(o.amount))"/>
+							</strong>
+						</div>
+
+						<br/>
+						<table class="text-right table table-condensed table-hover">
+							<tr>
+								<th> المبلغ </th>
+								<th> إسم الحساب </th>
+								<th> إسم البند </th>
+							</tr>
+							<t t-foreach="o.line_ids" t-as="line">
+								<tr>
+									<td>
+										<t t-esc="'{0:,.2f}'.format(float(line.amount))"/>
+									</td>
+									<td>
+										<t t-esc="line.account_id.name"/>
+									</td>
+									<td>
+										<t t-esc="line.analytic_account_id.name"/>
+									</td>
+								</tr>
+							</t>
+						</table>
+						<br/>
+						<br/>
+						<strong style="float:right"> تحصيل <t t-esc="o.create_uid.name"/> - <t t-esc="o.create_date"/> </strong>
+
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+
+</odoo>

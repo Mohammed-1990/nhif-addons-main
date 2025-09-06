@@ -1,0 +1,895 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_purchase_rfq
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200223\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-23 10:12+0000\n"
+"PO-Revision-Date: 2021-09-23 10:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+msgid "<strong>الصندوق القومي للتامين الصحي\n"
+"                    <br/>\n"
+"                        قسم المشتريات\n"
+"                        <br/>\n"
+"                    تقرير الشراء المباشر</strong>\n"
+"                     <br/>"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "<strong>الصندوق القومي للتامين الصحي\n"
+"                    <br/>\n"
+"                        قسم المشتريات\n"
+"                        <br/>\n"
+"                    تقرير عروض الاسعار</strong>\n"
+"                     <br/>"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__access_warning
+msgid "Access warning"
+msgstr "تحذير من خطأ بالوصول"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__admin_id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__admin_id
+msgid "Administration"
+msgstr "اﻹدارة"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+msgid "Administrative"
+msgstr "اﻹدارة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__account_analytic_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "الوسوم التحليلية"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__company_id
+#: selection:purchase.rfq,state:0
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.direct_purchase_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+#: selection:purchase.rfq,state:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__company_id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_purchase_rfq
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:357
+#, python-format
+msgid "Contacts"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_view_contract
+msgid "Contracts"
+msgstr "العقود"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_order_form_inherit
+msgid "Create Contract"
+msgstr "إنشاء عقد"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+msgid "Create New Invoice"
+msgstr "إنشاء فاتورة جديدة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العملاء"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__dept_id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__dept_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__name
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_tree
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+msgid "Description ..."
+msgstr "الوصف ..."
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_direct_puchase_report
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_direct_purcase_report
+msgid "Direct Purcase Report"
+msgstr "تقرير الشراء المباشر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_direct_purchase
+#: selection:purchase.rfq,type:0
+#: selection:request.filter.rfq,type:0
+#: selection:rfq.report,type:0
+msgid "Direct Purchase"
+msgstr "الشراء المباشر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.direct_purchase2
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_direct_invoice
+msgid "Direct Purchase invoice"
+msgstr "فواتير الشراء المباشر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_diect_purchase
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_diect_purchase_root
+msgid "Direct Purchse"
+msgstr "الشراء المباشر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_report_kamil_purchase_rfq_directp_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_report_kamil_purchase_rfq_purchase_rfq_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+#: selection:purchase.rfq,state:0
+msgid "Done"
+msgstr "تم"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__move_dest_id
+msgid "Downstream Move"
+msgstr "حركة السيولة"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__finance_approv_attach
+msgid "Finance Approval Attchement"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "Finance Manager"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "General Conditions Selection"
+msgstr "اختيار الشروط العامة"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_report_kamil_purchase_rfq_directp_report_view__id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_report_kamil_purchase_rfq_purchase_rfq_report_view__id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__order_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_order__is_contract
+msgid "Is Contact"
+msgstr "عقد"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_report_kamil_purchase_rfq_directp_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_report_kamil_purchase_rfq_purchase_rfq_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_direct_purchase_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__line_ids
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "Locked"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+msgid "My Request"
+msgstr "طلباتي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__rfq_id
+msgid "Order"
+msgstr "الطلب"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__order_count
+msgid "Order Count"
+msgstr "عدد الأوامر"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_search
+msgid "Order Date"
+msgstr "تاريخ الأمر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__ordering_date
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__ordering_date
+msgid "Ordering Date"
+msgstr "تاريخ الطلب"
+
+#. module: kamil_purchase_rfq
+#: selection:purchase.rfq,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: selection:purchase.rfq,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.direct_purchase_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__product_id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__categ_id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__categ_id
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__product_uom_id
+msgid "Product Unit of Measure"
+msgstr "وحدة قياس المنتج"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.actions.act_window,help:kamil_purchase_rfq.action_direct_puchase_report
+#: model_terms:ir.actions.act_window,help:kamil_purchase_rfq.action_rfq_report
+msgid "Purchase Analysis allows you to easily check and analyse your company purchase history and performance. From this menu you can track your negotiation performance, the delivery performance of your vendors, etc."
+msgstr "يسمح لك تحليل الشراء بالتحقق من تاريخ مشتريات وأداء مؤسستك وتحليلهما. من هذه القائمة، يمكنك تتبع أداء عملية المفاوضات وأداء تسليم مورديك، إلخ."
+
+#. module: kamil_purchase_rfq
+#: selection:purchase.rfq,state:0
+#: selection:rfq.report,state:0
+msgid "Purchase Department"
+msgstr "قسم المشتريات"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_order__purchase_department_attch
+msgid "Purchase Department Attach"
+msgstr "تقرير المشتريات"
+
+#. module: kamil_purchase_rfq
+#: selection:purchase.rfq,state:0
+msgid "Purchase Department of Branch"
+msgstr "رئيس قسم الفرع"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_purchase_order_list
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_purchase_order_to_so
+#: model:ir.model,name:kamil_purchase_rfq.model_purchase_order
+#: selection:rfq.report,state:0
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__note
+msgid "Purchase Purpose"
+msgstr "الغرض من الشراء"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_order__rfq_id
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_purchase_rfq
+msgid "Purchase RFQ"
+msgstr "عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_search
+msgid "Purchase confirm"
+msgstr "الفواتير المؤكدة"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_tree
+msgid "Purchase rfq"
+msgstr "عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_purchase_rfq_root
+msgid "Purchse RFQ"
+msgstr "عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__product_qty
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__product_qty
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model,name:kamil_purchase_rfq.model_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__purchase_ids
+msgid "RFQ"
+msgstr "عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_rfq_report
+#: model:ir.model,name:kamil_purchase_rfq.model_rfq_report
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_rfq_report
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_grarh
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_pivot
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_search
+msgid "RFQ Report"
+msgstr "تقرير عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "RFQ Sent"
+msgstr "تم ارسل عرض السعر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__ref
+msgid "Refrance"
+msgstr "مرجع"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_direct_purchase_wizard
+#: model:ir.actions.report,name:kamil_purchase_rfq.direct_purchase_report
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_report_direct_purchase
+msgid "Report Direct Purchase"
+msgstr "تقرير الشراء المباشر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.action_purchase_rfq_wizard
+#: model:ir.actions.report,name:kamil_purchase_rfq.purchase_rfq_report
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_report_purchase_rfq
+msgid "Report Purchase RFQ"
+msgstr "تقرير عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__user_id
+msgid "Representative"
+msgstr "المسؤول"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_order_filter_inherit
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_search
+msgid "Request"
+msgstr "الطلب"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model,name:kamil_purchase_rfq.model_request_filter_rfq
+msgid "Request Filter"
+msgstr "تجميع الطلبات"
+
+#. module: kamil_purchase_rfq
+#: selection:purchase.rfq,type:0
+#: selection:request.filter.rfq,type:0
+#: selection:rfq.report,type:0
+msgid "Request For Quotaion(RFQs)"
+msgstr "طلب عرض سعر"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__sequence
+msgid "Request ID"
+msgstr "الرقم المتسلسل"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+msgid "Request ID:"
+msgstr "رقم الطلب :"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__user_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+msgid "Requester"
+msgstr "الجهه الطالبة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__request_ids
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__request_ids
+msgid "Requests"
+msgstr "الطلبات"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+msgid "Requests Collecting"
+msgstr "تجميع الطلبات"
+
+#. module: kamil_purchase_rfq
+#: model:ir.actions.act_window,name:kamil_purchase_rfq.purchase_rfq2
+#: model:ir.ui.menu,name:kamil_purchase_rfq.menu_rfq_invoice
+msgid "Requests for Quotation invoice"
+msgstr "فواتير عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__rfq_id
+msgid "Rfq"
+msgstr "عروض الاسعار"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__schedule_date
+msgid "Scheduled Date"
+msgstr "التاريخ المجدول"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq_line__categ_id
+msgid "Select category for the current product"
+msgstr "اختار فئة المنتج الحالي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__state
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_search
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "Technical Selection"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "To Approve"
+msgstr "للموافقة"
+
+#. module: kamil_purchase_rfq
+#: selection:purchase.rfq,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__price_total
+msgid "Total Price"
+msgstr "السعر الإجمالي"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__type
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_request_filter_rfq__type
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq_line__price_unit
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__partner_id
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_rfq_report__partner_id
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_rfq_report_search
+msgid "Vendor"
+msgstr "المورّد"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,field_description:kamil_purchase_rfq.field_purchase_rfq__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model.fields,help:kamil_purchase_rfq.field_purchase_rfq__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_purchase_rfq
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:147
+#, python-format
+msgid "You can not delete request  in 'done' state!!!"
+msgstr "لايمكن حذف طلب في حالة  in 'تم'!!!"
+
+#. module: kamil_purchase_rfq
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:149
+#, python-format
+msgid "You can not delete request ,only the user created have permission!!!"
+msgstr "لايمكن حذف الطلب , فقط المستخدم الذي انشاء الطلب لدية الصلاحية!!"
+
+#. module: kamil_purchase_rfq
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:102
+#, python-format
+msgid "You have to set at least one invoice confirmed !!"
+msgstr "يجب اضافة ثلاثة فواتير علي الاقل"
+
+#. module: kamil_purchase_rfq
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:110
+#, python-format
+msgid "You have to set at least one invoice from request !"
+msgstr "يجب ان تكون هنالك فاتورة واحدة على الاقل!!!"
+
+#. module: kamil_purchase_rfq
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:99
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:126
+#, python-format
+msgid "You have to set at least one product from request !"
+msgstr "يجب ان يكون لديك صنف واحد على الاقل !!"
+
+#. module: kamil_purchase_rfq
+#: code:addons/kamil_purchase_rfq/models/request_for_quotation.py:107
+#, python-format
+msgid "You have to set at least three invoice from request !"
+msgstr "يجب ان تكون لديك 3 فواتير على الاقل !!"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model,name:kamil_purchase_rfq.model_direct_purchase_wizard
+msgid "direct.purchase.wizard"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: selection:rfq.report,state:0
+msgid "draft"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.view_purchase_rfq_form
+msgid "product"
+msgstr "الاصناف"
+
+#. module: kamil_purchase_rfq
+#: model:ir.model,name:kamil_purchase_rfq.model_purchase_rfq_line
+msgid "purchase.rfq.line"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model,name:kamil_purchase_rfq.model_purchase_rfq_wizard
+msgid "purchase.rfq.wizard"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model,name:kamil_purchase_rfq.model_report_kamil_purchase_rfq_directp_report_view
+msgid "report.kamil_purchase_rfq.directp_report_view"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model:ir.model,name:kamil_purchase_rfq.model_report_kamil_purchase_rfq_purchase_rfq_report_view
+msgid "report.kamil_purchase_rfq.purchase_rfq_report_view"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "إجمالي المبلغ"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "الجهة الطالبة"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "الضرائب"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "الطلب"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "المنتجات"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "المورد"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "الي"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "تاريخ الطلب"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "تاريخ الفاتورة"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+msgid "رقم الفاتورة"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "رقم الفاتورة المختارة"
+msgstr ""
+
+#. module: kamil_purchase_rfq
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.directp_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_rfq.purchase_rfq_report_view
+msgid "في الفترة من"
+msgstr ""
+

@@ -1,0 +1,61 @@
+<odoo>
+	<data>
+		<record id="record_account_statement_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Account Statement</field>
+			<field name='model'>account.statement.wizard</field>
+			<field name='arch' type='xml'>
+				<form>
+					<sheet>
+						<group col="4">
+							<field name="type" widget="radio" options="{'horizontal':True}"/>
+							<field name="revenue_account_id" options="{'no_create':True}" string="Choose Account/Group" />
+							<field name="date_from" required="1"/>
+							<field name="date_to" required="1"/>
+							<field name="partner_id" options="{'no_create':'1'}" attrs="{'invisible':[('is_group_by_partners','=',True)]}" />
+							<field name="is_group_by_partners" attrs="{'invisible':[('type','=','account_group')]}" string="تجميع بالجهات"/>
+							<field name="report_type" attrs="{'invisible':[('type','=','account_group')]}" widget="radio" options="{'horizontal':True}"/>
+
+						</group>
+						<footer>
+						<button target="_blank" name='get_report' string='Print' type='object' class="oe_highlight"/>
+							<button string="Cancel" special="cancel"/>
+						</footer>
+					</sheet>
+				</form>
+			</field>
+	</record>
+
+	<record id="action_account_statement_wizard" model="ir.actions.act_window">
+		<field name="name">Report Account Statement</field>
+		<field name="res_model">account.statement.wizard</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem name="Reports" id="menu_accounting_report"  parent="kamil_accounting_revenues_collection.revenues_collection_main_menu" sequence="100"/>
+
+
+	<menuitem name="Account/Group Statement" id="menu_account_statement_report" 
+	sequence="1"
+	parent="menu_accounting_report"
+	 action="action_account_statement_wizard"/>
+
+
+	<menuitem name="Account/Group Statement" id="menu_account_statement_report_for_ratifications" 
+	sequence="100"
+	parent="kamil_accounting_reports.menu_report"
+	 action="action_account_statement_wizard"/>
+
+
+	<menuitem name="Account/Group Statement" id="menu_account_statement_report_for_ratifications" 
+	sequence="100"
+	parent="kamil_accounting_reports.menu_report"
+	 action="action_account_statement_wizard"/>
+
+
+	<menuitem id="menu_payment_account_statement_report" name="Account/Group Statement" sequence="-10" parent="kamil_accounting_reports.menu_report_payment" action="action_account_statement_wizard"/>
+
+
+	</data>
+</odoo>

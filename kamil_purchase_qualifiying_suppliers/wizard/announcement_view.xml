@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Form Announcement-->
+	<record id="view_announcement_form" model="ir.ui.view">
+		<field name="name">announcement.form</field>
+		<field name="model">tender.announcement</field>
+		<field name="arch" type="xml">
+			<form string="Create Announcement">
+				<sheet>
+					<field name="announcement" placeholder="Announcement ..."/>
+					<group >
+						<field name="requisition_id" invisible="1"/>
+						<field name="count" required="1"/>
+						<field name="announ_attach" />
+					</group>
+					<footer>
+						<button name="create_annoncement" string="Create Announcement" type="object" class="btn-primary" />
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>	
+			</form>
+		</field>
+	</record>
+
+
+	<!-- Action Announcement-->
+	<act_window 
+		id="action_announcement"
+		name="Announcment"
+		res_model="tender.announcement" src_model="purchase.requisition"
+		view_mode="form"
+		target="new"
+		
+	/>
+
+
+</odoo>
+
+
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report 
+			id="report_area"
+			string="Area Of rehabilitaion"
+			model="wiz.qualifying.suppliers"
+			report_type='qweb-html'
+			file="kamil_purchase_qualifiying_suppliers.area_template"
+			name="kamil_purchase_qualifiying_suppliers.area_template"
+			print_report_name="'Area Of Rehabilitaion(%s) - %s' % (object.requisition_id.year, object.requisition_id.name)"
+		/>
+
+
+	<template id="area_template">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+				<div class="page">
+					<t t-foreach="docs" t-as="o">
+						<div>
+							<h3 style="font-family:Calibri;" class="text-center">تأهيل موردين للعام  <span t-field="docs.requisition_id.year" />
+								<br/>
+								<span t-field="docs.area_id.name" />
+							</h3>							
+						</div>
+						
+						<table class="text-right table table-condensed table-hover" border="1">
+							<thead>
+								<tr>
+									<td><strong>الرقم</strong></td>
+									<td><strong>إسم الشركة</strong></td>
+									<td><strong>عنولن الشركة</strong></td>
+									<td><strong>المندوب</strong></td>
+									<td><strong>الهاتف</strong></td>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="o.partner_ids" t-as="p">
+									<tr>
+										<td>
+											<t t-esc="p_index + 1"/>
+										</td>
+										<td>
+											<span t-field="p.name"/>
+										</td>
+											<t t-set="country" t-value="p.country_id.name"/>
+											>
+											<t t-set="state" t-value="p.state_id.name"/>
+											>
+											<t t-set="city" t-value="p.city"/>
+											>
+											<t t-set="street" t-value="p.street"/>
+											>
+											<t t-set="street2" t-value="p.street2"/>
+											>
+										<td>
+										<p>
+											<t t-if="country">
+												<span t-esc="country"/> -
+											</t>
+											<t t-if="state">
+												<span t-esc="state"/> -
+											</t>
+											<t t-if="city">
+												<span t-esc="city"/> -
+											</t>
+											<t t-if="street">
+												<span t-esc="street"/> -
+											</t>
+											<t t-if="street2">
+												<span t-esc="street2"/> 
+											</t>
+										</p>
+										</td>
+										<td><span t-field="p.phone"/></td>
+										<td><span t-field="p.phone"/></td>
+									</tr>	
+								</t>
+							</tbody>
+						</table>
+					</t>
+				</div>
+			</t>
+		</t>
+	</template>
+
+	</data>
+</odoo>

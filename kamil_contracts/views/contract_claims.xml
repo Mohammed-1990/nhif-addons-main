@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <data>
+
+
+
+        <!-- View for Need Requisition Form-->
+
+    <record id="view_contract_claims_form" model="ir.ui.view">
+        <field name="name">view.contract.claim.form</field>
+        <field name="model">contract.claims</field>
+        <field name="arch" type="xml">
+          <form string="Contract Claim">
+            <header>
+              <button name="action_submit" type='object' string='Submit' class="oe_highlight" states='draft'/>
+              <button name="action_approve" type='object' string='Approve' class="oe_highlight" states='submit'/>
+              
+              <button name="action_create_invoice" type='object' string='Create Invoice' class="oe_highlight" states='approved'/>
+
+               <button name="cancel" states="draft,submit,action_approve" string="Cancel" type="object" class="oe_highlight" groups="kamil_contracts.group_contract_extender,kamil_contracts.group_gm,kamil_contracts.group_gm"/>
+
+               <button name="senttodraft" states="submit,action_approve,approved" string="Send to dtaft" type="object" class="oe_highlight" groups="kamil_contracts.group_contract_extender,kamil_contracts.group_gm,kamil_contracts.group_gm"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,submit,approved,invoice,cancel" />              
+            </header>
+            <sheet>
+              <div class="oe_button_box" name="button_box">
+                <button class="oe_stat_button" name="button_invoice" string="Invoices"  type="object" icon="fa-edit" attrs="{'invisible':[('state','!=','invoice')]}"/>
+              </div>
+             
+                <h1>
+                  <field name="name"/>
+                </h1>
+              <!-- <group colspan="4"> -->
+                <group>
+                  <field name="reference" style="width:40%%" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create_edit':True}"/>
+                  <field name="date" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  
+                  
+                  
+                  <!-- <field name="penalty_ids" invisible="1" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/> -->
+                  <field name="subject" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <field name="body"  widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <field name="attachment" widget="file" file_name="file_name" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <field name="file_name" invisible="1" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                </group>
+                <group>
+                  <field name="total_claim" readonly="1" force_save="1"/>
+                  <field name="invoice" invisible="1"/>
+                </group>
+              <!-- </group> -->
+              <group>
+                <notebook>
+                  <page name='pg_claims' string='Claims'>
+                    <field name="claims" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" >
+                      <tree create="false"  editable="true"> 
+                        <field name="phase_name" string="Name" attrs="{'readonly':True}"/>
+                        <field name="phase_amount" string="Phase Amount" attrs="{'readonly':True}"/>
+                        <field name="claim_amount" string="Claim Amount"/>
+
+                        <field name="pay_applied_amount" string="Applied Amount" attrs="{'readonly':True}"/>
+                        <field name="pay_balance" string="Balance Amount" />
+                         <field name="pay_paid_amount" string="Paid Amount" attrs="{'readonly':True}"/>
+                        <field name="execu_percentage" string="Percentage %"/>
+                        <!-- <field name="total_claim" sum="Total of claim"/> -->
+                        <!-- <field name="pay_date" string="Date" attrs="{'readonly':True}"/> -->
+                      </tree>
+                    </field>
+                  </page>
+
+                  <page name='pg_penalties' string='Penalties'>
+                    <field name="penalties" readonly='True' force_save="True">
+                      <tree edit="false" create="false" force_save="True">
+                        
+                        <field name="panalty_name" string="Name" force_save="1"/>
+                        <field name="affect_date" string="Date" force_save="1"/>                      
+                        <field name="frequency" force_save="1"/>
+                        <field name="panalty_amount" string="Amount" force_save="1"/>
+                        <field name="panalty_basis"  force_save="1"/>
+                        <field name="percentage"  force_save="1"/>   
+                        <field name="difference" string="Date Difference" force_save="1"/>
+                        <field name="total_penalty" string="Total" force_save="1"/>
+                        <!-- <field name="total_penalties" sum="Total of penalties"/> -->
+                      </tree>
+                    </field>
+                  </page>
+                </notebook>
+              </group>
+            </sheet>
+          </form>
+        </field>
+    </record>
+
+
+        <!-- View for Need requisition Tree-->
+
+
+    <record id="view_contract_claims_tree" model="ir.ui.view">
+      <field name="name">view.contract.claim.tree</field>
+      <field name="model">contract.claims</field>
+      <field name="arch" type="xml">
+          <tree string="Contract Claim">
+              <field name="name"/>
+              <field name="reference"/>
+              <!-- <field name="contractor"/> -->
+              <field name="total_claim" />
+              <field name="date" />
+              <field name="state" />
+              <field name="write_date" string="last update" />
+              <field name="write_uid" string="updated by" />
+              
+          </tree>
+      </field>
+    </record>
+
+    
+    <!-- Action for Contract Claims-->
+    <record id="action_contract_claims" model="ir.actions.act_window">
+      <field name="name">Contract Claims</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">contract.claims</field>
+      <field name="view_type">form</field>
+      <field name="view_id" eval="False"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to define a Contract Claim
+        </p>
+      </field>
+    </record>
+
+
+        <record id="action_contract_claims_view1" model="ir.actions.act_window.view">
+          <field eval="1" name="sequence"/>
+          <field name="view_mode">tree</field>
+          <field name="view_id" ref="view_contract_claims_tree"/>
+          <field name="act_window_id" ref="action_contract_claims"/>
+        </record>
+
+
+        <record id="action_contract_claims_view2" model="ir.actions.act_window.view">
+          <field eval="2" name="sequence"/>
+          <field name="view_mode">form</field>
+          <field name="view_id" ref="view_contract_claims_form"/>
+          <field name="act_window_id" ref="action_contract_claims"/>
+        </record>
+
+
+        <!-- Menus for Contract Claims-->
+
+    <menuitem id="sub_menu_contract_claims" parent="kamil_contracts.kamil_contract_menu_root" name="Contract Claims" sequence="0" action="action_contract_claims"/>
+
+  </data>
+</odoo>
+
+

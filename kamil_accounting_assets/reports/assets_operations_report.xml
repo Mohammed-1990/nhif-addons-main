@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- Payment Report-->
+	<report 
+		id="assets_operations_report"
+		model="asset.report"
+		string="Assets Operations Report"
+		report_type="qweb-html"
+		name="kamil_accounting_assets.assets_operations_template"
+	/>
+
+
+	<!-- Payment Report Template-->
+	<template id="assets_operations_template">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+				<div class="page">
+
+					<div dir="rtl" style="float:right;text-align:start;">
+						<a href="#" target="_blank">
+							<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-printer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 2H5a1 1 0 0 0-1 1v2H3V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h-1V3a1 1 0 0 0-1-1zm3 4H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v1H2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+								<path fill-rule="evenodd" d="M11 9H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM5 8a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5z"/>
+								<path d="M3 7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+							</svg>
+						</a>
+					</div>
+
+
+					<div>
+						<h3 style="font-family:Calibri;" class="text-center">
+							<t>
+								<b>تقرير عمليات الاصول</b><br/> <br/>
+							</t>
+						</h3>
+
+						<br/><br/>
+
+						<table dir="rtl" border="1" class="text-right table-bordered" style="text-align:start;">
+							<thead>
+								<tr style="page-break-inside: avoid;" class="table-active">
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">م.</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">رقم الاصل</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">إسم الاصل</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">الإدارة</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">القسم</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">الفئة</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">تاريخ الشراء</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">القيمة الاجمالية</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">القيمة الحالية</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">نسبة الاهلاك السنوية</td>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">قيمة الاهلاك السنوية</td>
+
+									<t t-if="operation_type == 'revaluation'">
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">قيمة اعادة التقييم</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">تاريخ إعادة التقييم</td>
+									</t>
+
+									<t t-if="operation_type == 'dispose'">
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											القيمة عند التخلص
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											تاريخ التخلص
+										</td>
+									</t>
+								</tr>
+								
+							</thead>
+							<tbody>
+								<t t-foreach="docs" t-as="doc">
+									<tr style="page-break-inside: avoid;">
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc_index + 1"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc['asset_code']"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc['asset_name']"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc['admin_id']"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc['dept_id']"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc['category_id']"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc['purchase_date']"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="'{0:,.2f}'.format(float(doc['value']))"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="'{0:,.2f}'.format(float(doc['value_residual']))"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="doc['annual_dep_ratio']"/>
+										</td>
+										<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+											<t t-esc="'{0:,.2f}'.format(float(doc['annual_dep_value']))"/>
+										</td>
+												
+										<t t-if="operation_type == 'revaluation'">
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<t t-esc="'{0:,.2f}'.format(float(doc['operation_value']))"/>
+											</td>
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<t t-esc="doc['operation_date']"/>
+											</td>
+										</t>
+
+										<t t-if="operation_type == 'dispose'">
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<t t-esc="'{0:,.2f}'.format(float(doc['operation_value']))"/>
+											</td>
+											<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+												<t t-esc="doc['operation_date']"/>
+											</td>
+										</t>
+									</tr>
+								</t>
+								
+								<tr>
+									<td style="font:300; white-space: nowrap;width: 1%; padding:5px;">
+										الإجمالي
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</t>
+		</t>
+	</template>
+
+</odoo>

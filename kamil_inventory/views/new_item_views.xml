@@ -1,0 +1,163 @@
+<odoo>
+  <data>
+                <!-- View for New Product Request Form-->
+
+    <record id="view_new_request_form" model="ir.ui.view">
+        <field name="name">view.new.product.form</field>
+        <field name="model">new.product</field>
+        <field name="arch" type="xml">
+          <form string="New Item Request">
+            <header>
+              <button name="submit_to_approval" type="object" string="Submit" states="draft" class="btn-primary"/>
+              <button name="action_confirm" type="object" string="Confirm" states="approval" class="btn-primary"/>
+              <button name="action_cancel" type="object" string="Cancel" states="draft,approval" />
+              <field name="state" widget="statusbar" statusbar_visible="draft,approval"/>
+            </header>
+            <sheet>
+              <label for="new_request" string="Request ID" class="oe_edit_only"/>
+                <h1>
+                  <field name="new_request" readonly="1"/>
+                </h1>
+              <group colspan="4">
+                <group>
+                  <field name="responsible" style="width:40%%" readonly="1"/>
+                  <field name="date" style="width:40%%" readonly="1"/>
+                  <field name="company_id" style="width:40%%" readonly="1"/>
+                  <field name="is_manager" invisible="1"/>
+                </group>
+              </group>
+              <group>
+                <notebook>
+                  <page name='pg_new_item_lines' string='New Item Lines' >
+                    <field name="item_lines" attrs="{'readonly':[('state','in',['done','cancel'])]}">
+                      <tree editable="bottom" >
+                        <field name="product_name" required="1" string="Item Name" attrs="{'readonly': [('state', '=','created')]}"/>
+                        <field name="types" string="Type" required="1" attrs="{'readonly': [('state', '=','created')]}"/>
+                        <field name="category_id" required="1" attrs="{'readonly': [('state', '=','created')]}" />
+                        <field name="uom" string="UOM" required="1"/>
+                        <field name="created_prod" invisible="1"/>
+                        <field name="new_product" invisible="1"/>
+                        <field name="is_manager" invisible="1"/>
+                        <field name="state" invisible="1"/>
+                        <button name="create_product" string="Create" type="object" attrs="{'invisible': ['|',('state', '=','created'),('is_manager', '=', False)]}" groups="kamil_inventory.group_inventory_responsible_hq"/>
+                        <button name="open_product" string="Open" type="object" attrs="{'invisible': [('state', '=','draft')]}" groups="kamil_inventory.group_inventory_responsible_hq"/>
+                      </tree>
+                    </field>
+                  </page>
+                </notebook>
+              </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+              </div>
+          </form>
+        </field>
+    </record>
+
+    <record id="view_new_request_search" model="ir.ui.view">
+      <field name="name">new.product.search</field>
+      <field name="model">new.product</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="new_request"/>
+          <field name="company_id"/>
+          <field name="responsible"/>
+          <field name="date"/>
+          <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+          <filter name="approval" string="Approval" domain="[('state','=','approval')]"/>
+          <filter name="done" string="Done" domain="[('state','=','done')]"/>
+          <group expand="0" string="Group By">
+            <filter string="Responsible" name="responsible" domain="[]"  context="{'group_by':'responsible'}"/>
+            <filter string="Branch" name="branch" domain="[]" context="{'group_by':'company_id'}"/>
+            <filter string="Status" name="status" domain="[]" context="{'group_by':'state'}"/>
+            <separator/>
+            <filter name="date" string="Date" domain="[]" context="{'group_by':'date:month'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+
+            <!-- View for New Product Request Tree-->
+
+
+    <record id="view_new_request_tree" model="ir.ui.view">
+      <field name="name">view.new.product.tree</field>
+      <field name="model">new.product</field>
+      <field name="arch" type="xml">
+          <tree 
+            decoration-info="state == 'draft'" 
+            decoration-muted="state == 'cancel'" 
+            decoration-danger="state == 'approval' and date &lt;current_date"   
+            string="Request Add New Item">
+              <field name="new_request"/>
+              <field name="responsible"/>
+              <field name="date"/>
+              <field name="company_id"/>
+              <field name="state"/>
+          </tree>
+      </field>
+    </record>
+
+
+       <!-- Action for New Product Request-->
+
+    <record id="action_new_request" model="ir.actions.act_window">
+      <field name="name">Request Add New Item</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">new.product</field>
+      <field name="view_type">form</field>
+      <field name="view_id" eval="False"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to define a New Item Request.
+        </p>
+      </field>
+    </record>
+
+
+
+        <record id="action_new_request_view1" model="ir.actions.act_window.view">
+          <field eval="1" name="sequence"/>
+          <field name="view_mode">tree</field>
+          <field name="view_id" ref="view_new_request_tree"/>
+          <field name="search_view_id" ref="view_new_request_search"/>
+          <field name="act_window_id" ref="action_new_request"/>
+        </record>
+
+
+        <record id="action_new_request_view2" model="ir.actions.act_window.view">
+          <field eval="2" name="sequence"/>
+          <field name="view_mode">form</field>
+          <field name="view_id" ref="view_new_request_form"/>
+          <field name="act_window_id" ref="action_new_request"/>
+        </record>
+
+
+        <!-- Menus for New Product Request-->
+
+    <menuitem id="sub_menu_new_request" parent="stock.menu_stock_warehouse_mgmt"  sequence="0" action="action_new_request"/>
+
+
+    <record id="action_new_request_purchase" model="ir.actions.act_window">
+      <field name="name">Request Add New Item</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">new.product</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to define a New Item Request.
+        </p>
+      </field>
+    </record>
+
+
+
+
+    <menuitem id="sub_menu_new_request_purchase" parent="purchase.menu_procurement_management"  sequence="0" action="action_new_request_purchase"/>
+
+  </data>
+</odoo>

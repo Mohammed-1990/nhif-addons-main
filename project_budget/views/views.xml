@@ -1,0 +1,39 @@
+<odoo>
+  <data>
+  
+   <record id="edit_project_inherit" model="ir.ui.view">
+        <field name="name">Project</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+         
+        <xpath expr="//form/sheet/notebook/page[1]" position="before">
+          <page name="budget" string="Budget">
+            <group col='4'>
+              <field name="planned_amount"/>
+              <field name="remaining_amount"/>
+            </group>
+          </page>
+        </xpath>
+
+         </field>
+       </record>
+
+   <record id="view_task_form2_inherit" model="ir.ui.view">
+        <field name="name">Task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+
+        <xpath expr="//field[@name='user_id']" position='after'>
+        <field name="planned_amount"/>
+        </xpath>
+
+        <xpath expr="//field[@name='tag_ids']" position='after'>
+        <field name="remaining_amount"/>
+        </xpath>
+
+         </field>
+       </record>
+  </data>
+</odoo>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- Item Card Report-->
+	<report 
+		id="item_card_report"
+		model="item.card.wizard"
+		string="Item Card Report"
+		report_type="qweb-html"
+		name="kamil_inventory.item_card_template"
+	/>
+
+
+	<!-- Item Card Template-->
+	<template id="item_card_template">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+                <div class="page">
+					<div>
+						<h3 style="font-family:Calibri;" class="text-center">
+							<b>كرت العهدة</b>
+							<br/>
+						</h3>	
+						<br/>
+						<!-- <h4 style="font-family:Calibri;" class="text-right">
+								
+								<b>الصنف : </b>
+									<t t-esc="product"/>
+								<br/>
+								<b>المخزن : </b>
+									<t t-esc="location"/>
+								<br/>
+						</h4> -->
+<!--						<div>-->
+<!--							<strong style="float:right">: الصنف </strong>-->
+<!--							<span style="float:right;margin-right:20px" t-esc="product"></span>-->
+<!--							<br/>-->
+<!--							<strong style="float:right">: المخزن </strong>-->
+<!--							<span style="float:right;margin-right:20px" t-esc="location"></span>-->
+<!--						</div>-->
+						<br/><br/>
+					</div>
+					<table dir="rtl" border="1" class="text-right table table-condensed table-hover">
+
+                    	<thead>
+                        	<tr class="text-center">
+                        		<th rowspan="2">التاريخ</th>
+                        		<th rowspan="2">المنتج</th>
+                        		<th rowspan="2">المخزن</th>
+                        		<th colspan="2">الوارد</th>
+                        		<th colspan="2">المنصرف</th>
+                        		<th rowspan="2">الباقي بالعهدة</th>
+                        		<th rowspan="2">وارد او منصرف الي</th>
+                        	</tr>
+                        	<tr class="text-center">
+                    			<td>المقدار</td>
+                        		<td>رقم الاذن</td>
+                    			<td>المقدار</td>
+                    			<td>رقم الاذن</td>
+                        	</tr>
+                        </thead>
+                        <tbody>
+                        	<t t-foreach="docs" t-as="doc">
+	                        	<tr>
+	                        		<td>
+	                                    <t t-esc="doc['date']"/>
+	                                </td>
+									<td>
+	                                    <t t-esc="doc['product']"/>
+	                                </td>
+									<td>
+	                                    <t t-esc="doc['location']"/>
+	                                </td>
+	                                <td>
+	                                    <t t-esc="doc['amount_1']"/>
+	                                </td>
+	                                <td>
+	                                    <t t-esc="doc['permission_no_1']"/>
+	                                </td>
+	                                <td>
+	                                    <t t-esc="doc['amount_2']"/>
+	                                </td>
+	                                <td>
+	                                    <t t-esc="doc['permission_no_2']"/>
+	                                </td>
+	                                <td>
+	                                    <t  t-esc="doc['remaining']"/>
+	                                </td>
+	                                <td>
+	                                    <t  t-esc="doc['partner']"/>
+	                                </td>       
+	                        	</tr>
+	                        </t>
+                        </tbody>
+                    </table>
+                </div>
+			</t>
+		</t>
+	</template>
+
+
+</odoo>

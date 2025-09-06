@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_ratification_line_pivot" model="ir.ui.view">
+         <field name="name">ratification.line.pivot</field>
+         <field name="model">ratification.line</field>
+         <field name="arch" type="xml">
+             <pivot string="Ratification Analysis" disable_linking="True">
+                <field name="ratification_id" type="row"/>
+                 <field name="ratification_type" type="row"/>
+                <field name="analytic_account_id" type="row"/>
+                 <field name="amount" type="measure"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="view_ratification_line_graph" model="ir.ui.view">
+         <field name="name">ratification.line.graph</field>
+         <field name="model">ratification.line</field>
+         <field name="arch" type="xml">
+             <graph string="Ratification Analysis" type="line">
+                 <field name="ratification_id" type="row"/>
+                <field name="ratification_type" type="row"/>
+                <field name="analytic_account_id" type="row"/>
+                 <field name="amount" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+
+    <record id="view_ratification_line_search" model="ir.ui.view">
+        <field name="name">ratification.line.search</field>
+        <field name="model">ratification.line</field>
+        <field name="arch" type="xml">
+            <search string="Revenues Budget">
+                <group expand="1" string="Group By">
+                    <filter string="Ratification" name="ratification" context="{'group_by':'ratification_id'}"/>
+                    <filter string="Ratification Type" name="ratification_type" context="{'group_by':'ratification_type'}"/>
+                    <filter string="Description" name="name" context="{'group_by':'name'}"/>
+                    <filter string="Branch" name="branch_id" context="{'group_by':'branch_id'}"/>
+                    <filter string="Account" name="account_id" context="{'group_by':'account_id'}" />
+                    <filter string="Budget Item" name="item" context="{'group_by':'analytic_account_id'}"/>
+                    <filter string="Cost Center" name="cost_center_id" context="{'group_by':'cost_center_id'}"/>
+                   
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <!-- <record id="action_ratification_line" model="ir.actions.act_window">
+        <field name="name">Ratification Analysissssss</field>
+        <field name="res_model">ratification.line</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_ratification_line_pivot')}),
+                          (0, 0, {'view_mode': 'graph', 'view_id': ref('view_ratification_line_graph')})]"/>
+        <field name="context">{'search_default_ratification': 1,'search_default_ratification_type':1,'default_item':1}</field>
+
+        <field name="view_id" ref="view_ratification_line_search"></field>
+    </record>
+
+
+	<menuitem id="menu_ratification_list"  sequence="4" parent="menu_report" action="action_ratification_line"/> -->
+    
+
+</odoo>

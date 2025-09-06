@@ -1,0 +1,79 @@
+<odoo>
+    <report id="stock_inventort_report_pdf"
+            model="stock.inventory.wizard"
+            string="Report Stock Inventory"
+            report_type="qweb-html"
+            name="kamil_inventory.stock_inventory_report_view"
+            menu="False"/>
+
+    <template id="stock_inventory_report_view">
+            <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <br/>
+                 <div class="text-center" style="font:500;">
+                    <strong>الصندوق القومي للتامين الصحي
+                    <br/>
+                        قسم المخازن
+                        <br/>
+                    تقرير الجرد</strong>
+                </div>
+                <br/>
+                <br/>
+                <div class="page">
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                          <thead style="display: table-header-group;">
+                                <th class="text-center fit">#</th>
+                                <th class="text-center fit">المنتج</th>
+                                <th class="text-center fit">وحدة القياس</th>
+                                <th class="text-center fit">فئة المنتج</th>
+                                <th class="text-center fit">المخزن</th>
+                                <th class="text-center fit">محجوز</th>
+                                <th class="text-center fit">الكمية في اليد</th>
+                          </thead>
+                        <t t-set="count" t-value="1"/>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr style="page-break-inside: avoid;">
+                                    <td class="text-center" heidht="5">
+                                        <span t-esc="count"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['product']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['uom']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['categ']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['location']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['reserved']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['quantity']"/>
+                                    </td>
+
+                                </tr>
+                            <t t-set="count" t-value="count+1"/>
+                            </t>
+                        <t t-if="docs==[]">
+                            <tr style="page-break-inside: avoid;">
+                                <th class="text-center" colspan="4">لا تــــــوجـــد بيــانات</th>
+                            </tr>
+                        </t>
+
+                    </table>
+                </div>
+            </t>
+            </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,200 @@
+<odoo>
+	<data>
+
+    <record model="ir.ui.view" id="program_execution_tree_view">
+      <field name="name">program.execution.tree</field>
+      <field name="model">program.execution</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="training_type" />
+            <field name="date_from"/>
+            <field name="date_to"/>
+            <field name="total_cost"/>
+            <field name="state"/>
+          </tree>
+        </field>
+      </record>
+      
+     <record model="ir.ui.view" id="program_execution_form_view">
+      <field name="name">program.execution.form</field>
+      <field name="model">program.execution</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+             
+              <button name="confirm" states="draft" string="Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+              
+              <button name="td_confirm" states="td_confirm" string="Confirm the training department" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="hr_confirm" states="hr_confirm" string="HR Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+              <button name="gm_confirm" states="gm_confirm" string="General Manager" type="object" class="oe_highlight" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+              <button name="do_return" states="td_confirm" string="Return" type="object" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="do_return1" states="hr_confirm" string="Return" type="object" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+              
+              <button name="do_return2" states="gm_confirm" string="Return" type="object" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group" />
+
+              <button name="do_reject" states="td_confirm" string="Reject" type="object" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="do_reject1" states="hr_confirm" string="Reject" type="object" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+              
+              <button name="do_reject2" states="gm_confirm" string="Reject" type="object" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,td_confirm,hr_confirm,gm_confirm,accounting"/>
+            </header>
+
+
+            <sheet>
+              <h1>
+                <field name="name" placeholder="Example: Exercise Course ...." attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+              </h1>
+              <group col="4">
+                  <field name="training_programs" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="program_type" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+              <group col="4">
+                  <field name="country" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="city_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="training_type" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="discharge_type" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+              <group col="4">
+                  <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                  <field name="date_to" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                  <field name="hour_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="hour_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="training_center" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="coach" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="total_cost"/>
+                  <field name="currency" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="attachment"/>
+                </group>
+
+              <notebook>
+               <page string="Participants">
+                <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                  <tree editable="bottom">
+                    <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                    <field name="department_id" force_save="1"/>
+                    <field name="degree_id" force_save="1"/>
+                    <field name="job_id" force_save="1"/>
+                  </tree>
+                </field>
+              </page>
+
+             <page string="The Cost">
+              <form>
+             <group col="4">
+                <field name="funding_type" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="financier_name" attrs="{'readonly':[('state','!=','draft')],'required':[('funding_type','in',['financier','both'])]}"/>
+                <field name="total_fund_cost"/>
+                <field name="total_financing_cost"/>
+              </group>
+
+               <page>
+              <field name ="line_id" attrs="{'readonly':[('state','!=','draft')]}">
+               <tree editable="bottom">
+                <field name="item_name"/>
+                <field name="financier"/>
+                <field name="amount"/>
+                 </tree>
+                 </field>
+               </page>
+
+                </form>
+            </page>
+            </notebook>
+            </sheet>
+           <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="program_execution_search_view">
+        <field name="name">program.execution.search</field>
+        <field name="model">program.execution</field>
+        <field name="arch" type="xml">
+            <search>
+              <field name="training_programs"/>
+              <field name="training_type" />
+              <field name="date_from"/>
+              <field name="date_to"/>
+              <field name="state"/>
+              <separator/>
+              <!-- add filter -->
+              <filter name="internal" string="Internal" domain="[('program_type','=','internal')]"/>
+              <filter name="external" string="External" domain="[('program_type','=','external')]"/>
+              <!-- add group by -->
+              <group expand="0" string="Group By">
+                <filter name="program_type" string="Program Type" context="{'group_by':'program_type'}"/>
+                <filter name="training_type" string="Training Type" context="{'group_by':'training_type'}"/>
+                <filter name="country" string="Country" context="{'group_by':'country'}"/>
+                <filter name="city" string="City" context="{'group_by':'city_id'}"/>
+                <filter name="training_center" string="Training Center" context="{'group_by':'training_center'}"/>
+                <filter name="financier_name" string="Financier Name" context="{'group_by':'financier_name'}"/>
+                <filter name="funding_type" string="Funding Type" context="{'group_by':'funding_type'}"/>
+              </group>
+            </search>
+          </field>
+      </record>
+
+      
+
+    <record  id="action_program_execution" model="ir.actions.act_window">
+      <field name="name">Program Execution</field>
+      <field name="res_model">program.execution</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+		<menuitem name="Program Execution"
+		id="program_execution_menu"
+     	parent="menu_short_training"
+     	action="action_program_execution"
+        sequence="4"
+        groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"
+		 	/>
+
+
+
+
+
+      <record model="ir.ui.view" id="survey_form_inherit">
+        <field name="name">inherit_employee_profile_form</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="before">
+              <group col="4">
+                <field name="training_programs" attrs="{'invisible':[('is_training','=',False)]}" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                <field name="is_training" invisible="True"/>
+              </group>
+            </xpath>
+          </field>
+        </record>
+
+
+    <record  id="action_evaluation_training_course" model="ir.actions.act_window">
+      <field name="name">Evaluation of the training course</field>
+      <field name="res_model">survey.survey</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{'default_is_training':True}</field>
+    </record>
+
+      <menuitem name="Evaluation of the training course"
+          id="evaluation_training_course_menu"
+          parent="menu_short_training"
+          action="action_evaluation_training_course"
+          sequence="5"
+          groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"
+      />
+
+  </data>
+</odoo>

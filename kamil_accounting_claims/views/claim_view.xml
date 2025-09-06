@@ -1,0 +1,252 @@
+<odoo>
+	<data>
+			
+		<record id="claims_tree_view" model="ir.ui.view">
+			<field name="name">Claim Tree</field>
+			<field name="model">claim.claim</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="partner_id"/>
+					<field name="year"/>
+					<field name="month"/>
+					<!-- <field name="amount_before_audit"/> -->
+					<!-- <field name="amount_after_audit"/> -->
+					<field name="branch_id"/>
+					<field name="date"/>
+					<field name="total_amount" sum="Amount"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="claims_search_view" model="ir.ui.view">
+		   <field name="name">Claim Search</field>
+		   <field name="model">claim.claim</field>
+		    <field name="arch" type="xml">
+		        <search string="Claim Search">
+					<field name="name"/>
+					<field name="year"/>
+					<field name="date"/>
+					<field name="month"/>
+					<field name="partner_id"/>
+					<field name="state"/>
+				</search>
+		   </field>
+		</record>
+
+
+		<record id="claims_form_view" model="ir.ui.view">
+			<field name="name">Claim Form</field>
+			<field name="model">claim.claim</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>	
+<!--
+						<button name="do_auditors_audit" string="Auditors Audit" type="object" states="draft" class="oe_highlight"/>
+						<button name="do_internal_audit" string="Internal Audit" type="object" states="Auditors Audited" class="oe_highlight"/>
+						<button name="do_gm_approval" string="General Manager Approval" type="object" states="Internal Auditor Audited" class="oe_highlight"/>
+						<button name="do_transfer_to_finance_admin" string="Transfer to Director of Financial and Administrative Affairs" type="object" states="General Manager Approved" class="oe_highlight"/>
+						<button name="do_transfer_to_finance" string="Transfer to Director of Financial Affairs" type="object" states="Transfered to Director of Financial and Administrative Affairs" class="oe_highlight"/>
+						<button name="do_transfer_to_ratifications" string="Transfer to Ratifications Department" type="object" states="Transfered to Director of Financial Affairs" class="oe_highlight"/>
+-->
+
+						<field name="state" widget="statusbar" statusbar_visible="draft,Auditors Audit,Internal Auditor Audit"/>
+					</header>
+					<sheet>
+
+						<div class="oe_button_box" name="button_box">
+							
+							
+							
+							<button class="oe_stat_button text-left" type="object" name="show_ratifications" icon="fa-pencil-square-o" attrs="{'invisible':[('state','!=', 'Transfered to Ratifications Department')]}">
+							Ratification
+							</button>							
+
+							<button class="oe_stat_button text-left" type="object" name="show_claim_complex" icon="fa-pencil-square-o" attrs="{'invisible':[('state','!=', 'Transfered to Ratifications Department')]}">
+							Claim Complex
+							</button>
+						</div>
+
+
+
+						<div >
+							<h2>
+								<label for="name" class="oe_edit_only"/><br/>
+								<field name="name" readonly="1"/>
+							</h2>
+							<br/>
+
+							<h2>
+								<label for="partner_id"/><br/>
+								<field name="partner_id" required="1"/>
+							</h2>
+						</div>
+						<group col="4">
+							<field name="branch_id" required="1"/>
+							<field name="date" required="1"/>
+							<field name="year" required="1"/>
+							<field name="month" required="1"/>
+							<!-- <field name="amount_before_audit" required="1"/> -->
+							<!-- <field name="amount_after_audit" required="1"/> -->
+							<field name="total_amount" required="1"/>
+							<field name="total_amount_in_words" required="1"/>
+						</group>
+						<group>
+							<field name="claim_type" required="1"/>
+						</group>
+						<notebook>
+							<page string="Details">
+								<field name="ratification_line_ids">
+									<tree>
+										
+										<field name="partner_id" invisible="1"/>
+										
+										<field name="ratification_type" invisible="1"/>
+
+										<field name="the_type" required="1" invisible="1"/>
+
+										<field name="branch_id" required="1"  options="{'no_create':True}"/>
+										
+										<field name="account_id" options="{'no_create':True}" required="1" domain="[('is_group','=','sub_account')]" />
+										
+										<field name="analytic_account_id"  options="{'no_create':True}" attrs="{'invisible':[('ratification_type','in',['accounts_receivable','petty_cash','service_provider_loan','prepaid_expenses','purchases'])],'required':[('ratification_type','in',['expenses','employees_compensation','medical_service_expenses','grants','social_benefits','subsidies'])]}"/>
+	
+										<field name="cost_center_id"/>
+																				<field name="date"/>
+
+
+										<field name="amount" required="1" sum="amount"/>
+									
+										<field name="name" required="1"/>
+									</tree>	
+									<form>
+										<sheet>
+										
+											<group col="2">
+												<field name="the_type" required="1"/>
+												<field name="date"/>
+
+												<field name="accounts_receivable_types" attrs="{'invisible':[('the_type','!=','accounts_receivable')]}" widget="radio" options="{'horizontal': true}"/>
+												<field name="accounts_payable_types"  attrs="{'invisible':[('the_type','!=','accounts_payable')]}" widget="radio" options="{'horizontal': true}"/>
+											</group>
+
+											<field name="ratification_type" invisible="1"/>
+
+											<group col="4">
+												<field name="account_id" options="{'no_create':True}" required="1" domain="[('is_group','=','sub_account')]" />
+									
+												<field name="analytic_account_id"  options="{'no_create':True}" attrs="{'invisible':[('ratification_type','in',['accounts_receivable','petty_cash','service_provider_loan','prepaid_expenses','purchases'])],'required':[('ratification_type','in',['expenses','employees_compensation','medical_service_expenses','grants','social_benefits','subsidies'])]}"/>
+												<field name="approved_value" attrs="{'invisible':[('the_type','=','accounts_receivable')]}"/>
+												<field name="remaining_value" attrs="{'invisible':[('the_type','=','accounts_receivable')]}"/>
+											</group>
+											<group>
+												<field name="amount" required="1"/>
+
+											</group>
+											
+											<separator string="Deductions"></separator>
+											<field name="deduction_ids">
+												<tree editable="bottom">
+													<field name="tax_id" options="{'no_create':True}" required="1"/>
+													<field name="name" required="1"/>
+													<field name="amount" required="1" sum="Amount"/>
+												</tree>
+											</field>
+
+											<group col="4">
+												<field name="deduction_amount"/>
+												<field name="net_amount" />
+											</group>
+											
+
+											<group>
+												<field name="name" required="1"/>
+											</group>
+											<group col="4">
+												<field name="cost_center_id"/>
+												<field name="branch_id" required="1"  options="{'no_create':True}"/>
+											</group>
+											<group>
+												<field name="item_type"/> 
+											</group>
+											<separator string="Analytic Tags"></separator>
+											<group>
+												<field name="level_id"/>
+											</group>
+											<field name="tag_ids">
+												<tree editable="bottom">
+													<field name="tag_id" required="1"/>
+													<field name="amount" sum="Amount" required="1"/>
+												</tree>
+											</field>
+										</sheet>
+									</form>
+								</field>
+
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+
+
+
+		<record id="ratification_form_view_inherit" model="ir.ui.view">
+			<field name="name">Ratification Inherit Form</field>
+			<field name="model">ratification.ratification</field>
+			<field name="inherit_id" ref="kamil_accounting_financial_ratification.ratification_form_view"/>
+			<field name="arch" type="xml">
+				
+				<field name="currency_id" position="after">
+					<field name="claim_id" invisible="1"/>
+				</field>
+			
+			</field>
+		</record>
+				
+
+		<record id="action_claim" model="ir.actions.act_window">
+			<field name="name">Claims</field>
+			<field name="res_model">claim.claim</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('claim_type','=','Claim')]</field>
+			<field name="context">{'default_claim_type':'Claim'}</field>
+		</record>
+
+		<record id="action_claim_contribution" model="ir.actions.act_window">
+			<field name="name">Contributions</field>
+			<field name="res_model">claim.claim</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('claim_type','=','Contribution')]</field>
+			<field name="context">{'default_claim_type':'Contribution'}</field>
+		</record>
+
+		<record id="action_claim_recovery" model="ir.actions.act_window">
+			<field name="name">Recovery</field>
+			<field name="res_model">claim.claim</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('claim_type','=','Recovery')]</field>
+			<field name="context">{'default_claim_type':'Recovery'}</field>
+		</record>
+
+
+		<menuitem id="claim_main_menu" name="Claims" parent="account_accountant.menu_accounting" sequence="-6"/>
+		
+		<menuitem id="claims_menu" name="Claims" parent="claim_main_menu"  action="action_claim"/>
+		
+		<menuitem id="contributions_menu" name="Contributions" parent="claim_main_menu"  action="action_claim_contribution"/>
+		
+		<menuitem id="recovery_menu" name="Recovery" parent="claim_main_menu"  action="action_claim_recovery"/>
+		
+
+
+	</data>
+</odoo>

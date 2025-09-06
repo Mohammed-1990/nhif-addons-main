@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report
+			id="action_visit_report"
+			string="Visit Report"
+			model="tender.book"
+			report_type="qweb-html"
+			file="kamil_purchase_qualifiying_suppliers.report_visit_template"
+			name="kamil_purchase_qualifiying_suppliers.report_visit_template"
+			print_report_name="'Visit Report Template'"
+		/>
+	</data>
+</odoo>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="launch_training_program_form" model="ir.ui.view">
+			<field name="name">launch.training.program.form</field>
+			<field name="model">launch.training</field>
+			<field name="arch" type="xml">
+
+				<form>
+					<header>
+			              <button name="do_confirm" string="Confirm" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_training_department_hq_group"/>
+			              <button name="do_submission_opened" string="Open the submission" type="object" class="btn btn-primary" states="confirmed" groups="kamil_hr_security.hr_training_department_hq_group"/>
+			              <button name="do_close" string="Close" type="object" states="submission_opened" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_training_department_hq_group"/>
+			              <button name="set_to_draft" string="Set to draft" type="object" states="confirmed,closed" groups="kamil_hr_security.hr_training_department_hq_group"/>
+			              <field name="state" widget="statusbar"/>
+		            </header>
+				<sheet>
+					<div name='button_box' class="oe_button_box">
+	                    <button name="submissions"
+	                        type="object"  
+	                        class="oe_stat_button" 
+	                        icon="fa-list"
+	                        groups="kamil_hr_security.hr_training_department_hq_group"
+	                        >
+	                        <field string="Submissions" name="submissions_count" widget="statinfo"/>
+	                    </button>
+	                    <button name="evaluation_candidates"
+	                          type="object"  
+	                          class="oe_stat_button" 
+	                          icon="fa-th-list"
+	                          groups="kamil_hr_security.hr_training_department_hq_group"
+	                          >
+	                      <field string="Evaluation Candidates" name="evaluation_count" widget="statinfo"/>
+	                    </button>
+	                    <button name="study_missions"
+	                          type="object"  
+	                          class="oe_stat_button" 
+	                          icon="fa-th-large"
+	                          groups="kamil_hr_security.hr_training_department_hq_group"
+	                          >
+	                      <field string="Study missions" name="missions_count" widget="statinfo"/>
+	                    </button>
+	                </div>
+					<h1>
+					 <field name="name" placeholder="Name of training program" attrs="{'readonly':[('state','!=','draft')]}"/>
+				    </h1>
+					<group col="4">
+						 <field name="country" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+						 <field name="specialization"  options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+						 <field name="university_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+						 <field name="city_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+						 <field name="launch_date"/>
+						 <field name="submission_deadline" attrs="{'readonly':[('state','!=','draft')]}"/>
+				    </group>
+					<group col="4">
+						<field name="date_from" string="start date of the program"  attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+						<field name="date_to" string="end date of the program" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+					</group>
+					 <notebook>
+					 <page string="Application Condition">
+					  	<group col="4">
+		                   	 <field name="age" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                     <field name="years_number" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                 </group>
+		                 <group>
+		                     <field name="other_conditions" attrs="{'readonly':[('state','!=','draft')]}"/>
+		                 </group>
+					 </page>
+					 <page string="Information about Training program">
+					 	<div>
+					 		<field name="postgraduate_information" attrs="{'readonly':[('state','!=','draft')]}"/>
+					 	</div>
+					 </page>
+	                 <page string="Country Information">
+	                 	<div>
+					 		<field name="country_information" attrs="{'readonly':[('state','!=','draft')]}"/>
+					 	</div>
+					 </page>
+
+					<page string="Institutions Conditions">
+	                    <group>
+	                    	<group>
+						 		<field name="compensation_period" attrs="{'readonly':[('state','!=','draft')]}"/>
+						 	</group>
+						 </group>
+						 <group>
+						    <field name="extension_rules" attrs="{'readonly':[('state','!=','draft')]}"/>
+						    <field name="penal_conditions" attrs="{'readonly':[('state','!=','draft')]}"/>
+					    </group>
+
+	                  	<group>
+	                  	  	<field name ="lines_ids" attrs="{'readonly':[('state','!=','draft')]}">
+	                  	  		<tree editable="bottom">
+							 		<field name="item"/>
+							 		<field name="cash"/>
+					 			</tree>
+							 </field>
+						 </group>
+					</page>
+
+					<page string="Required Document">
+						<field name="required_doc_ids" attrs="{'readonly':[('state','!=','draft')]}">
+							<tree editable="bottom">
+								<field name="document_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+							</tree>
+						</field>
+					</page>
+	                   
+	         	 </notebook> 
+				</sheet>
+				<div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+                </div> 
+
+				</form>
+			</field>
+		</record>   
+
+
+
+
+<record model="ir.ui.view" id="launch_training_tree_view">
+      <field name="name">launch.training.tree</field>
+      <field name="model">launch.training</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+           <field name="specialization"/>
+           <field name="university_id"/>
+           <field name="submission_deadline"/>
+           <field name="state"/>
+         </tree>
+      </field>
+    </record>
+
+
+
+<record id="action_launch_training" model="ir.actions.act_window">
+			<field name="name">launch training program</field>
+			<field name="res_model">launch.training</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+
+<menuitem name = "Training" id="hr_training"/>
+
+<menuitem name="Long Training" id= "menu_long_training" parent="hr_training" sequence="1"/>
+
+<menuitem name="Short training" id="menu_short_training" parent="hr_training" sequence="2"/>
+
+        <menuitem name="launch training program"
+		id="launch_training"
+     	parent="menu_long_training"
+     	action="action_launch_training"
+        sequence="1"
+        groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"
+        
+		 	/>
+
+		 	</data>
+</odoo>

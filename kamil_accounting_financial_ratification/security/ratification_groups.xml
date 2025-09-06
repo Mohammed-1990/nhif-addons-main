@@ -1,0 +1,88 @@
+<odoo>
+	<data>
+	
+
+        <!--###############################################
+        Ratifications
+        ############################################### -->
+        <record id="ratifications_confirm_group" model="res.groups">
+            <field name="name">Ratifications Confirmation</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.ratifications_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_ratifications_manager_group"/>
+        </record>
+
+
+        <record id="ratifications_approve_group" model="res.groups">
+            <field name="name">Ratifications Approval</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.ratifications_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_ratifications_manager_group"/>
+        </record>
+
+
+        <record id="ratifications_reset_group" model="res.groups">
+            <field name="name">Ratifications Reset to Draft</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.ratifications_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_ratifications_manager_group"/>
+        </record>
+
+
+        <record id="ratifications_cancel_group" model="res.groups">
+            <field name="name">Ratifications Cancelation</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.ratifications_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_ratifications_manager_group"/>
+        </record>
+
+
+        <!--###############################################
+        Payments
+        ############################################### -->
+        <record id="payments_confirm_group" model="res.groups">
+            <field name="name">Payments Confirmation</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.payments_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_payments_manager_group"/>
+        </record>
+
+
+        <record id="payments_cancel_group" model="res.groups">
+            <field name="name">Payments Cancelation</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.payments_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_payments_manager_group"/>
+        </record>
+
+
+
+        <record id="payments_reset_group" model="res.groups">
+            <field name="name">Payments Reset to Draft</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.payments_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_payments_manager_group"/>
+        </record>
+
+
+        <record id="payments_audit_group" model="res.groups">
+            <field name="name">Payments Audit</field>
+            <field name="implied_ids" eval="[(4, ref('kamil_accounting_base.payments_manager_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_base.kamil_accounting_payments_manager_group"/>
+        </record>
+
+
+
+        <record id="hq_group" model="res.groups">
+            <field name="name">HQ</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+
+
+
+
+
+
+    </data>
+</odoo>

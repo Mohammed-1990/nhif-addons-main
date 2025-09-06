@@ -1,0 +1,65 @@
+<odoo>
+	<data>
+		
+		<record id="kamil_contracts_contract_multi_company_rule" model="ir.rule">
+			<field name="name">kamil contracts contract multi-company</field>
+			<field ref="model_kamil_contracts_contract" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+		
+		<record id="kamil_contracts_waypay_multi_company_rule" model="ir.rule">
+			<field name="name">kamil contracts waypay multi-company</field>
+			<field ref="model_kamil_contracts_waypay" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="kamil_contracts_panalty_lines_multi_company_rule" model="ir.rule">
+			<field name="name">kamil contracts panalty lines multi-company</field>
+			<field ref="model_kamil_contracts_panalty_lines" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="kamil_contracts_attachments_multi_company_rule" model="ir.rule">
+			<field name="name">kamil contracts attachments multi-company</field>
+			<field ref="model_kamil_contracts_attachments" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="contract_claims_multi_company_rule" model="ir.rule">
+			<field name="name">Contract claims multi-company</field>
+			<field ref="model_contract_claims" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="kamil_contracts_extensions_multi_company_rule" model="ir.rule">
+			<field name="name">kamil contracts extensions multi-company</field>
+			<field ref="model_kamil_contracts_extensions" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		
+
+		<record id="kamil_contracts_account_setting_multi_company_rule" model="ir.rule">
+			<field name="name">kamil contracts account setting multi-company</field>
+			<field ref="model_kamil_contracts_account_setting" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="kamil_contracts_termination_requests_multi_company_rule" model="ir.rule">
+			<field name="name">kamil contracts termination_requests multi-company</field>
+			<field ref="model_kamil_contracts_termination_requests" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+	</data>
+</odoo>

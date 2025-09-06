@@ -1,0 +1,64 @@
+<odoo>
+	<data>
+			
+		<record id="integration_info_tree_view" model="ir.ui.view">
+			<field name="name">Integration Tree</field>
+			<field name="model">kamil.integration.info</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+		
+
+		<record id="integration_info_form_view" model="ir.ui.view">
+			<field name="name">Integration Form</field>
+			<field name="model">kamil.integration.info</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="do_reset" string="Reset" type="object" class="oe_highlight"/>
+					</header>	
+					<sheet>
+						<div>
+							<h2>
+								<label for="name"/>
+								<br/>
+								<field name="name"/>
+							</h2>
+						</div>
+						<br/>
+						<notebook>
+							<page string="Branches Info">
+								<field name="branch_ids" widget="many2many">
+									<tree editable="bottom">
+										<field name="name" readonly="1"/>
+										<field name="integration_number"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Items Info">
+								<field name="item_ids" widget="many2many">
+									<tree editable="bottom">
+										<field name="name" readonly="1"/>
+										<field name="integration_number"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_integration_info" model="ir.actions.act_window">
+			<field name="name">Integration Info</field>
+			<field name="res_model">kamil.integration.info</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="action_integration_info" id="menu_itegration_info" parent="account.account_account_menu" sequence="200" name="Integration Info"/>
+
+	</data>
+</odoo>

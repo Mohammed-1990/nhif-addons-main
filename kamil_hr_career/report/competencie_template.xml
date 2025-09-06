@@ -1,0 +1,102 @@
+<odoo>
+     <record id="paperformat_career_portrait" model="report.paperformat">
+        <field name="name">paperformat.career.portrait</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">40</field>
+        <field name="dpi">80</field>
+    </record>
+    <record id="paperformat_career_landscape" model="report.paperformat">
+        <field name="name">paperformat.career.landscape</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">40</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <report id="hr_competencie_report"
+            model="competencie.wizard.career"
+            string="Competencies report"
+            report_type="qweb-html"
+            name="kamil_hr_career.hr_competencie_report_view"
+            paperformat="paperformat_career_portrait"
+            menu="False"/>
+
+    <template id="hr_competencie_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <div><br/><br/>
+                    <p class="text-center">تقرير الجدارات </p>
+                    <t t-if="date_from != False and date_to != False">
+                        <p class="text-center"> في الفترة من <t t-esc="date_from"/> إلى <t t-esc="date_to"/></p>
+                    </t>
+                </div><br/>
+            
+
+                 <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    <thead class="table-active" style="display: table-header-group;">
+                        <th class="text-center fit">الموظف</th>
+                        <th class="text-center fit">الإدارة</th>
+                        <th class="text-center fit">الجدارة</th>
+                        <th class="text-center fit">المستوي المطلوب</th>
+                        <th class="text-center fit">مستوي الموظف</th>
+                        <th class="text-center fit">وجود فجوه</th>
+                        <th class="text-center fit">نسبه الفجوه</th>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr>
+                                <td class="text-center">
+                                    <span t-esc="doc['employee']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['unit']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['competencie']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['required_level']"/>
+                                </td>
+                                 <td class="text-center">
+                                    <span t-esc="doc['employee_level']"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-if="doc['gap']==True">
+                                        <span>توجد</span>
+                                    </t>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['gap_percentage']"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-if="docs==[]">
+                            <tr>
+                                <td colspan="7" class="text-center">لا توجد بيانات</td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

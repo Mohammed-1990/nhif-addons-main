@@ -1,0 +1,548 @@
+<odoo>
+  <data>
+
+   <record model="ir.ui.view" id="indicators_performance_form_view">
+    <field name="name">indicators.performance.form</field>
+    <field name="model">indicators.performance</field>
+    <field name="arch" type="xml">
+     <form>
+      <sheet>
+       <div>
+        <h1>
+         <field name="name" placeholder="Name of the indicator"/>
+        </h1>                 
+       </div>
+         <group col = "4">
+           <field name="standard" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+           <field name="percentage"/>
+           <field name="indicator_type"/>
+         </group>
+
+            <notebook>
+              <page string="Clarify the indicator" attrs="{'invisible':[('indicator_type','!=','sub')]}">
+                <field name="indicator_text"/> 
+              </page>
+
+                <page string="Sub-indicators" attrs="{'invisible':[('indicator_type','!=','main')]}">                 
+                	<field name="line_ids">
+                 	 <tree editable="bottom">
+                   	 <field name="indicator_name" options="{'no_create':True,'no_open':True,'no_edit':True}" required="True"/>
+                     <field name="standard"/>
+                     <field name="percentage"/>
+                     <field name="indicator_text"/>
+                	  </tree>
+               		 </field>
+                </page>  
+         	 </notebook> 
+             </sheet>
+             <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+          </form>
+        </field>
+
+      </record>
+
+    
+     <record model="ir.ui.view" id="technical_performance_form_view">
+      <field name="name">technical.performance.form</field>
+      <field name="model">technical.performance</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="action_send" string="Send" type="object" class="oe_highlight" states="draft"/>
+              <button name="action_direct_manger" string="Confirm" type="object" class="oe_highlight" states="direct_manger" groups="kamil_hr_security.hr_head_department_group,kamil_hr_security.hr_sub_manager_group,kamil_hr_security.hr_director_public_administration_group,kamil_hr_security.hr_career_path_section_group"/>
+              <button name="action_dep_manger" string="Confirm" type="object" class="oe_highlight" states="dep_manger" groups="kamil_hr_security.hr_director_public_administration_group,kamil_hr_security.hr_sub_manager_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_career_path_section_group"/>
+              <button name="action_return" string="Return" type="object" states="direct_manger" groups="kamil_hr_security.hr_head_department_group,kamil_hr_security.hr_sub_manager_group,kamil_hr_security.hr_director_public_administration_group,kamil_hr_security.hr_career_path_section_group"/>
+              <button name="action_return1" string="Return" type="object" states="dep_manger" groups="kamil_hr_security.hr_director_public_administration_group,kamil_hr_security.hr_sub_manager_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_career_path_section_group"/>
+              <button name="action_return_career_path" string="Return" type="object" states="confirm" groups="kamil_hr_security.hr_career_path_section_group"/>
+              <field name="state" widget="statusbar" />
+            </header>
+            <sheet>
+              <div>
+                <h1>
+                  <field name="name"/>
+                </h1>
+                <group col="4">             
+                   <field name="employee_no" attrs="{'readonly':[('state','=','confirm')]}"/>
+                   <field name="employee_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','=','confirm')]}"/>
+                   <field name="unit_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                   <field name="department_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                   <field name="date_from" attrs="{'readonly':[('state','=','confirm')]}"/>
+                   <field name="date_to" attrs="{'readonly':[('state','=','confirm')]}"/>
+                  <field name="total_evaluation"/>
+                </group>
+                    
+                <notebook>
+                   <page string="Activities">              
+                        <field name="activities_line_ids" attrs="{'readonly':[('state','=','confirm')]}">
+                          <tree  editable="bottom" open="0">
+                             <field name="activity" options="{'no_create':True,'no_open':True,'no_edit':True}" required="True"/>
+                             <field name="main_activity"/>
+                             <field name="sub_activity"/>
+                             <field name="weight"/>
+                             <field name="date_from"/>
+                             <field name="date_to"/>
+                             <field name="execution_date"/>
+                             <field name="evaluation"/>
+                             <field name="attachment" widget="many2many_binary" multiple="multiple"/>
+                             <field name="notes"/>
+                          </tree>
+                      </field>
+                    </page> 
+                    <page string="Evaluation">               
+                    	<field name="evaluation_line_ids" attrs="{'readonly':[('state','=','confirm')]}">
+                     	 <tree editable="bottom">
+                       	 <field name="activity" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                         <field name="weight"/>
+                         <field name="evaluation"/>
+                         <field name="notes"/>
+                         <field name="attachment" widget="many2many_binary" multiple="multiple"/>
+                    	  </tree>
+                   		 </field>
+                    </page> 
+             	 </notebook> 
+          </div>
+             </sheet>
+             <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+          </form>
+        </field>
+      </record>
+
+       <record model="ir.ui.view" id="monthly_performance_tree_view">
+        <field name="name">monthly.performance.tree</field>
+        <field name="model">monthly.performance</field>
+        <field name="arch" type="xml">
+          <tree>
+             <field name="name"/>
+             <field name="date_from"/>
+             <field name="date_to"/>
+             <field name="state"/>
+          </tree>
+        </field>
+      </record>
+
+
+
+      <record model="ir.ui.view" id="monthly_performance_form_view">
+      <field name="name">monthly.performance.form</field>
+      <field name="model">monthly.performance</field>
+      <field name="arch" type="xml">
+          <form>
+             <header>
+              <button type="object" name="compute_lines" string="Compute Details" icon="fa-gears" colspan="2" attrs="{'invisible':[('state','!=','draft')]}" class="oe_highlight" groups="kamil_hr_security.hr_career_path_section_group"/>
+              <button name="do_submit" string="Send" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_career_path_section_group"/>
+
+              <button name="do_career_confirm" string="Confirm" type="object" class="btn btn-primary" states="career" groups="kamil_hr_security.hr_career_path_section_group"/>
+
+              <button name="do_sm_confirm" string="Submit" type="object" class="btn btn-primary" states="sub_manager" groups="kamil_hr_security.hr_sub_manager_group"/>
+
+              <button name="do_gd_confirm" string="Approve" type="object" class="btn btn-primary" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <button name="do_return" string="Return" type="object" states="career" groups="kamil_hr_security.hr_career_path_section_group"/>
+
+              <button name="do_return1" string="Return1" type="object" states="sub_manager" groups="kamil_hr_security.hr_sub_manager_group"/>
+
+              <button name="do_return2" string="Return2" type="object" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+                <h1>
+                  <field name="name" placeholder="Ex: Monthly Performance for Jan"/>
+                </h1>
+                <group col="4">             
+                   <field name="date_from"/>
+                   <field name="date_to"/>
+                   <field name="normative"/>
+                   <field name="hours_allowed"/>
+                </group>
+                 <group>
+              <group>
+                <field name="eligible" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="company_ids" attrs="{'invisible':[('eligible','!=','branchs')],'required':[('eligible','=','branchs')],'readonly':[('state','!=','draft')]}" widget="many2many_tags" string='Branchs' options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                <field name="employee_ids" attrs="{'invisible':[('eligible','!=','employees')],'required':[('eligible','=','employees')],'readonly':[('state','!=','draft')]}" widget="many2many_tags" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                <field name="department_ids" attrs="{'invisible':[('eligible','!=','departments')],'required':[('eligible','=','departments')],'readonly':[('state','!=','draft')]}" widget="many2many_tags" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                <field name="appointment_type_ids" attrs="{'invisible':[('eligible','!=','appointment_types')], 'required':[('eligible','=','appointment_types')],'readonly':[('state','!=','draft')]}" widget="many2many_tags" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+              </group>
+            </group>
+                <notebook>
+                   <page string="Details">              
+                      <field name="line_ids">
+                          <tree  editable="bottom">
+                             <field name="employee_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                             <field name="unit_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                             <field name="job_title_id" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                             <field name="normative" force_save="1"/>
+                             <field name="hours_allowed"/>
+                             <field name="hours_leave"/>
+                             <field name="hours_permissions"/>
+                             <field name="trainings"/>
+                             <field name="missions"/>
+                             <field name="total_hours" force_save="1"/>
+                             <field name="system_attend"/>
+                             <field name="attendance_hours" force_save="1"/>
+                             <field name="absence_ratio" force_save="1"/>
+                             <field name="technical_performance_ratio" force_save="1"/>
+                             <field name="discount_percentage" force_save="1"/>
+                             <field name="total_ratio" force_save="1"/>
+                             <field name="notes"/>
+                          </tree>
+                      </field>
+                    </page> 
+                    <page string="Notes">
+                      <div>
+                        <field name="notes"/>
+                      </div>
+                    </page>
+               </notebook> 
+             </sheet>
+          </form>
+        </field>
+      </record>
+
+
+		
+
+      <record model="ir.ui.view" id="evaluating_merits_form_view">
+      <field name="name">evaluating.merits.form</field>
+      <field name="model">evaluating.merits</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="employee_notification" states="draft" string="Send Employee Notification" type="object" class="oe_highlight" groups="kamil_hr_security.hr_career_path_section_group"/>
+              
+
+              <button name="sub_manager_confirm" states="employee_notification" string="Employee Confirm" type="object" class="oe_highlight" />
+
+              <button name="General_department_confirm" states="sub_manager_confirm" string="Sub Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_sub_manager_group"/>
+
+              <button name="career" states="General_department_confirm" string="G Manager Confirm" type="object" class="oe_highlight " groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,employee_notification,employee_confirm,sub_manager_confirm,General_department_confirm,career" />
+            </header>
+            <sheet>
+              <div>
+                <h1>
+                    <field name="name"/>
+                </h1>                 
+              </div>
+              <group col = "4">
+                 <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+                 <field name="employee_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                 <field name="department_id"/>
+                 <field name="job_id"/>
+              </group>
+              <group col= "4">
+                 <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                 <field name="date_to"  attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+              <notebook>
+                  <page string="Evaluation">
+                    <field name="line_ids">
+                      <tree editable="bottom">
+                         <field name="merit"/>
+                         <field name="required_level" force_save="1"/>
+                         <field name="employee_level" options="{'no_create':True,'no_open':True,'no_edit':True}"/>
+                         <field name="gap" force_save="1"/>
+                         <field name="gap_percentage" force_save="1"/>
+                      </tree>
+                    </field>
+                  </page>  
+              </notebook> 
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div> 
+          </form>
+        </field>
+      </record>
+
+      
+    <record model="ir.ui.view" id="permission_request_form_view">
+      <field name="name">permission.request.form</field>
+      <field name="model">permission.request</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="head_department_confirm" states="draft" string=" Send" type="object" class="oe_highlight"/>
+
+              <button name="branch_manager_confirm" states="head_department_confirm" string="HD Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_head_department_group"/>
+
+              <button name="director_public_confirm" states="branch_manager_confirm" string="Branch manager Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_sub_manager_group"/>
+
+              <button name="hr" states="director_public_confirm" string="Director Public Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_director_public_administration_group"/>
+
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,head_department_confirm,branch_manager_confirm,director_public_confirm,hr"/>
+            </header>
+            <sheet>
+          <group col = "4">
+
+           <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+           <field name="employee_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+           <field name="department_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+           <field name="permission_type" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+           <field name="permission_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+         </group>
+           <group col="4">
+          <field name="hours_form" attrs="{'readonly':[('state','!=','draft')]}" widget="float_time"/>
+          <field name="hours_to" attrs="{'readonly':[('state','!=','draft')]}" widget="float_time"/>
+           <field name="hours_number_permission"/>
+         </group>
+         <group>
+           <field name="permission_reason" attrs="{'readonly':[('state','!=','draft')]}"/>
+           <field name="attachment" attrs="{'readonly':[('state','!=','draft')]}" />
+          </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+          </form>
+        </field>
+      </record>
+					           <!-- Trees -->
+
+      <record model="ir.ui.view" id="evaluation_criteria_tree_view">
+      <field name="name">evaluation.criteria.tree</field>
+      <field name="model">evaluation.criteria</field>
+      <field name="arch" type="xml">
+         <tree editable="bottom">
+           <field name="name"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="indicators_performance_tree_view">
+      <field name="name">indicators.performance.tree</field>
+      <field name="model">indicators.performance</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+			     <field name="standard"/>
+		    	 <field name="percentage"/>
+		       <field name="indicator_type"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="technical_performance_tree_view">
+      <field name="name">technical.performance.tree</field>
+      <field name="model">technical.performance</field>
+      <field name="arch" type="xml">
+      	<tree>
+      		<field name="name"/>
+      		<field name="employee_id"/>
+      		<field name="employee_no"/>
+      		<field name="department_id"/>
+      		<field name="date_from"/>
+      		<field name="date_to"/>
+          <field name="total_evaluation"/>
+          <field name="state"/>
+      	</tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="technical_performance_search_view">
+      <field name="name">technical.performance.search</field>
+      <field name="model">technical.performance</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="employee_id"/>
+          <field name="employee_no"/>
+          <field name="department_id"/>
+          <field name="state"/>
+          <group expand="0" string="Group By">
+              <filter name="employee" string="Employee" context="{'group_by':'employee_id'}"/>
+              <filter name="state" string="Status" context="{'group_by':'state'}"/>
+              <!-- <filter name="department" string="Department" context="{'group_by':'department_id'}"/> -->
+              <!-- <filter name="branch" string="Branch" context="{'group_by':'employee_id.company_id'}"/> -->
+            </group>
+        </search>
+      </field>
+    </record>
+
+
+  <record model="ir.ui.view" id="evaluating_merits_tree_view">
+      <field name="name">evaluating.merits.tree</field>
+      <field name="model">evaluating.merits</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="employee_id"/>
+            <field name="department_id"/>
+            <field name="job_id"/>
+            <field name="date_from"/>
+            <field name="date_to"/>
+          </tree>
+        </field>
+      </record>
+
+
+    <record model="ir.ui.view" id="permission_type_tree_view">
+      <field name="name">permission.type.tree</field>
+      <field name="model">permission.type</field>
+      <field name="arch" type="xml">
+         <tree editable="bottom">
+           <field name="name"/>
+         </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="permission_request_tree_view">
+      <field name="name">permission.request.tree</field>
+      <field name="model">permission.request</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="employee_no"/>
+            <field name="employee_id"/>
+            <field name="department_id"/>
+            <field name="permission_type"/>
+            <field name="hours_number_permission"/>
+          </tree>
+        </field>
+      </record>
+
+
+							<!-- Actions -->
+    <record  id="action_evaluation_criteria" model="ir.actions.act_window">
+      <field name="name">Evaluation Criteria</field>
+      <field name="res_model">evaluation.criteria</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+
+      <record  id="action_indicators_performance" model="ir.actions.act_window">
+      <field name="name">Indicators Performance</field>
+      <field name="res_model">indicators.performance</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  <record  id="action_technical_performance" model="ir.actions.act_window">
+      <field name="name">Technical performance evaluation</field>
+      <field name="res_model">technical.performance</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  id="action_monthly_performance" model="ir.actions.act_window">
+      <field name="name">Monthly performance</field>
+      <field name="res_model">monthly.performance</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+ <record id="action_evaluating_merits" model="ir.actions.act_window">
+      <field name="name">Evaluating merits</field>
+      <field name="res_model">evaluating.merits</field>
+      <field name="view_mode">tree,form</field>
+ </record>
+
+ <record id="action_permission_type" model="ir.actions.act_window">
+      <field name="name">Permission Type</field>
+      <field name="res_model">permission.type</field>
+      <field name="view_mode">tree</field>
+ </record>
+
+
+
+
+ <record  id="action_permission_request" model="ir.actions.act_window">
+      <field name="name">permission request</field>
+      <field name="res_model">permission.request</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+      <menuitem name="HR Career" 
+        id="career_menu"/>
+
+      <menuitem name="Performance evaluation" 
+     	id="performance_evaluation_main_menu"
+     	parent="career_menu"
+      sequence="1"
+      />
+
+      <menuitem name="Technical performance evaluation" 
+     	id="technical_performance_menu" 
+     	parent="performance_evaluation_main_menu" 
+     	action="action_technical_performance"
+      sequence="0"
+      /> 
+
+      <menuitem name="Monthly performance" 
+      id="monthly_performance_menu" 
+      parent="performance_evaluation_main_menu" 
+      action="action_monthly_performance"
+      sequence="1"
+      /> 
+
+      <menuitem name="Merits" 
+     	id="merit_main_menu"
+     	parent="career_menu"
+      sequence="2"
+      />
+
+      <menuitem name="Assessing the merits for the employee" 
+      id="assessing_merits_menu" 
+      parent="merit_main_menu" 
+      action="action_evaluating_merits"
+      sequence="1"/> 
+
+
+      <menuitem name="Permissions" 
+      id="permission_main_menu"
+      parent="career_menu"
+      sequence="3"
+      />
+
+       <menuitem name="Permission Request" 
+      id="permission_request_menu" 
+      parent="permission_main_menu" 
+      action="action_permission_request"/> 
+
+
+      
+      <menuitem name="Configurations" 
+      id="configurations_main_menu"
+      parent="career_menu"
+      sequence="10"
+      groups="kamil_hr_security.hr_career_path_section_group"
+      />
+      <menuitem name="Performance Evaluation Criteria"
+       id="evaluation_criteria_menu" 
+       parent="configurations_main_menu" 
+       action="action_evaluation_criteria"
+       sequence="1"
+
+       />
+
+      <menuitem name="Indicators Performance" 
+      id="indicators_performance_menu" 
+      parent="configurations_main_menu" 
+      action="action_indicators_performance"
+       sequence="2"/>
+
+
+
+       <menuitem name="Permission Type" 
+      id="permission_type_main_menu"
+      parent="configurations_main_menu"
+      action = "action_permission_type"
+       sequence="3"
+      />
+
+
+  </data>
+</odoo>

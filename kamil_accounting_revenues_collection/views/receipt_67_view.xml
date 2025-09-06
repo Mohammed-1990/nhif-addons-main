@@ -1,0 +1,145 @@
+<odoo>
+    <data>
+
+        <record id="receipt_67_tree_view" model="ir.ui.view">
+            <field name="name">Receipt 67 Tree</field>
+            <field name="model">collection.receipt_67</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ref"/>
+                    <field name="date"/>
+                       <field name="frist_ref_no"/>
+                        <field name="last_ref_no"/>
+                    <field name="collector_id"/>
+                    <field name="collection_type"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="state"/>
+
+                        <button name="show_collection_collection_details" string="Collection Details" type="object"
+                                class="oe_highlight" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="receipt_67_form_view" model="ir.ui.view">
+            <field name="name">Receipt 67 Form</field>
+            <field name="model">collection.receipt_67</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+            
+                        <button name="do_confirm" string="Confirm" type="object" states="draft"
+                                groups="kamil_accounting_base.collector_group" class="oe_highlight"/>
+
+                        <button name="do_permit" string="Permit" type="object" states="confirmed,returned_to_supervisor"
+                                groups="kamil_accounting_base.supervisor_group" class="oe_highlight"/>
+
+                        <button name="do_return_to_collector" string="Return To Collector" type="object"
+                        
+                                states="confirmed,returned_to_supervisor"
+                                groups="kamil_accounting_base.supervisor_group" class="oe_highlight"/>
+
+                        <button name="do_audit" string="Audit" type="object" states="permited"
+                                groups="kamil_accounting_base.internal_auditor_group" class="oe_highlight"/>
+
+                        <button name="do_return_to_supervisor" string="Return To Supervisor" type="object"
+                                states="permited" groups="kamil_accounting_base.internal_auditor_group"
+                                class="oe_highlight"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,permited"/>
+
+                    </header>
+                    <sheet>
+
+
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="open_bank_save_supply" icon="fa-bars"
+                                    attrs="{'invisible':[('state','!=','audited')]}">
+                                Bank/Save Supply
+                            </button>
+                        </div>
+
+
+                        <div class="float-right">
+                            <h2>
+                                <label for="ref"/>
+                                <br/>
+                                <field name="ref" readonly="1"/>
+                            </h2>
+                        </div>
+
+                        <group col="4">
+                            <field name="date" required="1"
+                                   attrs="{'readonly':[('state','not in',['draft','returned_to_collector'])]}"/>
+                            <field name="collector_id" options="{'no_create':True,'no_edit':True,'no_open':True}" required="1"
+                                   domain="[('is_collector','=',True)]"
+                                   attrs="{'readonly':[('state','not in',['draft','returned_to_collector'])]}"/>
+                                     <field name="collection_type" required="1"
+                                   attrs="{'readonly':[('state','not in',['draft','returned_to_collector'])]}"/>
+                                   <field name="select_all" 
+                                   attrs="{'readonly':[('state','not in',['draft','returned_to_collector'])]}"/>
+
+
+                            <field name="journal_id" options="{'no_create':True,'no_edit':True,'no_open':True}"
+                                   domain="[('type','in',['bank','cash'])]"
+                                   attrs="{'readonly':[('state','not in',['draft','returned_to_collector'])]}"
+                                   invisible="1"/>
+
+                            <field name="journal_account_id" options="{'no_create':True,'no_edit':True,'no_open':True}"
+                                   attrs="{'readonly':[('state','not in',['draft','returned_to_collector'])]}"
+                                   invisible="1"/>
+
+                            <field name="amount"/>
+                            <field name="pid_amount" readonly="1"/>
+                        </group>
+                        <group>
+                        <field name="frist_ref_no" invisible="1"/>
+                        <field name="last_ref_no" invisible="1"/>
+
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="collection_ids" readonly="1" force_save="1">
+                                    <tree>
+                                    <field name="is_select_receipt_e15" widget="boolean_toggle"/>
+                                        <field name="ref"/>
+                                        <field name="partner_id"/>
+                                        <!-- <field name="budget_item_ids" widget="many2many_tags" string="Budget Items"/> -->
+                                        <field name="amount" sum="amount"/>
+                                        <field name="date"/>
+                                        <field name="is_cancel_receipt_e15" readonly="1" invisible="1"/>
+                                        <field name="cancel_e15_state" readonly="1"/>
+                                        <field name ="collection_type"/>
+                                         <button name="request_to_cancel_receipt_e_15" type="object" icon="fa-list"
+                                                string="Request to Cancel Receipt"
+                                                width="0.1" title="Details"
+                                                        style="color:#ff6600; font-size:22px;"
+                                        />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="action_receipt_67" model="ir.actions.act_window">
+            <field name="name">Receipt 67</field>
+            <field name="res_model">collection.receipt_67</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="receipt_67_menu" parent="revenues_collection_main_menu" action="action_receipt_67" sequence="2"/>
+
+
+    </data>
+</odoo>

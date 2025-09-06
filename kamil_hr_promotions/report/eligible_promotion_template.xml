@@ -1,0 +1,95 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_report">
+        <field name="name">paperformat.functions.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+        <field name="orientation">Landscape</field> 
+    </record>
+
+    <report id="eligible_promotion_report"
+            model="eligible.promotion.wizard"
+            string="Eligible Promotion Report"
+            report_type="qweb-html"
+            name="kamil_hr_promotions.eligible_promotion_view"
+            paperformat="paperformat_report"
+            menu="False"/>
+
+    <template id="eligible_promotion_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            
+            <div class="page">
+             <div>
+                 <div class="text-center" style="font:500;">
+                    <p>تقرير المستحقين للترقية<br/>
+                       <t t-if="date_from != False">
+                           من تاريخ : <t t-esc="date_from"/>
+                        </t>
+                        <t t-if="date_to != False">
+                           إلى تاريخ : <t t-esc="date_to"/>
+                        </t>
+                    </p>
+                  </div>
+                </div>
+               <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                     <thead class="table-active" style="display: table-header-group;">
+                        <th class="text-center fit">الموظف</th>
+                        <th class="text-center fit">الفرع</th>
+                        <th class="text-center fit">الإدارة</th>
+                        <th class="text-center fit">القسم</th>
+                        <th class="text-center fit">الفئة الوظيفية</th>
+                        <th class="text-center fit">المؤهل</th>
+                        <th class="text-center fit">الدرجة</th>
+                        <th class="text-center fit">تاريخ الاستحقاق</th>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr>
+                                <td class="text-center">
+                                    <span t-esc="doc['employee']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['branch']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['unit']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['department']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['category']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['qualifcation']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['degree']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['date']"/>
+                                </td>
+
+                            </tr>
+                        </t>
+                    </tbody>
+                    <t t-if="docs==[]">
+                        <tr class="text-center">
+                            <td colspan="8">لا توجد بيانات</td>
+                        </tr>
+                    </t>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

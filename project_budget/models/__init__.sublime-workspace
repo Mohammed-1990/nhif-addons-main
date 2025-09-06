@@ -1,0 +1,289 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"remaining_amount"
+			],
+			[
+				"M",
+				"Many2one"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/ryn/docker/odoo12-addons/kamil_project_wage/models/models.py",
+		"/how",
+		"/to",
+		"/restore.txt",
+		"/home/ryn/docker/odoo12-addons/kamil_project_wage/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/project_budget/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_project_wage/__init__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_project_wage/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_project_wage/security/ir.model.access.csv",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/report/general_contract_report.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/report/contract_medical_report.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/medical.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/medical.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/project.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/purchase.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/train.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/project.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/report/report.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/research.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/train.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/research.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/purchase.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_preamble.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_conflict_resolution.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_conflict_resolution.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_delay_panalty.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_first.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_preamble.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/templates.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_introduct.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/i18n/ar_AA.po",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_first.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/ext_view/project.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/extension.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_introduct.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/agreement.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_preface.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_contract_documents.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_delay_panalty.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_explain.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/article_second.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/agreement.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_explain.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/__init__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_second.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_preface.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/article_documents.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/__init__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/delay_panalty.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/delay_panalty.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/contract_documents.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/documents.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/explain.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_a penalty _clause/controllers/controllers.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/extension.xml",
+		"/home/ryn/docker/Backup addons/kamil_contract_a penalty _clause/views/views.xml",
+		"/home/ryn/docker/Backup addons/kamil_project_contract/controllers/__pycache__/controllers.cpython-35.pyc",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/security/ir.model.access.csv",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/kamil_contract.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/general_view.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_a penalty _clause/models/models.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contracts/models/al in one.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_a penalty _clause/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_extention/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_extention/models/models.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_a penalty _clause/__init__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_a penalty _clause/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_a penalty _clause/security/ir.model.access.csv",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_extention/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_working_agreement/models/project.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_working_agreement/models/models.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_working_agreement_ry/models/models.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_working_agreement/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/kamil_project_contract/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_project_contract/models/models.py",
+		"/home/ryn/docker/odoo12-addons/kamil_project_contract/models/untitled.py",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_working_agreement/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/Extension_request/models/models.py",
+		"/home/ryn/docker/odoo12-addons/Extension_request/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/kamil_contract_working_agreement/models/__init__.py",
+		"/home/ryn/docker/odoo12-addons/Extension_request/security/ir.model.access.csv",
+		"/home/ryn/docker/odoo12-addons/Extension_request/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/Extension_request/__init__.py",
+		"/home/ryn/docker/odoo12-addons/Extension_request/views/templates.xml",
+		"/home/ryn/docker/odoo12-addons/training_module/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/new/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/Penalty_clause/security/ir.model.access.csv",
+		"/home/ryn/docker/odoo12-addons/Penalty_clause/views/views.xml",
+		"/home/ryn/docker/odoo12-addons/Penalty_clause/models/models.py",
+		"/home/ryn/docker/odoo12-addons/Penalty_clause/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/Extension_request/models/__init__.py",
+		"/home/ryn/docker/odoo12-addons/training_module/models/training.py",
+		"/home/ryn/docker/odoo12-addons/Penalty_clause/_init_.py",
+		"/home/ryn/docker/odoo12-addons/traning/model/traning.py",
+		"/home/ryn/docker/odoo12-addons/new/models/models.py",
+		"/home/ryn/docker/odoo12-addons/Extension_request/controllers/controllers.py",
+		"/home/ryn/docker/odoo12-addons/traning/views/traning.xml",
+		"/home/ryn/docker/odoo12-addons/new/controllers/controllers.py",
+		"/home/ryn/docker/odoo12-addons/Extension_request/demo/demo.xml",
+		"/home/ryn/docker/odoo12-addons/traning/__init__.py",
+		"/home/ryn/docker/odoo12-addons/traning/model/__init__.py",
+		"/home/ryn/docker/odoo12-addons/traning/__manifest__.py",
+		"/home/ryn/docker/odoo12-addons/hr_module/models/models.py",
+		"/home/ryn/docker/odoo12-addons/hr_module/views/views.xml",
+		"//how",
+		"//to",
+		"//restore.txt",
+		"/home/ryn/docker/odoo11-addons/exam/models/__init__.py",
+		"/home/ryn/docker/odoo11-addons/exam/models/exam.py",
+		"/home/ryn/docker/odoo11-addons/exam/_init_.py",
+		"/home/ryn/docker/odoo11-addons/exam/__manifest__.py",
+		"/home/ryn/docker/odoo11-addons/exam/exam",
+		"/home/ryn/docker/odoo11-addons/exam/___manifest__.py",
+		"/home/ryn/docker/odoo11-addons/student/__manifest__.py",
+		"/home/ryn/docker/how to restore.txt"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 113.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "__init__.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 305.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

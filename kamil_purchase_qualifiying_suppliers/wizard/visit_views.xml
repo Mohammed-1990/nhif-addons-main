@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Form Visit -->
+	<record id="view_visit_form" model="ir.ui.view">
+		<field name="name">visit.form</field>
+		<field name="model">book.visit</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<field name="visit_line_ids">
+						<tree editable="buttom" create="0" delete="0" >
+							<field name="criteria_id" readonly="1" />
+							<field name="required_score" readonly="1" sum="Total required score"/>
+							<field name="obtained_score" sum="Total obtained score"/>
+							<field name="note"/>
+						</tree>
+					</field>
+					<footer>
+						<button name="create_field_visit_report" type="object" string="Create Report of the field visit" class="btn-primary"/>
+						<button string="Cancel" class="btn-seconday" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<!-- Action Visit-->
+	<act_window
+		id="action_visit"
+		name="Report of the field visit"
+		res_model="book.visit" src_model="purchase.requisition"
+		view_mode="form"
+		target="new"
+		context="{'default_book_id':active_id}"
+	/>
+
+
+</odoo>

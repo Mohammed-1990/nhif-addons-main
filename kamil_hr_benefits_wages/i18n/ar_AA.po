@@ -1,0 +1,2500 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_benefits_wages
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-09 09:09+0000\n"
+"PO-Revision-Date: 2021-12-09 09:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_payslip__state
+msgid "* When the payslip is created the status is 'Draft'\n"
+"                \n"
+"* If the payslip is under verification, the status is 'Waiting'.\n"
+"                \n"
+"* If the payslip is confirmed then status is set to 'Done'.\n"
+"                \n"
+"* When user cancel payslip the status is 'Rejected'."
+msgstr "* عند إنشاء إيصال مرتب يكون في الحالة 'مسودة'\n"
+"                \n"
+"* إذا كان الإيصال قيد التحقق ينتقل للحالة 'انتظار'.\n"
+"                \n"
+"* اذا تم تأكيد الإيصال ينتقل للحالة 'مكتمل'.\n"
+"                \n"
+"* عنمما يقوم المستخدم بإلغاء إيصال المرتب تكون حالته 'مرفوض'."
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.salary_certificate_view
+msgid ".................................................        ادارة الموارد البشرية"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_run_view
+msgid "<strong style=\"float:right\">  رئيس قسم المزايا والاجور </strong>\n"
+"                                    <span style=\"float:right;margin-right:20px\">\n"
+"                                        ................................................................................................................................................................\n"
+"                                    </span>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "<strong style=\"float:right\"> إعتــماد شـؤون العـاملـين</strong>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_run_view
+msgid "<strong style=\"float:right\"> إعتماد شئون العاملين  </strong>\n"
+"                                    <span style=\"float:right;margin-right:20px\">\n"
+"                                        ................................................................................................................................................................\n"
+"                                    </span>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "<strong style=\"float:right\"> إعـــداد</strong>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "<strong style=\"float:right\"> الاسم</strong>\n"
+"                                    <span style=\"float:right;margin-right:20px\">\n"
+"                                        ................................................................................................................................................................\n"
+"                                    </span>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "<strong style=\"float:right\"> التوقــيع</strong>\n"
+"                                    <span style=\"float:right;margin-right:20px\">\n"
+"                                        ................................................................................................................................................................\n"
+"                                    </span>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_run_view
+msgid "<strong style=\"float:right\"> المراجعة  </strong>\n"
+"                                    <span style=\"float:right;margin-right:20px\">\n"
+"                                        ................................................................................................................................................................\n"
+"                                    </span>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "<strong style=\"float:right\"> مــراجـعة</strong>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "<strong>قسم الاجور والمزايا</strong>\n"
+"                            <span>\n"
+"                                .........................................................................\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <strong> الادارة العامة للموارد البشرية</strong>\n"
+"                            <span>\n"
+"                                .........................................................\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <strong>المراجعة</strong>\n"
+"                            <span>\n"
+"                                .............................................................................................\n"
+"                            </span>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_line__account_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_salary_rule__account_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__account_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,state:0
+#: selection:hr.incentive.line,state:0
+#: selection:hr.loan,state:0
+#: selection:hr.payslip,state:0
+#: selection:hr.payslip.run,state:0
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_loan_type_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_salary_form_inherit_view
+msgid "Accounting Info"
+msgstr "معلومات الحسابات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__paid_amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__amount
+msgid "Amount/Months"
+msgstr "الشهور او المبلغ"
+
+#. module: kamil_hr_benefits_wages
+#: selection:incentive.type,duration:0
+msgid "Annual"
+msgstr "سنوي"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,eligible:0
+msgid "Appointment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__appointment_type_ids
+msgid "Appointment types"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__appoiontment_ids
+msgid "Appoiontment"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payroll_structure__appoiontment_type_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_run__appoiontment_type
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__appoiontment_type
+msgid "Appoiontment Type"
+msgstr "نوع التعيين"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__balance_amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__balance_amount
+msgid "Balance Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_balancing_salaries_wizard
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.balancing_salaries
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_balancing_salaries
+msgid "Balancing salaries report"
+msgstr "تقرير موازنة المرتبات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.benefits_wages_menu
+msgid "Benefits and Wages"
+msgstr "المزايا والأجور"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,state:0
+#: selection:hr.incentive.line,state:0
+#: selection:hr.payslip,state:0
+#: selection:hr.payslip.run,state:0
+#: selection:hr.projects.request,state:0
+msgid "Benefits and wages"
+msgstr "المزايا والأجور"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__branch_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__branch_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__branch_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_run__branch_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_employee_grade_form_inherit_view
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,eligible:0
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__company_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+#: selection:settlement.report.wizard,type:0
+msgid "Branchs"
+msgstr "الفروع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__calculation_method
+msgid "Calculation Method"
+msgstr "طريقة الحساب"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_loan_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:53
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:531
+#, python-format
+msgid "Cannot be deleted in a case other than draft"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_loan.py:18
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects_request.py:47
+#, python-format
+msgid "Cannot be deleted in a case other than draft or refuse1"
+msgstr "لايمكن الحذف الا في حالة مسودة او مرفوض"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__card
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Card"
+msgstr "البطاقة"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.actions.act_window,help:kamil_hr_benefits_wages.action_incentives
+msgid "Click create button to create new incentive"
+msgstr "انقر زر 'إنشاء' لإنشاء حافز جديد"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.actions.act_window,help:kamil_hr_benefits_wages.action_hr_incentives_type
+msgid "Click create button to create new incentive name"
+msgstr "انقر زر 'إنشاء' لإنشاء اسم حافز جديد"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.actions.act_window,help:kamil_hr_benefits_wages.action_hr_loan_request
+msgid "Click create button to create new loan request"
+msgstr "انقر زر 'إنشاء' لإنشاء طلب سلفية جديد"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.actions.act_window,help:kamil_hr_benefits_wages.action_hr_loan_type
+msgid "Click create button to create new loan type"
+msgstr "انقر زر 'إنشاء' لإنشاء نوع سلفية جديد"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.actions.act_window,help:kamil_hr_benefits_wages.action_hr_projects
+msgid "Click create button to create new project"
+msgstr "انقر زر 'إنشاء' لإنشاء مشروع جديد"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.actions.act_window,help:kamil_hr_benefits_wages.action_hr_projects_request
+msgid "Click create button to create new project request"
+msgstr "انقر زر 'إنشاء' لإنشاء طلب مشروع جديد"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_form
+msgid "Close"
+msgstr "إقفال"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.projects,state:0
+msgid "Closed"
+msgstr "مغلقة"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_employee_grade_form_inherit_view
+msgid "Code"
+msgstr "الكود"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__color
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Committee approve"
+msgstr "موافقة اللجنة"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,state:0
+msgid "Committee of loans"
+msgstr "لجنة السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__company_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__company_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__company_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__company_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__company_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_salary_form_inherit_view
+msgid "Computation"
+msgstr "أحسب/حساب"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_form_inherit_view
+msgid "Compute Details"
+msgstr "حساب التفاصيل"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Compute Incentive"
+msgstr "حساب الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Compute Installments"
+msgstr "حساب الأقساط"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+msgid "Compute details"
+msgstr "حساب التفاصيل"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_salary_form_inherit_view
+msgid "Conditions"
+msgstr "الشروط"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.projects,state:0
+msgid "Confirmed"
+msgstr "مؤكدة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__user_id
+msgid "Create by"
+msgstr "انشئ بواسطة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__date_from
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__date_from
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__date
+msgid "Date Request"
+msgstr "تاريخ الطلب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__date_to
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__date_to
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__deduct_account
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__deduct_account_id
+msgid "Deduct Account"
+msgstr "حساب الخصم"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__deduct_leaves
+msgid "Deduct Leaves"
+msgstr "خصم الاجازه"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_line__tax_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_salary_rule__tax_id
+msgid "Deduction Account"
+msgstr "حساب الخصم"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__deduction
+msgid "Deduction On"
+msgstr "خصم على"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_payslip__struct_id
+msgid "Defines the rules that have to be applied to this payslip, accordingly to the contract chosen. If you let empty the field contract, this field isn't mandatory anymore and thus the rules applied will be all the rules set on the structure of all contracts of the employee valid for the chosen period"
+msgstr "يحدد القواعد التي يجب تطبيقها على إيصال المرتب هذا، حسب العقد المختار. إذا تركت حقل العقد فارغًا، لن يكون هذا الحقل إلزاميًا، وبالتالي ستُطبق كافة القواعد المنصوص عليها في هيكل المرتب فى عقود الموظف الصالحة للفترة المختارة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__degree_ids
+msgid "Degrees"
+msgstr "الدرجات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__degree_line_ids
+msgid "Degrees details"
+msgstr "تفاصيل مبالغ الدرجات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__department_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__department_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,eligible:0
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__department_ids
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_balancing_salaries_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_housing_form_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_hr_laon_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_hr_project_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_settlement_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.projects.request,state:0
+msgid "Done Receipt confirmation"
+msgstr "تم الاستلام"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,state:0
+msgid "Done register payment"
+msgstr "تم تسجيل الدفعية"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,state:0
+#: selection:hr.incentive.line,state:0
+#: selection:hr.loan,state:0
+#: selection:hr.payslip,state:0
+#: selection:hr.payslip.run,state:0
+#: selection:hr.projects,state:0
+#: selection:hr.projects.request,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__eligible
+msgid "Eligible"
+msgstr "الإستحقاق"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__employee_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__employee_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_employee_incentive_form_view
+msgid "Employee Info"
+msgstr "بيانات الموظف"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_loan
+msgid "Employee Loan"
+msgstr "سلفيات الموظفين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_loan_line
+msgid "Employee Loans Lines"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__employee_no
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__employee_no
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,eligible:0
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__employee_ids
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_employees_incentives
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.hr_employees_incentives_menu
+msgid "Employees Incentives"
+msgstr "حوافز الموظفين"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,calculation_method:0
+msgid "Fixed amount"
+msgstr "مبلغ ثابت"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,calculation_method:0
+msgid "Fixed amount per Job title"
+msgstr "مبلغ ثابت بالمسمى الوظيفي"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,calculation_method:0
+msgid "Fixed amount per degree"
+msgstr "مبلغ ثابت بالدرجات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__salary_amount
+msgid "From salary"
+msgstr "من المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__functional_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__functional_id
+msgid "Functional"
+msgstr "الوظيفة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payroll_structure__category_ids
+msgid "Functional Category"
+msgstr "الفئة الوظيفية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__degree_id
+msgid "Functional Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,state:0
+#: selection:hr.incentive.line,state:0
+#: selection:hr.payslip,state:0
+#: selection:hr.payslip.run,state:0
+msgid "General Directorate of Human Resources"
+msgstr "الإدارة العامة للموارد البشرية"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,state:0
+msgid "General manager/Branch Manager"
+msgstr "المدير العام/مدير الفرع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__projects_id
+msgid "HR Projects"
+msgstr "المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__project_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__project_id
+msgid "HR Projects Request"
+msgstr "طلبات المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_housing_form_wizard
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.housing_form
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_housing_form
+msgid "Housing Form"
+msgstr "إستمارة شؤون الخدمة"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_type_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_loan_type_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_loan_type_tree
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_tree
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_tree
+msgid "Hr Loan Type"
+msgstr "أنواع السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_balancing_salaries_view__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_housing_form_view__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_hr_laon_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_hr_project_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_settlement_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__message_unread
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__message_unread
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__message_unread
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__message_unread
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__message_unread
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__message_needaction
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__message_needaction
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__message_needaction
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__message_needaction
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__message_needaction
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__message_has_error
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__message_has_error
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__message_has_error
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__message_has_error
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__message_has_error
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,deduction:0
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__incentive_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__incentive_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__incentive_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__incentive_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__incentive_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__incentive_id
+msgid "Incentive"
+msgstr "الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_employee_incentive_form_view
+msgid "Incentive Info"
+msgstr "بيانات الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__line_ids
+msgid "Incentive Line"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__name
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_type_form
+msgid "Incentive Name"
+msgstr "اسم الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__name
+msgid "Incentive Number"
+msgstr "رقم الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.incentive_report
+msgid "Incentive Report"
+msgstr "تقرير الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_incentives_type
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.incentives_types_menu
+msgid "Incentive Setting"
+msgstr "اعداد الحوافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__incentive
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__incentive
+msgid "Incentive name"
+msgstr "اسم الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_incentives
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_incentive
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_incentive_line
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.hr_incentives_menu
+msgid "Incentives"
+msgstr "الحوافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_incentive
+msgid "Incentives Menus"
+msgstr "قوائم الحوافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_payslip_run_inhabitants
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_payslip_run_inhabitants
+msgid "Inhabitants Batches"
+msgstr "دفعات المسكنيين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_view_hr_payslip_inhabitants
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_payslip_inhabitants
+msgid "Inhabitants Payslips"
+msgstr "ايصالات المسكنيين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__installment_amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__installment_amount
+msgid "Installment Amount"
+msgstr "قيمة القسط"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Installments"
+msgstr "الاقساط"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,state:0
+#: selection:hr.incentive.line,state:0
+#: selection:hr.payslip,state:0
+#: selection:hr.payslip.run,state:0
+msgid "Internal Auditor"
+msgstr "المراجع الداخلي"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__is_salary
+msgid "Is Salary"
+msgstr "هل هو مرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__is_temporary
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_run__is_temporary
+msgid "Is Temporary"
+msgstr "هل هو مؤقت"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__job_line_ids
+msgid "Job title details"
+msgstr "تفاصيل مبالغ المسميات الوظيفية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__job_ids
+msgid "Job titles"
+msgstr "المسمى الوظيفي"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_balancing_salaries_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_housing_form_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_hr_laon_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_hr_project_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_report_kamil_hr_benefits_wages_settlement_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__last_net_incentive
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__last_net_incentive
+msgid "Last Net Incentive"
+msgstr "صافي اخر حافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__last_net_salary
+msgid "Last Net Salary"
+msgstr "صافي آخر مرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_degree_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_fixed_job_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__leave_deduction_id
+msgid "Leave Deduction"
+msgstr "خصم الاجازه"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__leave_deduction_amount
+msgid "Leave Deduction Amount"
+msgstr "قيمة خصم الاجازة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_benefits_wages
+#: model:hr.salary.rule,name:kamil_hr_benefits_wages.hr_rule_loan
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__loan_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__loan_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__loan_id
+msgid "Loan"
+msgstr "سلفية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__loan_amount
+msgid "Loan Amount"
+msgstr "قيمة السلفية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_loan_line
+msgid "Loan Batches"
+msgstr "اقساط السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__line_ids
+msgid "Loan Line"
+msgstr "خط السلفية"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_loan_type_form
+msgid "Loan Name"
+msgstr "إسم السلفية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_loan_wizard
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.hr_loan_report
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_report_hr_laon
+msgid "Loan Report"
+msgstr "تقرير السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_loan_request
+msgid "Loan Request"
+msgstr "طلبات السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.tree_hr_loan_view
+msgid "Loan Requests"
+msgstr "طلبات السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_loan_type
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__loan_type_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__loan_type
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_wizard__loan_type
+msgid "Loan Type"
+msgstr "نوع السلفية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__loans
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__loan_ids
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_loans
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Loans"
+msgstr "السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_loan_request
+msgid "Loans Requests"
+msgstr "طلبات السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.loan_types
+msgid "Loans Types"
+msgstr "أنواع السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_benefits_wages
+#: selection:settlement.report.wizard,type:0
+msgid "Main Company"
+msgstr "الرئاسه"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan.line,payment_method:0
+#: selection:project.installments.line,payment_method:0
+msgid "Manually"
+msgstr "يدويا"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__max_amount
+msgid "Max Amount"
+msgstr "أقصى مبلغ"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__max_quantity
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__max_quantity
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__max_quantity
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__max_quantity
+msgid "Max Quantity"
+msgstr "الكمية القصوى"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_loan.py:252
+#, python-format
+msgid "Max amount of loan can not be zero"
+msgstr "الحد الأقصى لمبلغ القرض لا يمكن أن يكون صفرا"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_benefits_wages
+#: selection:incentive.type,duration:0
+msgid "Midterm"
+msgstr "نص سنوي"
+
+#. module: kamil_hr_benefits_wages
+#: selection:incentive.type,duration:0
+msgid "Monthly"
+msgstr "شهري"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__monthly_performance_account
+msgid "Monthly Performance Account"
+msgstr "حساب خصم الاداء الشهري"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:385
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__monthly_performance_discount
+#, python-format
+msgid "Monthly Performance Discount"
+msgstr "خصم الاداء الشهري"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__deduction_amount
+msgid "Monthly performance discount amount"
+msgstr "قيمة خصم الأداء الشهري"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__deduction_percentage
+msgid "Monthly performance discount rate %"
+msgstr "نسبة خصم الأداء الشهري %"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__net
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Net"
+msgstr "الصافي"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "No Data"
+msgstr "لا توجد بيانات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__no_month
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__no_month
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__no_month
+msgid "No Of Month"
+msgstr "عدد الشهور"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__no_month
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__no_month
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__no_month
+msgid "No Of installments (By Months)"
+msgstr "عدد الأقساط (بالشهور)"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__notes
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__notes
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__notes
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_run__notes
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__notes
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__number_varieties
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__number_varieties
+msgid "Number from varieties"
+msgstr "عدد من الأصناف"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__no_months
+msgid "Number of months"
+msgstr "عدد الشهور"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_benefits_wages
+#: selection:incentive.type,duration:0
+msgid "Other"
+msgstr "أخرى"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,activity_state:0
+#: selection:hr.loan,activity_state:0
+#: selection:hr.projects,activity_state:0
+#: selection:hr.projects.request,activity_state:0
+#: selection:incentive.type,activity_state:0
+#: selection:loan.type,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,state:0
+#: selection:hr.projects.request,state:0
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__paid
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__payment_attachment
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__payment_attachment
+msgid "Payment Attachment"
+msgstr "مستند الدفع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__paid_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__payment_date
+msgid "Payment Date"
+msgstr "تاريخ السداد"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__payment_method
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__payment_method
+msgid "Payment Method"
+msgstr "طريقة السداد"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects.py:51
+#, python-format
+msgid "Payment start date cannot be less than today"
+msgstr "لا يمكن أن يكون تاريخ بدء الدفع أقل من اليوم"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects_request.py:173
+#, python-format
+msgid "Payments start date cannot be less than received date"
+msgstr "تاريخ بداية الدفعيات لا يمكن اقل من تاريخ الاستلام"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_loan.py:207
+#, python-format
+msgid "Payments start date cannot be less than register payment date"
+msgstr "لا يمكن أن يكون تاريخ بدء الدفعيات أقل من تاريخ تسجيل الدفع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_loan_line__payroll_id
+msgid "Payroll"
+msgstr "المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "دفعات إيصال المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_form_inherit_view
+msgid "Payslip Details"
+msgstr "تفاصيل المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan_line__payroll_id
+msgid "Payslip Ref."
+msgstr "قسيمة الدفع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_run__slip_ids
+msgid "Payslips"
+msgstr "إيصالات المرتبات"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.payslip,state:0
+#: selection:hr.payslip.run,state:0
+msgid "Personnel"
+msgstr "شئون العاملين"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,activity_state:0
+#: selection:hr.loan,activity_state:0
+#: selection:hr.projects,activity_state:0
+#: selection:hr.projects.request,activity_state:0
+#: selection:incentive.type,activity_state:0
+#: selection:loan.type,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_payroll.py:252
+#, python-format
+msgid "Please Enter payslips details"
+msgstr "يرجي! ادخال تفاصيل المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:78
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:187
+#, python-format
+msgid "Please enter degrees amount details"
+msgstr "يرجي ادخال تفاصيل مبالغ الدرجات"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:317
+#, python-format
+msgid "Please enter incentive details"
+msgstr "يرجي ادخال تفاصيل الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:80
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:82
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:189
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:191
+#, python-format
+msgid "Please enter job titles amount details"
+msgstr "يرجي ادخال تفاصيل مبالغ المسميات الوظيفية"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_loan_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__project_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_project_wizard__project_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__project_id
+msgid "Project"
+msgstr "المشروع"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_form
+msgid "Project Name"
+msgstr "اسم المشروع"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.projects.request,state:0
+msgid "Project manager approve approve"
+msgstr "تاكيد مدير المشروع"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects.py:28
+#, python-format
+msgid "Project request cannot be deleted in a case other than draft"
+msgstr "لايمكن حذف طلب المشروع بعد حالة المسودة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_projects
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__projects
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.hr_projects_main_menu
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Projects"
+msgstr "المشروعات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__line_ids
+msgid "Projects Lines"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.hr_project_report
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.hr_projects_report
+msgid "Projects Report"
+msgstr "تقرير المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_projects_request
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_projects_request
+msgid "Projects Request"
+msgstr "طلبات المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_projects
+msgid "Projects Settings"
+msgstr "اعداد المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__installments_line_ids
+msgid "Projects installments Lines"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: selection:incentive.type,duration:0
+msgid "Quarterly"
+msgstr "ربع سنوي"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+msgid "Re-Compute details"
+msgstr "اعادة حساب التفاصيل"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__receipt_attachment
+msgid "Receipt Attachment"
+msgstr "مستند الاستلام"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.projects.request,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+msgid "Receipt confirmation"
+msgstr "تاكيد الاستلام"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__received_date
+msgid "Received Date"
+msgstr "تاريخ الاستلام"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Refuse1"
+msgstr "رفض"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__register_payment_date
+msgid "Register Payment Date"
+msgstr "تاريخ تسجيل الدفعية"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.projects.request,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.projects.request,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+msgid "Reject1"
+msgstr "رفض"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.payroll_reports_main_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__user_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__user_id
+msgid "Requestor"
+msgstr "مقدم الطلب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__required_quantity
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__required_quantity
+msgid "Required Quantity"
+msgstr "الكمية المطلوبة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Return"
+msgstr "الترجيع"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,calculation_method:0
+#: selection:hr.loan,deduction:0
+msgid "Salary"
+msgstr "المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_salary_rule
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__salary_rule
+msgid "Salary Rule"
+msgstr "قاعدة المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "هيكل المرتب"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.salary_certificate
+msgid "Salary certificate"
+msgstr "شهادة مرتب"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,calculation_method:0
+msgid "Salary per Job title"
+msgstr "من المرتب حسب المسمي الوظيفي"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+msgid "Select Employees"
+msgstr "اختيار الموظفين"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Send to submit"
+msgstr "إرسال للموافقة"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Set To Draft"
+msgstr "وضع كمسودة"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_employee_grade_form_inherit_view
+msgid "Set contracts structure"
+msgstr "وضع هيكل العقود"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_settlement_report_wizard
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.settlement_report
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_settlement_report
+msgid "Settlement Report"
+msgstr "تقرير التسوية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__number
+msgid "Signal serial number"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects_request.py:56
+#, python-format
+msgid "Sorry! The start date of the batch cannot be less than the date of receipt"
+msgstr "آسف! لا يمكن أن يكون تاريخ بدء الدفعة أقل من تاريخ الاستلام"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__stamp
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__stamp
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Stamp"
+msgstr "الدمغة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__payment_start_date
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__payment_start_date
+msgid "Start Date of Payment"
+msgstr "تاريخ بداية الدفعيات"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan,state:0
+#: selection:hr.projects.request,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_loan_form
+msgid "Start Payments"
+msgstr "بداية الدفعيات"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:70
+#, python-format
+msgid "Start date cannot be greater than end date"
+msgstr "لا يمكن أن يكون تاريخ البدء أكبر من تاريخ الانتهاء"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__state
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip_run__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__activity_state
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__activity_state
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__activity_state
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__activity_state
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__activity_state
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__struct_ids
+msgid "Struct"
+msgstr "الهيكل"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__struct_id
+msgid "Structure"
+msgstr "الهيكل"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.inherit_form_hr_payslip_run_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.loan.line,payment_method:0
+#: selection:project.installments.line,payment_method:0
+msgid "System"
+msgstr "النظام"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__tax_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__tax_percentage
+msgid "Tax percentage %"
+msgstr "نسبة الضريبة %"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_view_hr_payslip_run_temporary
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_payslip_run_temporary
+msgid "Temporary Batches"
+msgstr "دفعات المؤقتين"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_view_hr_payslip_temporary
+#: model:ir.ui.menu,name:kamil_hr_benefits_wages.menu_hr_payslip_temporary
+msgid "Temporary Payslips"
+msgstr "ايصالات المؤقتين"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects_request.py:162
+#, python-format
+msgid "The amount can't be more than project max amount"
+msgstr "المبلغ لايمكن ان يتجاوز القيمه القصوي للمشروع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__date_from
+msgid "The first month"
+msgstr "الشهر الأول"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:74
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:183
+#, python-format
+msgid "The incentive amount cannot be zero"
+msgstr "لا يمكن أن يكون مبلغ الحافز صفرا"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_loan.py:128
+#, python-format
+msgid "The loan amount cannot be more than max amount %s "
+msgstr "لا يمكن أن يكون مبلغ القرض أكثر من الحد الأقصى للمبلغ %s"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_loan.py:181
+#, python-format
+msgid "The loan amount cannot be zero"
+msgstr "لا يمكن أن يكون مبلغ السلفية صفرا"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:76
+#: code:addons/kamil_hr_benefits_wages/models/hr_incentive.py:185
+#, python-format
+msgid "The number of months cannot be zero"
+msgstr "لا يمكن أن يكون عدد الأشهر صفرا"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects_request.py:170
+#, python-format
+msgid "The project amount cannot be zero"
+msgstr "ﻻ يمكن أن يكون مبلغ المشروع صفرا"
+
+#. module: kamil_hr_benefits_wages
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects_request.py:165
+#: code:addons/kamil_hr_benefits_wages/models/hr_projects_request.py:274
+#, python-format
+msgid "The required quantity can't be more than available quantity"
+msgstr "الكمية المطلوبة لا يمكن أن تكون أكثر من الكمية المتاحة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_balancing_salaries_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_housing_form_wizard__date_to
+msgid "The second month"
+msgstr "الشهر الثاني"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.actions.act_window,help:kamil_hr_benefits_wages.action_employees_incentives
+msgid "There is no incentives"
+msgstr "لاتوجــــــد حـــوافـــز"
+
+#. module: kamil_hr_benefits_wages
+#: selection:hr.incentive,activity_state:0
+#: selection:hr.loan,activity_state:0
+#: selection:hr.projects,activity_state:0
+#: selection:hr.projects.request,activity_state:0
+#: selection:incentive.type,activity_state:0
+#: selection:loan.type,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__total_amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__total_amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__total_amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__total_amount
+msgid "Total Amount"
+msgstr "القيمة الكلية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__total_deductions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Total Deductions"
+msgstr "اجمالي الاستقطاعات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__total_loan_amount
+msgid "Total Loans"
+msgstr "إجمالي السلفيات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__total_paid_amount
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__total_paid_amount
+msgid "Total Paid Amount"
+msgstr "إجمالي المبلغ المدفوع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_settlement_report_wizard__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "Update Incentive"
+msgstr "تعديل الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_project_installments_line__varietie_name
+msgid "Varietie Name"
+msgstr "إسم الصنف"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_line__name
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request_line__name
+msgid "Varietie name"
+msgstr "إسم الصنف"
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_projects_request_form
+msgid "Varieties"
+msgstr "الأصناف"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive_line__violations_deduction
+msgid "Violations Deduction"
+msgstr "خصم المخالفات"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_incentive__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_loan__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_projects_request__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_incentive_type__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_loan_type__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_incentive__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_loan__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_hr_projects_request__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_incentive_type__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_benefits_wages.field_loan_type__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model.fields,field_description:kamil_hr_benefits_wages.field_hr_payslip__years_experience
+msgid "Years Experience"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_balancing_salaries_wizard
+msgid "balancing.salaries.wizard"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_fixed_degree_line
+msgid "fixed.degree.line"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_fixed_job_line
+msgid "fixed.job.line"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_housing_form_wizard
+msgid "housing.form.wizard"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_loan_wizard
+msgid "hr.loan.wizard"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_payslip_loan_line
+msgid "hr.payslip.loan.line"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_project_wizard
+msgid "hr.project.wizard"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_projects
+msgid "hr.projects"
+msgstr "مشروع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_projects_line
+msgid "hr.projects.line"
+msgstr "المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_projects_request
+msgid "hr.projects.request"
+msgstr "طلب مشروع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_hr_projects_request_line
+msgid "hr.projects.request.line"
+msgstr "المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_incentive_type
+msgid "incentive.type"
+msgstr "نوع الحافز"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_loan_type
+msgid "loan.type"
+msgstr "نوع سلفية"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_project_installments_line
+msgid "project.installments.line"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.act_window,name:kamil_hr_benefits_wages.action_hr_project_wizard
+msgid "projects Report"
+msgstr "تقرير المشاريع"
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_report_kamil_hr_benefits_wages_balancing_salaries_view
+msgid "report.kamil_hr_benefits_wages.balancing_salaries_view"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_report_kamil_hr_benefits_wages_housing_form_view
+msgid "report.kamil_hr_benefits_wages.housing_form_view"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_report_kamil_hr_benefits_wages_hr_laon_report_view
+msgid "report.kamil_hr_benefits_wages.hr_laon_report_view"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_report_kamil_hr_benefits_wages_hr_project_report_view
+msgid "report.kamil_hr_benefits_wages.hr_project_report_view"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_report_kamil_hr_benefits_wages_settlement_report_view
+msgid "report.kamil_hr_benefits_wages.settlement_report_view"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.model,name:kamil_hr_benefits_wages.model_settlement_report_wizard
+msgid "settlement.report.wizard"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "إجمالي المبلغ"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "إعداد"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "اجمالي الخصومات"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "اجمـالي الأجـور الكلـية"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "اسم الحافز"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_run_view
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.salary_certificate_view
+msgid "اسم الموظف:"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "اعتماد"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_view
+msgid "الإجمالي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_run_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "الاجمالي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "الادارة"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_run_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                                    <br/>\n"
+"                                    قسم الاجور والمزايا<br/>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                        <br/>\n"
+"                        قسم الاجور والمزايا<br/>\n"
+"\n"
+"                        تقرير موازنة المرتبات <br/>\n"
+"                        لشهر"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "الادارة العامة للموارد البشرية\n"
+"                        <br/>\n"
+"                        قسم الاجور والمزايا<br/>\n"
+"                        تقرير الحافز"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                        <br/>\n"
+"                        قسم الاجور والمزايا<br/>\n"
+"                        تقرير السلفيات"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                        <br/>\n"
+"                        قسم الاجور والمزايا<br/>\n"
+"                        تقرير المشاريع"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.salary_certificate_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                        <br/>\n"
+"                        قسم الاجور والمزايا<br/>\n"
+"                        شهادة مرتب"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                    <br/>\n"
+"                    قسم الاجور والمزايا<br/>\n"
+"\n"
+"                    تقرير التسوية <br/>"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "الاداره"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_view
+msgid "الاسم"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "البـيان"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.salary_certificate_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "البند"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "التاريخ"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_payslip_run_view
+msgid "الدرجة الوظيفية"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+msgid "الدمغة"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "الدمغه"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_view
+msgid "الزيادة"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+msgid "السلفيه"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "الصافي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "الصـنـــدوق الــقــومي للتأمـــين الـصـحــي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "الضريبه"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+msgid "القسم"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "الكـلي الجـديـد"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "الكـلي القديـم"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+msgid "الكفالات"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.salary_certificate_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.view_hr_incentive_form
+msgid "المبلغ"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "المبلغ المدفوع"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "المتبقي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+msgid "المستحق"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "المسمي الوظيفي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "المشروع"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "الموظف"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_view
+msgid "النقصان"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "النقـصــان"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "الي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "الي تاريخ"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.incentive_report_dup2
+msgid "تقرير الحافز 2"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.incentive_report_dup3
+msgid "تقرير الحافز 3"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.salary_certificate_view
+msgid "تم إستخراج الشهادة بناء علي طلبه"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.housing_form_view
+msgid "جمهورية الســـودان\n"
+"                            <br/>\n"
+"                            وزارة العمل والتنمية الإجتماعية<br/>\n"
+"\n"
+"                            ديوان شئون الخدمة المدنية <br/>\n"
+"                            استمارة تسكين بموجب منشور شئون الخدمة رقم (2/2020)"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "طريقة الحساب"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "عدد الشهور"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "في الفترة من"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model:ir.actions.report,name:kamil_hr_benefits_wages.payslip_sheet_report_id
+msgid "كـــشــف المرتب"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_laon_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_project_report_view
+msgid "لا تـــوجـــــــد بيــانات"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "مبلغ ثابت"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "مبلغ ثابت حسب الدرجه"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "مبلغ ثابت حسب المسمى الوظيفي"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.settlement_report_view
+msgid "مراجعة"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_view
+msgid "ملاحظات"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "من المرتب"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup2
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.hr_incentive_report_view_dup3
+msgid "من تاريخ"
+msgstr ""
+
+#. module: kamil_hr_benefits_wages
+#: model_terms:ir.ui.view,arch_db:kamil_hr_benefits_wages.balancing_salaries_view
+msgid "وشهر"
+msgstr ""
+

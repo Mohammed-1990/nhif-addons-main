@@ -1,0 +1,494 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_archive
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-16 11:13+0000\n"
+"PO-Revision-Date: 2019-11-16 11:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__accounting_procedures_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Accounting Procedures"
+msgstr "إجراءات المحاسبة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__appdoc_id
+msgid "Appdoc"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__appdocuments_id
+msgid "Appdocuments"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Appointment Documents"
+msgstr "مستندات التعيين"
+
+#. module: kamil_hr_archive
+#: model:ir.actions.act_window,name:kamil_hr_archive.action_emp
+#: model:ir.ui.menu,name:kamil_hr_archive.archive_menu
+#: model:ir.ui.menu,name:kamil_hr_archive.archive_root_menu
+msgid "Archive"
+msgstr "الأرشفة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__bonu_id
+msgid "Bonu"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__bonuses_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Bonuses"
+msgstr "العلاوات"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__box_no
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "Box No"
+msgstr "رقم الدرج"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__branch_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__certi_id
+msgid "Certi"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__certificates_id
+msgid "Certificates"
+msgstr "الشهادات"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Certificates Of Study"
+msgstr "شهادات دراسية"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__closet_no
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "Closet No"
+msgstr "رقم الدولاب"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__create_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_report_kamil_hr_archive_employee_file_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__display_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__doc
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__doc
+msgid "Document"
+msgstr "المستند"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__doc_name
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__doc_name
+msgid "Document Name"
+msgstr "اسم المستند"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Employee Data"
+msgstr "بيانات الموظف"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__employee_no
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard__employee_ids
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: kamil_hr_archive
+#: model:ir.actions.act_window,name:kamil_hr_archive.action_employee_file_wizard
+#: model:ir.actions.report,name:kamil_hr_archive.employee_file_report
+#: model:ir.ui.menu,name:kamil_hr_archive.menu_report_employee_file
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "Employees Files Report"
+msgstr "تقرير ملفات الموظفون"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "End Of Service"
+msgstr "نهاية الخدمة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__endservice_id
+msgid "Endservice"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__eos_id
+msgid "Eos"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "File Data"
+msgstr "بيانات الملف"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__file_no
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "File No"
+msgstr "رقم الملف"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_report_kamil_hr_archive_employee_file_view__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__id
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_report_kamil_hr_archive_employee_file_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions____last_update
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_appdoc_appdoc__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_bonu_bonu__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_certi_certi__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_employee_file_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_eos_eos__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__write_date
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_medical_medical__med_id
+msgid "Med"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__medical_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Medical"
+msgstr "الأرانيك الطبية"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_move_move__move_id
+msgid "Move"
+msgstr "حركة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__movements_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Movements"
+msgstr "التنقلات"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_view
+msgid "No Data"
+msgstr "لا توجد بيانات"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.employee_file_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_accounting_procedures__procedures_id
+msgid "Procedures"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_promo_promo__promo_id
+msgid "Promo"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__promotions_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Promotions"
+msgstr "الترقيات"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_secret_report__secret_id
+msgid "Secret"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__secret_report_id
+msgid "Secret Report"
+msgstr "التقارير السرية"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Secret Reports"
+msgstr "التقارير السرية"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Service Record"
+msgstr "سجل الخدمة"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__servicerecord_id
+msgid "Servicerecord"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_servrec_servrec__servrecord_id
+msgid "Servrecord"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_training_missions__training_id
+msgid "Training"
+msgstr "التدريب"
+
+#. module: kamil_hr_archive
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Training And Missions"
+msgstr "التدريب والبعثات"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__training_misssions_id
+msgid "Training Misssions"
+msgstr "التدريب والبعثات"
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_vaca_vaca__vaca_id
+msgid "Vaca"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model.fields,field_description:kamil_hr_archive.field_archive_archive__vacations_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_archive.archive_form_view
+msgid "Vacations"
+msgstr "الإجازات"
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_accounting_procedures
+msgid "accounting.procedures"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_appdoc_appdoc
+msgid "appdoc.appdoc"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_archive_archive
+msgid "archive.archive"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_bonu_bonu
+msgid "bonu.bonu"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_certi_certi
+msgid "certi.certi"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_employee_file_wizard
+msgid "employee.file.wizard"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_eos_eos
+msgid "eos.eos"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_medical_medical
+msgid "medical.medical"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_move_move
+msgid "move.move"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_promo_promo
+msgid "promo.promo"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_report_kamil_hr_archive_employee_file_view
+msgid "report.kamil_hr_archive.employee_file_view"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_secret_report
+msgid "secret.report"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_servrec_servrec
+msgid "servrec.servrec"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_training_missions
+msgid "training.missions"
+msgstr ""
+
+#. module: kamil_hr_archive
+#: model:ir.model,name:kamil_hr_archive.model_vaca_vaca
+msgid "vaca.vaca"
+msgstr ""
+

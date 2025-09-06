@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_bank_cash_balance_sheet,access_bank_cash_balance_sheet,model_bank_cash_balance_sheet,kamil_accounting_base.bank_cash_balance_sheet_manager_group,1,1,1,1
+
+,,,,,,,
+access_bank_cash_balance_sheet_line,access_bank_cash_balance_sheet_line,model_bank_cash_balance_sheet_line,kamil_accounting_base.bank_cash_balance_sheet_manager_group,1,1,1,1
+
+access_bank_sheet_addition,access_bank_sheet_addition,model_bank_sheet_addition,kamil_accounting_base.bank_cash_balance_sheet_manager_group,1,1,1,1
+
+

@@ -1,0 +1,23 @@
+<odoo>
+	<data>
+		
+		<record id="branch_account_multi_company_rule" model="ir.rule">
+			<field name="name">branch.account multi-company</field>
+			<field ref="model_branch_account" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="branch_account_line_multi_company_rule" model="ir.rule">
+			<field name="name">branch.account.line multi-company</field>
+			<field ref="model_branch_account_line" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('branch_id','=',False),('branch_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+
+
+
+	</data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_revenues_budget_report,revenues.budget.report,model_revenues_budget_report,,1,1,1,1
+access_recipients_performance_wiz,recipients.performance.wiz,model_recipients_performance_wiz,,1,1,1,1

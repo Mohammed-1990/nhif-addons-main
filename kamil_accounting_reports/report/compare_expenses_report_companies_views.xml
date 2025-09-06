@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!--compare Companies Revenues Report-->
+	<report 
+		id="compare_expens_comp_report"
+		model="compare.expenses.companies.wizard"
+		string="‫ تقرير مقارنة المصروفات بين الفترات للفروع والمركز"
+		report_type="qweb-html"
+		name="kamil_accounting_reports.compare_exp_comp_template"
+	/>
+
+
+	<!--Compare Revenues Template-->
+	<template id="compare_exp_comp_template">
+		<t t-call="web.html_container">
+				<div class="page">
+
+					<div class="text-center">
+						<img t-if="company_id_logo" t-att-src="image_data_uri(company_id_logo)" class="img-fluid oe_slides_channel_thumbnail" alt="Logo"/>
+					</div>
+					<br/><br/>
+
+					<div>
+
+					<div dir="rtl" style="float:right;text-align:start;">
+						<a href="#" target="_blank">
+							<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-printer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 2H5a1 1 0 0 0-1 1v2H3V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h-1V3a1 1 0 0 0-1-1zm3 4H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v1H2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+								<path fill-rule="evenodd" d="M11 9H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM5 8a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5z"/>
+								<path d="M3 7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+							</svg>
+						</a>
+					</div>
+					<br/>
+
+					<div class="text-center" >
+                        <strong>
+							<b>‫
+								تقرير مقارنة المصروفات بين الفترات للفروع والمركز
+							</b>
+						</strong>			
+						<br/>
+						الفترة الحالية من <t t-esc="date_from1"/> الى <t t-esc="date_to1"/>
+						<br/>
+						الفترة السابقة من <t t-esc="date_from2"/> الى <t t-esc="date_to2"/>
+					</div>
+					<br/>
+					<div>
+
+					<table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+						
+						<thead style="display: table-header-group;">
+
+							<tr class="table-active">
+                                    
+								<td class="text-center fit">الرقم</td>
+								<td class="text-center fit">الجهة</td>
+								<td class="text-center fit">المصدق خلال الفترة الحالية</td>
+								<td class="text-center fit">الصرف الفعلي خلال الفترة الحالية</td>
+								<td class="text-center fit" >نسبة الصرف الفعلي في الفترة الحالية</td>
+								<td class="text-center fit">المصدق خلال الفترة السابقة</td>
+								<td class="text-center fit">الصرف الفعلي خلال الفترة السابقة</td>
+								<td class="text-center fit">نسبة الصرف الفعلي في الفترة السابقة</td>
+								<td class="text-center fit">المقارنة بالنسب</td>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-foreach="docs" t-as="doc">
+								<tr style="page-break-inside: avoid;">
+									<td class="text-center fit">
+										<t t-esc="doc_index + 1"/>
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['company']"/>
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['planned_amount1']"/>
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['practical_amount1']"/>
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['percentege1']"/>%
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['planned_amount2']"/>
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['practical_amount2']"/>
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['percentege2']"/>%
+									</td>
+									<td class="text-right fit">
+										<t t-esc="doc['compare_percentage']"/>
+									</td>
+								</tr>
+							</t>
+							<tr style="page-break-inside: avoid;" class="table-active">
+
+                        		<td class="text-center fit" colspan="2"><b>الإجمالي</b></td>
+                        		<td class="text-center fit">
+                        			<t t-esc="total_budget_value1"/>
+                        		</td>
+                        		<td class="text-center fit">
+                        			<t t-esc="total_actual1"/>
+                        		</td>
+                        		<td class="text-center fit">
+                        		</td>
+                        		<td class="text-center fit">
+                        			<t t-esc="total_budget_value2"/>
+                        		</td>
+                        		<td class="text-center fit">
+                        			<t t-esc="total_actual2"/>
+                        		</td>
+                        		<td>
+                        			
+                        		</td>
+                        		<td>
+                        		</td>
+                        	</tr>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				
+
+				</div>
+			</t>
+	</template>
+
+
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<report
+			id = "action_required_documents_report"
+			string = "Required documents"
+			model = "purchase.requisition"
+			report_type = "qweb-html"
+			file = "kamil_purchase_qualifiying_suppliers.report_required_documents"
+			name = "kamil_purchase_qualifiying_suppliers.report_required_documents"
+			print_report_name="'General Conditions Selection of (%s)' % (object.year)"
+		/>
+
+
+	</data>
+</odoo>

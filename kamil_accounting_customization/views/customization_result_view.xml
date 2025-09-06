@@ -1,0 +1,120 @@
+<odoo>
+	<data>
+
+
+		<record id="customization_result_tree_view" model="ir.ui.view">
+			<field name="name">Customization Result Tree</field>
+			<field name="model">kamil.customization.result</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="branch_id"/>
+					<field name="year"/>
+					<field name="month"/>
+					<field name="operation_date"/>
+					<field name="customization_amount" sum="Total"/>
+					<field name="clearance_amount" sum="Total"/>
+					<field name="transfered_amount" sum="Total"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="customization_result_form_view" model="ir.ui.view">
+			<field name="name">Customization Result Form</field>
+			<field name="model">kamil.customization.result</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						
+						<button name="do_create_move" string="Create Journal Items" type="object" class="oe_highlight"/>
+
+						<field name="state" widget="statusbar"/>
+
+					</header>
+					<sheet>
+						
+						<div class="float-right">
+							<h1>
+								<label for="branch_id" class="oe_edit_only float-right"/>
+								<br/>
+								<field name="branch_id" required="1" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+							</h1>
+							<br/>
+						</div>
+
+						<group col="4">
+							<field name="year" attrs="{'readonly':[('state','!=','draft')]}" />			
+							<field name="month" attrs="{'readonly':[('state','!=','draft')]}" />			
+							<field name="operation_date" attrs="{'readonly':[('state','!=','draft')]}" />			
+						</group>
+						<group col="6">
+							<field name="customization_amount" attrs="{'readonly':[('state','!=','draft')]}" />		
+							<field name="clearance_amount" attrs="{'readonly':[('state','!=','draft')]}" />
+							<field name="transfered_amount" attrs="{'readonly':[('state','!=','draft')]}" />	
+						</group>
+
+						<notebook>
+							
+							<page string="Customization">
+								<field name="customization_line_ids"  attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="the_type" invisible="1"/>
+										<field name="account_id"/>
+										<field name="analytic_account_id"/>
+										<field name="amount" sum="Total"/>
+										<field name="reserved_amount" sum="Total"/>
+										<field name="remaining_amount" sum="Total"/>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+
+
+							<page string="Revenues from Other Branches">
+								<field name="income_line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="the_type" invisible="1"/>
+										<field name="branch_id"/>
+										<field name="account_id"/>
+										<field name="analytic_account_id"/>
+										<field name="amount" sum="Total"/>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+
+
+							<page string=" from Other Branches">
+								<field name="deduction_line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="the_type" invisible="1"/>
+										<field name="branch_id"/>
+										<field name="account_id"/>
+										<field name="analytic_account_id"/>
+										<field name="amount" sum="Total"/>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+
+						</notebook>
+
+		
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+
+		<record id="action_customization_result" model="ir.actions.act_window">
+			<field name="name">Customization Result</field>
+			<field name="res_model">kamil.customization.result</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="customization_result_menu" name="Customization Result" parent="customization_main_menu" action="action_customization_result" sequence="3"/>
+
+	</data>
+</odoo>
+
+
+

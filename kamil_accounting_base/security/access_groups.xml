@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="kamil_accounting_hide_group" model="res.groups">
+            <field name="name">Accounting - Hide</field>
+        </record>
+
+
+        <!--###############################################
+        Collection
+        ############################################### -->
+        <record id="kamil_accounting_collection_group" model="ir.module.category">
+            <field name="name">Accounting - Collection</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Collection</field>
+        </record>
+
+
+
+
+        <record id="collector_group" model="res.groups">
+            <field name="name">Collector</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_collection_group"/>
+
+        </record>
+
+        <record id="supervisor_group" model="res.groups">
+            <field name="name">Supervisor</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_collection_group"/>
+        </record>
+
+        <record id="internal_auditor_group" model="res.groups">
+            <field name="name">Internal Auditor</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_collection_group"/>
+        </record>
+
+
+        <!--###############################################
+        Cash/Bank Supply 
+        ############################################### -->
+        <record id="kamil_accounting_Bank_or_cash_supply_group" model="ir.module.category">
+            <field name="name">Accounting - Cash/Bank Supply</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Right</field>
+        </record>
+
+
+        <record id="money_supply_group" model="res.groups">
+            <field name="name">Money Supply</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_Bank_or_cash_supply_group"/>
+        </record>
+
+
+        <!--###############################################
+        Money Movement 
+        ############################################### -->
+        <record id="kamil_accounting_money_movement_group" model="ir.module.category">
+            <field name="name">Accounting - Money Movement</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Right</field>
+        </record>
+
+
+        <record id="money_movement_group" model="res.groups">
+            <field name="name">Money Movement</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_money_movement_group"/>
+        </record>
+
+
+
+
+
+        <!--###############################################
+        Financial Ratification 
+        ############################################### -->
+        <record id="kamil_accounting_ratifications_manager_group" model="ir.module.category">
+            <field name="name">Accounting - Ratifications</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Right</field>
+        </record>
+
+<!-- 
+
+        <record id="ratifications_user_group" model="res.groups">
+            <field name="name">Ratifications User</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_ratifications_manager_group"/>
+        </record> -->
+
+
+<!--         <record id="ratifications_dept_admin_group" model="res.groups">
+            <field name="name">Ratifications Department Manager</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_ratifications_manager_group"/>
+        </record>
+ -->
+
+        <record id="ratifications_manager_group" model="res.groups">
+            <field name="name">Ratification User</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_ratifications_manager_group"/>
+        </record>
+
+
+
+
+        <!--###############################################
+        Payments
+        ############################################### -->
+        <record id="kamil_accounting_payments_manager_group" model="ir.module.category">
+            <field name="name">Accounting - Payments</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Right</field>
+        </record>
+
+
+        <record id="payments_manager_group" model="res.groups">
+            <field name="name">Payment User</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_payments_manager_group"/>
+        </record>
+
+
+        <!--###############################################
+        Claims
+        ############################################### -->
+        <record id="kamil_accounting_claims_manager_group" model="ir.module.category">
+            <field name="name">Accounting - Claims</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Righ - Claims</field>
+        </record>
+
+
+        <record id="claims_user_group" model="res.groups">
+            <field name="name">Claims User</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_claims_manager_group"/>
+        </record>
+
+        <record id="claims_internal_auditor_group" model="res.groups">
+            <field name="name">Internal Auditor</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_claims_manager_group"/>
+        </record>
+
+
+        <record id="claims_general_manager_group" model="res.groups">
+            <field name="name">General Manager / Branch Manager</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_claims_manager_group"/>
+        </record>
+
+
+        <record id="claims_general_admin_group" model="res.groups">
+            <field name="name">Director of Finance and Adminstration</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_claims_manager_group"/>
+        </record>
+
+
+
+        <record id="claims_finance_group" model="res.groups">
+            <field name="name">Director of Finance</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_claims_manager_group"/>
+        </record>
+
+
+        <record id="claims_internal_auditor_group" model="res.groups">
+            <field name="name">Internal Auditor</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_claims_manager_group"/>
+        </record>
+
+
+        <record id="claims_manager_group" model="res.groups">
+            <field name="name">Claims Manager</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user')), (4, ref('kamil_accounting_base.claims_user_group')), (4, ref('kamil_accounting_base.claims_general_admin_group')), (4, ref('kamil_accounting_base.claims_finance_group')), (4, ref('kamil_accounting_base.claims_internal_auditor_group'))]"/>
+            
+
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_claims_manager_group"/>
+        </record>
+
+
+        <!--###############################################
+        Accounting
+        ############################################### -->
+        <record id="kamil_accounting_accounting_group" model="ir.module.category">
+            <field name="name">Accounting</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Righ - Customization</field>
+        </record>
+
+
+        <record id="journal_entries_manager_group" model="res.groups">
+            <field name="name"> Journal Entries User </field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_accounting_group"/>
+        </record>
+
+
+
+        <!--###############################################
+        Customization
+        ############################################### -->
+        <record id="kamil_accounting_customization_manager_group" model="ir.module.category">
+            <field name="name">Accounting - Customization</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Righ - Customization</field>
+        </record>
+
+
+        <record id="customization_manager_group" model="res.groups">
+            <field name="name">Customizations Manager</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_customization_manager_group"/>
+        </record>
+
+
+
+
+        <!--###############################################
+        Bank/Cash Balance Sheet
+        ############################################### -->
+        <record id="kamil_accounting_bank_cash_balance_sheet_manager_group" model="ir.module.category">
+            <field name="name">Accounting - Bank/Cash Balance Sheet</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Righ - Bank/Cash Balance Sheet</field>
+        </record>
+
+        <record id="bank_cash_balance_sheet_user_group" model="res.groups">
+            <field name="name">Bank/Cash Balance Sheet User</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_bank_cash_balance_sheet_manager_group"/>
+        </record>
+
+
+
+        <record id="bank_cash_balance_sheet_manager_group" model="res.groups">
+            <field name="name">Financial Auditor</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user')),(4, ref('kamil_accounting_base.bank_cash_balance_sheet_user_group'))]"/>
+
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_bank_cash_balance_sheet_manager_group"/>
+        </record>
+
+
+
+
+
+
+        <!--###############################################
+        Budget 
+        ############################################### -->
+        <record id="kamil_accounting_budget_management" model="ir.module.category">
+            <field name="name">Accounting - Budget Management</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Righ - Budget Management</field>
+        </record>
+
+        <record id="budget_user_group" model="res.groups">
+            <field name="name">Budgets User</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_budget_management"/>
+        </record>
+
+        <record id="budget_manager_group" model="res.groups">
+            <field name="name">Budgets Manager</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user')),(4, ref('kamil_accounting_base.budget_user_group'))]"/>
+
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_budget_management"/>
+        </record>
+
+
+
+        <!--###############################################
+        Assets 
+        ############################################### -->
+        <record id="kamil_accounting_assets" model="ir.module.category">
+            <field name="name">Accounting - Assets</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Righ - Assets</field>
+        </record>
+
+        <record id="assets_user_group" model="res.groups">
+            <field name="name">Assets User</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_assets"/>
+        </record>
+
+
+
+
+        <!--###############################################
+        Financial Auditor
+        ############################################### -->
+        <record id="kamil_accounting_financial_auditor" model="ir.module.category">
+            <field name="name">Accounting - Financial Auditor</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Access Righ - Financial Auditor</field>
+        </record>
+
+        <!-- <record id="financial_auditor_group" model="res.groups">
+            <field name="name">Financial Auditor</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user')),(4, ref('kamil_accounting_base.assets_user_group')),(4, ref('kamil_accounting_base.budget_manager_group')),(4, ref('kamil_accounting_base.bank_cash_balance_sheet_manager_group')),(4, ref('kamil_accounting_base.customization_manager_group')),(4, ref('kamil_accounting_base.journal_entries_manager_group')),(4, ref('kamil_accounting_base.claims_manager_group')),(4, ref('kamil_accounting_base.payments_manager_group')),(4, ref('kamil_accounting_base.ratifications_manager_group')),(4, ref('kamil_accounting_base.money_movement_group')),(4, ref('kamil_accounting_base.money_supply_group')),(4, ref('kamil_accounting_base.internal_auditor_group')),(4, ref('kamil_accounting_base.supervisor_group')),(4, ref('kamil_accounting_base.collector_group'))  ]"/>
+
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_financial_auditor"/>
+        </record> -->
+
+
+
+    </data>
+</odoo>

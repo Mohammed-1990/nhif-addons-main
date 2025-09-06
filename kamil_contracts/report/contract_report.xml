@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <template id="contract_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                 <t t-foreach="docs" t-as="o"> 
+                     <div class="page">
+                        <!-- <h2 style="text-align: right;"><strong style="color:#00BFFF">عقد تنفيذ مشروع</strong></h2>  -->
+                        <h4 style="text-align: right;margin-right:20px"><strong><span t-esc="o.name"></span> </strong></h4> 
+                         <br/>
+ <h5 style="text-align: right;">:الديباجة</h5>
+       <p dir="rtl" style="text-align: right;" t-field="o.preface"><br /></p>
+
+
+                       
+                        
+                        
+                        <h5 style="text-align: right;">:تمهيد</h5>
+                        <p align="right" t-field="o.preamble" style="text-align: right;"></p>
+                 
+                      
+                        <h5 style="text-align: right;">:التفسير</h5>
+                        <p dir="rtl" style="text-align: right;" t-field="o.explain"><br /></p>
+                      
+<!-- 
+                        <h5 style="text-align: right;">:مدة العقد وتاريخ سريانه</h5>
+                        <strong t-field="o.contract_start_date" > </strong> والى
+                        <strong t-field="o.contract_end_date">
+                        </strong>
+                        <br /> 
+
+                        <p dir="rtl" style="text-align: right;">
+قيمة العقد:
+                            <strong t-field="o.contract_amount">
+                            </strong>
+                        </p>
+                         -->
+                        
+                        
+
+
+            <h5 style="text-align: right;">:مستندات العقد</h5>
+                        <p dir="rtl" style="text-align: right;" t-field="o.contract_docx"><br /></p>
+
+
+                        
+            <h5 style="text-align: right;">:أحكام عامة</h5>
+                        <p dir="rtl" style="text-align: right;" t-field="o.general_provisions"><br /></p>
+                        
+        
+
+                        <h5  style="text-align: right;"> : إلتزامات الطرف الأول</h5><br />
+            <p dir="rtl" style="text-align: right;" t-field="o.first_party_obligations"><br /></p>
+            
+
+                        <h5  style="text-align: right;"> : إلتزامات الطرف الثاني</h5><br />
+            <p dir="rtl" style="text-align: right;" t-field="o.second_party_obligations"><br /></p>
+            
+                        <h5 style="text-align: right;">:غرامات التأخير</h5>
+                        <p dir="rtl" style="text-align: right;" t-field="o.delay_mulct_html"><br /></p>
+                        
+            <h5 style="text-align: right;">:حل النزاعات</h5>
+                        <p dir="rtl" style="text-align: right;" t-field="o.conflict_resolution_html"><br /></p>
+                        
+                        
+                        <br/><br/>
+                        <div>
+                            <div class="col-xs-12">
+                                <div class="col-xs-6 text-right" style="float:right">
+                                    <strong style="color:coral;">  الطرف الأول</strong><br/>
+                    <span> السادة </span>
+                                        <span> /</span>
+                    <strong t-field="o.ntfs"></strong><br/>
+                                    
+                    <strong t-field="o.name_ntfs"></strong><br/>
+                    <span> وصفته </span>
+                    <strong t-field="o.name_ntfs_obj"></strong><br/><br/><br/><br/>
+                                    
+                                    <span style="color:coral;"> ____________________</span>
+                                    <span style="color:coral;"> التوقيع</span>
+
+                                </div>
+
+                                    <div class="col-xs-6 text-right" style="float:left">
+                                        <strong style="color:coral;">  الطرف الثاني</strong><br/>
+                                        <span> السادة </span>
+                                        <span> /</span>
+                                        <span t-if="o.second_party_ch" style="text-right"> 
+                                            <strong t-field="o.second_party_ch"></strong>
+                                        </span>
+                                        
+                                        <br/>
+
+                                        <span>ويمثلها في التوقيع</span>
+                                        <span> السيد</span>
+                                        <span> /</span>
+                                        <strong t-field="o.second_party_name"></strong><br/>
+                    <span> وصفته </span>
+                    <strong t-field="o.second_party_obj"></strong>
+                    
+                                        <span> ____________________</span>
+                                        <span> إثبات شخصية</span><br/>
+                                        <span> ____________________</span>
+                                        <span> تاريح الانتهاء</span><br/><br/><br/>
+                                        <span style="color:coral;"> ____________________</span>
+                                        <span style="color:coral;"> التوقيع</span>
+                                        
+                                    </div>
+                               
+                               
+                            </div>
+                        </div>
+
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        <div>
+                            <div class="col-xs-12">
+                                <div class="col-xs-6 text-right" style="float:right">
+                                    <strong style="color:coral;">  الشاهد الأول</strong>
+                                     <br/>
+                                    <span>  الإسم</span>
+                                    <span> /</span>
+                                   <strong t-field="o.first_witnes_name"></strong><br/>
+                                    <span> نوع إثبات الشخصية</span><br/>
+                                    <strong t-field="o.first_witnes_id"></strong><br/>
+                                    <span> تاريخ الانتهاء</span><br/><br/>
+                                    
+                                    <span style="color:coral;"> ____________________</span>
+                                    <span style="color:coral;"> التوقيع</span>
+
+                                </div>
+
+                                <div class="col-xs-6 text-right" style="float:left">
+                                    <strong style="color:coral;">  الشاهد الثاني</strong>
+                                      <br/>
+                                    <span>  الإسم</span>
+                                    <span> /</span>
+                                  <strong t-field="o.second_witnes_name"></strong><br/>
+                                    <span> نوع إثبات الشخصية</span><br/>
+                                   <strong t-field="o.second_witnes_id"></strong><br/>
+                                    <span> تاريخ الانتهاء</span><br/><br/>
+
+                                    <span style="color:coral;"> ____________________</span>
+                                    <span style="color:coral;"> التوقيع</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    </data>
+</odoo>

@@ -1,0 +1,136 @@
+<odoo>
+
+
+    <report id="balancing_salaries"
+            model="balancing.salaries.wizard"
+            string="Balancing salaries report"
+            report_type="qweb-html"
+            name="kamil_hr_benefits_wages.balancing_salaries_view"
+            paperformat="paperformat_a4_for_hr"
+            menu="False"/>
+
+    <template id="balancing_salaries_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            
+            <div class="page"><br/><br/>
+                <div>
+
+                    <div class="text-center" style="font:500;">
+                        <p>الادارة العامة للموارد البشرية
+                        <br/>
+                        قسم الاجور والمزايا<br/>
+
+                        تقرير موازنة المرتبات <br/>
+                        لشهر <t t-esc="first_date"/> وشهر <t t-esc="second_date"/> <br/>
+                        <t t-esc="branch_id"/>
+                    </p>
+                    </div>
+                    
+
+
+                </div><br/>
+                <table  dir="rtl" class="table-bordered">
+                    <thead class="table-active" style="display: table-header-group;">
+                        <th class="text-center fit">م</th>
+                        <th class="text-center fit">الاسم</th>
+                        <th class="text-center fit">
+                            <t t-esc="first_date"/>
+                        </th>
+                        <th class="text-center fit">
+                            <t t-esc="second_date"/>
+                        </th>
+                        <th class="text-center fit">الزيادة</th>
+                        <th class="text-center fit">النقصان</th>
+                        <th class="text-center fit">ملاحظات</th>
+                    </thead>
+                    <tbody>
+
+                        <t t-set="count" t-value="1"/>
+
+                        <t t-foreach="docs" t-as="doc">
+                            <tr style="page-break-inside: avoid;">
+                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                    <span t-esc="count"/>
+                                    <t t-set="count" t-value="count + 1"/>
+                                </td>
+
+
+                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                    <span t-esc="doc['employee']"/>
+                                </td>
+                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+
+                                    <span t-esc="'{0:,.2f}'.format(float(doc['first_month']))"/>
+
+                                </td>
+                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+
+                                    <span t-esc="'{0:,.2f}'.format(float(doc['second_month']))"/>
+
+                                </td>
+                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                    <span t-esc="'{0:,.2f}'.format(float(doc['increase']))"/>
+                                </td>
+                                <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                    <span t-esc="'{0:,.2f}'.format(float(doc['decrease']))"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['notes']"/>
+                                </td>
+                            </tr>
+                        </t>
+
+                         <tr style="page-break-inside: avoid;">
+                                <td colspan="2" class="text-center">الإجمالي</td>
+                                <td class="text-center">
+
+                                    <span t-esc="'{0:,.2f}'.format(float( sum([doc['first_month'] for doc in docs]) ))"/>
+                                </td>
+                                 <td style="font:300; white-space: nowrap;width: 1%;">
+                                    <span t-esc="'{0:,.2f}'.format(float( sum([doc['second_month'] for doc in docs]) ))"/>
+                                </td>
+                                 <td style="font:300; white-space: nowrap;width: 1%;">
+                                    <span t-esc="'{0:,.2f}'.format(float( sum([doc['increase'] for doc in docs]) ))"/>
+                                </td>
+                                 <td style="font:300; white-space: nowrap;width: 1%;">
+                                    <span t-esc="'{0:,.2f}'.format(float( sum([doc['decrease'] for doc in docs]) ))"/>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td><t t-esc="first_date"/></td>
+                                <td>
+                                    <span t-esc="'{0:,.2f}'.format(float( sum([doc['first_month'] for doc in docs]) ))"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>الزيادة</td>
+                                <td>
+                                    <span t-esc="'{0:,.2f}'.format(float( sum([doc['increase'] for doc in docs]) ))"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>النقصان</td>
+                                <td>
+                                     <span t-esc="'{0:,.2f}'.format(float( sum([doc['decrease'] for doc in docs]) ))"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><t t-esc="second_date"/></td>
+                                <td>
+                                    <span t-esc="'{0:,.2f}'.format(float( sum([doc['second_month'] for doc in docs]) ))"/>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* chart_of_account_hierarchy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-04 07:56+0000\n"
+"PO-Revision-Date: 2021-03-04 07:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: chart_of_account_hierarchy
+#: model:ir.model,name:chart_of_account_hierarchy.model_account_account
+msgid "Account"
+msgstr "الحساب"
+
+#. module: chart_of_account_hierarchy
+#: model_terms:ir.ui.view,arch_db:chart_of_account_hierarchy.account_tree_hierarchy_lucky
+msgid "Chart of accounts"
+msgstr "الدليل المحاسبي"
+
+#. module: chart_of_account_hierarchy
+#: model:ir.model.fields,field_description:chart_of_account_hierarchy.field_account_account__child_ids
+msgid "Children"
+msgstr "الحسابات الفرعية"
+
+#. module: chart_of_account_hierarchy
+#: model:ir.model.fields,field_description:chart_of_account_hierarchy.field_account_account__parent_id
+msgid "Parent Account"
+msgstr "الحساب الرئيسي"
+

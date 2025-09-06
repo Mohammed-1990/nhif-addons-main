@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+
+	<!-- Form Repersentative Attendee-->
+	<record id="view_representative_attendance_form" model="ir.ui.view">
+		<field name="name">representative.attendance.form</field>
+		<field name="model">representative.attendance</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<div class="oe_title">
+                        <label for="name" class="oe_edit_only oe_inline" />
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group >
+                    	<group>
+	                    	<field name="type" invisible="1"/>
+	                    	<field 
+	                    		name="book_id" 
+	                    		attrs="{'invisible':[('type','!=','qualifying_suppliers')]}"
+	                    		domain="[('requisition_id','=',tender_id)]" 
+	                    		options="{'no_create':'1','no_open':'1'}"
+	                    	/>
+	                    	<field name="order_id" 
+	                    		attrs="{'invisible':[('type','=','qualifying_suppliers')]}"
+	                    		domain="[('requisition_id','=',tender_id)]"
+	                    		options="{'no_create': '1'}"
+	                    		/>
+	                    	<field name="partner_id" readonly="1"/>
+	                    </group>
+	                    <group>
+							<field name="tender_id" readonly="1"/>
+						</group>	
+                    </group>
+					<group>
+						<group>
+                            <label for="street" string="Address"/>
+                            <div class="o_address_format">
+                                <field name="street" placeholder="Street..." class="o_address_street"/>
+                                <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                <field name="city" placeholder="City" class="o_address_city"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}"/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                            </div>
+						</group>
+						<group >
+                            <field name="phone" widget="phone" />
+                            <field name="mobile" widget="phone"/>
+                            <field name="email" widget="email" context="{'gravatar_image': True}"/>
+						</group>
+					</group>
+					<footer>
+						<button name="create_representative_attendance" type="object" string="Create Representative Attendance" class="btn-primary" />
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- Action Representative Attendance-->
+	<act_window
+		id="action_rep_attendance"
+		name="Representative Attendance"
+		res_model="representative.attendance"
+		view_mode="form"
+		target="new"
+		context="{'default_tender_id':active_id}"
+	/>
+
+</odoo>

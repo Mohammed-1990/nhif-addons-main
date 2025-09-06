@@ -1,0 +1,109 @@
+<odoo>
+  <data>
+
+      <record model="ir.ui.view" id="inclination_allowance_form_view">
+    <field name="name">Inclination Allowance</field>
+    <field name="model">inclination.allowance</field>
+    <field name="arch" type="xml">
+          <form>
+            <header>
+              <button type="object" name="compute_allowance_line" string="Compute Allowance" icon="fa-gears" colspan="2" attrs="{'invisible':[('state','!=','draft')]}" class="oe_highlight" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_submit" string="Send" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_confirm" string="Submit" type="object" class="btn btn-primary" states="benefits_wages" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_personnel_confirm" string="Confirm" type="object" class="btn btn-primary" states="personnel" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+
+              <button name="do_general_d_confirm" string="Confirm" type="object" class="btn btn-primary" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <button name="do_ia_confirm" string="Approve" type="object" class="btn btn-primary" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+
+               <button name="do_return" string="Return" type="object" states="benefits_wages" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_return1" string="Return" type="object" states="personnel" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+
+              <button name="do_return2" string="Return" type="object" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+              <button name="do_return3" string="Return" type="object" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+
+
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+            <h1>
+              <field name="name" placeholder="inclination allowance for month jan" attrs="{'readonly':[('state','!=','draft')]}"/>
+            </h1>
+            <group col="4">
+              <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+              <field name="date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+              <field name="amount" attrs="{'readonly':[('state','!=','draft')]}"/>
+              <field name="total_amount"/>
+              <field name="stamp" options="{'no_create':True,'no_edit':True,'no_open':True}"  attrs="{'readonly':[('state','!=','draft')]}"/>
+            </group> 
+            
+            <notebook>
+            <page string="Details">
+                  <field name="line_ids" readonly='True'>
+                    <tree  editable="bottom">
+                      <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                      <field name="department_id" force_save="1"/>
+                      <field name="amount" force_save="1"/>
+                      <field name="stamp"/>
+                      <field name="net" force_save="1" sum="net" />
+                      <field name="account_number"/>
+                    </tree>
+                  </field>
+            </page> 
+            <page string="Notes">
+              <div>
+                <field name="notes"/>
+              </div>
+            </page>
+
+        </notebook>  
+
+             
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+          </form>
+        </field>
+      </record>
+
+    
+
+    <record model="ir.ui.view" id="inclination_allowance_tree_view">
+    <field name="name">Inclination Allowance</field>
+    <field name="model">inclination.allowance</field>
+      <field name="arch" type="xml">
+          <tree>
+            
+              <field name="name"/>
+              <field name="date_from"/>
+              <field name="date_to"/>
+              <field name="total_amount"/>
+              <field name="stamp"/>
+              <field name="state"/>
+             
+          </tree>
+        </field>
+      </record>
+
+  
+    <record  id="action_inclination_allowance" model="ir.actions.act_window">
+      <field name="name">Inclination Allowance</field>
+      <field name="res_model">inclination.allowance</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Inclination Allowance" id="menu_inclination_allowance" action="action_inclination_allowance" parent="hr_allowance_main_menu" sequence="2" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+
+  </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="seq_rfq" model="ir.sequence">
+			<field name="name">Purchase Request</field>
+			<field name="code">rfq</field>
+			<field name="prefix">RFQ</field>
+			<field name="padding">4</field>
+		</record>
+
+		
+		<record id="direct_purchase" model="ir.sequence">
+            <field name="name">Direct Purchase</field>
+            <field name="code">direct.purchase</field>
+            <field name="prefix">DP</field>
+            <field name="padding">4</field>
+        </record>
+
+	</data>
+</odoo>

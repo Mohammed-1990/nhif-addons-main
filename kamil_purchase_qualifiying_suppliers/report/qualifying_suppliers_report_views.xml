@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record model="ir.ui.view" id="view_qualifying_suppliers_report_pivot">
+            <field name="name">purchasequalifying.suppliers.report.pivot</field>
+            <field name="model">purchase.qualifying.suppliers.report</field>
+            <field name="arch" type="xml">
+                <pivot string="Purchase Orders Statistics" disable_linking="True">
+                   <field name="date" type="row"/>
+                    <field name="requisition_id" type="col"/>
+                    <field name="area_id" type="col"/>
+                    <field name="partner_id" type="col"/>
+                </pivot>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_qualifying_suppliers_report_graph">
+            <field name="name">qualifying.suppliers.report.graph</field>
+            <field name="model">purchase.qualifying.suppliers.report</field>
+            <field name="arch" type="xml">
+                <graph string="Purchase Orders Statistics">
+                    <field name="requisition_id" type="row"/>
+
+                </graph>
+            </field>
+        </record>
+
+        
+    <record id="view_qualifying_suppliers_report_search" model="ir.ui.view">
+        <field name="name">qualifying.suppliers.report.search</field>
+        <field name="model">purchase.qualifying.suppliers.report</field>
+        <field name="arch" type="xml">
+            <search string="Qualyfing Suppliers">
+                <filter string="Qualyfier" name="qualyfier" domain="[('book_id.state','=','qualifier')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Tender" name="tender" context="{'group_by':'requisition_id'}"/>
+                    <filter string="Area Rehabilitation" name="area" context="{'group_by':'area_id'}"/> 
+                    <filter string="Supplier" name="group_partner_id" context="{'group_by':'partner_id'}"/>
+                    <separator/>
+                    <filter string="Order Date" name="order_month" context="{'group_by': 'date:month'}"/>
+                    <filter string="Deadline Date" name="deadline" context="{'group_by': 'deadline_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="action_qualifying_suppliers" model="ir.actions.act_window">
+        <field name="name">Qualyfing Suppliers Analysis</field>
+        <field name="res_model">purchase.qualifying.suppliers.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="context">{'search_default_qualyfier':1}</field>
+        <field name="search_view_id" ref="view_qualifying_suppliers_report_search"/>
+        <field name="help">Purchase Analysis allows you to easily check and analyse your company purchase history and performance. From this menu you can track your negotiation performance, the delivery performance of your vendors, etc.</field>
+    </record>
+
+    <menuitem id="menu_scrap_report" action="action_qualifying_suppliers" sequence="3" parent="purchase.purchase_report"/>
+    <!-- <menuitem id="purchase_report" name="Reporting" parent="purchase.menu_purchase_root" sequence="99" -->
+      <!--   groups="purchase.group_purchase_manager" action="action_purchase_order_report_all"/> -->
+
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+	<!-- Form Visit Template-->
+	<record id="view_tender_visit_template_form" model="ir.ui.view">
+		<field name="name">tender.visit.template.form</field>
+		<field name="model">tender.visit.template</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<label for="visit_line_ids" string="Visit Template"/>
+					<field name="visit_line_ids">
+						<tree editable="buttom" >
+							<field name="criteria_id" options="{'no_create':'1'}"/>
+							<field name="required_score" sum="Total"/>
+						</tree>
+					</field>
+					<footer>
+						<button name="action_confirm" type="object" string="Create" class="btn-primary"/>
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<!-- Action Visit Template -->
+	<act_window
+		id="action_tender_visit_tempate"
+		name="Visit Template"
+		res_model="tender.visit.template" src_model="purchase.requisition"
+		view_mode="form"
+		target="new"
+		context="{'default_requisition_id':active_id}"	
+	/>
+
+
+</odoo>

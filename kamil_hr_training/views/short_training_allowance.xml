@@ -1,0 +1,132 @@
+<odoo>
+
+	<record model="ir.ui.view" id="tree_training_allowance">
+	    <field name="name">Short Training Allowance</field>
+	    <field name="model">training.allowance</field>
+	    <field name="arch" type="xml">
+	    	<tree>
+    			<field name='name'/>
+    			<field name='program_execution'/>
+    			<field name='date'/>
+    			<field name='total'/>
+    			<field name='state'/>
+    		</tree>
+    	</field>
+    </record>
+
+	<record model="ir.ui.view" id="form_training_allowance">
+	    <field name="name">Short Training Allowance</field>
+	    <field name="model">training.allowance</field>
+	    <field name="arch" type="xml">
+	    	<form>
+	    		<header>
+	              <button name="training_department" string="Send" type="object" class="btn btn-primary" states="draft"/>
+	              <button name="general_hr" string="Confirm" type="object" class="btn btn-primary" states="training_department"/>
+	              <button name="internal_auditor" string="Submit" type="object" class="btn btn-primary" states="general_hr"/>
+	              <button name="send_to_account" string="Send to accounting" type="object" class="btn btn-primary" states="internal_auditor"/>
+	              <button name="do_return" string="Returnn" type="object" attrs="{'invisible':[('state','in',['draft','accounting'])]}"/>
+
+	              <field name="state" widget="statusbar"/>
+	            </header>
+		    	<sheet>
+		    		<h1>
+		    			<field name='name' force_save="1"/>
+		    		</h1>
+		    		<group col="4">
+		    			<field name="program_execution" options="{'no_create':True, 'no_edit':True, 'no_open':True}" required="True"/>
+		    			<field name="stamp" options="{'no_create':True, 'no_edit':True, 'no_open':True}"/>
+		    			<field name="date" required="True"/>
+		    			<field name="no_days" force_save="1"/>
+		    			<field name='total'/>
+		    		</group>
+		    		<notebook>
+		    			<page string="Details">
+		    				<field name="line_ids">
+		    					<tree editable="bottom">
+			    					<field name='employee_id' options="{'no_create':True, 'no_edit':True, 'no_open':True}" force_save="1"/>
+			    					<field name='job_title_id'  options="{'no_create':True, 'no_edit':True, 'no_open':True}" force_save="1"/>
+			    					<field name='amount' force_save="1"/>
+			    					<field name='no_days' force_save="1"/>
+			    					<field name='total' force_save="1"/>
+			    					<field name='stamp' force_save="1"/>
+			    					<field name='net' force_save="1"/>
+			    				</tree>
+		    				</field>
+		    			</page>
+		    		</notebook>
+		    	</sheet>
+		    	<div class="oe_chatter">
+	                <field name="message_follower_ids" widget="mail_followers"/>
+	                <field name="activity_ids" widget="mail_activity"/>
+	                <field name="message_ids" widget="mail_thread"/>
+	            </div> 
+		    </form>
+	    </field>
+	</record>
+
+	<record  id="action_training_allowance" model="ir.actions.act_window">
+      <field name="name">Short Training Allowance</field>
+      <field name="res_model">training.allowance</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+	<menuitem name="Short Training Allowance" 
+        id="menu_training_allowance" 
+        action="action_training_allowance" 
+        parent="menu_short_training"
+        sequence="6"
+        />
+
+
+	<!-- Settings -->
+
+	<record model="ir.ui.view" id="tree_training_allowance_setting">
+	    <field name="name">Short Training Allowance Settings</field>
+	    <field name="model">training.allowance.settings</field>
+	    <field name="arch" type="xml">
+	    	<tree>
+    			<field name='name'/>
+    		</tree>
+    	</field>
+    </record>
+
+	<record model="ir.ui.view" id="form_training_allowance_setting">
+	    <field name="name">Short Training Allowance Settings</field>
+	    <field name="model">training.allowance.settings</field>
+	    <field name="arch" type="xml">
+	    	<form>
+		    	<sheet>
+		    		<h1>
+		    			<field name='name'/>
+		    		</h1>
+		    		<notebook>
+		    			<page string="Details">
+		    				<field name="line_ids">
+		    					<tree editable="bottom">
+			    					<field name='from_day'/>
+			    					<field name='to_day'/>
+			    					<field name='amount'/>
+			    				</tree>
+		    				</field>
+		    			</page>
+		    		</notebook>
+		    	</sheet>
+		    </form>
+	    </field>
+	</record>
+
+	<record  id="action_training_allowance_setting" model="ir.actions.act_window">
+      <field name="name">Short Training Allowance Settings</field>
+      <field name="res_model">training.allowance.settings</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+	<menuitem name="Short Training Allowance Settings" 
+        id="menu_training_allowance_setting" 
+        action="action_training_allowance_setting" 
+        parent="kamil_hr_training.training_configurarions_main_menu"/>
+</odoo>

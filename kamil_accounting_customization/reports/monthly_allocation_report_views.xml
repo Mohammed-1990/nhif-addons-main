@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+
+    <record id="paperformat_a3" model="report.paperformat">
+        <field name="name">A3</field>
+        <field name="default" eval="True"/>
+        <field name="format">A3</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">80</field>
+    </record>
+
+
+	<!-- Monthly Allocation Report-->
+	<report 
+		id="monthly_allocation_report"
+		model="wiz.monthly.allocation"
+		string="Monthly Allocation Report"
+		report_type="qweb-html"
+		name="kamil_accounting_customization.allocation_template"
+		paperformat="kamil_accounting_customization.paperformat_a3"
+
+	/>
+
+
+	<!-- Monthly Allocation Report Template-->
+	<template id="allocation_template">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+                <div class="page">
+					<div>
+						<h3 style="font-family:Calibri;" class="text-center">
+							<b>
+								<t t-if="month" >
+									تخصيص شهر 
+									<t t-esc="month"/>
+								</t>
+
+								<t t-if="year" >
+									<t t-esc="year"/>
+								</t>
+							</b>
+						</h3>	
+						<br/><br/>
+					</div>
+					<table dir="rtl"  class="text-right table table-condensed table-hover" border="1">
+                    	<thead>
+                        	<tr>
+								<th>البيان</th>
+								<th>المبلغ المخصص</th>
+								<th>الدواء</th>
+								<th>المعامل</th>
+								<th>المحولة</th>
+								<t t-foreach="com_list" t-as="c">
+									<th><t t-esc="c['name']"/></th>
+								</t>
+								<th>اقساط</th>
+								<th>الاجمالي</th>
+								<th>الاجمالي المحول للولاية</th>
+							</tr>
+                        </thead>
+                        <tbody>
+                        	<t t-foreach="docs" t-as="doc">
+	                        	<tr>
+	                        		<td>
+	                                    <t t-esc="doc['company']"/>
+	                                </td>
+	                                <td>
+	                                	<t t-esc="'{0:,.2f}'.format(float(doc['amount']))"/>
+	                                </td>
+	                                <td>
+	                                	<t t-esc="'{0:,.2f}'.format(float(doc['medicine']))"/>
+	                                </td>
+	                                <td>
+	                                	<t t-esc="'{0:,.2f}'.format(float(doc['labs']))"/>
+	                                </td>
+	                                <td>
+	                                	<t t-esc="'{0:,.2f}'.format(float(doc['transformed']))"/>
+	                                </td>
+	                               
+	                               <t t-foreach="doc['com_data']" t-as="a">
+										<td>
+											<t t-esc="a"/>
+											<!-- <t t-esc="'{0:,.2f}'.format(float(c['amount']))"/> -->
+										</td>
+									</t>
+
+
+									<td>
+	                                	<t t-esc="'{0:,.2f}'.format(float(doc['other']))"/>
+	                                </td>
+	                                <td>
+	                                	<t t-esc="'{0:,.2f}'.format(float(doc['total']))"/>
+	                                </td>
+	                                <td>
+	                                	<t t-esc="'{0:,.2f}'.format(float(doc['branch_total']))"/>
+	                                </td>
+	                                
+	                        	</tr>
+	                        </t>
+	                      <!--  <tr>
+                        		<th colspan="4"><b>الاجمالي</b></th>
+                    		 	<t t-foreach="total_data" t-as="c">
+                                	 <td>
+                                	 	<t t-esc="'{0:,.2f}'.format(float(c['total_debit']))"/>
+                                	 </td>
+                              		<td >
+                              			<t t-esc="'{0:,.2f}'.format(float(c['total_credit']))"/>
+                              		</td>
+                                </t>	
+                        	</tr> -->
+                        </tbody>
+                    </table>
+                </div>
+			</t>
+		</t>
+	</template>
+
+
+</odoo>

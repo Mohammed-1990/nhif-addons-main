@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_final_transfer_all1,final.transfer_all1,model_final_transfer,,1,0,0,0
+access_final_transfer_all,final.transfer_all,model_final_transfer,kamil_hr_security.hr_employment_department_group,1,1,0,0
+access_final_transfer,final.transfer,model_final_transfer,kamil_hr_security.hr_employment_department_group,1,1,1,1
+,,,,,,,
+access_final_transfer_line1,final.transfer.line_all1,model_final_transfer_line,,1,0,0,0
+access_final_transfer_line,final.transfer.line_all,model_final_transfer_line,,1,1,0,0
+access_final_transfer_line,final.transfer.line,model_final_transfer_line,kamil_hr_security.hr_employment_department_group,1,1,1,1
+,,,,,,,
+access_hr_internal_transfer_all1,hr_internal_transfer_all1,model_internal_transfer,,1,0,0,0
+access_hr_internal_transfer_branch_manager1,hr_internal_transfer_branch_manager1,model_internal_transfer,kamil_hr_security.hr_branch_manager_group,1,1,0,0
+access_hr_internal_transfer_branch_manager2,hr_internal_transfer_branch_manager2,model_internal_transfer,kamil_hr_security.hr_branch_manager_group,1,1,0,0
+access_hr_internal_transfer,hr_internal_transfer,model_internal_transfer,kamil_hr_security.hr_employment_department_group,1,1,1,1

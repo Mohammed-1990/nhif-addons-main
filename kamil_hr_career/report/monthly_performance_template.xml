@@ -1,0 +1,74 @@
+<odoo>
+
+    <report id="report_monthly_performance"
+        model="monthly.performance"
+        string="Report Monthly Performance"
+        report_type="qweb-html"
+        name="kamil_hr_career.report_monthly_performance_view"
+        paperformat="kamil_hr_career.paperformat_career_landscape"
+        />
+
+    <template id="report_monthly_performance_view">
+        <t t-foreach="docs" t-as="doc">
+         <t t-call="web.html_container">
+             <t t-call="web.external_layout">
+                
+                    <div class="page" style="page-break-inside: avoid;">
+                    <div class="text-center" style="font:500;">
+                            <p> تقرير الاداء الشهري</p>
+                            <p> 
+                                من تاريخ:  <span t-esc="doc['date_from']"/> الي تاريخ:  <span t-esc="doc['date_to']"/>
+                            </p>
+                    </div><br/><br/><br/>
+
+                    <div class="text-right" style="font:500;">
+                        <p> الساعات المعياريه: <span t-esc="doc['normative']"/>
+                        </p>
+                    </div>
+                       <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                        <thead style="display: table-header-group;">
+                            <tr class="table-active">
+                                <th class="text-center">الموظف</th>
+                                <th class="text-center">الادارة</th>
+                                <th class="text-center">ساعات الحضور</th>
+                                <th class="text-center">نسبه الغياب</th>
+                                <th class="text-center">نسبه الاداء الفني</th>
+                                <th class="text-center">نسبه الخصم</th>
+                                <th class="text-center">نسبه الاداء الكلي</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="doc['line_ids']" t-as="line">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="line['employee_id'].name"/>
+                                    </td>
+                                     <td class="text-center">
+                                        <span t-esc="line['unit_id'].name"/>
+                                    </td>
+                                     <td class="text-center">
+                                        <span t-esc="line['attendance_hours']"/>
+                                    </td>
+                                     <td class="text-center">
+                                        <span t-esc="line['absence_ratio']"/>
+                                    </td>
+                                     <td class="text-center">
+                                        <span t-esc="line['technical_performance_ratio']"/>
+                                    </td>
+                                     <td class="text-center">
+                                        <span t-esc="line['discount_percentage']"/>
+                                    </td>
+                                     <td class="text-center">
+                                        <span t-esc="line['total_ratio']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
+

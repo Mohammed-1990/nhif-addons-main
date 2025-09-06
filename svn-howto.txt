@@ -1,0 +1,19 @@
+
+password= nhif
+
+
+svn co svn+ssh://hadeel@97.74.112.224/svn/nhif ~/path-to-addons
+svn co svn+ssh://hadeel@97.74.112.224/svn/nhif-files ~/path-to-files
+
+
+
+svn update 
+
+svn add * 
+
+svn commit -m " new changes messages" 
+
+# when removing module instead on svn add, do svn remove module_name or file
+
+svn remove module_name
+svn commit -m " remove module or file" 

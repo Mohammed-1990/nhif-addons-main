@@ -1,0 +1,38 @@
+<odoo>
+	<data>
+		<record id="record_jobs_vacancies_wizard_form" model="ir.ui.view">
+			<field name='name'>Report by Vacancies</field>
+			<field name='model'>vacancies.wizard</field>
+			<field name='arch' type='xml'>
+          <form>
+              <sheet>
+                  <group>
+                      <group>
+                          <field name="record_jobs" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                      </group>
+                  </group>
+                  <footer>
+                      <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                      <button string="Cancel" special="cancel"/>
+                  </footer>
+              </sheet>
+                </form>
+        </field>
+       </record>
+       
+    <record id="action_record_jobs_vacancies_wizard" model="ir.actions.act_window">
+        <field name="name">Report by Vacancies</field>
+        <field name="res_model">vacancies.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+
+    <menuitem name="Report by Vacancies" 
+              id="menu_report_vacancies" 
+              parent="record_jobs_reports_menu" 
+              action="action_record_jobs_vacancies_wizard"/>
+
+	</data>
+</odoo>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="group_announcement" model="res.groups">
+	        <field name="name">Announcement Department</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+	    <record id="group_purch_dept" model="res.groups">
+	        <field name="name">Purchase Department Manager</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+	    <record id="group_general_manager" model="res.groups">
+	        <field name="name">General Manager</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+	    <record id="group_dicrecor_finance_admin" model="res.groups">
+	        <field name="name">Director of finance and administrative</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+	    <record id="group_comm_decided" model="res.groups">
+	        <field name="name">Committee Decided</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+	    <record id="group_internal_refrance" model="res.groups">
+	        <field name="name">Internal Refrance</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+
+		<record id="group_finance_manager" model="res.groups">
+	        <field name="name">Finance Manager</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	    	<field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+	     <!-- <record id="group_department_manager" model="res.groups">
+	    	<field name="name">Department Manager</field>
+	    	<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	    	<field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record> -->
+
+		<record id="group_manager_director" model="res.groups">
+	    	<field name="name">Manager Director</field>
+	    	<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	    	<field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+	    <record id="group_branch_manager" model="res.groups">
+	    	<field name="name">Branch Manager</field>
+	    	<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	    	<field name="category_id" ref="base.module_category_purchase_management"/>
+	    </record>
+
+	    <!-- ########################################################  -->
+
+	    <!-- ############## Rule ##############-->
+
+	  	<record id="purchase_requisition_comp_rule" model="ir.rule">
+	        <field name="name">Purchase Requisition multi-company</field>
+	        <field name="model_id" ref="model_purchase_requisition"/>
+	        <field name="global" eval="True"/>
+	        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+	    </record>
+
+
+	    <record id="committee_members_comp_rule" model="ir.rule">
+	        <field name="name">Committee Members multi-company</field>
+	        <field name="model_id" ref="model_committee_members"/>
+	        <field name="global" eval="True"/>
+	        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+	    </record>
+
+
+	    <record id="purchase_requisition_announcement_comp_rule" model="ir.rule">
+	        <field name="name">Purchase Requisition Announcement multi-company</field>
+	        <field name="model_id" ref="model_purchase_requisition_announcement"/>
+	        <field name="global" eval="True"/>
+	        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+	    </record>
+
+
+	    <record id="visit_template_comp_rule" model="ir.rule">
+	        <field name="name">Visit Template multi-company</field>
+	        <field name="model_id" ref="model_visit_template"/>
+	        <field name="global" eval="True"/>
+	        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+	    </record>
+
+	</data>
+</odoo>

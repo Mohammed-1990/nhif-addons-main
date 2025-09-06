@@ -1,0 +1,39 @@
+<odoo>
+	<data>
+		<record id="record_leave_wizard_form" model="ir.ui.view">
+			<field name='name'>Report Employee Leave</field>
+			<field name='model'>leave.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+            	        <group col="4">
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                            <field name="department_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                            <field name="leave_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+            	        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+    </record>
+
+    <record id="action_leave_wizard" model="ir.actions.act_window">
+        <field name="name">Report Employee Leave</field>
+        <field name="res_model">leave.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <!-- <menuitem name="Reports" id="record_jobs_reports_menu" parent="record_job_main_menu" sequence="2"/> -->
+
+
+    <menuitem name="Report Employee Leave" id="menu_report_leave" parent="hr_holidays.menu_hr_holidays_report" action="action_leave_wizard"/>
+
+	</data>
+</odoo>

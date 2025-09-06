@@ -1,0 +1,3033 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_contracts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-20 14:00+0000\n"
+"PO-Revision-Date: 2020-01-20 14:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,period:0
+#: selection:kamil.contracts.extensions,period:0
+msgid "10"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,period:0
+#: selection:kamil.contracts.extensions,period:0
+msgid "11"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,period:0
+#: selection:kamil.contracts.extensions,period:0
+msgid "12"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ": إلتزامات الطرف الأول"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ": إلتزامات الطرف الثاني"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ":أحكام عامة"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ":التفسير"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ":الديباجة"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ":تمهيد"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ":حل النزاعات"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ":غرامات التأخير"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid ":مستندات العقد"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<br/>\n"
+"\n"
+"                                        <span>ويمثلها في التوقيع</span>\n"
+"                                        <span> السيد</span>\n"
+"                                        <span> /</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<br/>\n"
+"                                    <span> تاريخ الانتهاء</span><br/><br/>\n"
+"\n"
+"                                    <span style=\"color:coral;\"> ____________________</span>\n"
+"                                    <span style=\"color:coral;\"> التوقيع</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<br/>\n"
+"                                    <span> تاريخ الانتهاء</span><br/><br/>\n"
+"                                    \n"
+"                                    <span style=\"color:coral;\"> ____________________</span>\n"
+"                                    <span style=\"color:coral;\"> التوقيع</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<br/>\n"
+"                                    <span> نوع إثبات الشخصية</span><br/>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<br/>\n"
+"                    <span> وصفته </span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<br/><br/><br/><br/>\n"
+"                                    \n"
+"                                    <span style=\"color:coral;\"> ____________________</span>\n"
+"                                    <span style=\"color:coral;\"> التوقيع</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<span> ____________________</span>\n"
+"                                        <span> إثبات شخصية</span><br/>\n"
+"                                        <span> ____________________</span>\n"
+"                                        <span> تاريح الانتهاء</span><br/><br/><br/>\n"
+"                                        <span style=\"color:coral;\"> ____________________</span>\n"
+"                                        <span style=\"color:coral;\"> التوقيع</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<strong style=\"color:coral;\">  الشاهد الأول</strong>\n"
+"                                     <br/>\n"
+"                                    <span>  الإسم</span>\n"
+"                                    <span> /</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<strong style=\"color:coral;\">  الشاهد الثاني</strong>\n"
+"                                      <br/>\n"
+"                                    <span>  الإسم</span>\n"
+"                                    <span> /</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<strong style=\"color:coral;\">  الطرف الأول</strong><br/>\n"
+"                    <span> السادة </span>\n"
+"                                        <span> /</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.contract_report
+msgid "<strong style=\"color:coral;\">  الطرف الثاني</strong><br/>\n"
+"                                        <span> السادة </span>\n"
+"                                        <span> /</span>"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__access_warning
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__account_id
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.claim_accounts_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.claim_accounts_tree_view
+msgid "Account Code"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_claim_account_settings_action_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_account_settings_menu
+msgid "Account Settings"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.claim_accounts_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.claim_accounts_tree_view
+msgid "Account settings"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_needaction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__is_active
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__is_active
+msgid "Active"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Active contratcs"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__activity_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__activity_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__amed_rec_count
+msgid "Amed Rec Count"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.amendment_contract_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Amendments"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__analytic_account
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.claim_accounts_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.claim_accounts_tree_view
+msgid "Analytic Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__applicant
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__applicant
+msgid "Applicant Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__application_date
+msgid "Application Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Applied Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__pay_applied_amount
+msgid "Applied Payment Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__claim_amount
+msgid "Apply Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Approve"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,state:0
+msgid "Approved"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__a_service_name
+msgid "Arabic Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.server,name:kamil_contracts.contract_end_date_cron_ir_actions_server
+#: model:ir.cron,cron_name:kamil_contracts.contract_end_date_cron
+#: model:ir.cron,name:kamil_contracts.contract_end_date_cron
+msgid "Archive Expired Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:res.partner,capacity:0
+msgid "Assignee"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__attachment
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__attachment
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__attachment_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__attachment
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__attachment_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__attachment
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__attachment_ids
+msgid "Attachment"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__attachment_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__attachment_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__attachment_name
+msgid "Attachment Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Attachments"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+#: selection:kamil.contracts.contract,state:0
+msgid "Attestation"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.partner_kanban_view
+msgid "Avatar"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Balance Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__body
+msgid "Body"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_product_category__budget_item_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_product_product__budget_item_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_product_template__budget_item_id
+msgid "Budget Item"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "By contract type"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "By contractor"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Cancel"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,state:0
+#: selection:kamil.contracts.contract,state:0
+msgid "Canceld"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.termination_requests,state:0
+msgid "Canceled"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_partner__capacity
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_users__capacity
+msgid "Capacity"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_conflict_resolution_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_delay_panalty_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_documents_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_first_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_introduct_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_preamble_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_preface_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_second_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_conflict_resolution_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_delay_panalty_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_documents_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_explain_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_explain_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_first_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_introduct_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_preamble_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_preface_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_second_list
+msgid "Category"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__category_sel
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__category_sel
+msgid "Category Sel"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:res.partner,capacity:0
+msgid "Chairman of Board of Directors"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Claim Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__date
+msgid "Claim Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__claims
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Claims"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_account_setting
+msgid "Claims account setting"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.actions.act_window,help:kamil_contracts.action_contract_claims
+msgid "Click to define a Contract Claim"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+#: selection:kamil.contracts.termination_requests,state:0
+msgid "Committe"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__company_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__company_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__company_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__company_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__company_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__company_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__company_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_purchase_order_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__execu_percentage
+msgid "Complishment%"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_conflict_resolution_action_tree_view
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__conflict_resolution_id
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_conflict_resolution_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_conflict_resolution_list
+msgid "Conflict Resolution"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__conflict_resolution_html
+msgid "Conflict Resolution Html"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__name
+msgid "Conflict Resolution Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_conflict_resolution_form
+msgid "Conflict Resolution form"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__content
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__content
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__content
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__content
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__content
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_preface_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_preface_list
+msgid "Content"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__content_first
+msgid "Content First"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__content_introduct
+msgid "Content Introduct"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__content_p
+msgid "Content P"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__content_second
+msgid "Content Second"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+msgid "Contraact period"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.report,name:kamil_contracts.general_contract_report
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_contract
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__reference
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__contract_id
+msgid "Contract"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.panalty_lines,panalty_basis:0
+msgid "Contract %"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_amount
+#: selection:kamil.contracts.panalty_lines,percentage_of:0
+msgid "Contract Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_tree
+msgid "Contract Claim"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.action_contract_claims
+#: model:ir.ui.menu,name:kamil_contracts.sub_menu_contract_claims
+msgid "Contract Claims"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contracts_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__contracts_date
+msgid "Contract Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Contract Documents"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_docx_id
+msgid "Contract Docx"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_extensions
+#: model:res.groups,name:kamil_contracts.group_contract_extender
+msgid "Contract Extension"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_id
+msgid "Contract ID"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Contract Information"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__contract_medical_id
+msgid "Contract Medical"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__name
+msgid "Contract Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Contract Name ..."
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_period
+msgid "Contract Period"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__contract_state
+msgid "Contract State"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_contract_contract_template_uploader
+msgid "Contract Template Uploader"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_termination_requests
+msgid "Contract Termination"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_terminaation_request_window
+msgid "Contract Termination Request"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_contract_terminator
+msgid "Contract Termination Requester"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_type
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__contract_type
+msgid "Contract Type"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_contract_user
+msgid "Contract User"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_contract_claims
+msgid "Contract claim"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_docx
+msgid "Contract documents"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_end_date
+msgid "Contract end Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_start_date
+msgid "Contract start Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.module.category,name:kamil_contracts.module_category_contracts_module_user
+msgid "Contract user"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Contracted Current Year"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__contract_ids
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_menu_root
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_sub_menu
+msgid "Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_category_list_menu
+msgid "Contracts Category"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Create Invoice"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__create_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__create_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__access_url
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__difference
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Date Difference"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__delay_mulct_id
+msgid "Delay Mulct"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__delay_mulct_html
+msgid "Delay Mulct Html"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_delay_panalty_action_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_delay_panalty_menu
+msgid "Delay Panalty"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__name
+msgid "Delay Panalty Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:res.partner,capacity:0
+msgid "Delegated"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+msgid "Deliver Copy to Requester"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+msgid "Delivery a copy to S.P"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__display_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_documents_action_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_documents_menu
+msgid "Documents"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+#: selection:kamil.contracts.contract,state:0
+msgid "Done"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Download"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+#: selection:kamil.contracts.contract,state:0
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,research_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+#: selection:kamil.contracts.termination_requests,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_draft
+msgid "Draft Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__effective_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__affect_date
+msgid "Effective Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+msgid "End Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "End date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__e_service_name
+msgid "English Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_services_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_services_form_view
+msgid "English Service name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+msgid "Exec Approve"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "Executive Director"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+msgid "Expired"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contracts_article_explain_action
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__explain_id
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contracts_upload_explain_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Explain"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__name
+msgid "Explain Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__explain
+msgid "Explaination"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_explain_form
+msgid "Explination"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__ext_rec_count
+msgid "Ext Rec Count"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+msgid "Extend"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,research_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "Extended"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.extension_menu
+msgid "Extension"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_extention_request_window
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_purchase_extention_request_window
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_research_extention_request_window
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_training_extention_request_window
+msgid "Extension Request"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Extensions"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_company__social_facebook
+msgid "Facebook Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.article.conflict_resolution,category_sel:0
+#: selection:kamil.contracts.article.delay_panalty,category_sel:0
+#: selection:kamil.contracts.article.documents,category_sel:0
+#: selection:kamil.contracts.article.explain,category_sel:0
+#: selection:kamil.contracts.article.first,category_sel:0
+#: selection:kamil.contracts.article.introduct,category_sel:0
+#: selection:kamil.contracts.article.preamble,category_sel:0
+#: selection:kamil.contracts.article.preface,category_sel:0
+#: selection:kamil.contracts.article.second,category_sel:0
+msgid "Female"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__file_name
+msgid "File"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Filter Contracts started in Current Year"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_contract_claim_submiter
+msgid "Financial Claim"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "First Party"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_first_action_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_first_menu
+msgid "First Party Obligation"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__name_first
+msgid "First Party Obligation Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__first_party_obligation_sel
+msgid "First Party Obligation Sel"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__first_party_obligations
+msgid "First Party Obligations"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__name_ntfs_obj
+msgid "First Rep. Capacity"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "First Rep. Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__first_witnes_id
+msgid "First Witnes"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__first_witnes_name
+msgid "First Witness Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__first_witnes_signature
+msgid "First Witness Signature"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "First part obligations..."
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "First party Sign.."
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "First party obligations"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+msgid "First party sign.."
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "First witness"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.panalty_lines,panalty_basis:0
+msgid "Fixed amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.panalty_lines,frequency:0
+msgid "For each delayed day"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__form_id
+msgid "Form"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.form_type_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.form_type_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.form_type_tree_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.medical_type_form_view
+msgid "Form Type"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.form_type_action_menu_tree_view
+msgid "Formula Type"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts_waypay,status_sel:0
+msgid "Full Paid"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "GM"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: selection:kamil.contracts.termination_requests,state:0
+msgid "GM Approval"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+msgid "General Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_gm
+#: selection:res.partner,capacity:0
+msgid "General Manager"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__general_provisions
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "General Provisions"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_company__social_github
+msgid "GitHub Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Goods"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.module.category,name:kamil_contracts.module_category_goods_contracts_module
+msgid "Goods Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_purchase_contract_action_menu_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_purchase_contract_menu
+#: model:ir.ui.menu,name:kamil_contracts.purchase_extension_contract_menu
+msgid "Goods contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_company__social_googleplus
+msgid "Google+ Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Group by contract type"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Group contracts by Year"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+msgid "Head of Comittee"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_contract_headOfCommitte
+msgid "Head of Committe"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_contract_headOfResearchDepartment
+msgid "Head of Research Department"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.extensions,research_state:0
+msgid "Head of commitee"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__id
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__id
+msgid "ID"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,first_witnes_id:0
+#: selection:kamil.contracts.contract,second_witnes_id:0
+msgid "ID Card"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__message_unread
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__message_needaction
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__message_has_error
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_company__social_instagram
+msgid "Instagram Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contracts_article_introduct_action_tree_view
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__introduction
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__introduction_id
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_introduct_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_introduct_list
+msgid "Introduction"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_stock_location
+msgid "Inventory Locations"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,state:0
+msgid "Invoice Created"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Invoices"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__is_contract_active
+msgid "Is Active"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_is_follower
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group____last_update
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__write_uid
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_delay_panalty__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_explain__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_first__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extension_attachments__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_attachments__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__write_date
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "Legal Affairs"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+msgid "Legal Consultancy"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+#: selection:kamil.contracts.termination_requests,state:0
+msgid "Legal Study"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_legal
+msgid "Legal consultant"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_company__social_linkedin
+msgid "LinkedIn Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__MainGroup
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__MainGroup_id
+msgid "Maingroup"
+msgstr "Main group"
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.article.conflict_resolution,category_sel:0
+#: selection:kamil.contracts.article.delay_panalty,category_sel:0
+#: selection:kamil.contracts.article.documents,category_sel:0
+#: selection:kamil.contracts.article.explain,category_sel:0
+#: selection:kamil.contracts.article.first,category_sel:0
+#: selection:kamil.contracts.article.introduct,category_sel:0
+#: selection:kamil.contracts.article.preamble,category_sel:0
+#: selection:kamil.contracts.article.preface,category_sel:0
+#: selection:kamil.contracts.article.second,category_sel:0
+msgid "Male"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_services_contracts_manager
+msgid "Managar"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+#: model:res.groups,name:kamil_contracts.group_goods_contract_manager
+#: model:res.groups,name:kamil_contracts.group_medical_contrct_manager
+#: model:res.groups,name:kamil_contracts.group_research_contrct_manager
+#: model:res.groups,name:kamil_contracts.group_training_contrct_manager
+msgid "Manager"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__medical_ids
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Medical"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.module.category,name:kamil_contracts.module_category_medical_contracts_module
+msgid "Medical Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.medical_group_action_menu_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.medical_group_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.medical_group_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.medical_group_tree_view
+msgid "Medical Group"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__medical_service_id
+msgid "Medical Service"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__medical_services_ids
+#: model:ir.ui.menu,name:kamil_contracts.medical_services_menu
+msgid "Medical Services"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_contract_medical_service_price_list_updater
+msgid "Medical Services Price List updater"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.medical_type_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.medical_type_tree_view
+msgid "Medical Type"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_medical_contract_action_menu_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_medical_contract_menu
+msgid "Medical contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Medical services"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Medical servise"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Medicals"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_has_error
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Month"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,period_name:0
+#: selection:kamil.contracts.extensions,period_name:0
+msgid "Month/s"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,specialty:0
+msgid "Multidisciplinary"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__ntfs
+msgid "NHIF"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_signatory_authorized
+msgid "NHIF Signatory Authorized"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__name
+#: model:ir.model.fields,field_description:kamil_contracts.field_form_type__name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_party_ch
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__name
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__name
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_conflict_resolution_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_delay_panalty_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_documents_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_explain_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_first_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_introduct_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_preamble_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_preface_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_second_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Name ..."
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__activity_summary
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__activity_type_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,research_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "None"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts_waypay,status_sel:0
+msgid "Not paid"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_has_error_counter
+msgid "Number of error"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__message_needaction_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__message_has_error_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__message_unread_counter
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.panalty_lines,frequency:0
+msgid "One time"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__opened
+msgid "Opened"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,activity_state:0
+#: selection:kamil.contracts.account_setting,activity_state:0
+#: selection:kamil.contracts.article.conflict_resolution,activity_state:0
+#: selection:kamil.contracts.attachments,activity_state:0
+#: selection:kamil.contracts.contract,activity_state:0
+#: selection:kamil.contracts.extensions,activity_state:0
+#: selection:kamil.contracts.panalty_lines,activity_state:0
+#: selection:kamil.contracts.services_price,activity_state:0
+#: selection:kamil.contracts.termination_requests,activity_state:0
+#: selection:kamil.contracts_waypay,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__pay_paid_amount
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Paid Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_panalties_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Panalties"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__panalty_amount
+msgid "Panalty Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__panalty_basis
+msgid "Panalty Basis"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__panalty_name
+msgid "Panalty Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts_waypay,status_sel:0
+msgid "Partial Paid"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Parties"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,first_witnes_id:0
+#: selection:kamil.contracts.contract,second_witnes_id:0
+msgid "Passport"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__contract_id
+msgid "Pay mode"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.panalty_lines,percentage_of:0
+msgid "Payment"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__pay_balance
+msgid "Payment Balance"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__pay_date
+msgid "Payment Date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Payment mode"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__status_sel
+msgid "Payment status"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Payments"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_waypay
+msgid "Payments Schedule"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__penalties
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Penalties"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__percentage
+msgid "Percentage"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Percentage %"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__percentage_of
+msgid "Percentage of"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__period
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__period
+msgid "Period "
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__period_name
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__period_name
+msgid "Period Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__frequency
+msgid "Periodic"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__phase_amount
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Phase Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__phase_name
+msgid "Phase Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,activity_state:0
+#: selection:kamil.contracts.account_setting,activity_state:0
+#: selection:kamil.contracts.article.conflict_resolution,activity_state:0
+#: selection:kamil.contracts.attachments,activity_state:0
+#: selection:kamil.contracts.contract,activity_state:0
+#: selection:kamil.contracts.extensions,activity_state:0
+#: selection:kamil.contracts.panalty_lines,activity_state:0
+#: selection:kamil.contracts.services_price,activity_state:0
+#: selection:kamil.contracts.termination_requests,activity_state:0
+#: selection:kamil.contracts_waypay,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__error_end_date
+msgid "Please select a date equal/or greater than the contract Start date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__access_url
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_preamble_action_tree_view
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__preamble
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__preamble_id
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_preamble_menu
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_preamble_list
+msgid "Preamble"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preamble__name
+msgid "Preamble Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__preface
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__preface_id
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_preface_menu
+msgid "Preface"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_preface__name
+msgid "Preface Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__service_price_for_employees
+msgid "Price for Employees"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__service_price_for_public
+msgid "Price for Public"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,sector:0
+msgid "Private"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__public_judge
+msgid "Public Judge"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_purchase_order_line__purchase_contract_id
+msgid "Purchase Contract"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: selection:kamil.contracts.extensions,purchase_state:0
+msgid "Purchase Department"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__purchase_order_id
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Purchase Order"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_purchase_order_line
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__purchase_order_line_ids
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__contract_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__contract_id
+msgid "Reffrence"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,research_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "Reject"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_party_obj
+msgid "Rep. Capacity"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__name_ntfs
+msgid "Rep. Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_research_contract_action_menu_tree_view
+msgid "Reseach contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Research"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.module.category,name:kamil_contracts.module_category_research_contracts_module
+msgid "Research Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+msgid "Research Department"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.kamil_research_contract_menu
+#: model:ir.ui.menu,name:kamil_contracts.research_extension_contract_menu
+msgid "Research contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.extensions,research_state:0
+msgid "Research department"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__activity_user_id
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+#: selection:kamil.contracts.contract,state:0
+msgid "Running"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_services_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_services_form_view
+msgid "Scode"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Second Party"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_party_ch_id
+msgid "Second Party Ch"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_second_action_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_second_menu
+msgid "Second Party Obligation"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_party_obligations
+msgid "Second Party Obligations"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_party_obligations_sel
+msgid "Second Party Obligations Sel"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_party_name
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Second Rep. Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_witnes_id
+msgid "Second Witnes"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_witnes_name
+msgid "Second Witness Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__second_witnes_signature
+msgid "Second Witness Signature"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+#: selection:kamil.contracts.contract,state:0
+msgid "Second party Sign."
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Second party obligations"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Second witness"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__sector
+msgid "Sector"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__access_token
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Send to dtaft"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Service"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__service_code
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_services_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_services_form_view
+msgid "Service Code"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_services_list
+msgid "Service Price"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_services_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_services_form_view
+msgid "Service Price for Employees"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_services_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_services_form_view
+msgid "Service Price for Public"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__service_scode
+msgid "Service Scode"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contracts_services_price_action_tree_view
+msgid "Service price"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.module.category,name:kamil_contracts.module_category_services_contracts_module
+msgid "Services Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_services_form_view
+msgid "Services Price"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_general_contract_action_menu_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.extension_contract_menu
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contracts_contract_menu
+msgid "Services contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contracts_upload_services_price_menu
+msgid "Services price"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__name
+msgid "Setting Account Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_settings_menu
+msgid "Settings"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Show Goods Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Show Medical Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Show Reseach Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Show Service Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Show Terminated Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Show Training Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Show all Active Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: sql_constraint:kamil.contracts.attachments:0
+#: sql_constraint:kamil.contracts.contract:0
+#: sql_constraint:kamil.contracts.panalty_lines:0
+#: sql_constraint:kamil.contracts.services_price:0
+#: sql_constraint:kamil.contracts_waypay:0
+#: sql_constraint:medical.type:0
+msgid "Sorry ! you can not create same name"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,specialty:0
+msgid "Specialized"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,specialty:0
+msgid "Specialized/Multidisciplinary"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.server,name:kamil_contracts.contract_start_date_cron_ir_actions_server
+#: model:ir.cron,cron_name:kamil_contracts.contract_start_date_cron
+#: model:ir.cron,name:kamil_contracts.contract_start_date_cron
+msgid "Start Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Start date"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__state
+msgid "State"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__purchase_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__research_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__status
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__training_state
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__state
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+msgid "Status"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__activity_state
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_stock_location__account_id
+msgid "Stock Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__strength
+msgid "Strength"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+msgid "Study"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__study_mission_id
+msgid "Study Mission"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_group__SubGroup
+#: model:ir.model.fields,field_description:kamil_contracts.field_medical_type__SubGroup_id
+msgid "Subgroup"
+msgstr " Sub Group"
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__subject
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__subject
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__subject
+msgid "Subject"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+#: selection:kamil.contracts.contract,state:0
+#: selection:kamil.contracts.extensions,purchase_state:0
+#: selection:kamil.contracts.extensions,research_state:0
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "Submit"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_submit
+msgid "Submit Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__sum_of_claims
+msgid "Sum Of Claims"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_purchase_order_line__sum_purchase_order
+msgid "Sum Purchase Order"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.kamil_contract_upload_template_menu
+msgid "Template"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_project_Termination _request_form_veiw
+msgid "Terminate"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+#: selection:kamil.contracts.termination_requests,state:0
+msgid "Terminated"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Terminated contratcs"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.ui.menu,name:kamil_contracts.project_termination_menu
+msgid "Termination"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__ter
+msgid "Termination of /"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.termination_requests,state:0
+msgid "Termination request"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__the_body_of_the_message
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__the_body_of_the_message
+msgid "The Body Of The Message"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+msgid "To Renew"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:contract.claims,activity_state:0
+#: selection:kamil.contracts.account_setting,activity_state:0
+#: selection:kamil.contracts.article.conflict_resolution,activity_state:0
+#: selection:kamil.contracts.attachments,activity_state:0
+#: selection:kamil.contracts.contract,activity_state:0
+#: selection:kamil.contracts.extensions,activity_state:0
+#: selection:kamil.contracts.panalty_lines,activity_state:0
+#: selection:kamil.contracts.services_price,activity_state:0
+#: selection:kamil.contracts.termination_requests,activity_state:0
+#: selection:kamil.contracts_waypay,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__total_penalty
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_form
+msgid "Total"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Total Amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Total amount"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__total_claim
+msgid "Total of Claim"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Training"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.module.category,name:kamil_contracts.module_category_training_contracts_module
+msgid "Training Contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_contract_extension_form_veiw
+#: selection:kamil.contracts.extensions,training_state:0
+msgid "Training Department"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_training_contract_action_menu_tree_view
+#: model:ir.ui.menu,name:kamil_contracts.kamil_training_contract_menu
+#: model:ir.ui.menu,name:kamil_contracts.tarining_extension_contract_menu
+msgid "Training contracts"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_company__social_twitter
+msgid "Twitter Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__specialty
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+msgid "Type"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_unread
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_goods_contract_user
+#: model:res.groups,name:kamil_contracts.group_medical_contrct_user
+#: model:res.groups,name:kamil_contracts.group_research_contrct_user
+#: model:res.groups,name:kamil_contracts.group_training_contrct_user
+msgid "User"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_account_setting__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_conflict_resolution__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_attachments__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_extensions__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_panalty_lines__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_services_price__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_termination_requests__website_message_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_waypay__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,help:kamil_contracts.field_contract_claims__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_account_setting__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_article_conflict_resolution__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_attachments__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_contract__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_extensions__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_panalty_lines__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_services_price__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_termination_requests__website_message_ids
+#: model:ir.model.fields,help:kamil_contracts.field_kamil_contracts_waypay__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.extensions,period_name:0
+msgid "Weeks/s"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Witneses"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "Witneses Sign."
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,state:0
+msgid "Witness Signature"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.project_search_view
+msgid "Year"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,period_name:0
+#: selection:kamil.contracts.extensions,period_name:0
+msgid "Year/s"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_res_company__social_youtube
+msgid "Youtube Account"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "choose the preface from selection"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_conflict_resolution
+msgid "conflict Resolution"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__payment_mode_ids
+msgid "contract_id_pay_rel"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_contract_claims__penalty_ids
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__panalty_ids
+msgid "contracts_penalty_lines"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_delay_panalty_list
+msgid "delay_panalty"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_delay_panalty_form
+msgid "delay_panalty form"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "delivary copy to requester"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "delivary copy to second party"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_documents_list
+msgid "documents"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_documents__name
+msgid "documents Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_documents_form
+msgid "documents form"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "expired"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_explain_list
+msgid "explain"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_first_list
+msgid "first"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_first_form
+msgid "first form"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_form_type
+msgid "form.type"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts_waypay,status_sel:0
+msgid "in progress"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_introduct__name_introduct
+msgid "introduct Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_introduct_form
+msgid "introduct form"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_action_form_view
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_article_conflict_resolution_form_view
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_article_delay_panalty_form_view
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_article_documents_form_view
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_article_first_form_view_act
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_article_preamble_form
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contract_article_second_form_view
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contracts_article_introduct_form_view
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contracts_article_preface_form
+msgid "kamil contract window"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_delay_panalty
+msgid "kamil.contracts.article.delay_panalty"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_documents
+msgid "kamil.contracts.article.documents"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_explain
+msgid "kamil.contracts.article.explain"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_first
+msgid "kamil.contracts.article.first"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_introduct
+msgid "kamil.contracts.article.introduct"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_preamble
+msgid "kamil.contracts.article.preamble"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_preface
+msgid "kamil.contracts.article.preface"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_article_second
+msgid "kamil.contracts.article.second"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_attachments
+msgid "kamil.contracts.attachments"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_extension_attachments
+msgid "kamil.contracts.extension.attachments"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_panalty_lines
+msgid "kamil.contracts.panalty_lines"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_services_price
+msgid "kamil.contracts.services_price"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_kamil_contracts_termination_attachments
+msgid "kamil.contracts.termination.attachments"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_extension_request_tree
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_project_termination_request_tree
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_tree
+msgid "last update"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_medical_contract_action_form_view
+msgid "medical contract window"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_medical_group
+msgid "medical.group"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model,name:kamil_contracts.model_medical_lines
+msgid "medical.lines"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.medical_type_action_menu_tree_view
+#: model:ir.model,name:kamil_contracts.model_medical_type
+msgid "medical.type"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "name of preamble"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "preamble name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.actions.act_window,name:kamil_contracts.kamil_contracts_article_preface_action_tree_view
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_preface_list
+msgid "preface"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_preface_form
+msgid "preface form"
+msgstr ""
+
+#. module: kamil_contracts
+#: selection:kamil.contracts.contract,sector:0
+msgid "public_sector"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_second_list
+msgid "second"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_article_second__name_second
+msgid "second Party Obligation Name"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_article_second_form
+msgid "second form"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:ir.model.fields,field_description:kamil_contracts.field_kamil_contracts_contract__state
+msgid "state"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "study"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "submit"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contract_extension_request_tree
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_project_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_project_termination_request_tree
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.view_contract_claims_tree
+msgid "updated by"
+msgstr ""
+
+#. module: kamil_contracts
+#: model:res.groups,name:kamil_contracts.group_services_contracts_user
+msgid "user"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "آلية فض النزاع"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_article_services_list
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_contracts_services_form_view
+msgid "إسم الخدمة"
+msgstr ""
+
+#. module: kamil_contracts
+#: model_terms:ir.ui.view,arch_db:kamil_contracts.kamil_general_contract_form_view
+msgid "الشروط الجزائية"
+msgstr ""
+

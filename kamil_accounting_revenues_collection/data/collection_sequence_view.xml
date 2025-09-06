@@ -1,0 +1,28 @@
+<odoo>
+	<data>
+
+		<record id="collection_sequence" model="ir.sequence">
+			<field name="name">Revenues Collection Sequence</field>
+			<field name="code">revenues.collection.sequence</field>
+			<field name="prefix">%(year)s-%(month)s-%(day)s-</field>
+			<field eval="1" name="number_next"/>
+			<field eval="1" name="number_increment"/>
+			<field eval="True" name="use_date_range"/>
+			<field name="padding">4</field>
+		</record>
+
+
+		<record id="receipt_67_sequence" model="ir.sequence">
+			<field name="name">Receipt 67 Sequence</field>
+			<field name="code">receipt_67.sequence</field>
+			<field name="prefix">%(year)s-%(month)s-%(day)s-</field>
+			<field eval="1" name="number_next"/>
+			<field eval="1" name="number_increment"/>
+			<field eval="True" name="use_date_range"/>
+			<field name="padding">4</field>
+		</record>
+
+
+
+	</data>
+</odoo>

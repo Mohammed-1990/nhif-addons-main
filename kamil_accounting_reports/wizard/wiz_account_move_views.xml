@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form account move report -->
+	<record id="view_wiz_account_move_form" model="ir.ui.view">
+		<field name="name">wiz.account.move.form</field>
+		<field name="model">wiz.account.move</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="4">
+						<field name="date_from"/>
+						<field name="date_to"/>
+						<field name="group_ids" widget="many2many_tags" options="{'no_create':'1'}"/>
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Wiz Account move-->
+	<act_window
+		id="action_wiz_account_move"
+		name="Account Move Report"
+		res_model="wiz.account.move"
+		view_mode="form"
+		target="new"
+	/>
+
+
+
+		<menuitem 
+		id="menu_wiz_account_move" 
+		sequence="30"
+		parent="account.menu_finance_entries_accounting_entries"
+	 	action="action_wiz_account_move"/>
+
+
+</odoo>

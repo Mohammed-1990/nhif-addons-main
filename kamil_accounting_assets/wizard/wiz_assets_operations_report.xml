@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<record id="view_asset_operations_report_form" model="ir.ui.view">
+		<field name="name">asset.operations.report.form</field>
+		<field name="model">asset.operations.report</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="operation_type" required="1"/>
+						<field name="dispose_type" attrs="{'invisible':[('operation_type','!=','dispose')]}"  widget="radio" options="{'horizontal': true}"/>
+					</group>
+					<footer>
+						<button name="get_report" type="object" string="Print" class="btn-primary"/>
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	
+	<act_window
+		id="action_asset_operations_report"
+		name="Assets Operations Report"
+		res_model="asset.operations.report" 
+		src_model="account.asset.asset"
+		view_mode="form"
+		target="new"
+	/>
+
+
+	<menuitem id="report_assets_operations_menu" parent="account.menu_finance_entries_management" action="action_asset_operations_report" name="Assets Operations Report" sequence="105"/>
+
+</odoo>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!--Loan Tree-->
+		<record id="tree_hr_loan_view" model="ir.ui.view">
+			<field name="name">hr.loan.tree</field>
+			<field name="model">hr.loan</field>
+			<field name="arch" type="xml">
+				<tree string="Loan Requests">
+					<field name="name"/>
+					<field name="employee_id"/>
+					<field name="loan_amount"/>
+					<field name="total_paid_amount"/>
+					<field name="balance_amount"/>
+					<field name="date"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--Loan Form-->
+		<record id="view_hr_loan_form" model="ir.ui.view">
+			<field name="name">hr.loan.form</field>
+			<field name="model">hr.loan</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button type="object" name="compute_loan_line" string="Compute Installments" colspan="2" attrs="{'invisible':[('state','!=','draft')]}" class="oe_highlight" icon="fa-gears"/>
+						
+						<button name="action_submit" type="object" string="Send to submit" states="draft" class="oe_highlight"/>
+						
+						<button name="action_gm_approve" type="object" string="Approve" states="general_manager" class="oe_highlight" groups="kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+						
+						<button name="action_committee_approve" type="object" string="Committee approve" states="committee_of_loans" class="oe_highlight" groups="kamil_hr_security.hr_committee_of_loans_group"/>
+						
+						<button name="action_set_to_draft" type="object" string="Set To Draft" states="refuse" class="oe_highlight" groups="kamil_hr_security.hr_committee_of_loans_group"/>
+						
+						<button name="action_start_payments" type="object" string="Start Payments" states="done_registered_payment" class="oe_highlight" groups="kamil_hr_security.hr_benefits_wages_section_group"/>
+
+						<button name="action_refuse" type="object" string="Refuse" states="wait_finice,general_manager" groups="kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+						<button name="action_refuse1" type="object" string="Refuse1" states="committee_of_loans" groups="kamil_hr_security.hr_committee_of_loans_group"/>
+						
+
+						<field name="state" widget="statusbar" statusbar_visible="draft,general_manager,committee_of_loans,accounting,done_registered_payment,start_payments,paid"/>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<h1>
+								<field name="name" class="oe_inline"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="user_id" readonly="1" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+							<field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="employee_id" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}" /><newline/><newline/>
+							<field name="department_id" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+							<field name="functional_id" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+						</group>
+					 	<group col="4">
+							<field name="loan_type" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+							<field name="no_month" force_save="1" attrs="{'readonly':[('state','not in',['draft','committee_of_loans'])]}" autocomplete="off"/>
+							<field name="loan_amount" attrs="{'readonly':[('state','not in',['draft','committee_of_loans'])]}" autocomplete="off"/>
+							<newline/><newline/>
+							<field name="deduction" attrs="{'invisible':[('state','in',['draft','general_manager'])],'required':[('state','=','committee_of_loans')],'readonly':[('state','not in',['committee_of_loans','accounting','done_registered_payment'])]}"/>
+							<field name="incentive_id" attrs="{'invisible':['|',('deduction','!=','incentive'),('state','in',['draft','general_manager'])],'required':[('deduction','=','incentive')],'readonly':[('state','!=','committee_of_loans')]}" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+							<field name="installment_amount" force_save="1" decoration-danger="color==True"/>
+							<field name="last_net_salary" force_save="1" decoration-danger="color==True"/>
+							<field name="last_net_incentive" force_save="1" decoration-danger="color==True" attrs="{'invisible':['|',('state','in',['draft','general_manager']),('deduction','!=','incentive')]}"/><newline/><newline/>
+							<field name="register_payment_date" force_save="1" attrs="{'readonly':[('state','!=','done_registered_payment')]}" />
+							<field name="payment_start_date" force_save="1" attrs="{'readonly':[('state','!=','done_registered_payment')],'required':[('state','=','done_registered_payment')]}" autocomplete="off"/>
+							<field name="company_id" invisible="True"/>
+							<field name="color" invisible="True"/>
+						</group>
+						<notebook>
+							<page string="Installments">
+								<field name="line_ids" attrs="{'readonly':[('state','!=','start_payments')]}">
+									<tree editable="false" create="false" delete="false">
+										<field name="paid_date" force_save="1"/>
+										<field name="paid_amount" force_save="1"/>
+										<field name="payment_method" attrs="{'readonly':[('paid','=',True)]}"/>
+										<field name="paid" force_save="1" attrs="{'readonly':[('payment_method','=','system')],'required':[('payment_method','=','manually')]}"/>
+										<field name="payment_attachment" widget="many2many_binary" multiple="multiple" attrs="{'required':[('payment_method','=','manually')]}"/>
+										<field name="notes" attrs="{'required':[('payment_method','=','manually')]}"/>
+									</tree>
+								</field>
+								<group class="oe_subtotal_footer oe_right">
+									<field name="total_amount" widget="monetary" force_save="1"/>
+									<div>
+										<label for="total_paid_amount"/>
+									</div>
+									<field name="total_paid_amount" nolabel="1" widget="monetary" force_save="1"/>
+									<field name="balance_amount" class="oe_subtotal_footer_separator" widget="monetary"   force_save="1"/>
+								</group>
+								<div class="oe_inline"/>
+							</page>
+							<page string="Notes">
+								<div>
+									<field name="notes"/>
+								</div>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div> 
+				</form>
+			</field>
+		</record>
+		<!--loan menu-->
+		
+		<menuitem name="Loans" parent="benefits_wages_menu" id="menu_hr_loans" sequence="4"
+			groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_committee_of_loans_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"
+			/>
+
+		<record id="action_hr_loan_request" model="ir.actions.act_window">
+			<field name="name">Loan Request</field>
+			<field name="res_model">hr.loan</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+	          <p class="o_view_nocontent_smiling_face">
+	            Click create button to create new loan request
+	          </p>
+       		 </field>
+		</record>
+
+		<menuitem name="Loans Requests" parent="menu_hr_loans" id="menu_hr_loan_request" action="action_hr_loan_request" sequence="0" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_committee_of_loans_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+		
+
+		<record id="tree_hr_loan_line_view" model="ir.ui.view">
+			<field name="name">hr.loa.line.tree</field>
+			<field name="model">hr.loan.line</field>
+			<field name="arch" type="xml">
+				<tree colors="green:paid==1" create="false" edit="false" >
+					<field name="employee_id"/>
+					<field name="loan_id"/>
+					<field name="paid_amount"/>
+					<field name="paid_date"/>
+					<field name="paid"/>
+					<field name="notes"/>
+				</tree>
+			</field>
+		</record>
+
+		
+		<record id="action_hr_loan_line" model="ir.actions.act_window">
+			<field name="name">Loan Batches</field>
+			<field name="res_model">hr.loan.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree</field>
+			<field name="context">{'group_by':['employee_id','loan_id']}</field>
+		</record>
+
+		<!-- <menuitem name="Loans Batches" parent="menu_hr_loans" id="menu_hr_loan_batches" action="action_hr_loan_line" sequence="1"
+			groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_committee_of_loans_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"
+		/> -->
+		
+		<record id="hr_loan_type_form" model="ir.ui.view">
+			<field name="name">Loan Type Form</field>
+			<field name="model">loan.type</field>
+			<field name="arch" type="xml">
+				<form string="Hr Loan Type ">
+					<sheet>
+						<div>
+			              <h1>
+			                <field name="name" placeholder="Loan Name" autocomplete="off"/>
+			              </h1>
+			            </div>
+						<group col="4">
+							<field name="no_month"/>
+							<field name="max_amount"/>
+						</group>
+						<group col="4" string="Accounting Info">
+							<field name="account_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+							<field name="deduct_account_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div> 
+				</form>
+			</field>
+		</record>
+		<!-- tree to hr loan type-->
+		<record id="hr_loan_type_tree" model="ir.ui.view">
+			<field name="name">Loan Type Tree</field>
+			<field name="model">loan.type</field>
+			<field name="arch" type="xml">
+				<tree string="Hr Loan Type">
+					<field name="name"/>
+					<field name="max_amount"/>
+					<field name="no_month"/>
+				</tree>
+			</field>
+		</record>
+		<record id="action_hr_loan_type" model="ir.actions.act_window">
+			<field name="name">Loan Type</field>
+			<field name="res_model">loan.type</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+	          <p class="o_view_nocontent_smiling_face">
+	            Click create button to create new loan type
+	          </p>
+       		 </field>
+		</record>
+             
+		<menuitem name="Loans Types" parent="menu_hr_loans" id="loan_types" action="action_hr_loan_type" sequence="5" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_committee_of_loans_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"
+			/>
+	</data>
+</odoo>

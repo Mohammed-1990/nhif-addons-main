@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="kamil_contracts_article_second_list">
+      <field name="name">contracts Article second tree view</field>
+      <field name="model">kamil.contracts.article.second</field>
+      <field name="arch" type="xml">
+        <tree string="second">
+          <field name="name_second" string="Name"/>
+          <field name="category_sel" string="Category"/>
+          <field name="content_second" widget="html"/>          
+        </tree>
+      </field>
+    </record>
+    
+   
+    <!-- actions opening views on models -->
+    <record model="ir.ui.view" id="kamil_contract_article_second_form">
+      <field name="name">second</field>
+      <field name="model">kamil.contracts.article.second</field>      
+      <field name="arch" type="xml">
+        <form string="second form">        
+          
+          <sheet>
+            <group>
+               
+            <field name="name_second" String="Second party obligations ..." />
+            
+            <field name="category_sel" string="Category"/>
+            
+            <field name="content_second" widget="html"/>          
+            </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+
+    <!--Contract Working agreement tree view -->
+    
+    <record model="ir.actions.act_window" id="kamil_contract_second_action_tree_view">
+      <field name="name">Second Party Obligation</field>
+      <field name="res_model">kamil.contracts.article.second</field>
+      <field name="view_mode">tree,form</field>
+      <field eval="0" name="sequence"/>
+    </record>
+
+
+<!--Contract Working agreement form view -->
+    <record model="ir.actions.act_window" id="kamil_contract_article_second_form_view">
+      <field name="name">kamil contract window</field>
+      <field name="res_model">kamil.contracts.article.second</field>
+      <field name="view_mode">form</field>
+      <field eval="1" name="sequence"/>
+    </record>
+    <!-- Main contract tree view -->
+    
+    <!-- Top menu item -->
+   
+    <!-- Upload contract term teplates -->
+     <menuitem name="Second Party Obligation" id="kamil_contract_upload_second_menu" parent="kamil_contract_upload_template_menu" action="kamil_contract_second_action_tree_view"/>
+
+
+
+
+
+  </data>
+</odoo>

@@ -1,0 +1,103 @@
+<odoo>
+
+    <report id="general_performance_report"
+            model="general.performance.wizard"
+            string="General Performance Report"
+            report_type="qweb-html"
+            name="kamil_hr_career.general_performance_report_view"
+            paperformat="kamil_hr_career.paperformat_career_portrait"
+            menu="False"/>
+
+    <template id="general_performance_report_view">
+     <t t-foreach="docs" t-as="doc">
+      <t t-call="web.html_container">
+         <t t-call="web.external_layout">
+            
+                <div class="page" style="page-break-inside: avoid;">
+                    <div style="font-family:courier"><br/><br/><br/>
+                        <h3 class="text-center">تقرير الاداء العام</h3>
+                    </div><br/><br/>
+                    <h4 class="text-center" style="font-family:courier">
+                       من تاريخ : <span t-esc="doc['date_from']"/> الي تاريخ: <span t-esc="doc['date_to']"/>
+                    </h4><br/>
+                    <h4 class="text-left" style="font-family:courier">
+                         اسم الموظف: <span t-esc="doc['employee']"/><br/>
+                         القسم: <span t-esc="doc['department']"/><br/>
+                         الوظيفة: <span t-esc="doc['job']"/><br/>
+                    </h4><br/><br/>
+             
+                  <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    <thead class="table-active" style="display: table-header-group;">
+                        <tr>
+                            <th class="text-center fit">متوسط الاداء العام</th>
+                            <td/>
+                        </tr>
+                        <tr>
+                            <th class="text-center fit">متوسط تقييم الجدارات</th>
+                            <td/>
+                        </tr>
+                        <tr>
+                            <th class="text-center fit">الإجازات</th>
+                            <td/>
+                        </tr>
+                        <tr>
+                            <th class="text-center fit">الاذونات</th>
+                            <td/>
+                        </tr>
+                        <tr>
+                            <th class="text-center fit">المأموريات</th>
+                            <td/>
+                        </tr>
+                        <tr> 
+                            <th class="text-center fit">التدريب</th>
+                            <td/>
+                        </tr>
+                        <tr>
+                            <th class="text-center fit">المبادرات والإشادات</th>
+                            <td/>
+                        </tr>
+                    </thead>
+<!-- 
+                    <tbody>
+                        <t t-foreach="doc['activities']" t-as="activity">
+                            <tr>
+                                <td class="text-center">
+                                    <span t-esc="activity['main_activity']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="activity['sub_activity']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="activity['weight']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="activity['date_from']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="activity['date_to']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="activity['execution_date']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="activity['notes']"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                     -->
+              <!--       <t t-if="docs==[]">
+                            <tr class="text-center">
+                                <td colspan="8">No Data</td>
+                            </tr>
+                        </t> -->
+                    </table>
+                    <br/><br/>
+                </div>
+
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
+

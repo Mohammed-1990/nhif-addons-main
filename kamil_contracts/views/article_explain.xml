@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="kamil_contracts_article_explain_list">
+      <field name="name">contracts Article explain tree view</field>
+      <field name="model">kamil.contracts.article.explain</field>
+      <field name="arch" type="xml">
+        <tree string="explain">
+          <field name="name" string="Name"/>
+          <field name="category_sel" string="Category"/>         
+        </tree>
+      </field>
+    </record>
+    
+   
+    <!-- actions opening views on models -->
+    <record model="ir.ui.view" id="kamil_contracts_article_explain_form">
+      <field name="name">Explain</field>
+      <field name="model">kamil.contracts.article.explain</field>
+      <field name="arch" type="xml">
+        <form string="Explination">                  
+          <sheet>
+            <group>               
+            <field name="name"/>
+            <field name="category_sel" string="Category"/>
+            <field name="content" widget="html"/>          
+            </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+
+    <!--Contract Working agreement tree view -->
+    
+    <record model="ir.actions.act_window" id="kamil_contracts_article_explain_action">
+      <field name="name">Explain</field>
+      <field name="res_model">kamil.contracts.article.explain</field>
+      <field name="view_mode">tree,form</field>
+      <field eval="1" name="sequence"/>
+    </record>
+
+
+    <!-- Main contract tree view -->
+    
+    <!-- Top menu item -->
+   
+    <!-- Upload contract term teplates -->
+     <menuitem name="Explain" id="kamil_contracts_upload_explain_menu" parent="kamil_contracts.kamil_contract_upload_template_menu" action="kamil_contracts_article_explain_action"
+      sequence="2"/>
+
+
+
+
+
+  </data>
+</odoo>

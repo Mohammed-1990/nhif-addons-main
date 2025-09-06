@@ -1,0 +1,53 @@
+<odoo>
+	<data>
+			
+		<record id="subsciber_view" model="ir.ui.view">
+			<field name="name">Subscbier From</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+
+
+				<notebook position="before">
+					<field name="is_subscriber" invisible="1"/>
+				</notebook>
+				<notebook position="inside">
+					<page string="Insured" attrs="{'invisible':[('is_subscriber','=',False)]}">
+						<field name="insured_ids">
+							<tree editable="bottom">
+								<field name="insured_name" required="1"/>
+								<field name="phone" required="1"/>
+								<field name="city" required="1"/>
+								<field name="email" required="1"/>
+								<field name="card_id" required="1"/>
+								<field name="expire_date" required="1"/>
+							</tree>
+						</field>
+					</page>
+				</notebook>
+
+			</field>
+		</record>
+
+
+		<record id="action_insured" model="ir.actions.act_window">
+			<field name="name">Insured</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="domain">[('is_subscriber','=',True)]</field>
+			<field name="context">{'default_is_subscriber':True}</field>
+		</record>
+
+		
+		<menuitem id="account.menu_board_journal_1" name="Overview" action="account.open_account_journal_dashboard_kanban" parent="account_accountant.menu_accounting" sequence="-10" groups="account.group_account_user"/>
+
+		<menuitem id="revenues_collection_main_menu" name="Revenues Collection" parent="account_accountant.menu_accounting" sequence="-9"/>
+		
+		<menuitem id="insured_menu" parent="revenues_collection_main_menu" 
+		 name="Insured" action="action_insured" sequence="20"/>
+
+
+
+
+	</data>
+</odoo>

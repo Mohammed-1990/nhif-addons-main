@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<menuitem name="Projects" parent="benefits_wages_menu" id="hr_projects_main_menu" sequence="5" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_unions_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+		<record id="hr_projects_form" model="ir.ui.view">
+			<field name="name">Projects Settings</field>
+			<field name="model">hr.projects</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button type="object" name="do_confirm" string="Confirm" states="draft" class="oe_highlight"/>
+						<button type="object" name="do_close" string="Close" states="confirmed" />
+						<button type="object" name="set_to_draft" string="Set To Draft" states="closed,confirmed" />
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<div>
+			              <h1>
+			                <field name="name" placeholder="Project Name" attrs="{'readonly':[('state','!=','draft')]}"/>
+			              </h1>
+			            </div>
+			            <group col="4">
+							<field name="number_varieties" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="total_amount" attrs="{'invisible':[('number_varieties','=',False)],}"/>
+							<field name="amount" attrs="{'invisible':[('number_varieties','=',True)],'readonly':[('state','!=','draft')]}"/>
+							<field name="max_quantity" attrs="{'invisible':[('number_varieties','=',True)],'readonly':[('state','!=','draft')]}"/>
+							<field name="no_month" attrs="{'invisible':[('number_varieties','=',True)],'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group>
+							<group>
+								<field name="incentive_id" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="deduct_account" options="{'no_create':True,'no_open':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}" required="True"/>
+							</group>
+						</group>
+						<notebook attrs="{'invisible':[('number_varieties','=',False)]}">
+							<page string="Varieties">
+								<field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="name"/>
+										<field name="amount"/>
+										<field name="max_quantity"/>
+										<field name="no_month"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+		                <field name="message_follower_ids" widget="mail_followers"/>
+		                <field name="activity_ids" widget="mail_activity"/>
+		                <field name="message_ids" widget="mail_thread"/>
+		            </div> 
+				</form>
+			</field>
+		</record>
+
+		<record id="hr_projects_tree" model="ir.ui.view">
+			<field name="name">Projects Settings</field>
+			<field name="model">hr.projects</field>
+			<field name="arch" type="xml">
+				<tree string="Hr Loan Type">
+					<field name="name"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_hr_projects" model="ir.actions.act_window">
+			<field name="name">Projects</field>
+			<field name="res_model">hr.projects</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+	          <p class="o_view_nocontent_smiling_face">
+	            Click create button to create new project
+	          </p>
+       		 </field>
+		</record>
+
+		<menuitem name="Projects Settings" parent="hr_projects_main_menu" id="menu_hr_projects" action="action_hr_projects" sequence="5" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_unions_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+	</data>
+</odoo>

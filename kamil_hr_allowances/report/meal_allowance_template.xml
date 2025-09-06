@@ -1,0 +1,133 @@
+<odoo>
+
+    <record id="paperformat_a4_for_hr" model="report.paperformat">
+        <field name="name">A4 for hr Allowances</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">80</field>
+    </record>
+ 
+    <report id="meal_allowance_report"
+            model="meal.allowance"
+            string="Meal allowance Report"
+            report_type="qweb-html"
+            name="kamil_hr_allowances.meal_allowance_report_view"
+            paperformat="paperformat_a4_for_hr"
+        />
+
+    <template id="meal_allowance_report_view">
+          <t t-foreach="docs" t-as="doc">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+               
+                    <div class="text-center" style="font:500;">
+                        <p>الادارة العامة للموارد البشرية
+                        <br/>
+                        قسم الاجور والمزايا<br/>
+                        <span t-esc="doc.name"/>
+                        </p>
+                    </div><br/>
+                   <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                        <thead class="table-active" style="display: table-header-group;">
+                            <tr class="table-active">
+                                <td class="text-center fit">#</td>
+                                <td class="text-center fit">الموظف</td>
+                                <td class="text-center fit">قيمة البدل</td>
+                                <td class="text-center fit">ايام الاجازة</td>
+                                <td class="text-center fit">خصم الاجازة</td>
+                                <td class="text-center fit">المستحق</td>
+                                <td class="text-center fit">الدمغة</td>
+                                <td class="text-center fit">اجمالي الاستقطاعات</td>
+                                <td class="text-center fit">الصافي</td>
+                            </tr>
+                        </thead>
+                        <div class="page">
+                            <t t-set="count" t-value="1"/> 
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <tr style="page-break-inside: avoid;">
+                                    <td class="text-center">
+                                        <span t-esc="count"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.employee_id.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.amount))"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.days_leave"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.discount"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.receivable))"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.stamp"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.total_deductions))"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.net))"/>
+                                    </td>
+                                </tr>
+                                <t t-set="count" t-value="count+1"/>
+                            </t>
+                        </div>
+                        <tr style="page-break-inside: avoid;" class="table-active">
+                            <th colspan="2" class="text-center table-active">الاجمالي</th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['amount'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['days_leave'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['discount'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['receivable'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['stamp'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['total_deductions'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['net'] for line in doc.line_ids])))"/>
+                            </th>
+                        </tr>
+                    </table><br/>
+                    <p style="font:600;" dir="rtl" >
+                            <strong>قسم الاجور والمزايا</strong>
+                            <span>
+                                ...............................................................
+                            </span>
+                            <br/>
+                            <strong>اعتماد شئون العاملين</strong>
+                            <span>
+                                ............................................................
+                            </span>
+                            <br/>
+                            <strong>المراجعة</strong>
+                            <span>
+                                ...................................................................................
+                            </span>
+                    </p>
+               </t>
+            </t>
+        </t>
+    </template>
+</odoo>

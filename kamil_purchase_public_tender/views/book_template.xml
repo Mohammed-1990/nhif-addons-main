@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Template Tender Book -->
+    <template id="index" >
+        <t t-call="website.layout">
+            <t t-set="title">Tender Book</t>
+            <div class="oe_structure">
+                <div id="wrap" class="container">
+                    <body>
+                        <h1 class="float-right">Tender Book:<t t-esc="book.name"/> </h1>
+                        <br/><br/><br/>
+                        <form id="book_form" data-success_page="/success/">
+
+                          <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label">Company Name</label>
+                            <div class="col-sm-10">
+                              <input 
+                                type="text" 
+                                class="form-control"  
+                                id="name" 
+                                required="true" 
+                                placeholder="Company Name" 
+                                t-att-value="book.partner_id.name" />
+                            </div> 
+                          </div>
+
+
+                          <div class="form-group row">
+
+                            <div class="col" >
+                              <div class="row">
+                                <label for="street" class="col-sm-4 col-form-label">Address</label>
+                                <div class="col-sm-8">
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="street" 
+                                    required="1"  
+                                    placeholder="Street" 
+                                    t-att-value="book.partner_id.street"/>
+                                </div> 
+                              </div>    
+                            </div>
+
+                            <div class="col">
+                              <div class="row">
+                                <label for="phone" class="col-sm-4 col-form-label">Phone</label>
+                                <div class="col-sm-8">
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="phone" 
+                                    required="1" 
+                                    placeholder="Phone" 
+                                    t-att-value="book.partner_id.phone"/>
+                                </div>
+                              </div>    
+                            </div>  
+
+                          </div> 
+                        
+                          <div class="form-group row">
+                              
+                            <div class="col" >
+                              <div class="row">
+                                <div class="col-sm-4"/>
+                                <div class="col-sm-8">
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="street2" 
+                                    placeholder="Street 2" 
+                                    t-att-value="book.partner_id.street2"/>
+                                </div>
+                              </div>    
+                            </div>
+
+                            <div class="col">
+                              <div class="row">
+                                <label for="phone" class="col-sm-4 col-form-label">Mobile</label>
+                                <div class="col-sm-8">
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="mobile" 
+                                    required="1" 
+                                    placeholder="Mobile" 
+                                    t-att-value="book.partner_id.mobile"/>
+                                </div>
+                              </div>  
+                            </div>    
+
+                          </div>
+
+                          <div class="form-group row">
+                                
+                            <div class="col" >
+                              <div class="row">
+                                <div class="col-sm-4"/>
+                                <div class="col-sm-8">
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="city" 
+                                    placeholder="City" 
+                                    t-att-value="book.partner_id.city"/>           
+                                </div>     
+                              </div>    
+                            </div>
+
+                            <div class="col">
+                              <div class="row">
+                                <label for="mobile" class="col-sm-4 col-form-label">Email</label>
+                                <div class="col-sm-8">
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="email" 
+                                    required="1" 
+                                    placeholder="Email" 
+                                    t-att-value="book.partner_id.email"/>
+                                </div>    
+                              </div>    
+                            </div> 
+
+                          </div> 
+
+                          <div class="form-group row">
+                                
+                            <div class="col">
+                              <div class="row">
+                                <div class="col-sm-4"/>
+                                <div class="col-sm-4">
+                                  <select id="state" class="form-control"  placeholder="State ...">
+                                    <t t-foreach="book.state_ids" t-as="line">
+                                      <option t-att-value="line.id">
+                                        <t t-esc="line.name"/>
+                                      </option>  
+                                    </t>
+                                  </select>
+                                </div> 
+
+                                <div class="col-sm-4">
+                                  <select id="country" class="form-control">
+                                    <t t-foreach="book.country_ids" t-as="line">
+                                      <option t-att-value="line.id">
+                                        <t t-esc="line.name"/>
+                                      </option>  
+                                    </t>
+                                  </select>
+                                </div>
+                              </div> 
+                            </div>     
+
+                            <div class="col">
+                              <div class="row">
+                                <label for="email" class="col-sm-4 col-form-label">Website</label>
+                                <div class="col-sm-8">
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="website" 
+                                    required="1" 
+                                    placeholder="Website" 
+                                    t-att-value="book.partner_id.website"/>
+                                </div>
+                              </div>    
+                            </div> 
+                            
+                          </div>
+
+              <div class="oe_structure mt-2">
+                <section class="s_tabs">
+                  <div class="container">
+                    <div class="row s_col_no_bgcolor">
+                      <div class="col-lg-12  pt48 pb48">
+                        <div class="card bg-white">
+                          <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                              <li class="nav-item">
+                                <a 
+                                  class="nav-link o_default_snippet_text active show" id="nav_tabs_link_products" 
+                                  data-toggle="tab" 
+                                  href="#nav_tabs_content_product" 
+                                  role="tab" 
+                                  aria-controls="nav_tabs_content_product" aria-selected="true" 
+                                  data-original-title="" 
+                                  title="" 
+                                  aria-describedby="tooltip255985">Products</a>
+                              </li>
+                              <li class="nav-item">
+                                <a 
+                                  class="nav-link o_default_snippet_text" 
+                                  id="nav_tabs_link_general_conditions" 
+                                  data-toggle="tab" 
+                                  href="#nav_tabs_content_general_conditions" 
+                                  role="tab" 
+                                  aria-controls="nav_tabs_content_general_conditions" aria-selected="false" 
+                                  data-original-title="" 
+                                  title="" 
+                                  aria-describedby="tooltip957107">General Conditions</a>
+                              </li>
+                              <li class="nav-item">
+                                <a 
+                                  class="nav-link o_default_snippet_text" 
+                                  id="nav_tabs_link_private_conditions" 
+                                  data-toggle="tab" 
+                                  href="#nav_tabs_content_private_conditiond" 
+                                  role="tab" 
+                                  aria-controls="nav_tabs_content_private_conditiond" aria-selected="false">Private Conditiond</a>
+                              </li>
+                              <li class="nav-item">
+                                <a 
+                                  class="nav-link o_default_snippet_text" 
+                                  id="nav_tabs_link_other_features" 
+                                  data-toggle="tab" 
+                                  href="#nav_tabs_content_other_features" 
+                                  role="tab" 
+                                  aria-controls="nav_tabs_content_other_features" aria-selected="false">Other Features</a>
+                              </li>
+                              <li class="nav-item">
+                                <a 
+                                  class="nav-link o_default_snippet_text" 
+                                  id="nav_tabs_link_terms" 
+                                  data-toggle="tab" 
+                                  href="#nav_tabs_content_terms" 
+                                  role="tab" 
+                                  aria-controls="nav_tabs_content_private_conditiond" aria-selected="false">Terms</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-body tab-content">
+                            <div 
+                              class="tab-pane fade active show" 
+                              id="nav_tabs_content_product" 
+                              role="tabpanel" 
+                              aria-labelledby="nav_tabs_link_products">
+                              <!-- <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Products</h3> -->
+                              <div class="table-editable">
+                                <table id="table" class="table table-bordered table-responsive-md table-striped text-center">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-center">Product</th>
+                                      <th class="text-center">Description</th>
+                                      <th class="text-center">Product Category</th>
+                                      <th class="text-center">Quantity</th>
+                                      <th class="text-center">Purchase Purpose</th>
+                                      <th class="text-center" >Unit Price</th>
+                                      <th class="text-center">Remove</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody >
+                                    <t t-foreach="book.order_line" t-as="l">
+                                      <tr>
+                                        <td><span t-field="l.product_id.name"/></td>
+                                        <td><span t-field="l.name"/></td>
+                                        <td><span t-field="l.categ_id.name"/></td>
+                                        <td><span t-field="l.product_qty"/></td>
+                                        <td><span t-field="l.note"/></td>
+                                        <td contenteditable="true"><span t-field="l.price_unit"/></td>
+                                        <td>
+                                          <span class="table-remove">
+                                            <button type="button"
+                                              class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                            </span>
+                                        </td>
+                                        <td  class="invisible"><span t-field="l.product_id.id"/></td>
+                                      </tr>
+                                    </t>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div 
+                              class="tab-pane fade" 
+                              id="nav_tabs_content_general_conditions" 
+                              role="tabpanel" 
+                              aria-labelledby="nav_tabs_link_general_conditions">
+                              <t t-foreach="book.general_conditions_ids" t-as="line">
+                                <li class="list-group-item">
+                                  <t t-esc="line.name"/>
+                                </li>
+                              </t>
+                            </div>
+                            <div 
+                              class="tab-pane fade" 
+                              id="nav_tabs_content_private_conditiond" 
+                              role="tabpanel" 
+                              aria-labelledby="nav_tabs_link_private_conditions">
+                              <textarea 
+                                class="form-control" 
+                                id="private_conditions_input" 
+                                disabled="true">
+                                <t t-esc="book.private_conditions"  />
+                              </textarea>
+                            </div>
+                            <div 
+                              class="tab-pane fade" 
+                              id="nav_tabs_content_other_features" 
+                              role="tabpanel" 
+                              aria-labelledby="nav_tabs_link_other_features">
+                              <textarea 
+                                class="form-control" 
+                                id="other_features" 
+                                placeholder="Other Features...."/>
+                            </div>  
+                            <div 
+                              class="tab-pane fade" 
+                              id="nav_tabs_content_terms" 
+                              role="tabpanel" 
+                              aria-labelledby="nav_tabs_content_terms">
+                              <textarea 
+                                class="form-control" 
+                                id="terms_txt" 
+                                placeholder="Terms...."/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+           
+
+                        </form>
+                        <br/><br/>
+                        <!-- <center><input id="send_email" class="btn btn-primary btn-lg" name="send_email" value="Send Email" type="submit" style="background-color:#e67e22;"/></center> -->
+
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                        
+
+
+                    <script>
+                      const $tableID = $('#table');
+                      $tableID.on('click', '.table-remove', function () {
+                        $(this).parents('tr').detach();
+                      });
+
+                        $('body').delegate("button[id='submit']", 'click', function (e) 
+                        {   
+
+
+
+                          var book_id = <t t-esc="book.id"/>;
+                          var state = document.getElementById("state").value;
+                          var country =document.getElementById("country").value;     
+                          var name = document.getElementById("name").value;
+                          var phone = document.getElementById("phone").value;
+                          var email = document.getElementById("email").value;
+                            if(name == '' || phone == '' || email == '')
+                            { 
+                                if(name == '' )
+                                {
+                                    alert("Enter The Company Name");
+                                }
+                                if(phone == '' )
+                                {
+                                    alert("Enter The Phone Number");
+                                }
+                                 if(email == '' )
+                                {
+                                    alert("Enter The Email");
+                                }
+                            }    
+                            else
+                            {
+                             var price = '';
+                              $('#table tr').each(function(row, tr){
+                                  price = price +
+                                          $(tr).find('td:eq(7)').text() + ',' +
+                                          $(tr).find('td:eq(3)').text() + ',' +
+                                          $(tr).find('td:eq(4)').text() + ',' +
+                                          $(tr).find('td:eq(5)').text() + ';';
+
+                              }); 
+                                
+                                $.ajax('/book/add/', {
+                                    type: 'GET', 
+                                    data: { 
+                                        book_id: book_id,
+                                        phone : $('#phone').val(),
+                                        mobile : $('#mobile').val(),
+                                        email : $('#email').val(),
+                                        website : $('#website').val(),
+                                        street : $('#street').val(),
+                                        street2 : $('#street2').val(),
+                                        city : $('#city').val(),
+                                        state : state,
+                                        country: country,
+                                        other_features : $('#other_features').val(),
+                                        terms_txt : $('#terms_txt').val(),
+                                        name : $('#name').val(),
+                                        price : price,
+
+                                    },  
+                                    success: function (data, status, xhr) {   
+                                        window.location ='/success';
+                                    },
+                                    error: function (jqXhr, textStatus, errorMessage) {
+                                        alert( 'errror ' + errorMessage);
+                                    }
+                                });
+                            }
+                        });
+
+
+                        </script>
+                    </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="success">
+        <t t-call="website.layout">
+            <t t-set="title">Success</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <h1>Thanks!</h1>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="alert alert-success" role="status">
+                                Your message has been sent successfully.
+                                <button type="button" class="close" data-dismiss="alert">&amp;times;</button>
+                            </div>
+                            <p>
+                                We will get back to you shortly.
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <t t-call="website.company_description"/>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+   <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/kamil_purchase_qualifiying_suppliers/static/src/js/email.js"></script>
+        </xpath>
+    </template>
+
+
+</odoo>

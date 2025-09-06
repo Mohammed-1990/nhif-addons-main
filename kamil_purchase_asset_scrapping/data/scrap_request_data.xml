@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- General Condition-->
+	<record id="scrap_request" model="general.conditions">
+		<field name="name">Scrap Request</field>
+		<field name="type">scrap_request</field>
+		<field name="general_conditions_lines" 
+			eval="[(5,0), 
+				(0, 0, {'name':'خلو طرف من الضرائب' }),
+				(0, 0, {'name':'إبراء زمة من  الذكاة'}),
+				(0, 0, {'name':'شهادة التسجيل' }),
+				(0, 0, {'name':'الدمغة القانونية' }),
+				(0, 0, {'name':'القيمة المضافة' }),
+				(0, 0, {'name':'الرقم التعريفي' }),
+				(0, 0, {'name':'مقدرة مالية' }),
+				(0, 0, {'name':'السيرة الذاتية' }),
+				(0, 0, {'name':'شهادة الرقم الضريبي' }),
+				(0, 0, {'name':'التأمين المبدئي' }),
+													
+				]"/>
+	</record>
+
+
+	<!-- Sequence -->
+	<record id="seq_scrap_request" model="ir.sequence">
+		<field name="name">scrap.request</field>
+		<field name="code">scrap.requests</field>
+		<field name="prefix">Scrap / %(range_year)s / </field>
+		<field name="padding">5</field>
+		<field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+	</record>
+
+</odoo>

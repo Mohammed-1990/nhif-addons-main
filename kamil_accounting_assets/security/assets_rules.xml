@@ -1,0 +1,12 @@
+<odoo>
+	<data>
+	
+		<record id="asset_operation_multi_company_rule" model="ir.rule">
+			<field name="name">asset_operation multi-company</field>
+			<field ref="model_account_asset_operation" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+	</data>
+</odoo>

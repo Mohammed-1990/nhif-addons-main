@@ -1,0 +1,81 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="view_task_form2_inherit">
+      <field name="name">project_task list</field>
+      <field name="model">project.task</field>
+      <field name="inherit_id" ref="project_budget.view_task_form2_inherit"/>
+      <field name="arch" type="xml">
+      <!-- <field name="tag_ids" position="after"> -->
+      <xpath expr="//field[@name='remaining_amount']" position="after">
+      <field name="wage"/>
+      </xpath>
+
+      <!-- <xpath expr="/tree//field[@name='unit_amount']" position="after">
+      <field name="wage_no"/>
+      </xpath> -->
+          
+        <!-- <field name="name"/> -->
+         <!-- <field name="value"/> 
+          <field name="value2"/> -->
+    
+      </field>
+    </record>
+    
+
+     <record model="ir.ui.view" id="view_task_form2_inherited_inherit">
+      <field name="name">project_task_list</field>
+      <field name="model">project.task</field>
+      <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+      <field name="arch" type="xml">
+      <xpath expr="//field/tree/field[@name='project_id']" position="after">
+      <field name="wage_no"/>
+      <field name="cost_id"/>
+      </xpath>
+
+      </field>
+    </record>
+    <!-- actions opening views on models -->
+    
+    <!-- <record model="ir.actions.act_window" id="plain_module.action_window">
+      <field name="name">plain_module window</field>
+      <field name="res_model">plain_module.plain_module</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="plain_module.action_server">
+      <field name="name">plain_module server</field>
+      <field name="model_id" ref="model_plain_module_plain_module"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    
+    <!-- <menuitem name="plain_module" id="plain_module.menu_root"/> -->
+   
+    <!-- menu categories -->
+    
+    <!-- <menuitem name="Menu 1" id="plain_module.menu_1" parent="plain_module.menu_root"/> -->
+    <!-- <menuitem name="Menu 2" id="plain_module.menu_2" parent="plain_module.menu_root"/> -->
+   
+    <!-- actions -->
+    
+    <!-- <menuitem name="List" id="plain_module.menu_1_list" parent="plain_module.menu_1"
+              action="plain_module.action_window"/> -->
+    <!-- <menuitem name="Server to list" id="plain_module" parent="plain_module.menu_2"
+              action="plain_module.action_server"/> -->
+   
+  </data>
+</odoo>

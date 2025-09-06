@@ -1,0 +1,712 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-28 10:27+0000\n"
+"PO-Revision-Date: 2021-02-28 10:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.journal_entries_manager_group
+msgid " Journal Entries User "
+msgstr "مسوؤل القيود"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<b>\n"
+"													الجملة \n"
+"												</b>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<br/>\n"
+"								<strong style=\"float:right\"> رقم القيد </strong>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<br/>\n"
+"							\n"
+"\n"
+"							<strong style=\"float:right\">عبارة عن: </strong>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.accounting_dashboard_inherit
+msgid "<span title=\"Balance\">Balance</span>"
+msgstr "<span title=\"Balance\">الرصيد</span>"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<strong style=\"float:right\"> توقيع اول </strong>\n"
+"									<span style=\"float:right;margin-right:20px\">\n"
+"										................................................................................\n"
+"									</span>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<strong style=\"float:right\"> توقيع ثاني </strong>\n"
+"									<span style=\"float:right;margin-right:20px\">\n"
+"										................................................................................\n"
+"									</span>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<strong style=\"float:right\">إعداد </strong>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<strong style=\"float:right\">التاريخ </strong>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "<strong>\n"
+"								<b>\n"
+"								تقرير القيود\n"
+"								</b>\n"
+"							</strong>\n"
+"							<br/>"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_account_account
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_journal__account_number
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_partner__account_number
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_users__account_number
+msgid "Account Number"
+msgstr "رقم الحساب"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_accounting_group
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_assets
+msgid "Accounting - Assets"
+msgstr "الحسابات - إدارة الاصول"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_bank_cash_balance_sheet_manager_group
+msgid "Accounting - Bank/Cash Balance Sheet"
+msgstr "الحسابات - موازنة البنك/الخزينة"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_budget_management
+msgid "Accounting - Budget Management"
+msgstr "الحسابات - إدارة الموازنات"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_Bank_or_cash_supply_group
+msgid "Accounting - Cash/Bank Supply"
+msgstr "الحسابات - تغذية بنك/خزينة"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_claims_manager_group
+msgid "Accounting - Claims"
+msgstr "الحسابات - المطالبات"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_collection_group
+msgid "Accounting - Collection"
+msgstr "الحسابات - التحصيل"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_customization_manager_group
+msgid "Accounting - Customization"
+msgstr "الحسابات - التخصيص"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_financial_auditor
+msgid "Accounting - Financial Auditor"
+msgstr "الحسابات - المراقب المالي"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.kamil_accounting_hide_group
+msgid "Accounting - Hide"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_money_movement_group
+msgid "Accounting - Money Movement"
+msgstr "الحسابات - حركة نقود"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_payments_manager_group
+msgid "Accounting - Payments"
+msgstr "الحسابات - الدفعيات"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,name:kamil_accounting_base.kamil_accounting_ratifications_manager_group
+msgid "Accounting - Ratifications"
+msgstr "الحسابات - التصاديق"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_assets
+msgid "Accounting Access Righ - Assets"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_bank_cash_balance_sheet_manager_group
+msgid "Accounting Access Righ - Bank/Cash Balance Sheet"
+msgstr "الحسابات - موازنة البنك/الخزينة"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_budget_management
+msgid "Accounting Access Righ - Budget Management"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_claims_manager_group
+msgid "Accounting Access Righ - Claims"
+msgstr "الحسابات - المطالبات"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_accounting_group
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_customization_manager_group
+msgid "Accounting Access Righ - Customization"
+msgstr "الحسابات - التخصيص"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_financial_auditor
+msgid "Accounting Access Righ - Financial Auditor"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_Bank_or_cash_supply_group
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_money_movement_group
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_payments_manager_group
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_ratifications_manager_group
+msgid "Accounting Access Right"
+msgstr "الحسابات"
+
+#. module: kamil_accounting_base
+#: model:ir.module.category,description:kamil_accounting_base.kamil_accounting_collection_group
+msgid "Accounting Collection"
+msgstr "الحسابات - التحليل"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.location_form
+msgid "Accounting Information"
+msgstr "معلومات محاسبية"
+
+#. module: kamil_accounting_base
+#: model:ir.actions.act_window,name:kamil_accounting_base.action_all_moves
+#: model:ir.ui.menu,name:kamil_accounting_base.menu_all_moves
+msgid "All Moves"
+msgstr "كل القيود"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_move__amount_in_words
+msgid "Amount In Words"
+msgstr "المبلغ بالاحرف"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "البند"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "البند التحليلي"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_move_line__approved_value
+msgid "Approved Value"
+msgstr "المبلغ المعتمد"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.assets_user_group
+msgid "Assets User"
+msgstr "مسؤول الاصول"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_journal__available_balance_str
+msgid "Available Balance Str"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_partner__bank_branch_name
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_users__bank_branch_name
+msgid "Bank Branch Name"
+msgstr "إسم فرع البنك"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_partner__bank_name
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_users__bank_name
+msgid "Bank Name"
+msgstr "اسم البنك"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.bank_cash_balance_sheet_user_group
+msgid "Bank/Cash Balance Sheet User"
+msgstr "مسؤول موازنة البنك والخزينة"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__branch_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__branch_account_id
+msgid "Branch Account"
+msgstr "حسابات الفروع"
+
+#. module: kamil_accounting_base
+#: model:ir.actions.act_window,name:kamil_accounting_base.action_branchs_accounts
+msgid "Branches Accounts"
+msgstr "حسابات الفروع"
+
+#. module: kamil_accounting_base
+#: model:ir.ui.menu,name:kamil_accounting_base.branch_account_menu
+msgid "Branchs Accounts"
+msgstr "حسابات الفروع"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_account__budget_amount
+msgid "Budget Amount"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_account__budget_item_id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_product_category__budget_item_id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_product_product__budget_item_id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_product_template__budget_item_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.account_move_form
+msgid "Budget Item"
+msgstr "البند"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.budget_manager_group
+msgid "Budgets Manager"
+msgstr "مدير الموازنات"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.budget_user_group
+msgid "Budgets User"
+msgstr "مسؤول الموازنات"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.claims_manager_group
+msgid "Claims Manager"
+msgstr "مدير المطالبات"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.claims_user_group
+msgid "Claims User"
+msgstr "مسؤول المطالبات"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_account__clarification_number
+msgid "Clarification Number"
+msgstr "إيضاح رقم"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_partner__code
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_users__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.collector_group
+msgid "Collector"
+msgstr "المتحصل"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__company_ids
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__company_id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_analytic_line__cost_center_id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_move_line__cost_center_id
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: kamil_accounting_base
+#: model:ir.actions.act_window,name:kamil_accounting_base.action_cost_center
+#: model:ir.ui.menu,name:kamil_accounting_base.cost_center_menu
+msgid "Cost Centers"
+msgstr "مراكز التكلفة"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.actions.act_window,help:kamil_accounting_base.action_tax_form
+msgid "Create a new tax"
+msgstr "إنشاء ضريبة جديدة"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_res_currency_rate
+msgid "Currency Rate"
+msgstr "سعر العملة"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.customization_manager_group
+msgid "Customizations Manager"
+msgstr "مدير التخصيص"
+
+#. module: kamil_accounting_base
+#: model:ir.actions.act_window,name:kamil_accounting_base.action_tax_form
+#: model:ir.ui.menu,name:kamil_accounting_base.menu_action_tax_form
+msgid "Deductions/Taxes"
+msgstr "الخصومات/الضرائب"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_partner__department_id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_users__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.account_move_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.account_move_tree
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.branch_account_form
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.claims_finance_group
+msgid "Director of Finance"
+msgstr "مدير الشؤون المالية"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.claims_general_admin_group
+msgid "Director of Finance and Adminstration"
+msgstr "مدير الشوؤن المالية والادارية"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_move__document_number
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_move_line__document_number
+msgid "Document Number"
+msgstr "رقم المستند"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_users__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.bank_cash_balance_sheet_manager_group
+msgid "Financial Auditor"
+msgstr "المراقب المالي"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_journal__full_name
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.claims_general_manager_group
+msgid "General Manager / Branch Manager"
+msgstr "المدير العام / مدير الفرع"
+
+#. module: kamil_accounting_base
+#: selection:account.account,is_group:0
+#: selection:account.analytic.account,is_group:0
+msgid "Group"
+msgstr "مجموعة"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__id
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.claims_internal_auditor_group
+#: model:res.groups,name:kamil_accounting_base.internal_auditor_group
+msgid "Internal Auditor"
+msgstr "المراجع الداخلي"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_stock_location
+msgid "Inventory Locations"
+msgstr "مكان الجرد"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_account__is_group
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_analytic_account__is_group
+msgid "Is Group"
+msgstr "مجموعة/بند"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_account__is_inventory_account
+msgid "Is Inventory Account"
+msgstr "هل هو حساب مخزن"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_move__is_manual_move
+msgid "Is Manual Move"
+msgstr "قيد يدوي"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_account_journal
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: kamil_accounting_base
+#: model:ir.actions.report,name:kamil_accounting_base.journal_entiries_report
+msgid "Journal Enteries Report"
+msgstr "تقرير القيود"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_account_move
+msgid "Journal Entries"
+msgstr "قيود اليومية"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.account_move_form
+msgid "Journal Entry"
+msgstr "قيد يومية"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر يومية"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account_line__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_base
+#: model:ir.actions.act_window,name:kamil_accounting_base.action_manual_moves
+#: model:ir.ui.menu,name:kamil_accounting_base.menu_manual_moves
+msgid "Manual Moves"
+msgstr "القيود اليدوية"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_base_partner_merge_automatic_wizard
+msgid "Merge Partner Wizard"
+msgstr "معالج دمج الشريك"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.money_movement_group
+msgid "Money Movement"
+msgstr "حركة نقود"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.money_supply_group
+msgid "Money Supply"
+msgstr "تغذية البنك/الخزينة"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_kamil_account_cost_center__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_accounting_base
+#: model:ir.ui.menu,name:kamil_accounting_base.accounting_operations_menu
+msgid "Operations"
+msgstr "العمليات"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_account__parent_budget_item_id
+msgid "Parent Budget Item"
+msgstr "المجموعة الرئسية"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.account_move_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.account_move_tree
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.payments_manager_group
+msgid "Payment User"
+msgstr "منشئ الدفعيات"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_product_category
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_res_currency_rate__rate
+msgid "Rate"
+msgstr "السعر"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.ratifications_manager_group
+msgid "Ratification User"
+msgstr "منشئ التصاديق"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_account_move_line__remaining_value
+msgid "Remaining Value"
+msgstr "القيمة المتبقية"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_stock_location__account_id
+msgid "Stock Account"
+msgstr "حساب المخزن"
+
+#. module: kamil_accounting_base
+#: selection:account.account,is_group:0
+#: selection:account.analytic.account,is_group:0
+msgid "Sub Account"
+msgstr "حساب فرعي"
+
+#. module: kamil_accounting_base
+#: model:res.groups,name:kamil_accounting_base.supervisor_group
+msgid "Supervisor"
+msgstr "المشرف"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,field_description:kamil_accounting_base.field_branch_account__company_id
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.branch_account_form
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.branch_account_tree
+msgid "The Company"
+msgstr "الفرع"
+
+#. module: kamil_accounting_base
+#: model:ir.model.fields,help:kamil_accounting_base.field_res_currency_rate__rate
+msgid "The rate of the currency to the currency of rate 1"
+msgstr "سعر العملة باستخدام العملة ذات السعر 1"
+
+#. module: kamil_accounting_base
+#: code:addons/kamil_accounting_base/models/base.py:89
+#: code:addons/kamil_accounting_base/models/base.py:92
+#, python-format
+msgid "There is no Enough Budget"
+msgstr "لا توجد موازنة كافية"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_branch_account
+msgid "branch.account"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_branch_account_line
+msgid "branch.account.line"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.ui.menu,name:kamil_accounting_base.hide_menu
+msgid "hide_menu"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model:ir.model,name:kamil_accounting_base.model_kamil_account_cost_center
+msgid "kamil.account.cost.center"
+msgstr "مركز التكلفة"
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "البند"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "الجهة"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "الحساب"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "الرقم"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "دائن"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_base.journal_entiries_template
+msgid "مدين"
+msgstr ""
+
+#. module: kamil_accounting_base
+#: code:addons/kamil_accounting_base/models/base.py:93
+#, python-format
+msgid "يوجد فقط مبلغ  بالبند "
+msgstr ""
+

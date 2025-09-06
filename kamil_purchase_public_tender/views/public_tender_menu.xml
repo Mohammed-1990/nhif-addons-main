@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+
+
+		<!-- Menu Public Tender Root-->
+		<menuitem id="menu_public_tender_root" name="Public Tender" sequence="3" parent="purchase.menu_purchase_root"/>
+
+
+		<!-- Menu Public Tender -->
+		<menuitem id="menu_public_tender" parent="kamil_purchase_request.menu_purchase_process" action="kamil_purchase_public_tender.action_public_tender" sequence="3"/>
+
+	</data>
+</odoo>

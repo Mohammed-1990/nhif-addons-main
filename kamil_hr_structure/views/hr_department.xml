@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+
+      <record model="ir.ui.view" id="view_department_form_inherit">
+          <field name="name">hr department form inherit</field>
+          <field name="model">hr.department</field>
+          <field name="inherit_id" ref="hr.view_department_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='company_id']" position="after">
+                  <field name="type"/>
+              </xpath>
+              <xpath expr="//field[@name='name']" position="attributes">
+                  <attribute name='string'>Name</attribute>
+              </xpath>
+              <xpath expr="//field[@name='parent_id']" position="attributes">
+                  <attribute name='string'>Parent Management</attribute>
+              </xpath>
+              <xpath expr="//field[@name='company_id']" position="attributes">
+                  <attribute name='string'>Branch</attribute>
+                  <attribute name="attrs">{'readonly':True}</attribute>
+              </xpath>
+          </field>
+      </record>
+
+<record model="ir.ui.view" id="department_tree_view_inherit">
+      <field name="name">department.tree</field>
+      <field name="model">hr.department</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+            <field name="parent_id" string ="Parent Management"/>
+            <field name="type"/>
+            <field name="company_id" string="Branch"/>
+         </tree>
+      </field>
+    </record>
+
+    <record id="management_departments_action" model="ir.actions.act_window">
+        <field name="name">Managements and Departments</field>
+        <field name="res_model">hr.department</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new department
+          </p>
+        </field>
+    </record>
+
+      <menuitem
+            name="Managements and Departments"
+            id="menu_hr_department_root"
+            parent="hr.menu_hr_root"
+            sequence="2"
+            groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group"
+            />
+
+      <menuitem
+            name="Managements and Departments"
+            action="management_departments_action"
+            id="managements_departments_menu"
+            parent="menu_hr_department_root"
+            sequence="1"
+            />
+
+      <record id="hr_department_search_inherit" model="ir.ui.view">
+        <field name="name">hr.department.search.inherit</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_filter"/>
+        <field name="arch" type="xml">
+          <field name="name" position="after">
+            <group string="Group By">
+              <filter name="النوع" domain="[]" context="{'group_by':'type'}"/>
+              <filter name="الادراة الرئيسية" domain="[]" context="{'group_by':'parent_id'}"/>
+            </group>
+          </field>
+        </field>
+      </record>
+
+     <menuitem
+        action="hr.open_module_tree_department"
+        id="hr.menu_hr_department_tree"
+        sequence="90"
+        parent="base.group_no_one"/>
+
+
+    </data>
+</odoo>

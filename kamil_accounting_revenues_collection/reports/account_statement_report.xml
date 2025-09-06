@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- Payment Report-->
+	<report 
+		id="account_statement_report"
+		model="account.statement.wizard"
+		string="Account Statement Report"
+		report_type="qweb-pdf"
+		name="kamil_accounting_revenues_collection.statement_template"
+	/>
+
+
+	<!-- Payment Report Template-->
+	<template id="statement_template">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+					<div class="page">
+						<div class="header">
+							<h3 class="text-right">Account Statement</h3>				
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Collection Date</th>
+									<th>Document No</th>
+									<th>Debit</th>
+									<th>Credit</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="docs" t-as="doc">
+									<tr>
+										<td>
+											<t t-esc="doc_index + 1"/>
+										</td>
+										<td>
+											<t t-esc="doc['date']"/>
+										</td>
+										<td>
+											<t t-esc="doc['ref']"/>
+										</td>
+										<td>
+											<t t-esc="doc['debit']"/>
+										</td>
+										<td>
+											<t t-esc="doc['credit']"/>
+										</td>
+										<td>
+											<t t-esc="doc['description']"/>
+										</td>
+										
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+			</t>
+		</t>
+	</template>
+
+
+</odoo>

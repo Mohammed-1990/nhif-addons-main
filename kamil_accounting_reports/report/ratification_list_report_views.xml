@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- Ratification list Report-->
+	<report 
+		id="ratification_list_report"
+		model="wizard.ratification.list.report"
+		string="Ratification List Report"
+		report_type="qweb-html"
+		name="kamil_accounting_reports.ratification_list_template"
+	/>
+
+
+	<!-- Ratification List Report Template-->
+	<template id="ratification_list_template">
+		<t t-call="web.html_container">
+                <div class="page">
+					<div class="text-center">
+					<img t-if="company_id_logo" t-att-src="image_data_uri(company_id_logo)" class="img-fluid oe_slides_channel_thumbnail" alt="Logo"/>
+					</div>
+					<br/><br/>
+					<div class="text-center" >
+						<strong>
+							<p>تقرير المسيرات
+								<br/>
+								<t t-if="date_from" >
+									للفترة من
+									<t t-esc="date_from"/>
+								</t>
+								<t t-if="date_to" >
+									الى
+									<t t-esc="date_to"/>
+								</t>
+							</p>
+						</strong>				
+					</div>
+
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    	<thead style="display: table-header-group;">
+                        	<tr class="table-active">
+                        		<td class="text-center fit">الرقم</td>
+                        		<td class="text-center fit" style="width:11%;">رقم الدفعية</td>
+                        		<td class="text-center fit" style="width:11%;">تاريخ الدفعية</td>
+                        		<td class="text-center fit">القيمة</td>
+                        		<td class="text-center fit">الاستقطاع</td>
+                        		<td class="text-center fit">الصافي</td>
+                        		<td class="text-center fit"> نوع السداد </td>
+                        		<td class="text-center fit">البيان</td>
+                        	</tr>
+                        </thead>
+                        <tbody>
+                        	<t t-foreach="docs" t-as="doc">
+                    			<tr style="page-break-inside: avoid;">
+									<td colspan="8" class="text-right fit">
+										<t t-esc="doc['partner']"/>
+									</td>
+								</tr>
+								<t t-foreach="doc['data']" t-as="line">
+
+		                        	<tr style="page-break-inside: avoid;">
+		                        		<td class="text-center fit">
+											<t t-esc="line_index + 1"/>
+										</td>
+		                                <td class="text-right fit">
+		                                    <t t-esc="line['payment_number']"/>
+		                                </td>
+		                        		<td class="text-right fit">
+			                                <t t-esc="line['payment_date']"/>
+			                            </td>
+		                                <td class="text-right fit">
+		                                    <t t-esc="'{0:,.2f}'.format(float(line['amount']))"/>
+		                                </td>
+		                                <td class="text-right fit">
+		                                    <t t-esc="'{0:,.2f}'.format(float(line['deduction_amount']))"/>
+		                                </td>
+		                                <td class="text-right fit">
+		                                    <t t-esc="'{0:,.2f}'.format(float(line['net_amount']))"/>
+		                                </td>
+
+		                                <td class="text-right fit">
+		                                    
+		                                    <t t-if="line['payment_type'] == 'Cheque'">
+		                                    	شيك
+		                                    </t>
+		                                    <t t-if="line['payment_type'] == 'cash'">
+		                                    	نقد
+		                                    </t>
+		                                    <t t-if="line['payment_type'] == 'bank_transfer'">
+		                                    	تحويل بنكي
+		                                    </t>
+		                                    <t t-if="line['payment_type'] == 'counter_cheque'">
+		                                    	شيك مصرفي
+		                                    </t>
+		                                </td>
+		                                <td class="text-right">
+		                                    <t t-esc="line['name']"/>
+		                                </td>
+		                        	</tr>
+		                        </t>
+		                        <tr  class="table-active" style="page-break-inside: avoid;">
+		                        	<td class="text-center">
+		                        		الإجمالي
+		                        	</td>
+		                        	<td></td>
+		                        	<td></td>
+		                        	<td class="text-center">
+		                        		<t t-esc="'{0:,.2f}'.format(float(sum([p['amount'] for p in doc['data']])))"/>
+		                        	</td>
+		                        	<td class="text-center">
+		                        		<t t-esc="'{0:,.2f}'.format(float(sum([p['deduction_amount'] for p in doc['data']])))"/>
+		                        	</td>
+		                        	<td class="text-center">
+		                        		<t t-esc="'{0:,.2f}'.format(float(sum([p['net_amount'] for p in doc['data']])))"/>
+		                        	</td>
+		                        	
+		                        	<td></td>
+		                        	<td></td>
+		                        </tr>
+	                        </t>
+                        </tbody>
+                    </table>
+                </div>
+			</t>
+	</template>
+
+
+</odoo>

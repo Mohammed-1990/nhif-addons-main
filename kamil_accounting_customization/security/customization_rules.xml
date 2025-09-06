@@ -1,0 +1,63 @@
+<odoo>
+	<data>
+	
+		
+		<record id="customization_multi_company_rule" model="ir.rule">
+			<field name="name">customization multi-company</field>
+			<field ref="model_kamil_customization" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="customization_line_multi_company_rule" model="ir.rule">
+			<field name="name">customization line multi-company</field>
+			<field ref="model_kamil_customization_line" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="customization_result_multi_company_rule" model="ir.rule">
+			<field name="name">customization result multi-company</field>
+			<field ref="model_kamil_customization_result" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		
+		<record id="customization_result_customization_multi_company_rule" model="ir.rule">
+			<field name="name">customization.result.customization multi-company</field>
+			<field ref="model_customization_result_customization" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="customization_result_income_multi_company_rule" model="ir.rule">
+			<field name="name">customization.result.income multi-company</field>
+			<field ref="model_customization_result_income" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="customization_result_deduction_multi_company_rule" model="ir.rule">
+			<field name="name">customization.result.deduction multi-company</field>
+			<field ref="model_customization_result_deduction" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="customization_result_deduction_multi_company_rule" model="ir.rule">
+			<field name="name">customization.result.deduction multi-company</field>
+			<field ref="model_customization_result_deduction" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+	</data>
+</odoo>
+

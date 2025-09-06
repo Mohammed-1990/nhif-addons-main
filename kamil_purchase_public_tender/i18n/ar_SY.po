@@ -1,0 +1,1024 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_purchase_public_tender
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200223\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-23 13:12+0000\n"
+"PO-Revision-Date: 2021-09-23 13:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_report__requisition_id
+msgid "# Tender"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:mail.template,subject:kamil_purchase_public_tender.email_template_done_tender_book
+msgid "${object.company_id.name} Done Book (Ref ${object.name or 'n/a' })"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:mail.template,subject:kamil_purchase_public_tender.email_template_tender_book
+msgid "${object.company_id.name} Tender (Ref ${object.requisition_id.name or 'n/a' })"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.success
+msgid "&amp;times;"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "<b>إسم الشركة</b>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "<b>الايميل</b>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "<b>الهاتف</b>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "<b>رقم العطاء</b>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "<b>رقم الكراسة</b>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:mail.template,body_html:kamil_purchase_public_tender.email_template_done_tender_book
+msgid "<div style=\"margin: 0px; padding: 0px;\">\n"
+"        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"            Dear ${object.partner_id.name}\n"
+"            % if object.partner_id.parent_id:\n"
+"                (${object.partner_id.parent_id.name})\n"
+"            % endif\n"
+"            <p>Tender Number is :${object.requisition_id.name}</p><br/>\n"
+"            <p>Book Number is : ${object.name}</p>\n"
+"            <p>You have submit book successfully</p>\n"
+"            <br/><br/>\n"
+"             % set website_url = object.env['ir.config_parameter'].sudo().get_param('web.base.url')\n"
+"        <center>\n"
+"          <a href=\"${website_url}/tenderbook/${object.id}\" style=\"background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Click the link:</a>\n"
+"            <br/><br/>\n"
+"            <span style=\"color:#888888\">(or view attached PDF)</span>\n"
+"        </center>\n"
+"       \n"
+"            Best regards,\n"
+"        </p>\n"
+"    </div>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:mail.template,body_html:kamil_purchase_public_tender.email_template_tender_book
+msgid "<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Dear ${object.partner_id.name}\n"
+"        % if object.partner_id.parent_id:\n"
+"            (${object.partner_id.parent_id.name})\n"
+"        % endif\n"
+"       \n"
+"       <p>Tender Number is :${object.requisition_id.name}</p><br/>\n"
+"            <p>Book Number is : ${object.name}</p>\n"
+"\n"
+"        <br/><br/>\n"
+"         % set website_url = object.env['ir.config_parameter'].sudo().get_param('web.base.url')\n"
+"    <center>\n"
+"      <a href=\"${website_url}/book/${object.id}\" style=\"background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Click the link:</a>\n"
+"        <br/><br/>\n"
+"        <span style=\"color:#888888\">(or view attached PDF)</span>\n"
+"    </center>\n"
+"   \n"
+"        Best regards,\n"
+"    </p>\n"
+"</div>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "<strong style=\"float:right\"> التاريخ </strong>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "<strong>الصندوق القومي للتامين الصحي\n"
+"                    <br/>\n"
+"                        قسم المشتريات\n"
+"                        <br/>\n"
+"                    تقرير المناقصات العامة</strong>\n"
+"                     <br/>"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: kamil_purchase_public_tender
+#: selection:account.tax,tax_type:0
+msgid "Addition"
+msgstr "إضافة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Address"
+msgstr "العنوان"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_requisition__admin_id
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__admin_id
+msgid "Administration"
+msgstr "اﻹدارة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__collection_id
+msgid "Book Fees"
+msgstr "رسوم الكراسة"
+
+#. module: kamil_purchase_public_tender
+#: model:mail.template,report_name:kamil_purchase_public_tender.email_template_done_tender_book
+#: model:mail.template,report_name:kamil_purchase_public_tender.email_template_tender_book
+msgid "Book_${(object.name or '').replace('/','_')}"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_report__order_id
+msgid "Books"
+msgstr "الكراسات"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.report,name:kamil_purchase_public_tender.book_report
+msgid "Books Report"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__company_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_rejection_from
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_request_filter_form
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_wiz_order_general_conditions_form
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_wiz_general_conditions
+msgid "Check General Conditions"
+msgstr "التحقق من الشروط العامة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "City"
+msgstr "المدينة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_request_filter_form
+msgid "Collecting"
+msgstr "تجميع"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Company Name"
+msgstr "اسم المؤسسة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__condtions_ids
+msgid "Condtions"
+msgstr "الشروط"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_rejection_from
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_wiz_order_general_conditions_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Confirm Order"
+msgstr "تأكيد الطلب"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "Contact"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__country_ids
+msgid "Country"
+msgstr "دولة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Create Ratification"
+msgstr "إنشاء تصديق"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__create_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__create_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_purchase_public_tender
+#: selection:account.tax,tax_type:0
+msgid "Deduct"
+msgstr "خصم"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__picking_type_id
+msgid "Deliver To"
+msgstr "التسليم الى"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_requisition__dept_id
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__dept_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,type:0
+#: selection:purchase.requisition,type:0
+#: selection:request.filter,type:0
+msgid "Direct Purchase"
+msgstr "الشراء المباشر"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_report_kamil_purchase_public_tender_public_tender_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__display_name
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__email
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,help:kamil_purchase_public_tender.field_purchase_order__email
+msgid "Email address of the contact"
+msgstr "البريد الالكتروني لجهة الاتصال"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_search
+msgid "Extended Filters"
+msgstr "الفلاتر التفصيلية"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "Finance Manager"
+msgstr "مدير الشؤون المالية"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__general_conditions_ids
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "General Conditions"
+msgstr "الشروط العامة"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "General Conditions Selection"
+msgstr "مطابقة الشروط العامة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection__id
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__id
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_report_kamil_purchase_public_tender_public_tender_report_view__id
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__id
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__id
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__is_contract
+msgid "Is Contact"
+msgstr "عقد"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__is_raft
+msgid "Is Raft"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_report_kamil_purchase_public_tender_public_tender_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line____last_update
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__write_uid
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_public_tender_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__write_date
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,type:0
+#: selection:purchase.requisition,type:0
+#: selection:request.filter,type:0
+msgid "Limited Tender"
+msgstr "العطاء المحدود"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "Locked"
+msgstr "مغلق"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Matching"
+msgstr "مطابقة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_book_rejection__name
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_request_filter_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_report__ordering_date
+msgid "Ordering Date"
+msgstr "تاريخ الطلب"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_search
+msgid "Orders"
+msgstr "أوامر"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__other_features
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Other Features"
+msgstr "مميزات آخرى"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Other Features ..."
+msgstr "مميزات آخرى..."
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Other Features...."
+msgstr "مميزات آخرى ...."
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__phone
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Print Invoice"
+msgstr "طباعة الفاتورة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Private Conditiond"
+msgstr "الشروط الخاصة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__private_conditions
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Private Conditions"
+msgstr "الشروط الخاصة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Product"
+msgstr "المنتج"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__product_tmpl_id
+msgid "Product Tmpl"
+msgstr "قالب المنتج"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_public_tender
+#: model:ir.ui.menu,name:kamil_purchase_public_tender.menu_public_tender
+#: model:ir.ui.menu,name:kamil_purchase_public_tender.menu_public_tender_root
+#: selection:purchase.order,type:0
+#: selection:purchase.requisition,type:0
+#: selection:request.filter,type:0
+msgid "Public Tender"
+msgstr "العطاء العام"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_public_tender_book
+msgid "Public Tender Book"
+msgstr "كراسات العطاء العام"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_ratification_ratification__purchase_id
+msgid "Purchase"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_purchase_order_valuation
+msgid "Purchase Analysis"
+msgstr "تحليل المشتريات"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.actions.act_window,help:kamil_purchase_public_tender.action_purchase_order_valuation
+msgid "Purchase Analysis allows you to easily check and analyse your company purchase history and performance. From this menu you can track your negotiation performance, the delivery performance of your vendors, etc."
+msgstr "يسمح لك تحليل الشراء بالتحقق من تاريخ مشتريات وأداء مؤسستك وتحليلهما. من هذه القائمة، يمكنك تتبع أداء عملية المفاوضات وأداء تسليم مورديك، إلخ."
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "Purchase Department"
+msgstr "قسم المشتريات"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_purchase_order
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_search
+msgid "Purchase Orders"
+msgstr "أوامر الشراء"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_order_graph
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_pivot
+msgid "Purchase Orders Statistics"
+msgstr "إحصائيات أوامر الشراء"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Purchase Purpose"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_purchase_report
+msgid "Purchase Report"
+msgstr "تقرير الشراء"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_purchase_requisition
+msgid "Purchase Requisition"
+msgstr "طلب الشراء"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_search
+msgid "Purchased Last 365 Days"
+msgstr "مشتريات آخر 365 يوم"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.requisition,type:0
+msgid "Qualifying Suppliers"
+msgstr "تأهيل الموردين"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_search
+msgid "Quotations"
+msgstr "عروض الأسعار"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "RFQ Sent"
+msgstr "تم إرسال طلب عرض السعر"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_ratification
+#: model:ir.model,name:kamil_purchase_public_tender.model_ratification_ratification
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Ratification"
+msgstr "التصديق"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__ratification_count
+msgid "Ratification Count"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Re-Send by Email"
+msgstr "إعادة إرسال رسالة بريد إلكتروني"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Reasons for rejection"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_rejection
+msgid "Rejection"
+msgstr "رفض"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Remove"
+msgstr "إزالة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_product_supplier_inherit2
+msgid "Reordering Rule"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_public_tender_wizard
+#: model:ir.actions.report,name:kamil_purchase_public_tender.public_tender_report_pdf
+#: model:ir.ui.menu,name:kamil_purchase_public_tender.menu_report_public_tender
+msgid "Report Public Tender"
+msgstr "تقرير المناقصات العامة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.actions.act_window,name:kamil_purchase_public_tender.action_request_filter
+#: model:ir.model,name:kamil_purchase_public_tender.model_request_filter
+msgid "Request Filter"
+msgstr "تجميع الطلبات"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,type:0
+#: selection:request.filter,type:0
+msgid "Request For Quotaion(RFQs)"
+msgstr "عروض الاسعار"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_requisition__request_ids
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__request_ids
+msgid "Requests"
+msgstr "الطلبات"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_publice_tender_form
+msgid "Requests Collecting"
+msgstr "تجميع الطلبات"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_product_product__rule_admin_line_ids
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_product_template__rule_admin_line_ids
+msgid "Rule Admin Line"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__select_all
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_wiz_order_general_conditions_form
+msgid "Select All"
+msgstr "تحديد الكل"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Send PO by Email"
+msgstr "إرسال أمر الشراء بالبريد الإلكتروني"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Send by Email"
+msgstr "إرسال بالبريد الإلكتروني"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_rule_administration_line__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__state_ids
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_report__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "State ..."
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__state_dp
+msgid "State Dp"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__state_rfq
+msgid "State Rfq"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__state_tender
+msgid "State Tender"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_stock_rule
+msgid "Stock Rule"
+msgstr "قاعدة المخزون"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Street"
+msgstr "الشارع"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Street 2"
+msgstr "الشارع 2"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.success
+msgid "Success"
+msgstr "نجاح"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_publice_tender_form
+msgid "Suppliers Valuation"
+msgstr "تقييم الموردين"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_account_tax
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__technical_report
+msgid "Technical Report"
+msgstr "التقرير الفني"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "Technical Selection"
+msgstr "الفرز الفني"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_tender_search
+msgid "Tender"
+msgstr "العطاء"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Tender Book"
+msgstr "كراسات التأهيل"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Tender Book:"
+msgstr "الكراسات :"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__terms
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.view_public_tender_book
+msgid "Terms"
+msgstr "شروط السداد"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Terms...."
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.success
+msgid "Thanks!"
+msgstr "شكرا"
+
+#. module: kamil_purchase_public_tender
+#: code:addons/kamil_purchase_public_tender/models/tender_book.py:187
+#, python-format
+msgid "The Product is not expenses account please insert !! "
+msgstr "الاصناف غير مربوطة بحساب المصروفات الرجاء ادخالها!!"
+
+#. module: kamil_purchase_public_tender
+#: code:addons/kamil_purchase_public_tender/models/tender_book.py:176
+#, python-format
+msgid "The location is not account please insert !! "
+msgstr "المخزن ليس لديه حساب الرجاء ادخال حسابه من اعدادات المخزن"
+
+#. module: kamil_purchase_public_tender
+#: code:addons/kamil_purchase_public_tender/wizard/general_conditions.py:40
+#, python-format
+msgid "This order is missing '%s' attachments."
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: code:addons/kamil_purchase_public_tender/wizard/general_conditions.py:38
+#, python-format
+msgid "This order is not check '%s' exist."
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,help:kamil_purchase_public_tender.field_purchase_order__picking_type_id
+msgid "This will determine operation type of incoming shipment"
+msgstr "سيحدد هذا نوع العملية للشحنة التالية"
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "To Approve"
+msgstr "مطلوب الموافقة عليهم"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_report__price_total
+msgid "Total Price"
+msgstr "السعر الإجمالي"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_account_tax__tax_type
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order__type
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_order_line__type
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_requisition__type
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_request_filter__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.success
+msgid "We will get back to you shortly."
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.index
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_wiz_order_general_conditions
+msgid "Wiz order general conditions"
+msgstr "تقرير الشروط العامة"
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.success
+msgid "Your message has been sent successfully."
+msgstr "نم ارسال الرسالة بنجاح"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_book_rejection
+msgid "book.rejection"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_purchase_report__deadline_date
+msgid "deadline Date"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: selection:purchase.order,state:0
+#: selection:purchase.order,state_dp:0
+#: selection:purchase.order,state_rfq:0
+#: selection:purchase.order,state_tender:0
+#: selection:purchase.report,state:0
+msgid "draft"
+msgstr "مسودة"
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_public_tender_wizard
+msgid "public.tender.wizard"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_report_kamil_purchase_public_tender_public_tender_report_view
+msgid "report.kamil_purchase_public_tender.public_tender_report_view"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model,name:kamil_purchase_public_tender.model_rule_administration_line
+msgid "rule.administration.line"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model:ir.model.fields,field_description:kamil_purchase_public_tender.field_wiz_order_general_conditions__order_id
+msgid "tender"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "اجمالي المبلغ"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "الصفحة:"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "الضرائب"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "الكمية المطلوبة"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "المسؤول"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "المنتجات"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "المورد"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "الي"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "تاريخ الطلب"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "رقم الكراسة المختارة"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "في الفترة من"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.book_report_view
+msgid "كراسة العطاء"
+msgstr ""
+
+#. module: kamil_purchase_public_tender
+#: model_terms:ir.ui.view,arch_db:kamil_purchase_public_tender.public_tender_report_view
+msgid "ممثل الحضور"
+msgstr ""
+

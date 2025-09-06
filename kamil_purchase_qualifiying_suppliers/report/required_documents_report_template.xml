@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="report_required_documents_doc">
+		<t t-call="web.external_layout">
+			<div class="page">
+				<div class="oe_structure"/>
+				<div>
+					<h3 style="font-family:Calibri;" class="text-center">
+						<b>المستندات المطلوبة</b>
+					</h3>	
+					<br/>			
+				</div>
+				 <table class="text-right table table-condensed table-hover" border="1">
+					<thead>
+						<tr>
+							<td><strong>الرقم</strong></td>
+							<td><strong>إسم الشركة</strong></td>
+							<t t-foreach="o.general_conditions_ids" t-as="c">
+								<td>
+									<strong><span t-field="c.name" /></strong>
+								</td>
+							</t>
+							<td><strong>ملاحظات</strong></td>
+						</tr>
+					</thead>
+					<tbody>
+						<t t-if="o.type=='qualifying_suppliers'">
+							<t t-foreach="o.tender_book_ids" t-as="l">
+								<tr>
+									<td>
+										<t t-esc="l_index + 1"/>
+									</td>
+									<td>
+										<span t-field="l.partner_id.name"/>
+									</td>
+									<t t-foreach="o.general_conditions_ids" t-as="c">
+										<td></td>
+									</t>
+									<td></td>	
+								</tr>	
+							</t>
+						</t>
+						<t t-if="o.type in ('public_tender','limited_tender')">
+							<t t-foreach="o.purchase_ids" t-as="l">
+								<tr>
+									<td>
+										<t t-esc="l_index + 1"/>
+									</td>
+									<td>
+										<span t-field="l.partner_id.name"/>
+									</td>
+									<t t-foreach="o.general_conditions_ids" t-as="c">
+										<td></td>
+									</t>
+									<td></td>	
+								</tr>	
+							</t>
+						</t>
+					</tbody>
+				</table>
+
+				<br/><br/>
+				<strong style="float:right">أعضاء اللجنة</strong>
+				<br/><br/>
+				<table class="text-right table table-condensed table-hover" border="1">
+					<thead>
+						<tr>
+							<td ><strong>الرقم</strong></td>
+							<td><strong>إسم العضو</strong></td>
+							<td><strong>الوظيفة</strong></td>
+							<td><strong>التوقيع</strong></td>
+						</tr>
+					</thead>
+					<tbody>
+						<t t-foreach="o.committee_member_ids" t-as="c">
+							<tr>
+								<td colspan="2">
+									<t t-esc="c_index + 1"/>
+								</td>
+								<td>
+									<span t-field="c.employee.name"/>
+								</td>
+								<td>
+									<span t-field="c.role"/>
+								</td>	
+								<td colspan="4"></td>
+							</tr>	
+						</t>
+					</tbody>
+				</table>
+				<br/><br/><br/><br/>
+				<table class="text-right table table-condensed table-hover">
+					<tr>
+						<td>
+							<strong style="float:right"> التاريخ </strong>
+							<span style="float:right;margin-right:20px" t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/> 
+						</td>
+					</tr>
+				</table>
+			</div>
+		</t>
+	</template>
+
+
+
+
+
+	<template id="report_required_documents">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="kamil_purchase_qualifiying_suppliers.report_required_documents_doc"/>
+			</t>
+		</t>
+	</template>
+</odoo>

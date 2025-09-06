@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<!-- 	<act_window
+		id="action_collection"
+		name="Asset Scrap"
+		res_model="collection.collection" src_model="account.asset.asset"
+		view_mode="form"
+		target="current"
+		context="{'default_asset_id':active_id, 'create':'0'}"
+	/>
+ -->
+	<act_window
+		id="action_collection_list"
+		name="Asset Scrap"
+		res_model="collection.collection" src_model="account.asset.asset"
+		view_mode="tree,form"
+		domain="[('asset_id','=',active_id)]"
+		context="{'create':False}"
+	/>
+
+
+	<!-- Asset Inherit-->
+	<record id="view_account_asset_asset_form_inherit2" model="ir.ui.view">
+		<field name="name">account.asset.asset.form.inherit2</field>
+		<field name="model">account.asset.asset</field>
+		<field name="inherit_id" ref="account_asset.view_account_asset_asset_form" />
+		<field name="arch" type="xml">
+			<field name="category_id" position="after">
+				<field 
+					name="product_id" 
+					domain="[('is_asset','=',True)]" 
+					required="1"
+					context="{'default_asset_id':True}"
+				/>
+			</field>
+			<field name="category_id" position="before">
+				<field name="admin_id"/>
+			</field>
+			<field name="currency_id" position="before">
+				<field name="dept_id"/>
+			</field>
+			<field name="value_residual" position="after">
+				<label for="annual_dep_ratio" required="1"/>
+				<div>
+					<field name="annual_dep_ratio" class="oe_inline"/>
+					<span class="oe_inline">%</span>
+				</div>
+				<field name="annual_dep_value" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>	
+				<field name="years_use"/>
+			</field>
+			<xpath expr="//group[1]" position="after">
+				<separator string="Asset Information"/>
+				<group>
+					<group>
+						<field name="dep_firt_period" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+						<field name="dep_last_period" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+						<field name="depreciation_year" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+						<field name="asset_evaluation" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					</group>
+					<group>
+						<field name="balance_1_1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+						<field name="additions" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+						<field name="exclusion" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+						<field name="amount_firt_period" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					</group>
+				</group>
+			</xpath>
+			<field name="method_period" position="attributes">
+				<attribute name="readonly">True</attribute>
+			</field>
+			<field name="method_number" position="attributes">
+				<attribute name="readonly">True</attribute>
+			</field>
+			<xpath expr="//button[@name='set_to_close']" position="attributes">
+				<attribute name="invisible">True</attribute>
+			</xpath>
+			<xpath expr="//notebook/page[2]" position="after">
+				<page name="inventory" string="Inventory">
+					<group col="4">
+						<field name="location_id" required="1"/>
+						<field name="inv_account_id"/>
+						<field name="inv_move_id" attrs="{'invisible':[('inv_move_id','=',False)]}"/>
+					</group>
+				</page>
+			
+			</xpath>
+			<xpath expr="//button[@name='validate']" position="after">
+				<button
+					name="add_asset"
+					type="object"
+					string="Add Asset"
+					class="btn-primary"
+					states="draft,open"
+					
+				/>
+				<button
+					name="asset_depreciation"
+					type="object"
+					string="Asset Depreciation"
+					class="btn-primary"
+					states="draft,open"
+				/>
+				<button
+					name="%(kamil_accounting_assets.action_asset_evaluation)d"
+					type="action"
+					string="Asset Evaluation"
+					class="btn-primary"
+					states="draft,open"
+				/>
+				<button
+					name="asset_scrap"
+					type="object"
+					string="Asset Scrap"
+					class="btn-primary"
+					states="draft,open"
+				/>
+				<button
+					name="action_donation"
+					type="object"
+					string="Asset Donation"
+					class="btn-primary"
+					states="draft,open"
+				/>
+				<button
+					name="action_loss"
+					type="object"
+					string="Asset Loss"
+					class="btn-primary"
+					states="draft,open"
+				/>
+				<button
+					name="asset_freez"
+					type="object"
+					string="Asset Freez"
+					class="btn-primary"
+					states="draft,open"
+				/>
+				<button
+					name="reset_freez"
+					type="object"
+					string="Reset to draft"
+					states="freeze"
+				/>
+			</xpath>
+			<xpath expr="//button[@name='open_entries']" position="after">
+				<button 
+					name="%(action_collection_list)d"
+					type="action"
+					icon="fa-pencil-square-o">
+					<field name="scrap_count" string="Scrap Collection" widget="statinfo" />
+				</button>
+                            
+			</xpath>
+		</field>
+	</record>
+
+	<!-- Account asset category-->
+	<record id="view_account_asset_category_form_inherit" model="ir.ui.view">
+		<field name="name">account.asset.category.form.inherit</field>
+		<field name="model">account.asset.category</field>
+		<field name="inherit_id" ref="account_asset.view_account_asset_category_form"/>
+		<field name="arch" type="xml">
+			<field name="date_first_depreciation" position="after">
+				<field name="code" />
+			</field>
+			<field name="account_depreciation_expense_id" position="after">
+				<field name="account_evaluation_id"/>
+				<field name="account_maintenance_id"/>
+				<field name="account_grant_kind_id"/>
+				<field name="account_profit_id"/>
+				<field name="account_loss_id"/>
+			</field>
+		</field>
+	</record>
+
+
+
+	<!-- Stock location-->
+	<record id="view_location_form_inherit" model="ir.ui.view">
+		<field name="name">stock.location.form.inherit</field>
+		<field name="model">stock.location</field>
+		<field name="inherit_id" ref="stock.view_location_form"/>
+		<field name="arch" type="xml">
+			<field name="return_location" position="after">
+				<field name="account_id"/>
+			</field>
+		</field>
+	</record>
+
+
+	<!--Menu Asset Report-->
+	<menuitem id="menu_asset_report" parent="account.account_reports_management_menu" sequence="30" action="kamil_accounting_assets.action_wiz_asset_report"/>
+
+
+</odoo>

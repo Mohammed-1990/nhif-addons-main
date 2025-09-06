@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="ext_contraact_smart_button" model="ir.ui.view">
+            <field name="name">ext.view.buttons</field>
+            <field name="model">kamil.contracts.extensions</field>
+            <field name="inherit_id" ref="kamil_contracts.kamil_contract_contract_extension_form_veiw" />
+            <field name="arch" type="xml">
+                <div name="button_box" position="inside">
+                    <button class="oe_stat_button" type="object" name="get_extensions"
+                        icon="fa-briefcase">
+                        <field string="Extensions" name="ext_count" widget="statinfo"/>
+                    </button>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

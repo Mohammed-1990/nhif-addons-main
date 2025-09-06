@@ -1,0 +1,81 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_vacancies_report">
+        <field name="name">paperformat.vacancies.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="vacancies_report"
+            model="vacancies.wizard"
+            string="Report by Vacancies"
+            report_type="qweb-html"
+            name="kamil_hr_record_jobs.vacancies_report_view"
+            paperformat="paperformat_vacancies_report"
+            menu="False"/>
+
+    <template id="vacancies_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+             <div dir="rtl" style="float:right;text-align:start;">
+                <a href="#" target="_blank">
+                    <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-printer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 2H5a1 1 0 0 0-1 1v2H3V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h-1V3a1 1 0 0 0-1-1zm3 4H2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v1H2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+                        <path fill-rule="evenodd" d="M11 9H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM5 8a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5z"/>
+                        <path d="M3 7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="page">
+                <br/><br/><div class="text-center" style="font:500;">
+                   تقرير حسب الوظيفة الشاغرة<br/>
+                    <t t-esc="name"/>
+                </div><br/>
+                <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    <thead class="table-active" style="display: table-header-group;">
+                        <th class="text-center fit">الرقم التسلسلي</th>
+                        <th class="text-center fit">رقم الوظيفة</th>
+                        <th class="text-center fit">إسم الوظيفة</th>
+                        <th class="text-center fit">لدرجة</th>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr>
+                                <td class="text-center">
+                                    <span t-esc="doc['number']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['job_number']"/>
+                                </td>
+
+                                <td class="text-center">
+                                    <span t-esc="doc['job']"/>
+                                </td>
+
+                                <td class="text-center">
+                                    <span t-esc="doc['employee_degree']"/>
+                                </td>
+
+                            </tr>
+                        </t>
+                    </tbody>
+                    <t t-if="docs==[]">
+                        <tr>
+                            <th class="text-center" colspan="4">لا تــــــوجـــد بيــانات</th>
+                        </tr>
+                    </t>
+                </table>
+            </div>
+        </t>
+        </t>
+    </template>
+</odoo>

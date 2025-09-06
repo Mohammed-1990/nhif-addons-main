@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <template id="inherit_layout_footer_copyright" inherit_id="website.layout" name="Footer Copyright">
+    	<xpath expr="//div[@id='footer']" position="replace">
+        	<!-- <div class="o_footer_copyright"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-muted text-center text-md-left">
+                        <span>Copyright &amp;copy;</span> <span t-field="res_company.name" itemprop="name">Company name</span>
+                        <t t-call="website.language_selector"/>
+                    </div>
+                    <div class="col-lg-6 text-right o_not_editable" t-if="not editable">
+                        <t t-call="website.brand_promotion"/>
+                    </div>
+                </div>
+            </div>
+        	 </div>  -->
+        	 <img src="/kamil_homepage_layout/static/src/footer.png" style=" padding-right: 50px; padding-left: 50px;  align:center; display: block;  vertical-align: middle; opacity:0.85;width:100%; height: auto; z-index:100; " />
+    	</xpath>
+		</template>
+
+
+		<template id='inherit_brand_promotion' inherit_id="website.brand_promotion" name="Brand Promotion">
+    	<div class="o_brand_promotion">
+			<!--         Create a <a target="_blank" href="http://www.odoo.com/page/website-builder?utm_source=db&amp;utm_medium=website">free website</a> with
+        	<a target="_blank" class="badge badge-danger" href="http://www.odoo.com/page/website-builder?utm_source=db&amp;utm_medium=website">Odoo</a> -->
+    	</div>
+		</template>
+
+		<template id="inherit_layout_logo_show" inherit_id="website.layout_logo_show" customize_show="True" name="Show Logo img">
+    		<xpath expr="//header//a[hasclass('navbar-brand')]" position="replace">
+        	<!-- <a href="/" class="navbar-brand logo">
+            <span t-field="res_company.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+        	</a> -->
+    		</xpath>
+		</template>
+
+        
+		<template id="inherit_footer_custom" inherit_id="website.footer_custom" name="Footer">
+		    <xpath expr="//div[@id='footer']" position="replace">
+		        <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+		            <!-- <section class="s_text_block pt16 pb8">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-lg-4">
+		                            <h5>Our Products &amp; Services</h5>
+		                            <ul class="list-unstyled">
+		                                <li><a href="/">Home</a></li>
+		                            </ul>
+		                        </div>
+		                        <div class="col-lg-4" id="connect">
+		                            <h5>Connect with us</h5>
+		                            <ul class="list-unstyled">
+		                                <li><a href="/contactus">Contact us</a></li>
+		                                <li><i class="fa fa-phone"/> <span class="o_force_ltr" t-field="res_company.phone"/></li>
+		                                <li><i class="fa fa-envelope"/>  <span t-field="res_company.email"/></li>
+		                            </ul>
+		                            <p>
+		                                <a t-if="website.social_facebook" t-att-href="website.social_facebook" class="btn btn-sm btn-link"><i class="fa fa-2x fa-facebook-square"/></a>
+		                                <a t-if="website.social_twitter" t-att-href="website.social_twitter" class="btn btn-sm btn-link"><i class="fa fa-2x fa-twitter"/></a>
+		                                <a t-if="website.social_linkedin" t-att-href="website.social_linkedin" class="btn btn-sm btn-link"><i class="fa fa-2x fa-linkedin"/></a>
+		                                <a t-if="website.social_youtube" t-att-href="website.social_youtube" class="btn btn-sm btn-link"><i class="fa fa-2x fa-youtube-play"/></a>
+		                                <a t-if="website.social_googleplus" t-att-href="website.social_googleplus" class="btn btn-sm btn-link" rel="publisher"><i class="fa fa-2x fa-google-plus-square"/></a>
+		                                <a t-if="website.social_github" t-att-href="website.social_github" class="btn btn-sm btn-link"><i class="fa fa-2x fa-github"/></a>
+		                                <a t-if="website.social_instagram" t-att-href="website.social_instagram" class="btn btn-sm btn-link"><i class="fa fa-2x fa-instagram"/></a>
+		                            </p>
+		                        </div>
+		                        <div class="col-lg-4">
+		                            <h5>
+		                                <span t-field="res_company.name"/>
+		                                <small> - <a href="/aboutus">About us</a></small>
+		                            </h5>
+		                            <p>
+		                                We are a team of passionate people whose goal is to improve everyone's
+		                                life through disruptive products. We build great products to solve your
+		                                business problems.
+		                            </p>
+		                            <p>
+		                                Our products are designed for small to medium size companies willing to optimize
+		                                their performance.
+		                            </p>
+		                        </div>
+		                    </div>
+		                </div>
+		            </section> -->
+		        </div>
+		    </xpath>
+		</template>
+   		
+
+		<template id='brand_promotion' inherit_id="website.brand_promotion" name="Inherit Brand Promotion">
+    	
+    		<xpath expr="//div[@class='o_brand_promotion']" position="replace">
+	    <!--     Create a <a target="_blank" href="http://www.odoo.com/page/website-builder?utm_source=db&amp;utm_medium=website">free website</a> with
+	        <a target="_blank" class="badge badge-danger" href="http://www.odoo.com/page/website-builder?utm_source=db&amp;utm_medium=website">Odoo</a> 
+    	</div> -->
+    		</xpath>
+		</template>
+
+		<!-- <template id="inherit_layout_logo_show" inherit_id="website.layout_logo_show" customize_show="True" name="Show Logo">
+    		<xpath expr="//header//a[hasclass('navbar-brand')]" position="replace">
+        		<a href="/" class="navbar-brand logo">
+            	<span t-field="res_company.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+        		</a>
+    		</xpath>
+		</template>
+ -->
+
+ 		<template id="inherit_login_layout" inherit_id="web.login_layout" name="inherit Login Layout">
+ 		
+		        <t t-call="web.layout" >
+		            <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+		            <t t-set="head">
+		                <t t-call-assets="web.assets_common" t-js="false"/>
+		                <t t-call-assets="web.assets_frontend" t-js="false"/>
+		                <t t-call-assets="web.assets_common" t-css="false"/>
+		                <t t-call-assets="web.assets_frontend" t-css="false"/>
+		            </t>
+		            <t t-set="body_classname"  />
+		             <img src="/kamil_homepage_layout/static/src/header_clean.png" style=" padding-right: 50px; padding-left: 50px;  align:center; display: block;  vertical-align: middle; opacity:0.85;width:100%; height: auto; z-index:100; " />
+
+		             <div class="page" >
+
+		                <div class="container mb-1 pb-1">
+		                    <div t-attf-class="card border-0 mx-auto mt-5 bg-100 {{login_card_classes}} o_database_list" style="max-width: 300px;">
+		                        <div class="card-body">
+		                           <!--  <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
+		                                <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+		                            </div> -->
+		                            <t t-raw="0"/>
+		                            <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
+		                                <t t-if="not disable_database_manager">
+		                                    <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
+		                                </t>
+		                                <a href="http://www.almedtech.com" target="_blank">Powered by <span>AlmedTech-KRT</span></a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <img src="/kamil_homepage_layout/static/src/footer.png" style=" padding-right: 50px; padding-left: 50px;  align:center; display: block;  vertical-align: middle; opacity:0.85;width:100%;height:auto; z-index:100; " />
+
+		       </t>
+		
+    	</template>
+
+    	<template id="inherit_affix_top_menu" inherit_id="website.affix_top_menu" customize_show="True" name="Affix Top Menu">
+    		<xpath expr="//header" position="replace">
+    			<img src="/kamil_homepage_layout/static/src/header_clean.png" style=" padding-right: 50px; padding-left: 50px;  align:center; display: block;  vertical-align: middle; opacity:0.85;width:100%;height:auto; z-index:100; " />
+        		<attribute name="t-attf-class" add="#{'o_affix_enabled'}" separator=" "/>
+    		</xpath>
+		</template>
+
+		<template inherit_id="web.login" id='inherit_login' name="inhiret Login">
+			<xpath expr="//div[@class='form-group field-login']" position="replace">
+			
+	            <label for="login" >User</label>
+	            <!-- <div class="col-md-8"> -->
+	                <input id="login" type="text" name="login" class="form-control" required="required" autocomplete="off"/>
+	            <!-- </div> -->
+
+        	</xpath>
+
+    	    <xpath expr="//div[@class='form-group field-password']"  position="replace">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" name="password" id="password" t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required" autocomplete="current-password" t-att-autofocus="'autofocus' if login else None" maxlength="4096"/>
+            </xpath>
+
+
+        </template>
+			<record id="view_users_form_simple_modif_hide_password" model="ir.ui.view">
+                <field name="name">res.users.preferences.hide.password..form</field>
+                <field name="model">res.users</field>
+                <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//button[@name='preference_change_password']" position="replace"/>
+                </field>
+            </record>		
+	
+    </data>
+</odoo>

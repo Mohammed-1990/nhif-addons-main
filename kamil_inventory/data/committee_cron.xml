@@ -1,0 +1,19 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="cron_expire_Committee" model="ir.cron">
+            <!-- <field name="function">check_expire_record</field> -->
+            <field name="interval_type">days</field>
+            <field name="name">Expire Committee</field>
+            <field name="numbercall">-1</field>
+            <field name="priority">5</field>
+            <field name="doall">False</field>
+            <field name="active">True</field>
+            <field name="interval_number">1</field>
+            <field name="model_id" ref="model_committee_committee"></field>
+            <field name="state">code</field>
+            <field name="code">model.check_expire_record()</field>
+        </record>
+
+    </data>
+</odoo>

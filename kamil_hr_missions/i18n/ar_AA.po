@@ -1,0 +1,1323 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_missions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-14 11:37+0000\n"
+"PO-Revision-Date: 2021-02-14 11:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid ", إعتباراً من:"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid ", بتاريخ:"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "<br/>, الخاص بسفر محدد أدناه لولاية"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "<br/><br/> الي"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "<span>\n"
+"                                ......................................................................\n"
+"                            </span>\n"
+"                            <strong class=\"text-center\">:الشؤون الماليه والادارية</strong>\n"
+"                            <br/><br/><br/>\n"
+"                            <span>\n"
+"                                ......................................................................\n"
+"                            </span>\n"
+"                            <strong class=\"text-center\">:المراجعة</strong>"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+msgid "<span>\n"
+"                                ......................................................................\n"
+"                            </span>\n"
+"                            <strong class=\"text-center\">:قسم الاجور والمزايا</strong><br/><br/><br/>\n"
+"                            <span>\n"
+"                                ......................................................................\n"
+"                            </span>\n"
+"                            <strong class=\"text-center\">:الادارة العامة للموارد البشرية</strong>\n"
+"                            <br/><br/><br/>\n"
+"                            <span>\n"
+"                                ......................................................................\n"
+"                            </span>\n"
+"                            <strong class=\"text-center\">:المراجعة</strong>"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,state:0
+#: selection:mission.petty,state:0
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__allowance_id
+msgid "Allowance"
+msgstr "البدل"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__amount
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__assigned
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__assigned_id
+msgid "Assigned"
+msgstr "تكليف"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__assigned_date
+msgid "Assigned Date"
+msgstr "تاريخ التكليف"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__assigned_id2
+msgid "Assigned Id2"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,state:0
+msgid "Benefits And Wages"
+msgstr "قسم المزايا والأجور"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__categories_petty_id
+msgid "Categories Petty"
+msgstr "الفئات والنثريه"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_filtering_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_report_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_missions
+#: selection:mission.extend,state:0
+#: selection:mission.filtering,state:0
+#: selection:mission.report,state:0
+#: selection:missions.assigned,state:0
+msgid "Confirmed"
+msgstr "مؤكده"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__cost_travel_fuel
+msgid "Cost Travel Fuel"
+msgstr "تكلفه وقود السفر"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__cost_visas
+msgid "Cost Visas"
+msgstr "تكلفه التأشيرات"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__create_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__date
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_report_form_view
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__date_from
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__date_from
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__date_to
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__date_to
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__departure_fee
+msgid "Departure Fee"
+msgstr "رسوم المغادرة"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_filtering_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_categories_petty_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__display_name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,state:0
+#: selection:mission.extend,state:0
+#: selection:mission.filtering,state:0
+#: selection:mission.petty,state:0
+#: selection:mission.report,state:0
+#: selection:missions.assigned,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__extend_reason
+msgid "Extend Reason"
+msgstr "سبب التمديد"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__extend_to
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_extend_form_view
+msgid "Extend To"
+msgstr "التمديد إلى"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__filtering_id
+msgid "Filtering"
+msgstr "تصفيه"
+
+#. module: kamil_hr_missions
+#: selection:mission.extend,state:0
+msgid "Finance"
+msgstr "الشؤون المالية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__degree_id
+msgid "Functional Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_missions
+#: selection:mission.extend,state:0
+msgid "GM Confirm"
+msgstr "موافقة المدير العام"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,state:0
+msgid "General Administration for Human Resources"
+msgstr "الادارة العامة للموارد البشرية"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,state:0
+msgid "Human Resource Management"
+msgstr "ادارة الموارد البشرية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__message_unread
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__message_unread
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__message_unread
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__message_unread
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__message_needaction
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__message_needaction
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__message_needaction
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__message_needaction
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__message_has_error
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__message_has_error
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__message_has_error
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__message_has_error
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_missions
+#: selection:missions.assigned,missions_type:0
+#: selection:missions.categories.petty,missions_type:0
+msgid "Inside State"
+msgstr "داخل الولاية"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,state:0
+msgid "Internal Auditor"
+msgstr "المراجع الداخلي"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:158
+#, python-format
+msgid "It is not possible to create more than one incidental for the same mission"
+msgstr "لا يمكن انشاء اكثر من نثرية لنفس المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__item
+msgid "Item"
+msgstr "الصنف"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__job_title_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__job_title_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__job_title_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__job_title_id
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty____last_update
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__write_date
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__line_ids
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__line_ids2
+msgid "Line Ids2"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_extend_form_view
+msgid "Manager Confirm"
+msgstr "موافقة رئيس القسم"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__means_of_travel
+msgid "Means Of Travel"
+msgstr "وسيلة السفر"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__mission_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__mission_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__mission_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__mission_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__mission_id
+msgid "Mission"
+msgstr "رقم المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__mission_allowance
+#: model:ir.ui.menu,name:kamil_hr_missions.menu_mission_allowance
+msgid "Mission Allowance"
+msgstr "بدل المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.ui.menu,name:kamil_hr_missions.menu_missions_categories_petty
+msgid "Mission Categories And Petty"
+msgstr "فئات ونثريه المأمورية"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_categories_petty_form_view
+msgid "Mission Categories and Petty"
+msgstr "فئات ونثريه المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__mission_details
+msgid "Mission Details"
+msgstr "تفاصيل المهمه"
+
+#. module: kamil_hr_missions
+#: model:ir.ui.menu,name:kamil_hr_missions.menu_mission_extend
+msgid "Mission Extend"
+msgstr "تمديد المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.ui.menu,name:kamil_hr_missions.menu_mission_petty
+msgid "Mission Petty"
+msgstr "نثرية المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__mission_purpose
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__mission_purpose
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__mission_purpose
+msgid "Mission Purpose"
+msgstr "الغرض من المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.ui.menu,name:kamil_hr_missions.menu_mission_report
+msgid "Mission Report"
+msgstr "تقرير عن المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.actions.act_window,name:kamil_hr_missions.action_mission_allowance
+msgid "Mission allowance"
+msgstr "بدل مأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.actions.act_window,name:kamil_hr_missions.action_mission_extend
+msgid "Mission extend"
+msgstr "تمديد المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.actions.act_window,name:kamil_hr_missions.action_mission_petty
+msgid "Mission petty"
+msgstr "نثرية المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.actions.act_window,name:kamil_hr_missions.action_mission_report
+msgid "Mission report"
+msgstr "تقرير عن المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_missions_assigned
+#: model:ir.ui.menu,name:kamil_hr_missions.hr_missions_menu
+msgid "Missions"
+msgstr "المأموريات"
+
+#. module: kamil_hr_missions
+#: model:ir.actions.act_window,name:kamil_hr_missions.action_missions_assigned
+#: model:ir.actions.report,name:kamil_hr_missions.missions_assigned_report
+#: model:ir.ui.menu,name:kamil_hr_missions.menu_missions_assigned
+msgid "Missions Assigned"
+msgstr "تكليف المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__area
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__area
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__missions_side
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+msgid "Missions Side"
+msgstr "جهه المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__missions_type
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__missions_type
+msgid "Missions Type"
+msgstr "نوع المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned_line2__name
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__net
+msgid "Net"
+msgstr "الصافي"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__no_days
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__no_days
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__no_days
+msgid "No Days"
+msgstr "عدد الأيام"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__notes
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__name
+msgid "Number"
+msgstr "الرقم"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_missions
+#: selection:missions.assigned,missions_type:0
+#: selection:missions.categories.petty,missions_type:0
+msgid "Outside State"
+msgstr "خارج الولاية"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,activity_state:0
+#: selection:mission.extend,activity_state:0
+#: selection:mission.petty,activity_state:0
+#: selection:mission.report,activity_state:0
+#: selection:missions.assigned,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+msgid "Participants"
+msgstr "المشاركين"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__petty_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__petty_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_categories_petty_line__petty
+msgid "Petty"
+msgstr "نثرية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__petty_cash_clearance_count
+msgid "Petty Cash Clearance Count"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__petty_cash_count
+msgid "Petty Cash Count"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__petty_amount
+msgid "Petty amount"
+msgstr "مبلغ النثرية"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:48
+#, python-format
+msgid "Petty cash"
+msgstr "النثرية"
+
+#. module: kamil_hr_missions
+#: model:ir.actions.act_window,name:kamil_hr_missions.action_mission_filtering
+msgid "Petty cash clearance"
+msgstr "تصفية النثرية"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,activity_state:0
+#: selection:mission.extend,activity_state:0
+#: selection:mission.petty,activity_state:0
+#: selection:mission.report,activity_state:0
+#: selection:missions.assigned,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:338
+#, python-format
+msgid "Please Enter reason"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:436
+#, python-format
+msgid "Please enter allowance details"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:292
+#, python-format
+msgid "Please enter details"
+msgstr "الرجاء! ادخال التفاصيل"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:180
+#, python-format
+msgid "Please enter petty cash details"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:375
+#, python-format
+msgid "Please enter summary of tasks completed"
+msgstr "الرجاء! ادخال تفاصيل المهام المنجزة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__reason_refuse
+msgid "Reason Refuse"
+msgstr "سبب الرفض"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_extend_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_report_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+#: selection:mission.petty,state:0
+#: selection:missions.assigned,state:0
+msgid "Reject"
+msgstr "رفض"
+
+#. module: kamil_hr_missions
+#: selection:mission.extend,state:0
+#: selection:mission.report,state:0
+msgid "Rejected"
+msgstr "مرفوضه"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__report_date
+msgid "Report Date"
+msgstr "تاريخ تقرير المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__user_id
+msgid "Requestor"
+msgstr "مقدم الطلب"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_form_view
+msgid "Returnn"
+msgstr "إرجاع"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_extend_form_view
+msgid "Send"
+msgstr "إرسال"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_form_view
+msgid "Send to accounting"
+msgstr "ارسال للحسابات"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+msgid "Set to draft"
+msgstr "تعيين كمسوده"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:390
+#, python-format
+msgid "Sorry! A report cannot be created before the end of the Mission"
+msgstr "أسف ، لا يمكن إنشاء تقرير قبل نهاية المأمورية"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:345
+#, python-format
+msgid "Sorry! Extension date must be greater than mission end date"
+msgstr "اسف ! تاريخ التمديد يجب ان يكون اكبر من تاريخ نهايه المأمورية"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:37
+#, python-format
+msgid "Sorry! The start date cannot be greater than the end date"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__statee_id
+msgid "Sstatee"
+msgstr "الولاية"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__stamp
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__stamp
+msgid "Stamp"
+msgstr "الدمغة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__state
+msgid "States"
+msgstr "المحافظات"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__state
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__activity_state
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__activity_state
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__activity_state
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__activity_state
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_filtering_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_report_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_form_view
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_hr_missions
+#: selection:mission.filtering,state:0
+#: selection:mission.petty,state:0
+#: selection:mission.report,state:0
+#: selection:missions.assigned,state:0
+msgid "Sumbitted"
+msgstr "موافق"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__summary_tasks_completed
+msgid "Summary Tasks Completed"
+msgstr "ملخص المهام المنجزة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__team_leader
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__team_leader
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__team_leader
+msgid "Team Leader"
+msgstr "قائد الفريق"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:67
+#, python-format
+msgid "The errand assignment cannot be deleted in the non-draft state"
+msgstr "لا يمكن حذف تكليف الماموريه في حاله غير المسوده"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:165
+#, python-format
+msgid "The petty cannot be deleted in the non-draft state"
+msgstr "لا يمكن حذف النثريه في حاله غير المسوده"
+
+#. module: kamil_hr_missions
+#: selection:mission.allowance,activity_state:0
+#: selection:mission.extend,activity_state:0
+#: selection:mission.petty,activity_state:0
+#: selection:mission.report,activity_state:0
+#: selection:missions.assigned,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__total
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance_line__total
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_filtering__total
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__total
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty_line__total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:438
+#, python-format
+msgid "Total amount can not be zero"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: code:addons/kamil_hr_missions/models/hr_missions.py:182
+#, python-format
+msgid "Total can not be zero"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__visa_cost_officer
+msgid "Visa Cost Officer"
+msgstr "مسؤول تكاليف التاشيرات"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_allowance__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_extend__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_petty__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_mission_report__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_missions.field_missions_assigned__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_missions
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_allowance__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_extend__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_petty__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_missions.field_mission_report__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_missions.field_missions_assigned__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_extend_form_view
+msgid "general Manger Confirm"
+msgstr "تأكيد الشؤون المالية"
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_allowance
+msgid "mission.allowance"
+msgstr "بدل مامورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_allowance_line
+msgid "mission.allowance.line"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_extend
+msgid "mission.extend"
+msgstr "تمديد مامورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_filtering
+msgid "mission.filtering"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_filtering_line
+msgid "mission.filtering.line"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_petty
+msgid "mission.petty"
+msgstr "نثرية مامورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_petty_line
+msgid "mission.petty.line"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_mission_report
+msgid "mission.report"
+msgstr "تقرير عن المامورية"
+
+#. module: kamil_hr_missions
+#: model:ir.actions.act_window,name:kamil_hr_missions.action_missions_categories_petty
+msgid "missions categories petty"
+msgstr "فئات ونثرية المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_missions_assigned_line
+msgid "missions.assigned.line"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_missions_assigned_line2
+msgid "missions.assigned.line2"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_missions_categories_petty
+msgid "missions.categories.petty"
+msgstr "فئات ونثرية المأمورية"
+
+#. module: kamil_hr_missions
+#: model:ir.model,name:kamil_hr_missions.model_missions_categories_petty_line
+msgid "missions.categories.petty.line"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "اجمالي المبلغ"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "الاجمالي"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+msgid "الادارة العامة للموارد البشرية\n"
+"                            <br/>\n"
+"                            قسم الاجور والمزايا<br/>\n"
+"                            بدل الماموريه"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "التاريخ"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+msgid "الدمغة"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+msgid "الصافي"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "المبلغ"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "المسمي الوظيفي"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "المكتب التنفيذي"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "الملاحظات"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "الموظف"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "النمرة : ص ق ت ص / م ت"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "الولاية"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "الي"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "امر تكليف مامورية"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "بالإشارة للموضوع أعلاه وتكليف السيد/ المدير العام بأمر المأمورية رقم:"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "بتاريخ:"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.actions.report,name:kamil_hr_missions.mission_allowance_report
+msgid "بدل الماموريه"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "تكلفة وقود السفر"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "تكلفه التأشيرات"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "جهة الماموريه"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "رسوم المغادرة"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "رقم الماموريه"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "رقم النثريه"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "سفر رقم:"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "عدد الايام"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_allowance_report_view
+msgid "قيمة البدل"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "مدير المكتب التنفيذي"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "مع جزيل الشكر"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "من"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.mission_petty_report_view
+msgid "نثرية الماموريه"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model:ir.actions.report,name:kamil_hr_missions.mission_petty_report
+msgid "نثريه الماموريه"
+msgstr ""
+
+#. module: kamil_hr_missions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_missions.missions_assigned_view
+msgid "نرجو كريم تفضلكم بإجراء اللازم وإستخراج مستحقات نثريه مأمورية حسب ما هو معمول به"
+msgstr ""
+

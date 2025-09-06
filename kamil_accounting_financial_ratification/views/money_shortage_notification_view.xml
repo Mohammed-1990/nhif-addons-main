@@ -1,0 +1,46 @@
+<odoo>
+	<data>
+			
+		<record id="money_shortage_notification_tree_view" model="ir.ui.view">
+			<field name="name">Money Shortage Notification Tree</field>
+			<field name="model">money.shotage.notification</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="notification_amount"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="money_shortage_notification_form_view" model="ir.ui.view">
+			<field name="name">Money Shortage Notification Form</field>
+			<field name="model">money.shotage.notification</field>
+			<field name="arch" type="xml">
+				<form>
+					
+					<sheet>
+						<div>
+							<h1>
+								<label for="name"/>
+								<br/>
+								<field name="name" options="{'no_create':True}"/>
+							</h1>
+						</div>
+						<group>
+							<field name="notification_amount"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_money_notification" model="ir.actions.act_window">
+			<field name="name">Money Shortage Notification</field>
+			<field name="res_model">money.shotage.notification</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="action_money_notification" id="menu_money_shortage_notification" parent="account.account_account_menu" sequence="200" name="Money Shortage Notification"/>
+
+	</data>
+</odoo>

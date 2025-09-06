@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+      <!-- explicit list view definition -->
+      <record model="ir.ui.view" id="kamil_contracts_project_list">
+         <field name="name">General Contracts</field>
+         <field name="model">kamil.contracts.contract</field>
+         <field name="arch" type="xml">
+            <tree string="General Contracts" >
+               <field name="name" string="Name" />
+               <field name="contract_type" string="Type" />
+               <field name="second_party_name" string="Second Party" />
+               <field name="contract_amount" string="Amount" widget="monetary" options="{'currency_field': 'currency_id'}"  force_save="1"/>
+               
+               <field name="contract_start_date" string="End Date" />
+               <field name="state" string="Status" />
+               <field name="write_date" string="last update" />
+               <field name="write_uid" string="updated by" />
+            </tree>
+         </field>
+      </record>
+
+      <record model="ir.ui.view" id="kamil_contracts_article_services_list">
+         <field name="name">Medical Services tree view</field>
+         <field name="model">kamil.contracts.services_price</field>
+         <field name="arch" type="xml">
+           <tree string="Service Price">
+            
+
+                 <field name="service_code" string="Service Code"/> 
+                 <field name="service_scode" string="Scode"/>
+               <field name="e_service_name" string="English Service name"  />
+
+               <field name="a_service_name" string="إسم الخدمة"  />
+            
+               <field name="service_price_for_public" string="Service Price for Public"/>
+               <field name="service_price_for_employees" string="Service Price for Employees"/>
+
+
+             <!-- <field name="content" widget="html"/>           -->
+           </tree>
+         </field>
+      </record>
+
+
+      <!-- Search View for Student Information -->
+      <record id="project_search_view" model="ir.ui.view">
+         <field name="name">General Contracts</field>
+         <field name="model">kamil.contracts.contract</field>
+         <field name="arch" type="xml">
+            <search string="Contract Information">
+               <field name="name" />
+               <field name="second_party_name" />
+               <field name="is_contract_active" />
+               <field name="contract_start_date" />
+               <field name="contract_end_date" />
+               <group expand="0" string="Group By">
+                  <filter name="name" string="By contractor" domain="[]" context="{'group_by':'second_party_name'}" help="Second Party" />
+
+                  <filter name="name" string="By contract type" domain="[]" context="{'group_by':'contract_type'}" help="Group by contract type" />
+
+                  <filter name="groupby_year" context="{'group_by': 'contracts_date:year'}" string="Year" help="Group contracts by Year" />
+                  <filter name="groupby_month" context="{'group_by': 'contracts_date:month'}" string="Month" />
+               </group>
+               
+               <filter name="fil_by_type_general" string="Service" domain="[('contract_type','=','Service')]" help="Show Service Contracts" />
+
+               <filter name="fil_by_type_purchase" string="Goods" domain="[('contract_type','=','Goods')]" help="Show Goods Contracts" />
+
+                <filter name="fil_by_type_medical" string="Medical" domain="[('contract_type','=','Medical')]" help="Show Medical Contracts" />
+
+                 <filter name="fil_by_type_research" string="Research" domain="[('contract_type','=','Research')]" help="Show Reseach Contracts" />
+
+                  <filter name="fil_by_type_training" string="Training" domain="[('contract_type','=','Training')]" help="Show Training Contracts" />
+
+
+
+
+               <filter name="fil_by_is_active" string="Active contratcs" domain="[('state','!=','terminated')]" help="Show all Active Contracts" />
+
+               <filter name="fil_by_not_active" string="Terminated contratcs" domain="[('state','=','terminated')]" help="Show Terminated Contracts" />
+               
+               <filter string="Contracted Current Year" name="fil_by_current_year" domain="[('contracts_date','&lt;=',                   time.strftime('%%Y-12-31')),('contracts_date','&gt;=',time.strftime('%%Y-01-01'))]" help="Filter Contracts started in Current Year" />
+            </search>
+         </field>
+      </record>
+      <!-- kanban View  -->
+      <record id="partner_kanban_view" model="ir.ui.view">
+         <field name="name">General Contracts</field>
+         <field name="model">kamil.contracts.contract</field>
+         <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column" create="false">
+               <field name="name" />
+               <field name="second_party_name" />
+               <field name="contract_amount" on_change="validat_contract_amount" />
+               <field name="contracts_date" />
+               <field name="contracts_date" />
+               <field name="is_contract_active" />
+               <templates>
+                  <t t-name="kanban-box">
+                     <div t-attf-class="oe_kanban_color_#{record.is_contract_active.raw_value} oe_kanban_card oe_kanban_global_click">
+                        <div t-attf-class="oe_kanban_global_click">
+                           <div class="o_kanban_image">
+                              <img alt="Avatar" t-att-src="kanban_image('res.partners', 'image_medium',record.name.raw_value)" />
+                           </div>
+                           <div class="oe_kanban_details">
+                              <strong class="o_kanban_record_title">
+                                 <field name="name" />
+                              </strong>
+                           </div>
+                           <div t-if="record.second_party_name.value">
+                              <t t-esc="record.second_party_name.value" />
+                           </div>
+                           <div t-if="record.contract_amount.value">
+                              <t t-esc="record.contract_amount.value" />
+                           </div>
+                           <div t-if="record.contracts_date.value">
+                              <t t-esc="record.contracts_date.value" />
+                           </div>
+                        </div>
+                     </div>
+                  </t>
+               </templates>
+            </kanban>
+         </field>
+      </record>
+      <!-- General Contract Form -->
+      <record model="ir.ui.view" id="kamil_general_contract_form_view">
+         <field name="name">Service Contracts</field>
+         <field name="model">kamil.contracts.contract</field>
+         <field name="arch" type="xml">
+            <form name="Service Contract Form" >
+               <header name="contract_project_form_header">
+
+                   <button name="get_contract_template"  string="Download" type="object" class="oe_highlight" />
+
+                  <button name="submit" states="draft" string="submit" type="object" class="oe_highlight" groups="kamil_contracts.group_submit"/>
+
+                  <button name="study" states="submit" string="study" type="object" class="oe_highlight"
+                  groups="kamil_contracts.group_submit"/>
+
+                  <button name="second_party" states="study" string="Second party Sign." type="object" class="oe_highlight" groups="kamil_contracts.group_legal"/>
+                  
+                  <button name="first_party" states="second_party" string="First party Sign.." type="object" class="oe_highlight" groups="kamil_contracts.group_signatory_authorized" />
+
+                  <button name="Witness_sig" states="first_party" string="Witneses Sign." type="object" class="oe_highlight"  />
+                  
+                  
+                  <button name="attestation" states="Witness_sig" string="Attestation" type="object" class="oe_highlight" groups="kamil_contracts.group_legal" />
+                  
+                  <button name="del_copy_sec" states="attestation" string="delivary copy to second party" type="object" class="oe_highlight" groups="kamil_contracts.group_legal"/>
+
+                  <button name="del_copy_req" states="del_copy_sec" string="delivary copy to requester" type="object" class="oe_highlight" groups="kamil_contracts.group_legal"/>
+                  
+                  <button name="done" states="del_copy_req" string="Done" type="object" class="oe_highlight" groups="kamil_contracts.group_legal" />
+                  
+                  <button name="open" states="done" string="Running" type="object" class="oe_highlight" groups="kamil_contracts.group_contract_extender"/>
+                  
+                  <!-- <button name="pending" states="open" string="ReNew" type="object" class="oe_highlight" groups="kamil_contracts.group_contract_extender"/> -->
+                  
+                  <button name="close" states="pending" string="expired" type="object" class="oe_highlight" groups="kamil_contracts.group_contract_extender"/>
+                  
+                  <button name="cancel" states="second_party,study,submit" string="Cancel" type="object" class="oe_highlight" groups="kamil_contracts.group_contract_extender,kamil_contracts.group_gm,kamil_contracts.group_gm"/>
+                  <!-- <field name="state" widget="statusbar" options="{'clickable': '1'}"/> -->
+                  <field name="state"  widget="statusbar" statusbar_visible="draft,submit,study,second_party,first_party,Witness_sig,attestation,del_copy_sec,del_copy_req,restudy,done,open"/>
+               </header>
+               <sheet>
+                  <div class="oe_button_box" name="button_box">
+
+                     <button name="contract_extensions" 
+                       type="object" class="oe_stat_button" icon="fa-briefcase"
+                       
+                       attrs="{'invisible':[('state','not in',['open'])]}"                      
+                        >
+                        <field name="ext_rec_count" string="Extensions"
+                        widget="statinfo"/>
+                        
+                     </button>
+                     
+
+                     <button name="contract_ammedments" 
+                       type="object" class="oe_stat_button" icon="fa-calendar"
+                       context="{'default_contract_id': id}"
+                       attrs="{'invisible':[('state','not in',['open'])]}"
+                       >
+                       <field name="amed_rec_count" string="Amendments"
+                        widget="statinfo"/>
+                        
+                     </button>
+
+
+
+                     </div>
+                       
+
+                  
+                  <div class="oe_title">
+                     <h3>
+                        <field name="contract_type"  attrs="{'invisible': 1}" />
+                        <field name="name" placeholder="Contract Name ..." string="Name ..." 
+                        attrs="{'readonly':[('state','not in',['draft','submit'])]}"/>
+
+                         <field name="contract_type"  invisible="1"/> 
+                         
+                     </h3>
+                  </div>
+
+                  <group colspan="2">
+                     <group text_align="right">
+                       <field name="contract_amount" attrs="{'readonly':['|',('state','not in',['draft','submit']),('contract_type','=', 'Goods')]}" force_save="1"/>
+                        
+                     </group>
+                     <group text_align="left">
+                       
+                        <field name="contract_start_date" string="Start date" attrs="{'readonly':[('state','not in',['draft','submit'])]}"/>
+                        <field name="contract_end_date" string="End date" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                     </group>
+                  </group>
+               <!-- <group cols="6"> -->
+              
+                  <div class="oe_edit_only">
+                   <group col="2">
+                     <field name="preface_id" placeholder="choose the preface from selection" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                   </group>
+                  </div>
+                  <field name="preface" widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+
+                  <div class="oe_edit_only">
+                    <group col="2">
+                     <field  string="preamble name" name="preamble_id" placeholder="name of preamble" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                   </group>
+                  </div>
+                  <field name="preamble" widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  
+                  <!-- <div class="oe_edit_only">
+                     <field name="introduction_id" class="oe_edit_only" placeholder="Introduction" />
+                  </div>
+                  <br />
+                  <field name="introduction" widget="html" />
+                  <br /> -->
+                  <!--  End of field declaration -->
+                  <!--  Begin of field declaration -->
+                  <div class="oe_edit_only">
+                    <group col="2">
+                     <field name="explain_id" class="oe_edit_only" placeholder="Explain" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                  </group>
+                  </div>
+                  <br />
+                  <field name="explain" widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <br />
+                  <!--  End of field declaration -->
+                  <!--  Begin of field declaration -->
+                  <div class="oe_edit_only">
+                    <group col="2">
+                     <field name="contract_docx_id" class="oe_edit_only" placeholder="Contract Documents" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                   </group>
+                  </div>
+                  <br />
+                  <field name="contract_docx" widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <br />
+                  <!--  End of field declaration -->
+                  <!--  Begin of field declaration -->
+                  
+                  <br />
+                  <!--  End of field declaration -->
+                  <!--  Begin of field declaration -->
+                  
+                  <!--  End of field declaration -->
+                  <div class="oe_edit_only">
+                   <group col="2">
+                     <field name="first_party_obligation_sel" class="oe_edit_only" placeholder="First party obligations" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                  </group>
+                  </div>
+                  <br />
+                  <field name="first_party_obligations" placeholder="First part obligations..." widget="html" modifiers="{}" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <br />
+                  <div class="oe_edit_only">
+                   <group col="2">
+                     <field name="second_party_obligations_sel" class="oe_edit_only" placeholder="Second party obligations" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                   </group>
+                  </div>
+                  <br />
+                  <field name="second_party_obligations" widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <br />
+                  <!-- </group> -->
+                  <!--- End of sheet  -->
+                  <div class="oe_edit_only">
+                    
+                    <group col="4">
+                        <h4>General Provisions</h4>
+                     </group>
+                     <field name="general_provisions" class="oe_edit_only" placeholder="General Provisions" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  </div>
+                  <!--  End of field declaration -->
+                  <!--  Begin of field declaration -->
+                 
+
+
+                  <div class="oe_edit_only">
+                   <group col="2">
+                     <field name="delay_mulct_id" class="oe_edit_only" placeholder="الشروط الجزائية"  attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                   </group>
+                  </div>
+                  <br />
+                  <field name="delay_mulct_html" widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <br />
+
+                  <div class="oe_edit_only">
+                   <group col="2">
+                     <field name="conflict_resolution_id" class="oe_edit_only" placeholder="آلية فض النزاع"  attrs="{'readonly':[('state','not in',['draft','submit','study'])]}" options="{'no_create':1}"/>
+                  </group>
+                  </div>
+                  <br />
+                  <field name="conflict_resolution_html" widget="html" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}"/>
+                  <br />
+
+                  <field name="attachment_ids" widget="many2one_binary" attrs="{'readonly':[('state','not in',['draft','submit','study'])]}">
+                     <tree editable="bottom" string="Attachments" >
+                        <field name="attachment_name"  />
+                        <field name="attachment"  />
+                     </tree>
+                  </field>
+                  <field name="contract_id" invisible="1" />
+                  <field name="contract_type" invisible="1" />
+
+
+
+                  <notebook colspan="4">
+                     <page string="Parties">
+                        <group colspan="2">
+                           <!-- <field name="preface" widget="html"/> -->
+                           <group text_align="left" string="First Party">
+                              <field name="ntfs" options="{'no_create':True}" attrs="{'readonly':['|',('contract_id','!=',False),('state','not in',['draft','submit']),'&amp;',('contract_id','=',False)]}"/>
+                              <!-- <field name="ntfs" options="{'no_create':True}" attrs="{'readonly':['|',('contract_id','!=',[]),('state','not in',['draft','submit'])]}"/> -->
+                              <!-- <field name="  ntfs" options="{'no_create':True}" attrs="{'readonly':['|',('contract_id','!=',[]),(('state','not in',['draft','submit'])),('contract_type','=','Ammendment')]}"/> -->
+                              <!-- ,('contract_type','=','Ammendment')] -->
+                              <field name="name_ntfs" string='First Rep. Name' options="{'no_create':True}"  attrs="{'readonly':['|',('contract_id','!=',False),('state','not in',['draft','submit']),'&amp;',('contract_id','=',False)]}"/>
+                              <field name="name_ntfs_obj"  />
+                           </group>
+                           <group text_align="right" string="Second Party">
+                              <field name="second_party_ch_id" invisible="1" attrs="{'readonly':['|',('contract_id','!=',False),('state','not in',['draft','submit']),'&amp;',('contract_id','=',False)]}"/>
+                              <!-- invisible="1" -->
+                              <field name="second_party_ch" options="{'no_create':True}" attrs="{'readonly':['|',('contract_id','!=',False),('state','not in',['draft','submit']),'&amp;',('contract_id','=',False)]}"/>
+                              <field name="second_party_name" string='Second Rep. Name' options="{'no_create':[True], 'no_create_edit':[True]}"
+                              domain="[('parent_id', '=', 38)]" attrs="{'readonly':['|',('contract_id','!=',False),('state','not in',['draft','submit']),'&amp;',('contract_id','=',False)]}" />
+                              <field name="second_party_obj" options="{'no_create':[True], 'no_create_edit':[True]}" />
+                           </group>
+                        </group>
+                     </page>
+                     <page string="Witneses">
+                        <group colspan="2">
+                           <!-- <field name="preface" widget="html"/> -->
+                           <group text_align="left" string="First witness">
+                              <field name="first_witnes_name" attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study'])]}" />
+                             <!--  <field name="first_witnes_signature" attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study'])]}" /> -->
+                              <field name="first_witnes_id" attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study'])]}" />
+                           </group>
+                           <group text_align="left" string="Second witness">
+                              <field name="second_witnes_name" attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study'])]}" />
+                              <!-- <field name="second_witnes_signature"  attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study'])]}"/> -->
+                              <field name="second_witnes_id" attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study'])]}" />
+                           </group>
+                        </group>
+                     </page>
+                     <page string="Payment mode" attrs="{'invisible':[('contract_type', '=', 'Training')],'readonly':[('state','not in',['draft','submit','study'])]}" >
+                        <!-- <field name="payment_mode_ids" options="{'no_create': True}"> -->
+                        <field name="payment_mode_ids" attrs="{'readonly':[('state','not in',['draft','submit'])]}" >
+                           <tree create="true" delete="true" edit="true" editable="bottom" string="Payments" >
+                              <field name="phase_name"  />
+                              <field name="phase_amount"  />
+                              <field name="execu_percentage"  />
+                              <field name="pay_date"  />
+                              <field name="status_sel"  />
+                              <field name="sum_of_claims" string="Total Amount" sum="Total amount" widget="monetary"/>
+                           </tree>
+
+                        </field>
+                     </page>
+                     <page string="Panalties" attrs="{'readonly':[('state','not in',['draft','submit'])]}">
+                        <field name="panalty_ids"  attrs="{'readonly':[('state','not in',['draft','submit','open'])],'required' :[('state','in',['study'])]}">
+
+                           <tree  create="true" delete="true" edit="true" editable="bottom">
+                              <field name="opened" invisible="1" />
+                              <field name="contract_state" invisible="1" />
+                              <field name="panalty_name" />
+                              <field name="panalty_basis" />
+                              <field name="frequency" />
+                              <field name="panalty_amount" />
+                              <field name="percentage" />   
+                              <field name="affect_date" attrs="{'readonly':[('opened','=',False)]}" />
+                              <field name="is_active" attrs="{'readonly':[('opened','=',False)]}" />
+                              
+                              <!-- <field name="status_sel" invisible="1" /> -->
+
+                           </tree>
+                        </field>
+                     </page>
+
+                     <page string="Purchase Order" attrs="{'invisible':[('contract_type', '!=', 'Goods')]}" >
+                        <group>
+                           <field name="purchase_order_id" options="{'no_create_edit':True}"  attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study']),('contract_type', '=', 'Goods')]}"/>
+                        </group>
+                        <field name="purchase_order_line_ids" options="{'no_create_edit':True}"  attrs="{'readonly':['True'],'required' :[('state','in',['study']),('contract_type', '=', 'Goods')]}">
+                           <tree  create="false" edit="false">
+                              <field name="product_id"  />
+                              <field name="name"  />
+                              <field name="product_qty"  />
+                              <field name="price_unit"  widget="monetary"/>
+                               <field name="sum_purchase_order" string="Total Amount" sum="Total amount" widget="monetary"/>                     
+                           </tree>
+                        </field>
+                     </page>
+                     <page string="Medical servise" attrs="{'invisible':[('contract_type', '!=', 'Medical')]}">
+                        <field name="medical_services_ids" widget="many2many" attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study']),('contract_type', '=', 'Medical')]}"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,}">
+                
+                           <tree string="Medical services"  create="true" delete="true" edit="true" editable="bottom">
+                              <field name="e_service_name" attrs="{'readonly':True}"
+                                 options="{'no_create_edit':1}" />
+
+                               <field name="a_service_name" attrs="{'readonly':True}"
+                                 options="{'no_create_edit':1}"/>
+
+                              <field name="service_code" attrs="{'readonly':True}"
+                                 options="{'no_create_edit':1}"/>
+
+
+                              <field name="service_price_for_public"  />
+                              <field name="service_price_for_employees" />
+                          </tree>
+                        </field>
+                     </page>
+
+                     <page string="Medicals" attrs="{'invisible':[('contract_type', '!=', 'Medical')]}">
+                        <field name="medical_ids" widget="many2many" attrs="{'readonly':[('state','not in',['draft','submit','study'])],'required' :[('state','in',['study']),('contract_type', '=', 'Medical')]}">
+                           <tree string="Medical services" editable="bottom">
+                              <field name="name"/>
+                              <field name="MainGroup_id" attrs="{'readonly':True}"
+                                 options="{'no_create_edit':1}"/>
+                              <field name="SubGroup_id" attrs="{'readonly':True}"
+                                 options="{'no_create_edit':1}"/>
+                              <field name="form_id" attrs="{'readonly':True}"
+                                 options="{'no_create_edit':1}"/>
+                              <field name="strength" attrs="{'readonly':True}"
+                                 options="{'no_create_edit':1}"/>
+                              <!-- <field name="LOP"/>
+                              <field name="LOC"/> -->
+                              
+                           </tree>
+                        </field>
+                     </page>
+
+                  </notebook>
+               </sheet>
+               <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+               </div>
+            </form>
+         </field>
+      </record>
+      <!-- End of General contract Form -->
+<!--       <record model="ir.ui.view" id="view_task_form2_inherit">
+         <field name="name">add capacity</field>
+         <field name="model">res.partner</field>
+         <field name="inherit_id" ref="base.view_partner_form"/>
+         <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='category_id']" position="after">
+               <field name="capacity" />
+      
+            </xpath>
+         </field>
+      </record> -->
+
+   <!-- actions opening views on models -->
+    <record model="ir.ui.view" id="kamil_contracts_services_form_view">
+         <field name="name">Service Price</field>
+         <field name="model">kamil.contracts.services_price</field>      
+        <field name="arch" type="xml">
+           <form string="Services Price">
+             <sheet>
+             <group>
+                 <field name="service_code" string="Service Code"/> 
+                 <field name="service_scode" string="Scode"/>
+               <field name="e_service_name" string="English Service name"  />
+
+               <field name="a_service_name" string="إسم الخدمة"  />
+            </group>
+            <group>
+               <field name="service_price_for_public" string="Service Price for Public"/>
+               <field name="service_price_for_employees" string="Service Price for Employees"/>
+               
+            </group>
+
+           </sheet>
+           <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+               </div>
+           </form>
+         </field>
+      </record>
+<!--medical group form view-->
+      <record model="ir.ui.view" id="medical_group_form_view">
+         <field name="name">Medical Group</field>
+         <field name="model">medical.group</field>      
+           <field name="arch" type="xml">
+              <form string="Medical Group">
+                <sheet>
+                <group>
+                  <field name="MainGroup"/>
+                  <field name="SubGroup" options="{'no_create':1}"/>
+
+                </group>
+             </sheet>
+          </form>
+       </field>
+    </record>
+
+<!--medical group tree view-->
+      <record model="ir.ui.view" id="medical_group_tree_view">
+         <field name="name">Medical Group</field>
+         <field name="model">medical.group</field>      
+           <field name="arch" type="xml">
+              <tree string="Medical Group">
+               
+                  <field name="MainGroup"/>
+                  <field name="SubGroup"/>
+
+              </tree>
+       </field>
+    </record>
+<!--medical group action view-->
+    <record model="ir.actions.act_window" id="medical_group_action_menu_tree_view">
+         <field name="name">Medical Group</field>
+         <field name="res_model">medical.group</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+
+<!--Form Type form view-->
+      <record model="ir.ui.view" id="form_type_form_view">
+         <field name="name">Form Type</field>
+         <field name="model">form.type</field>      
+           <field name="arch" type="xml">
+              <form string="Form Type">
+                <sheet>
+                <group>
+                  <field name="name"/>
+
+                </group>
+             </sheet>
+          </form>
+       </field>
+    </record>
+
+<!--Form Type tree view-->
+      <record model="ir.ui.view" id="form_type_tree_view">
+         <field name="name">Form Type</field>
+         <field name="model">form.type</field>      
+           <field name="arch" type="xml">
+              <tree string="Form Type">
+               
+                  <field name="name"/>
+
+              </tree>
+       </field>
+    </record>
+<!--Form Type action view-->
+    <record model="ir.actions.act_window" id="form_type_action_menu_tree_view">
+         <field name="name">Formula Type</field>
+         <field name="res_model">form.type</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+
+<!--medical type form view-->
+<record model="ir.ui.view" id="medical_type_form_view">
+         <field name="name">Medical Type</field>
+         <field name="model">medical.type</field>      
+           <field name="arch" type="xml">
+              <form string="Form Type">
+                <sheet>
+                <group col="4">
+                  <field name="name"/>
+                  <field name="MainGroup_id" options="{'no_create':1}"/>
+                  <field name="SubGroup_id" options="{'no_create':1}"/>
+                  <field name="form_id" options="{'no_create':1}"/>
+                  <field name="strength"/>
+                  <field name="price_for_public"/>
+                  <field name="price_for_private"/>
+
+                </group>
+             </sheet>
+          </form>
+       </field>
+    </record>
+
+<!--medical.type tree view-->
+      <record model="ir.ui.view" id="medical_type_tree_view">
+         <field name="name">medicines</field>
+         <field name="model">medical.type</field>      
+           <field name="arch" type="xml">
+              <tree string="Medical Type">
+               
+                <field name="name"/>
+                  <field name="MainGroup_id"/>
+                  <field name="SubGroup_id"/>
+                  <field name="form_id"/>
+                  <field name="strength"/>
+
+              </tree>
+       </field>
+    </record>
+<!--medical.type action view-->
+    <record model="ir.actions.act_window" id="medical_type_action_menu_tree_view">
+         <field name="name">Medicines</field>
+         <field name="res_model">medical.type</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+
+
+
+
+
+      <!-- Set Accounts for Claaim  -->
+      <record model="ir.ui.view" id="claim_accounts_tree_view">
+         <field name="name">Claim Accounts</field>
+         <field name="model">kamil.contracts.account_setting</field>  
+         <field name="arch" type="xml">
+           <tree string="Account settings" create="true">
+               <field name="account_id" string="Account Code"/> 
+               <field name="stamp" string="Tax Account"/> 
+               <!-- <field name="account_tax" string="Tax Account"/> -->
+           </tree>
+         </field>
+      </record>
+
+      <record model="ir.ui.view" id="claim_accounts_form_view">
+         <field name="name">Claim Accounts</field>
+         <field name="model">kamil.contracts.account_setting</field>  
+         <field name="arch" type="xml">
+           <form string="Account settings" create="true">
+            <sheet>
+             
+                   <group>
+               <field name="account_id" string="Account Code"/> 
+               <field name="stamp" string="Tax Account"/> 
+               <!-- <field name="account_tax" string="Tax Account"/> 
+               <field name="analytic_account" string="Analytic Account"/> -->
+            </group>
+            
+               </sheet>
+               <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+               </div>
+           </form>
+         </field>
+      </record>
+
+      <!-- End of set accounts for claims-->
+      <!--General contract tree view -->
+      <record model="ir.actions.act_window" id="kamil_general_contract_action_menu_tree_view">
+         <field name="name">Services contracts</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">tree,kanban,form,pivot,graph</field>
+         <field name="context">{'default_contract_type':'Service'}</field>
+         <field eval="0" name="sequence" />
+         <field name="domain">[('contract_type', '=', 'Service')]</field>
+      </record>
+
+      <!--Medical contract tree view -->
+      <record model="ir.actions.act_window" id="kamil_medical_contract_action_menu_tree_view">
+         <field name="name">Medical contracts</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">tree,form</field>
+         <field name="context">{'default_contract_type':'Medical'}</field>
+         <field name="domain">[('contract_type', '=', 'Medical')]</field>
+         <field eval="0" name="sequence" />
+      </record>
+
+      <!--Purchase contract tree view -->
+      <record model="ir.actions.act_window" id="kamil_purchase_contract_action_menu_tree_view">
+         <field name="name">Goods contracts</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">tree,form</field>
+         <field name="context">{'default_contract_type':'Goods'}</field>
+         <field name="domain">[('contract_type', '=', 'Goods')]</field>
+         <!-- <field name="view_id" ref="kamil_purchase_contracts_tree_view"/> -->
+         <field eval="0" name="sequence" />
+      </record>
+
+
+      <!--Research contract tree view -->
+      <record model="ir.actions.act_window" id="kamil_research_contract_action_menu_tree_view">
+         <field name="name">Reseach contracts</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">tree,form</field>
+         <field name="context">{'default_contract_type':'Research'}</field>
+         <field name="domain">[('contract_type', '=', 'Research')]</field>
+         <!-- <field name="view_id" ref="kamil_purchase_contracts_tree_view"/> -->
+         <field eval="0" name="sequence" />
+      </record>
+
+      <!--Training contract tree view -->
+      <record model="ir.actions.act_window" id="kamil_training_contract_action_menu_tree_view">
+         <field name="name">Training contracts</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">tree,form</field>
+         <field name="context">{'default_contract_type':'Training'}</field>
+         <field name="domain">[('contract_type', '=', 'Training')]</field>
+         <!-- <field name="view_id" ref="kamil_purchase_contracts_tree_view"/> -->
+         <field eval="0" name="sequence" />
+      </record>
+
+
+    <!--Service price list tree view -->
+    
+    <record model="ir.actions.act_window" 
+      id="kamil_contracts_services_price_action_tree_view">
+      <field name="name">Service price</field>
+      <field name="res_model">kamil.contracts.services_price</field>
+      <field name="view_mode">tree,form</field>
+      <field eval="0" name="sequence"/>
+    </record>
+
+    <!--Account Settings list tree view -->
+    
+    <record model="ir.actions.act_window" 
+      id="kamil_claim_account_settings_action_tree_view">
+      <field name="name">Account Settings</field>
+      <field name="res_model">kamil.contracts.account_setting</field>
+      <field name="view_mode">tree,form</field>
+      <field eval="0" name="sequence"/>
+    </record>
+
+      <!--General contract tree view -->
+      <record model="ir.actions.act_window" id="kamil_contract_action_form_view">
+         <field name="name">kamil contract window</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">form</field>
+         <field eval="1" name="sequence" />
+         <field name="context">{'default_contract_type':'Service'}</field>
+      </record>
+      <!-- End of General contract tree view -->
+
+     <!--Medical contract tree view -->
+      <record model="ir.actions.act_window" id="kamil_medical_contract_action_form_view">
+         <field name="name">medical contract window</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">form</field>
+         <field eval="1" name="sequence" />
+         <field name="context">{'default_contract_type':'Medical'}</field>
+      </record>
+      <!-- End of Medical contract tree view -->
+
+
+
+
+     <!--Purchase contract for view -->
+     <!--  <record model="ir.actions.act_window" id="kamil_purchase_contract_action_form_view">
+         <field name="name">purchase contract window</field>
+         <field name="res_model">kamil.contracts.contract</field>
+         <field name="view_mode">tree,form</field>
+         <field eval="1" name="sequence" />
+         <field name="view_id" ref="kamil_purchase_contract_form_view"/>         
+         <field name="context">{'default_contract_type':'purchase'}</field>
+      </record> -->
+      <!-- End of Purchase contract tree view -->
+
+
+
+      <!-- Top menu item -->
+      <menuitem name="Contracts" id="kamil_contract_menu_root" web_icon="kamil_contracts,static/description/icon.png" string="contracts" groups="kamil_contracts.group_contract_user"/>
+      
+      <menuitem name="Contracts" id="kamil_contract_sub_menu" parent="kamil_contract_menu_root" sequence="0" />
+      
+      <menuitem name="Settings" id="kamil_contract_settings_menu" parent="kamil_contract_menu_root" sequence="5"/>
+      
+      <menuitem name="Panalties" id="kamil_contract_panalties_menu" parent="kamil_contract_menu_root" />
+      
+      <menuitem name="Amendments" id="amendment_contract_menu" parent="kamil_contract_menu_root" />
+      <!-- Upload services price list -->
+      
+
+      <!-- Upload Contract Category list -->
+      <menuitem name="Contracts Category" id="kamil_contract_category_list_menu" parent="kamil_contract_settings_menu" />
+      <!-- action="kamil_contract_category_action_form_view" -->
+      <!-- Upload contract term templates -->
+      <menuitem name="Template" id="kamil_contract_upload_template_menu" parent="kamil_contract_settings_menu" />
+
+      <menuitem name="Services contracts" id="kamil_contracts_contract_menu" parent="kamil_contract_sub_menu" action="kamil_general_contract_action_menu_tree_view" 
+      groups="kamil_contracts.group_services_contracts_user,kamil_contracts.group_services_contracts_manager"/>
+
+      <menuitem name="Medical contracts" id="kamil_medical_contract_menu" parent="kamil_contract_sub_menu" action="kamil_medical_contract_action_menu_tree_view"
+      groups="kamil_contracts.group_medical_contrct_user,kamil_contracts.group_medical_contrct_manager" />
+
+      <menuitem name="Goods contracts" id="kamil_purchase_contract_menu" parent="kamil_contract_sub_menu" action="kamil_purchase_contract_action_menu_tree_view"
+      groups="kamil_contracts.group_goods_contract_user,kamil_contracts.group_goods_contract_manager"  />
+
+      <menuitem name="Research contracts" id="kamil_research_contract_menu" parent="kamil_contract_sub_menu" action="kamil_research_contract_action_menu_tree_view"
+      groups="kamil_contracts.group_research_contrct_user,kamil_contracts.group_research_contrct_manager" />
+
+      <menuitem name="Training contracts" id="kamil_training_contract_menu" parent="kamil_contract_sub_menu" action="kamil_training_contract_action_menu_tree_view" 
+      groups="kamil_contracts.group_training_contrct_user,kamil_contracts.group_training_contrct_user"/>
+
+      <menuitem name="Medical Services" id="medical_services_menu" parent="kamil_contract_settings_menu" sequence="100"/>
+      <menuitem name="Services price" id="kamil_contracts_upload_services_price_menu" parent="medical_services_menu" action="kamil_contracts_services_price_action_tree_view"
+      sequence="0"
+        groups="kamil_contracts.group_contract_medical_service_price_list_updater"/>
+
+      <menuitem name="Medical Group" id="medical_group_menu" parent="medical_services_menu" action="medical_group_action_menu_tree_view"
+         sequence="2"
+        />
+       <menuitem name="Form Type" id="form_type_menu" parent="medical_services_menu" action="form_type_action_menu_tree_view"
+         sequence="1"
+        />
+
+      <menuitem name="Medical Type" id="medical_type_menu" parent="medical_services_menu" action="medical_type_action_menu_tree_view"
+         sequence="3"
+        />
+
+      <menuitem name="Account Settings" id="kamil_account_settings_menu" parent="kamil_contract_settings_menu" action="kamil_claim_account_settings_action_tree_view"
+      sequence="99"
+        groups="base.user_root"/>
+   
+   </data>
+</odoo>
+

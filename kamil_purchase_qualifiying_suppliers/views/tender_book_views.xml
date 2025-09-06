@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Action Field visit-->
+	<act_window 
+		id="action_field_visit"
+		name="Tender Book Field Visit Report"
+		res_model="tender.book.visit"
+		view_type="form"
+		view_mode="tree,form"
+		domain="[('book_id','=',active_id)]"
+	/>	
+
+	<!-- Action Book Representative Attendee-->
+	<act_window
+		id="action_book_rep_attendee"
+		name="Representative Attendee"
+		res_model="rep.attendee"
+		view_mode="tree,form"
+		domain="[('book_id','=',active_id)]"
+		context="{'default_tender_id':active_id}"
+	/>
+
+	<!-- Form Tender Book-->
+	<record id="view_tender_book_form" model="ir.ui.view">
+		<field name="name">tender.book.form</field>
+		<field name="model">tender.book</field>
+		<field name="arch" type="xml">
+			<form>
+				<header>
+					<!-- <button 
+						name="open_url" 
+						type="object" 
+						string="Opene URL" 
+						class="btn-primary"
+						attrs="{'invisible':[('requisition_id','=',False)]}"
+					/>	 -->
+					
+					<button 
+						name="%(kamil_purchase_qualifiying_suppliers.action_wiz_general_conditions)d" 
+						type="action" 
+						string="Check General Conditions" 
+						class="btn-primary"
+						states="draft" 
+						group="kamil_purchase_qualifiying_suppliers.group_comm_decided"
+					/>
+
+					<button 
+					name="%(kamil_purchase_qualifiying_suppliers.action_wiz_general_conditions)d" 
+					type="action" 
+					string="Confirm General Conditions" 
+					states="general_conditions_selection"  
+					class="btn-primary" 
+					group="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+					<button 
+						name="%(kamil_purchase_qualifiying_suppliers.action_visit)d" 
+						string="Create Report of the field visit" 
+						type="action" 
+						attrs="{'invisible':['|',('state','!=','technical_selection'),('visit_id','!=',False)]}"  
+						class="btn-primary" 
+					/>
+
+					<button 
+						name="%(kamil_purchase_qualifiying_suppliers.action_area_rehabiliation_confirm)d" 
+						type="action" 
+						string="Qualifier" 
+						attrs="{'invisible':['|',('state','!=','technical_selection'),('requisition_id','=',False)]}" 
+						class="btn-primary"
+					/>	
+
+					<button 
+						name="action_unqualifier" 
+						type="object" 
+						string="Unqualifier" 
+						attrs="{'invisible':['|',('state','not in',('draft','confirm','general_conditions_selection','technical_selection')),('requisition_id','=',False)]}" 
+					/>
+					
+					<field 
+						name="state" 
+						widget="statusbar" 
+						statusbar_visible="draft,general_conditions_selection,technical_selection,done" 
+						readonly="1"
+					/>
+
+				</header>
+				<sheet>
+					<!-- <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button>
+                    </div> -->
+					<div class="oe_title">
+                        <label for="sequence" class="oe_edit_only oe_inline" string="Book Number"/>
+                        <h1><field name="sequence"/></h1>
+                    </div>
+					<group>
+						<group>
+							<field name="partner_id" required="1" domain="[('supplier','=',True)]" options="{'no_create':'1'}" readonly="1"/>
+                       		<field name="phone" widget="phone"/>
+                            <field name="email" widget="email" context="{'gravatar_image': True}"/>
+                            
+						</group>
+						<group >
+                            <field name="requisition_id" attrs="{'invisible':[('requisition_id','=',False)]}" readonly="1" />
+                            <field name="collection_id" readonly="1"/>
+                            <field name="area_rehab_ids" widget="many2many_tags"  required='1' string="Area Of Rehabiliation" attrs="{'invisible':[('requisition_id','=',False)],'readonly':[('state','!=','draft')]}" options="{'no_create':'1'}" />
+						</group>
+						
+					</group>
+					<separator string="Field Visit Report"/>
+					<group attrs="{'invisible':[('requisition_id','=',False)]}">
+						<field name="visit_id" readonly="1"/>
+						<field name="visit_result" readonly="1"/>
+					</group>
+
+
+					<notebook>
+						<page string="Information" attrs="{'invisible':[('requisition_id','=',False)]}">
+							<group>
+								<!-- <field name="tender_id"/> -->
+								<field name="issuing_date" readonly="1"/>
+								<field name="deadline_date" readonly="1"/>
+								<!-- <field name="received_date" readonly="1"/> -->
+							</group>	
+						</page>
+						<page string="General Conditions">
+							<field name="general_conditions_ids" >
+		            			<tree >
+		            				<field name="name" />
+		            				<field name="exist"/>
+		            				<field name="attachments"/>
+		            			</tree>
+		            		</field>	
+            			</page>
+            			<page string="Private Conditions" >
+		            		<separator string="Private Conditions"/>
+            				<field name="private_conditions" readonly="1"/>
+		            	</page>
+		             	<page string="Other Features" attrs="{'invisible':[('requisition_id','=',False)]}">
+		            		<separator string="Other Features"/>
+            				<field name="other_features" placeholder="Other Features ..." readonly="1"/>
+		            	</page>
+		            	<page string="Representative Attendee" attrs="{'invisible':[('requisition_id','=',False)]}">
+		            		<field name="rep_attendee_ids" mode="kanban"  context="{'default_book_id':active_id}">
+								<kanban >
+									<field name="name"/>
+									<field name="phone"/>
+									<field name="email"/>
+									<templates>
+		            					<t t-name="kanban-box">
+		            						<div class="oe_kanban_details">
+	                                            <field name="name"/>
+	                                         
+	                                            <div t-if="record.phone.raw_value">Phone: <field name="phone"/></div>
+	                                          
+	                                        </div>
+		            					</t>
+		            				</templates>
+								</kanban>
+							</field>
+		            	</page>
+		            	<page string="Committee Members" attrs="{'invisible':[('requisition_id','=',False)]}">
+		            		<separator string="Committee Members"/>
+		            		<field name="committee_ids">
+		            			<tree editable="bottom">
+		            				<field name="employee"/>
+		            				<field name="role"/>
+		            			</tree>
+		            		</field>
+		            		<group>
+		            			<field name="visit_attach"/>
+		            		</group>
+		            	</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+	              <field name="message_follower_ids" widget="mail_followers"/>
+	              <field name="activity_ids" widget="mail_activity"/>
+	              <field name="message_ids" widget="mail_thread"/>
+	            </div>
+			</form>
+		</field>
+	</record>
+
+	<!-- Tree Tender Book-->
+	<record id="view_tender_book_tree" model="ir.ui.view">
+		<field name="name">tender.book.tree</field>
+		<field name="model">tender.book</field>
+		<field name="arch" type="xml">
+			<tree 
+				decoration-muted="state == 'unqualifier'" 
+				decoration-success="state == 'qualifier'"
+				decoration-info="state == 'draft'"
+				decoration-danger="state in ['general_conditions_selection','technical_selection']"
+				decoration-warning="state == 'to approve'"
+				>
+				<field name="sequence"/>
+				<field name="requisition_id"/>
+				<field name="partner_id"/>
+				<field name="phone"/>
+				<field name="email"/>
+				<field name="deadline_date" />
+				<field name="issuing_date" />
+				<field name="received_date" />
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+
+	<!-- Search Tender Book-->
+	<record id="view_tender_book_search" model="ir.ui.view">
+		<field name="name">tender.book.search</field>
+		<field name="model">tender.book</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="requisition_id"/>
+				<filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+				<filter name="general_conditions_selection" string="General Conditions Selection" domain="[('state','=','general_conditions_selection')]"/>
+				<filter name="technical_selection" string="Technical Selection" domain="[('state','=','technical_selection')]"/>
+				<filter name="qualifier" string="Qualifier" domain="[('state','=','qualifier')]"/>
+				<filter name="unqualifier" string="Unqualifier" domain="[('state','=','unqualifier')]"/>				
+
+				<group string="Group By">
+					<filter name="Tender" string="Tender" domain="[]" context="{'group_by':'requisition_id'}"/>
+					<filter name="partner" string="Supplier" domain="[]" context="{'group_by':'partner_id'}"/>
+					<filter name="state" string="State" domain="[]" context="{'group_by':'state'}" />
+					<separator/>
+                    <filter string="Received Date" name="received_date" context="{'group_by':'received_date:month'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+
+
+	<!-- Action Tender Book-->
+	<act_window 
+		id="action_tender_book"
+		name="Tender Book"
+		res_model="tender.book"
+		view_type="form"
+		view_mode="tree,form"
+		/>
+
+
+	<!-- Form Book Visit-->
+	<record id="view_tender_book_visit_form" model="ir.ui.view">
+		<field name="name">book.visit.form</field>
+		<field name="model">tender.book.visit</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="sequence"/>
+					</group>	
+					<separator  string="Field visit report Criteria"/>
+					<field name="visit_line_ids">
+						<tree editable="buttom" >
+							<field name="criteria_id"/>
+							<field name="required_score" sum="Total Required Score"/>
+							<field name="obtained_score" sum="Total Obtained Score "/>
+							<field name="note"/>
+						</tree>
+					</field>
+				</sheet>	
+			</form>
+		</field>
+	</record>
+
+	<!-- Tree Book Visit-->
+	<record id="view_tender_book_visit_tree" model="ir.ui.view">
+		<field name="name">book.visit.tree</field>
+		<field name="model">tender.book.visit</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="sequence"/>
+				<field name="partner_id"/>
+				<field name="book_id"/>
+				<field name="year"/>
+
+			</tree>
+		</field>
+	</record>
+
+	<!-- Action book visit-->
+	<act_window 
+		id="action_book_visit"
+		name="Tender Book Field Visit Report"
+		res_model="tender.book.visit"
+		view_type="form"
+		view_mode="tree,form"
+	/>		
+
+	<!-- Form Visit Criteria-->			
+	<record id="view_tender_book_visit_criteria_form" model="ir.ui.view">
+		<field name="name">tender.book.visit.criteria.form</field>
+		<field name="model">tender.book.visit.criteria</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="name"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- Tree Visit Criteria-->			
+	<record id="view_tender_book_visit_criteria_tree" model="ir.ui.view">
+		<field name="name">tender.book.visit.criteria.tree</field>
+		<field name="model">tender.book.visit.criteria</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom">
+				<field name="name"/>	
+			</tree>
+		</field>
+	</record>
+
+
+
+	<!-- Action Field Visit Report Criteria-->
+	<act_window id="action_book_visit_criteria"
+				name="Field Visit Report Criteria"
+				res_model="tender.book.visit.criteria"
+				view_type="form"
+				view_mode="tree"/>
+
+
+</odoo>

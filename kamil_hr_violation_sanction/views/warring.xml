@@ -1,0 +1,120 @@
+<odoo>
+  <data>
+   
+
+    <!-- warning tree view -->
+    <record model="ir.ui.view" id="tree_view_warning">
+      <field name="name">warning.tree</field>
+      <field name="model">warning.warning</field>
+      <field name="arch" type="xml">
+        <tree >
+          <field name="employee_no"/>
+          <field name="employee_id"/>
+          <field name="date"/>
+          <field name="type_id" string='Warning Type'/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- warning form view -->
+    <record model="ir.ui.view" id="warning_form_view">
+      <field name="name">warning.form</field>
+      <field name="model">warning.warning</field>
+      <field name="arch" type="xml">
+        <form>
+  
+           <header>
+              
+            <button name="employment_department" states="draft" string="Employment Department" type="object" class="oe_highlight" />
+            
+
+              <button name="hrm_confirm" states="employment_department" string="Human Resource Management" type="object" class="oe_highlight" groups="kamil_hr_security.hr_management_group"/>
+
+              <button name="gm_hr_confirm" states="hrm_confirm" string="General Administration for Human Resources" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+               <button name="action_reject" type="object" string="Reject" states="employment_department" class="oe_highlight" groups="kamil_hr_security.hr_management_group"/>
+
+                <button name="action_reject1" type="object" string="Reject" states="hrm_confirm" class="oe_highlight" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,employment_department,hrm_confirm,gm_hr_confirm"/>
+          </header>
+           <sheet>
+            <div>
+               <group col="4"> 
+                <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="employee_id" options="  {'no_create':True,'no_edit':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+              <group col="4">
+                <field name= "current_location"
+                     options="  {'no_create':True,'no_edit':True}"/>
+                <field name="functional_degree" options="{'no_create':True,'no_edit':True}"/>
+                  
+                </group>
+              <group col="4"> 
+                <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="type_id" string='Warning Type' attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True,'no_edit':True}"/>
+              </group>
+              <group>
+                <field name="warning_text" attrs="{'readonly':[('state','!=','draft')],'required':[('state','=','draft')]}"/>
+                <field name="reason_refuse" attrs="{'readonly':[('state','=','draft')]}"/>
+              </group>
+              <field name="submitted" invisible="True"/>
+            </div>
+            
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="activity_ids" widget="mail_activity"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+      </field>
+    </record>
+    
+
+    <!-- action warning -->
+    <record id="action_warning" model="ir.actions.act_window">
+      <field name="name">warnings</field>
+      <field name="res_model">warning.warning</field> 
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- warning type tree view -->
+    <record model="ir.ui.view" id="warning_tree_view">
+      <field name="name">warning.type.tree</field>
+      <field name="model">warning.type</field>
+      <field name="arch" type="xml">
+        <tree editable="bottom">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- action warning type -->
+    <record id="action_warning_type" model="ir.actions.act_window">
+      <field name="name">warning Types</field>
+      <field name="res_model">warning.type</field> 
+      <field name="view_mode">tree</field>
+    </record>
+    
+
+    
+    <menuitem name="warnings"
+            id="warning_menu"
+            parent="menu_hr_violation_sanction"
+            action="action_warning"
+            sequence="3"
+            />
+   
+
+    <menuitem name="warning Types"
+            id="warning_type_menu"
+            action="action_warning_type"
+            parent="menu_violation_configuration"
+            groups="kamil_hr_security.hr_employment_department_group"
+            />
+
+  </data>
+</odoo>

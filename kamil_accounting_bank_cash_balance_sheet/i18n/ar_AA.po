@@ -1,0 +1,902 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_bank_cash_balance_sheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-28 07:07+0000\n"
+"PO-Revision-Date: 2020-10-28 07:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "<strong style=\"float:right\">  أعده: .................................</strong>"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "<strong style=\"float:right\">  راجعه: ................................. </strong>"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_template
+msgid "<strong>\n"
+"                                			الجملة\n"
+"                                		</strong>"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__access_warning
+msgid "Access warning"
+msgstr "خطأ بالوصول"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__addition_ids
+msgid "Addition"
+msgstr "إضافة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__all_transactions
+msgid "All Transactions"
+msgstr "جميع العمليات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "April"
+msgstr "ابريل"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "August"
+msgstr "اغسطس"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move__balance_id
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__balance_according_to_bank_statement
+msgid "Balance According To Bank Statement"
+msgstr "الرصيد حسب كشف البنك"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__bank_balance
+msgid "Bank Balance"
+msgstr "رصيد البنك"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__name
+msgid "Bank/Cash"
+msgstr "البنك/الخزينة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.actions.act_window,name:kamil_accounting_bank_cash_balance_sheet.action_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_bank_cash_balance_sheet
+msgid "Bank/Cash Balance Sheet"
+msgstr "موازنة البنك/الخزينة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.actions.report,name:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_report
+msgid "Bank/Cash Balance Sheet Report"
+msgstr "تقرير موازنة البنك/الخزينة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.ui.menu,name:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_menu
+msgid "Bank/Sheet Balance Sheet"
+msgstr "موازنة البنك/الخزينة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Calculate"
+msgstr "إحتساب"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cancel_entert_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__cancel_operation_type
+msgid "Cancel Operation Type"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__canceled
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__canceled
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__canceled
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_collection_collection__canceled
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_ratification_payment__canceled
+msgid "Canceled"
+msgstr "تم اﻹلغاء"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__cheques_not_provided_for_exchange
+msgid "Cheques Not Provided For Exchange"
+msgstr "شيكات لم تقدم للصرف"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__collection_id
+msgid "Collection"
+msgstr "التحصيل"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__company_id
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__company_id
+msgid "Company"
+msgstr "الفرع"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__credit
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Credit"
+msgstr "الدائن"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__current_balance_book
+msgid "Current Balance Book"
+msgstr "الرصيد الدفتري الحالي"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العملاء"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__date
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__debit
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Debit"
+msgstr "المدين"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "December"
+msgstr "ديسمبر"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__description
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__name
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__document_number
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__document_number
+msgid "Document Number"
+msgstr "رقم المستند"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cancel_entert_form_view
+msgid "Execute"
+msgstr "تنفيذ"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "February"
+msgstr "فبراير"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__hide_in_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__hide_in_sheet
+msgid "Hide In Sheet"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Hide Paid Off"
+msgstr "إخفاء الحركات التي صُرفت/حُصلت"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__id
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__id
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__id
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__is_canceled_move
+msgid "Is Canceled Move"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__is_more_than_6_month
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__is_more_than_6_month
+msgid "Is More Than 6 Month"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.account_move_line_form
+msgid "Is it Paid Off"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "January"
+msgstr "يناير"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_account_move
+msgid "Journal Entries"
+msgstr "قيود اليومية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر يومية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "July"
+msgstr "يوليو"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "June"
+msgstr "يونيو"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:account.move.cancel,operation_type:0
+#: selection:account.move.line,cancel_operation_type:0
+msgid "Lift as Liability/Add to the Net Worth"
+msgstr "رفعها امانات لصالح المستفيد  /  التاثير علي القيمة الصافية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__line_ids
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "March"
+msgstr "مارس"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "May"
+msgstr "مايو"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__month
+msgid "Month"
+msgstr "الشهر"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__move_ids
+msgid "Move"
+msgstr "حركة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__move_line_ids
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__move_line_id
+msgid "Move Line"
+msgstr "بند الحركة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Moves In Current Month"
+msgstr "الحركات في الشهر المختار"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط القادم"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط القادم"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__not_paid_off
+msgid "Not Paid Off"
+msgstr "لم تصرف"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "November"
+msgstr "نوفمبر"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "October"
+msgstr "اكتوبر"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__operation_date
+msgid "Operation Date"
+msgstr "تاريخ العملية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_cancel__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Other Additions or Subtractions"
+msgstr "اضافات او خصومات اخرى"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__other_expenses
+msgid "Other Expenses"
+msgstr "خصومات اخرى"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__other_revenues
+msgid "Other Revenues"
+msgstr "اضافات اخرى"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__paid_off
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__paid_off
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__paid_off
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_collection_collection__paid_off
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_ratification_payment__paid_off
+msgid "Paid Off"
+msgstr "تم الصرف"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__partner_id
+msgid "Partner"
+msgstr "الجهة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet_line__payment_id
+msgid "Payment"
+msgstr "الدفعية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__previous_balance_book
+msgid "Previous Balance Book"
+msgstr "الرصيد الدفتري السابق"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__previous_move_ids
+msgid "Previous Move"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__previous_move_line_ids
+msgid "Previous Move Line"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Previous Moves"
+msgstr "الحركات السابقة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_collection_collection
+msgid "Revenues Collection"
+msgstr "تحصيل الإيرادات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__revenues_under_collection
+msgid "Revenues Under Collection"
+msgstr "إيرادات تحت التحصيل"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:account.move.cancel,operation_type:0
+#: selection:account.move.line,cancel_operation_type:0
+msgid "Reverse Move"
+msgstr "عكس القيد"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Save Changes"
+msgstr "حفظ التغيرات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__type
+msgid "Select 'Sale' for customer invoices journals.\n"
+"Select 'Purchase' for vendor bills journals.\n"
+"Select 'Cash' or 'Bank' for journals that are used in customer or vendor payments.\n"
+"Select 'General' for miscellaneous operations journals."
+msgstr "اختر 'بيع' لعرض دفاتر اليومية الخاصة بفواتير العملاء. \n"
+"اختر 'شراء' لعرض دفاتر اليومية الخاصة بفواتير الموردين. \n"
+"اختر 'نقدي' أو 'بنك' لعرض دفاتر اليومية الخاصة بمدفوعات العميل أو المورد.\n"
+" اختر 'عام' لعرض دفاتر اليومية الخاصة بالعمليات المتنوعة."
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,month:0
+msgid "September"
+msgstr "سبتمبر"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_account_move_line__sheet_id
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__sheet_id
+msgid "Sheet"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "Show All Moves"
+msgstr "عرض كل الحركات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__strored_current_balance_book
+msgid "Strored Current Balance Book"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_ratification_payment
+msgid "The Payments"
+msgstr "الدفعيات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_sheet_addition__the_type
+msgid "The Type"
+msgstr "النوع"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.cash.balance.sheet,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__total_expenses
+msgid "Total Expenses"
+msgstr "إجمالي المصروفات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__total_revenues
+msgid "Total Revenues"
+msgstr "إجمالي الايرادات"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,help:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model.fields,field_description:kamil_accounting_bank_cash_balance_sheet.field_bank_cash_balance_sheet__year
+msgid "Year"
+msgstr "السنة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_account_move_cancel
+msgid "account.move.cancel"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.sheet.addition,the_type:0
+msgid "addition"
+msgstr "إضافة"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_bank_cash_balance_sheet_line
+msgid "bank.cash.balance.sheet.line"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_bank_sheet_addition
+msgid "bank.sheet.addition"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_collection_collection_line
+msgid "collection.collection.line"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.model,name:kamil_accounting_bank_cash_balance_sheet.model_payment_ratification_line
+msgid "payment.ratification.line"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: selection:bank.sheet.addition,the_type:0
+msgid "subtraction"
+msgstr "خصم"
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "إجمالي الإيرادات"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "إجمالي المصروفات"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "إيرادات تحت التحصيل"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_template
+msgid "التاريخ"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "الجملة"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_template
+msgid "الجهة"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: code:addons/kamil_accounting_bank_cash_balance_sheet/models/bank_cash_balance_sheet.py:479
+#, python-format
+msgid "الرجاء تحديد حساب لـ"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "الرصيد"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "الرصيد الدفتري الحالي"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "الرصيد الدفتري السابق"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "الرصيد حسب كشف البنك"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.actions.report,name:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_report
+msgid "الشيكات الملغية"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_template
+msgid "الشيكات الملغية\n"
+"								 عن شهر"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "القيمة"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_template
+msgid "المبلغ"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.bank_cash_balance_sheet_form_view
+msgid "تم الصرف / التحصيل"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "رصيد البنك"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.canceled_cheques_template
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_template
+msgid "رقم المستند"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model:ir.actions.report,name:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_report
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "شيكات لم تقدم للصرف"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.cheques_not_provided_for_exchange_template
+msgid "شيكات لم تقدم للصرف\n"
+"								 عن شهر"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: code:addons/kamil_accounting_bank_cash_balance_sheet/models/bank_cash_balance_sheet.py:494
+#, python-format
+msgid "عكس القيد - مستند رقم  --> "
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: code:addons/kamil_accounting_bank_cash_balance_sheet/models/bank_cash_balance_sheet.py:495
+#, python-format
+msgid "عكس القيد --> "
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "عن شهر"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: code:addons/kamil_accounting_bank_cash_balance_sheet/models/bank_cash_balance_sheet.py:83
+#, python-format
+msgid "لا يمكنك إنشاء اكثر من موازنة لنفس الفترة"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "موازنة"
+msgstr ""
+
+#. module: kamil_accounting_bank_cash_balance_sheet
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_bank_cash_balance_sheet.report_bank_cash_balance_sheet_template
+msgid "موازنة خزينة"
+msgstr ""
+

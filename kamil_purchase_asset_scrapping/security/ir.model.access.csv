@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_scrap_request,scrap.request,model_scrap_request,,1,1,1,1
+access_scrap_request_line,scrap.request.line,model_scrap_request_line,,1,1,1,1
+access_scrap_report,scrap.report,model_scrap_report,,1,1,1,1
+access_asset_request,asset.request,model_asset_request,,1,1,1,1

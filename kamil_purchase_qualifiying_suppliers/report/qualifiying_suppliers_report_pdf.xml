@@ -1,0 +1,54 @@
+<odoo>
+    <report id="qualifiying_suppliers_report_pdf"
+            model="qualifiy.suppliers.wizard"
+            string="Qualifiying Suppliers Tender"
+            report_type="qweb-html"
+            name="kamil_purchase_qualifiying_suppliers.suppliers_view"
+            menu="False"/>
+
+    <template id="suppliers_view">
+            <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <br/>
+                 <div class="text-center" style="font:500;">
+                    <strong>الصندوق القومي للتامين الصحي
+                    <br/>
+                        قسم المشتريات
+                        <br/>
+                    تقرير الموردين المؤهلين</strong>
+                     <br/>
+                </div>
+                <br/>
+                <br/>
+                <div class="page">
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                          <thead style="display: table-header-group;">
+                                <th class="text-center fit">#</th>
+                                <th class="text-center fit">اسم المورد</th>
+                                <th class="text-center fit">مجالات التأهيل</th>
+                          </thead>
+                        <t t-set="count" t-value="1"/>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr style="page-break-inside: avoid;">
+                                    <td class="text-center" heidht="5">
+                                        <span t-esc="count"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['name']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['area']"/>
+                                    </td>
+
+                                </tr>
+                            <t t-set="count" t-value="count+1"/>
+                            </t>
+                    </table>
+                </div>
+            </t>
+            </t>
+    </template>
+
+</odoo>

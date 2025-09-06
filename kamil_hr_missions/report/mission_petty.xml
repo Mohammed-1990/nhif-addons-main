@@ -1,0 +1,97 @@
+<odoo>
+ 
+    <report id="mission_petty_report"
+            model="mission.petty"
+            string="نثريه الماموريه"
+            report_type="qweb-html"
+            name="kamil_hr_missions.mission_petty_report_view"
+        />
+
+    <template id="mission_petty_report_view">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.external_layout">
+            <t t-call="web.html_container">
+                    <br/>
+                    <div class="text-center" style="font:500;">
+                        <p>
+                        نثرية الماموريه</p>
+                    </div>
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                      <tr>
+                            <th class="text-center table-active">رقم الماموريه</th>
+                            <th class="text-center"><span t-esc="doc.mission_id.name"/></th>
+                            <th class="text-center table-active">رقم النثريه</th>
+                            <th class="text-center"><span t-esc="doc.name"/></th>
+                        </tr>
+                        <tr>
+                            <th class="text-center table-active">اجمالي المبلغ</th>
+                            <th class="text-center"><span t-esc="doc.total"/></th>
+                            <th class="text-center table-active">عدد الايام</th>
+                            <th class="text-center"><span t-esc="doc.no_days"/></th>
+
+                        </tr>
+                        <tr>
+                            <th class="text-center table-active">تكلفة وقود السفر</th>
+                            <th class="text-center"><span t-esc="doc.cost_travel_fuel"/></th>
+                            <th class="text-center table-active">رسوم المغادرة</th>
+                            <th class="text-center"><span t-esc="doc.departure_fee"/></th>
+                        </tr>
+                        <tr>
+                            <th class="text-center table-active">تكلفه التأشيرات</th>
+                            <th class="text-center"><span t-esc="doc.cost_visas"/></th>
+                            <th/>
+                            <th/>
+                        </tr>
+                    </table><br/><br/><br/>
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                        <tr class="table-active">
+                            <th class="text-center fit">#</th>
+                            <th class="text-center fit">الموظف</th>
+                            <th class="text-center fit">المسمي الوظيفي</th>
+                            <th class="text-center fit">المبلغ</th>
+                            <th class="text-center fit">عدد الايام</th>
+                            <th class="text-center fit">الاجمالي</th>
+                        </tr>
+                        <div class="page">
+                            <t t-set="count" t-value="1"/> 
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="count"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.employee_id.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.job_title_id.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.amount"/>
+                                    </td>
+                                    <td class="text-center">
+                                      <span t-esc="doc.no_days"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.total"/>
+                                    </td>
+                                    <t t-set="count" t-value="count+1"/> 
+                                </tr>
+                            </t>
+                        </div>
+                    </table><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        <p style="font:600;">
+                            <span>
+                                ......................................................................
+                            </span>
+                            <strong class="text-center">:الشؤون الماليه والادارية</strong>
+                            <br/><br/><br/>
+                            <span>
+                                ......................................................................
+                            </span>
+                            <strong class="text-center">:المراجعة</strong>
+                        </p>
+               </t>
+            </t>
+        </t>
+    </template>
+</odoo>

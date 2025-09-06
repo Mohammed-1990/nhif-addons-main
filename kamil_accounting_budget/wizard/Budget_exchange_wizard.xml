@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form Wiz Payment report -->
+	<record id="view_budget_exchange_report_form" model="ir.ui.view">
+		<field name="name">budget.report.form</field>
+		<field name="model">budget.exchange.wizard</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="4">
+						<field name="date_from"/>
+						<field name="date_to"/>
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Action Payment report-->
+	<act_window
+		id="action_budget_exchange_report"
+		name="Budget Exchange Report"
+		res_model="budget.exchange.wizard"
+		view_mode="form"
+		target="new"
+	/>
+
+	<menuitem id="menu_budget_exchange_report" name="Budget Exchange Report" parent="account.menu_finance_entries_management" action="action_budget_exchange_report" sequence="70"/>
+</odoo>

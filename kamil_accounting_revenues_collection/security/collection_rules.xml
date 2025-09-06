@@ -1,0 +1,67 @@
+<odoo>
+	<data>
+		
+
+<!-- 		<record id="auditor_collection_rule" model="ir.rule">
+			<field name="name">Auditor Collection Rule</field>
+			<field name="model_id" ref="model_collection_collection"/>
+			<field name="domain_force">[('state','in',['confirmed','internal_auditor_audit','returned_to_collector'])]</field>
+			<field name="groups" eval="[(4, ref('kamil_accounting_base.internal_auditor_group'))]"/>
+		</record>
+ -->
+
+
+		<record id="collection_see_only_his_receipt" model="ir.rule">
+			<field name="name">Collection See Only His Receipt</field>
+			<field ref="model_collection_receipt_67" name="model_id"/>
+			<field name="domain_force">[('collector_id.address_id', '=', user.partner_id.id)]</field>
+			<field name="groups" eval="[(4, ref('kamil_accounting_base.collector_group'))]"/>
+		</record>
+
+		<!-- قاعدة للمشرفين: يشوف كل السجلات -->
+		<record id="collection_see_all_receipts_admin" model="ir.rule">
+			<field name="name">Collection See All Receipts (Admin)</field>
+			<field ref="model_collection_receipt_67" name="model_id"/>
+			<field name="domain_force">[(1,'=',1)]</field>
+			<field name="groups" eval="[(4, ref('kamil_accounting_base.supervisor_group'))]"/>
+		</record>
+
+		<record id="collection_collection_multi_company_rule" model="ir.rule">
+			<field name="name">Collection multi-company</field>
+			<field ref="model_collection_collection" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="collection_line_multi_company_rule" model="ir.rule">
+			<field name="name">Collection Line multi-company</field>
+			<field ref="model_collection_collection_line" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="cost_center_multi_company_rule" model="ir.rule">
+			<field name="name">cost center multi-company</field>
+			<field ref="kamil_accounting_base.model_kamil_account_cost_center" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="receipt_67_multi_company_rule" model="ir.rule">
+			<field name="name">Receipt 67 multi-company</field>
+			<field ref="model_collection_receipt_67" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="collection_subscriber_multi_company_rule" model="ir.rule">
+			<field name="name">Collection Subscriper multi-company</field>
+			<field ref="model_collection_subscriber" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+	</data>
+</odoo>

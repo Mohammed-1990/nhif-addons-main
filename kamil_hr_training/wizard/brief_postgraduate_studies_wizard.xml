@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <record id="brief_postgraduate_studies_wizard_form" model="ir.ui.view">
+            <field name='name'>brief postgraduate studies wizard</field>
+            <field name='model'>brief.postgraduate.studies.wizard</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group col="4">
+                       
+                           <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+                         
+                           <field name="university_id" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+                          
+                           <field name="date_from"/>
+
+                          
+                           <field name="date_to"/>
+
+                           <field name="specialization" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+
+
+                           <field name="country" options="{'no_create':True,'no_edit':True,'no_open':True}" />
+                        
+                        </group>
+
+                      <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                      </footer>
+                      
+                    </sheet>
+          </form>
+         </field>
+      </record>
+
+
+    <record id="action_brief_postgraduate_studies_wizard" model="ir.actions.act_window">
+        <field name="name">Brief Postgraduate Studies report</field>
+        <field name="res_model">brief.postgraduate.studies.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+
+    <menuitem name="Brief Postgraduate Studies Report" 
+              id="report_menu_brief_postgraduate_studies" 
+              parent="long_taining_menu" 
+              action="action_brief_postgraduate_studies_wizard"
+              sequence = "1"
+              
+              />
+
+    </data>
+</odoo>

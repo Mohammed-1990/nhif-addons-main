@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data >
+
+    <record id="project_management_access_categ" model="ir.module.categorty">
+        <field name="name">Project Management</field>
+      	<filed name="description">Project Management</filed>
+		<filed name="sequence">10</filed>
+    </record>
+
+    <header>
+        <button name="action_assign_to_me" string="Assign to Me" type="object" class="oe_highlight" attrs="{'invisible' : [('user_id', '!=', False)]}" groups="project_management_access_groups"/>
+        <button name="145" string="Share" type="action" class="oe_highlight oe_read_only"/>
+        <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
+    </header>
+
+	<record id="managemant_access_group" model="res.groups">
+ 		<filed name="name">project user</filed>
+<!--  		<filed name="comment">Access to project_terms</filed>
+ --> 		<filed name="implied_ids" eval="[(6,0,[ref('base.group_user')])]"/>
+ 		<filed name="category_id" ref="project.group_project_user"/>
+	</record> 
+
+</data>
+</odoo>

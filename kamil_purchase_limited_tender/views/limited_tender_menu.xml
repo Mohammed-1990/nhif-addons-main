@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+
+		<!-- Menu Limited Tender Root-->
+		<menuitem 
+			id="menu_limited_tender_root" 
+			name="Limited Tender" 
+			sequence="2" 
+			parent="purchase.menu_purchase_root"
+		/>
+
+
+		<!-- Menu Limited Tender -->
+		<menuitem 
+			id="menu_limited_tender" 
+			parent="kamil_purchase_request.menu_purchase_process"
+			action="kamil_purchase_limited_tender.action_limited_tender" 
+			sequence="4"
+		/>
+
+
+		<!-- Action Menu Public Tender Book-->
+		<act_window
+			id="action_limited_tender_book"
+			name="Limited Tender Book"
+			res_model="purchase.order"
+			view_mode="tree,form"
+			domain="[('type','=','limited_tender')]"
+			context="{'default_type':'limited_tender'}"
+		/>
+
+
+		
+		<!-- Limited Tender Book -->
+<!-- 		<menuitem 
+			id="menu_limited_tender_book" 
+			parent="menu_limited_tender_root" 
+			action="action_limited_tender_book" 
+			sequence="2"
+		/> -->
+
+
+	</data>
+</odoo>

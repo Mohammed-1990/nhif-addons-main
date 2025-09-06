@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+		<record id="employee_file_wizard_form" model="ir.ui.view">
+			<field name='name'>Employees Files Report</field>
+			<field name='model'>employee.file.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+                        <group>
+                            <group>
+                               <field name="employee_ids" widget="many2many_tags" options="{'no_create':True}"/>
+                	        </group>
+                        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+       </record>
+
+
+        <record id="action_employee_file_wizard" model="ir.actions.act_window">
+            <field name="name">Employees Files Report</field>
+            <field name="res_model">employee.file.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+       </record>
+
+        <menuitem name="Employees Files Report" id="menu_report_employee_file" parent="archive_root_menu" action="action_employee_file_wizard" sequence="2"/>
+
+	</data>
+</odoo>

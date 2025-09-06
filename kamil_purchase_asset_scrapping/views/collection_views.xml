@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Revenues Collection-->
+	<record id="collection_form_view_inherit2" model="ir.ui.view">
+		<field name="name">collection.form.inherit2</field>
+		<field name="model">collection.collection</field>
+		<field name="inherit_id" ref="kamil_accounting_revenues_collection.collection_form_view"/>
+		<field name="arch" type="xml">
+			<field name="tender_type" position="after">
+				<field name="scrap_id" attrs="{'invisible':['|',('is_tender','=',False),('tender_type','!=','scrap')]}" />
+			</field>
+		</field>
+	</record>
+</odoo>

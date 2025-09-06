@@ -1,0 +1,93 @@
+<odoo>
+    <data>
+
+    <!-- hr promotions tree view -->    
+    <record model="ir.ui.view" id="hr_promotions_tree_view">
+      <field name="name">hr.promotions.tree</field>
+      <field name="model">hr.promotions</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name" string="Number"/>
+            <field name="employee_id"/>
+            <field name="department_id"/>
+            <field name="current_degree_id" string="Previous Degree"/>
+            <field name="new_degree_id"/>
+            <field name="state"/>
+          </tree>
+      </field>
+    </record>
+
+    <!-- hr promotions form view -->    
+    <record model="ir.ui.view" id="hr_promotions_form_view">
+      <field name="name">hr.promotions.form</field>
+      <field name="model">hr.promotions</field>
+      <field name="arch" type="xml">
+          <form>
+             <header>
+              <button name="do_submit" string="Send" type="object" class="btn btn-primary" states="draft"/>
+              <button name="do_personnel_confirm" string="Confirm" type="object" class="btn btn-primary" states="personnel"/>
+              <button name="do_sm_confirm" string="Submit" type="object" class="btn btn-primary" states="sub_manager"/>
+              <button name="do_gd_confirm" string="Approve" type="object" class="btn btn-primary" states="general_directorate"/>
+              <button name="do_return" string="Return" type="object" states="personnel,sub_manager,general_directorate"/>
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+             <!--  WARNING: When you press the "Confirm" button, the employee's degree in his profile will modify to the new degree and notify the employee -->
+              <h4>
+                <div class="text-warning" states="submitted"><br/>تحذير: عند الضغط على زر "تأكيد" ، ستعدل درجة الموظف في ملفه الشخصي إلى الدرجة الجديدة ويتم إخطار الموظف<br/><br/></div>
+              </h4>
+              <h1>
+                 <field name="name"/>
+              </h1>
+              <separator string="Employee Data" />
+              <group col="4">
+                <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="employee_id" options="{'no_create':1,'no_edit':1,'no_open':1}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="department_id" options="{'no_create':1,'no_edit':1,'no_open':1}" force_save="1" />
+                <field name="job_title" options="{'no_create':1,'no_edit':1,'no_open':1}" force_save="1"/>
+              </group>
+              <separator string="Promotion Data" />
+              <group col="4">
+                <field name="promotion_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="exection_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="current_degree_id" options="{'no_create':1,'no_edit':1,'no_open':1}" force_save="1"/>
+                <field name="new_degree_id" options="{'no_create':1,'no_edit':1,'no_open':1}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="current_bonus"/>
+                <field name="new_bonus" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="job_no" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':1,'no_edit':1,'no_open':1}"/><newline/><newline/>
+                <field name="section"/>
+                <field name="employee_degree" options="{'no_create':1,'no_edit':1,'no_open':1}"/>
+              </group>
+              <notebook>
+                  <page string="Notes">
+                    <div>
+                      <field name="notes"/>
+                    </div>
+                  </page>
+                </notebook> 
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+          </form>
+        </field>
+      </record>
+
+
+   <!-- action hr promotions-->
+   <record  id="action_hr_promotions" model="ir.actions.act_window">
+      <field name="name">Promotions</field>
+      <field name="res_model">hr.promotions</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Promotions" id="hr_promotions_main_menu" parent="kamil_hr_personal.personal_menu" sequence="2"/>
+    
+    <menuitem name="Promotions" id="hr_promotions_menu" parent="hr_promotions_main_menu" action="action_hr_promotions" sequence="1"/>
+
+
+
+  </data>
+</odoo>

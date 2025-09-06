@@ -1,0 +1,1035 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_violation_sanction
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-21 10:00+0000\n"
+"PO-Revision-Date: 2021-09-21 10:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_hr_investigation
+msgid " Employee Investigation"
+msgstr "الاستيضاحات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__accounting_type
+msgid "Accounting Type"
+msgstr "نوع المحاسبة"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,accounting_type:0
+msgid "Accounting repairmen"
+msgstr "محاسبة مصلحي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,accounting_type:0
+msgid "Agazi Accounting"
+msgstr "محاسبة إجازي"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.employee_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.employee_inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.employee_meal_allowance_form_view
+msgid "Allowance Info"
+msgstr "بيانات البدل"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_employee_allowance
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_allowance
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_allowance_allowance
+msgid "Allowances"
+msgstr "البدلات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_apply_training_operation
+msgid "Apply Training"
+msgstr "التقديم للبرنامج التدريبي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_apply_training_request
+msgid "Apply Training Request"
+msgstr "التقديم للبرنامج التدريبي"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_hr_investigation_form
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.investigation,state:0
+msgid "Aprroved"
+msgstr "الموافقة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,type_penalty:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+msgid "Attention"
+msgstr "إنذار"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,type_penalty:0
+msgid "Attention & Discount"
+msgstr "إنذار وخصم"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,incentive_discount:0
+msgid "By days"
+msgstr "بالأيام"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_apply_training_operation
+msgid "Click create button to Apply Training"
+msgstr "اضغط على زر 'انشاء' لإنشاء التقديم للبرنامج التدريبي"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_loan
+msgid "Click create button to Loan request"
+msgstr "اضغط على زر 'انشاء' لإنشاء طلب سلفية"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_training_needs_operation
+msgid "Click create button to Training Needs"
+msgstr "اضغط على زر 'انشاء' لإنشاء طلب احتياج تدريبي"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_employee_leave_request
+msgid "Click create button to create leave request"
+msgstr "إضغط على زر 'إنشاء' لإنشاء طلب إجازة"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_employee_permission
+msgid "Click create button to permission request"
+msgstr "اضغط على زر 'إنشاء' لإنشاء طلب إذن"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_project_request
+msgid "Click create button to project request"
+msgstr "اضغط على زر 'إنشاء' لإنشاء طلب مشروع"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_need_requisition_general
+msgid "Click to define a new Need Requisition."
+msgstr "إضغط ﻹنشاء طلب حوجة جديد"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_violation_configuration
+msgid "Configurations"
+msgstr "الإعدادات"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_hr_investigation_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_hr_contravention
+msgid "Contravention"
+msgstr "المخالفات"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+msgid "Contravention No"
+msgstr "رقم المخالفة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_contravention_type
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.contravention_type_menu
+msgid "Contravention Types"
+msgstr "نوع المخالفة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_contravention
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.contravention_employee_menu
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.contravention_menu
+msgid "Contraventions"
+msgstr "المخالفات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__create_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__create_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__create_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type__create_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__current_degree
+msgid "Current Degree"
+msgstr "الدرجة الحالية"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__days
+msgid "Days"
+msgstr "عدد الأيام"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__expect_decision
+msgid "Decision"
+msgstr "القرار"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__department_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__department_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__current_location
+msgid "Department"
+msgstr "القسم"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,type_penalty:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+msgid "Discount"
+msgstr "خصم"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__display_name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__display_name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__display_name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type__display_name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,state:0
+#: selection:hr.investigation,state:0
+#: selection:warning.warning,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__employee_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__user_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__employee_comments
+msgid "Employee Comments"
+msgstr "تعليقات الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.employee_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.employee_inclination_allowance_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.employee_meal_allowance_form_view
+msgid "Employee Info"
+msgstr "بيانات الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__employee_id
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__employee_no
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__employee_no
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_employee_profile
+msgid "Employee Own Profile"
+msgstr "ملف الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_payslip
+msgid "Employee Payslip"
+msgstr "المرتب"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_profile
+msgid "Employee Profile"
+msgstr "ملف الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_hr_investigation_form
+msgid "Employee comments"
+msgstr "تعليقات الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_employee_payslip
+msgid "Employee payslip"
+msgstr "المرتب"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.warning_form_view
+#: selection:warning.warning,state:0
+msgid "Employment Department"
+msgstr "قسم التوظيف"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.investigation,state:0
+msgid "Filled By Employee"
+msgstr "ملء بواسطة الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__fixed_amount
+msgid "Fixed Amount"
+msgstr "مبلغ ثابت"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,incentive_discount:0
+msgid "Fixed amount"
+msgstr "قيمة ثابتة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,type_discount:0
+msgid "From salary "
+msgstr "من المرتب"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__degree_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__functional_degree
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__functional_degree
+msgid "Functional Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.warning_form_view
+#: selection:warning.warning,state:0
+msgid "General Administration for Human Resources"
+msgstr "موافقة الإداره العامه للموارد البشرية"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.employee_general_operantions_main_mneu
+msgid "General Operantions"
+msgstr "العمليات العامة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model,name:kamil_hr_violation_sanction.model_violation_log
+msgid "History of  Employee violation"
+msgstr "تاريخ مخالفه الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_hr_investigation_form
+msgid "Hr Investigation"
+msgstr "الاستيضاحات"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.warning_form_view
+#: selection:warning.warning,state:0
+msgid "Human Resource Management"
+msgstr "موافقة ادارة الموارد البشرية"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type__id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type__id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__message_unread
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__message_unread
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__message_needaction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__message_needaction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__message_has_error
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__message_has_error
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,type_discount:0
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__incentive
+msgid "Incentive"
+msgstr "الحافز"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__incentive_discount
+msgid "Incentive Discount"
+msgstr "خصم الحافز"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_employee_inclination_allowance
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_inclination_allowance
+msgid "Inclination Allowance"
+msgstr "بدل الميل"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model,name:kamil_hr_violation_sanction.model_hr_investigation
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__investigation_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__investigation_id_log
+msgid "Investigation"
+msgstr "الاستيضاح"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_investigation_type_form
+msgid "Investigation Type"
+msgstr "نوع الاستيضاحات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_hr_investigation_type
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_investigation_type
+msgid "Investigation Types"
+msgstr "انواع الاستيضاحات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_investigation
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_investigation
+msgid "Investigations"
+msgstr "الاستيضاحات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention____last_update
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation____last_update
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log____last_update
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type____last_update
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__write_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__write_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__write_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type__write_date
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_employee_leave_request
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_leave_request
+msgid "Leave Request"
+msgstr "طلب إجازة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_loan
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.hr_loan_request_main_menu
+msgid "Loan Request"
+msgstr "طلبات السلفيات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__management_id
+msgid "Management"
+msgstr "الإدارة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__manager_comments
+msgid "Manager Comments"
+msgstr "تعليقات المدير"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_hr_investigation_form
+msgid "Manager comments"
+msgstr "تعليقات المدير"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__managment_id
+msgid "Managment"
+msgstr "الإدارة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_employee_meal_allowance
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_meal_allowance
+msgid "Meal Allowance"
+msgstr "بدل وجبه"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention_type__name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_investigation_type__name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__name
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_need_request_g
+msgid "Need Request"
+msgstr "طلب الحوجة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_need_requisition_general
+msgid "Need Requisition"
+msgstr "طلب الحوجة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__new_degree
+msgid "New Degree"
+msgstr "الدرجة الجديدة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_hr_contravention
+msgid "Not Found Contravention"
+msgstr "لا توجد مخالفات"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_investigation
+msgid "Not Found Investigation"
+msgstr "لا يوجد إستيضاحات"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_employee_payslip
+msgid "Not Found Payslip"
+msgstr "لا يوجد حساب مرتب"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_warnning
+msgid "Not Found Warning"
+msgstr "لا يوجد إنذارات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__number_of_days
+msgid "Number Of Days"
+msgstr "عدد الأيام"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,activity_state:0
+#: selection:hr.investigation,activity_state:0
+#: selection:warning.warning,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,incentive_discount:0
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_employee_permission_request
+msgid "Permission Request"
+msgstr "طلب الإذن"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,activity_state:0
+#: selection:hr.investigation,activity_state:0
+#: selection:warning.warning,activity_state:0
+msgid "Planned"
+msgstr "خطط"
+
+#. module: kamil_hr_violation_sanction
+#: code:addons/kamil_hr_violation_sanction/model/contravention.py:113
+#: code:addons/kamil_hr_violation_sanction/model/contravention.py:119
+#: code:addons/kamil_hr_violation_sanction/model/warring.py:64
+#: code:addons/kamil_hr_violation_sanction/model/warring.py:70
+#, python-format
+msgid "Please Enter reason"
+msgstr "يرجى ، ادخل السبب"
+
+#. module: kamil_hr_violation_sanction
+#: code:addons/kamil_hr_violation_sanction/model/investigation.py:78
+#, python-format
+msgid "Please enter rejection reason"
+msgstr "يرجى ادخل سبب الاستقاله"
+
+#. module: kamil_hr_violation_sanction
+#: code:addons/kamil_hr_violation_sanction/model/investigation.py:62
+#, python-format
+msgid "Please enter your comments"
+msgstr "الرجاء إدخال تعليقاتك"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.hr_projects_request_main_menu
+msgid "Project Request"
+msgstr "طلب مشروع"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,accounting_type:0
+msgid "Realization"
+msgstr "تحقيق"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.tree_hr_investigation_view
+msgid "Recruit Requests"
+msgstr ""
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,type_penalty:0
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+msgid "Reduce Degree"
+msgstr "تخفيض درجة"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.contravention_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_hr_investigation_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.warning_form_view
+msgid "Reject"
+msgstr "رفض"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,state:0
+#: selection:warning.warning,state:0
+msgid "Rejected"
+msgstr "مرفوضة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.resignation_main_menu
+msgid "Resignation"
+msgstr "الاستقالة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.view_hr_investigation_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__state
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__state
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__activity_state
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__activity_state
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__submitted
+msgid "Submitted"
+msgstr "تمت الموافقة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__summary_contravention
+msgid "Summary Contravention"
+msgstr "ملخص المخالفة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__summary_investigation
+msgid "Summary Investigation"
+msgstr "ملخص الاستيضاح"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__summary_committees
+msgid "Summary of committees decision"
+msgstr "\"ملخص قرار اللجنة"
+
+#. module: kamil_hr_violation_sanction
+#: code:addons/kamil_hr_violation_sanction/model/contravention.py:100
+#: selection:hr.contravention,type_penalty:0
+#, python-format
+msgid "Termination"
+msgstr "فصل"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model,name:kamil_hr_violation_sanction.model_investigation_type
+msgid "The Employee violation"
+msgstr "المخالفات"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.actions.act_window,help:kamil_hr_violation_sanction.action_resignation
+msgid "There is no Resignation"
+msgstr "لا توجد استقاله"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.investigation,state:0
+msgid "To Fill By Employee"
+msgstr "لملء من قبل الموظف"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.contravention,activity_state:0
+#: selection:hr.investigation,activity_state:0
+#: selection:warning.warning,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.hr_training_main_menu
+msgid "Training"
+msgstr "التدريب"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_training_need_request
+msgid "Training Need Request"
+msgstr "طلب احتياج التدريبي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_training_needs_operation
+msgid "Training Needs"
+msgstr "طلب احتياج التدريبي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__type_discount
+msgid "Type Discount"
+msgstr "نوع الخصم"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__type_penalty
+msgid "Type Penalty"
+msgstr "نوع الجزاء"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__violation_type
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_violation_log__violation_type
+msgid "Violation Type"
+msgstr "نوع الاستيضاح"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.hr_violation_sanction_main_menu
+msgid "Violation and Sanction"
+msgstr "المخالفات والجزاءات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__warning_text
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__warning_text
+msgid "Warning Text"
+msgstr "نص الإنذار"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__warning_type_id
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__type_id
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.tree_view_warning
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.warning_form_view
+msgid "Warning Type"
+msgstr "نوع الإنذار"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.warning_employee_menu
+msgid "Warnings"
+msgstr "الانذارات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_investigation__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_contravention__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_hr_investigation__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_violation_sanction.field_warning_warning__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model,name:kamil_hr_violation_sanction.model_hr_contravention
+msgid "hr.contravention"
+msgstr "المخالفات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model,name:kamil_hr_violation_sanction.model_hr_contravention_type
+msgid "hr.contravention.type"
+msgstr ""
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_investigation
+msgid "investigation"
+msgstr "استيضاحات"
+
+#. module: kamil_hr_violation_sanction
+#: model_terms:ir.ui.view,arch_db:kamil_hr_violation_sanction.employee_allowance_form_view
+msgid "net"
+msgstr "الصافي"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_employee_permission
+msgid "permission request"
+msgstr "طلب الاذن"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_project_request
+msgid "project request"
+msgstr "طلب مشروع"
+
+#. module: kamil_hr_violation_sanction
+#: selection:hr.investigation,state:0
+msgid "rejectd"
+msgstr "مرفوضة"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_resignation
+msgid "resignation"
+msgstr "إستقالة"
+
+#. module: kamil_hr_violation_sanction
+#: code:addons/kamil_hr_violation_sanction/model/contravention.py:59
+#, python-format
+msgid "start date cannot be greater than end date"
+msgstr ""
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_hr_contravention__reason_refuse
+#: model:ir.model.fields,field_description:kamil_hr_violation_sanction.field_warning_warning__reason_refuse
+msgid "the reason of refuse"
+msgstr "اسباب الرفض"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.menu_hr_violation_sanction
+msgid "violation and sanction"
+msgstr "المخالفات و الجزاءات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_warnning
+#: model:ir.model,name:kamil_hr_violation_sanction.model_warning_warning
+msgid "warning"
+msgstr "إنذار"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_warning_type
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.warning_type_menu
+msgid "warning Types"
+msgstr "انواع الانذارات"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.model,name:kamil_hr_violation_sanction.model_warning_type
+msgid "warning.type"
+msgstr "نوع الانذار"
+
+#. module: kamil_hr_violation_sanction
+#: model:ir.actions.act_window,name:kamil_hr_violation_sanction.action_warning
+#: model:ir.ui.menu,name:kamil_hr_violation_sanction.warning_menu
+msgid "warnings"
+msgstr " الانذارات"
+

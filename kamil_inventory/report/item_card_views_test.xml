@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record model="ir.ui.view" id="view_item_card_test_graph">
+            <field name="name">item.card.graph</field>
+            <field name="model">item.card.test</field>
+            <field name="arch" type="xml">
+                <graph string="Item Card">
+                    <field name="product_id" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_item_card_test_pivot">
+            <field name="name">item.card.report.pivot</field>
+            <field name="model">item.card.test</field>
+            <field name="arch" type="xml">
+                <pivot string="Item Card" disable_linking="True">
+                    <field name="product_id" type="row"/>
+                    <field name="move_id" type="row"/>
+                    <field name="product_qty" type="col"/>
+                    <field name="qty_done" type="col"/>
+                    <field name="date" type="row"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_item_card_test_tree">
+            <field name="name">item.card.report.tree</field>
+            <field name="model">item.card.test</field>
+            <field name="arch" type="xml">
+                <tree string="Item Card" >
+                    <field name="product_id" />
+                    <field name="move_id" />
+                    <field name="qty_done" />
+                    <field name="product_qty"/>
+                    <field name="product_uom_qty"/>
+                    <field name="available_quantity"/>
+                    <field name="picking_type_id"/>
+                    <field name="location_id"/>
+                    <field name="date" />
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_item_card_test_form">
+            <field name="name">item.card.report.form</field>
+            <field name="model">item.card.test</field>
+            <field name="arch" type="xml">
+                <form string="Item Card" >
+                    <sheet>
+                        <group col="4">
+                            <field name="product_id" />
+                            <field name="move_id" />
+                            <field name="qty_done" />
+                            <field name="product_qty"/>
+                            <field name="available_quantity"/>
+                            <field name="picking_type_id"/>
+                            <field name="location_id"/>
+                            <field name="date" />
+                            <field name="state"/>
+                            <field name="product_uom_qty"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <!-- <record id="view_scrap_search" model="ir.ui.view">
+        <field name="name">scrap.report.search</field>
+        <field name="model">scrap.report</field>
+        <field name="arch" type="xml">
+            <search string="Scrap">
+                <group expand="0" string="Group By">
+                    <filter string="Scrap" name="scrap_id" context="{'group_by':'scrap_id'}"/>
+                    <filter string="Asset" name="asset_id" context="{'group_by':'asset_id'}"/>
+                    <filter string="Book" name="book_id" context="{'group_by':'book_id'}"/>
+                    <filter string="Customer" name="partner_id" context="{'group_by':'partner_id'}"/>
+                    <filter string="Status" name="state" context="{'group_by':'state'}"/>
+                    <separator/>
+                    <filter string="Order Date" name="date" context="{'group_by':'ordering_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record> -->
+
+
+
+
+
+    <record id="action_item_card_test" model="ir.actions.act_window">
+        <field name="name">Item Card Report</field>
+        <field name="res_model">item.card.test</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <!-- <field name="search_view_id" ref="view_scrap_search"/> -->
+        <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_item_card_test_pivot')}),
+                          (0, 0, {'view_mode': 'graph', 'view_id': ref('view_item_card_test_graph')}),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('view_item_card_test_tree')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('view_item_card_test_form')})]"/>
+    </record>
+
+
+    <menuitem id="menu_item_card_test" action="action_item_card_test" sequence="170" parent="stock.menu_warehouse_report"/>
+
+
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_account_move_line_pivot" model="ir.ui.view">
+         <field name="name">account.move.line.pivot</field>
+         <field name="model">account.move.line</field>
+         <field name="arch" type="xml">
+             <pivot string="Account Statment Analysis" disable_linking="True">
+                 <field name="date_maturity" interval="month" type="col"/>
+                 <field name="account_id" type="row"/>
+                 <field name="move_id" type="row"/>
+                 <field name="debit" type="measure"/>
+                 <field name="credit" type="measure"/>
+                 <field name="balance" type="measure"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="view_account_move_line_graph" model="ir.ui.view">
+         <field name="name">account.move.line.graph</field>
+         <field name="model">account.move.line</field>
+         <field name="arch" type="xml">
+             <graph string="Account Statment Analysis" type="line">
+                 <field name="account_id" type="row" interval="day"/>
+                 <field name="debit" type="measure"/>
+                 <field name="credit" type="measure"/>
+                 <field name="balance" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+  
+
+    <record id="action_account_move_line" model="ir.actions.act_window">
+        <field name="name">Account Statment Analysis</field>
+        <field name="res_model">account.move.line</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="view_id" ref="view_account_move_line_pivot"></field> 
+        <field name="help">This report performs analysis on your quotations and sales orders. Analysis check your sales revenues and sort it by different group criteria (salesman, partner, product, etc.) Use this report to perform analysis on sales not having invoiced yet. If you want to analyse your turnover, you should use the Invoice Analysis report in the Accounting application.</field>
+    </record>
+
+
+    <menuitem 
+        name="Account/Group Statement" 
+        id="menu_account_move_line" 
+        sequence="1"
+        parent="account_reports.account_reports_audit_reports_menu"
+        action="action_account_move_line"/>
+
+    
+
+</odoo>

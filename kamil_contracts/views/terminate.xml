@@ -1,0 +1,110 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="kamil_contract_project_Termination _request_form_veiw">
+      <field name="name">Contract Termination Req. </field>
+      <field name="model">kamil.contracts.termination_requests</field>
+      <field name="arch" type="xml">
+      <form> 
+          <header name="contract_term_form_header">
+               
+              <button name="req_term" string="Draft" states="draft" class="oe_highlight" type="object" groups='kamil_contracts.group_contract_terminator'/>
+              
+              <button name="manager" string="Manager" states="req_term,committe,legal_study,cancel" class="oe_highlight" type="object" groups='kamil_contracts.group_gm'/>
+
+              <button name="legal_study" string="Legal Study" states="manager" class="oe_highlight" type="object" groups='kamil_contracts.group_legal'/>
+
+              <button name="committe" string="Committe" states="manager" class="oe_highlight" type="object" groups='kamil_contracts.group_contract_headOfCommitte'/>
+              
+              <button name="terminated" string="Terminate" states="legal_study" class="oe_highlight" type="object" groups='kamil_contracts.group_legal'/>
+              
+              <button name="cancel" string="Cancel" states="req_term,manager" class="oe_highlight" type="object"
+                groups='kamil_contracts.group_gm,kamil_contracts.group_contract_terminator'
+                />
+
+              <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,req_term,manager,legal_study,manager,committe,terminated,cancel"/>
+            </header>
+
+          <sheet>
+              <div class="oe_button_box" name="button_box">
+
+
+</div>
+ 
+            <group cols="6">
+              <field name="name" readonly="1"/>
+              <field name="contract_id"  options="{'no_create':[ True], 'no_create_edit':[True]}"
+                attrs="{'readonly':[('state','not in',['req_term','draft'])]}"/>
+              
+              <field name="subject" attrs="{'readonly':[('state','not in',['req_term','draft'])]}"/>
+
+              <field name="the_body_of_the_message" string="Content" attrs="{'readonly':[('state','not in',['req_term','draft'])]}"/>
+              <field name="applicant" attrs="{'readonly':True}"/>
+              <!-- <field name="adjective" attrs="{'readonly':True}"/> -->
+              <field name="contracts_date" attrs="{'readonly':['1']}"/>
+             <!--  <field name="period_n"/>
+              <field name="contract_period_mu"/>
+ -->
+              <!-- <field name="contract_amount" widget='integer'/> -->
+             <!--  <field name="attachment"/> -->
+             <field name="attachment_ids" widget="many2one_binary">
+                <tree editable="bottom" string="Attachments" >
+                  <field name="attachment_name"  />
+                  <field name="attachment" filename="file_name" />
+                </tree>
+              </field>
+
+             </group>
+          </sheet>
+          <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers" />
+                  <field name="activity_ids" widget="mail_activity" />
+                  <field name="message_ids" widget="mail_thread" />
+               </div>
+         </form>
+        </field>
+    </record>
+  
+
+
+  <record model="ir.actions.act_window" id="kamil_contract_terminaation_request_window">
+      <field name="name">Contract Termination Request</field>
+      <field name="res_model">kamil.contracts.termination_requests</field>
+      <field name="view_model">form,tree</field>
+    </record>
+
+     <record model="ir.ui.view" id="kamil_project_termination_request_tree">
+          <field name="name">Contract Termination Request</field>
+          <field name="model">kamil.contracts.termination_requests</field>
+          <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="contract_id"/>
+          <field name="applicant"/>
+
+          <!-- <field name="adjective"/> -->
+          <field name="state"/>
+          <field name="write_date" string="last update" />
+          <field name="write_uid" string="updated by" />
+      </tree>
+    </field>
+  </record>
+
+    
+    
+    
+
+    <menuitem name="Termination" id="project_termination_menu" 
+      parent="kamil_contracts.kamil_contract_menu_root" 
+      sequence="3"
+      action="kamil_contract_terminaation_request_window"/> 
+
+   <!-- <field name="attachment_id" 
+
+
+
+   widget="Many2many_binary"/>           -->
+   <!-- <field name="attachment_id" widget="Many2many_binary"/> -->
+  </data>
+</odoo>

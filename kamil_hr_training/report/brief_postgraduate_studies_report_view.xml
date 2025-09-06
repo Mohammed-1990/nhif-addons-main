@@ -1,0 +1,103 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_brief_postgraduate_studies_report">
+        <field name="name">paperformat.brief.postgraduate.studies.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="brief_postgraduate_studies_report"
+            model="brief.postgraduate.studies.wizard"
+            string="Brief Postgraduate Studies report"
+            report_type="qweb-html"
+            name="kamil_hr_training.brief_postgraduate_studies_report_view"
+            paperformat="paperformat_brief_postgraduate_studies_report"
+            menu="False"/>
+
+    <template id="brief_postgraduate_studies_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            
+            <div class="page" style="page-break-inside: avoid;"><br/><br/>
+                <div class="text-center" style="font:500;">
+                    <p>تقرير الدراسات العليا المختصر</p>
+                </div>
+                <br/>
+                <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered" >       
+                 <thead class="table-active" style="display: table-header-group;">
+
+                <tr>
+                <th class="text-center fit" rowspan="2">البعثة</th>
+                <th class="text-center fit" style="width:10%;" rowspan="2">من تاريخ</th>
+                <th class="text-center fit" style="width:10%;" rowspan="2">إلى تاريخ</th>
+                <th class="text-center fit" rowspan="2">التخصص</th>
+                <th class="text-center fit" rowspan="2">الجامعة</th>
+                <th class="text-center fit" rowspan="2">الدولة</th>
+
+                <th class="text-center fit" colspan="4">بيانات المشاركين</th>
+                </tr>
+                <tr>
+                    <th class="text-center fit">الموظف</th>
+                    <th class="text-center fit">القسم</th>
+                    <th class="text-center fit">الوظيفة</th>
+                </tr>
+              </thead>
+
+                <tbody>
+                    <t t-foreach="docs" t-as="doc">
+                        <tr style="page-break-inside: avoid;">
+                        
+                            <td class="text-center">
+                                <span t-esc="doc['name']"/>
+                            </td>
+
+                            <td class="text-center" style="width:10%;">
+                                <span t-esc="doc['date_from']"/>
+                            </td>
+
+                            <td class="text-center" style="width:10%;">
+                                <span t-esc="doc['date_to']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['specialization']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['university_id']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['country']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['employee_id']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['department_id']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['functional_id']"/>
+                            </td>
+                        </tr>
+                    </t>
+                    
+                    <t t-if="docs==[]">
+                        <tr>
+                            <td colspan="9" class="text-center">لا توجد بيانات</td>
+                        </tr>
+                    </t>
+                </tbody>
+                </table>
+            
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

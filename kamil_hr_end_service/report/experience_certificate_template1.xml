@@ -1,0 +1,56 @@
+<odoo>
+
+    <report id="experience_certificate_report1"
+        model="resignation.resignation"
+        string="شهادة خبره"
+        report_type="qweb-html"
+        name="kamil_hr_end_service.experience_certificate_view1"
+        paperformat="paperformat_a4_for_end_service"
+        groups="kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_employment_department_group"
+        />
+
+    <template id="experience_certificate_view1">
+        <t t-foreach="docs" t-as="doc">
+         <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                
+                    <page dir="rtl" style="page-break-inside: avoid;font-family:courier">
+                      <br/><br/><br/>
+                      <strong>
+                        <div class="text-right" style="font:600;">
+                            <p>التاريخ: <span t-esc="context_timestamp(datetime.datetime.today()).strftime('%Y-%m-%d')"/>  </p>
+                            إلي من يهمه الأمر.
+                        </div><br/><br/>
+                        <div class="text-center" style="font:800;">
+                            شهادة خبره
+                        </div><br/><br/><br/>
+                        <div class="text-right" style="font:600;line-height:26pt;">
+                                    يشهد الصندوق القومي للتامين الصحي بأن السيد/ة <span t-esc="doc.employee_id.name"/> عمل بهذا الطرف بتاريخ تعيين <span t-esc="doc.employee_id.entry_date"/> حتي تاريخ <span t-esc="doc.last_day_date"/> 
+                            <newline/>
+                            و قد شغل الوظائف التالية:<br/>
+                            -     <span t-esc="doc.employee_id.functional_id.name"/><br/>
+                            - ...............................<br/>
+                            - ...............................<br/>
+                            - ...............................<br/>
+                            - ...............................<br/>
+                            <newline/>
+                            وخلال فترة عمله/ها معنا‫‪،‬‬ وجدنا أن السيد/ة <span t-esc="doc.employee_id.name"/> شخص مجتهد وينفذ كافة الواجبات المطلوبة منه،‬‬ حسن السير والسلوك،‬‬ وهذه أبرز المزايا التي يتمتع بها علي سبيل المثال لا الحصر.
+                        </div>
+                        <div class="text-right" style="font:600;"><br/>
+                            وحررت هذه الشهادة بناء علي طلبه.
+                        </div><br/><br/><br/><br/>
+                        <div class="text-right" style="font:600;">
+                            المدير العام ....................................... 
+                           <br/><br/> التوقيع ...............................................
+                            <br/><br/><br/><br/><br/>
+                        </div>
+                        <div class="text-center" style="font:600;">
+                            ختم الصندوق 
+                        </div>
+                      </strong>
+                    </page>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

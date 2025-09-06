@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record model="ir.ui.view" id="view_rfq_report_pivot">
+            <field name="name">rfq.report.pivot</field>
+            <field name="model">rfq.report</field>
+            <field name="arch" type="xml">
+                <pivot string="RFQ Report" disable_linking="True">
+                    <!-- <field name="company_id" type="col"/> -->
+                    <field name="rfq_id" type="col"/>
+                    <field name="partner_id" type="col"/>
+                    <field name="categ_id" type="col"/>
+                    <field name="product_id" type="col"/>
+                    <field name="ordering_date" type="row"/>
+                    <field name="product_qty" type="measure"/>
+                    <field name="price_total" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="view_rfq_report_grarh">
+            <field name="name">rfq.report.graph</field>
+            <field name="model">rfq.report</field>
+            <field name="arch" type="xml">
+                <graph string="RFQ Report">
+                    <field name="rfq_id" type="row"/>
+
+                </graph>
+            </field>
+        </record>
+
+
+        <record id="view_rfq_report_search" model="ir.ui.view">
+        <field name="name">rfq.report.search</field>
+        <field name="model">rfq.report</field>
+        <field name="arch" type="xml">
+            <search string="RFQ Report">
+                <filter string="Purchase confirm" name="purchase" domain="[('state','=','purchase')]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Request" name="rfq" context="{'group_by':'rfq_id'}"/>
+                    <filter string="Vendor" name="group_partner_id" context="{'group_by':'partner_id'}"/>
+                    <filter string="Status" name="state" context="{'group_by':'state'}"/>
+                    <separator/>
+                    <filter string="Order Date" name="order_month" context="{'group_by': 'ordering_date:month'}"/>
+                    
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rfq_report" model="ir.actions.act_window">
+        <field name="name">RFQ Report</field>
+        <field name="res_model">rfq.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="domain">[('type','=','request_for_quotaion')]</field>
+        <field name="context">{'search_default_purchase':1}</field>
+        <field name="search_view_id" ref="view_rfq_report_search"/>
+        <field name="help">Purchase Analysis allows you to easily check and analyse your company purchase history and performance. From this menu you can track your negotiation performance, the delivery performance of your vendors, etc.</field>
+    </record>
+
+    <menuitem id="menu_rfq_report" action="action_rfq_report" sequence="1" parent="purchase.purchase_report"/>
+
+     <record id="action_direct_puchase_report" model="ir.actions.act_window">
+        <field name="name">Direct Purcase Report</field>
+        <field name="res_model">rfq.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="domain">[('type','=','direct_purchase')]</field>
+        <field name="search_view_id" ref="view_rfq_report_search"/>
+        <field name="help">Purchase Analysis allows you to easily check and analyse your company purchase history and performance. From this menu you can track your negotiation performance, the delivery performance of your vendors, etc.</field>
+    </record>
+
+    <menuitem id="menu_direct_purcase_report" action="action_direct_puchase_report" sequence="2" parent="purchase.purchase_report"/>
+
+
+
+</odoo>

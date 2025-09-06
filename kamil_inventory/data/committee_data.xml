@@ -1,0 +1,30 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="almed_committee_data_1" model="committee.configuration">
+            <field name="name">Scrap Releasing Committee</field>
+            <field name="types">purchase</field>
+        </record> 
+
+        <record id="almed_committee_data_2" model="committee.configuration">
+            <field name="name">Tender Selection Committee</field>
+            <field name="types">purchase</field>
+        </record> 
+
+        <record id="almed_committee_data_3" model="committee.configuration">
+            <field name="name">Quality Check Committee</field>
+            <field name="types">inventory</field>
+        </record> 
+
+        <record id="almed_committee_data_4" model="committee.configuration">
+            <field name="name">Items Scrapping Committee</field>
+            <field name="types">inventory</field>
+        </record> 
+
+        <record id="almed_committee_data_5" model="committee.configuration">
+            <field name="name">Inventory Adjustment Committee</field>
+            <field name="types">inventory</field>
+        </record> 
+
+    </data>
+</odoo>

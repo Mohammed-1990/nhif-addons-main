@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Action Tender Book -->
+	<act_window 
+		id="action_requisition_tender_book"
+		name="Tender Books"
+		res_model="tender.book"
+		view_mode="tree,form"
+		domain="[('requisition_id','=',active_id)]"
+		context="{'default_requisition_id':active_id,'create':False}"
+	/>
+	
+
+	<!-- Action  Active Tender Book -->
+	<act_window 
+		id="action_qualifyied_tender_book"
+		name="Active Tender Books"
+		res_model="tender.book"
+		view_type="form"
+		view_mode="tree,form"
+		domain="[('requisition_id','=',active_id),('state','=','qualifier')]"
+	/>
+
+
+	<!-- Action Representative Attendee-->
+	<act_window
+		id="action_rep_attendee"
+		name="Representative Attendee"
+		res_model="rep.attendee"
+		view_mode="tree,form"
+		domain="[('tender_id','=',active_id)]"
+		context="{'default_tender_id':active_id, 'create':False}"
+	/>
+
+	<!-- Tree Repesentative Attendee-->
+	<record id="view_rep_attendee_tree" model="ir.ui.view">
+		<field name="name">rep.attendee.tree</field>
+		<field name="model">rep.attendee</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="tender_id"/>
+				<field name="book_id"/>
+				<field name="name"/>
+				<field name="phone"/>
+				<field name="email"/>
+				<field name="vendor_name"/>
+			</tree>
+		</field>
+	</record>
+
+
+	<!-- Form Repersentative Attendee-->
+	<record id="view_rep_attendee_form" model="ir.ui.view">
+		<field name="name">rep.attendee.form</field>
+		<field name="model">rep.attendee</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<div class="float-right">
+                        <label for="name" class="oe_edit_only oe_inline" />
+                        <h1><field name="name" placeholder="Description ..."/></h1>
+                    </div>
+					<group>
+						<group>
+							<field name="type" invisible="1"/>
+							<field 
+	                    		name="book_id" 
+	                    		attrs="{'invisible':[('type','!=','qualifying_suppliers')]}"
+	                    		domain="[('requisition_id','=',tender_id)]" 
+	                    		options="{'no_create':'1'}"
+	                    	/>
+	                    	<field 
+	                    		name="order_id" 
+	                    		attrs="{'invisible':[('type','=','qualifying_suppliers')]}"
+	                    		domain="[('requisition_id','=',tender_id)]"
+	                    		options="{'no_create': '1'}"
+	                    	/>
+	                    	<field name="partner_id" />
+	                    </group>
+	                    <group>	
+                    	 	<field name="tender_id"/>
+                    	</group>
+                    </group>
+                    <group>
+                    	<group>				
+                            <label for="street" string="Address"/>
+                            <div class="o_address_format">
+                                <field name="street" placeholder="Street..." class="o_address_street"/>
+                                <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                <field name="city" placeholder="City" class="o_address_city"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}"/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                            </div>
+						</group>
+						<group >
+							
+                            <field name="phone" widget="phone"/>
+                            <field name="mobile" widget="phone"/>
+                            <field name="email" widget="email" context="{'gravatar_image': True}"/>
+						</group>
+						
+
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- Action visit tempate-->
+	<act_window
+		id="action_visit_template"
+		name="Visit Template"
+		res_model="visit.template"
+		view_mode="form"
+	/>
+
+
+
+	<act_window 
+		id="action_qualified_suppliers_list"
+		name="Qualified Suppliers"
+		res_model="res.partner"
+		view_mode="tree,form"
+		domain="[('qualified','=',True),('requisition_id','=',active_id)]"
+		context="{'create':False}"
+	/>
+
+
+	<!-- Form Qualifying Suppliers-->
+	<record id="view_qualifying_suppliers_form" model="ir.ui.view">
+		<field name="name">qualifying.suppliers.form</field>
+		<field name="model">purchase.requisition</field>
+		<field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form"/>
+		<field name="arch" type="xml">
+			<field name="origin" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<field name="company_id" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<field name="picking_type_id" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<field name="user_id" position="after"> 
+				<field name="admin_id"/>
+				<field name="dept_id"/>
+			</field>
+			<xpath expr="//div[@class='float-left']" position="replace">
+				<div class="oe_title">
+					<h3>
+						<label for="sequence" string="Request ID: "/>
+						<field name="sequence"/>
+					</h3>
+					<h1>
+                        <field name="name" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    </h1>
+                </div>
+			</xpath>
+
+			<xpath expr="//field[@name='state']" position="replace">
+                <field 
+                	name="state" 
+                	widget="statusbar" 
+                	statusbar_visible="draft,comm_decided,done" 
+                	attrs="{'invisible': [('is_quantity_copy', '=', 'none')]}"
+                />
+                <field name="year" invisible="1"/>
+			</xpath>
+			<xpath expr="//field[@name='user_id']" position="attributes">
+				<attribute name="readonly">1</attribute>
+				<attribute name="string">Representative</attribute>
+			</xpath>
+			<xpath expr="//field[@name='vendor_id']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='ordering_date']" position="replace">
+			</xpath>
+			<xpath expr="//field[@name='date_end']" position="attributes">
+				<attribute name="required">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='date_end']" position="before">
+				<field name="ordering_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+			</xpath>
+			<xpath expr="//group[1]" position="after">
+				<group col="4">
+					<field name="visit_id" readonly="1" attrs="{'invisible':[('type','!=','qualifying_suppliers')]}"/>
+					<field name="type" invisible="1" readonly="1"/>
+				</group>
+			</xpath>
+			<xpath expr="//field[@name='schedule_date']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//div[@class='oe_button_box']//button[1]" position="attributes">
+				<attribute name="attrs">{'invisible':['|',('type','=','qualifying_suppliers'),('state','in',('draft','announcement','gen_man_appr','finance_admin','purch_dept'))]}</attribute>
+			</xpath>
+			<xpath expr="//div[@class='oe_button_box']//button[1]/field[@name='order_count']" position="attributes">
+				<attribute name="string">Books</attribute>
+			</xpath>
+			<xpath expr="//button[@name='action_in_progress']" position="replace">
+				<button name="action_in_progress" invisible="1" string="Confirm" type="object" class="btn-primary"/>
+			</xpath>
+			<xpath expr="//button[@name='action_in_progress']" position="after">
+				<button 
+					name="%(kamil_purchase_qualifiying_suppliers.action_announcement)d" type="action" 
+					string="Create Announcement" 
+					attrs="{'invisible':['|','|',('type','in',('limited_tender')),('state', '!=', 'draft'),('announ_number','!=',0)]}"
+					class="btn-primary" />
+			</xpath>
+			<xpath expr="//button[@name='%(kamil_purchase_qualifiying_suppliers.action_announcement)d']" position="after">
+				<button 
+					name="%(kamil_purchase_qualifiying_suppliers.action_tender_visit_tempate)d" 
+					type="action" 
+					string="Create Visit Template" 
+					class="btn-primary" 
+					attrs="{'invisible':['|','|',('type','!=','qualifying_suppliers'),('visit_id', '!=', False),('visit_id','!=',False)]}"/>
+
+				<button 
+					name="announcemnt_confirm" 
+					type="object" 
+					string="Confirm" 
+					class="btn-primary" 
+					attrs="{'invisible':['|',('type','=','limited_tender'),('state','!=','draft')]}"
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided" />
+
+				<button 
+					name="action_gen_man_appr" 
+					type="object" 
+					string="General Manager Approval" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_general_manager"
+					states="gen_man_appr" />
+
+				<button 
+					name="%(kamil_purchase_qualifiying_suppliers.action_announcement_newspaper)d" type="action" 
+					states="announcement" 
+					string="Insert Newspapers" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_announcement" />
+
+
+				<button 
+					name="action_announce_send" 
+					type="object"  
+					string="Send By Email" 
+					class="btn-primary"  
+					attrs="{'invisible':['|',('type','!=','limited_tender'),('state','not in',('draft','announcement'))]}"
+					groups="kamil_purchase_qualifiying_suppliers.group_announcement" />
+
+				<button 
+					name="%(kamil_purchase_qualifiying_suppliers.action_rep_attendance)d" 
+					type="action" 
+					string="Create Representative Attendance" 
+					attrs="{'invisible':['|',('state','!=','comm_decided'),('check_book','=',False)]}" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button 
+					name="%(kamil_purchase_qualifiying_suppliers.action_area_rehabiliation_report)d" 
+					type="action" 
+					attrs="{'invisible':['|',('type','!=','qualifying_suppliers'),('state','not in',('finance_admin_apprv','finance_admin_signature','gm_sign','internal_refrance'))]}" 
+					string="Print area of Rehabilitation" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button 
+					name="print_qualifying_supplier" 
+					type="object" 
+					string="Print Report Qualifying Suppliers" 
+					attrs="{'invisible':['|',('type','!=','qualifying_suppliers'),('state','not in',('finance_admin_apprv','finance_admin_signature','gm_sign','internal_refrance'))]}" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button 
+					name="action_comm_decided" 
+					type="object" 
+					string="Confirm" 
+					class="btn-primary" 
+					attrs="{'invisible':['|',('state','!=','comm_decided'),('check_book','=',False)]}"
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided" />
+
+				<button 
+					name="action_required_documents" 
+					type="object" 
+					string="Print Required Documents Report" 
+					class="btn-primary" 
+					states="general_conditions_selection" 
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button
+					name="action_gcs_confirm"
+					type="object"
+					string="Confirm"
+					class="btn-primary"
+					states="general_conditions_selection"
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button
+					name="action_technical_selection"
+					type="object"
+					string="Confirm"
+					class="btn-primary"
+					states="technical_selection"
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button
+					name="%(kamil_purchase_qualifiying_suppliers.action_suppliers_valuation)d"
+					type="action"
+					string="Valuation"
+					class="btn-primary"
+					states="qualifying_suppliers_valuat"
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+					
+				<button
+					name="action_suppliers_valuation_confirm"
+					type="object"
+					string="Confirm"
+					class="btn-primary"
+					states="suppliers_valuation,qualifying_suppliers_valuat"
+					groups="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button 
+					name="action_finance_admin_apprv" 
+					type="object" 
+					string="Approved Finance Adminstration" 
+					states="finance_admin_apprv" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_dicrecor_finance_admin"/>
+
+				<button 
+					name="action_gm_sign" 
+					type="object" 
+					string="Confirm General Manager" 
+					states="gm_sign" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_general_manager"/>
+
+				<button 
+					name="action_internal_refrance" 
+					type="object" 
+					string="Confirm Internal Treansfer" 
+					states="internal_refrance" 
+					class="btn-primary" 
+					groups="kamil_purchase_qualifiying_suppliers.group_internal_refrance"/>
+			</xpath>
+
+			<xpath expr="//button[@name='action_cancel']" position="replace">
+				<button 
+					name="action_cancel" 
+					string="Cancel" 
+					states="gen_man_appr,announcement,comm_decided,general_conditions_selection,finance_admin_apprv,gm_sign" 
+					type="object"/>
+			</xpath>
+			<xpath expr="//div[@name='button_box']" position="inside" >
+				<button 
+					name="%(action_qualified_suppliers_list)d" 
+					type="action" 
+					class="oe_stat_button" 
+					icon="fa-user" 
+					attrs="{'invisible':['|',('type','!=','qualifying_suppliers'),('state','not in',('finance_admin_signature','finance_admin_apprv','gm_sign','internal_refrance','done','qualifying_suppliers_valuat'))]}"
+					>
+					<field name="count_partner" widget="statinfo" string="Qualifiers"/>
+				</button>
+				
+				<button 
+					name="%(action_requisition_tender_book)d" 
+					type="action" 
+					class="oe_stat_button" 
+					icon="fa-book" 
+					attrs="{'invisible':['|',('type','!=','qualifying_suppliers'),('state','not in',('comm_decided','general_conditions_selection','finance_admin_apprv','finance_admin_signature','gm_sign','internal_refrance','done','qualifying_suppliers_valuat'))]}"
+					>
+					<field name="book_count" widget="statinfo" string="Books"/>
+				</button>
+				<button 
+					name="%(action_rep_attendee)d" 
+					type="action" class="oe_stat_button" 
+					icon="fa-pencil-square-o" 
+					states='comm_decided,technical_selection,suppliers_valuation,general_conditions_selection,finance_admin_signature,finance_admin_apprv,gm_sign,internal_refrance,done,qualifying_suppliers_valuat' >
+					<field name="rep_attendee_count" widget="statinfo" string="Rep Attendee"/>
+				</button>
+				
+			</xpath>
+			<xpath expr="//field[@name='type_id']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//notebook/page[1]" position="attributes">
+				<attribute name="attrs">{'invisible':[('type','=','qualifying_suppliers')]}</attribute>
+			</xpath>	
+			<xpath expr="//notebook/page[1]" position="after">
+				<page 
+					string="Area of Rehabilitation"  
+					attrs="{'invisible':[('type','!=','qualifying_suppliers')],'required':[('state','=','draft')]}"
+					>
+            		<field name="area_rehabilitation_line_ids"  attrs="{
+						'required':[('type','=','qualifying_suppliers')]}">
+            			<tree string="Area Of Rehabilitation" editable="bottom">
+            				<field name="area_rehabilitation_id" options="{'no_create':'1'}"/>
+            				<field name="partner_ids" widget="many2many_tags"/>
+            			</tree>
+            		</field>
+            	</page>
+            	<page string="General Conditions" >
+            		<field name="general_conditions_ids" string="General Conditions">
+            			<tree create="0">
+            				<field name="name" />
+            			</tree>
+            		</field>	
+            	</page>
+            	<page string="Private Conditions" >
+            		<separator string="Private Conditions"/>
+            		<field name="private_conditions" placeholder="Private Conditions ......." required="1" attrs="{'readonly':[('state','not in',('draft','finance_admin_purchase_dept','gen_man_appr'))]}"/>
+            	</page>
+            	<page  	
+        			name="announcement"
+        			string="Announcement" 
+        			attrs="{'invisible':[('type','in',('limited_tender'))]}">
+        			<separator string="Announcement"/>
+        			<label for="announcement" string="Announcement Text"/>
+            		<field name="announcement" readonly="1"/>
+            		<group col="4">
+            			<field name="announ_number" readonly="1"/>
+            			<field name="announ_attach" readonly="1"/>
+            			
+            		</group>
+            	</page>
+            	<page 
+            		string="Newspapers that were advertised" 
+            		attrs="{'invisible':['|',('state','in',('draft','gen_man_appr','finance_admin','purch_dept','cancel')),('type','in',('limited_tender'))]}">
+            		<field name="announcement_ids" string="Newspapers that were advertised">
+        				<tree string="Newspapers that were advertised" create="0" delete="0">
+        					<field name="newsPaper_id" options="{'no_create':'1'}"/>
+        					<field name="release_date"/>
+        					<field name="release_number"/>
+        					<field name="attach"/>
+        				</tree>
+        				<form>
+        					<group col='4'>
+        						<field name="newsPaper_id"/>
+        						<field name="release_date"/>
+	        					<field name="release_number"/>
+	        					<field name="attach"/>
+        					</group>
+        				</form>
+        			</field>
+            	</page>
+            	<page string="Comittee Selection" attrs="{'invisible': [('state','not in', ('general_conditions_selection','finance_admin_apprv','technical_selection','suppliers_valuation','gm_signature','finance_admin_signature','internal_refrance_signature'))]}">
+            		<group col="4">
+            			<field 
+            				name="commitee_selection_id" 
+            				domain="[('committee_type.types','=','purchase')]" options="{'no_create':True}" 
+            				attrs="{'readonly':[('state','!=','general_conditions_selection')]}"/>
+            			<field name="committee_attach" attrs="{'readonly':[('state','!=','general_conditions_selection')]}" />
+            		</group>	
+            		<separator string="Commitee Member" />
+    				<field name="committee_member_ids" >
+	                    <tree editable="bottom">
+	                      <field name="employee" string="Name"/>
+	                      <field name="role" string="Role" options="{'no_create':'1'}"/>
+	                    </tree>
+	                </field>
+            	</page>
+            	<page string="Attachmentes">
+            		<group>
+            			<field name="check_book" invisible="1"/>
+						<field name="technical_report" attrs="{'invisible':['|',('type','=','qualifying_suppliers'),('state','not in',('technical_selection','suppliers_valuation','finance_admin_apprv','gm_sign','internal_refrance','done'))],
+						'required':[('state','=','technical_selection')],
+						'readonly':[('state','!=','technical_selection')]}"/>
+						<field name="commitee_report" attrs="{'invisible':[('state','not in',('technical_selection','suppliers_valuation','finance_admin_apprv','gm_sign','internal_refrance','done'))],
+						'required':[('state','=','technical_selection')],
+						'readonly':[('state','!=','technical_selection')]}"/>
+						<field 
+							name="finance_admin_signature"
+							attrs="{
+							'invisible':[('state','not in',('finance_admin_apprv','gm_sign','internal_refrance','done'))],
+							'readonly':[('state','!=','finance_admin_apprv')]}"   
+							/>
+						<field 
+							name="gm_signature" 
+							attrs="{
+							'invisible':[('state','not in',('gm_sign','internal_refrance','done'))],
+							'required':[('state','=','gm_sign')],
+							'readonly':[('state','!=','gm_sign')]}"/>
+						<field 
+							name="internal_refrance_signature" 
+							attrs="{
+							'invisible':[('state','not in',('internal_refrance','done'))],
+								'required':[('state','=','internal_refrance')]}"/>
+            		</group>
+            	</page>
+			</xpath>
+		</field>
+	</record>
+
+
+	<!-- Tree Qualifying Suppliers  -->
+	<record id="view_qualifying_suppliers_tree" model="ir.ui.view">
+		<field name="name">qualifying.suppliers.tree</field>
+		<field name="model">purchase.requisition</field>
+		<field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_tree"/>
+		<field name="arch" type="xml">
+			<field name="name" position="before">
+				<field name="sequence"/>
+			</field>
+			<field name="user_id" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<xpath expr="//tree" position="attributes">
+				<attribute name="decoration-danger"></attribute>
+			</xpath>
+			<field name="origin" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<field name="name" position="attributes">
+				<attribute name="string">Name</attribute>
+			</field>
+			<!-- <field name="date_end" position="after">
+				<field name="area_rehabilitation_line_ids" widget="many2many_tags"/>
+			</field> -->
+		</field>
+	</record>
+
+
+	<!-- Search Qualifying Suppliers  -->
+	<record id="view_purchase_requisition_filter" model="ir.ui.view">
+		<field name="name">qualifying.suppliers.search</field>
+		<field name="model">purchase.requisition</field>
+		<field name="arch" type="xml">
+			<search>
+				<filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+                <filter string="Done" name="done" domain="[('state','=','done')]"/>
+                <group expand="0" string="Group By">
+                	<filter string="Company" name="company" context="{'group_by':'company_id'}"/>
+                    <filter string="Administration" name="admin_id" context="{'group_by':'admin_id'}"/> 
+                    <filter string="Department" name="department" context="{'group_by':'dept_id'}"/>
+                    <filter string="Status" name="status" context="{'group_by':'state'}"/>
+                    <separator/>
+                    <filter string="Order Date" name="order_month" context="{'group_by': 'ordering_date:month'}"/>
+                    <filter string="Deadline Date" name="deadline" context="{'group_by': 'date_end:month'}"/>
+                </group>
+            </search>
+        </field>
+	</record>
+
+
+	<!-- Action Qualifying Suppliers Request-->
+	<record id="action_qualifying_suppliers_request" model="ir.actions.act_window">
+		<field name="name">Qualifying Suppliers Request</field>
+		<field name="res_model">purchase.requisition</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,kanban,form</field>
+		<field name="context">{'default_type':'qualifying_suppliers'}
+		</field>		
+		<field name="domain">[('type','=','qualifying_suppliers')]</field>
+		<field name="search_view_id" ref="view_purchase_requisition_filter"/>
+	</record>
+
+
+	<!-- Tree Area Rehabilitation -->
+	<record id="view_area_rehabilitation_tree" model="ir.ui.view">
+		<field name="name">area.rehabilitation.tree</field>
+		<field name="model">area.rehabilitation</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+
+
+	<!--Form General Conditions -->
+	<record id="view_general_conditions_form" model="ir.ui.view">
+		<field name="name">general.conditions.form</field>
+		<field name="model">general.conditions</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="type"/>
+					</group>
+					<separator string="General Conditions:"/>
+					<field name="general_conditions_lines">
+						<tree string="General Conditons" editable="bottom">
+							<field name="name"/>
+						</tree>
+					</field>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<!-- Tree General Conditions-->
+	<record id="view_general_conditions_tree" model="ir.ui.view">
+		<field name="name">general.conditions.tree</field>
+		<field name="model">general.conditions</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="type"/>
+			</tree>
+		</field>
+	</record>
+
+	<!-- Action General Menu-->
+	<act_window 
+		id="action_general_conditions" 
+		name="General Conditions" 
+		res_model="general.conditions" 
+		view_type="form" 
+		view_mode="tree,form" 
+	/>
+
+	<!--Tree Newspaper -->
+	<record id="view_newspaper_tree" model="ir.ui.view">
+		<field name="name">newspaper.form</field>
+		<field name="model">announcement.newspaper</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+
+	<!-- Form Visit-->
+	<record id="view_purchase_visit_template_form" model="ir.ui.view">
+		<field name="name">visit.template.form</field>
+		<field name="model">visit.template</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<separator string="Visits Template" />
+					<field name="visit_ids">
+						<tree editable="buttom" >
+							<field name="criteria_id" required="1"/>
+							<field name="required_score" required="1"/>
+						</tree>
+					</field>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+		<!-- Form Visit-->
+	<record id="view_purchase_visit_template_tree" model="ir.ui.view">
+		<field name="name">visit.template.tree</field>
+		<field name="model">visit.template</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" required="1"/>	
+			</tree>
+		</field>
+	</record>
+
+
+	<!-- Action Newspapet-->
+	<act_window
+		id="action_menu_newspaper"
+		name="Newspapers"
+		res_model="announcement.newspaper"
+		view_mode="tree"
+	/>
+	
+	<!-- Action Area Rehabilitation -->
+	<act_window 
+		id="action_area_rehabilitation" 
+		name="Area Of Rehabilitation" 
+		res_model="area.rehabilitation" 
+		view_type="form" 
+		view_mode="tree,form" 
+	/>
+
+	<!-- Action Qualified Suppliers-->
+	<act_window 
+		id="action_qualified_suppliers"
+		name="Qualified Suppliers"
+		res_model="res.partner"
+		view_mode="tree,kanban,form"
+		domain="[('qualified','=',True)]"
+		context="{'default_qualified':True}"
+	/>
+
+
+
+
+</odoo>
+

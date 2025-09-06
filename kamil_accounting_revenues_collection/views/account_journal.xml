@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="view_inherit_account_journal_form" model="ir.ui.view">
+    <field name="name">account.journal.form.inherit</field>
+    <field name="model">account.journal</field>
+    <field name="inherit_id" ref="account.view_account_journal_form"/>
+    <field name="arch" type="xml">
+
+        <!-- أضف الحقل الجديد بعد الاسم -->
+        <xpath expr="//field[@name='type']" position="after">
+            <field name="bank_type"/>
+        </xpath>
+
+    </field>
+</record>
+</odoo>

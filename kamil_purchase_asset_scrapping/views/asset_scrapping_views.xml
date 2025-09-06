@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Action Tender Book -->
+	<act_window 
+		id="action_scrap_tender_book"
+		name="Tender Books"
+		res_model="tender.book"
+		view_mode="tree,form"
+		domain="[('scrap_id','=',active_id)]"
+		context="{'default_scrap_id':active_id}"
+	
+	/>
+
+	<!-- Form Scrap Request-->
+	<record id="view_scrap_request_form" model="ir.ui.view">
+		<field name="name">scrap.request.form</field>
+		<field name="model">scrap.request</field>
+		<field name="arch" type="xml">
+			<form>
+				<header>
+		 			<button 
+		 				name="action_confirm" 
+		 				type="object" 
+		 				string="Confirm" 
+		 				class="btn-primary" 
+		 				states="draft"
+		 			/>
+		 			<button 
+		 				name="action_manager_dicrector" 
+		 				type="object" 
+		 				string="Approve" 
+		 				states="manager_director" 
+		 				class="btn-primary" 
+		 				groups="kamil_purchase_qualifiying_suppliers.group_manager_director"
+		 			/>
+		 			<button 
+		 				name="action_gen_man_appr" 
+		 				type="object" 
+		 				string="Approve" 
+		 				class="btn-primary"  
+		 				states="gen_man_appr" 
+		 				groups="kamil_purchase_qualifiying_suppliers.group_general_manager"
+		 			/>
+		 			<button 
+						name="%(kamil_purchase_qualifiying_suppliers.action_announcement)d" type="action" 
+						string="Create Announcement" 
+						attrs="{'invisible':['|',('state', '!=', 'comm_decided'),('announ_number','!=',0)]}"
+						class="btn-primary" 
+					/>
+		 			<button 
+		 				name="action_director_finance_admin" 
+		 				type="object" 
+		 				states="director_finance_admin" 
+		 				string="Confirm" 
+		 				class="btn-primary" 
+		 				groups="kamil_purchase_qualifiying_suppliers.group_dicrecor_finance_admin,kamil_purchase_qualifiying_suppliers.group_comm_decided"
+		 			/>
+		 			<button 
+						name="%(kamil_purchase_qualifiying_suppliers.action_announcement_newspaper)d" 
+						type="action" 
+						states="announcement" 
+						string="Insert Newspapers" 
+						class="btn-primary" 
+						groups="kamil_purchase_qualifiying_suppliers.group_comm_decided" />
+					<button 
+		 				name="action_gen_man_appr2" 
+		 				type="object" 
+		 				string="Approve" 
+		 				class="btn-primary"  
+		 				states="gen_man_appr2" 
+		 				groups="kamil_purchase_qualifiying_suppliers.group_general_manager"
+		 			/>
+		 			<button 
+		 				name="action_reset_draft" 
+		 				type="object" 
+		 				states="cancel" 
+		 				string="Reset to Draft"
+		 			/>
+		 			<button
+						name="action_confirm_comm_decided" 
+		 				type="object" 
+		 				string="Confirm" 
+		 				states="comm_decided"
+		 				class="btn-primary"
+		 			/>
+		 			<button
+						name="action_auction" 
+		 				type="object" 
+		 				string="Confirm Auction" 
+		 				states="auction"
+		 				class="btn-primary"
+		 			/>
+		 			<button
+						name="action_set_scrap" 
+		 				type="object" 
+		 				string="Confirm" 
+		 				states="finance_admin_apprv"
+		 				class="btn-primary"
+		 			/>
+		 			<button
+						name="action_finance_manger_apprv" 
+		 				type="object" 
+		 				string="Approve" 
+		 				states="finance_manger_apprv"
+		 				class="btn-primary"
+		 			/>
+
+		 			<button 
+		 				name="action_cancel" 
+		 				type="object" 
+		 				string="Cancel" 
+		 				states="draft,dept_manager,manager_director,director_finance_admin,gen_man_appr,branch_manager,announcement,comm_decided,auction,finance_admin_apprv,finance_manger_apprv"
+		 			/>
+
+					<field name="state" widget="statusbar" statusbar_visible="draft,manager_director,gen_man_appr,director_finance_admin,comm_decided,gen_man_appr2,announcement,auction,finance_admin_apprv,finance_manger_apprv,done"/>
+				</header>
+				<sheet>
+					<div name="button" class="oe_button_box">
+						<button 
+							name="get_collection" 
+							type="object" 
+							class="oe_stat_button" 
+							icon="fa-pencil-square-o" 
+							states='comm_decided,auction,finance_admin_apprv,finance_manger_apprv,done'
+						>
+						<field name="collection_count" widget="statinfo" string="Revenues"/>
+						</button>
+					</div>
+
+					<div class="oe_title">
+						<h1><field name="name"  attrs="{'readonly':[('state','!=','draft')]}"/></h1>
+					</div>
+					<group>
+						<group>
+							<field name="user_id" />
+							<field name="admin_id"/>
+							<field name="dept_id"/>
+							<field name="type" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group>
+							<field name="ordering_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field
+							 	name="auction_date" 
+								attrs="{'invisible':[('state','not in',('comm_decided','announcement','finance_manger_apprv','finance_admin_apprv','auction','done'))],
+									'required':[('state','=','comm_decided')],
+									'readonly':[('state','!=','comm_decided')]}"/>
+						</group>
+					</group>
+					<notebook>
+						<page 
+							string="Assets" 
+							states="draft,manager_director,gen_man_appr,announcement,director_finance_admin,comm_decided">
+							<field name="asset_ids">
+								<tree editable="bottom">
+									<field name="company_id" options="{'no_create':'1'}" required="1"/>
+									<field name="categ_id" domain="[('company_id','=',company_id)]" options="{'no_create':'1'}" required="1"/>
+									<field name="asset_ids" widget="many2many_tags"  options="{'no_create':'1'}" domain="[('category_id','=',categ_id),('state','in',('draft','open'))]" required="1"/>
+								</tree>
+								<form>
+									<sheet>
+										<group col="4">
+											<field name="company_id"/>
+											<field name="categ_id"/>
+											<field name="asset_ids" widget="many2many_tags"/>					
+										</group>
+									</sheet>
+								</form>
+							</field>
+						</page>
+						<page 
+							string="Assets" 
+							states="auction,finance_admin_apprv,finance_manger_apprv,done">
+							<field name="asset_line_ids" >
+								<tree create="0" editable="1" >
+									<field name="scarp_request_id" invisible="1"/>
+									<field name="asset_ids"   readonly='1'  widget="many2many_tags" options="{'no_create':'1'}"/>
+									<field name="partner_id"/>
+									<field name="estimated_value"/>
+									<field name="sales_value"/>
+									<field 
+										name="move_check" 
+										widget="deprec_lines_toggler" 
+									/>
+									<field name="move_posted_check" invisible="1"/>
+								</tree>
+								<form>
+									<sheet>
+										<group col="4">
+											<field name="asset_ids" widget="many2many_tags"/>
+											<field name="partner_id"/>
+											<field name="estimated_value"/>
+											<field name="sales_value"/>
+										</group>
+									</sheet>
+								</form>
+							</field>
+						</page>
+						<page string="General Conditions" >
+		            		<field name="general_conditions_ids" string="General Conditions">
+		            			<tree create="0">
+		            				<field name="name" />
+		            			</tree>
+		            		</field>	
+		            	</page>
+		            	<page string="Private Conditions" >
+		            		<separator string="Private Conditions"/>
+		            		<field name="private_conditions" placeholder="Private Conditions ......." required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+		            	</page>
+		            	<page string="Commitee Members" states="director_finance_admin,announcement,comm_decided,announcement,gen_man_appr2,auction,done">
+		            		<separator string="Commitee Members"/>
+		            		<group>
+		            			<field name="commitee_selection_id" options="{'no_create':'1'}" attrs="{'readonly':[('state','!=','director_finance_admin')]}"/>
+		            		</group>
+		            		<field name="committee_member_ids" attrs="{'readonly':[('state','!=','director_finance_admin')]}">
+		            			<tree editable="bottom">
+			                      <field name="employee" string="Name"/>
+			                      <field name="role" string="Role" options="{'no_create':'1'}"/>
+			                    </tree>
+			                    <form>
+			                    	<group col="4">
+			                    		<field name="employee" string="Name"/>
+			                      		<field name="role" string="Role"/>
+			                    	</group>
+			                    </form>
+		            		</field>
+		            	</page>
+		            	<page name="announcement" string="Announcement" states="announcement,gen_man_appr2,comm_decided,auction,finance_admin_apprv,finance_manger_apprv,done">
+		        			<separator string="Announcement"/>
+		        			<label for="announcement" string="Announcement Text"/>
+		            		<field name="announcement" readonly="1"/>
+		            		<group col="4">
+		            			<field name="announ_number" readonly="1"/>
+		            			<field name="announ_attach" readonly="1"/>
+		            			
+		            		</group>
+		            	</page>
+						<page string="Newspapers that were advertised" states="announcement,auction,finance_admin_apprv,finance_manger_apprv,done">
+		            		<field name="announcement_ids" string="Newspapers that were advertised">
+		        				<tree editable="buttom" string="Newspapers that were advertised">
+		        					<field name="newsPaper_id"/>
+		        					<field name="release_date"/>
+		        					<field name="release_number"/>
+		        					<field name="attach"/>
+		        				</tree>
+		        			</field>
+		            	</page>
+						<page string="Attachments">
+							<group>
+								<group>
+									<separator string="Attachments"/>
+									<field name="tech_report_attach" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+									<field 
+										name="finance_attach" 
+										attrs="{'invisible':[('state','not in',('comm_decided','gen_man_appr2','announcement','finance_manger_apprv','finance_admin_apprv','auction','done'))],
+										'required':[('state','=','comm_decided')],
+										'readonly':[('state','!=','comm_decided')]}"/>
+									<field 
+										name="control_attach" 
+										attrs="{'invisible':['|',('state','not in',('comm_decided','gen_man_appr2','announcement','finance_manger_apprv','finance_admin_apprv','auction','done')),('type','!=','dynamic')],
+										'required':[('state','=','comm_decided'),('type','=','dynamic')],
+										'readonly':[('state','!=','comm_decided')]}"/>
+									<field 
+										name="finance_admin_attach" 
+										attrs="{'invisible':[('state','not in',('finance_admin_apprv','finance_manger_apprv','done'))],
+										'required':[('state','=','finance_admin_apprv')],
+										'readonly':[('state','!=','finance_admin_apprv')]}"
+									/>
+									<field 
+										name="finance_manager_attach" 
+										attrs="{'invisible':[('state','not in',('finance_manger_apprv','done'))],
+										'required':[('state','=','finance_manger_apprv')],
+										'readonly':[('state','!=','finance_manger_apprv')]}"
+									/>
+								</group>
+								<group></group>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+	              <field name="message_follower_ids" widget="mail_followers"/>
+	              <field name="activity_ids" widget="mail_activity"/>
+	              <field name="message_ids" widget="mail_thread"/>
+	            </div>
+			</form>
+		</field>
+	</record>
+
+	<!-- Tree Scrap Requset -->
+	<record id="view_scrap_request_tree" model="ir.ui.view">
+		<field name="name">scrap.request.tree</field>
+		<field name="model">scrap.request</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" />
+				<field name="user_id"/>
+				<field name="ordering_date"/>
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+
+	<!-- Search Scrap Requset -->
+	<record id="view_scrap_request_search" model="ir.ui.view">
+		<field name="name">scrap.request.search</field>
+		<field name="model">scrap.request</field>
+		<field name="arch" type="xml">
+			<search>
+				<group string="Group By">
+					<filter string="Administrative" name="admin_id" domain="[]" context="{'group_by':'admin_id'}"/>
+					<filter string="Department" name="dept_id" domain="[]" context="{'group_by':'dept_id'}"/>
+					<filter string="Status" name="state" domain="[]" context="{'group_by':'state'}"/>
+					<filter string="Ordering Date" name="ordering_date" domain="[]" context="{'group_by':'ordering_date'}"/>
+
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<!-- Action Scrap Request-->
+	<record id="action_scrap_request" model="ir.actions.act_window">
+		<field name="name">Scrap Requset</field>
+		<field name="res_model">scrap.request</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<!-- Menu Scrap Requrest Root-->
+	<menuitem id="menu_scrap_request_root" name="Scrap Request" parent="purchase.menu_purchase_root" action="action_scrap_request" sequence="4"/>
+
+	<!-- Menu Scrap Request -->
+	<!-- <menuitem id="menu_scrap_request" parent="menu_scrap_request_root" sequence="1" action="action_scrap_request"/> -->
+
+
+</odoo>

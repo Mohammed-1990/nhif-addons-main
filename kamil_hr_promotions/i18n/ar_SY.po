@@ -1,0 +1,1113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_hr_promotions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-14 12:36+0000\n"
+"PO-Revision-Date: 2020-12-14 12:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "<br/>تحذير: عند الضغط على زر \"تأكيد\" ، ستعدل درجة الموظف في ملفه الشخصي إلى الدرجة الجديدة ويتم إخطار الموظف<br/><br/>"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_needaction
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__activity_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__activity_state
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__appoiontment_ratio
+msgid "Appoiontment Ratio"
+msgstr "نسبة أقدمية التعيين"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,state:0
+msgid "Approved"
+msgstr "موكده"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_hr_promotions
+#: code:addons/kamil_hr_promotions/models/promotion_criteria_ratios.py:22
+#, python-format
+msgid "Can not create more than one record for configuration"
+msgstr "لا يمكن إنشاء اكثر من سجل اعداد"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__employee_no
+msgid "Can search by employee number"
+msgstr "يمكن البحث عن طريق رقم الموظف"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.promotions_timeline_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_hr_promotions
+#: selection:promotions.timeline,state:0
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__date
+msgid "Committee Formation Date"
+msgstr "تاريخ تشكيل اللجنة"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__current_bonus
+msgid "Current Bonus"
+msgstr "العلاوة الحالية"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__current_degree_id
+msgid "Current Degree"
+msgstr "الدرجة الحالية"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__date_to
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__degree_ratio
+msgid "Degree Ratio"
+msgstr "نسبة اقدمية الدرجة"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.promotion_criteria_ratios_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.promotions_timeline_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__line_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__line_ids
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.promotions_timeline_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_eligible_promotion_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_implemented_promotion_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_jobs_gradients_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_qualification_detect_template__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_appoiontment_template__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_degree_template__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_detection_view__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,state:0
+#: selection:promotions.timeline,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Eighth Bonus"
+msgstr "العلاوة الثامنة"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_eligible_promotion_wizard
+#: model:ir.actions.report,name:kamil_hr_promotions.eligible_promotion_report
+#: model:ir.ui.menu,name:kamil_hr_promotions.menu_report_eligible_promotion
+msgid "Eligible Promotion Report"
+msgstr "تقرير المستحقين للترقية"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Employee Data"
+msgstr "بيانات الموظف"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__department_id
+msgid "Employee Department"
+msgstr "القسم"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__employee_id
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__employee_no
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_hr_promotions
+msgid "Employee Promotions"
+msgstr "ترقيات الموظف"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__employee_degree
+msgid "Employee degree"
+msgstr "درجة الموظف"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__exection_date
+msgid "Exection Date"
+msgstr "تاريخ التنفيذ"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__timeline_id
+msgid "Field Label"
+msgstr "تسمية الحقل"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Fifth Bonus"
+msgstr "العلاوة الخامسة"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "First Bonus"
+msgstr "العلاوة الأولى"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Fourth Bonus"
+msgstr "العلاوة الرابعة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__from_degree_id
+msgid "From Degree"
+msgstr "من الدرجة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__category_id
+msgid "Functional Category"
+msgstr "الفئة الوظيفية"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard__degree_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__degree_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__degree_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard__degree_id
+msgid "Functional Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,state:0
+msgid "General Directorate of Human Resources"
+msgstr "الاداره العامه للموارد البشريه"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,state:0
+msgid "Human Resources Sub-Manager"
+msgstr "الاداره الفرعيه للموارد البشريه"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_eligible_promotion_view__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_implemented_promotion_view__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_jobs_gradients_report_view__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_qualification_detect_template__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_appoiontment_template__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_degree_template__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_detection_view__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__message_unread
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__message_unread
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__message_needaction
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__message_needaction
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__message_has_error
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__message_has_error
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_implemented_promotion_wizard
+#: model:ir.actions.report,name:kamil_hr_promotions.implemented_promotion_report
+#: model:ir.ui.menu,name:kamil_hr_promotions.menu_report_implemented_promotion
+msgid "Implemented Promotion Report"
+msgstr "تقرير الترقيات المنفذة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_is_follower
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__job_title
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__job_no
+msgid "Job number in the jobs record"
+msgstr "رقم الوظيفة في سجل الوظائف"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.report,name:kamil_hr_promotions.jobs_gradients_report
+#: model:ir.ui.menu,name:kamil_hr_promotions.menu_report_jobs_gradients
+msgid "Jobs Gradients Report"
+msgstr "تقرير التدرجات الوظيفية"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_eligible_promotion_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_implemented_promotion_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_jobs_gradients_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_qualification_detect_template____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_appoiontment_template____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_degree_template____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_report_kamil_hr_promotions_seniority_detection_view____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_eligible_promotion_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_implemented_promotion_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_jobs_gradients_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_qualification_detect_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_appoiontment_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_degree_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_seniority_detection_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_has_error
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__name
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__new_bonus
+msgid "New Bonus"
+msgstr "العلاوة الجديدة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__new_degree_id
+msgid "New Degree"
+msgstr "الدرجة الجديدة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__activity_summary
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__activity_type_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Ninth Bonus"
+msgstr "العلاوة التاسعة"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_report_view
+msgid "No Data"
+msgstr "لا توجد بيانات"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__notes
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__name
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_tree_view
+msgid "Number"
+msgstr "العدد"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__message_needaction_counter
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__message_has_error_counter
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__message_unread_counter
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__years
+msgid "Number of years"
+msgstr "السنوات"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,activity_state:0
+#: selection:promotion.criteria.ratios,activity_state:0
+#: selection:promotions.timeline,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,state:0
+msgid "Personnel"
+msgstr "شؤون العاملين"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,activity_state:0
+#: selection:promotion.criteria.ratios,activity_state:0
+#: selection:promotions.timeline,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_hr_promotions
+#: code:addons/kamil_hr_promotions/models/promotions_timeline.py:23
+#, python-format
+msgid "Please! enter details for promotions timeline"
+msgstr "رجاء! أدخل تفاصيل الجدول الزمني للترقيات"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_tree_view
+msgid "Previous Degree"
+msgstr "الدرجة السابقة"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_promotion_criteria_ratios
+#: model:ir.ui.menu,name:kamil_hr_promotions.promotion_criteria_ratios_menu
+msgid "Promotion Criteria Ratios"
+msgstr "نسب معايير الترقي"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Promotion Data"
+msgstr "بيانات الترقية"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__promotion_date
+msgid "Promotion Date"
+msgstr "تاريخ الترقية"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_hr_promotions
+#: model:ir.ui.menu,name:kamil_hr_promotions.hr_promotions_main_menu
+#: model:ir.ui.menu,name:kamil_hr_promotions.hr_promotions_menu
+msgid "Promotions"
+msgstr "الترقيات"
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_promotion_criteria_ratios
+msgid "Promotions Criteria Ratios"
+msgstr "نسب معايير الترقي"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_promotions_timeline
+#: model:ir.model,name:kamil_hr_promotions.model_promotions_timeline
+#: model:ir.ui.menu,name:kamil_hr_promotions.promotions_timeline_menu
+msgid "Promotions Timeline"
+msgstr "التدرج الزمني للترقيات"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__qualifcation
+msgid "Qualifcation"
+msgstr "المؤهل"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.promotion_criteria_ratios_form_view
+msgid "Qualifcations"
+msgstr "المؤهلات"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_qualification_detect_wizard
+#: model:ir.actions.report,name:kamil_hr_promotions.qualification_detect_report
+#: model:ir.ui.menu,name:kamil_hr_promotions.menu_report_qualification_detect_wizard
+msgid "Qualification Detect Report"
+msgstr "كشف المؤهل"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__ratio
+msgid "Ratio"
+msgstr "النسبة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios_line__rations_id
+msgid "Rations"
+msgstr "النسبة"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_jobs_gradients_wizard
+msgid "Report jobs gradients"
+msgstr "تقرير التدرجات الوظيفية"
+
+#. module: kamil_hr_promotions
+#: model:ir.ui.menu,name:kamil_hr_promotions.promotions_reports_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__activity_user_id
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Return"
+msgstr "الترجيع"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Second Bonus"
+msgstr "العلاوة الثانية"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__section
+msgid "Section"
+msgstr "القطاع"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Send"
+msgstr "إرسال"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_seniority_appoiontment_wizard
+#: model:ir.actions.report,name:kamil_hr_promotions.seniority_appoiontment_report
+#: model:ir.ui.menu,name:kamil_hr_promotions.menu_report_seniority_appoiontment
+msgid "Seniority Appoiontment Report"
+msgstr "تقرير أقدمية التعيين"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_seniority_degree_wizard
+#: model:ir.actions.report,name:kamil_hr_promotions.seniority_degree_report
+#: model:ir.ui.menu,name:kamil_hr_promotions.menu_report_seniority_degree
+msgid "Seniority Degree Report"
+msgstr "تقرير أقدمية الدرجة"
+
+#. module: kamil_hr_promotions
+#: model:ir.actions.act_window,name:kamil_hr_promotions.action_seniority_detection_wizard
+#: model:ir.actions.report,name:kamil_hr_promotions.seniority_detection_report
+#: model:ir.ui.menu,name:kamil_hr_promotions.menu_report_seniority_detection
+msgid "Seniority Detection Report"
+msgstr "تقرير كشف الأقدمية"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Seventh Bonus"
+msgstr "العلاوة السابعة"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Sixth Bonus"
+msgstr "العلاوة السادسة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__activity_state
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__activity_state
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.hr_promotions_form_view
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,current_bonus:0
+#: selection:hr.promotions,new_bonus:0
+msgid "Third Bonus"
+msgstr "العلاوة الثالثة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline_line__to_degree_id
+msgid "To Degree"
+msgstr "إلى الدرجة"
+
+#. module: kamil_hr_promotions
+#: selection:hr.promotions,activity_state:0
+#: selection:promotion.criteria.ratios,activity_state:0
+#: selection:promotions.timeline,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_unread
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.promotions_timeline_form_view
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: kamil_hr_promotions
+#: selection:promotions.timeline,state:0
+msgid "Validated"
+msgstr "معتمده"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_hr_promotions__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotion_criteria_ratios__website_message_ids
+#: model:ir.model.fields,field_description:kamil_hr_promotions.field_promotions_timeline__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_hr_promotions
+#: model:ir.model.fields,help:kamil_hr_promotions.field_hr_promotions__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotion_criteria_ratios__website_message_ids
+#: model:ir.model.fields,help:kamil_hr_promotions.field_promotions_timeline__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_hr_promotions
+#: code:addons/kamil_hr_promotions/models/promotions_timeline.py:26
+#, python-format
+msgid "You cannot confirm more than one"
+msgstr "لا يمكنك تأكيد أكثر من واحد"
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_eligible_promotion_wizard
+msgid "eligible.promotion.wizard"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_implemented_promotion_wizard
+msgid "implemented.promotion.wizard"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_jobs_gradients_wizard
+msgid "jobs.gradients.wizard"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_promotion_criteria_ratios_line
+msgid "promotion.criteria.ratios.line"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_promotions_timeline_line
+msgid "promotions.timeline.line"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_qualification_detect_wizard
+msgid "qualification.detect.wizard"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_report_kamil_hr_promotions_eligible_promotion_view
+msgid "report.kamil_hr_promotions.eligible_promotion_view"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_report_kamil_hr_promotions_implemented_promotion_view
+msgid "report.kamil_hr_promotions.implemented_promotion_view"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_report_kamil_hr_promotions_jobs_gradients_report_view
+msgid "report.kamil_hr_promotions.jobs_gradients_report_view"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_report_kamil_hr_promotions_qualification_detect_template
+msgid "report.kamil_hr_promotions.qualification_detect_template"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_report_kamil_hr_promotions_seniority_appoiontment_template
+msgid "report.kamil_hr_promotions.seniority_appoiontment_template"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_report_kamil_hr_promotions_seniority_degree_template
+msgid "report.kamil_hr_promotions.seniority_degree_template"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_report_kamil_hr_promotions_seniority_detection_view
+msgid "report.kamil_hr_promotions.seniority_detection_view"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_seniority_appoiontment_wizard
+msgid "seniority.appoiontment.wizard"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_seniority_degree_wizard
+msgid "seniority.degree.wizard"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model:ir.model,name:kamil_hr_promotions.model_seniority_detection_wizard
+msgid "seniority.detection.wizard"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+msgid "إلى تاريخ :"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+msgid "الإدارة"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+msgid "الدرجة"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_report_view
+msgid "الدرجة الجديدة"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_report_view
+msgid "الدرجة السابقة"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "الرقم التسلسلي"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+msgid "الفئة الوظيفية"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "الفرع"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+msgid "الفرق بالأيام"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_report_view
+msgid "القسم"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "المؤهل"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "الموظف"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+msgid "النسبة"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "تاريخ اخر ترقية"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+msgid "تاريخ الاستحقاق"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_report_view
+msgid "تاريخ الترقية"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "تاريخ التعيين"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+msgid "تاريخ التنفيذ"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "تاريخ الميلاد"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+msgid "تاريخ تشكيل اللجنة :"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+msgid "تقرير أقدمية التعيين <br/>"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+msgid "تقرير أقدمية الدرجة"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.jobs_gradients_report_view
+msgid "تقرير التدرجات الوظيفية<br/>"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+msgid "تقرير الترقيات المنفذة<br/>"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+msgid "تقرير المستحقين للترقية<br/>"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "تقرير كشف الأقدمية<br/>"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_template
+msgid "كشف المؤهل<br/>"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.qualification_detect_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_appoiontment_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_degree_template
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.seniority_detection_view
+msgid "لا توجد بيانات"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: code:addons/kamil_hr_promotions/report/seniority_appoiontment_report.py:45
+#: code:addons/kamil_hr_promotions/report/seniority_degree_report.py:47
+#, python-format
+msgid "لا يوجد"
+msgstr ""
+
+#. module: kamil_hr_promotions
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.eligible_promotion_view
+#: model_terms:ir.ui.view,arch_db:kamil_hr_promotions.implemented_promotion_view
+msgid "من تاريخ :"
+msgstr ""
+

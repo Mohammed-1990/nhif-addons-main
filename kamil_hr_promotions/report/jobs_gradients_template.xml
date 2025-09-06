@@ -1,0 +1,75 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_report">
+        <field name="name">paperformat.functions.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field> 
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="jobs_gradients_report"
+            model="jobs.gradients.wizard"
+            string="Jobs Gradients Report"
+            report_type="qweb-html"
+            name="kamil_hr_promotions.jobs_gradients_report_view"
+            paperformat="paperformat_report"
+            menu="False"/>
+
+    <template id="jobs_gradients_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <div ><br/><br/>
+                    <div class="text-center" style="font:500;">
+                        <p>تقرير التدرجات الوظيفية<br/>
+                        </p>
+                    </div>
+                </div><br/>
+                     <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                    <thead class="table-active" style="display: table-header-group;">
+                            <th class="text-center" style="width: 35%">الموظف</th>
+                            <th class="text-center" style="width: 20%">القسم</th>
+                            <th class="text-center" style="width: 15%">الدرجة السابقة</th>
+                            <th class="text-center" style="width: 15%">الدرجة الجديدة</th>
+                            <th class="text-center" style="width: 15%">تاريخ الترقية</th>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="doc['employee']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['deprtment']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['previous_degree']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['new_degree']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['date']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                        <t t-if="docs==[]">
+                            <tr class="text-center">
+                                <td colspan="5">لا توجد بيانات</td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

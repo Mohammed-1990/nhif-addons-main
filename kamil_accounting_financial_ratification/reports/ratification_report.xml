@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+	<report 
+		id="ratification_report"
+		model="ratification.ratification"
+		string="Ratification Report"
+		report_type="qweb-html"
+		name="kamil_accounting_financial_ratification.report_ratification_template"
+	/>
+
+	<template id="report_ratification_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+
+						<div class="text-center">
+							<strong>
+								تصديق مالي
+							</strong>
+						</div>
+						<br/>
+
+						<table class="text-right table table-bordered">
+							<tr>
+								<td>
+									<strong style="float:right"> تاريخ التصديق </strong>
+									<span style="float:right;margin-right:20px" t-esc="o.date"/>
+								</td>
+								<td>
+									<strong style="float:right"> رقم التصديق </strong>
+									<span style="float:right;margin-right:20px" t-esc="o.ref"/>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<strong style="float:right"> الحساب </strong>
+									<span style="float:right;margin-right:20px" t-esc="o.for_items"/>
+								</td>
+								<td>
+									<strong style="float:right"> السنة المالية </strong>
+									<span style="float:right;margin-right:20px" t-esc="o.financial_year"/>
+								</td>
+								
+							</tr>
+
+							<tr>
+								<td colspan="2">
+									<strong style="float:right"> المدفوع له </strong>
+									<span style="float:right;margin-right:20px" t-esc="o.partner_id.name"/>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="text-center">
+										<strong>
+											 
+											
+											<t t-if="o.payment_type == 'cash'">
+												تدفع نقداً
+											</t>
+											<t t-if="o.payment_type == 'Cheque'">
+												تدفع بشيك
+											</t>
+											<t t-if="o.payment_type == 'bank_transfer'">
+												تحول بنكياً
+											</t>
+											<t t-if="o.payment_type == 'counter_cheque'">
+												تدفع بشيك مصرفي
+											</t>
+											
+
+										</strong>
+									</div>
+								</td>
+							</tr>
+						</table>
+
+						<strong style="float:right">
+							بهذا فقد تصدق بمبلغ  <t t-esc="'{0:,.2f}'.format(float(o.amount))"/>
+						</strong>
+
+						<br/>
+						<table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+							<thead style="display: table-header-group;">
+								<tr>
+									<td class="table-active text-center"> <b>الرقم</b> </td>
+									<td class="table-active text-center"> <b>المبلغ</b> </td>
+									<td class="table-active text-center"> <b>إسم البند</b> </td>
+									<td class="table-active text-center"> <b>خصماً على</b> </td>
+								</tr>
+							</thead>
+
+
+							<tbody>
+							
+							<t t-set="counter" t-value="1"/>
+							<t t-foreach="o.report_line_ids" t-as="line">
+								<tr style="page-break-inside: avoid;">
+									<td class="text-center">
+										<t t-esc="counter"/>
+										<t t-set="counter" t-value="counter + 1"/>
+									</td>
+									<td class="text-center">
+										<t t-esc="'{0:,.2f}'.format(float(line.amount))"/>
+									</td>
+									<td>
+										<t t-esc="line.account_id.name"/>
+									</td>
+									<td class="text-center">
+										<t t-esc="line.sudo().analytic_account_id.name"/>
+									</td>
+								</tr>
+							</t>
+						</tbody>
+						</table>
+						
+						<br/>
+						<strong style="float:right">
+							مع تحمل خصوم  <t t-esc="'{0:,.2f}'.format(float(o.total_taxes_amount))"/>
+						</strong>
+						<t t-if="o.total_taxes_amount &gt; 0">
+							<table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+								<tr>
+									<td class="table-active  text-center"><b> الرقم </b> </td>
+									<td class="table-active  text-center"><b> المبلغ </b> </td>
+									<td class="table-active  text-center"><b> الحساب </b> </td>
+									<td class="table-active  text-center"><b> البيان </b> </td>
+								</tr>
+								<t t-set="counter" t-value="1"/>
+								<t t-foreach="o.tax_ids" t-as="line">
+									<tr>
+										<td  class="text-center">
+											<t t-esc="counter"/>
+											<t t-set="counter" t-value="counter + 1"/>
+										</td>
+										<td class="text-center">
+											<t t-esc="'{0:,.2f}'.format(float(line.amount))"/>
+										</td>
+
+										<td>
+											<t t-esc="line.tax_id.account_id.code"/> - <t t-esc="line.tax_id.account_id.name"/>
+										</td>
+										
+										<td class="text-center">
+											<t t-esc="line.name"/>
+										</td>
+										
+									</tr>
+								</t>
+							</table>
+						</t>
+
+						<br/>
+
+
+
+						<table class="table table-condensed table-hover" dir="rtl">
+							<tr>
+								<td>
+									<strong> المبلغ المستحق الدفع </strong>
+									<span t-esc="'{0:,.2f}'.format(float(o.net_amount))"/>
+								</td>
+								<td>
+									<span t-esc="o.net_amount_in_words"/>
+								</td>
+							</tr>
+						</table>
+
+
+
+						<table class="text-right table table-condensed table-hover">
+							<tr>
+								<td>
+									<strong style="float:right"> البيان </strong>
+									<span style="float:right;margin-right:20px" t-esc="o.name"/>
+								</td>
+							</tr>
+						</table>
+
+						<br/>
+
+						<table dir="rtl" border="1" class="text-right table table-bordered" style="float:right;text-align:start;">
+							<tr>
+								<td>
+									إعداد
+								</td>
+								<td>
+									<t t-esc="o.create_uid.name"/>
+								</td>
+								<td>
+									التاريخ والزمن
+								</td>
+								<td>
+									<span t-esc="context_timestamp(datetime.datetime.now()).strftime(' %H:%M   %d-%m-%Y')"/>   
+								</td>
+							</tr>
+							<tr>
+								<td> اعتماد </td>
+								<td>............................................................</td>
+								<td> مراجعة </td>
+								<td>............................................................</td>
+							</tr>
+						</table>
+
+
+						
+
+					</div>
+
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>

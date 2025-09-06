@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="0">
+
+        <record id="missions_assigned_comp_rule" model="ir.rule">
+            <field name="name">missions assigned multi company rule</field>
+            <field name="model_id" ref="model_missions_assigned"/>
+            <field name="domain_force">[('team_leader.company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record id="missions_petty_comp_rule" model="ir.rule">
+            <field name="name">missions petty multi company rule</field>
+            <field name="model_id" ref="model_mission_petty"/>
+            <field name="domain_force">[('mission_id.team_leader.company_id','child_of',user.company_id.id)]</field>
+        </record>
+
+        <record id="missions_allowance_comp_rule" model="ir.rule">
+            <field name="name">missions allowance multi company rule</field>
+            <field name="model_id" ref="model_mission_allowance"/>
+            <field name="domain_force">[('mission_id.team_leader.company_id','child_of',user.company_id.id)]</field>
+        </record>
+
+        <record id="missions_extend_comp_rule" model="ir.rule">
+            <field name="name">missions extend multi company rule</field>
+            <field name="model_id" ref="model_mission_extend"/>
+            <field name="domain_force">[('create_uid.company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+
+        <record id="missions_report_comp_rule" model="ir.rule">
+            <field name="name">missions report multi company rule</field>
+            <field name="model_id" ref="model_mission_report"/>
+            <field name="domain_force">[('create_uid.company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+	</data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="model_cards_cards_comp_rule" model="ir.rule">
+            <field name="name">cards company rule</field>
+            <field name="model_id" ref="model_cards_cards"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('company_id','child_of',user.company_id.id)]</field>
+        </record>
+    </data>
+</odoo>

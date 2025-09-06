@@ -1,0 +1,142 @@
+<odoo>
+
+
+    <report id="removing_differences_details"
+        model="removing.differences"
+        string="تقرير الفروقات"
+        report_type="qweb-html"
+        name="kamil_hr_contract.removing_differences_view"
+        paperformat="kamil_hr_benefits_wages.hr_landscape_paperformat"
+        />
+
+    <template id="removing_differences_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+            <t t-call="web.external_layout">
+                    <div class="page" style="page-break-inside: avoid;">
+                        <div class="text-center" style="font:600;">
+                            <strong class="text-center">
+                                <p>الادارة العامة للموارد البشرية
+                                <br/>
+                                قسم الاجور والمزايا<br/>
+                                <span t-esc="doc.name"/><br/>
+                                </p>
+                            </strong>
+                        </div>
+                        <br/><br/>
+                        <table style="margin:0px auto;width:70%;" dir="rtl" class="table-bordered">
+                            <tr>
+                                <th class="text-center table-active">
+                                    اسم الموظف
+                                </th>
+                                <td class="text-center">
+                                    <span t-esc="doc.employee_id.name"/>
+                                </td>
+                                <th class="text-center table-active">
+                                    القسم
+                                </th>
+                                <td class="text-center">
+                                    <span t-esc="doc.department_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center table-active">
+                                    تاريخ الاستحقاق
+                                </th>
+                                <td class="text-center">
+                                    <span t-esc="doc.upgrade_date"/>
+                                </td>
+                                <th class="text-center table-active">
+                                    تاريخ التنفيذ
+                                </th>
+                                <td class="text-center">
+                                    <span t-esc="doc.implementation_date"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center table-active">
+                                    عدد الايام
+                                </th>
+                                <td class="text-center">
+                                    <span t-esc="doc.days"/>
+                                </td>
+                                <td class="text-center table-active"/>
+                                <td/>
+                            </tr>
+                        </table>
+                        <br/><br/><br/>
+                        <table dir="rtl" class="table-bordered">
+                            <thead style="display: table-header-group;">
+                                <th class="text-center table-active" style="font:300; white-space: nowrap;width: 1%;">البـيان
+                                </th>
+                                <t t-foreach="doc.line_ids" t-as="line">
+                                    <th class="text-center table-active" style="font:300; white-space: nowrap;width: 1%;">
+                                        <span t-esc="line.rule.name"/>
+                                    </th>
+                                </t>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center table-active" style="font:300; white-space: nowrap;width: 1%;">القديم</th>
+                                    <t t-foreach="doc.line_ids" t-as="line">
+                                        <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                            <t t-esc="'{0:,.2f}'.format(float(line.old_total))"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <tr>
+                                    <th class="text-center table-active" style="font:300; white-space: nowrap;width: 1%;">الجديد</th>
+                                    <t t-foreach="doc.line_ids" t-as="line">
+                                        <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                            <t t-esc="'{0:,.2f}'.format(float(line.new_total))"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <tr>
+                                    <th class="text-center table-active" style="font:300; white-space: nowrap;width: 1%;">الفرق</th>
+                                    <t t-foreach="doc.line_ids" t-as="line">
+                                        <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                            <t t-esc="'{0:,.2f}'.format(float(line.differnce_amount))"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <tr>
+                                    <th class="text-center table-active" style="font:300; white-space: nowrap;width: 1%;">قيمة اليوم الواحد</th>
+                                    <t t-foreach="doc.line_ids" t-as="line">
+                                        <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                            <t t-esc="'{0:,.2f}'.format(float(line.one_day_value))"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <tr>
+                                    <th class="text-center table-active" style="font:300; white-space: nowrap;width: 1%;">المبلغ</th>
+                                    <t t-foreach="doc.line_ids" t-as="line">
+                                        <td class="text-center" style="font:300; white-space: nowrap;width: 1%;">
+                                            <t t-esc="'{0:,.2f}'.format(float(line.amount))"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </tbody>
+                        </table><br/><br/>
+                         <p style="font:600;" dir="rtl" >
+                            <strong>قسم الاجور والمزايا</strong>
+                            <span>
+                                ...............................................................
+                            </span>
+                            <br/>
+                            <strong>اعتماد شئون العاملين</strong>
+                            <span>
+                                ............................................................
+                            </span>
+                            <br/>
+                            <strong>المراجعة</strong>
+                            <span>
+                                ...................................................................................
+                            </span>
+                    </p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

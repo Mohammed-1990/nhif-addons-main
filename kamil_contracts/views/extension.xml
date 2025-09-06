@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+      <!-- explicit list view definition -->
+      <record model="ir.ui.view" id="kamil_contract_contract_extension_form_veiw">
+         <field name="name">Goods extension</field>
+         <field name="model">kamil.contracts.extensions</field>
+         <field name="arch" type="xml">
+            <form>
+               <header name="contracts_contract_ext_form_header">
+                  
+                  <button name="purchase_executive_director" string="Submit" attrs="{'invisible':[('purchase_state','!=','purchase_draft')]}" class="oe_highlight" type="object" groups="kamil_contracts.group_contract_extender" />
+
+                  <button name="service_executive_director" string="Submit" attrs="{'invisible':[('service_state','!=','service_draft')]}" class="oe_highlight" type="object" groups="kamil_contracts.group_contract_extender" />
+                  
+                  <button name="research_submit" string="Submit" attrs="{'invisible':[('research_state','!=','research_draft')]}" class="oe_highlight" type="object" groups="kamil_contracts.group_contract_extender" />
+                  
+                  <button name="training_submit" string="Submit" attrs="{'invisible':[('training_state','not in',['training_draft'])]}" class="oe_highlight" type="object" groups="kamil_contracts.group_contract_extender" />
+                  
+                  <button name="training_executive_director" string="Exec Approve" attrs="{'invisible':[('training_state','!=','training_submit')]}" class="oe_highlight" type="object" groups="kamil_contracts.group_contract_extender" />
+                  
+                  <button name="training_gm" string="GM Approval" attrs="{'invisible':[('training_state','not in',['training_executive_director','training_department','training_legal_affairs'])]}" class="oe_highlight" type="object" groups="kamil_contracts.group_gm" />
+                  
+                  <button name="training_department" string="Training Department" class="oe_highlight" type="object" attrs="{'invisible':[('training_state','not in',['training_gm'])]}" />
+                  
+                  <button name="training_legal_affairs" string="Legal Consultancy" class="oe_highlight" type="object" attrs="{'invisible':[('training_state','not in',['training_gm'])]}" />
+                  
+                  <button name="purchase_gm" string="GM Approval" attrs="{'invisible':[('purchase_state','!=','purchase_executive_director'),('purchase_state','!=','purchase_legal_affairs'),('purchase_state','!=','purchase_department')]}" class="oe_highlight" type="object" groups="kamil_contracts.group_gm" />
+                  
+                  <button name="service_gm" string="GM Approval" attrs="{'invisible':[('service_state','!=','service_executive_director'),('service_state','!=','service_legal_affairs'),('service_state','!=','service_department')]}" class="oe_highlight" type="object" groups="kamil_contracts.group_gm" />
+                  
+
+                  <button name="purchase_department" string="Purchase Department" class="oe_highlight" type="object" attrs="{'invisible': [('purchase_state', '!=', 'purchase_gm')               ]}" />
+
+                  <button name="service_department" string="Purchase Department" class="oe_highlight" type="object" attrs="{'invisible': [('service_state', '!=', 'service_gm')               ]}" />
+
+                  <!-- Research -->
+                  <button name="research_department" string="Research Department" class="oe_highlight" type="object" attrs="{'invisible':[('research_state','!=','training_draft'),('research_state','!=','head_of_commitee')]}" groups="kamil_contracts.group_contract_headOfCommitte" />
+                  <button name="head_of_commitee" string="Head of Comittee" class="oe_highlight" type="object" attrs="{'invisible': [('research_state','!=','training_draft'),('research_state','!=','research_department')]}" groups="kamil_contracts.group_contract_headOfResearchDepartment" />
+                  <button name="research_done" string="Extend" class="oe_highlight" type="object" attrs="{'invisible': [('research_state','!=','training_draft'),('research_state','!=','head_of_commitee')]}" groups="kamil_contracts.group_contract_headOfCommitte" />
+                  
+                  <button name="research_reject" string="Reject" class="oe_highlight" type="object" attrs="{'invisible': [('research_state','!=','training_draft'),('research_state','!=','head_of_commitee')]}" groups="kamil_contracts.group_contract_headOfCommitte" />
+                  <!-- Research -->
+
+
+                  <button name="purchase_legal_affairs" string="Legal Affairs" class="oe_highlight" type="object" attrs="{'invisible': [('purchase_state', '!=', 'purchase_gm')]}" groups="kamil_contracts.group_gm" />
+
+                  <button name="service_legal_affairs" string="Legal Affairs" class="oe_highlight" type="object" attrs="{'invisible': [('service_state', '!=', 'service_gm')]}" groups="kamil_contracts.group_gm" />
+                  
+                  <button name="purchase_done" string="Extend" class="oe_highlight" type="object" attrs="{'invisible': [('purchase_state', '!=', 'purchase_gm')]}" groups="kamil_contracts.group_gm" />
+                  
+                  <button name="service_done" string="Extend" class="oe_highlight" type="object" attrs="{'invisible': [('service_state', '!=', 'service_gm')]}" groups="kamil_contracts.group_gm" />
+                  
+
+                  <button name="purchase_reject" string="Reject" class="oe_highlight" type="object" attrs="{'invisible': [('purchase_state', '!=', 'purchase_gm')]}" groups="kamil_contracts.group_gm" />
+                  
+                  <button name="service_reject" string="Reject" class="oe_highlight" type="object" attrs="{'invisible': [('service_state', '!=', 'service_gm')]}" groups="kamil_contracts.group_gm" />
+                  
+
+                  <button name="training_done" string="Extended" attrs="{'invisible':[('training_state','not in',['training_department','training_gm'])]}" class="oe_highlight" type="object" groups="kamil_contracts.group_training_contrct_manager" />
+                  <button name="training_reject" string="Reject" attrs="{'invisible': [('training_state', '!=', 'training_gm')]}" class="oe_highlight" type="object" groups="kamil_contracts.group_gm" />
+                  <!--statusbar_visible  -->
+                  
+                  <field name="purchase_state" widget="statusbar" nolabel="1" statusbar_visible="purchase_draft,purchase_executive_director,purchase_legal_affairs,purchase_gm,purchase_department,purchase_done" options="{'clickable': '1'}" attrs="{'invisible': [('contract_type', '!=', 'Goods')]}" />
+                  
+                  <field name="service_state" widget="statusbar" nolabel="1" statusbar_visible="service_draft,service_executive_director,service_legal_affairs,service_gm,service_department,service_done" options="{'clickable': '1'}" attrs="{'invisible': [('contract_type', '!=', 'Service')]}" />
+                  
+                  <field name="training_state" widget="statusbar" nolabel="1" statusbar_visible="training_draft,training_executive_director,training_gm,training_legal_affairs,training_gm,training_department,training_done" attrs="{'invisible': [('contract_type', '!=', 'Training')]}" options="{'clickable': '1'}" />
+                  
+                  <field name="research_state" widget="statusbar" nolabel="1" statusbar_visible="research_draft,research_department,head_of_commitee,research_done,research_reject" options="{'clickable': '1'}" attrs="{'invisible': [('contract_type', '!=', 'Research')]}" />
+                  
+               </header>
+               <sheet>
+                  <group cols="6">
+                     <field name="contract_type" invisible="1" />
+                     
+                     <field name="name" readonly="1" attrs="{'readonly':[('training_state','not in',['training_none','purchase_none','service_none','general_none'])]}" />                     
+                  </group>
+                  <group>
+                     
+                     <field name="contract_id" options="{'no_create': [True], 'no_create_edit':[True]}" attrs="{'readonly':[('training_state','not in',['training_none','training_draft','purchase_none','purchase_draft','service_none','service_draft','research_none','research_draft'])]}" domain="[('contract_type','!=','Medical'),('state','=','open')]" />
+                     
+                     <field name="subject" attrs="{'readonly':[('training_state','not in',['training_none','training_draft','purchase_none','purchase_draft','service_none','service_draft','research_none','research_draft'])]}" />
+                     
+                     <field name="the_body_of_the_message" string="Content" attrs="{'readonly':[('training_state','not in',['training_none','training_draft','purchase_none','purchase_draft','service_none','service_draft','research_none','research_draft'])]}" />
+
+                     <field name="applicant" />
+                     <!-- <field name="adjective" attrs="{'readonly':True}"/> -->
+
+                        <label for="period" string="Contraact period" />
+                        <div class="address_format">
+                           
+                           <field name="period" style="width:15%" attrs="{'readonly':[('training_state','not in',['training_none','training_draft','purchase_none','purchase_draft','service_none','service_draft','research_none','research_draft'])]}" />
+                           
+                           <field name="period_name" nolabel="1" style="width: 20%" attrs="{'readonly':[('training_state','not in',['training_none','training_draft','purchase_none','purchase_draft','service_none','service_draft','research_none','research_draft'])]}" />
+                        </div>
+                     
+                  </group>
+                  <group>
+                     
+                     <field name="attachment_ids" widget="many2one_binary" attrs="{'readonly':[('training_state','not in',['training_none','training_draft','purchase_none','purchase_draft','service_none','service_draft','research_none','research_draft'])]}">
+                        <tree editable="bottom" string="Attachments">
+                           <field name="attachment_name" />
+                           <field name="attachment" />
+                        </tree>
+                     </field>
+                  </group>
+               </sheet>
+               <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers" />
+                  <field name="activity_ids" widget="mail_activity" />
+                  <field name="message_ids" widget="mail_thread" />
+               </div>
+            </form>
+         </field>
+      </record>
+      <!-- End of Purchase Form view -->
+      <record model="ir.actions.act_window" id="kamil_contract_extention_request_window">
+         <field name="name">Extension Request</field>
+         <field name="res_model">kamil.contracts.extensions</field>
+         <field name="view_model">form,tree</field>
+      </record>
+      
+      <!--- Goods Contract-->
+      <record model="ir.actions.act_window" id="kamil_contract_purchase_extention_request_window">
+         <field name="name">Extension Request</field>
+         <field name="res_model">kamil.contracts.extensions</field>
+         <field name="view_model">form,tree</field>
+         <field name="context">{'default_contract_type':'Goods'}</field>
+         <field name="domain">[('contract_type', '=', 'Goods')]</field>
+      </record>
+
+      <!--- Services Contract-->
+      <record model="ir.actions.act_window" id="kamil_contract_service_purchase_extention_request_window">
+         <field name="name">Extension Request</field>
+         <field name="res_model">kamil.contracts.extensions</field>
+         <field name="view_model">form,tree</field>
+         <field name="context">{'default_contract_type':'Service'}</field>
+         <field name="domain">[('contract_type', '=', 'Service')]</field>
+      </record>
+      
+      <!--- Training Contract-->
+      <record model="ir.actions.act_window" id="kamil_contract_training_extention_request_window">
+         <field name="name">Extension Request</field>
+         <field name="res_model">kamil.contracts.extensions</field>
+         <field name="view_model">form,tree</field>
+         <field name="context">{'default_contract_type':'Training'}</field>
+         <field name="domain">[('contract_type', '=', 'Training')]</field>
+      </record>
+      
+      <!--- Research Contract-->
+      <record model="ir.actions.act_window" id="kamil_contract_research_extention_request_window">
+         <field name="name">Extension Request</field>
+         <field name="res_model">kamil.contracts.extensions</field>
+         <field name="view_model">form,tree</field>
+         <field name="context">{'default_contract_type':'Research'}</field>
+         <field name="domain">[('contract_type', '=', 'Research')]</field>
+      </record>
+      
+      <record model="ir.ui.view" id="kamil_contract_extension_request_tree">
+         <field name="name">Extension Request</field>
+         <field name="model">kamil.contracts.extensions</field>
+         <field name="arch" type="xml">
+            <tree>
+               <!-- create="false" edit="false" -->
+               <field name="name" />
+               <field name="applicant" />
+               <field name="contract_type" />
+               <field name="contract_id" />
+               <field name="application_date" />
+               <field name="status" />
+               <field name="write_date" string="last update" />
+               <field name="write_uid" string="updated by" />
+            </tree>
+         </field>
+      </record>
+      <menuitem name="Extension" id="extension_menu" parent="kamil_contract_menu_root" sequence="2" />
+      
+      <menuitem name="Services contracts" id="extension_contract_menu" parent="extension_menu" action="kamil_contract_extention_request_window" />
+      
+      <menuitem name="Goods contracts" id="purchase_extension_contract_menu" parent="extension_menu" action="kamil_contract_purchase_extention_request_window" />
+      
+      <menuitem name="Training contracts" id="tarining_extension_contract_menu" parent="extension_menu" action="kamil_contract_training_extention_request_window" />
+      
+      <menuitem name="Research contracts" id="research_extension_contract_menu" parent="extension_menu" action="kamil_contract_research_extention_request_window" />
+   </data>
+</odoo>
+

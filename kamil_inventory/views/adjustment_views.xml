@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="view_inventory_form_inherit" model="ir.ui.view">
+            <field name="name">stock_inventory_list</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='exhausted']" position="after">
+                    <field name="adjust_type" invisible="1"/>
+                    <field name="periodic_interval" invisible="1"/>
+                    <field name="active_id" invisible="1"/>
+                </xpath>
+                <xpath expr="//page[2]" position="before">
+                    <page string="Inventory Committee" attrs="{'invisible':[('state','in','draft')]}">
+                        <group>
+                            <field name="adjustment_committee_id"/>
+                        </group>
+                            <field name="adjustment_committee_member_ids">
+                                <tree>
+                                    <field name="employee"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
+                    </page>
+                </xpath>
+                <xpath expr="//button[@name='action_validate']" position="replace">
+                    <button name="action_validate" attrs="{'invisible': ['|',('state', '!=', 'confirm')]}" string="Validate Inventory" type="object" class="oe_highlight" groups="stock.group_stock_manager,kamil_inventory.group_inventory_responsible"/>
+                </xpath>
+                <xpath expr="//button[4]" position="replace">
+                    <button name="action_cancel_draft" attrs="{'invisible': ['|',('state', '!=', 'confirm'),('active_id','=',False)]}" string="Cancel Inventory" type="object" groups="kamil_inventory.group_inventory_responsible"/>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='product_id']" position="attributes">
+                    <attribute name="options">{'no_create':'1'}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='product_uom_id']" position="attributes">
+                    <attribute name="options">{'no_create':'1'}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_validate']" position="after">
+                    <button
+                         name="set_confirm"
+                         string="Cancel"
+                         type="object"
+                         states="done"/>
+                </xpath>
+                <!-- <xpath expr="//field[@name='line_ids']/tree/field[@name='location_id']" position="attributes">
+                    <attribute name="options">{'no_create':'1'}</attribute>
+                    <attribute name="readonly">True</attribute>
+                </xpath> -->
+            </field>
+        </record>
+
+
+    <record id="action_inventory_form_all_adjust" model="ir.actions.act_window">
+        <field name="name">All Inventory Adjustments</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.inventory</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_id" ref="stock.view_inventory_tree"/>
+        <field name="search_view_id" ref="stock.view_inventory_filter"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create inventory adjustment
+          </p><p>
+            This is used to correct the product quantities you have in stock.
+          </p>
+        </field>
+    </record>
+
+    <record id="action_inventory_form_annual_adjust" model="ir.actions.act_window">
+        <field name="name">Annual Inventory Adjustment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.inventory</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('adjust_type','=','annual')]</field>
+        <field name="context">{'default_adjust_type':'annual', 'create':False}</field>
+        <field name="view_id" ref="stock.view_inventory_tree"/>
+        <field name="search_view_id" ref="stock.view_inventory_filter"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create an Annual inventory adjustment
+          </p><p>
+            This is used to correct the product quantities you have in stock.
+          </p>
+        </field>
+    </record>
+
+    <record id="action_inventory_form_period_adjust" model="ir.actions.act_window">
+        <field name="name">Period Inventory Adjustment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.inventory</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('adjust_type','=','periodic')]</field>
+        <field name="context">{'default_adjust_type':'periodic', 'create':False}</field>
+        <field name="view_id" ref="stock.view_inventory_tree"/>
+        <field name="search_view_id" ref="stock.view_inventory_filter"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a Periodic inventory adjustment
+          </p><p>
+            This is used to correct the product quantities you have in stock.
+          </p>
+        </field>
+    </record>
+
+    <record id="action_inventory_form_surprising_adjust" model="ir.actions.act_window">
+        <field name="name">Surprise Inventory Adjustment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.inventory</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('adjust_type','=','surprising')]</field>
+        <field name="context">{'default_adjust_type':'surprising'}</field>
+        <field name="view_id" ref="stock.view_inventory_tree"/>
+        <field name="search_view_id" ref="stock.view_inventory_filter"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a Surprise inventory adjustment
+          </p><p>
+            This is used to correct the product quantities you have in stock.
+          </p>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_action_inventory_form" name="Adjustments" parent="stock.menu_stock_warehouse_mgmt" sequence="30"/>
+
+    <menuitem id="sub_menu_action_inventory_form_all" parent="menu_action_inventory_form" name="All Adjustment" sequence="0" action="action_inventory_form_all_adjust"/>
+
+    <menuitem id="sub_menu_action_inventory_form" parent="menu_action_inventory_form" name="Annual Adjustment" sequence="1" action="action_inventory_form_annual_adjust"/>
+
+    <menuitem id="menu_action_inventory_form1" parent="menu_action_inventory_form" name="Periodic Adjustment" sequence="2" action="action_inventory_form_period_adjust"/>
+
+
+    <menuitem id="menu_action_inventory_form2" parent="menu_action_inventory_form" name="Surprise Adjustment" sequence="3" action="action_inventory_form_surprising_adjust"/>
+
+
+    <delete model="ir.ui.menu" id="stock.menu_action_inventory_form" />
+
+
+</odoo>

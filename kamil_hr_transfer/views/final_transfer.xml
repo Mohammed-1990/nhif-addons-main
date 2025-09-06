@@ -1,0 +1,90 @@
+<odoo>
+  <data>
+   <record model="ir.ui.view" id="final_transfer_form_view">
+      <field name="name">final.transfer.form</field>
+      <field name="model">final.transfer</field>
+      <field name="arch" type="xml">
+          <form>
+              <header>
+                <button name="do_submit" string="Submit" type="object" class="btn btn-primary" states="draft"/>
+                <button name="do_confirm" string="Confirm" type="object" class="btn btn-primary" states="submitted"/>
+                <field name="state" widget="statusbar" />
+              </header>
+            <sheet>
+              <div>
+                <separator string="Employee Data" /><newline/><newline/>
+                <h1>
+                  <field name="name" placeholder="Employee Name" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                </h1>
+                <group col = "4">
+                    <field name="date" required='True' attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="job" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="enterprise" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                 </group>
+
+                <separator string="Details" />
+                 <group col="4">
+                    <field name="branch_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="unit_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="department_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="appoiontment_type" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off" />
+                    <field name="degree_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off" />
+                    <field name="category_fun_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="job_title_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="job_id" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="job_no" options="{'no_create':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                 </group>
+               </div>
+             </sheet>
+             <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+           </form>
+         </field>
+       </record>
+
+      <record model="ir.ui.view" id="final_transfer_tree_view">
+      <field name="name">final.transfer.tree</field>
+      <field name="model">final.transfer</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>      
+            <field name="unit_id"/>
+            <field name="department_id"/>
+            <field name="degree_id" />
+            <field name="state" />
+        </tree>
+      </field>
+    </record>
+    
+
+
+    <record  id="action_final_transfer" model="ir.actions.act_window">
+      <field name="name">Final Transfer</field>
+      <field name="res_model">final.transfer</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+      name="Movements" 
+      id="movements_main_menu"
+      parent="hr.menu_hr_root"
+      sequence="5"
+      groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_career_path_section_group,kamil_hr_security.hr_training_department_group"/>
+
+
+    <menuitem 
+      name="Final Transfer" 
+      id="final_transfer_menu"
+      action="action_final_transfer"
+      parent="movements_main_menu"
+      sequence="2"/>
+
+
+   
+   
+
+  </data>
+</odoo>

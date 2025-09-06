@@ -1,0 +1,84 @@
+<odoo>
+  <data>
+ 
+
+    <record model="ir.ui.view" id="alternative_allowance_form_view">
+    <field name="name">Alternative Allowance</field>
+    <field name="model">alternative.allowance</field>
+    <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_submit" string="Send" type="object" class="btn btn-primary" states="draft"/>
+              <button name="do_personnel_confirm" string="Confirm" type="object" class="btn btn-primary" states="personnel"/>
+              <button name="do_sm_confirm" string="Submit" type="object" class="btn btn-primary" states="sub_manager"/>
+              <button name="do_gd_confirm" string="Approve" type="object" class="btn btn-primary" states="general_directorate"/>
+              <button name="do_return" string="Return" type="object" states="personnel,sub_manager,general_directorate"/>
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+                <group col="4">
+                  <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="employee_id" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="department_id" force_save="1"/>
+
+                </group> 
+
+                <group col="4">
+                  <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="current_degree" force_save="1"/>
+                  <field name="alternative_degree" options="{'no_create':True,'no_edit':True,'no_open':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </group>
+                <notebook>
+                  <page string="Notes">
+                    <div>
+                      <field name="notes"/>
+                    </div>
+                  </page>
+                </notebook>  
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div> 
+          </form>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="alternative_allowance_tree_view">
+    <field name="name">Alternative Allowance</field>
+    <field name="model">alternative.allowance</field>
+      <field name="arch" type="xml">
+          <tree>
+            
+              <field name="employee_id"/>
+              <field name="department_id"/>
+              <field name="current_degree"/>
+              <field name="alternative_degree"/>
+              <field name="state"/>
+             
+          </tree>
+        </field>
+      </record>
+
+
+    <record  id="action_alternative_allowance" model="ir.actions.act_window">
+      <field name="name">Alternative Allowance</field>
+      <field name="res_model">alternative.allowance</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+<menuitem name="Allowances" parent="kamil_hr_benefits_wages.benefits_wages_menu" id="hr_allowance_main_menu" sequence="0" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+
+<menuitem name="Alternative Allowance" id="menu_alternative_allowance" action="action_alternative_allowance" parent="kamil_hr_personal.personal_menu" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+  <menuitem name="Employee Allowances" parent="kamil_hr_benefits_wages.benefits_wages_menu" id="employee_allowance_main_menu" sequence="1"/>
+
+
+  </data>
+</odoo>

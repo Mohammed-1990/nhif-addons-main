@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_record_job,record_job,model_record_jobs,,1,1,1,1
+access_record_job_lines,record_job_lines,model_record_jobs_line,,1,1,1,1
+

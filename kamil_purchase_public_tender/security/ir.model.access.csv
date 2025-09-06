@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_wiz_order_general_conditions,wiz.order.general.conditions,model_wiz_order_general_conditions,,1,1,1,1
+access_book_rejection,book.rejection,model_book_rejection,,1,1,1,1
+access_rule_administration_line,rule.administration.line,model_rule_administration_line,,1,1,1,1

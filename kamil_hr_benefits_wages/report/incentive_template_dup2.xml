@@ -1,0 +1,130 @@
+<odoo>
+
+    
+ 
+    <report id="incentive_report_dup2"
+            model="hr.incentive"
+            string="تقرير الحافز 2"
+            report_type="qweb-html"
+            name="kamil_hr_benefits_wages.hr_incentive_report_view_dup2"
+            paperformat="paperformat_a4_for_hr"
+        />
+
+    <template id="hr_incentive_report_view_dup2">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    
+                    <div class="text-center" style="font:500;">
+                        <p>الادارة العامة للموارد البشرية
+                        <br/>
+                        قسم الاجور والمزايا<br/>
+                        تقرير الحافز</p>
+                    </div>
+                    <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                        <thead style="display: table-header-group;">
+                            <td class="text-center table-active">اسم الحافز</td>
+                            <td class="text-center"><span t-esc="doc.name"/></td>
+                            <td class="text-center table-active">طريقة الحساب</td>
+                            <t t-if="doc.calculation_method=='fixed'">
+                                <td class="text-center">مبلغ ثابت</td>
+                            </t>
+                            <t t-if="doc.calculation_method=='salary'">
+                                <td class="text-center">من المرتب</td>
+                            </t>
+                            <t t-if="doc.calculation_method=='fixed_degree'">
+                                <td class="text-center">مبلغ ثابت حسب الدرجه</td>
+                            </t>
+                            <t t-if="doc.calculation_method=='fixed_job_title'">
+                                <td class="text-center">مبلغ ثابت حسب المسمى الوظيفي</td>
+                            </t>
+                        </thead>
+                        <tr>
+                            <td class="text-center table-active">من تاريخ</td>
+                            <td class="text-center"><span t-esc="doc.date_from"/></td>
+                            <td class="text-center table-active">الي تاريخ</td>
+                            <td class="text-center"><span t-esc="doc.date_to"/></td>
+                        </tr>
+                    </table><br/>
+                   <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                      <thead style="display: table-header-group;">
+                        <tr class="table-active">
+                            <td class="text-center fit">#</td>
+                            <td class="text-center fit">الموظف</td>
+                            <td class="text-center fit">القسم</td>
+                            <td class="text-center fit">المبلغ</td>
+                            <td class="text-center fit">المستحق</td>
+                            <td class="text-center fit">اجمالي الخصومات</td>
+                            <td class="text-center fit">الصافي</td>
+                        </tr>
+                        </thead>
+                        <div class="page">
+                            <t t-set="count" t-value="1"/> 
+                            <t t-set="count1" t-value="0"/> 
+                            <t t-set="count2" t-value="0"/> 
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <tr style="page-break-inside: avoid;">
+                                    <td class="text-center">
+                                        <span t-esc="count"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.employee_id.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="line.department_id.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.amount))"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.amount-line.leave_deduction_amount))"/>
+                                        <t t-set="count1" t-value="count1+line.amount-line.leave_deduction_amount"/> 
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.total_deductions))"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(float(line.net))"/>
+                                    </td>
+                                </tr>
+                                <t t-set="count" t-value="count+1"/>
+                            </t>
+                        </div>
+                        <tr style="page-break-inside: avoid;">
+                            <td/>
+                            <th colspan="2" class="text-center">الاجمالي</th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['amount'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                 <t t-esc="'{0:,.2f}'.format(float(count1))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['total_deductions'] for line in doc.line_ids])))"/>
+                            </th>
+                            <th class="text-center">
+                                <t t-esc="'{0:,.2f}'.format(float(sum([line['net'] for line in doc.line_ids])))"/>
+                            </th>
+                        </tr>
+                    </table><br/>
+                    <p style="font:600;" dir="rtl" >
+                            <strong>قسم الاجور والمزايا</strong>
+                            <span>
+                                .........................................................................
+                            </span>
+                            <br/>
+                            <strong> الادارة العامة للموارد البشرية</strong>
+                            <span>
+                                .........................................................
+                            </span>
+                            <br/>
+                            <strong>المراجعة</strong>
+                            <span>
+                                .............................................................................................
+                            </span>
+                    </p>
+               </t>
+            </t>
+        </t>
+    </template>
+</odoo>

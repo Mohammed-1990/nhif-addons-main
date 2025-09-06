@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Ratification-->
+	<act_window
+		id="action_ratification"
+		name="Ratification"
+		res_model="ratification.ratification"
+		view_mode="tree,form"
+		target="current"
+		domain="[('purchase_id','=',active_id)]"
+		context="{'create':False}"
+
+	/>
+
+
+	<!-- Form Public Tender Book -->
+	<record id="view_public_tender_book" model="ir.ui.view">
+		<field name="namcreate_ratificatione">public.tender.book</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='print_quotation']" position="replace">
+				 <button 
+				 	name="print_quotation" 
+				 	string="Print Invoice" 
+				 	type="object" 
+				 	attrs="{'invisible':['|',('state','!=','draft'),('type','in',('public_tender','limited_tender'))]}"
+				 	class="btn-secondary" 
+				 	groups="base.group_user"/>
+			</xpath>
+			<xpath expr="//button[9]" position="replace">
+				<button 
+					name="button_confirm" 
+					type="object" 
+					attrs="{'invisible':['|',('state','!=','draft'),('type','in',('public_tender','limited_tender'))]}" 
+					string="Confirm Order" 
+					id="draft_confirm"/>
+			</xpath>
+			<xpath expr="//field[@name='requisition_id']" position="attributes">
+				<attribute name="readonly">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='origin']" position="attributes">
+				<attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+			</xpath>
+			<field name="requisition_id" position="after">
+				<field name="collection_id" attrs="{'invisible':[('requisition_id','=',False)]}" readonly="1"/>
+			</field>
+			<xpath expr="//button[@name='button_cancel']" position="replace">
+				<button 
+					name="%(kamil_purchase_public_tender.action_rejection)d" 
+					states="draft,general_conditions_selection,technical_selection,to approve,sent,purchase_department,finance_manager" 
+					string="Cancel" 
+					type="action"/>
+			</xpath>
+
+			<xpath expr="//button[@name='action_rfq_send'][3]" position="before">
+				<button 
+					name="%(kamil_purchase_public_tender.action_wiz_general_conditions)d" 
+					type="action" 
+					string="Matching" 
+					attrs="{'invisible':['|',('type','not in',('public_tender','limited_tender')),('state','!=','draft')]}"
+					class="btn-primary" 
+					group="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button 
+					name="%(kamil_purchase_public_tender.action_wiz_general_conditions)d" 
+					type="action" 
+					string="Matching" 
+					states="general_conditions_selection" 
+					class="btn-primary" 
+					group="kamil_purchase_qualifiying_suppliers.group_comm_decided"/>
+
+				<button 
+					name="action_to_approve"
+					string="Matching"
+					type="object" 
+					states="technical_selection"
+					class="btn-primary"
+					/>
+				<field name="is_raft" invisible="1"/>
+				<button 
+					name="create_ratification"
+					string="Create Ratification"
+					type="object"
+					attrs="{'invisible':['|',('state','!=','purchase'),('is_raft','!=', False)]}"
+					class="btn-primary"
+					/>
+
+				
+			</xpath>
+			<xpath expr="//button[@name='action_rfq_send'][1]" position="replace">
+				<button 
+					name="action_rfq_send"
+					string="Send by Email" 
+					type="object" 
+					context="{'send_rfq':True}" 
+					attrs="{'invisible': ['|',('state','!=','draft'),('type', 'in', ('public_tender','limited_tender'))]}"
+				/>
+			</xpath>
+			<xpath expr="//button[@name='action_rfq_send'][2]" position="replace">
+				<button 
+					name="action_rfq_send"
+					string="Re-Send by Email" 
+					type="object" 
+					context="{'send_rfq':True}"
+					attrs="{'invisible': ['|',('state','!=','sent'),('type', 'in', ('public_tender','limited_tender'))]}"
+				/>
+			</xpath>
+			<xpath expr="//button[@name='action_rfq_send'][3]" position="replace">
+				<button 
+					name="action_rfq_send"
+					string="Send PO by Email" 
+					type="object" 
+					context="{'send_rfq':False}"
+					attrs="{'invisible': ['|',('state','!=','purchase'),('type', 'in', ('public_tender','limited_tender'))]}"
+				/>
+			</xpath>
+			<xpath expr="//button[@name='action_view_invoice'][1]" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//button[@name='action_view_invoice'][2]" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+
+			<xpath expr="//field[@name='state']" position="replace">
+				<field 
+					name="state" 
+					widget="statusbar" 
+					statusbar_visible="draft,sent,purchase" 
+					readonly="1"
+					attrs="{'invisible': ['|',('type', 'not in', ('request_for_quotaion','direct_purchase')),('requisition_id','=',False)]}"/>
+			</xpath>
+			<xpath expr="//field[@name='state']" position="after">
+				<field name="type" invisible="1"/>
+			    <field 
+			    	name="state_tender"
+			    	widget="statusbar" 
+			    	statusbar_visible="draft,general_conditions_selection,to approve,purchase"
+			    	readonly="1"
+			    	attrs="{'invisible': [('type', 'not in', ('public_tender','limited_tender'))]}"/>
+			</xpath>
+
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<div class="oe_button_box" name="button_box">
+					<button 
+						name="%(action_ratification)d"
+						type="action" 
+						class="oe_stat_button" 
+						icon="fa-dollar"
+						states="purchase"
+					>
+					<field name="ratification_count" widget="statinfo"  string="Ratification"/>
+					</button>
+                </div>
+			</xpath>
+
+			<!-- <xpath expr="//button[@name='action_rfq_send']" position="after">
+				<button name="open_url" type="object" string="Opene URL" class="btn-primary"/>	
+			</xpath> -->
+			<xpath expr="//field[@name='partner_ref']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='partner_id']" position="after">
+                <field 
+                	name="email" 
+                	widget="email" 
+                	context="{'gravatar_image': True}" 
+                	attrs="{'readonly':[('partner_id','!=',False)]}" />
+                <field 
+                	name="phone" 
+                	widget="phone" 
+                	attrs="{'readonly':[('partner_id','!=',False)]}"/>
+			</xpath>
+
+			<xpath expr="//field[@name='origin']" position="after">
+				<field 
+					name="technical_report" 
+					attrs="{
+					'invisible':['|',('state','in',('draft','general_conditions_selection')),('requisition_id','=',False)],
+					'required':[('state','=','technical_selection')],
+					'readonly':[('state','!=','technical_selection')]}"/>
+			</xpath>
+
+			<xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="after">
+				<field name="type" invisible="1"/>
+			</xpath>
+			<!-- <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="attributes">
+				<attribute name="attrs">{'readonly':[('type','in',[('public_tender','limited_tender')])]}</attribute>
+			</xpath> -->
+
+			<xpath expr="//field[@name='order_line']/tree/field[@name='taxes_id']" position="attributes">
+				<attribute name="attrs">{'readonly':[('type','in',[('public_tender','limited_tender')])]}</attribute>
+			</xpath>
+
+			<xpath expr="//field[@name='order_line']/tree/field[@name='analytic_tag_ids']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+
+			<xpath expr="//field[@name='order_line']/tree/field[@name='account_analytic_id']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree" position="attributes">
+				<attribute name="delete">0</attribute>
+			</xpath>
+
+			<xpath expr="//notebook/page[1]" position="after">
+				<page string="General Conditions" attrs="{'invisible':[('type','not in',('public_tender','limited_tender'))]}">
+					<field name="general_conditions_ids" >
+            			<tree>
+            				<field name="name" />
+            				<field name="exist"/>
+            				<field name="attachments"/>
+            			</tree>
+            		</field>	
+    			</page>
+    			<page string="Private Conditions" attrs="{'invisible':[('type','not in',('public_tender','limited_tender'))]}">
+    				<separator string="Private Conditions"/>
+            		<field name="private_conditions" readonly="1"/>
+            	</page>
+             	<page string="Other Features" attrs="{'invisible':[('type','not in',('public_tender','limited_tender'))]}">
+                    <separator string="Other Features"/>
+            		<field name="other_features" placeholder="Other Features ..." readonly="1"/>
+            	</page>
+            	<page string="Terms" attrs="{'invisible':[('type','not in',('public_tender','limited_tender'))]}">
+            		<separator string="Terms" />
+            		<field name="terms" readonly="1"/>
+            	</page>
+            	<page string="Reasons for rejection" states="cancel">
+            		<separator string="Reasons for rejection" />
+            		<field name="reason" readonly="1"/>
+            	</page>
+			</xpath>
+
+		</field>
+	</record>
+
+	<!-- Tree Purchase order -->
+	<record id="purchase_order_tree_inherit" model="ir.ui.view">
+		<field name="name">purchase.order.tree.inherit</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_tree"/>
+		<field name="arch" type="xml">
+			<field name="date_planned" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<field name="user_id" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<field name="origin" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+		</field>
+	</record>
+
+	<!-- Search purchase order -->
+	 <record id="purchase.view_purchase_order_filter" model="ir.ui.view">
+            <field name="name">request.quotation.select</field>
+            <field name="model">purchase.order</field>
+            <field name="arch" type="xml">
+                <search string="Search Purchase Order">
+                    <field name="name" string="Reference"/>
+                    <field name="partner_id" operator="child_of"/>
+                    <field name="product_id"/>
+                    <field name="create_uid"/>
+                    <field name="user_id"/>
+                     <filter name="approved" string="Purchase Orders" domain="[('state','in',('purchase','done'))]" invisible="1"/>
+                    <separator/>
+                    <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Vendor" name="vendor" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Purchase Representative" name="representative" domain="[]" context="{'group_by':'user_id'}"/>
+                        <filter string="Order Date" name="order_date" domain="[]" context="{'group_by':'date_order'}"/>
+                        <filter string="Expected Date" name="expected_date" domain="[]" context="{'group_by':'date_planned'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+	<record model="ir.actions.act_window" id="purchase_requisition.action_purchase_requisition_list">
+        <field name="name">Request for Quotations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('requisition_id','=',active_id)]</field>
+        <field name="context">{"default_requisition_id":active_id, 'default_type':'public_tender','create':False}</field>
+    </record>
+
+
+
+	<!-- Action Menu Public Tender Book-->
+	<act_window
+		id="action_public_tender_book"
+		name="Public Tender Book"
+		res_model="purchase.order"
+		view_mode="tree,form"
+		domain="[('type','=','public_tender')]"
+		context="{'default_type':'public_tender',}"
+	/>
+
+	<delete model="ir.ui.menu" id="purchase.menu_purchase_control"/>
+
+
+</odoo>

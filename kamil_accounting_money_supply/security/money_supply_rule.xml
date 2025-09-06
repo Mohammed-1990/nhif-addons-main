@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+		
+		<record id="money_supply_multi_company_rule" model="ir.rule">
+			<field name="name">money.supply multi-company</field>
+			<field ref="model_money_supply" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+		<record id="money_movement_multi_company_rule" model="ir.rule">
+			<field name="name">money_movement multi-company</field>
+			<field ref="model_money_movement" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="money_supply_request" model="ir.rule">
+			<field name="name">money.supply.request  multi-company</field>
+			<field ref="model_money_supply_request" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+
+
+	</data>
+</odoo>

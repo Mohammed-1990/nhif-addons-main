@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+
+	<!-- Form Public Tender Book -->
+	<record id="purchase_order_form_inherit" model="ir.ui.view">
+		<field name="name">purchase.order.inherit</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form"/>
+		<field name="arch" type="xml">
+			<field name="requisition_id" position="after">
+				<field name="type" invisible="1" />
+				<field name="request_id" attrs="{'invisible':['|',('type','in',('public_tender','limited_tender')),('requisition_id','=',False)]}"/>
+			</field>
+
+			<field name="partner_id" position="replace">
+				<field name="partner_id"/>
+			</field>
+			<field name="requisition_id" position="attributes">
+				<attribute name="attrs">{'invisible':[('type','not in',('public_tender','limited_tender'))]}</attribute>
+			</field>
+
+		</field>
+	</record>
+
+
+</odoo>

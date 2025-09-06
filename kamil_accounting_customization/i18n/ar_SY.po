@@ -1,0 +1,1044 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_accounting_customization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-01 16:02+0000\n"
+"PO-Revision-Date: 2020-01-01 16:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "<b>\n"
+"								تقرير التخصيص الشهري للفروع\n"
+"								</b>"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "<br/>\n"
+"								<strong style=\"float:right\">  سنة  </strong>"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "<strong style=\"float:right\"> لشهر </strong>"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__access_warning
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__access_warning
+msgid "Access warning"
+msgstr "خطأ بالوصول"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__account_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_needaction
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__activity_ids
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__activity_state
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.payment_ratification_line_form_view
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__analytic_account_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__analytic_account_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: kamil_accounting_customization
+#: selection:payment.ratification.line,payment_term:0
+msgid "Annual"
+msgstr "سنوي"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "April"
+msgstr "ابريل"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "August"
+msgstr "اغسطس"
+
+#. module: kamil_accounting_customization
+#: selection:payment.ratification.line,payment_term:0
+msgid "Biannual"
+msgstr "نصف سنوي"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__branch_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__branch_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__branch_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__branch_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__branch_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__payment_branch_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__the_payment_branch_id
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_form_view
+msgid "Calculate Customization"
+msgstr "حساب التخصيص"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization.line,state:0
+#: selection:payment.ratification.line,customization_state:0
+msgid "Calculated"
+msgstr "تم الحساب"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.view_wiz_monthly_allocation_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,state:0
+#: selection:kamil.customization.line,state:0
+msgid "Canceled"
+msgstr "تم الالغاء"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__clearance_amount
+msgid "Clearance Amount"
+msgstr "قيمة المقاصة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__abs_clearing_amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__clearing_amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_tree_view
+msgid "Clearing Amount"
+msgstr "قيمة المقاصة"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "Compute"
+msgstr "احتسب"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.payment_ratification_line_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,state:0
+#: selection:kamil.customization.line,state:0
+#: selection:kamil.customization.result,state:0
+#: selection:payment.ratification.line,customization_state:0
+msgid "Confirmed"
+msgstr "تم التاكيد"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_result_form_view
+msgid "Create Journal Items"
+msgstr "إنشاء القيود"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__create_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__create_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__access_url
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العملاء"
+
+#. module: kamil_accounting_customization
+#: model:ir.actions.act_window,name:kamil_accounting_customization.action_customization
+#: model:ir.model,name:kamil_accounting_customization.model_kamil_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__customization_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__customization_ids
+#: model:ir.ui.menu,name:kamil_accounting_customization.customization_main_menu
+#: model:ir.ui.menu,name:kamil_accounting_customization.customization_menu
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_result_form_view
+msgid "Customization"
+msgstr "التخصيص"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__customization_amount
+msgid "Customization Amount"
+msgstr "قيمة التخصيص"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__customization_branch_id
+msgid "Customization Branch"
+msgstr "الفرع"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,state:0
+msgid "Customization Calculated"
+msgstr "تم حساب التخصيص"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_collection_collection_line__customization_collection_line_id
+msgid "Customization Collection Line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.actions.act_window,name:kamil_accounting_customization.action_customization_line
+#: model:ir.model,name:kamil_accounting_customization.model_kamil_customization_line
+#: model:ir.ui.menu,name:kamil_accounting_customization.customization_line_menu
+msgid "Customization Details"
+msgstr "تفاصيل التخصيص"
+
+#. module: kamil_accounting_customization
+#: model:ir.actions.act_window,name:kamil_accounting_customization.action_customization_installment
+msgid "Customization Installment"
+msgstr "البرمجة"
+
+#. module: kamil_accounting_customization
+#: model:ir.ui.menu,name:kamil_accounting_customization.customization_installment_menu
+msgid "Customization Installments"
+msgstr "البرمجة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__customization_line_ids
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__customization_line_id
+msgid "Customization Line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__customization_payment_line_id
+msgid "Customization Payment Line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.actions.act_window,name:kamil_accounting_customization.action_customization_result
+#: model:ir.ui.menu,name:kamil_accounting_customization.customization_result_menu
+msgid "Customization Result"
+msgstr "نتيجة التخصيص"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__customization_state
+msgid "Customization State"
+msgstr "حالة التخصيص"
+
+#. module: kamil_accounting_customization
+#: model:ir.actions.report,name:kamil_accounting_customization.customization_report
+msgid "Customization monthly Report for Branches"
+msgstr "تقرير التخصيص الشهري للفروع"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__customized_amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_tree_view
+msgid "Customized Amount"
+msgstr "المبلغ المخصص"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "December"
+msgstr "ديسمبر"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__deduction_line_ids
+msgid "Deduction Line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_result_form_view
+msgid "Deductions"
+msgstr "الخصومات"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__name
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_form_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_report_kamil_accounting_customization_allocation_template__display_name
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,state:0
+#: selection:kamil.customization.result,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "February"
+msgstr "فبراير"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__has_installments
+msgid "Has Installments"
+msgstr "لديه اقساط"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_report_kamil_accounting_customization_allocation_template__id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__message_unread
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__message_needaction
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__message_has_error
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__income_line_ids
+msgid "Income Line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__income_from_branches_ids
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "Income from Other Branchs"
+msgstr "ايرادات من افرع اخرى"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.payment_ratification_line_form_view
+msgid "Installments"
+msgstr "الاقساط"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_is_follower
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__is_installment
+msgid "Is Installment"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__is_linked_with_customization
+msgid "Is Linked With Customization"
+msgstr "مرتبط مع تحصيص ؟"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "January"
+msgstr "يناير"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization.result,state:0
+msgid "Journal Moves Created"
+msgstr "تم إنشاء القيود"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "July"
+msgstr "يوليو"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "June"
+msgstr "يونيو"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_report_kamil_accounting_customization_allocation_template____last_update
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__write_uid
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__write_date
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__line_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__line_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__line_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__line_ids
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__line_type
+msgid "Line Type"
+msgstr "النوع"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "March"
+msgstr "مارس"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "May"
+msgstr "مايو"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_has_error
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_ids
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__month
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__month
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__month
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__month
+msgid "Month"
+msgstr "الشهر"
+
+#. module: kamil_accounting_customization
+#: selection:payment.ratification.line,payment_term:0
+msgid "Monthly"
+msgstr "شهري"
+
+#. module: kamil_accounting_customization
+#: model:ir.actions.act_window,name:kamil_accounting_customization.action_wiz_monthly_allocation
+#: model:ir.actions.report,name:kamil_accounting_customization.monthly_allocation_report
+#: model:ir.ui.menu,name:kamil_accounting_customization.menu_wiz_monthly_allocation
+msgid "Monthly Allocation Report"
+msgstr "تقرير التخصيص الشهري"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط القادم"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__activity_summary
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط القادم"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__activity_type_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__no_of_installment_ids
+msgid "No Of Installment"
+msgstr "عدد الاقساط"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__no_of_installments
+msgid "No. of Installmets"
+msgstr "عدد الاقساط"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "November"
+msgstr "نوفمبر"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__message_needaction_counter
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__message_has_error_counter
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__message_unread_counter
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "October"
+msgstr "اكتوبر"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "Open Customization"
+msgstr "فتح التخصيص"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_form_view
+msgid "Open Customization Details"
+msgstr "فتح تفاصيل التخصيص"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "Open Installments"
+msgstr "فتح الاقساط"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__operation_date
+msgid "Operation Date"
+msgstr "تاريخ العملية"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__loans_from_branches_ids
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "Other Branchs Debts"
+msgstr "مديونيات من افرع اخرى"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__deduction_ids
+msgid "Other Deductions"
+msgstr "خصومات اخرى"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,activity_state:0
+#: selection:kamil.customization.line,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__payment_date
+msgid "Payment Date"
+msgstr "تاريخ السداد"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__payment_line_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line_installment__payment_line_id
+msgid "Payment Line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__payment_term
+msgid "Payment Term"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,activity_state:0
+#: selection:kamil.customization.line,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__access_url
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول لبوابة العملاء"
+
+#. module: kamil_accounting_customization
+#: selection:payment.ratification.line,payment_term:0
+msgid "Quarterly"
+msgstr "ربع سنوي"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_collection_collection_line__remaining_amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__remaining_amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__remaining_amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__remaining_amount
+msgid "Remaining Amount"
+msgstr "القيمة المتبقية"
+
+#. module: kamil_accounting_customization
+#: model:ir.ui.menu,name:kamil_accounting_customization.customization_monthly_report
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_collection_collection_line__is_reserved
+msgid "Reserve"
+msgstr "حجز"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__reserved_amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__reserved_amount
+msgid "Reserved Amount"
+msgstr "مبلغ قيد التنفيذ"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__activity_user_id
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_collection_collection
+msgid "Revenues Collection"
+msgstr "تحصيل الإيرادات"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_result_form_view
+msgid "Revenues from Other Branches"
+msgstr "إيرادات من افرع اخرى"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__access_token
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__access_token
+msgid "Security Token"
+msgstr "رمز الحماية"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,month:0
+#: selection:wiz.monthly.allocation,month:0
+msgid "September"
+msgstr "سبتمبر"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__state
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__state
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__activity_state
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__the_line_id
+msgid "The Line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_payment_ratification_line__the_line_number
+msgid "The Line Number"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_ratification_payment
+msgid "The Payments"
+msgstr "الدفعيات"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_collection_collection_line__reserved_amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__reserved_amount
+msgid "The Reserved Amount"
+msgstr "المبلغ المحجوز"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_customization__the_type
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_deduction__the_type
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_customization_result_income__the_type
+msgid "The Type"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,activity_state:0
+#: selection:kamil.customization.line,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_result_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_result_tree_view
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__transfered_amount
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__transfered_amount
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_tree_view
+msgid "Transfered Amount"
+msgstr "المبلغ المحول"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_unread
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_form_view
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: kamil_accounting_customization
+#: selection:kamil.customization,state:0
+msgid "Validated"
+msgstr "تم الاعتماد"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__website_message_ids
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization__website_message_ids
+#: model:ir.model.fields,help:kamil_accounting_customization.field_kamil_customization_line__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: kamil_accounting_customization
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization__year
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_line__year
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_kamil_customization_result__year
+#: model:ir.model.fields,field_description:kamil_accounting_customization.field_wiz_monthly_allocation__year
+msgid "Year"
+msgstr "السنة"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.payment_ratification_line_tree_view
+msgid "amount"
+msgstr "القيمة"
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_collection_collection_line
+msgid "collection.collection.line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: selection:customization.result.customization,the_type:0
+#: selection:customization.result.deduction,the_type:0
+#: selection:customization.result.income,the_type:0
+msgid "customization"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_customization_result_customization
+msgid "customization.result.customization"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_customization_result_deduction
+msgid "customization.result.deduction"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_customization_result_income
+msgid "customization.result.income"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: selection:customization.result.customization,the_type:0
+#: selection:customization.result.deduction,the_type:0
+#: selection:customization.result.income,the_type:0
+#: selection:payment.ratification.line,line_type:0
+msgid "deduction"
+msgstr "خصم"
+
+#. module: kamil_accounting_customization
+#: selection:customization.result.customization,the_type:0
+#: selection:customization.result.deduction,the_type:0
+#: selection:customization.result.income,the_type:0
+#: selection:payment.ratification.line,line_type:0
+msgid "income"
+msgstr "ايراد"
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_kamil_customization_result
+msgid "kamil.customization.result"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_kamil_customization_result_line
+msgid "kamil.customization.result.line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: selection:payment.ratification.line,line_type:0
+msgid "loan"
+msgstr "سلفية"
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_payment_ratification_line
+msgid "payment.ratification.line"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_payment_ratification_line_installment
+msgid "payment.ratification.line.installment"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.view_wiz_monthly_allocation_form
+msgid "print"
+msgstr "طباعة"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "remaining_amount"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_report_kamil_accounting_customization_allocation_template
+msgid "report.kamil_accounting_customization.allocation_template"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_report_kamil_accounting_reports_monthly_allocation_template
+msgid "report.kamil_accounting_reports.monthly_allocation_template"
+msgstr "التقارير"
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.customization_line_form_view
+msgid "reserved_amount"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model:ir.model,name:kamil_accounting_customization.model_wiz_monthly_allocation
+msgid "wiz.monthly.allocation"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "اقساط"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "الاجمالي"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "الاجمالي المحول للولاية"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "التخصيص"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "التوجيه بالتحويل"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "الجملة"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "الدواء"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "المبلغ المخصص"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "المحولة"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "المعامل"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "المقاصة"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.report_customization_template
+msgid "الولاية"
+msgstr ""
+
+#. module: kamil_accounting_customization
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_customization.allocation_template
+msgid "تخصيص شهر"
+msgstr ""
+

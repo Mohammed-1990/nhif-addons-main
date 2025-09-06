@@ -1,0 +1,110 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="internal_transfer_tree_view">
+      <field name="name">internal.transfer.tree</field>
+      <field name="model">internal.transfer</field>
+      <field name="arch" type="xml">
+         <tree>
+          <field name="employee_no"/>
+          <field name="employee_id"/>
+          <field name="current_unit_id"/>
+          <field name="new_unit_id"/>
+          <field name="date"/>
+          <field name="transfer_reason"/>
+         </tree>
+       </field>
+     </record>
+   
+    <record model="ir.ui.view" id="internal_transfer_form_view">
+      <field name="name">internal.transfer.form</field>
+      <field name="model">internal.transfer</field>
+      <field name="arch" type="xml">
+      	 <form>
+          <header>
+              <button name="do_current_managar" string="sent" type="object" class="btn btn-primary" states="draft"/>
+
+              <button name="do_new_managar" string="Confirm" type="object" class="btn btn-primary" states="current_dept_managar" groups="kamil_hr_security.hr_branch_manager_group"/>
+             
+              <button name="do_hr_managar" string="Approve" type="object" class="btn btn-primary" states="new_dept_managar" groups="kamil_hr_security.hr_branch_manager_group"/>
+             
+
+              <button name="do_managar_return1" string="return" type="object" class="btn btn-primary" states="current_dept_managar" groups="kamil_hr_security.hr_branch_manager_group"/>
+
+              <button name="do_managar_return2" string="return" type="object" class="btn btn-primary" states="new_dept_managar" groups="kamil_hr_security.hr_branch_manager_group"/>
+
+             
+              <button name="do_managar_reject1" string="reject" type="object" class="btn btn-primary" states="current_dept_managar" groups="kamil_hr_security.hr_branch_manager_group"/>
+
+              <button name="do_managar_reject2" string="reject" type="object" class="btn btn-primary" states="new_dept_managar" groups="kamil_hr_security.hr_branch_manager_group"/>
+
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,current_dept_managar,new_dept_managar,hr_managar"/>
+
+          </header>
+           <sheet>
+            <div>
+            
+              <!-- <group>
+                <group>
+                  <field name="date"  required='True'  attrs="{'readonly':[('state','!=','draft')]}"/>
+                </group>
+              </group> -->
+              <separator string="Employee Data"/>
+
+              <group col="4">
+                <field name="employee_no" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                <field name="employee_id" options="{'no_create':1,'no_open':1,'no_edit':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                <field name="unit_id" force_save="1" readonly="True" options="{'no_create':1,'no_open':1,'no_edit':1}"  attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                <field name="department_id" force_save="1" readonly="True" options="{'no_create':1,'no_open':1,'no_edit':1}"  attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                <field name="degree_id" force_save="1" readonly="True" options="{'no_create':1,'no_open':1,'no_edit':1}"  attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                <field name="date" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off" required="True"/>
+              </group>
+                <separator string="Transfe Data"/>
+                  <group col="4">
+                    <field name="current_branch_id" options="{'no_create':1,'no_open':1,'no_edit':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off" readonly="True" force_save="1"/>
+                    <field name="new_branch_id" options="{'no_create':1,'no_open':1,'no_edit':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off" required="True"/>
+                    <field name="current_unit_id" force_save="1" options="{'no_create':1,'no_open':1,'no_edit':1}"  attrs="{'readonly':[('state','!=','draft')]}" readonly="True" autocomplete="off"/>
+                    <field name="new_unit_id" options="{'no_create':1,'no_open':1,'no_edit':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="current_location" force_save="1" options="{'no_create':1,'no_open':1,'no_edit':1}"  attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off" readonly="True"/>
+                    <field name="new_location" options="{'no_create':1,'no_open':1,'no_edit':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                    <field name="current_job" force_save="1" options="{'no_create':1,'no_open':1,'no_edit':1}"  attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off" readonly="True" />
+                    <field name="new_job" options="{'no_create':1,'no_open':1,'no_edit':1}" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                  </group>
+              <group>
+                <field name="transfer_reason" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+                 
+              </group>
+              <notebook >
+              <page string="notes">
+                <field name="note"  attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+              </page>
+            </notebook>
+
+
+                </div>
+          </sheet>
+          <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+      </field>
+    </record>
+
+
+                <record id="action_internal_transfer" model="ir.actions.act_window">
+			      <field name="name">internal Transfe</field>
+			      <field name="res_model">internal.transfer</field> 
+			      <field name="view_mode">tree,form</field>
+			    </record>
+
+					<menuitem name="Internal Transfer" 
+					     id="internal_transfer_menu"
+					     action="action_internal_transfer"
+               parent="movements_main_menu"
+               sequence="1"/>
+      
+    </data>
+</odoo>

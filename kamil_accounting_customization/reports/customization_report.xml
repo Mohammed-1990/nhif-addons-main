@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<report 
+		id="customization_report"
+		model="kamil.customization"
+		string="Customization monthly Report for Branches"
+		report_type="qweb-html"
+		name="kamil_accounting_customization.report_customization_template"
+	/>
+
+	<template id="report_customization_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+						
+						<div>
+							<h3 style="font-family:Calibri;" class="text-center">
+								<b>
+								تقرير التخصيص الشهري للفروع
+								</b>
+							</h3>
+							<br/>
+							<p class="text-right">
+								<strong style="float:right"> لشهر </strong>
+								<span style="float:right;margin-right:20px" t-esc="o.month">   </span>
+								<br/>
+								<strong style="float:right">  سنة  </strong>
+								<span style="float:right;margin-right:20px" t-esc="o.year"></span>
+							</p>
+						</div>
+
+						<br/>
+						<table dir="rtl"  border="1" class="text-right table table-bordered">
+							<thead class="table-active table-bordered">
+								<th> م. </th>
+								<th> الولاية </th>
+								<th> المقاصة </th>
+								<th> التخصيص </th>
+								<th> الجملة </th>
+								<th> التوجيه بالتحويل </th>
+							</thead>
+							<tbody>
+			                    <t t-foreach="o.line_ids" t-as="doc">
+			                    	<tr>
+				                    	<td> 
+				                    		<t t-esc="doc_index + 1"/> 
+				                    	</td>
+				                    	<td> 
+				                    		<t t-esc="doc.branch_id.name"/> 
+				                    	</td>
+				                    	<td> 
+				                    		<!-- <t t-esc="doc.clearing_amount"/> -->
+				                    		<t t-esc="'{0:,.2f}'.format(float(doc.clearing_amount))"/>
+				                    	</td>
+				                    	<td>
+				                    		<!-- <t t-esc="doc.customized_amount"/> -->
+				                    		<t t-esc="'{0:,.2f}'.format(float(doc.customized_amount))"/>
+				                    	</td>
+				                    	<td>
+				                    		<!-- <t t-esc="doc.clearing_amount + doc.customized_amount"/> -->
+				                    		<t t-esc="'{0:,.2f}'.format(float( doc.clearing_amount + doc.customized_amount ))"/>
+				                    	</td>
+				                    	<td>
+				                    		<!-- <t t-esc="doc.transfered_amount"/> -->
+				                    		<t t-esc="'{0:,.2f}'.format(float(doc.transfered_amount))"/>
+				                    	</td>
+				                    </tr>
+			                    </t>
+			                    <tr class="table-active table-bordered">
+			                    	<td colspan="2">
+			                    		الجملة
+			                    	</td>
+			                    	<td>
+			                    		<t t-esc="'{0:,.2f}'.format(float(sum(t.clearing_amount for t in o.line_ids)))"/>
+			                    	</td>
+			                    	<td>
+			                    		<t t-esc="'{0:,.2f}'.format(float(sum(t.customized_amount for t in o.line_ids)))"/>
+			                    	</td>
+			                    	<td>
+			                    		<t t-esc="'{0:,.2f}'.format(float(sum( (float( t.clearing_amount + t.customized_amount )) for t in o.line_ids)))"/>
+			                    	</td>
+			                    	<td>
+			                    		<t t-esc="'{0:,.2f}'.format(float(sum(t.transfered_amount for t in o.line_ids)))"/>
+			                    	</td>
+			                    </tr>
+			                </tbody>
+						</table>
+
+
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+
+
+</odoo>
+

@@ -1,0 +1,97 @@
+<odoo>
+
+    <record id="hr_landscape_paperformat" model="report.paperformat">
+        <field name="name">A4.landscape.paperformat.benefits</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">40</field>
+        <field name="dpi">80</field>
+    </record>
+    
+    <report id="hr_loan_report"
+            model="hr.loan.wizard"
+            string="Loan Report"
+            report_type="qweb-html"
+            paperformat="hr_landscape_paperformat"
+            name="kamil_hr_benefits_wages.hr_laon_report_view"
+            menu="False"/>
+
+    <template id="hr_laon_report_view">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+        
+            <div class="page" style="page-break-inside: avoid;">
+                <div class="text-center" style="font:500;">
+                        <p>الادارة العامة للموارد البشرية
+                        <br/>
+                        قسم الاجور والمزايا<br/>
+                        تقرير السلفيات</p>
+                    </div><br/>
+                <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                     <thead style="display: table-header-group;">
+                        <tr class="table-active">
+                          <th class="text-center fit">#</th>
+                          <th class="text-center fit">الموظف</th>
+                          <th class="text-center fit">الادارة</th>
+                          <th class="text-center fit">المسمي الوظيفي</th>
+                          <th class="text-center fit">السلفيه</th>
+                          <th class="text-center fit" style="width:10%;">التاريخ</th>
+                          <th class="text-center fit">إجمالي المبلغ</th>
+                          <th class="text-center fit">المبلغ المدفوع</th>
+                          <th class="text-center fit">المتبقي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="count" t-value="1"/>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr style="page-break-inside: avoid;">
+                                <td class="text-center">
+                                    <span t-esc="count"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['employee']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['unit']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['job_title']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['loan']"/>
+                                </td>
+                                <td class="text-center" style="width:10%;">
+                                    <span t-esc="doc['date']"/>
+                                </td>
+                                <td class="text-center">
+                                  <t t-esc="'{0:,.2f}'.format(float(doc['amount']))"/>
+                                </td>
+                                <td class="text-center">
+                                   <t t-esc="'{0:,.2f}'.format(float(doc['paid_amount']))"/>
+                                </td>
+                                <td class="text-center">
+                                   <t t-esc="'{0:,.2f}'.format(float(doc['balance']))"/>
+                                </td>
+                            </tr>
+                            <t t-set="count" t-value="count+1"/>
+                        </t>
+                        <t t-if="docs==[]">
+                            <tr>
+                                <td colspan="9" class="text-center">لا تـــوجـــــــد بيــانات</td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

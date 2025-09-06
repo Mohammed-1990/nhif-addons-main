@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="recipients_performance_wiz_form_view" model="ir.ui.view">
+            <field name="name">recipients_performance_wiz.form</field>
+            <field name="model">recipients.performance.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Done Budget">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="collector"/>
+                            </group>
+                            <group></group>
+                        </group>
+                        <group>
+                             <group>
+                                <field name="date_from"/>
+                            </group>
+                            <group>
+                                <field name="date_to"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="print_report" type="object" string="Done" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_recipients_performance_wiz_wizards" model="ir.actions.act_window">
+            <field name="name">Recipients performance</field>
+            <field name="res_model">recipients.performance.wiz</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem name="Recipients performance report" id="recipients_performance" parent="kamil_accounting_reports.menu_accounting_report" action="action_recipients_performance_wiz_wizards" sequence="50"/>
+    </data>
+</odoo>

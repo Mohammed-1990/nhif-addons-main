@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="purchase_rfq_comp_rule" model="ir.rule">
+        <field name="name">Purchase RFQ multi-company</field>
+        <field name="model_id" ref="model_purchase_rfq"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+
+	<record id="purchase_rfq_line_comp_rule" model="ir.rule">
+        <field name="name">Purchase RFQ Line multi-company</field>
+        <field name="model_id" ref="model_purchase_rfq_line"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+
+    <record id="purchase_rfq_report_comp_rule" model="ir.rule">
+        <field name="name">Purchase RFQ Report multi-company</field>
+        <field name="model_id" ref="model_rfq_report"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+</odoo>

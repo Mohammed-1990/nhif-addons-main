@@ -1,0 +1,147 @@
+<odoo>
+  <data>
+   
+    <record model="ir.ui.view" id="removing_differences_form_view">
+      <field name="name">removing.differences.form</field>
+      <field name="model">removing.differences</field>
+      <field name="arch" type="xml">
+          <form>
+            <header>
+              <button name="do_submit" string="Submit" type="object" class="btn btn-primary" states="draft" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_general_directorate"  string="Confirmed" type="object" class="btn btn-primary" states="submitted" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_hr_general_directorate"  string="aproved" type="object" class="btn btn-primary" states="confirmed" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+
+              <button name="do_confirm" string="Confirm" type="object" class="btn btn-primary" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+              <button name="do_accounting" string="Confirm" type="object" class="btn btn-primary" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+
+              <button name="do_return" string="Returnn" type="object" states="submitted" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+              <button name="do_return1" string="Return1" type="object" states="confirmed" groups="kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_employment_department_hq_group"/>
+
+              <button name="do_return2" string="Return2" type="object" states="general_directorate" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+              <button name="do_return3" string="Return3" type="object" states="internal_auditor" groups="kamil_hr_security.hr_internal_auditor_group"/>
+
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+              <h1>
+                <field name="name" attrs="{'readonly':[('state','!=','draft')]}" autocomplete="off"/>
+              </h1>
+            <group col="4">
+              <field name="num_emp" attrs="{'readonly':[('state','!=','draft')]}"/>
+              <field name="employee_id"  options="{'no_create':1, 'no_open':1,'no_edit':1}" attrs="{'readonly':[('state','!=','draft')]}"/>
+              <field name="department_id"  force_save="1" options="{'no_create':1, 'no_open':1,'no_edit':1}"/><newline/><newline/>
+              <field name="type"  attrs="{'readonly':[('state','!=','draft')]}" required="True"/>
+              <field name="promotion_type" string="First / Second Class" attrs="{'readonly':[('state','!=','draft')],'invisible':[('type','=','meal_allowance')],'required':[('type','!=','meal_allowance')]}" />
+            </group>
+            <group col="4">
+              <field name="document" attrs="{'readonly':[('state','!=','draft')]}"/>
+              <field name="allowance_type" force_save="1" attrs="{'invisible':[('type','!=','social_bonus')]}" options="{'no_create':1,'no_edit':1,'no_open':1}"/>
+            </group>
+            <group col="4">
+              <field name="first_qualification" force_save="1" attrs="{'invisible':[('type','!=','qualification_bonus')],'readonly':[('state','!=','draft')],}" options="{'no_create':1,'no_edit':1,'no_open':1}"/>
+              <field name="second_qualification" force_save="1" attrs="{'invisible':[('type','!=','qualification_bonus')],'readonly':[('state','!=','draft')],}" options="{'no_create':1,'no_edit':1,'no_open':1}"/>
+            </group>
+            <group col="4">
+              <field name="first_bonus" force_save="1" attrs="{'invisible':[('type','!=','annual_bonus')],'readonly':[('state','!=','draft')],}" options="{'no_create':1, 'no_open':1,'no_edit':1}"/>
+              <field name="second_bonus" force_save="1" attrs="{'invisible':[('type','!=','annual_bonus')],'readonly':[('state','!=','draft')],}" options="{'no_create':1, 'no_open':1,'no_edit':1}"/>
+            </group>
+            <group col="4">
+              <field name="current_degree" force_save="1" attrs="{'invisible':[('type','not in',['promotion','alternative_allowance'])],'readonly':[('state','!=','draft')],}" options="{'no_create':1, 'no_open':1,'no_edit':1}"/>
+              <field name="upgrade_degree" force_save="1" attrs="{'invisible':[('type','not in',['promotion','alternative_allowance'])],'readonly':[('state','!=','draft')],}" options="{'no_create':1, 'no_open':1,'no_edit':1}"/>
+              <field name="upgrade_date" required="True" force_save="1" string="Due date" attrs="{'readonly':[('state','!=','draft')],}" autocomplete="off"/>
+              <field name="implementation_date" required="True" force_save="1" string="Date of Exception" attrs="{'readonly':[('state','!=','draft')],}" autocomplete="off"/>
+            </group> 
+
+            <group>
+              <group>
+                <field name="days" force_save="1" attrs="{'invisible':[('promotion_type','!=','first_class')],'invisible':[('type','not in',['promotion','qualification_bonus','social_bonus','meal_allowance','alternative_allowance'])],'readonly':[('state','!=','draft')],}"/>
+                <field name="no_of_months"  attrs="{'readonly':[('state','!=','draft')],'invisible':[('type','!=','annual_bonus')],'required':[('type','=','annual_bonus','social_bonus')]}"/>
+                <field name="bonus_amount"  attrs="{'readonly':[('state','!=','draft')],'invisible':[('type','not in',['annual_bonus','qualification_bonus','social_bonus'])],'required':[('type','in',['annual_bonus','qualification_bonus','social_bonus'])]}"/>
+                <field name="meal_amount" force_save="1" attrs="{'readonly':[('state','!=','draft')],'invisible':[('type','!=','meal_allowance')],'required':[('type','=','meal_allowance')]}"/>
+                <field name="financial_difference" force_save="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+            </group>          
+            <notebook>
+              <page string="Details" attrs="{'invisible':['|',('type','!=','promotion'),('promotion_type','!=','first_class')]}"> 
+                <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                  <tree editable="bottom">
+                    <field name="rule" options="{'no_create':1, 'no_open':1,'no_edit':1}" required="True"/>
+                    <field name="old_total" required="True"/>
+                    <field name="new_total" required="True"/>
+                    <field name="differnce_amount"/>
+                    <field name="one_day_value"/>
+                    <field name="amount"/>
+                  </tree> 
+                </field>
+              </page>
+              <page string="Notes"> 
+                <div>
+                  <field name="notes"/>
+                </div>
+              </page>
+            </notebook>
+            </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+          </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="removing_differences_tree_view">
+      <field name="name">removing.differences.tree</field>
+      <field name="model">removing.differences</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="name"/>
+              <field name="employee_id"/>
+              <field name="department_id"/>
+              <field name="upgrade_date" string="Due date"/>
+              <field name="implementation_date"  string="Date of Exception"/>
+              <field name="state"/>
+         </tree>
+        </field>
+     </record>
+
+     <record model="ir.ui.view" id="removing_differences_search_view">
+      <field name="name">removing.differences.search</field>
+      <field name="model">removing.differences</field>
+      <field name="arch" type="xml">
+          <search>
+              <field name="employee_id"/>
+              <field name="department_id"/>
+              <field name="name"/>
+              <field name="upgrade_date" string="Due date"/>
+              <field name="implementation_date"  string="Date of Exception"/>
+              <field name="state"/>
+              <group expand="0" string="Group By">
+                <filter name="employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                <filter name="department" string="Department" context="{'group_by':'department_id'}"/>
+                <filter name="upgrade_date" string="Upgrade Date" context="{'group_by':'upgrade_date'}"/>
+                <filter name="implementation_date" string="Implementation Date" context="{'group_by':'implementation_date'}"/>
+              </group>
+         </search>
+        </field>
+     </record>
+
+
+    <record  id="action_removing_differences" model="ir.actions.act_window">
+      <field name="name">Removing Differences</field>
+      <field name="res_model">removing.differences</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+
+    <menuitem name="Removing Differences" parent="kamil_hr_benefits_wages.benefits_wages_menu" id="removing_differences_menu" action="action_removing_differences" sequence="1" groups="kamil_hr_security.hr_benefits_wages_section_group,kamil_hr_security.hr_head_of_hr_dept_group,kamil_hr_security.hr_internal_auditor_group,kamil_hr_security.hr_employment_department_group,kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_management_group,kamil_hr_security.hr_branch_manager_group,kamil_hr_security.hr_general_manager_group,kamil_hr_security.hr_benefits_wages_section_hq_group"/>
+
+  </data>
+</odoo>

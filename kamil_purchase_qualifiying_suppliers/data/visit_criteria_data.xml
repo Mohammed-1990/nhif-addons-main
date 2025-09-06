@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		
+		<record id="shap_bulding_outsid" model="tender.book.visit.criteria">
+			<field name="name">شكل المبني من الخارج</field>
+		</record>
+		<record id="shap_bulding_inside" model="tender.book.visit.criteria">
+			<field name="name">شكل المبني من الداخل</field>
+		</record>
+		<record id="sing_shape_quality" model="tender.book.visit.criteria">
+			<field name="name">شكل اللافتة ونوعيتها</field>
+		</record>
+		<record id="main_entrance" model="tender.book.visit.criteria">
+			<field name="name">المدخل الرئيسي للمؤسسة</field>
+		</record>
+		<record id="foundation_location" model="tender.book.visit.criteria">
+			<field name="name">وقوع المؤسسة علي شارع رئيسي / فرعي</field>
+		</record>
+		<record id="number_of_managers" model="tender.book.visit.criteria">
+			<field name="name">عدد المديرين ( مالكون او كبار مسئولين )</field>
+		</record>
+		<record id="number_of_administrators" model="tender.book.visit.criteria">
+			<field name="name">عدد الاداريون (مالكون او كبار مسئولين )</field>
+		</record>
+		<record id="number_of_employees" model="tender.book.visit.criteria">
+			<field name="name">عدد الموظفين</field>
+		</record>
+		<record id="secretary" model="tender.book.visit.criteria">
+			<field name="name">السكرتارية</field>
+		</record>
+		<record id="number_of_workers" model="tender.book.visit.criteria">
+			<field name="name">عدد العمال</field>
+		</record>
+		<record id="distribution_of_working_staff" model="tender.book.visit.criteria">
+			<field name="name">توزيع الكادر العامل</field>
+		</record>
+		<record id="quality_furniture" model="tender.book.visit.criteria">
+			<field name="name">نوعية الاثاث (المكاتب )</field>
+		</record>
+		<record id="general_authority_corporation" model="tender.book.visit.criteria">
+			<field name="name">الهيئة العامة للمؤسسة</field>
+		</record>
+		<record id="total_sentence" model="tender.book.visit.criteria">
+			<field name="name">الجملة الكلية</field>
+		</record>
+
+<!-- 
+		<record id="shap_bulding_outsid" model="tender.book.visit.criteria">
+			<field name="name">The shape of the building from the outside</field>
+		</record>
+		<record id="shap_bulding_inside" model="tender.book.visit.criteria">
+			<field name="name">The shape of the building is inside</field>
+		</record>
+		<record id="sing_shape_quality" model="tender.book.visit.criteria">
+			<field name="name">Sign shape and quality</field>
+		</record>
+		<record id="main_entrance" model="tender.book.visit.criteria">
+			<field name="name">The main entrance of the institution</field>
+		</record>
+		<record id="foundation_location" model="tender.book.visit.criteria">
+			<field name="name">The Foundation is located on a main / secondary street</field>
+		</record>
+		<record id="number_of_managers" model="tender.book.visit.criteria">
+			<field name="name">Number of managers (owners or senior officials)</field>
+		</record>
+		<record id="number_of_administrators" model="tender.book.visit.criteria">
+			<field name="name">Number of administrators (owners or senior officials)</field>
+		</record>
+		<record id="number_of_employees" model="tender.book.visit.criteria">
+			<field name="name">Number of Employees</field>
+		</record>
+		<record id="secretary" model="tender.book.visit.criteria">
+			<field name="name">Secretary</field>
+		</record>
+		<record id="number_of_workers" model="tender.book.visit.criteria">
+			<field name="name">Number of Workers</field>
+		</record>
+		<record id="distribution_of_working_staff" model="tender.book.visit.criteria">
+			<field name="name">Distribution of working staff</field>
+		</record>
+		<record id="quality_furniture" model="tender.book.visit.criteria">
+			<field name="name">Quality Furniture (Office)</field>
+		</record>
+		<record id="general_authority_corporation" model="tender.book.visit.criteria">
+			<field name="name">General Authority of the Corporation</field>
+		</record>
+		<record id="total_sentence" model="tender.book.visit.criteria">
+			<field name="name">Total sentence</field>
+		</record> -->
+	</data>
+</odoo>

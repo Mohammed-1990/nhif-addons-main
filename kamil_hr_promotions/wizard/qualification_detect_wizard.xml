@@ -1,0 +1,38 @@
+<odoo>
+	<data>
+		<record id="qualification_detect_wizard_form" model="ir.ui.view">
+			<field name='name'>Qualification Detect Report</field>
+			<field name='model'>qualification.detect.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+                            <group>
+                               <group>
+                                 <field name="degree_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                	            </group>
+                            </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+       </record>
+
+
+
+
+
+    <record id="action_qualification_detect_wizard" model="ir.actions.act_window">
+        <field name="name">Qualification Detect Report</field>
+        <field name="res_model">qualification.detect.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+
+    <menuitem name="Qualification Detect Report" parent="promotions_reports_menu" id="menu_report_qualification_detect_wizard" action="action_qualification_detect_wizard" sequence="6"/>
+
+	</data>
+</odoo>

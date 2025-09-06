@@ -1,0 +1,20 @@
+<odoo>
+	<data>
+	
+		<record id="balance_sheet_multi_company_rule" model="ir.rule">
+			<field name="name">balance_sheet multi-company</field>
+			<field ref="model_bank_cash_balance_sheet" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+
+		<record id="balance_sheet_line_multi_company_rule" model="ir.rule">
+			<field name="name">balance_sheet_line multi-company</field>
+			<field ref="model_bank_cash_balance_sheet_line" name="model_id"/>
+			<field eval="True" name="global"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+		</record>
+
+	</data>
+</odoo>

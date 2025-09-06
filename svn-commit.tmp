@@ -1,0 +1,20 @@
+
+--This line, and those below, will be ignored--
+
+A    kamil_contract_working_agreement
+A    kamil_contract_working_agreement/__init__.py
+A    kamil_contract_working_agreement/__manifest__.py
+A    kamil_contract_working_agreement/controllers
+A    kamil_contract_working_agreement/controllers/__init__.py
+A    kamil_contract_working_agreement/controllers/controllers.py
+A    kamil_contract_working_agreement/demo
+A    kamil_contract_working_agreement/demo/demo.xml
+A    kamil_contract_working_agreement/models
+A    kamil_contract_working_agreement/models/__init__.py
+A    kamil_contract_working_agreement/models/models.py
+A    kamil_contract_working_agreement/security
+A    kamil_contract_working_agreement/security/ir.model.access.csv
+A    kamil_contract_working_agreement/security/xx_security.xml
+A    kamil_contract_working_agreement/views
+A    kamil_contract_working_agreement/views/templates.xml
+A    kamil_contract_working_agreement/views/views.xml

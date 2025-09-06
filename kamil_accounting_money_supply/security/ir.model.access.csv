@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_money_supply,access_money_supply,model_money_supply,kamil_accounting_base.money_supply_group,1,1,1,1
+
+,,,,,,,
+access_money_movement,access_money_movement,model_money_movement,kamil_accounting_base.money_movement_group,1,1,1,1
+
+,,,,,,,
+access_money_supply_request,access_money_supply_request,model_money_supply_request,kamil_accounting_base.money_movement_group,1,1,1,1
+
+

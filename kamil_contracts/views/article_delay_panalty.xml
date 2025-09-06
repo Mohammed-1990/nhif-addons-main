@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="kamil_contracts_article_delay_panalty_list">
+      <field name="name">contracts Article delay_panalty tree view</field>
+      <field name="model">kamil.contracts.article.delay_panalty</field>
+      <field name="arch" type="xml">
+        <tree string="delay_panalty">
+          <field name="name" string="Name"/>
+          <field name="category_sel" string="Category"/>
+          <field name="content" widget="html"/>          
+        </tree>
+      </field>
+    </record>
+    
+   
+    <!-- actions opening views on models -->
+    <record model="ir.ui.view" id="kamil_contract_article_delay_panalty_form">
+      <field name="name">Delay Panalty</field>
+      <field name="model">kamil.contracts.article.delay_panalty</field>      
+      <field name="arch" type="xml">
+        <form string="delay_panalty form">        
+          
+          <sheet>
+            <group>
+               
+            <field name="name" String="Preface name ..." />
+            
+            <field name="category_sel" string="Category"/>
+            
+            <field name="content" widget="html"/>          
+            </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+
+    <!--Contract Working agreement tree view -->
+    
+    <record model="ir.actions.act_window" id="kamil_contract_delay_panalty_action_tree_view">
+      <field name="name">Delay Panalty</field>
+      <field name="res_model">kamil.contracts.article.delay_panalty</field>
+      <field name="view_mode">tree,form</field>
+      <field eval="0" name="sequence"/>
+    </record>
+
+
+<!--Contract Working agreement form view -->
+    <record model="ir.actions.act_window" id="kamil_contract_article_delay_panalty_form_view">
+      <field name="name">kamil contract window</field>
+      <field name="res_model">kamil.contracts.article.delay_panalty</field>
+      <field name="view_mode">form</field>
+      <field eval="1" name="sequence"/>
+    </record>
+    <!-- Main contract tree view -->
+    
+    <!-- Top menu item -->
+   
+    <!-- Upload contract term teplates -->
+     <menuitem name="Delay Panalty" id="kamil_contract_upload_delay_panalty_menu" parent="kamil_contract_upload_template_menu" action="kamil_contract_delay_panalty_action_tree_view"/>
+     
+
+  </data>
+</odoo>

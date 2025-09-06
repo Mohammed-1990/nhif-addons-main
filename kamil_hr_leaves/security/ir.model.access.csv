@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_leave_interrupt,leave_interrupt,model_leave_interrupt,,1,1,1,1
+access_leaves_document,leaves_document,model_leaves_document,,1,1,1,1
+,,,,,,,
+access_hr_leave_all,access_hr_leave_all,hr_holidays.model_hr_leave,base.group_user,1,1,1,1

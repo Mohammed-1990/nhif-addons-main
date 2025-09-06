@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+
+	<!-- Form Monthly Allocation Report -->
+	<record id="view_wiz_monthly_allocation_form" model="ir.ui.view">
+		<field name="name">wiz.monthly.allocation.form</field>
+		<field name="model">wiz.monthly.allocation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="4">
+						<field name="month"/>
+						<field name="year"/>
+					</group>
+					<footer>
+						<button name="print_report" type="object" string="print" class="btn-primary"/>
+						<button string="Cancel" special="cancel" class="btn-secondary"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+	<!-- Monthly Allocation Report-->
+	<act_window
+		id="action_wiz_monthly_allocation"
+		name="Monthly Allocation Report"
+		res_model="wiz.monthly.allocation"
+		view_mode="form"
+		target="new"
+	/>
+
+
+		<menuitem 
+			id="customization_report" 
+			name="Report" 
+			parent="kamil_accounting_customization.customization_main_menu" 
+			sequence="4"/>
+
+
+		<menuitem 
+			id="menu_wiz_monthly_allocation" 
+			sequence="1"
+			parent="customization_report"
+		 	action="action_wiz_monthly_allocation"/>
+
+
+</odoo>

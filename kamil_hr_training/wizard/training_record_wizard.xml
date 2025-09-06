@@ -1,0 +1,50 @@
+<odoo>
+	<data>
+		<record id="training_record_wizard_form" model="ir.ui.view">
+			<field name='name'>training record wizard</field>
+			<field name='model'>training.record.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+                      <group col="4">
+            	          
+                           <field name="program_execution_id" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                           <field name="training_center" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                           <field name="date_from"/>
+                           <field name="date_to"/>
+                           <field name="country" options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                        
+                          
+            	        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+       </record>
+
+    <record id="action_training_record_wizard" model="ir.actions.act_window">
+        <field name="name">Training Record</field>
+        <field name="res_model">training.record.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+   </record>
+   
+   <menuitem name="Reports" id="reports_main_menu" parent="kamil_hr_training.hr_training" sequence="3"/>
+
+   <menuitem id="long_taining_menu" name="Long Training" parent="reports_main_menu" sequence="1"/>
+
+  <menuitem id="short_taining_menu" name="Short Training" parent="reports_main_menu" sequence="2"/>
+
+
+    <menuitem name="Training Record" 
+              id="menu_training_record" 
+              parent="short_taining_menu" 
+              action="action_training_record_wizard"
+              sequence="3"/>
+
+	</data>
+</odoo>

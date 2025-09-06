@@ -1,0 +1,380 @@
+<odoo>
+	<data>
+
+
+		<record id="customization_tree_view" model="ir.ui.view">
+			<field name="name">Customization Tree</field>
+			<field name="model">kamil.customization</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="year"/>
+					<field name="month"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="customization_form_view" model="ir.ui.view">
+			<field name="name">Customization Form</field>
+			<field name="model">kamil.customization</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						
+						<button name="do_calculate_customization" string="Calculate Customization" type="object" states="draft,canceled" class="oe_highlight"/>
+
+						<button name="do_confirm" string="Confirm" type="object" states="customization_calculated" class="oe_highlight"/>
+
+						<button name="do_validate" string="Validate" type="object" states="confirmed" class="oe_highlight"/>
+						
+						<button name="do_cancel" string="Cancel" type="object" states="customization_calculated,confirmed,validated" class="oe_highlight"/>
+
+						<field name="state" widget="statusbar"/>
+
+					</header>
+					<sheet>
+						
+						<div>
+							<h1>
+								<label for="name" class="oe_edit_only float-right"/>
+								<br/>
+								<field name="name" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+							<br/>
+						</div>
+
+						<group col="4">
+							<field name="year" required="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="month" required="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+
+						<notebook>
+							<page string="Details">
+								<field name="line_ids">
+									<tree editable="bottom" create="false">
+										<field name="branch_id"/>
+										<field name="customized_amount"/>
+										<field name="abs_clearing_amount"/>
+										<field name="transfered_amount"/>
+										<button type="object" name="action_open_customization_details" string="Open Customization Details" icon="fa-arrow-circle-o-right"/>
+									</tree>
+<!-- 
+									<form>
+										<header></header>
+										<sheet>
+											
+											<div>
+												<h1>
+													<label for="branch_id" class="oe_edit_only"/>
+													<field name="branch_id"/>
+												</h1>
+											</div>
+											<group>
+												<field name="customization_id"/>
+											</group>
+											<group col="4">
+												<field name="year"/>
+												<field name="month"/>
+
+											</group>
+											<group col="6">
+												<field name="customized_amount"/>
+												<field name="clearing_amount"/>
+												<field name="transfered_amount"/>
+											</group>
+											<notebook>
+												<page string="Customization"> 
+													<field name="customization_ids">
+														<tree editable="bottom">
+															<field name="line_id" string="Description"/>
+															<field name="branch_id"/>
+															<field name="analytic_account_id"/>
+															<field name="account_id"/>
+															<field name="amount" sum="Amount"/>
+														</tree>
+													</field>
+												</page>
+											</notebook>
+										</sheet>
+									</form>
+ -->
+									
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+
+				</form>
+			</field>
+		</record>
+
+
+		
+		<record id="customization_line_tree_view" model="ir.ui.view">
+			<field name="name">Customization Line Tree</field>
+			<field name="model">kamil.customization.line</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="customization_id"/>
+					<field name="branch_id"/>
+					<field name="year"/>
+					<field name="month"/>
+					<field name="customized_amount" sum="Customized Amount"/>
+					<field name="abs_clearing_amount" sum="Clearing Amount"/>
+					<field name="transfered_amount" sum="Transfered Amount"/>
+				</tree>
+			</field>
+		</record>
+
+
+		<record id="customization_line_form_view" model="ir.ui.view">
+			<field name="name">Customization Line Form</field>
+			<field name="model">kamil.customization.line</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+
+
+						<button name="do_confirm" string="Confirm" type="object" states="calculated,canceled" class="oe_highlight"/>
+						
+						<button name="compute_lines" string="Compute" type="object" states="calculated"/>
+						<button name="do_cancel" string="Cancel" type="object" states="confirmed" class="oe_highlight"/>
+
+						<field name="state" widget="statusbar"/>
+
+					</header>
+					<sheet>
+						
+						<div class="float-right">
+							<h1>
+								<label for="branch_id" class="oe_edit_only float-right"/><br/>
+								<field name="branch_id" readonly="1"/>
+							</h1>
+						</div>
+						<group>
+							<field name="customization_id" readonly="1"/>
+						</group>
+						<group col="4">
+							<field name="year"/>
+							<field name="month"/>
+
+						</group>
+						<group col="6">
+							<field name="customized_amount"/>
+							<field name="abs_clearing_amount"/>
+							<field name="transfered_amount"/>
+						</group>
+						<notebook>
+							<page string="Customization"> 
+								<field name="customization_ids">
+									<tree editable="bottom" create="0">
+										<field name="branch_id"/>
+										<field name="line_id" string="Description"/>
+										<field name="account_id"/>
+										<field name="analytic_account_id"/>
+										<field name="amount" sum="Amount"/>
+
+										<field name="is_reserved"/>
+										<field name="reserved_amount" attrs="{'readonly':[('is_reserved','=',False)]}" sum="reserved_amount"/>
+										<field name="remaining_amount" sum="remaining_amount"/>
+
+										<button type="object" name="action_open_customization" string="Open Customization" icon="fa-arrow-circle-o-right"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Other Branchs Debts" invisible="1">
+								<field name="loans_from_branches_ids">
+									<tree editable="bottom" create="0">
+										<field name="parent_branch_id"/>
+										<field name="name"/>
+										<field name="account_id"/>
+										<field name="analytic_account_id"/>
+										<field name="amount" sum="Amount"/>
+
+										<field name="ratification_type" invisible="1"/>
+										<field name="the_payment_branch_id" invisible="1"/>
+
+										<field name="account_code"/>
+										<field name="item_type"/>
+
+										<button type="object" name="action_open_installments" string="Open Installments" icon="fa-arrow-circle-o-right"/>
+									</tree>
+								</field>
+							</page>
+
+							<page string="Income from Other Branchs">
+								<field name="income_from_branches_ids">
+									<tree editable="bottom" create="0">
+										<field name="branch_id"/>
+										<field name="name"/>
+										<field name="account_id"/>
+										<field name="analytic_account_id"/>
+										<field name="amount" sum="Amount"/>
+										
+										<field name="ratification_type" invisible="1"/>
+
+										<field name="the_payment_branch_id" invisible="1"/>
+
+										<field name="account_code"/>
+										<field name="item_type"/>
+
+										<button type="object" name="action_open_installments" string="Open Installments" icon="fa-arrow-circle-o-right"/>
+									</tree>
+								</field>
+							</page>
+
+							<page string="Other Branchs Debts">
+								<field name="deduction_ids">
+									<tree editable="bottom" create="0">
+										<field name="the_payment_branch_id" />
+										<field name="branch_id" invisible="1"/>
+										<field name="name"/>
+										<field name="account_id"/>
+										<field name="analytic_account_id"/>
+										<field name="amount" sum="Amount"/>
+										
+										<field name="ratification_type" invisible="1"/>
+
+										<field name="account_code"/>
+										<field name="item_type"/>
+
+
+										<button type="object" name="action_open_installments" string="Open Installments" icon="fa-arrow-circle-o-right"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+
+				</form>
+			</field>
+		</record>
+
+
+
+
+		<record id="payment_ratification_line_tree_view" model="ir.ui.view">
+			<field name="name">payment.ratification.line.tree</field>
+			<field name="model">payment.ratification.line</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="branch_id"/>
+					<field name="account_id"/>
+					<field name="analytic_account_id"/>
+					<field name="amount" sum="amount"/>
+				</tree>
+			</field>
+		</record>
+
+
+		
+
+
+
+		<record id="payment_ratification_line_form_view" model="ir.ui.view">
+			<field name="name">payment.ratification.line.form</field>
+			<field name="model">payment.ratification.line</field>
+			<field name="arch" type="xml">
+				
+				<form>
+					<header>
+						<button name="do_confirm" string="Confirm" type="object" attrs="{'invisible':[('customization_state','!=','calculated')]}" class="oe_highlight"/>
+							
+						<field name="customization_state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<div class="float-right">
+							<h1>
+								<label for="name" class="oe_edit_only float-right"/><br/>
+								<field name="name" readonly="1"/>
+							</h1>
+						</div>
+
+
+						<group col="4">
+							<field name="branch_id" readonly="1"/>
+							<field name="date" readonly="1"/>
+							<field name="account_id" readonly="1"/>
+							<field name="analytic_account_id" readonly="1"/>
+							<field name="amount" readonly="1"/>		
+							<field name="line_type" invisible="1"/>			
+						</group>
+						
+
+						<notebook>
+							<page string="Installments">
+								<group col="6">
+									<field name="no_of_installments"/>
+									<field name="start_date"/>
+									<field name="payment_term"/>
+								</group>
+								<separator string="Installments"/>
+								<field name="no_of_installment_ids">
+									<tree editable="bottom" create="0">
+
+										<field name="name" required="1"/>
+										<field name="date" required="1"/>
+										<field name="amount" required="1" sum="Amount"/>
+
+
+										<field name="is_installment" invisible="1"/>
+										<field name="the_payment_branch_id" invisible="1"/>
+										<field name="ratification_type" invisible="1"/>
+										<field name="customization_branch_id"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		
+
+
+		<record id="action_customization" model="ir.actions.act_window">
+			<field name="name">Customization</field>
+			<field name="res_model">kamil.customization</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record id="action_customization_line" model="ir.actions.act_window">
+			<field name="name">Customization Details</field>
+			<field name="res_model">kamil.customization.line</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{'group_by': 'branch_id'}</field>
+		</record>
+
+
+		<record id="action_customization_installment" model="ir.actions.act_window">
+			<field name="name">Customization Installment</field>
+			<field name="res_model">payment.ratification.line</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('is_installment','=',True)]</field>
+		</record>
+
+
+		<menuitem id="customization_main_menu" name="Customization" parent="account_accountant.menu_accounting" sequence="-5"/>
+		
+		<menuitem id="customization_menu" name="Customization" parent="customization_main_menu" action="action_customization" sequence="1"/>
+
+		<menuitem id="customization_line_menu" name="Customization Details" parent="customization_main_menu" action="action_customization_line" sequence="2"/>
+
+		<menuitem id="customization_installment_menu" name="Customization Installments" parent="customization_main_menu" action="action_customization_installment" sequence="3"/>
+
+
+	</data>
+</odoo>

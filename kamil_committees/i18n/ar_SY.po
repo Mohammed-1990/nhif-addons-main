@@ -1,0 +1,261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kamil_committees
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-01 09:20+0000\n"
+"PO-Revision-Date: 2020-01-01 09:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kamil_committees
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_form
+msgid "Activate"
+msgstr "تفعيل"
+
+#. module: kamil_committees
+#: selection:committee.committee,state:0
+msgid "Active"
+msgstr "نشط"
+
+#. module: kamil_committees
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kamil_committees
+#: selection:committee.committee,state:0
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: kamil_committees
+#: model_terms:ir.actions.act_window,help:kamil_committees.action_committee_type_config
+msgid "Click to create a new Committee Type."
+msgstr "إضغط ﻹنشاء نوع اللجنة"
+
+#. module: kamil_committees
+#: model_terms:ir.actions.act_window,help:kamil_committees.action_committee_type_creation
+msgid "Click to define a new Committee Type."
+msgstr "إضغط ﻹنشاء اللجنة"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__committee
+msgid "Committee"
+msgstr "اللجنة"
+
+#. module: kamil_committees
+#: model:ir.ui.menu,name:kamil_committees.menu_committee_type_configuration
+msgid "Committee Configuration"
+msgstr "إعدادات اللجان"
+
+#. module: kamil_committees
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_form
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_tree
+msgid "Committee Creation"
+msgstr "إنشاء اللجان"
+
+#. module: kamil_committees
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_hr_employee_line_form
+msgid "Committee Member"
+msgstr "عضو اللجنة"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__committee_member
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_form
+msgid "Committee Members"
+msgstr "إعضاء اللجنة"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__name
+msgid "Committee Name"
+msgstr "اﻹسم"
+
+#. module: kamil_committees
+#: model:ir.actions.act_window,name:kamil_committees.action_committee_role
+#: model:ir.ui.menu,name:kamil_committees.menu_committee_role
+msgid "Committee Roles"
+msgstr "أدوار اللجان"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__committee_type
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__types
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_form
+msgid "Committee Type"
+msgstr "نوع اللجنة"
+
+#. module: kamil_committees
+#: model:ir.actions.act_window,name:kamil_committees.action_committee_type_creation
+msgid "Committee Type Creation"
+msgstr "إنشاء نوع اللجنة"
+
+#. module: kamil_committees
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_config_form
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_config_tree
+msgid "Committee Types"
+msgstr "أنواع اللجان"
+
+#. module: kamil_committees
+#: model:ir.actions.act_window,name:kamil_committees.action_committee_type_config
+msgid "Committee Types Configuration"
+msgstr "إعدادات أنواع اللجان"
+
+#. module: kamil_committees
+#: model:ir.ui.menu,name:kamil_committees.menu_committee_creation
+msgid "Committees"
+msgstr "اللجان"
+
+#. module: kamil_committees
+#: model:ir.ui.menu,name:kamil_committees.sub_menu_committee_type_configuration
+msgid "Committees' Types"
+msgstr "أنواع اللجان"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__create_uid
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__create_uid
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role__create_uid
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__create_date
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__create_date
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role__create_date
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__display_name
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__display_name
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role__display_name
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kamil_committees
+#: selection:committee.committee,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__end_date
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: kamil_committees
+#: model:ir.actions.server,name:kamil_committees.cron_expire_Committee_ir_actions_server
+#: model:ir.cron,cron_name:kamil_committees.cron_expire_Committee
+#: model:ir.cron,name:kamil_committees.cron_expire_Committee
+msgid "Expire Committee"
+msgstr "إنهاء صلاحية اللجان"
+
+#. module: kamil_committees
+#: selection:committee.committee,state:0
+msgid "Expired"
+msgstr "منتهية الصلاحية"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__id
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__id
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role__id
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kamil_committees
+#: selection:committee.configuration,types:0
+msgid "Inventory"
+msgstr "مخزون"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee____last_update
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration____last_update
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role____last_update
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__write_uid
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__write_uid
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role__write_uid
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__write_date
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_configuration__write_date
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role__write_date
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kamil_committees
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_hr_employee_line__role
+msgid "Position"
+msgstr "الوظيفة"
+
+#. module: kamil_committees
+#: selection:committee.configuration,types:0
+msgid "Purchase"
+msgstr "المشتريات"
+
+#. module: kamil_committees
+#: model_terms:ir.ui.view,arch_db:kamil_committees.view_committee_type_creation_form
+msgid "Role"
+msgstr "الدور"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_role__name
+msgid "Role Name"
+msgstr ""
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: kamil_committees
+#: model:ir.model.fields,field_description:kamil_committees.field_committee_committee__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kamil_committees
+#: model:ir.model,name:kamil_committees.model_committee_committee
+msgid "committee.committee"
+msgstr ""
+
+#. module: kamil_committees
+#: model:ir.model,name:kamil_committees.model_committee_configuration
+msgid "committee.configuration"
+msgstr ""
+
+#. module: kamil_committees
+#: model:ir.model,name:kamil_committees.model_committee_role
+msgid "committee.role"
+msgstr ""
+
+#. module: kamil_committees
+#: model:ir.model,name:kamil_committees.model_hr_employee_line
+msgid "hr.employee.line"
+msgstr ""
+

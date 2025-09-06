@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+
+
+        <record id="kamil_accounting_allocation_group" model="ir.module.category">
+            <field name="name">Accounting - Allocation</field>
+            <field name="sequence">2</field>
+            <field name="description">Accounting Allocation</field>
+        </record>
+
+
+
+
+        <record id="allocation_group" model="res.groups">
+            <field name="name">Customization</field>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="category_id" ref="kamil_accounting_allocation_group"/>
+
+        </record>
+
+    </data>
+</odoo>

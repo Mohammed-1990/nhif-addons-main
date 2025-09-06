@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+     <odoo>			
+ 	    <data>
+
+        <record id="action_training_needs" model="ir.actions.act_window">
+			<field name="name">Training Needs Request</field>
+			<field name="res_model">training.needs</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record id="training_needs_tree" model="ir.ui.view">
+			<field name="name">training.needs.tree</field>
+			<field name="model">training.needs</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="employee_id"/>
+					<field name="department_id"/>
+					<field name="functional_id"/>
+					<field name="date"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+
+		<record id="training_needs_form" model="ir.ui.view">
+			<field name="name">training.needs.form</field>
+			<field name="model">training.needs</field>
+			<field name="arch" type="xml">
+			<form>
+				<header>
+		              <button name="do_submit" string="Send to training department" type="object" class="btn btn-primary" states="draft"/>
+		              <button name="do_confirm" string="Training department approve" type="object" class="btn btn-primary" states="submitted" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+		              <button name="do_reject" string="Reject" type="object" states="submitted" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+		              <field name="state" widget="statusbar"/>
+	            </header>
+				<sheet>
+					<h1>
+				 		<field name="name"/>
+				 	</h1>
+					<group col="4" >
+						 <field name="employee_no"/>
+						 <field name="employee_id" />
+						 <field name="department_id" force_save="1"/>
+						 <field name="functional_id" force_save="1"/>
+						 <field name="date"/>
+					</group>
+
+					<notebook>
+		              <page string="Competencies">
+		                <field name="line_ids" context="{'default_state':'draft'}" attrs="{'readonly':[('state','!=','draft')]}">
+		                  <tree editable="bottom">
+		                    <field name="competencie_id" options="{'no_create':True}"/>   
+		                    <field name="approved" /> 
+		                    <field name="notes"/>   
+		                    <field name="state" invisible="True"/>   
+		                  </tree>
+		                </field>
+		              </page>
+			            <page string="Employee Notes">
+			            	<div>
+								<field name="employee_notes" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</div>
+						</page>
+						<page string="Training Department Notes">
+							<div>
+							<field name="training_department_notes" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</div>
+						</page>
+		       	    </notebook>
+				</sheet>
+
+				<div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+
+
+
+
+
+			</form>
+			</field>
+		</record>
+
+		
+       <menuitem 
+       	name="Training Needs Request"
+		id="needs_menu"
+     	parent="menu_short_training"
+     	action="action_training_needs"
+        sequence="1"
+		 	/>
+
+</data>
+</odoo>

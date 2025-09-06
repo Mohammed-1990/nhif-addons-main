@@ -1,0 +1,110 @@
+<odoo>
+	<data>
+			
+		<record id="money_supply_tree_view" model="ir.ui.view">
+			<field name="name">Money Supply Tree</field>
+			<field name="model">money.supply</field>
+			<field name="arch" type="xml">
+				<tree >
+					<field name="ref"/>
+					<field name="name"/>
+					<field name="date"/>
+					<field name="supply_type"/>
+					<field name="partner_id"/>
+					<field name="journal_id"/>
+					<field name="account_id"/>
+					<field name="amount" sum="amount"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="money_supply_form_view" model="ir.ui.view">
+			<field name="name">Money Supply Form</field>
+			<field name="model">money.supply</field>
+			<field name="arch" type="xml">
+								<form create="false">
+
+					<header>
+						<button name="do_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+						
+						<button name="do_validate" string="Validate" type="object" states="confirmed" class="oe_highlight"/>
+						
+						<button name="do_reset_to_draft" string="Set To Draft" type="object" states="canceled"/>
+						
+						<button name="do_cancel" string="Cancel" type="object" states="confirmed,draft"/>
+
+						<field name="state"  widget="statusbar"/>
+
+					</header>
+					<sheet>
+
+
+		                <div class="oe_button_box" name="button_box">
+		                	<button class="oe_stat_button" type="object" name="show_moves" icon="fa-bars" attrs="{'invisible':[('move_id','=',False)]}">
+		                    	Journal Enteries
+		                    	<field name="move_id" invisible="1"/>
+		                    </button>		                
+		                </div>
+		                <br/>
+
+						<div class="float-right">
+							<h2>
+								<label for="ref" class="oe_edit_only"/><br/>
+								<field name="ref" readonly="1"/>
+							</h2>
+						</div>
+
+						<br/><br/>
+
+						<div class="float-right">
+							<h1>
+								<label for="name" class="float-right"/><br/>
+								<field name="name"  class="float-right" required="1" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+							</h1>
+							
+						</div>
+					
+						<br/>
+						<group col="4">
+							<field name="partner_id" options="{'no_create':True}" required="1"  readonly="1"/>
+							<!-- attrs="{'readonly':[('state','not in',['draft'])]}"/> -->
+							
+							<field name="account_id" options="{'no_create':True}" required="1" readonly="1"/>
+							<field name="date" required="1" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+							<field name="supply_type" widget="radio" required="1"/>
+							<field name="journal_id" options="{'no_create':True}" required="1" attrs="{'readonly':[('state','not in',['draft'])]}" domain="[('type','in',['bank','cash'])]" />
+							<field name="bank_or_cash_account_id" options="{'no_create':True}"  force_save="1" required="1" readonly="1"/>
+							<field name="total_amount" required="1" readonly="1"/>
+							<field name="reminning_amount" required="1" readonly="1"/>
+							<field name="pid_amount" required="1" readonly="1"/>
+							<field name="amount" required="1" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+							<field name="amount_in_words"/>
+							<field name="account_number" options="{'no_create':True}"  attrs="{'readonly':[('state','not in',['draft'])],'invisible':[('supply_type','=','39_receipt')]}"/>
+							<field name="clipboard_number" attrs="{'readonly':[('state','not in',['draft'])]}" string="Clipboard Number/39 Receipt Number" required="1"/>
+							<field name="file_data"/>
+
+						</group>
+					</sheet>
+						
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				
+				</form>		
+			</field>
+		</record>
+		
+		<record id="action_money_supply" model="ir.actions.act_window">
+			<field name="name">Bank/Save Supply</field>
+			<field name="res_model">money.supply</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="money_supply_menu" name="Bank/Save Supply" parent="kamil_accounting_base.accounting_operations_menu" action="action_money_supply" sequence="1"/>
+
+
+	</data>
+</odoo>

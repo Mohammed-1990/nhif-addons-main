@@ -1,0 +1,90 @@
+# -*- coding:utf-8 -*-
+{
+	
+	'name' : 'Kamil Accounting - Reports',
+	'Author' : 'Muram Makkawi',
+	'category':'Accounting',
+	'sequence' : 0,
+	'depends' : ['base','account','kamil_accounting_financial_ratification','account_reports','account_accountant','kamil_accounting_budget','kamil_accounting_customization','web'],
+	'data' : [
+
+		# 'views/font.xml',
+		'views/accounting_report_data.xml',
+		'wizard/wiz_ratification_report_views.xml',
+		'wizard/payment_report_views.xml',
+
+		'wizard/account_statement_wizard.xml',
+		'wizard/recipients_performance_wiz.xml',
+		'wizard/wiz_ratification_list_views.xml',
+		'wizard/wiz_revenues_budget_views.xml',
+		'wizard/wiz_compare_revenues_views.xml',
+		'wizard/wiz_compare_revenues_companies_views.xml',
+		'wizard/wiz_revenues_specified_period_views.xml',
+		'wizard/wiz_budget_monthly_views.xml',
+		'wizard/wiz_bank_statement_views.xml',
+		'wizard/wiz_revenues_journal_views.xml',
+		'wizard/wiz_revenues_analysis_subgroups_views.xml',
+		'wizard/wiz_detailed_revenue_synthesis_views.xml',
+		'wizard/wiz_account_move_views.xml',
+		'wizard/wiz_expenses_specified_period_views.xml',
+		'wizard/wiz_compare_expenses_views.xml',
+		'wizard/wiz_compare_expenses_companies_views.xml',
+		'wizard/wiz_expenses_journal_views.xml',
+		'wizard/wiz_expenses_analysis_subgroups_views.xml',
+		'wizard/wiz_detailed_expenses_synthesis_views.xml',
+		'wizard/wiz_trial_balance_views.xml',
+		'wizard/wiz_profit_loss_views.xml',
+		'wizard/wiz_balance_sheet_views.xml',
+		'wizard/wiz_general_journal_views.xml',
+		'wizard/consolidated_account_statement_wizard.xml',
+		# 'wizard/wiz_monthly_allocation_views.xml',
+		'wizard/wiz_clarifications_views.xml',
+
+		'report/paperformat_views.xml',
+		'report/ratification_report_views.xml',
+		'report/ratification_list_report_views.xml',
+		'report/account_statement_report.xml',
+		'report/revenues_budget_report_views.xml',
+		'report/compare_revenues_report_views.xml',
+		'report/compare_revenues_report_companies_views.xml',
+		'report/payment_report_views.xml',
+		'report/revenues_specified_period_report_views.xml',
+		'report/budget_monthly_report_views.xml',
+		'report/bank_statement_report_views.xml',
+		'report/revenues_journal_report_views.xml',
+		'report/revenues_analysis_subgroups_report_views.xml',
+		'report/detailed_revenue_synthesis_report_views.xml',
+		'report/account_move_report_views.xml',
+		'report/expenses_specified_period_report_views.xml',
+		'report/compare_expenses_report_views.xml',
+		'report/compare_expenses_report_companies_views.xml',
+		'report/expenses_journal_report_views.xml',
+		'report/expenses_analysis_subgroups_report_views.xml',
+		'report/detailed_expenses_synthesis_report_views.xml',
+		'report/trial_balance_report_views.xml',
+		'report/profit_loss_report_views.xml',
+		'report/balance_sheet_report_views.xml',
+		'report/recipients_performance_report.xml',
+		'report/general_journal_report_views.xml',
+
+		'report/consolidated_group_statement.xml',
+		'report/consolidated_account_statement.xml',
+		'report/clarifications_report_views.xml',
+		
+		# 'report/monthly_allocation_report_views.xml',
+
+		'views/account_statement_views.xml',
+		'views/revenues_budget_views.xml',
+		'views/expenses_budget_views.xml',
+		'views/ratification_views.xml',
+
+		'security/ir.model.access.csv',
+
+
+		'views/accounting_dashboard_view.xml',
+
+
+		],
+
+	'application' : True,
+}

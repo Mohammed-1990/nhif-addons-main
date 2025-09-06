@@ -1,0 +1,119 @@
+<odoo>
+  <data>
+
+      <record id="hr_leave_allocation_view_form_manager_inherit" model="ir.ui.view">
+        <field name="name">Leaves alloction</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form_manager"/>
+        <field name="arch" type="xml">
+
+          <!-- <xpath expr="//button[@name='action_approve']" position="replace">
+                <button string="Approve" name="action_approve" states="confirm" type="object" groups="kamil_hr_security.hr_management_group" class="oe_highlight"
+                    attrs="{'invisible': ['|', ('can_approve', '=', False), ('state', '!=', 'confirm')]}"/>
+            </xpath>
+            <xpath expr="//button[@name='action_validate']" position="replace">
+                <button string="Validate" name="action_validate" states="validate1" type="object" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" class="oe_highlight"/>
+              </xpath>
+              
+                <button string="Refuse" name="action_refuse" states="confirm,validate,validate1" type="object" groups="hr_holidays.group_hr_holidays_user"
+                    attrs="{'invisible': ['|', ('can_approve', '=', False), ('state', 'not in', ('confirm','validate','validate1'))]}"/>
+ -->
+                <!-- <button string="Reset to Draft" name="action_draft" type="object"
+                        attrs="{'invisible': ['|', ('can_reset', '=', False), ('state', 'not in', ['confirm', 'refuse'])]}"/> -->
+           <!-- <xpath expr="//header" position="replace">
+             <header>
+                    <button string="Approve" name="action_approve" states="confirm" type="object" groups="hr_holidays.group_hr_holidays_user" class="oe_highlight"
+                    attrs="{'invisible': ['|', ('can_approve', '=', False), ('state', '!=', 'confirm')]}"/>
+                <button string="Validate" name="action_validate" states="validate1" type="object" groups="hr_holidays.group_hr_holidays_manager" class="oe_highlight"/>
+                <button string="Refuse" name="action_refuse" states="confirm,validate,validate1" type="object" groups="hr_holidays.group_hr_holidays_user"
+                    attrs="{'invisible': ['|', ('can_approve', '=', False), ('state', 'not in', ('confirm','validate','validate1'))]}"/>
+                <button string="Reset to Draft" name="action_draft" type="object"
+                        attrs="{'invisible': ['|', ('can_reset', '=', False), ('state', 'not in', ['confirm', 'refuse'])]}"/>  
+                      </header>
+                   </xpath>  
+ -->
+
+
+          <xpath expr="//field[@name='notes']"  position="replace">
+          </xpath>
+          <xpath expr="//field[@name='department_id']"  position="attributes">
+            <attribute name="options">{'no_create':True}</attribute>
+          </xpath>
+          <xpath expr="//field[@name='holiday_type']"  position="replace">
+            <field name="holiday_type" string="Eligible"/>
+          </xpath>
+           <xpath expr="//field[@name='mode_company_id']"  position="replace">
+            <field name="mode_company_id" attrs="{'required': [('holiday_type', '=', 'company')], 'invisible': [('holiday_type', '!=', 'company')]}" options="{'no_create':1,'no_open':1}" string="Branch"/>
+          </xpath>
+          <xpath expr="//field[@name='employee_id']"  position="replace">
+            <field name="employee_id" attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': [('holiday_type', '!=', 'employee')]}" options="{'no_create':1,'no_open':1}" />
+          </xpath>
+          <xpath expr="//field[@name='category_id']"  position="replace">
+            <field name="appoiontment_type" attrs="{'required': [('holiday_type', '=', 'appoiontment_type')], 'invisible': [('holiday_type', '!=', 'appoiontment_type')]}" options="{'no_create':1,'no_open':1}" widget="many2many_tags"/>
+          </xpath>
+          <xpath expr="//field[@name='holiday_type']"  position="after">
+            <field name="degree_ids" attrs="{'required': [('holiday_type', '=', 'degree')], 'invisible': [('holiday_type', '!=', 'degree')]}" options="{'no_create':1,'no_open':1}"  widget="many2many_tags"/>
+          </xpath>
+          <xpath expr="//field[@name='holiday_type']"  position="after">
+            <field name="fun_category_ids" attrs="{'required': [('holiday_type', '=', 'functional_cagtegory')], 'invisible': [('holiday_type', '!=', 'functional_cagtegory')]}" options="{'no_create':1,'no_open':1}"  widget="many2many_tags"/>
+          </xpath>
+
+          <xpath expr="//field[@name='accrual']"  position="replace">
+            <field name="accrual" attrs="{'invisible':1}"/>
+          </xpath>
+
+          <xpath expr="//field[@name='name']"  position="replace">
+            <field name="name" string="Allocation Mode"/>
+          </xpath>
+
+          <xpath expr="//field[@name='holiday_status_id']"  position="after">
+            <field name="start_date"/>
+            <field name="end_date"/>
+          </xpath>
+
+
+
+        </field>
+      </record>
+
+      <record id="hr_leave_allocation_view_tree_manager_inherit" model="ir.ui.view">
+        <field name="name">Leaves alloction Tree</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_tree"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='duration_display']"  position="attributes">
+            <attribute name="string">Number of days</attribute>
+          </xpath>
+        </field>
+      </record>
+
+      <menuitem
+        id="hr_holidays.menu_open_allocation"
+        name="Allocations Requests"
+        parent="hr_holidays.menu_hr_holidays_my_leaves"
+        action="hr_holidays.hr_leave_allocation_action_my"
+        sequence="6"
+        groups="base.group_no_one"
+        />
+
+        <menuitem
+        id="hr_holidays.menu_hr_holidays_root"
+        name="Leaves"
+        parent="kamil_hr_personal.personal_menu"
+        sequence="1"
+        />
+
+
+        <menuitem
+        id="hr_holidays.hr_holidays_menu_manager_approve_allocations"
+        name="Allocations"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        groups="hr_holidays.group_hr_holidays_manager,hr_holidays.group_hr_holidays_user"
+        action="hr_holidays.hr_leave_allocation_action_approve_department"
+        />
+
+
+        
+
+  </data>
+</odoo>

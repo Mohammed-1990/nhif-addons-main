@@ -1,0 +1,183 @@
+<odoo>
+	<data>
+      <record model="ir.ui.view" id="inevitable_training_settings_form_view">
+      <field name="name">inevitable.settings.form</field>
+      <field name="model">inevitable.settings</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+                <h1>
+                  <field name="name" placeholder='Example: Preparing the inevitable training for the ninth degree'/>
+                </h1>
+                <group>
+                  <group>
+                    <field name="degree_id" options="{'no_create':True}"/>
+                  </group>
+                </group>
+                <notebook>
+                  <page string="Training programs">
+                    <field name="line_ids">
+                      <tree editable="bottom">
+                        <field name="name"/>
+                      </tree>
+                    </field>
+                  </page>
+                </notebook>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+     <record model="ir.ui.view" id="inevitable_training_form_view">
+      <field name="name">inevitable.training.form</field>
+      <field name="model">inevitable.training</field>
+      <field name="arch" type="xml">
+          <form>
+           <header>
+           
+
+              <button name="td_confirm" states="draft" string="Confirm the training department" type="object" class="oe_highlight" groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"/>
+
+              <button name="hr_confirm" states="td_confirm" string="HR Confirm" type="object" class="oe_highlight" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+              <button name="gm_confirm" states="hr_confirm" string="General Manager" type="object" class="oe_highlight" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+              <button name="do_return" states="td_confirm" string="Return" type="object" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group" />
+
+               <button name="do_return1" states="hr_confirm" string="Return1" type="object" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group" />
+
+              <button name="do_reject" states="td_confirm" string="Reject" type="object" groups="kamil_hr_security.hr_general_department_group,kamil_hr_security.hr_head_of_hr_dept_group"/>
+
+              <button name="do_reject1" states="hr_confirm" string="Reject1" type="object" groups="kamil_hr_securit.hr_general_manager_group,kamil_hr_security.hr_branch_manager_group"/>
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,td_confirm,hr_confirm,gm_confirm"/>
+
+            </header>
+
+            <sheet>
+                <group col="4">
+                  <field name="degree_id" options="{'no_create':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="training_program" options="{'no_create':True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+              <group col="4">
+                  <field name="country" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+                  <field name="city_id" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+                  <field name="training_type" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+                  <field name="discharge_type" attrs="{'readonly':[('state','!=','draft')]}"/>
+              </group>
+              <group col="4">
+                  <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="hour_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="hour_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                  <field name="training_center" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+                  <field name="coach" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+                  <field name="total_cost" />
+                  <field name="currency" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create':True}"/>
+                  <field name="attachment" attrs="{'readonly':[('state','!=','draft')]}" />
+                </group>
+
+              <notebook>
+               <page string="Participants">
+                <field name="line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                  <tree editable="bottom">
+                    <field name="employee_id" options="{'no_create':True}"/>
+                    <field name="department_id"/>
+                    <field name="degree_id"/>
+                    <field name="job_id"/>
+                  </tree>
+                </field>
+              </page>
+
+             <page string="The Cost">
+              <form>
+             <group col="4">
+              <field name="funding_type" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="financier_name" attrs="{'readonly':[('state','!=','draft')],'required':[('funding_type','in',['funded','both'])]}"/>
+                <field name="total_fund_cost"/>
+                <field name="total_financing_cost"/>
+              </group>
+
+               <page>
+              <field name ="line_id" attrs="{'readonly':[('state','!=','draft')]}">
+               <tree editable="bottom">
+                <field name="item_name"/>
+                <field name="financier"/>
+                <field name="amount"/>
+                 </tree>
+                 </field>
+               </page>
+
+                </form>
+            </page>
+            </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div> 
+          </form>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="inevitable_training_tree_view">
+      <field name="name">inevitable.training.tree</field>
+      <field name="model">inevitable.training</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="training_program"/>
+            <field name="training_type" />
+            <field name="date_from"/>
+            <field name="date_to"/>
+            <field name="total_cost"/>
+            <field name="state"/>
+          </tree>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="inevitable_training_settings_tree_view">
+      <field name="name">inevitable.settings.tree</field>
+      <field name="model">inevitable.settings</field>
+      <field name="arch" type="xml">
+         <tree>
+           <field name="name"/>
+           <field name="degree_id"/>
+           <field name="line_ids"/>
+         </tree>
+      </field>
+    </record>
+
+
+
+     
+
+    <record  id="action_inevitable_training_settings" model="ir.actions.act_window">
+      <field name="name">inevitable training settings</field>
+      <field name="res_model">inevitable.settings</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <record  id="action_inevitable_training" model="ir.actions.act_window">
+      <field name="name">Inevitable Training</field>
+      <field name="res_model">inevitable.training</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+      name="Inevitable Training Settings"
+		  id="inevitable_training_settings_menu"
+     	parent="training_configurarions_main_menu"
+     	action="action_inevitable_training_settings"
+      sequence="20"
+		 	/>
+		<menuitem name="Inevitable Training"
+		id="inevitable_training_menu"
+     	parent="menu_short_training"
+     	action="action_inevitable_training"
+        sequence="9"
+        groups="kamil_hr_security.hr_training_department_group,kamil_hr_security.hr_development_and_training_group"
+		 	/>
+
+  </data>
+</odoo>
