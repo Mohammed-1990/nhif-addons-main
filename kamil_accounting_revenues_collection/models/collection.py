@@ -52,7 +52,7 @@ class Collection(models.Model):
     is_cancel_receipt_e15 = fields.Boolean()
     cancel_e15_state = fields.Selection([('draft','Draft'),
         ('send', 'Send Request'), ('reject', 'Reject Request'),('accept', 'Accepted Request'),('cancel', 'Cancel Request')
-    ],default='draft', track_visibility='always')
+    ],track_visibility='always')
     cancel_reason = fields.Text(string='Cancel Reason',track_visibility='always')
     returned_reason = fields.Text(string='Cancel Reason',track_visibility='always')
     bank_application_id = fields.Many2one('banking.application',string='Application Name',track_visibility='always')
