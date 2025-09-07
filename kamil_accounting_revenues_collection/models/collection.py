@@ -65,6 +65,22 @@ class Collection(models.Model):
 
 
 
+    @api.onchange('collection_type')
+    def _onchange_collection_type(self):
+        if self.collection_type == 'e_bank':
+            applications = self.env['banking.application'].search([
+                ('company_id', '=', self.env.user.company_id.id)
+            ])
+            return {
+                'domain': {
+                    'bank_application_id': [('id', 'in', applications.ids or [0])]
+                }
+            }
+        return {}
+
+
+
+
 
     @api.multi
     @api.onchange('bank_application_id')
@@ -88,6 +104,10 @@ class Collection(models.Model):
 
     @api.multi
     def request_to_cancel_receipt_e_15(self):
+        if self.receipt_67_id.state not in ['draft']:
+            raise ValidationError(_('لا يمكن ارسالطلب الغاء ايصال  بعد تاكيد 67 الا بعد ارجاعة من المشرف '))
+    
+    
         if any(rec.cancel_e15_state in ['send','accept'] for rec in self):
             raise ValidationError(_('تم ارسال طلب الغاء الايصال للمشرف مسبقا لايمكن اتمام العملية الا بعدموافقة او رفص المشراف علي الطلب ') )
         self.ensure_one()
@@ -554,6 +574,7 @@ class Collection(models.Model):
                 ref=record.name,
                 journal_id=record.journal_id.id,
                 collection_id=self.id,
+                employee_id = self.collector_id.id,
                 date=record.date)
 
             for line in record.line_ids:
@@ -595,12 +616,13 @@ class Collection(models.Model):
 
 
 
-    def create_move(self, ref, journal_id,collection_id, date=False):
+    def create_move(self, ref, journal_id,collection_id,employee_id, date=False):
         move = self.env['account.move']
         vals = {
         'ref': ref,
         'journal_id': journal_id,
         'collection_id' : collection_id,
+         'employee_id' : employee_id,
         'date' : date,
         'document_number' : self.cheque_number or self.ref,
         }
@@ -679,4 +701,6 @@ class AccountMove(models.Model):
     _inherit = 'account.move'
 
     collection_id = fields.Many2one('collection.collection')
+    employee_id = fields.Many2one('hr.employee',string="Collector ")
+
     document_number = fields.Char(default='-')

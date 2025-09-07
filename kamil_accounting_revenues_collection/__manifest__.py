@@ -16,6 +16,7 @@
 		'views/receipt_67_view.xml',
         'views/account_journal.xml',
 		'views/banking_application.xml',
+        		'views/account_move.xml',
         'wizard/cancel_receipt_e_15_wizard.xml',
         'wizard/returned_to_collector_wizard.xml',
         'reports/revenue_receipt_report.xml',

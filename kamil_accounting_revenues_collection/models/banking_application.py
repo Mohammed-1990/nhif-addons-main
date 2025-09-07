@@ -10,6 +10,9 @@ class BankingApplication(models.Model):
     
     name = fields.Char(string='Name' ,track_visibility='always', copy=False)
     account_number = fields.Char(string='Account  Number',track_visibility='always', copy=False)
+    company_id = fields.Many2one('res.company', default= lambda self:self.env.user.company_id.id)
+
+
 
 
 

@@ -7,6 +7,6 @@ class AccountJournal(models.Model):
     bank_type = fields.Selection([
 					('deposit_bank','Deposit Bank'),
 					('expenses_bank','Expenses Bank')
-					],'Bank Type' ,required=True ,track_visibility='always')
+					],'Bank Type'  ,track_visibility='always')
 	
 

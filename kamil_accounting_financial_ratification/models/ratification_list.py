@@ -134,11 +134,12 @@ class RatificationList(models.Model):
 	@api.multi
 	def do_confirm(self):
 		for line in self.ratification_line_ids:
-				line.write({'account_id':self.complex_id.payable_account_id.id,
-				'analytic_account_id':False,
-				'the_type':'accounts_payable'
+			if self.complex_id:
+					line.write({'account_id':self.complex_id.payable_account_id.id,
+					'analytic_account_id':False,
+					'the_type':'accounts_payable'
 
-				})
+					})
 
 		
 		self.create_uid = self.env.user.id 	

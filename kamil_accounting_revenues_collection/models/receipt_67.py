@@ -66,6 +66,8 @@ class Receipt67(models.Model):
 
 	@api.multi
 	def do_return_to_collector(self):
+	
+		
 		self.ensure_one()
 		return {
 			'name': _('Return Receipt E15'),
@@ -253,12 +255,13 @@ class Receipt67(models.Model):
 	def unlink(self):
 		for record in self:
 			if record.state not in ['draft']:
-				raise ValidationError(_('لايمكن حذف هذاء السجل  الا اذا كان في حالة مسودة'))
-			if any(rec.cancel_e15_state in ['accept'] for rec in self.collection_ids):
-				raise ValidationError(_(
-				"لايمكن حذف هذاء السجل بعد قبول طلب الغاء الايصال ") )
-		    
-			return super(Receipt67, self).unlink()
+				raise ValidationError(_('لا يمكن حذف هذا السجل إلا إذا كان في حالة مسودة'))
+			
+			if any(rec.cancel_e15_state in ['accept'] for rec in record.collection_ids):
+				raise ValidationError(_('لا يمكن حذف هذا السجل بعد قبول طلب إلغاء الإيصال'))
+
+		return super(Receipt67, self).unlink()
+
 
 
 
