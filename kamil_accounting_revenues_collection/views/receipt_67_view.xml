@@ -31,6 +31,8 @@
             
                         <button name="do_confirm" string="Confirm" type="object" states="draft,returned_to_collector"
                                 groups="kamil_accounting_base.collector_group" class="oe_highlight"/>
+                        <button name="do_to_draft" string="Set to Draft" type="object" states="returned_to_collector"
+                                groups="kamil_accounting_base.collector_group" class="oe_highlight"/>
 
                         <button name="do_permit" string="Permit" type="object" states="confirmed,returned_to_supervisor"
                                 groups="kamil_accounting_base.supervisor_group" class="oe_highlight"/>

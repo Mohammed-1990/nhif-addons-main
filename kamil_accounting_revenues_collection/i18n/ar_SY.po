@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-28 14:18+0000\n"
-"PO-Revision-Date: 2025-08-28 14:18+0000\n"
+"POT-Creation-Date: 2025-09-07 20:25+0000\n"
+"PO-Revision-Date: 2025-09-07 20:25+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,16 @@ msgstr "اورنيك 67"
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong class=\"text-right\">   اسم المتحصل</strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "<strong class=\"text-right\">   التاريخ</strong>"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
 msgid "<strong style=\"float:right\">  الموقع  :</strong>"
 msgstr ""
 
@@ -42,42 +52,32 @@ msgstr ""
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong>  المبلغ كتابة    </strong>"
+msgid "<strong> التعليق:</strong>"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong> اسم المتحصل   </strong>"
+msgid "<strong>نوع التحصيل:</strong> تحويل بنكي | رقم التحويلة:"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong> التاريخ   </strong>"
+msgid "<strong>نوع التحصيل:</strong> دفع إلكتروني | رقم المعاملة:"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong>طريقة التحصيل:</strong> تحويل بنكي | رقم التحويلة:"
+msgid "<strong>نوع التحصيل:</strong> شيك | رقم الشيك:"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong>طريقة التحصيل:</strong> دفع إلكتروني | رقم المعاملة:"
+msgid "<strong>نوع التحصيل:</strong> شيك مصرفي | رقم الشيك:"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong>طريقة التحصيل:</strong> شيك | رقم الشيك:"
-msgstr ""
-
-#. module: kamil_accounting_revenues_collection
-#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong>طريقة التحصيل:</strong> شيك مصرفي | رقم الشيك:"
-msgstr ""
-
-#. module: kamil_accounting_revenues_collection
-#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
-msgid "<strong>طريقة التحصيل:</strong> نقداً"
+msgid "<strong>نوع التحصيل:</strong> نقداً"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
@@ -143,7 +143,7 @@ msgid "Activity State"
 msgstr "حالة النشاط"
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:468
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:519
 #, python-format
 msgid "Add Amount More than Zero!"
 msgstr "إضف مبلغ اكبر من الصفر"
@@ -244,7 +244,7 @@ msgid "Budget Item"
 msgstr "البند"
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:296
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:344
 #, python-format
 msgid "Can not Duplicate This Record, Please create a new Record"
 msgstr "لا تستطيع نسخ هذا المستند, رجاءاً انشي مستند جديد"
@@ -269,7 +269,7 @@ msgid "Cancel Reason"
 msgstr "سبب الإلغاء"
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:92
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:115
 #, python-format
 msgid "Cancel Receipt E15"
 msgstr "الغاء الطلب "
@@ -337,7 +337,7 @@ msgstr "تم التحصيل"
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_cancel_receipt_e15_wizard__collection_id
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__collection_ids
 msgid "Collection"
-msgstr "التحصيل"
+msgstr "تجميع"
 
 #. module: kamil_accounting_revenues_collection
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__date
@@ -367,6 +367,11 @@ msgid "Collector"
 msgstr "المتحصل"
 
 #. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_account_move__employee_id
+msgid "Collector "
+msgstr "المتحصل"
+
+#. module: kamil_accounting_revenues_collection
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__collector_account_id
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_hr_employee__collector_account_id
 msgid "Collector Account"
@@ -384,6 +389,7 @@ msgid "Collectors"
 msgstr "المتحصلين"
 
 #. module: kamil_accounting_revenues_collection
+#: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_banking_application__company_id
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__company_id
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection_line__company_id
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_receipt_67__company_id
@@ -531,6 +537,7 @@ msgid "Document Number"
 msgstr "رقم المستند"
 
 #. module: kamil_accounting_revenues_collection
+#: selection:collection.collection,cancel_e15_state:0
 #: selection:collection.collection,state:0
 #: selection:collection.receipt_67,state:0
 msgid "Draft"
@@ -927,14 +934,14 @@ msgid "Planned"
 msgstr "المخطط"
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:465
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:516
 #, python-format
 msgid "Please Add Lines!"
 msgstr "رجاءاً ادخل التفاصيل"
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:483
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:501
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:534
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:552
 #, python-format
 msgid "Please Provide Debit Account for the Journal"
 msgstr "رجاءاً اضف حساب مدينين لليومية"
@@ -954,6 +961,7 @@ msgstr "المناقصة العامة"
 
 #. module: kamil_accounting_revenues_collection
 #: model:ir.model.fields,field_description:kamil_accounting_revenues_collection.field_collection_collection__qr_code
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
 msgid "QR Code"
 msgstr ""
 
@@ -1015,7 +1023,7 @@ msgid "Return Reason"
 msgstr "سبب الارجاع"
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/receipt_67.py:72
+#: code:addons/kamil_accounting_revenues_collection/models/receipt_67.py:73
 #, python-format
 msgid "Return Receipt E15"
 msgstr " ارجاع الايصال "
@@ -1116,6 +1124,7 @@ msgstr " ارسال الطلب"
 
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.collection_form_view
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.receipt_67_form_view
 msgid "Set to Draft"
 msgstr "تعيين كمسودة"
 
@@ -1195,7 +1204,7 @@ msgid "Website communication history"
 msgstr "سجل تواصل الموقع"
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:173
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:199
 #, python-format
 msgid "You Can not delete a Record, witch is not Draft or Canceled"
 msgstr ""
@@ -1257,7 +1266,7 @@ msgid "returned.collector.e15.wizard"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
-#: code:addons/kamil_accounting_revenues_collection/models/collection.py:462
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:513
 #, python-format
 msgid "the period dates are not correct!"
 msgstr "الرجاء مراجعة تواريخ الفترة"
@@ -1275,6 +1284,11 @@ msgstr ""
 #. module: kamil_accounting_revenues_collection
 #: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
 msgid "| التطبيق:"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: model_terms:ir.ui.view,arch_db:kamil_accounting_revenues_collection.revenue_receipt_template
+msgid "اجمالي المبلغ"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
@@ -1298,9 +1312,15 @@ msgid "انت تقوم بارسال طلب الالقاء الايصال هل ا
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:112
+#, python-format
+msgid "تم ارسال طلب الغاء الايصال للمشرف مسبقا لايمكن اتمام العملية الا بعدموافقة او رفص المشراف علي الطلب "
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
 #: code:addons/kamil_accounting_revenues_collection/models/receipt_67.py:49
 #, python-format
-msgid "تم طلب الاء الايصال لايمكن اجراء تاكيد 67 الا بعد موافقة المشرف او رفض الطلب "
+msgid "تم طلب الغاء الايصال لايمكن اجراء تاكيد 67 الا بعد موافقة المشرف او رفض الطلب "
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
@@ -1310,6 +1330,31 @@ msgid "رقم الايصال\n"
 msgstr ""
 
 #. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:262
+#, python-format
+msgid "لا يمكن إعادة الإيصال إلى حالة المسودة بعد  الموافقة علي طلب الغاء من قبل المشرف"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:108
+#, python-format
+msgid "لا يمكن ارسالطلب الغاء ايصال  بعد تاكيد 67 الا بعد ارجاعة من المشرف "
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/receipt_67.py:269
+#, python-format
+msgid "لا يمكن حذف هذا السجل إلا إذا كان في حالة مسودة"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/receipt_67.py:272
+#, python-format
+msgid "لا يمكن حذف هذا السجل بعد قبول طلب إلغاء الإيصال"
+msgstr ""
+
+#. module: kamil_accounting_revenues_collection
+#: code:addons/kamil_accounting_revenues_collection/models/collection.py:319
 #: code:addons/kamil_accounting_revenues_collection/models/receipt_67.py:52
 #, python-format
 msgid "يجب اختيار بند واحد على الأقل"

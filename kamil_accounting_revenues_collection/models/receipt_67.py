@@ -102,6 +102,17 @@ class Receipt67(models.Model):
 				collection.state = 'returned_to_supervisor'
 			record.state = 'returned_to_supervisor'
 
+	@api.multi
+	def do_to_draft(self):
+		for record in self:
+			for collection in record.collection_ids:
+				collection.state = 'draft'
+			record.state = 'draft'
+
+
+
+
+
 
 	@api.multi
 	def do_audit(self):
