@@ -83,9 +83,10 @@
 					name="create_ratification"
 					string="Create Ratification"
 					type="object"
-					attrs="{'invisible':['|',('state','!=','purchase'),('is_raft','!=', False)]}"
-					class="btn-primary"
-					/>
+					class="btn-primary"/>
+<!--                    					attrs="{'invisible':['|',('state','!=','purchase'),('is_raft','!=', False)]}"-->
+
+<!--					/>-->
 
 				
 			</xpath>

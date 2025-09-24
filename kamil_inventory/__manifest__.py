@@ -32,7 +32,8 @@
         'data/new_item_add_data.xml',
         'data/scrap_data.xml',
         'data/stock_picking_data.xml',
-        
+        'data/determine_need_consumption_sequence.xml',
+
         'views/res_config_views.xml',
         'views/need_request_views.xml',
         'views/stock_views.xml',
@@ -40,6 +41,7 @@
         'views/scrap_views.xml',
         'views/new_item_views.xml',
         'views/product_views.xml',
+        'views/receive_indirect.xml',
 
         'wizard/item_card_wizard_views.xml',
         # 'wizard/stock_immediate_transfer_views.xml',
@@ -49,7 +51,7 @@
         'report/item_card_views.xml',
 
         # 'report/item_card_views_test.xml',
-        # 'views/purchase_views.xml',
+        'views/purchase_views.xml',
 
         'wizard/stock_inventory_wiz.xml',
         'report/stock_inventory_template.xml',

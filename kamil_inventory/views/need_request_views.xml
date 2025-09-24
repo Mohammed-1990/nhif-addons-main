@@ -1,196 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
-  <data>
+    <data>
 
-    <!--Purchase Request -->
-    <record id="view_purchase_request_form_inherit" model="ir.ui.view">
-      <field name="name">purchase.requesr.from.inherit</field>
-      <field name="model">purchase.request</field>
-      <field name="inherit_id" ref="kamil_purchase_request.view_purchase_request_form"/>
-      <field name="arch" type="xml">
-        <field name="ordering_date" position="after">
-          <field name="need_request_id" readonly="1" attrs="{'invisible':[('need_request_id','=',False)]}"/>
-        </field>
-      </field>
-    </record>
+        <!--Purchase Request -->
+        <record id="view_purchase_request_form_inherit" model="ir.ui.view">
+            <field name="name">purchase.requesr.from.inherit</field>
+            <field name="model">purchase.request</field>
+            <field name="inherit_id" ref="kamil_purchase_request.view_purchase_request_form"/>
+            <field name="arch" type="xml">
+                <field name="ordering_date" position="after">
+                    <field name="need_request_id" readonly="1" attrs="{'invisible':[('need_request_id','=',False)]}"/>
+                </field>
+            </field>
+        </record>
 
 
         <!-- View for Need Requisition Form-->
 
-    <record id="view_need_requisition_form" model="ir.ui.view">
-        <field name="name">view.need.requisition.form</field>
-        <field name="model">need.requisition</field>
-        <field name="arch" type="xml">
-          <form string="Need Requisition">
-            <header>
-              <button name="action_draft" type='object' string='Approve' class="oe_highlight" states='draft' />
+        <record id="view_need_requisition_form" model="ir.ui.view">
+            <field name="name">view.need.requisition.form</field>
+            <field name="model">need.requisition</field>
+            <field name="arch" type="xml">
+                <form string="Need Requisition">
+                    <header>
+                        <button name="action_draft" type='object' string='Approve' class="oe_highlight" states='draft'/>
 
-              <button name="action_dept_manger" type='object' string='Approve' class="oe_highlight" states='dept_manager' groups="kamil_inventory.group_ive_department_manager"/>
+                        <button name="action_dept_manger" type='object' string='Approve' class="oe_highlight"
+                                states='dept_manager' groups="kamil_inventory.group_ive_department_manager"/>
 
-              <button name="action_finance_admin_manager" type='object' string='Approve' class="oe_highlight" states='finance_admin_manager' groups="kamil_inventory.group_finance_admin_manager"/>
+                        <button name="action_finance_admin_manager" type='object' string='Approve' class="oe_highlight"
+                                states='finance_admin_manager' groups="kamil_inventory.group_finance_admin_manager"/>
 
-              <button name="action_admin_manger" type='object' string='Approve' class="oe_highlight" states='admin_manger' groups="kamil_inventory.group_admin_manger"/>
+                        <button name="action_admin_manger" type='object' string='Approve' class="oe_highlight"
+                                states='admin_manger' groups="kamil_inventory.group_admin_manger"/>
 
-              <button name="action_inventory_manger" type='object' string='Approve' class="oe_highlight" states='inventory_manager' groups="kamil_inventory.group_inventory_responsible"/>
+                        <button name="action_inventory_manger" type='object' string='Approve' class="oe_highlight"
+                                states='inventory_manager' groups="kamil_inventory.group_inventory_responsible"/>
 
-              <button name="action_process" type='object' string='Process' class="oe_highlight"  states='inventory_employee' groups="kamil_inventory.group_inventory_employee"/>
+                        <button name="action_process" type='object' string='Process' class="oe_highlight"
+                                states='inventory_employee' groups="kamil_inventory.group_inventory_employee"/>
 
-              <button name="action_cancel" type='object' string='Cancel' states='draft,dept_manager,finance_admin_manager,admin_manger,inventory_manager' groups="stock.group_stock_user,stock.group_stock_manager,kamil_inventory.group_ive_department_manager,kamil_inventory.group_finance_admin_manager,kamil_inventory.group_admin_manger"/>
+                        <button name="action_cancel" type='object' string='Cancel'
+                                states='draft,dept_manager,finance_admin_manager,admin_manger,inventory_manager'
+                                groups="stock.group_stock_user,stock.group_stock_manager,kamil_inventory.group_ive_department_manager,kamil_inventory.group_finance_admin_manager,kamil_inventory.group_admin_manger"/>
 
-              <button name="action_reset_draft" type="object" string="reset to draft" states="cancel"/>
+                        <button name="action_reset_draft" type="object" string="reset to draft" states="cancel"/>
 
-              <field name="state" widget="statusbar" statusbar_visible="draft,dept_manager,finance_admin_manager,admin_manger,inventory_manager,inventory_employee,available,partially_available,purchase,done,cancel"/>              
-            </header>
-            <sheet>
-                 <div class="oe_button_box" name="button_box">
-                  <button class="oe_stat_button" name="action_view_picking" icon="fa-building-o" type="object" string="Issuing Order" attrs="{'invisible':['|',('state', 'not in', ['available','partially_available','purchase','done']),('show_issuing_order','=',False)]}">
-                  </button>
-                  <button class="oe_stat_button" name="action_view_purchase" icon="fa-dollar" type="object" attrs="{'invisible':['|',('state', 'not in', ['partially_available','purchase','done']),('show_purchase_request','=',False)]}" string="Purchase Rquest">
-                </button>
-                 </div>
-              <label for="request" string="Request ID" class="oe_edit_only"/>
-                <h1>
-                  <field name="request" readonly="1"/>
-                </h1>
-              <field name="show_issuing_order" invisible="1"/>
-              <field name="show_purchase_request" invisible="1"/>
-              <group col="2">
-                <group col="2">
-                  <field name="responsible_id" style="width:40%%" readonly="1"/>
-                  <field name="department_id" style="width:40%%" readonly="1"/>
-                  <field name="company_id" readonly="1"/>
-                </group>
-                <group col="2">
-                  <field name="request_date" attrs="{'readonly':[('state','not in','draft')]}"/>
-                  <field name="location_id" options="{'no_create':'1','no_open':'1'}" attrs="{'invisible':[('state','not in',['inventory_manager','inventory_employee','purchase','available','partially_available'])],'required':[('state','=','inventory_manager')],'readonly':[('state','not in',['inventory_manager','inventory_employee'])]}" />
-                  <field name="form_46"  attrs="{'readonly':[('state','!=','inventory_manager')],'invisible':[('state','in',('draft','dept_manager','finance_admin_manager','admin_manger'))],'required':[('state','=','inventory_manager')]}"/>
-                  <field name="license_no"  attrs="{'readonly':[('state','!=','inventory_manager')],'invisible':[('state','in',('draft','dept_manager','finance_admin_manager','admin_manger'))],'required':[('state','=','inventory_manager')]}"/>
-                </group>
-              </group>
-              <group>
-                <field name="current_user_logged" invisible="1"/>
-              </group>
-              <group>
-                <notebook>
-                  <page name='pg_item_lines' string='Request Lines'>
-                    
-                    <field name="line_ids" attrs="{'readonly':[('state','in',('inventory_manager','inventory_employee','available','partially_available','purchase','done','cancel'))]}" >
-                      <tree editable="bottom" >
-                        <field name="requests" invisible="1"/>
-                        <field name="item_id" string="Item" options="{'no_create':True,'no_open':'1'}" />
-                        <field name="uom" string="UOM"/>
-                        <field name="qty" string="Quantity" attrs="{'readonly':[('parent.state','not in',['draft','dept_manager','finance_admin_manager','admin_manger'])]}"/>
-                        <field name="date" string="Scheduled Date" attrs="{'readonly':[('parent.state','not in',['draft','dept_manager','finance_admin_manager','admin_manger'])]}"/>
-                        <field name="requests" invisible="1"/>
-                      </tree>
-                    </field>
-                  </page>
-                </notebook>
-              </group>
-            </sheet>
-            <div class="oe_chatter">
-                <field name="message_follower_ids" widget="mail_followers"/>
-                <field name="activity_ids" widget="mail_activity"/>
-                <field name="message_ids" widget="mail_thread"/>
-              </div>
-          </form>
-        </field>
-    </record>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,dept_manager,finance_admin_manager,admin_manger,inventory_manager,inventory_employee,available,partially_available,purchase,done,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="action_view_picking" icon="fa-building-o" type="object"
+                                    string="Issuing Order"
+                                    attrs="{'invisible':['|',('state', 'not in', ['available','partially_available','purchase','done']),('show_issuing_order','=',False)]}">
+                            </button>
+                            <button class="oe_stat_button" name="action_view_purchase" icon="fa-dollar" type="object"
+                                    attrs="{'invisible':['|',('state', 'not in', ['partially_available','purchase','done']),('show_purchase_request','=',False)]}"
+                                    string="Purchase Rquest">
+                            </button>
+                        </div>
+                        <label for="request" string="Request ID" class="oe_edit_only"/>
+                        <h1>
+                            <field name="request" readonly="1"/>
+                        </h1>
+                        <field name="show_issuing_order" invisible="1"/>
+                        <field name="show_purchase_request" invisible="1"/>
+                        <group col="2">
+                            <group col="2">
+                                <field name="responsible_id" style="width:40%%" readonly="1"/>
+                                <field name="department_id" style="width:40%%" readonly="1"/>
+                                <field name="company_id" readonly="1"/>
+                            </group>
+                            <group col="2">
+                                <field name="request_date" attrs="{'readonly':[('state','not in','draft')]}"/>
+                                <field name="warehouse_id" attrs="{'readonly':[('state','not in','draft')]}"
+                                       options="{'no_create':'1','no_open':'1','no_edit':'1'}" required="True"/>
+                                <field name="warehouse_type" attrs="{'readonly':[('state','not in','draft')]}"/>
+                                        <field name="warehouse_root_location_id" invisible="1"/>
+                                <field name="location_id" options="{'no_create':'1','no_open':'1'}"
+                                       domain="[('id', 'child_of', warehouse_root_location_id)]"
+                                       attrs="{'invisible':[('state','not in',['inventory_manager','inventory_employee','purchase','available','partially_available'])],'required':[('state','=','inventory_manager')],'readonly':[('state','not in',['inventory_manager','inventory_employee'])]}"/>
+                                <field name="form_46"
+                                       attrs="{'readonly':[('state','!=','inventory_manager')],'invisible':[('state','in',('draft','dept_manager','finance_admin_manager','admin_manger'))],'required':[('state','=','inventory_manager')]}"/>
+                                <field name="license_no"
+                                       attrs="{'readonly':[('state','!=','inventory_manager')],'invisible':[('state','in',('draft','dept_manager','finance_admin_manager','admin_manger'))],'required':[('state','=','inventory_manager')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="current_user_logged" invisible="1"/>
+                        </group>
+                        <group>
+                            <notebook>
+                                <page name='pg_item_lines' string='Request Lines'>
+
+                                    <field name="line_ids"
+                                           attrs="{'readonly':[('state','in',('inventory_manager','inventory_employee','available','partially_available','purchase','done','cancel'))]}">
+                                        <tree editable="bottom">
+                                            <field name="requests" invisible="1"/>
+                                            <field name="item_id" string="Item"
+                                                   options="{'no_create':True,'no_open':'1'}"/>
+                                            <field name="uom" string="UOM"/>
+                                            <field name="qty" string="Quantity"
+                                                   attrs="{'readonly':[('parent.state','not in',['draft','dept_manager','finance_admin_manager','admin_manger'])]}"/>
+                                            <field name="date" string="Scheduled Date"
+                                                   attrs="{'readonly':[('parent.state','not in',['draft','dept_manager','finance_admin_manager','admin_manger'])]}"/>
+                                            <field name="requests" invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
 
 
         <!-- View for Need requisition Tree-->
 
 
-    <record id="view_need_requisition_tree" model="ir.ui.view">
-      <field name="name">view.need.requisition.tree</field>
-      <field name="model">need.requisition</field>
-      <field name="arch" type="xml">
-          <tree 
-            string="Need Requisition"  
-            decoration-info="state == 'draft'" 
-            decoration-muted="state == 'cancel'" 
-            decoration-warning="state == 'partially_available'" decoration-success="state == 'available'"
-            decoration-primary="state == 'purchase'"
-            decoration-danger="state not in ['draft','done','cancel','available','purchase','partially_available'] and request_date &lt;current_date" 
-            >
-              <field name="request"/>
-              <field name="responsible_id"/>
-              <field name="department_id"/>
-              <field name="request_date"/>
-              <field name="state"/>
-              <!-- <field name="current_user_logged"/> -->
-          </tree>
-      </field>
-    </record>
+        <record id="view_need_requisition_tree" model="ir.ui.view">
+            <field name="name">view.need.requisition.tree</field>
+            <field name="model">need.requisition</field>
+            <field name="arch" type="xml">
+                <tree
+                        string="Need Requisition"
+                        decoration-info="state == 'draft'"
+                        decoration-muted="state == 'cancel'"
+                        decoration-warning="state == 'partially_available'" decoration-success="state == 'available'"
+                        decoration-primary="state == 'purchase'"
+                        decoration-danger="state not in ['draft','done','cancel','available','purchase','partially_available'] and request_date &lt;current_date"
+                >
+                    <field name="request"/>
+                    <field name="responsible_id"/>
+                    <field name="department_id"/>
+                    <field name="request_date"/>
+                    <field name="state"/>
+                    <!-- <field name="current_user_logged"/> -->
+                </tree>
+            </field>
+        </record>
 
 
-    <!-- Search-->
-    <record id="view_need_requisition_search" model="ir.ui.view">
-      <field name="name">view.need.requisition.search</field>
-      <field name="model">need.requisition</field>
-      <field name="arch" type="xml">
-        <search>
-        <field name="request"/>
-        <field name="responsible_id"/>
-        <field name="department_id"/>
-          <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
-          <filter name="purchase" string="Purchase" domain="[('state','=','purchase')]"/>
-          <filter name="available" string="Available" domain="[('state','=','available')]"/>
-          <filter name="partially_available" string="Partially Available" domain="[('state','=','partially_available')]"/>
-          <filter name="done" string="Done" domain="[('state','=','done')]"/>
-          <filter name="cancel" string="Cancel" domain="[('state','=','cancel')]"/>
-          <group expand="0" string="Group By">
-            <filter name="responsible" string="Responsible" context="{'group_by':'responsible_id'}"/>
-            <filter name="department" string="Department" context="{'group_by':'department_id'}"/>
-            <filter name="status" string="Status" context="{'group_by':'state'}"/>
-            <separator/>
-            <filter name="date" string="Date" domain="[]" context="{'group_by':'request_date:month'}"/>
-          </group>
-        </search>
-      </field>
-    </record>
+        <!-- Search-->
+        <record id="view_need_requisition_search" model="ir.ui.view">
+            <field name="name">view.need.requisition.search</field>
+            <field name="model">need.requisition</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="request"/>
+                    <field name="responsible_id"/>
+                    <field name="department_id"/>
+                    <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+                    <filter name="purchase" string="Purchase" domain="[('state','=','purchase')]"/>
+                    <filter name="available" string="Available" domain="[('state','=','available')]"/>
+                    <filter name="partially_available" string="Partially Available"
+                            domain="[('state','=','partially_available')]"/>
+                    <filter name="done" string="Done" domain="[('state','=','done')]"/>
+                    <filter name="cancel" string="Cancel" domain="[('state','=','cancel')]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="responsible" string="Responsible" context="{'group_by':'responsible_id'}"/>
+                        <filter name="department" string="Department" context="{'group_by':'department_id'}"/>
+                        <filter name="status" string="Status" context="{'group_by':'state'}"/>
+                        <separator/>
+                        <filter name="date" string="Date" domain="[]" context="{'group_by':'request_date:month'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
 
 
-    
-    <!-- Action for Need Requisition-->
-    <record id="action_need_requisition" model="ir.actions.act_window">
-      <field name="name">Need Requisition</field>
-      <field name="type">ir.actions.act_window</field>
-      <field name="res_model">need.requisition</field>
-      <field name="view_type">form</field>
-      <field name="view_id" eval="False"/>
-      <field name="help" type="html">
-        <p class="oe_view_nocontent_create">
-          Click to define a new Need Requisition.
-        </p>
-      </field>
-    </record>
+        <!-- Action for Need Requisition-->
+        <record id="action_need_requisition" model="ir.actions.act_window">
+            <field name="name">Need Requisition</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">need.requisition</field>
+            <field name="view_type">form</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new Need Requisition.
+                </p>
+            </field>
+        </record>
 
-    <!--Action -->
-    <record id="action_need_requisition_view1" model="ir.actions.act_window.view">
-      <field eval="1" name="sequence"/>
-      <field name="view_mode">tree</field>
-      <field name="view_id" ref="view_need_requisition_tree"/>
-      <field name="search_view_id" ref="view_need_requisition_search"/>
-      <field name="act_window_id" ref="action_need_requisition"/>
-    </record>
-
+        <!--Action -->
+        <record id="action_need_requisition_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_need_requisition_tree"/>
+            <field name="search_view_id" ref="view_need_requisition_search"/>
+            <field name="act_window_id" ref="action_need_requisition"/>
+        </record>
 
 
-    <record id="action_need_requisition_view2" model="ir.actions.act_window.view">
-      <field eval="2" name="sequence"/>
-      <field name="view_mode">form</field>
-      <field name="view_id" ref="view_need_requisition_form"/>
-      <field name="act_window_id" ref="action_need_requisition"/>
-    </record>
+        <record id="action_need_requisition_view2" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_need_requisition_form"/>
+            <field name="act_window_id" ref="action_need_requisition"/>
+        </record>
 
 
         <!-- Menus for Need Requisition-->
 
-    <menuitem id="sub_menu_need_requisition" parent="stock.menu_stock_warehouse_mgmt" name="Need Requests" sequence="0" action="action_need_requisition"/>
+        <menuitem id="sub_menu_need_requisition" parent="stock.menu_stock_warehouse_mgmt" name="Need Requests"
+                  sequence="0" action="action_need_requisition"/>
 
-  </data>
+    </data>
 </odoo>
-
 

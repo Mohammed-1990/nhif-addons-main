@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-	<record id="view_product_category_form_inherit" model="ir.ui.view">
-      <field name="name">view.product.category.form.inherit</field>
-      <field name="model">product.category</field>
-      <field name="inherit_id" ref="product.product_category_form_view"/>
-      <field name="arch" type="xml">
-      	<field name="parent_id" position="before">
-      		<field name="number"/>
-      	</field>
-      </field>
-  </record>
+    <record id="view_product_category_form_inherit" model="ir.ui.view">
+        <field name="name">view.product.category.form.inherit</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position="before">
+                <field name="parent_id"/>
+                <field name="warehouse_type"/>
+            </field>
+        </field>
+    </record>
 
+    <!--    -->
+    <record id="product_template_only_form_view_inherit" model="ir.ui.view">
+        <field name="name">product_template_only_form_view.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <field name="categ_id" position="after">
+                <field name="short_code"/>
+                <field name="code" readonly="True" force_save="1"/>
+                <field name="long_name" invisible="True" force_save="1"/>
+            </field>
+            <field name="taxes_id" position="after">
+                <field name="profit_margin"/>
+                <field name="new_price"/>
+            </field>
+
+            <field name="uom_po_id" position="after">
+                <field name="min_qty"/>
+                <field name="min_qty_test" invisible="True"/>
+            </field>
+
+        </field>
+    </record>
 
 </odoo>

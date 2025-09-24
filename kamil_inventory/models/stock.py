@@ -107,31 +107,31 @@ class stockPicking(models.Model):
 				raise UserError( _('You can not confirm request because all initial quantities is 0.0 !!'))
 			else:
 				self.custome_state = 'quality'
-	
-			
 
-		
+
+
+
 	@api.multi
 	def do_quality(self):
 		for record in self:
 			if not record.qc_committee_id:
 				raise ValidationError(_('No Quality check committee is found in the system. This operation can not be done.\n Please contact system administrator.'))
-			
+
 			precision_digits = self.env['decimal.precision'].precision_get('Product Unit of Measure')
 			no_quality_quantities = all(float_is_zero(move_line.qc_qty,  precision_digits=precision_digits) for move_line in record.move_ids_without_package)
 			if no_quality_quantities:
 				raise UserError( _('You can not confirm request because all quality quantities is 0.0 !!'))
 			else:
 				self.custome_state = 'final'
-		
-		
+
+
 
 	def _prepare_move(self):
 		for line in self.move_ids_without_package:
 			category_account_id = line.product_id.categ_id.property_account_expense_categ_id.id
 			if not category_account_id:
 				raise UserError(_("The Product category is not expenses account please insert !! "))
-			 
+
 			stock_account_id = self.location_id.account_id.id
 			if not stock_account_id:
 				raise UserError(_("The location is not account please insert !! "))
@@ -142,31 +142,31 @@ class stockPicking(models.Model):
 
 			date = fields.date.today()
 			journal_id = self.env['account.journal'].search([('type','=','general'),('code','=','stock')], limit=1)
-			company_currency = self.company_id.currency_id.id			
+			company_currency = self.company_id.currency_id.id
 			amount = line.product_id.standard_price * line.quantity_done
 			if not journal_id:
 				raise UserError(_('You have not stock journal !!!'))
 
 			move_id = self.create_move(
-				ref=self.product_id.name, 
+				ref=self.product_id.name,
 				journal_id=journal_id.id,
 				picking_id=self.id,
 				date=date)
 
 			credit_line = self.create_move_line(
 				name=self.product_id.name,
-				move_id=move_id.id, 
+				move_id=move_id.id,
 				partner_id=self.partner_id.id,
-				account_id=stock_account_id, 
-				credit=amount, 
+				account_id=stock_account_id,
+				credit=amount,
 				amount_currency=amount *-1,
 				currency_id=company_currency,
-				analytic_account_id=analytic_account_id, 
+				analytic_account_id=analytic_account_id,
 				analytic_tag_ids = False)
 
 			debit_line = self.create_move_line(
 				name=self.product_id.name,
-				move_id=move_id.id, 
+				move_id=move_id.id,
 				partner_id=self.partner_id.id,
 				account_id=category_account_id,
 				debit=amount,
@@ -198,7 +198,7 @@ class stockPicking(models.Model):
 			'date_maturity' : date,
 			'amount_currency' : amount_currency,
 			'currency_id' : currency_id,
-			'analytic_account_id' : analytic_account_id, 
+			'analytic_account_id' : analytic_account_id,
 			'analytic_tag_ids': analytic_tag_ids,
 		}
 		return move_line.with_context(check_move_validity=False).create(vals)
@@ -222,7 +222,7 @@ class stockPicking(models.Model):
 				for line in rec.line_ids:
 					product_quant = self.env['stock.quant'].search([('company_id','=',self.company_id.id),('location_id','=',location_id.id),('product_id','=',line.item_id.id)])
 					quant_locs = self.env['stock.quant'].search([('product_id', '=', line.item_id.id),('location_id','=',self.location_id.id)])
-					
+
 					if line.qty > quant_locs.quantity:
 						po_lines.append((0,0,{
 								'product_id':line.item_id.id,
@@ -234,6 +234,8 @@ class stockPicking(models.Model):
 
 	@api.multi
 	def button_validate(self):
+
+
 		res = super(stockPicking, self).button_validate()
 
 		for record in self:
@@ -242,12 +244,12 @@ class stockPicking(models.Model):
 			if no_receipt_quantities:
 				raise UserError( _('You can not confirm request because all  reserved quantities is 0.0 !!'))
 
-		
+
 		if self.picking_type_id.code == 'incoming':
 			self.custome_state = 'done'
 			self.state = 'done'
-	
-		
+
+
 		elif self.picking_type_id.code == 'internal' and self.internal_transfer_type == 'branch':
 			warehouse_id = self.env['stock.warehouse'].sudo().search([('company_id','=',self.branch_id.id)],limit=1)
 			location_id = self.env['stock.location'].sudo().search([('company_id','=',self.branch_id.id),('usage','in',['transit']),('is_for_internal_transfer','=',True)],limit=1)
@@ -313,7 +315,7 @@ class stockPicking(models.Model):
 			if all(pick.state == 'done' for pick in requests):
 				self.need_request_id.state = 'done'
 		return res
-	
+
 
 	@api.onchange('internal_transfer_type')
 	def _domain_internal_transfer_type(self):
@@ -347,9 +349,11 @@ class stockLocation(models.Model):
 
 	usage = fields.Selection(selection_add=[('employees','Employees')])
 	is_for_internal_transfer = fields.Boolean(defalut=False)
-	
+	Warehouse_location_type = fields.Selection([('tasks','Tasks Warehouse'),('laboratories','Laboratories Warehouse'),('medical_supplies','Medical Supplies Warehouse'),('medicine','Medicine Warehouse')],default='tasks')
 
-	
+
+
+
 class StockQuant(models.Model):
 	_inherit = 'stock.quant'
 
@@ -358,7 +362,7 @@ class StockQuant(models.Model):
 		ondelete='restrict', readonly=True, required=True, index=True)
 	categ_id = fields.Many2one('product.category', string="Category")
 
-	
+
 	def create(self, vals):
 		product = self.env['product.product'].search([('id','=',vals['product_id'])],limit=1)
 		vals['categ_id'] = product.categ_id.id

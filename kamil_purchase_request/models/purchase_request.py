@@ -56,6 +56,8 @@ class PurchaseRequest(models.Model):
 	company_id = fields.Many2one('res.company', string='Branch', required=True, default=lambda self: self.env.user.company_id.id)
 	ref = fields.Char('Refrance')
 	is_transfer = fields.Boolean(default=False, readonly=True)
+	is_need_request = fields.Boolean(string="Need Request")
+
 
 
 

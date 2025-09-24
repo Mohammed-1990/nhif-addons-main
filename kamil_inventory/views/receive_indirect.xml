@@ -1,0 +1,142 @@
+<odoo>
+    <data>
+
+        <record id="indirect_receive_form" model="ir.ui.view">
+            <field name="name">indirect / direct receive form</field>
+            <field name="model">indirect.receive</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_draft" type='object' string='Submit' class="oe_highlight" states='draft'/>
+                        <button name="action_finance_admin_manager" type='object' string='Submit' class="oe_highlight"
+                                states='finance_admin_manager' groups="kamil_inventory.group_finance_admin_manager"/>
+                        <button name="action_support_services" states='support_services' type='object'
+                                string='action_support_services' class="oe_highlight"/>
+                        <button name="action_medical_services" type='object' states='medical_services'
+                                string='action_medical_services' class="oe_highlight"/>
+                        <button name="action_director_of_health_services_department"
+                                states='director_of_health_services_department' type='object'
+                                string='action_director_of_health_services_department' class="oe_highlight"/>
+
+                        <button name="action_inventory_manager" type='object' string='Submit' class="oe_highlight"
+                                states='inventory_manager' groups="kamil_inventory.group_inventory_responsible"/>
+                        <button name="action_inventory_employee" type='object' string='Submit' class="oe_highlight"
+                                states='inventory_employee' groups="kamil_inventory.group_inventory_employee"/>
+                        <button name="action_inventory_done" type='object' string='in_progress' class="oe_highlight"
+                                states='in_progress' groups="kamil_inventory.group_inventory_employee"/>
+
+                        <button name="action_return" string="Return" type="object"
+                                attrs="{'invisible':[('state','in',['draft', 'in_progress','done','cancel'])]}"/>
+                        <button name="action_return_2" string="Return2" type="object"
+                        />
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,finance_admin_manager,inventory_manager,inventory_employee,in_progress,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="action_view_picking" icon="fa-building-o" type="object"
+                                    string="Issuing Order"
+                                    attrs="{'invisible':['|',('state', 'not in', ['in_progress','done']),('show_issuing_order','=',False)]}">
+                            </button>
+                        </div>
+                        <h1>
+                            <field name="request" readonly="1"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="date" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                                <field name="receive_for" options="{'no_create':True,'no_edit':True,'no_open':True}"
+                                       attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                            </group>
+                            <group>
+                                <field name="responsible_id" readonly="1"
+                                       options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                            </group>
+
+                        </group>
+                        <group>
+                            <group>
+                                <field name="warehouse_id" attrs="{'readonly':[('state','not in',['draft'])]}"
+                                       options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                                <field name="location_id" domain="[('id', 'child_of', warehouse_root_location_id)]"
+                                       attrs="{'readonly':[('state','not in',['draft'])]}"
+                                       options="{'no_create':True,'no_edit':True,'no_open':True}"/>
+                                <field name="warehouse_type" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                                <field name="show_issuing_order" invisible="1"/>
+                                <field name="warehouse_root_location_id" invisible="1"/>
+                                <field name="company_id"/>
+
+                            </group>
+                            <group>
+                                <field name="operation_type" widget="radio"
+                                       attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                                <field name="document"
+                                       attrs="{'readonly':[('state','not in',['draft'])],'required':[('state','in',['draft'])]}"/>
+                                <field name="forty_six_seen"
+                                       attrs="{'invisible':[('state','not in',['inventory_manager','inventory_employee'])],'required':[('state','in',['inventory_manager'])]}"/>
+                                <field name="serial_number"
+                                       attrs="{'invisible':[('state','not in',['inventory_manager','inventory_employee'])],'required':[('state','in',['inventory_manager'])]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page>
+                                <field name="line_ids" attrs="{'readonly':[('state','not in',['draft'])]}">
+                                    <tree editable="bottom">
+                                        <field name="requests" invisible="1"/>
+                                        <field name="item_id" string="Item" options="{'no_create':True,'no_open':'1'}"/>
+                                        <field name="item_code"/>
+                                        <field name="category_id"
+                                               options="{'no_create':True,'no_open':'1', 'no_edit':'1'}"/>
+                                        <field name="uom" string="UOM"/>
+                                        <field name="qty_available" readonly="1" force_save="1"/>
+                                        <field name="qty" string="Quantity"/>
+                                        <field name="unit_price" string="Unit Price"/>
+                                        <field name="total_price" string="Total"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group class="oe_subtotal_footer oe_right">
+                            <div class="oe_subtotal_footer_separator oe_inline">
+                                <label for="amount_total"/>
+                            </div>
+                            <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                   widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                        <div class="oe_clear"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="indirect_receive_view_tree" model="ir.ui.view">
+            <field name="name">indirect_receive_view_tree</field>
+            <field name="model">indirect.receive</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date"/>
+                    <field name="request"/>
+                    <field name="responsible_id"/>
+                    <field name="receive_for"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="indirect_receive_action" model="ir.actions.act_window">
+            <field name="name">indirect /direct exchange action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">indirect.receive</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_indirect_receive" name="Direct and Indirect Exchange"
+                  parent="stock.menu_stock_warehouse_mgmt"
+                  action="indirect_receive_action" groups="kamil_inventory.group_indirect_receive" sequence="8"/>
+
+    </data>
+</odoo>

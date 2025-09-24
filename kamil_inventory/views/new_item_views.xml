@@ -6,12 +6,18 @@
         <field name="name">view.new.product.form</field>
         <field name="model">new.product</field>
         <field name="arch" type="xml">
-          <form string="New Item Request">
+          <form string="Add/Update Product Request">
             <header>
               <button name="submit_to_approval" type="object" string="Submit" states="draft" class="btn-primary"/>
-              <button name="action_confirm" type="object" string="Confirm" states="approval" class="btn-primary"/>
-              <button name="action_cancel" type="object" string="Cancel" states="draft,approval" />
-              <field name="state" widget="statusbar" statusbar_visible="draft,approval"/>
+              <button name="action_confirm" type="object" string="Confirm" states="inventory_resp_approval" class="btn-primary" />
+
+              <button name="warehouse_manager_confirm" type="object" string="Confirm" states="warehouse_manager" class="btn-primary" groups="kamil_inventory.group_inventory_responsible_hq"/>
+
+              <button name="erp_system_administrator_confirm" type="object" string="Confirm" states="erp_system_administrator" class="btn-primary" groups="kamil_inventory.group_inventory_erp_admin"/>
+
+              <button name="action_cancel" type="object" string="Cancel" states="draft,inventory_resp_approval,warehouse_manager" />
+
+              <field name="state" widget="statusbar" statusbar_visible="draft,inventory_resp_approval,warehouse_manager,erp_system_administrator,done"/>
             </header>
             <sheet>
               <label for="new_request" string="Request ID" class="oe_edit_only"/>
@@ -19,28 +25,43 @@
                   <field name="new_request" readonly="1"/>
                 </h1>
               <group colspan="4">
-                <group>
-                  <field name="responsible" style="width:40%%" readonly="1"/>
-                  <field name="date" style="width:40%%" readonly="1"/>
-                  <field name="company_id" style="width:40%%" readonly="1"/>
+                  <field name="responsible" style="width:40%%" readonly="1" options="{'no_create':True, 'no_edit':True, 'no_open':True}"/>
+                  <field name="date" style="width:40%%" readonly="1" options="{'no_create':True, 'no_edit':True, 'no_open':True}"/>
+                  <field name="company_id" style="width:40%%" readonly="1" options="{'no_create':True, 'no_edit':True, 'no_open':True}"/>
                   <field name="is_manager" invisible="1"/>
-                </group>
               </group>
               <group>
+                  <field name="type" widget="radio" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                </group>
+              <group>
                 <notebook>
-                  <page name='pg_new_item_lines' string='New Item Lines' >
+                  <page name='pg_new_item_lines' string='Products/Servies' >
                     <field name="item_lines" attrs="{'readonly':[('state','in',['done','cancel'])]}">
                       <tree editable="bottom" >
-                        <field name="product_name" required="1" string="Item Name" attrs="{'readonly': [('state', '=','created')]}"/>
-                        <field name="types" string="Type" required="1" attrs="{'readonly': [('state', '=','created')]}"/>
-                        <field name="category_id" required="1" attrs="{'readonly': [('state', '=','created')]}" />
-                        <field name="uom" string="UOM" required="1"/>
+                        <field name="product_name" attrs="{'column_invisible': [('parent.type', '=','update')], 'required':[('parent.type','=','add')]}"/>
+
+                        <field name="product_id" string="Product" attrs="{'column_invisible': [('parent.type', '=','add')], 'required':[('parent.type','=','update')]}" options="{'no_create':True, 'no_edit':True, 'no_open':True}"/>
+                        <!-- <field name="short_code" attrs="{'column_invisible': [('parent.type', '=','update')], 'required':[('parent.type','=','add')]}" /> -->
+                        <field name="product_type" string="Type" attrs="{'readonly':[('parent.type','=','update')], 'required':[('parent.type','=','add')]}" force_save="1"/>
+                        <field name="category_id" required="1" attrs="{'readonly':[('parent.type','=','update')], 'required':[('parent.type','=','add')]}" force_save="1"/>
+                        <field name="uom" string="UOM" attrs="{'readonly':[('parent.type','=','update')], 'required':[('parent.type','=','add')]}" force_save="1"/>
+                        <field name="note" attrs="{'required':[('parent.state','=','draft'),('parent.type','=','update')]}"/>
+
                         <field name="created_prod" invisible="1"/>
                         <field name="new_product" invisible="1"/>
                         <field name="is_manager" invisible="1"/>
-                        <field name="state" invisible="1"/>
-                        <button name="create_product" string="Create" type="object" attrs="{'invisible': ['|',('state', '=','created'),('is_manager', '=', False)]}" groups="kamil_inventory.group_inventory_responsible_hq"/>
-                        <button name="open_product" string="Open" type="object" attrs="{'invisible': [('state', '=','draft')]}" groups="kamil_inventory.group_inventory_responsible_hq"/>
+                        <field name="state" readonly="1"/>
+                        <button name="create_product" string="Create" type="object" class="btn-success" attrs="{'invisible': ['|','|',('parent.state', 'not in',['erp_system_administrator']),('is_manager', '=', False),('parent.type', '=','update'),('state', 'in',['created','reject','no_process','update'])]}" groups="kamil_inventory.group_inventory_responsible_hq"/>
+
+                        <!-- <button name="action_exist" string="Exist" type="object" class="btn-success" attrs="{'invisible': [('parent.type', '=','update')]}"/> -->
+
+                        <button name="action_update" string="Update" type="object" class="btn-success"
+                          attrs="{'invisible': ['|','|',('parent.state', 'not in',['erp_system_administrator']),('parent.type', '=','add'),('state', 'in',['created','reject','update'])]}" />
+
+                        <button name="action_reject" string="Reject" type="object" class="btn-danger" attrs="{'invisible': ['|','|',('parent.state', 'not in',['erp_system_administrator']),('state', 'not in',['no_process'])]}" groups="kamil_inventory.group_inventory_responsible_hq"/>
+
+
+                        <button name="open_product" string="Open" type="object" attrs="{'invisible': [('state', 'not in',['created','update'])]}" groups="kamil_inventory.group_inventory_responsible_hq"/>
                       </tree>
                     </field>
                   </page>
@@ -66,7 +87,7 @@
           <field name="responsible"/>
           <field name="date"/>
           <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
-          <filter name="approval" string="Approval" domain="[('state','=','approval')]"/>
+          <filter name="approval" string="Approval" domain="[('state','=','inventory_resp_approval')]"/>
           <filter name="done" string="Done" domain="[('state','=','done')]"/>
           <group expand="0" string="Group By">
             <filter string="Responsible" name="responsible" domain="[]"  context="{'group_by':'responsible'}"/>
@@ -87,11 +108,11 @@
       <field name="name">view.new.product.tree</field>
       <field name="model">new.product</field>
       <field name="arch" type="xml">
-          <tree 
-            decoration-info="state == 'draft'" 
-            decoration-muted="state == 'cancel'" 
-            decoration-danger="state == 'approval' and date &lt;current_date"   
-            string="Request Add New Item">
+          <tree
+            decoration-info="state == 'draft'"
+            decoration-muted="state == 'cancel'"
+            decoration-danger="state == 'inventory_resp_approval' and date &lt;current_date"
+            string="Add/Update Product Request">
               <field name="new_request"/>
               <field name="responsible"/>
               <field name="date"/>
@@ -105,7 +126,7 @@
        <!-- Action for New Product Request-->
 
     <record id="action_new_request" model="ir.actions.act_window">
-      <field name="name">Request Add New Item</field>
+      <field name="name">Add/Update Item Request</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">new.product</field>
       <field name="view_type">form</field>
@@ -138,7 +159,7 @@
 
         <!-- Menus for New Product Request-->
 
-    <menuitem id="sub_menu_new_request" parent="stock.menu_stock_warehouse_mgmt"  sequence="0" action="action_new_request"/>
+<menuitem id="sub_menu_new_request" name="Add/Update Item Request" parent="stock.menu_stock_warehouse_mgmt"  sequence="0" action="action_new_request"/>
 
 
     <record id="action_new_request_purchase" model="ir.actions.act_window">
@@ -157,7 +178,7 @@
 
 
 
-    <menuitem id="sub_menu_new_request_purchase" parent="purchase.menu_procurement_management"  sequence="0" action="action_new_request_purchase"/>
+    <menuitem id="sub_menu_new_request_purchase" parent="purchase.menu_procurement_management" sequence="0" action="action_new_request_purchase"/>
 
   </data>
 </odoo>

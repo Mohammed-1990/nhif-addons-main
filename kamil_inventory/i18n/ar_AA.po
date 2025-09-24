@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0-20200223\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-29 12:52+0000\n"
-"PO-Revision-Date: 2021-09-29 12:52+0000\n"
+"POT-Creation-Date: 2022-12-19 19:02+0000\n"
+"PO-Revision-Date: 2022-12-19 19:02+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__qty_done
 msgid " Quantity Done"
-msgstr ""
+msgstr "الكمية النهائية"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,help:kamil_inventory.field_stock_location__usage
@@ -43,35 +43,154 @@ msgid "12س وارد"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
-msgid "<b>كرت العهدة</b>\n"
-"							<br/>"
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid ": التاريخ"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid ": الفترة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+msgid ": جهة الصرف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+msgid "<br/>\n"
+"\n"
+"                        قسم المخازن<br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "<br/>\n"
+"                            <strong style=\"float:right\" dir=\"rtl\">\n"
+"                                إسم أمين المخزن : .........................             التوقيع : .........................</strong>\n"
+"                            <br/>\n"
+"                            <strong style=\"float:right\" dir=\"rtl\">إسم المستلم : .........................                      التوقيع : .........................</strong>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "<br/>\n"
+"                            <strong style=\"float:right\" dir=\"rtl\">\n"
+"                                رقم الفاتور : .........................</strong>\n"
+"                            <br/>\n"
+"                            <strong style=\"float:right\" dir=\"rtl\">تاريخ الفاتورة : .........................</strong>\n"
+"                            <br/>\n"
+"                            <strong style=\"float:right\" dir=\"rtl\">الفرع : .........................</strong>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid "<br/>\n"
+"                            قسم المخازن<br/>"
 msgstr ""
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_report_view
-msgid "<strong>الصندوق القومي للتامين الصحي\n"
-"                    <br/>\n"
+msgid "<br/>\n"
 "                        قسم المخازن\n"
 "                        <br/>\n"
-"                    تقرير الجرد</strong>"
+"                    تقرير الجرد"
 msgstr ""
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/scrap.py:170
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "<br/>\n"
+"                        قسم المخازن<br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+msgid "<br/>\n"
+"                        قسم المخازن<br/>\n"
+"                        تقرير الاستهلاك للفترة المحددة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "<br/>\n"
+"                        قسم المخازن<br/>\n"
+"                        تقرير الرصيد الدفتري"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
+msgid "<br/>\n"
+"                        قسم المخازن<br/>\n"
+"                        كرت العهدة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "<strong style=\"float:right\"> التوقيع  </strong>\n"
+"                                        <span style=\"float:right;margin-right:20px\">\n"
+"                                            ...............................................\n"
+"                                        </span>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "<strong style=\"float:right\"> التوقيع  </strong>\n"
+"                                    <span style=\"float:right;margin-right:20px\">\n"
+"                                        ...............................................\n"
+"                                    </span>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "<strong style=\"float:right\"> المحاسب  </strong>\n"
+"                                        <span style=\"float:right;margin-right:20px\">\n"
+"                                            ...............................................\n"
+"                                        </span>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "<strong style=\"float:right\"> امين المخزن </strong>\n"
+"                                    <span style=\"float:right;margin-right:20px\">\n"
+"                                        ...............................................\n"
+"                                    </span>"
+msgstr ""
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/scrap.py:185
 #, python-format
 msgid "A scrap process has already been created for this product!"
 msgstr "تم بالفعل إنشاء عملية تالف لهذا الصنف"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__amc
+msgid "AMC"
+msgstr "‫متوسط الاستهلاك الشهري‬"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__access_warning
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__access_warning
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__access_warning
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__access_warning
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__access_warning
 msgid "Access warning"
 msgstr "تحذير من خطأ بالوصول"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_needaction
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_needaction
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_needaction
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_needaction
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_needaction
 msgid "Action Needed"
 msgstr "إجراء مطلوب"
 
@@ -81,16 +200,39 @@ msgid "Active"
 msgstr "نشط"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__activity_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__activity_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__activity_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__activity_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__activity_ids
 msgid "Activities"
 msgstr "الأنشطة"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__activity_state
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__activity_state
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__activity_state
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__activity_state
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__activity_state
 msgid "Activity State"
 msgstr "حالة النشاط"
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_new_request
+#: model:ir.ui.menu,name:kamil_inventory.sub_menu_new_request
+msgid "Add/Update Item Request"
+msgstr "طلب إضافة/تعديل صنف"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_tree
+msgid "Add/Update Product Request"
+msgstr "طلب إضافة/تعديل صنف"
+
+#. module: kamil_inventory
+#: selection:new.product,type:0
+msgid "Addition"
+msgstr "اضافة"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory__adjust_type
@@ -109,11 +251,6 @@ msgid "Administration Manager"
 msgstr "مدير الشؤون الادارية"
 
 #. module: kamil_inventory
-#: selection:need.requisition,state:0
-msgid "Administration Manager Approval"
-msgstr "موافقة مدير الشؤون اﻹدارية"
-
-#. module: kamil_inventory
 #: model:ir.ui.menu,name:kamil_inventory.sub_menu_action_inventory_form_all
 msgid "All Adjustment"
 msgstr "الكل"
@@ -122,6 +259,12 @@ msgstr "الكل"
 #: model:ir.actions.act_window,name:kamil_inventory.action_inventory_form_all_adjust
 msgid "All Inventory Adjustments"
 msgstr "الكل"
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.product_lot_action
+msgid "All Product Production Lot"
+msgstr "تفاصيل الاصناف"
+
 
 #. module: kamil_inventory
 #: selection:stock.inventory,adjust_type:0
@@ -147,11 +290,14 @@ msgid "Approval"
 msgstr "اعتماد"
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 msgid "Approve"
 msgstr "موافقه"
 
 #. module: kamil_inventory
+#: selection:determine.need.consumption,state:0
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__approved
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_scrap_request_form
 msgid "Approved"
@@ -164,17 +310,41 @@ msgid "Approved Quantity"
 msgstr "الكميات المصدقة"
 
 #. module: kamil_inventory
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,state_tree:0
+#: model:res.groups,name:kamil_inventory.group_ive_assistance_services
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Assistance Services"
+msgstr "الخدمات المساندة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_attachment_count
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_attachment_count
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_attachment_count
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_attachment_count
 msgid "Attachment Count"
 msgstr "عدد المرفقات"
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
 #: selection:item.card.test,state:0
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
 #: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
 msgid "Available"
 msgstr "متوفر"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_quant__available_qty
+msgid "Available Qty"
+msgstr " الكمية المتاحة"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__available_quantity
@@ -187,9 +357,21 @@ msgid "Backorder Confirmation"
 msgstr "التأكيد على الطلب التكميلي"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__balance_first_duration
+msgid "Balance First Duration"
+msgstr "رصيد اول المدة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__balance_last_duration
+msgid "Balance Last Duration"
+msgstr "رصيد اخر المدة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__company_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__company_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__company_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__company_id
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_search
 msgid "Branch"
 msgstr "الفرع"
@@ -205,15 +387,38 @@ msgid "Branch delivery date"
 msgstr "التاريخ المجدول للفرع"
 
 #. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_branches_delivery_wizard
+#: model:ir.actions.report,name:kamil_inventory.branches_delivery_report
+#: model:ir.ui.menu,name:kamil_inventory.menu_report_branches_delivery
+msgid "Branches Delivery Report"
+msgstr "تقرير تسليم الفروع"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,state:0
+#: selection:indirect.receive,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.book_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_wizard_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_consumption_report_wizard_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_inventory_form_inherit
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_item_card_wiz_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_item_move_wiz_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_item_run_out_wiz_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_scrap_request_form
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
 #: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
 #: selection:new.product,state:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
 msgid "Cancel"
 msgstr "إلغاء"
 
@@ -229,13 +434,18 @@ msgid "Cancelled"
 msgstr "ملغي"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/scrap.py:179
+#: code:addons/kamil_inventory/models/scrap.py:194
 #, python-format
 msgid "Cannot Create a Scrap order with 0 approved quantity"
 msgstr "لا يمكن إنشاء طلب إتلاف بكميات صفرية"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__category_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__category_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__category_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__category_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_quant__categ_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__category_id
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_stock_quant_search_inherit
 msgid "Category"
 msgstr "الفئة"
@@ -272,16 +482,52 @@ msgid "Click to define a new Scrap Request."
 msgstr "إضغط ﻹنشاء طلب إتلاف جديد"
 
 #. module: kamil_inventory
+#: model_terms:ir.actions.act_window,help:kamil_inventory.action_temporary_covenant
+msgid "Click to define a new temporary covenant."
+msgstr "اضغط لإنشاء عهدة مؤقت جديد"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_category__code
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__code
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_location__code
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_warehouse__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__committee
+msgid "Committee"
+msgstr "اللجنة"
+
+#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__scrap_committee_member_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory__adjustment_committee_member_ids
-#: model:ir.model.fields,field_description:kamil_inventory.field_stock_picking__qc_committee_member_ids
 msgid "Committee Members"
 msgstr "إعضاء اللجنة"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__company_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_card_template__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_move__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__company_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__company_id
 msgid "Company"
-msgstr "المؤسسة"
+msgstr "مؤسسة"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
+msgid "Compute"
+msgstr "احتسب"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__compute_amount_hide
+msgid "Compute Amount Hide"
+msgstr "احتسب"
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_res_config_settings
@@ -294,19 +540,51 @@ msgid "Confirm"
 msgstr "تأكيد"
 
 #. module: kamil_inventory
-#: selection:new.product.line,types:0
+#: selection:new.product.line,product_type:0
 msgid "Consumable"
-msgstr "استهلاكي"
+msgstr "مستهلك"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,need_consumption:0
+msgid "Consumption"
+msgstr "استهلاك"
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_consumption_report_wizard
+#: model:ir.actions.report,name:kamil_inventory.report_consumption
+#: model:ir.ui.menu,name:kamil_inventory.menu_consumption_report_wizard
+msgid "Consumption Report"
+msgstr "تقرير الاستهلاك حسب جهة الصرف"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_line__standard_price
+msgid "Cost"
+msgstr "سعر الشراء"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__cost
 msgid "Cost Price"
-msgstr "التكلفة"
+msgstr "سعر الشراء"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_stock_inventory_line__standard_price
+msgid "Cost used for stock valuation in standard price and as a first price to set in average/fifo. Also used as a base price for pricelists. Expressed in the default unit of measure of the product."
+msgstr "التكلفة المستخدمة في تقييم المخزون بالسعر التقليدي وكسعر ابتدائي لإدراجه في متوسط التكلفة أو تقرير fifo. كما يُستخدم أيضًا كالسعر الأساسي في قوائم الأسعار. معبرًا عنه بوحدة القياس الافتراضية للمنتج."
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
 msgid "Create"
 msgstr "إنشاء"
+
+#. module: kamil_inventory
+#: model_terms:ir.actions.act_window,help:kamil_inventory.action_determine_need_consumption
+msgid "Create  !"
+msgstr "إنشاء !!"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
+msgid "Create Purchase Request"
+msgstr "انشاء طلب شراء"
 
 #. module: kamil_inventory
 #: model_terms:ir.actions.act_window,help:kamil_inventory.action_inventory_form_period_adjust
@@ -331,7 +609,7 @@ msgstr "أنشئ عملية جرد جديدة"
 #. module: kamil_inventory
 #: selection:new.product.line,state:0
 msgid "Created"
-msgstr ""
+msgstr "انشئ"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__created_prod
@@ -340,34 +618,61 @@ msgstr "انشئ منتج"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_auto_adjust__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__create_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__create_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__create_uid
 msgid "Created by"
 msgstr "أنشئ بواسطة"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_auto_adjust__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__create_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__create_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__create_date
 msgid "Created on"
 msgstr "أنشئ في"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__current_user_logged
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__current_user_logged
 msgid "Current Login"
-msgstr ""
+msgstr "المستخدم الحالي"
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.receipt_operation_tree
@@ -385,26 +690,45 @@ msgid "Customer Location"
 msgstr "مكان العميل"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__access_url
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__access_url
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__access_url
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__access_url
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__access_url
 msgid "Customer Portal URL"
 msgstr "رابط بوابة العملاء"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__date
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__date
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__request_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__request_date
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_search
 msgid "Date"
 msgstr "التاريخ"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__date_from
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__date_from
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__date_from
 msgid "Date From"
 msgstr "من تاريخ"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__date_to
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__date_to
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__date_to
 msgid "Date To"
 msgstr "الى تاريخ"
 
@@ -414,9 +738,17 @@ msgid "Default Periodic Interval"
 msgstr "عدد الشهور اﻹفتراضي للجرد الدوري"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive_line__uom
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition_line__uom
+#: model:ir.model.fields,help:kamil_inventory.field_product_line__product_uom_id
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_line__uom
 msgid "Default unit of measure used for all stock operations."
 msgstr "وحده القياس الافتراضية المستخدمة لجميع عمليات المخزون."
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__delever_state
+msgid "Delever State"
+msgstr "حالة  الاستلام "
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
@@ -424,8 +756,18 @@ msgid "Deliveries"
 msgstr "مستلمات"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__department_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__department_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__department_id
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
+#: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
 msgid "Department"
 msgstr "القسم"
 
@@ -435,23 +777,63 @@ msgid "Department Manager"
 msgstr "رئيس القسم"
 
 #. module: kamil_inventory
-#: selection:need.requisition,state:0
-msgid "Department Manager Approval"
-msgstr "موافقة رئيس القسم"
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__determine_need
+msgid "Determine Need"
+msgstr "تحديد الحاجة"
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_determine_need_consumption
+#: model:ir.ui.menu,name:kamil_inventory.determine_need_consumption
+msgid "Determine Need/Consumption"
+msgstr "تحديد حاجة/استهلاك"
+
+#. module: kamil_inventory
+#: selection:consumption.report.wizard,receive_type:0
+msgid "Direct"
+msgstr "مباشر"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_auto_adjust__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_category__long_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_product__long_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__long_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_balance_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_branches_delivery_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_consumption_report__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_card_template__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_move__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_run_out__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_stock_inventory_report_view__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_temporary_covenant_tem__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__display_name
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_location__long_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_warehouse__long_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__display_name
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__display_name
 msgid "Display Name"
 msgstr "الاسم المعروض"
 
@@ -466,28 +848,58 @@ msgid "Do Receipt"
 msgstr "إعتماد اﻹستلام المبدئي"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__document
+msgid "Document"
+msgstr "مستند"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,state:0
+#: selection:indirect.receive,state:0
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_search
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_stock_picking_form_inherit
 #: selection:item.card.test,state:0
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
 #: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
 #: selection:new.product,state:0
 #: selection:scrap.inventory,state:0
 #: selection:scrap.inventory.line,state:0
 #: selection:stock.picking,custome_state:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
 msgid "Done"
 msgstr "تم"
 
 #. module: kamil_inventory
+#: selection:determine.need.consumption,state:0
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_search
-#: selection:need.requisition,state:0
 #: selection:new.product,state:0
-#: selection:new.product.line,state:0
 #: selection:scrap.inventory,state:0
 msgid "Draft"
 msgstr "مسودة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: kamil_inventory
+#: selection:new.product,state:0
+#: model:res.groups,name:kamil_inventory.group_inventory_erp_admin
+msgid "ERP System Administrator"
+msgstr "مشرف نظام ERP"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__employee
+msgid "Employee"
+msgstr "الموظف"
 
 #. module: kamil_inventory
 #: selection:stock.location,usage:0
@@ -497,7 +909,12 @@ msgstr "الموظفين"
 #. module: kamil_inventory
 #: model:stock.picking.type,name:kamil_inventory.stock_picking_employees
 msgid "Employees Requests"
-msgstr ""
+msgstr "طلبات الموظفين"
+
+#. module: kamil_inventory
+#: selection:new.product.line,state:0
+msgid "Exist"
+msgstr "خروج"
 
 #. module: kamil_inventory
 #: selection:stock.picking,custome_state:0
@@ -520,40 +937,60 @@ msgid "Final reception invoice number"
 msgstr "رقم الفاتورة النهائية"
 
 #. module: kamil_inventory
+#: selection:indirect.receive,state:0
+#: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Finance and Administration Management"
+msgstr "الشئون المالية والادارية"
+
+#. module: kamil_inventory
 #: model:res.groups,name:kamil_inventory.group_finance_admin_manager
 #: selection:scrap.inventory,state:0
 msgid "Finance and Administration Manager"
 msgstr "مدير الشؤون الادارية والمالية"
 
 #. module: kamil_inventory
-#: selection:need.requisition,state:0
-msgid "Finance and Administration Manager Approval"
-msgstr "موافقة مدير الشؤون المالية و اﻹدارية"
-
-#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_follower_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_follower_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_follower_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_follower_ids
 msgid "Followers"
 msgstr "المتابعون"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_channel_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_channel_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_channel_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_channel_ids
 msgid "Followers (Channels)"
 msgstr "المتابعون (القنوات)"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_partner_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_partner_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_partner_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "المتابعون (الشركاء)"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__form_46
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__form_46
 msgid "Form 46"
 msgstr "نموزج طلب الاصناف (46)"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__forty_six_seen
+msgid "Forty Six Seen"
+msgstr "اورنيك 46"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__branch_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_picking__info_company_id
 msgid "From Branch"
 msgstr "من الفرع"
@@ -571,48 +1008,118 @@ msgid "Group By"
 msgstr "تجميع حسب"
 
 #. module: kamil_inventory
+#: model:res.groups,name:kamil_inventory.group_ive_health_services
+msgid "Health Services"
+msgstr "الخدمات الصحية"
+
+#. module: kamil_inventory
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Health Services Administration"
+msgstr "الخدمات الصحية"
+
+#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_picking__hide_validate_button
 msgid "Hide Validate Button"
 msgstr ""
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_auto_adjust__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_balance_report_view__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_branches_delivery_report_view__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_consumption_report__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_card_template__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_move__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_run_out__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_stock_inventory_report_view__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_temporary_covenant_tem__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__id
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__id
 msgid "ID"
 msgstr "المعرف"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__message_unread
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__message_unread
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__message_unread
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__message_unread
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__message_unread
 msgid "If checked new messages require your attention."
 msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__message_needaction
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__message_needaction
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__message_needaction
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__message_needaction
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__message_needaction
 msgid "If checked, new messages require your attention."
 msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__message_has_error
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__message_has_error
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__message_has_error
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__message_has_error
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__message_has_error
 msgid "If checked, some messages have a delivery error."
 msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: kamil_inventory
+#: selection:indirect.receive,state:0
+msgid "In Progress"
+msgstr "قيد التنفيذ"
 
 #. module: kamil_inventory
 #: selection:scrap.inventory.line,state:0
 msgid "In progress"
 msgstr "قيد التنفيذ"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__include_move_items
+msgid "Include Move Items"
+msgstr "تضمين الاصناف ذات الكميات التي بها حركة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__include_zero_items
+msgid "Include Zero Items"
+msgstr "تضمين الاصناف ذات الكميات الصفرية"
+
+#. module: kamil_inventory
+#: selection:consumption.report.wizard,receive_type:0
+msgid "Indirect"
+msgstr "غير مباشر"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_picking__indirect_receive
+#: model:ir.ui.menu,name:kamil_inventory.menu_indirect_receive
+#: model:res.groups,name:kamil_inventory.group_indirect_receive
+msgid "Indirect Receive"
+msgstr "الصرف غير المباشر"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_move__initial_qty
@@ -628,6 +1135,12 @@ msgstr "الإستلام المبدئي"
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_scrap_request_form
 msgid "Initiate Scrap"
 msgstr "بدء اﻹتلاف"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:682
+#, python-format
+msgid "Input"
+msgstr ""
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
@@ -661,9 +1174,40 @@ msgid "Inventory Committee"
 msgstr "لجنة الجرد"
 
 #. module: kamil_inventory
+#: selection:indirect.receive,state:0
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
+#: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Inventory Department"
+msgstr "قسم المخازن"
+
+#. module: kamil_inventory
 #: model:res.groups,name:kamil_inventory.group_inventory_employee
 msgid "Inventory Employee"
 msgstr "امين المخزن"
+
+#. module: kamil_inventory
+#: selection:indirect.receive,state:0
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
+#: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Inventory Keeper"
+msgstr "امين المخزن"
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_stock_inventory_line
+msgid "Inventory Line"
+msgstr "بند الجرد"
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_stock_location
@@ -674,11 +1218,6 @@ msgstr "مكان الجرد"
 #: selection:stock.location,usage:0
 msgid "Inventory Loss"
 msgstr "المفقود من الجرد"
-
-#. module: kamil_inventory
-#: selection:need.requisition,state:0
-msgid "Inventory Manager Approval"
-msgstr "موافقة أمين المخزن"
 
 #. module: kamil_inventory
 #: model:res.groups,name:kamil_inventory.group_inventory_responsible
@@ -692,10 +1231,14 @@ msgid "Inventory Responsible - Head Quarter"
 msgstr "مسؤول المخازن - الرئاسة"
 
 #. module: kamil_inventory
-#: selection:need.requisition,state:0
 #: selection:new.product,state:0
 msgid "Inventory Responsible Approval"
 msgstr "موافقة مسؤول المخزن"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__type
+msgid "Inventory Type"
+msgstr "نوع المخزن"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory__adjustment_committee_id
@@ -703,8 +1246,11 @@ msgid "Inventory adjustement committee"
 msgstr "لجنة جرد المخزونات"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_is_follower
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_is_follower
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_is_follower
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_is_follower
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_is_follower
 msgid "Is Follower"
 msgstr "متابع"
 
@@ -719,21 +1265,29 @@ msgid "Is used for Employees Requests?"
 msgstr "يستخدم ﻹنشاء طلبات الحوجة؟"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:277
+#: code:addons/kamil_inventory/models/need_request.py:438
+#: code:addons/kamil_inventory/models/receive_indirect.py:163
+#: code:addons/kamil_inventory/models/temporary_covenant.py:115
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 #, python-format
 msgid "Issuing Order"
 msgstr "أمر الصرف"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/scrap.py:193
+#: code:addons/kamil_inventory/models/scrap.py:208
 #, python-format
 msgid "It seems like the scarp process for this line has been deleted from the system!\n"
 "Please Contact the system administartor."
 msgstr "يبدو أن هذا البند لديه عملية تالف مرتبطة به. الرجاء اﻷتصال بمدير النظام"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__item_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__item_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__item_id
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_scrap_request_form
 msgid "Item"
@@ -757,9 +1311,41 @@ msgid "Item Card Wizrd"
 msgstr ""
 
 #. module: kamil_inventory
-#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
-msgid "Item Name"
-msgstr "اسم الصنف"
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__item_lines
+msgid "Item Lines"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_item_move_wizard
+msgid "Item Move Wizrd"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_item_move_wizard
+#: model:ir.ui.menu,name:kamil_inventory.menu_item_move_wizard
+msgid "Item Movements For the Category"
+msgstr "حركات الأصناف للفئة"
+
+#. module: kamil_inventory
+#: model:ir.actions.report,name:kamil_inventory.item_move_report
+msgid "Item Movements Report For the Category "
+msgstr " تقرير حركات الأصناف للفئة"
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_item_run_out_wizard
+#: model:ir.ui.menu,name:kamil_inventory.menu_item_run_out_wizard
+msgid "Item Run Out"
+msgstr "تقرير الاصناف علي وشك النفاذ"
+
+#. module: kamil_inventory
+#: model:ir.actions.report,name:kamil_inventory.item_run_out_report
+msgid "Item Run Out Report"
+msgstr "تقرير الاصناف علي وشك النفاذ"
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_item_run_out_wizard
+msgid "Item Run Out Wizrd"
+msgstr "الاصناف علي وشك النفاذ"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__product
@@ -777,57 +1363,124 @@ msgid "Journal Entries"
 msgstr "قيود اليومية"
 
 #. module: kamil_inventory
+#: selection:determine.need.consumption,type:0
+#: selection:indirect.receive,warehouse_type:0
+#: selection:need.requisition,warehouse_type:0
+#: selection:stock.warehouse,type:0
+#: selection:temporary.covenant,warehouse_type:0
+msgid "Laboratories Warehouse"
+msgstr "مخزن المعامل"
+
+#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_auto_adjust____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_balance_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_branches_delivery_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_consumption_report____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_card_template____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_move____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_item_run_out____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_stock_inventory_report_view____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_report_kamil_inventory_temporary_covenant_tem____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line____last_update
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard____last_update
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line____last_update
 msgid "Last Modified on"
 msgstr "آخر تعديل في"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_auto_adjust__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__write_uid
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__write_uid
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__write_uid
 msgid "Last Updated by"
 msgstr "آخر تحديث بواسطة"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_auto_adjust__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__write_date
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__write_date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__write_date
 msgid "Last Updated on"
 msgstr "آخر تحديث في"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__license_no
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__license_no
 msgid "License Number"
 msgstr "رقم الإذن"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_book_balance_wizard__location_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__location_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__location_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__location_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__location_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_move_wizard__location_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__location_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__location_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__location_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__location_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__location_id
 msgid "Location"
 msgstr "المكان"
 
@@ -837,10 +1490,28 @@ msgid "Location Type"
 msgstr "نوع المكان"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_main_attachment_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_main_attachment_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_main_attachment_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_main_attachment_id
 msgid "Main Attachment"
 msgstr "المرفق الرئيسي"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__management_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__management_id
+#: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Management"
+msgstr "الإدارة"
+
+#. module: kamil_inventory
+#: model:res.groups,name:kamil_inventory.group_ive_management_manager
+msgid "Management Manager"
+msgstr "مدير إدارة"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__is_manager
@@ -854,21 +1525,96 @@ msgid "Manufacturing"
 msgstr "التصنيع"
 
 #. module: kamil_inventory
+#: selection:need.requisition,medical_supplies_state:0
+#: selection:need.requisition,state_tree:0
+#: model:res.groups,name:kamil_inventory.group_ive_medical_services
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Medical Services"
+msgstr "الخدمات الطبية"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,type:0
+#: selection:indirect.receive,warehouse_type:0
+#: selection:need.requisition,warehouse_type:0
+#: selection:stock.warehouse,type:0
+#: selection:temporary.covenant,warehouse_type:0
+msgid "Medical Supplies Warehouse"
+msgstr "مخزن المستلزمات الطبية"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,type:0
+#: selection:indirect.receive,warehouse_type:0
+#: selection:need.requisition,warehouse_type:0
+#: selection:stock.warehouse,type:0
+#: selection:temporary.covenant,warehouse_type:0
+msgid "Medicine Warehouse"
+msgstr "مخزن الدواء"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_has_error
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_has_error
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_has_error
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_has_error
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_has_error
 msgid "Message Delivery error"
 msgstr "خطأ في تسليم الرسائل"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_ids
 msgid "Messages"
 msgstr "الرسائل"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,period:0
+msgid "Midyear"
+msgstr "نص السنة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_product__min_qty_test
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__min_qty_test
+msgid "Min Qty Test"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_product__min_qty
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__min_qty
+msgid "Minimum Quantity"
+msgstr "الكمية الدنيا"
+
+#. module: kamil_inventory
+#: selection:new.product,type:0
+msgid "Modification"
+msgstr "تعديل"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,period:0
+msgid "Month"
+msgstr "شهر"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory__periodic_interval
 msgid "Month Interval"
 msgstr "عدد اﻷشهر"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,need_consumption:0
+msgid "Need"
+msgstr "حاجة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__need_consumption
+msgid "Need Consumption"
+msgstr "تحديد حاجة/استهلاك"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_purchase_request__need_request_id
@@ -877,12 +1623,18 @@ msgid "Need Request"
 msgstr "طلب الحوجة"
 
 #. module: kamil_inventory
+#: model:res.groups,name:kamil_inventory.group_ive_request_other_branch
+msgid "Need Request - Other Branch"
+msgstr "طلب الحوجة - فرع آخر"
+
+#. module: kamil_inventory
 #: model:ir.ui.menu,name:kamil_inventory.sub_menu_need_requisition
 msgid "Need Requests"
 msgstr "طلبات الحوجة"
 
 #. module: kamil_inventory
 #: model:ir.actions.act_window,name:kamil_inventory.action_need_requisition
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tree
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_tree
 msgid "Need Requisition"
@@ -895,19 +1647,16 @@ msgid "New"
 msgstr "جديد"
 
 #. module: kamil_inventory
-#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
-msgid "New Item Lines"
-msgstr "اﻷصناف الجديدة المطلوبة"
-
-#. module: kamil_inventory
-#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
-msgid "New Item Request"
-msgstr "طلب إضافة صنف"
-
-#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__item_lines
 msgid "New Items"
 msgstr "اﻷصناف"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__unit_price
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_product__new_price
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__new_price
+msgid "New Price"
+msgstr "السعر بالهامش"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__new_product
@@ -915,62 +1664,107 @@ msgid "New Product"
 msgstr "صنف جديد"
 
 #. module: kamil_inventory
-#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__activity_date_deadline
-#: model:ir.model.fields,field_description:kamil_inventory.field_new_product__activity_date_deadline
-msgid "Next Activity Deadline"
-msgstr "الموعد النهائي للنشاط التالي"
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__new_unit_price
+msgid "New Unit Price"
+msgstr ""
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_inventory.field_new_product__activity_date_deadline
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط القادم"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__activity_summary
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__activity_summary
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__activity_summary
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__activity_summary
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__activity_summary
 msgid "Next Activity Summary"
 msgstr "ملخص النشاط التالي"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__activity_type_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__activity_type_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__activity_type_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__activity_type_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__activity_type_id
 msgid "Next Activity Type"
 msgstr "نوع النشاط التالي"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:118
+#: selection:determine.need.consumption,include_move_items:0
+#: selection:determine.need.consumption,include_zero_items:0
+msgid "No"
+msgstr "لا"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:140
 #, python-format
 msgid "No Quality check committee is found in the system. This operation can not be done.\n"
 " Please contact system administrator."
 msgstr "لا توجد لجنة فحص للجودة معرفة في النظام، لا يمكن إجراء الإستلام بدون فحص الجودة. الرجاء اﻹتصال بمدير النظام"
 
 #. module: kamil_inventory
+#: selection:new.product.line,state:0
+msgid "Not Processed"
+msgstr "لم تتم المعالجة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_needaction_counter
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_needaction_counter
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_needaction_counter
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_needaction_counter
 msgid "Number of Actions"
 msgstr "عدد الإجراءات"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_has_error_counter
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_has_error_counter
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_has_error_counter
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_has_error_counter
 msgid "Number of error"
 msgstr "عدد الأخطاء"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__message_needaction_counter
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__message_needaction_counter
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__message_needaction_counter
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__message_needaction_counter
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr "عدد الرسائل التي تتطلب إجراء"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__message_has_error_counter
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__message_has_error_counter
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__message_has_error_counter
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__message_has_error_counter
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__message_unread_counter
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__message_unread_counter
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__message_unread_counter
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__message_unread_counter
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__message_unread_counter
 msgid "Number of unread messages"
 msgstr "عدد الرسائل الجديدة"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/scrap.py:155
+#: code:addons/kamil_inventory/models/scrap.py:170
 #, python-format
 msgid "Only %s can create a Scrap Initiation Order"
 msgstr "يمكنه إنشاء طلب إتلاف %s فقط"
@@ -986,22 +1780,56 @@ msgid "Open Scrap"
 msgstr "فتح عملية التالف"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__operation_type
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__picking_type_id
 msgid "Operation Type"
 msgstr "نوع العملية"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__other_branch_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__other_branch_id
+msgid "Other Branch"
+msgstr "الفرع الآخر"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:694
+#, python-format
+msgid "Output"
+msgstr ""
+
+#. module: kamil_inventory
+#: selection:determine.need.consumption,activity_state:0
+#: selection:indirect.receive,activity_state:0
 #: selection:need.requisition,activity_state:0
 #: selection:new.product,activity_state:0
+#: selection:temporary.covenant,activity_state:0
 msgid "Overdue"
+msgstr "متأخر"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:700
+#, python-format
+msgid "Packing Zone"
 msgstr ""
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
 #: selection:item.card.test,state:0
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
 #: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
 msgid "Partially Available"
 msgstr "متوفر جزئيا"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__period
+msgid "Period"
+msgstr "الفترة"
 
 #. module: kamil_inventory
 #: model:ir.actions.act_window,name:kamil_inventory.action_inventory_form_period_adjust
@@ -1036,27 +1864,78 @@ msgid "Picking Type"
 msgstr "نوع الاستلام"
 
 #. module: kamil_inventory
+#: selection:determine.need.consumption,activity_state:0
+#: selection:indirect.receive,activity_state:0
 #: selection:need.requisition,activity_state:0
 #: selection:new.product,activity_state:0
+#: selection:temporary.covenant,activity_state:0
 msgid "Planned"
+msgstr "مخطط"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:600
+#, python-format
+msgid "Please enter digit"
 msgstr ""
 
 #. module: kamil_inventory
+#: code:addons/kamil_inventory/models/product.py:32
+#: code:addons/kamil_inventory/models/product.py:34
+#: code:addons/kamil_inventory/models/stock.py:732
+#: code:addons/kamil_inventory/models/stock.py:734
+#, python-format
+msgid "Please make code 2 integers"
+msgstr "يرجي ادخال كود مكون من رقمين"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/product.py:201
+#: code:addons/kamil_inventory/models/product.py:203
+#, python-format
+msgid "Please make code 4 integers"
+msgstr "يرجي ادخال كود مكون من اربعة خانات"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/receive_indirect.py:116
+#, python-format
+msgid "Please select operation type!!"
+msgstr "الرجاء اختيار نوع العملية"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__access_url
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__access_url
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__access_url
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__access_url
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__access_url
 msgid "Portal Access URL"
 msgstr "رابط الوصول لبوابة العملاء"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_commit_commit__role
+msgid "Position"
+msgstr "الوظيفة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_stock_inventory_line__list_price
+msgid "Price at which the product is sold to customers."
+msgstr "سعر بيع المنتج للعملاء."
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.book_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_wizard_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_wizard_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_consumption_report_wizard_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_item_card_wiz_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_item_move_wiz_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_item_run_out_wiz_form
 msgid "Print"
 msgstr "طباعة"
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
-msgid "Process"
-msgstr "العملية"
+msgid "Process Request"
+msgstr "معالجة الطلب"
 
 #. module: kamil_inventory
 #: selection:stock.location,usage:0
@@ -1067,22 +1946,46 @@ msgstr "التوريدات"
 #: model:ir.model,name:kamil_inventory.model_product_product
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__product_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_wizard__product_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__product_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__product_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_quant__product_id
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
 msgid "Product"
 msgstr "المنتج"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:205
+#: code:addons/kamil_inventory/models/need_request.py:217
+#: code:addons/kamil_inventory/models/need_request.py:366
+#: code:addons/kamil_inventory/models/receive_indirect.py:103
 #, python-format
 msgid "Product "
 msgstr "المنتج"
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_product_category
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__category_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__category_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__category_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__category_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__category_id
 msgid "Product Category"
 msgstr "فئة المنتج"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__short_code
+msgid "Product Code"
+msgstr "كود الصنف"
+
+#. module: kamil_inventory
+#: model:ir.ui.menu,name:kamil_inventory.product_lot_menu
+msgid "Product Expiration Date Report"
+msgstr "تقرير تواريخ انتهاء الصلاحية"
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "تحركات الصنف (بنود حركة المخزون)"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__product_name
@@ -1090,9 +1993,29 @@ msgid "Product Name"
 msgstr "اسم الصنف"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__product_qty
+msgid "Product Qty"
+msgstr "الكمية الفعلية"
+
+#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__product_scraps
 msgid "Product Scraps"
 msgstr "المنتج التالف"
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__product_type
+msgid "Product Type"
+msgstr "نوع المنتج"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__product_uom_id
+msgid "Product Unit of Measure"
+msgstr "وحدة قياس المنتج"
 
 #. module: kamil_inventory
 #: selection:stock.location,usage:0
@@ -1100,8 +2023,31 @@ msgid "Production"
 msgstr "الإنتاج"
 
 #. module: kamil_inventory
+#: model:res.groups,name:kamil_inventory.group_inventory_products
+msgid "Products Responsible"
+msgstr "مسؤول المنتجات"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
+msgid "Products/Servies"
+msgstr "الاصناف"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_product__profit_margin
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__profit_margin
+msgid "Profit Margin"
+msgstr "هامش الربح"
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
 #: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
 msgid "Purchase"
 msgstr "الشراء"
 
@@ -1111,13 +2057,15 @@ msgid "Purchase Order"
 msgstr "أمر شراء"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:292
+#: code:addons/kamil_inventory/models/need_request.py:453
+#: code:addons/kamil_inventory/models/temporary_covenant.py:130
 #: model:ir.model,name:kamil_inventory.model_purchase_request
 #, python-format
 msgid "Purchase Request"
 msgstr "طلبات الشراء"
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 msgid "Purchase Rquest"
 msgstr "طلبات الشراء"
@@ -1138,6 +2086,23 @@ msgid "QC committee"
 msgstr "لجنة فحص الجودة"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_picking__qc_committee_member_ids
+msgid "Qc Committee Member"
+msgstr "اعضاء اللجنة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_line__qty
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__qty_available
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__qty_available
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__qty_available
+msgid "Qty Available"
+msgstr "الكمية المتوفرة"
+
+#. module: kamil_inventory
 #: selection:stock.picking,custome_state:0
 msgid "Quality Check"
 msgstr "فحص الجودة"
@@ -1148,11 +2113,31 @@ msgid "Quality Check Qty"
 msgstr "الكمية المجازة من الفحص"
 
 #. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:688
+#, python-format
+msgid "Quality Control"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__qty
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__product_qty
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__qty
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__qty
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 msgid "Quantity"
 msgstr "الكمية"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__qty_available
+msgid "Quantity On Hand"
+msgstr "الكمية في اليد"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_stock_move__product_qty
+msgid "Quantity in the default UoM of the product"
+msgstr "الكمية في وحدة قياس الصنف الافتراضيه ."
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__qty_2_scrap
@@ -1166,14 +2151,53 @@ msgid "Quants"
 msgstr "الدفعات"
 
 #. module: kamil_inventory
+#: selection:determine.need.consumption,period:0
+msgid "Quarter"
+msgstr "الربع"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_move__product_qty
+msgid "Real Quantity"
+msgstr "الكمية الفعلية"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__receive_for
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__receive_for
+msgid "Receive For"
+msgstr "صرف ل"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__document
+msgid "Receive Indirect Document"
+msgstr " المستند"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_consumption_report_wizard__receive_type
+msgid "Receive Type"
+msgstr "جهة الصرف"
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
 msgid "Receptions"
 msgstr "الاستلامات"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__item_code
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__item_code
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__item_code
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
 msgid "Reference"
-msgstr "رقم الإشارة"
+msgstr "المرجع"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: kamil_inventory
+#: selection:new.product.line,state:0
+msgid "Rejected"
+msgstr "مرفوض"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__product_remaining_qty
@@ -1188,16 +2212,25 @@ msgid "Report Stock Inventory"
 msgstr "تقرير الجرد PDF"
 
 #. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_book_balance_wizard
+#: model:ir.ui.menu,name:kamil_inventory.book_balance_menu
+msgid "Report book balance"
+msgstr "تقرير الرصيد الدفتري"
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_temporary_covenant_wizard
+#: model:ir.ui.menu,name:kamil_inventory.temporary_covenant_menu
+msgid "Report temporary covenant"
+msgstr "تقرير العهد المؤقتة"
+
+#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_stock_scrap__request_id
 msgid "Request"
 msgstr "الطلب"
 
 #. module: kamil_inventory
-#: model:ir.actions.act_window,name:kamil_inventory.action_new_request
 #: model:ir.actions.act_window,name:kamil_inventory.action_new_request_purchase
-#: model:ir.ui.menu,name:kamil_inventory.sub_menu_new_request
 #: model:ir.ui.menu,name:kamil_inventory.sub_menu_new_request_purchase
-#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_tree
 msgid "Request Add New Item"
 msgstr "طلب إضافة صنف جديد"
 
@@ -1208,43 +2241,75 @@ msgid "Request Date"
 msgstr "تاريخ الطلب"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__request
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__request
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__new_request
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__scrap_id
-#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__request
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_scrap_request_form
 msgid "Request ID"
 msgstr "الرقم المتسلسل"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__line_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__line_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__line_ids
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 msgid "Request Lines"
 msgstr "بنود الطلب"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__request_other_branch
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__request_other_branch
+msgid "Request Other Branch"
+msgstr "الطلب من فرع آخر"
+
+#. module: kamil_inventory
+#: selection:indirect.receive,state:0
+#: selection:need.requisition,lab_medicine_state:0
+#: selection:need.requisition,medical_supplies_state:0
+#: selection:need.requisition,state:0
+#: selection:need.requisition,state_tree:0
+#: selection:temporary.covenant,lab_medicine_state:0
+#: selection:temporary.covenant,medical_supplies_state:0
+#: selection:temporary.covenant,state:0
+#: selection:temporary.covenant,state_tree:0
+msgid "Requestor"
+msgstr "مقدم الطلب"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__requests
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__requests
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__requests
 msgid "Requests"
 msgstr "الطلبات"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__requests_line
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__requests_line
 msgid "Requests Line"
 msgstr "بنود الطلب"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__responsible_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__responsible_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__responsible
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__responsible
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__responsible_id
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_search
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_search
 msgid "Responsible"
-msgstr "المسئول"
+msgstr "المسؤول"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__activity_user_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__activity_user_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__activity_user_id
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__activity_user_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__activity_user_id
 msgid "Responsible User"
 msgstr "المستخدم المسئول"
 
@@ -1259,9 +2324,38 @@ msgid "Result File"
 msgstr "ملف نتجية الفحص"
 
 #. module: kamil_inventory
+#: selection:indirect.receive,operation_type:0
+msgid "Retrieved"
+msgstr "مسترد"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_scrap_request_form
+msgid "Return"
+msgstr "إرجاع"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__return_date
+msgid "Return Date"
+msgstr " تاريخ الترجيع "
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:35
+#, python-format
+msgid "Returned Picking"
+msgstr ""
+
+#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__sale
 msgid "Sale Price"
-msgstr "سعر البيع"
+msgstr "سعر الصرف"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_line__list_price
+msgid "Sales Price"
+msgstr "سعر الصرف"
 
 #. module: kamil_inventory
 #: selection:scrap.inventory,state:0
@@ -1275,6 +2369,8 @@ msgstr "انشاء تالف"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__date
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__date
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 msgid "Scheduled Date"
 msgstr "التاريخ المجدول"
@@ -1322,15 +2418,61 @@ msgid "Scrapping Items"
 msgstr "اتلاف المنتجات"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__access_token
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__access_token
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__access_token
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__access_token
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__access_token
 msgid "Security Token"
 msgstr "رمز الحماية"
 
 #. module: kamil_inventory
-#: selection:new.product.line,types:0
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive_line__category_id
+#: model:ir.model.fields,help:kamil_inventory.field_need_requisition_line__category_id
+#: model:ir.model.fields,help:kamil_inventory.field_product_line__category_id
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_line__category_id
+msgid "Select category for the current product"
+msgstr "اختار فئة المنتج الحالي"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:640
+#, python-format
+msgid "Sequence in"
+msgstr ""
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:660
+#, python-format
+msgid "Sequence internal"
+msgstr ""
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:645
+#, python-format
+msgid "Sequence out"
+msgstr ""
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:650
+#, python-format
+msgid "Sequence packing"
+msgstr ""
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:655
+#, python-format
+msgid "Sequence picking"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__serial_number
+msgid "Serial Number"
+msgstr " الرقم المتسلسل"
+
+#. module: kamil_inventory
+#: selection:new.product.line,product_type:0
 msgid "Service"
-msgstr "الخدمة"
+msgstr "خدمة"
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_stock_quant_form_inherit
@@ -1338,21 +2480,46 @@ msgid "Set Category"
 msgstr "تعيين الفئة"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_category__short_code
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_product__short_code
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_template__short_code
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_location__short_code
+msgid "Short Code"
+msgstr "الكود المختصر"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_stock_warehouse__code
+msgid "Short name used to identify your warehouse"
+msgstr "الاسم المختصر يستخدم لتحديد المستودع الخاص بك"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__show_issuing_order
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__show_issuing_order
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__show_issuing_order
 msgid "Show Issuing Order"
 msgstr "إظهار أمر الإصدار"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__show_purchase_request
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__show_purchase_request
 msgid "Show Purchase Request"
 msgstr "إظهار طلب الشراء"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__state
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__state
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__lab_medicine_state
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__medical_supplies_state
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__state
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__state_tree
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__state
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__state
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory__state
 #: model:ir.model.fields,field_description:kamil_inventory.field_scrap_inventory_line__state
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__lab_medicine_state
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__medical_supplies_state
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__state
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__state_tree
 msgid "State"
 msgstr "الحالة"
 
@@ -1365,8 +2532,11 @@ msgid "Status"
 msgstr "الحالة"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__activity_state
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__activity_state
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__activity_state
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__activity_state
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__activity_state
 msgid "Status based on activities\n"
 "Overdue: Due date is already passed\n"
 "Today: Activity date is today\n"
@@ -1375,6 +2545,12 @@ msgstr "الحالة على أساس الأنشطة\n"
 "المتأخرة: تاريخ الاستحقاق مر\n"
 "اليوم: تاريخ النشاط هو اليوم\n"
 "المخطط: الأنشطة المستقبلية."
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:676
+#, python-format
+msgid "Stock"
+msgstr ""
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_purchase_order__stock_location_id
@@ -1389,16 +2565,29 @@ msgid "Stock Move"
 msgstr "حركة المخزون"
 
 #. module: kamil_inventory
+#: model:res.groups,name:kamil_inventory.group_inventory_storekeeper
+msgid "Stock Move Manager"
+msgstr ""
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
 msgid "Stock Moves"
 msgstr "تحركات المخزون"
 
 #. module: kamil_inventory
-#: selection:new.product.line,types:0
-msgid "Storable"
-msgstr "مخزني"
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_product_category_form_inherit
+msgid "Stock exchange strategy"
+msgstr "استراتيجية الصرف من المخزن"
 
 #. module: kamil_inventory
+#: selection:new.product.line,product_type:0
+msgid "Storable"
+msgstr "قابل للتخزين"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_scrap_request_form
 msgid "Submit"
@@ -1420,61 +2609,147 @@ msgid "Surprising"
 msgstr "عرضي"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:140
+#: selection:determine.need.consumption,type:0
+#: selection:indirect.receive,warehouse_type:0
+#: selection:need.requisition,warehouse_type:0
+#: selection:stock.warehouse,type:0
+#: selection:temporary.covenant,warehouse_type:0
+msgid "Tasks Warehouse"
+msgstr "مخزن المهام"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_purchase_request__temporary_covenant_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_picking__temporary_covenant_id
+msgid "Temporary Covenant"
+msgstr " العهد المؤقتة"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__temporary_custody
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__temporary_custody
+#: model:ir.ui.menu,name:kamil_inventory.sub_menu_temporary_custody
+msgid "Temporary Custody"
+msgstr "عهدة مؤقتة"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:192
 #, python-format
 msgid "The Product category is not analytic account please insert !! "
 msgstr "فئة المنتج ليست حساب تحليلي الرجاء إدخالها !!"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:133
+#: code:addons/kamil_inventory/models/stock.py:185
 #, python-format
 msgid "The Product category is not expenses account please insert !! "
 msgstr "فئة المنتج ليست حساب مصاريف الرجاء إدخالها !!"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:137
+#: sql_constraint:product.category:0
+msgid "The code of the category must be unique per company!"
+msgstr "يجب أن يكون رمز الفئة فريدًا لكل فرع"
+
+#. module: kamil_inventory
+#: sql_constraint:product.template:0
+msgid "The code of the product must be unique per company!"
+msgstr "يجب أن يكون رمز المنتج فريدًا لكل فرع"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:189
 #, python-format
 msgid "The location is not account please insert !! "
+msgstr "لايوجد حساب في المخزن الرجاء إضافته !!"
+
+#. module: kamil_inventory
+#: sql_constraint:product.category:0
+msgid "The name of the category must be unique per company!"
+msgstr "يجب أن يكون رمز الفئة فريدًا لكل فرع"
+
+#. module: kamil_inventory
+#: sql_constraint:product.template:0
+msgid "The name of the product must be unique per company!"
+msgstr "يجب أن يكون رمز المنتج فريدًا لكل فرع"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/need_request.py:213
+#, python-format
+msgid "There is no location for %s type"
 msgstr ""
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:242
+#: code:addons/kamil_inventory/models/need_request.py:209
+#, python-format
+msgid "There is no picking type in other branch"
+msgstr "لاتوجع عملية استلام في الفرع الاخر"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/need_request.py:403
+#: code:addons/kamil_inventory/models/receive_indirect.py:145
+#: code:addons/kamil_inventory/models/temporary_covenant.py:80
 #, python-format
 msgid "There's a problem with the configuration. No employees location is defined in the system.\n"
 " Please contact the system administration."
 msgstr "هناك مشكلة في إعدادات النظام، لا يوجد موقع معرف لطلبات الحوجة. الرجاء اﻹتصال بمدير النظام"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:232
+#: code:addons/kamil_inventory/models/receive_indirect.py:135
+#, python-format
+msgid "There's a problem with the configuration. No picking type is found to handle  requests!\n"
+" Please contact the system administration."
+msgstr ""
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/need_request.py:393
+#: code:addons/kamil_inventory/models/temporary_covenant.py:68
 #, python-format
 msgid "There's a problem with the configuration. No picking type is found to handle employees need requests!\n"
 " Please contact the system administration."
 msgstr "هناك مشكلة في إعدادات النظام، لا يوجد عملية معرفة للتعامل مع طلبات الحوجة. الرجاء اﻹتصال بمدير النظام"
-
+  
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:186
+#: code:addons/kamil_inventory/models/need_request.py:349
 #, python-format
 msgid "There's a problem with the configuration. No picking type is found to handle employees need requests!!"
 msgstr "هناك مشكلة في إعدادات النظام، لا يوجد عملية معرفة للتعامل مع طلبات الحوجة. الرجاء اﻹتصال بمدير النظام"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:237
+#: code:addons/kamil_inventory/models/receive_indirect.py:85
+#, python-format
+msgid "There's a problem with the configuration. No picking type is found to handle requests!!"
+msgstr "هناك مشكلة في إعدادات النظام، لا يوجد نوع عملية في هذا الطلب !"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/need_request.py:398
+#: code:addons/kamil_inventory/models/receive_indirect.py:140
+#: code:addons/kamil_inventory/models/temporary_covenant.py:74
 #, python-format
 msgid "There's a problem with the configuration. No stock location is found for this company/branch.\n"
 " Please contact the system administration."
 msgstr "هناك مشكلة في إعدادات النظام، لا يوجد موقع تخزين معرف لهذا الفرع في النظام. الرجاء اﻹتصال بمدير النظام"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:286
+#: code:addons/kamil_inventory/models/need_request.py:447
+#: code:addons/kamil_inventory/models/temporary_covenant.py:124
 #, python-format
 msgid "There's no associated issuing order to this need request, please check with Inventory Keeper!!"
 msgstr "لا يوجد أمر إصدار مرتبط بطلب الحوجة هذا ، يرجى مراجعة امين المخزن !!"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:301
+#: code:addons/kamil_inventory/models/receive_indirect.py:172
+#, python-format
+msgid "There's no associated issuing order, please check with Inventory Keeper!!"
+msgstr "لا يوجد امر اصدار مرتبط ,يرجى مراجعة مراقب المخزن !!"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/need_request.py:462
+#: code:addons/kamil_inventory/models/temporary_covenant.py:139
 #, python-format
 msgid "There's no associated purchase request to this need request, please check with purchasing department!!"
 msgstr "لا يوجد طلب شراء مرتبط بطلب الحوجة هذا ، يرجى مراجعة قسم المشتريات !!"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/new_item.py:96
+#, python-format
+msgid "There's no product selected in this line."
+msgstr "يرجي اختيار منتجات"
 
 #. module: kamil_inventory
 #: model_terms:ir.actions.act_window,help:kamil_inventory.action_inventory_form_all_adjust
@@ -1488,6 +2763,11 @@ msgstr "يتم إستخدام الجرد لتصحيح كميات اﻷصناف �
 #: selection:stock.picking,internal_transfer_type:0
 msgid "To Branch"
 msgstr "عملية نقل لفرع"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_branches_delivery_wizard__branch_ids
+msgid "To Branches"
+msgstr "الي الفروع"
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.product_move_search
@@ -1510,10 +2790,33 @@ msgid "To location"
 msgstr "إلى المخزن"
 
 #. module: kamil_inventory
+#: selection:determine.need.consumption,activity_state:0
+#: selection:indirect.receive,activity_state:0
 #: selection:need.requisition,activity_state:0
 #: selection:new.product,activity_state:0
+#: selection:temporary.covenant,activity_state:0
 msgid "Today"
 msgstr "اليوم"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__total_price
+msgid "Total Price"
+msgstr "السعر الإجمالي"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_line__total_purchase_price
+msgid "Total Purchase Price"
+msgstr "مجموع سعر الشراء"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_line__total_sale_price
+msgid "Total Sale Price"
+msgstr "مجموع سعر الصرف"
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_stock_picking
@@ -1521,11 +2824,18 @@ msgid "Transfer"
 msgstr "نقل"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_picking__transfer_document
+msgid "Transfer Document"
+msgstr "مرفق عملية التحويل"
+
+#. module: kamil_inventory
 #: selection:stock.location,usage:0
 msgid "Transit Location"
 msgstr "مكان وسيط"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_new_product__type
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_warehouse__type
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
 msgid "Type"
 msgstr "النوع"
@@ -1541,17 +2851,21 @@ msgid "Type of internal transfer"
 msgstr "نوع عملية الصرف"
 
 #. module: kamil_inventory
-#: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__types
-msgid "Types"
-msgstr "اﻷنواع"
-
-#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive_line__uom
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition_line__uom
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product_line__uom
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_line__uom
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
 msgid "UOM"
 msgstr "وحدة القياس"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.indirect_receive_form
+msgid "Unit Price"
+msgstr "سعر الوحدة"
 
 #. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__product_uom_id
@@ -1559,16 +2873,52 @@ msgid "Unit of Measure"
 msgstr "وحده القياس "
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_unread
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_unread
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_unread
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_unread
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_unread
 msgid "Unread Messages"
 msgstr "الرسائل الجديدة"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__message_unread_counter
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__message_unread_counter
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__message_unread_counter
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr "عدد الرسائل الجديدة"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_new_request_form
+msgid "Update"
+msgstr "تحديث"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_warehouse_form
+msgid "Update Category Code"
+msgstr "تحديث كود الفئات"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_warehouse_form
+msgid "Update Location Code"
+msgstr "تحديث كود الأماكن"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_product_category_form_inherit
+msgid "Update Products Code"
+msgstr "تحديث كود المنتجات"
+
+#. module: kamil_inventory
+#: selection:new.product.line,state:0
+msgid "Updated"
+msgstr "تم التعديل"
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_inventory_form_inherit
@@ -1606,34 +2956,64 @@ msgid "Waiting Availability"
 msgstr "انتظار التوفر"
 
 #. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_stock_warehouse
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__warehouse_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__warehouse_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_item_run_out_wizard__warehouse_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__warehouse_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_product_category__warehouse_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_location__warehouse_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__warehouse_id
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant_wizard__warehouse_id
+msgid "Warehouse"
+msgstr "المخزن"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__warehouse_type
+#: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__warehouse_type
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__warehouse_type
+msgid "Warehouse Type"
+msgstr "نوع المخزن"
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_determine_need_consumption__website_message_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_indirect_receive__website_message_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_need_requisition__website_message_ids
 #: model:ir.model.fields,field_description:kamil_inventory.field_new_product__website_message_ids
+#: model:ir.model.fields,field_description:kamil_inventory.field_temporary_covenant__website_message_ids
 msgid "Website Messages"
 msgstr "رسائل الموقع"
 
 #. module: kamil_inventory
+#: model:ir.model.fields,help:kamil_inventory.field_determine_need_consumption__website_message_ids
+#: model:ir.model.fields,help:kamil_inventory.field_indirect_receive__website_message_ids
 #: model:ir.model.fields,help:kamil_inventory.field_need_requisition__website_message_ids
 #: model:ir.model.fields,help:kamil_inventory.field_new_product__website_message_ids
+#: model:ir.model.fields,help:kamil_inventory.field_temporary_covenant__website_message_ids
 msgid "Website communication history"
 msgstr "سجل تواصل الموقع"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:243
-#, python-format
-msgid "You can not confirm request because all  reserved quantities is 0.0 !!"
-msgstr "لايمكنك إعتماد الطلب لأن كل الكميات المعتمدة 0.0"
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_move__worker_num
+msgid "Worker Num"
+msgstr "رقم العامل"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:107
-#, python-format
-msgid "You can not confirm request because all initial quantities is 0.0 !!"
-msgstr "لايمكنك إعتماد الطلب لأن كل الكميات المبدئية 0.0"
+#: selection:determine.need.consumption,period:0
+msgid "Yearly"
+msgstr "سنوي"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:123
+#: selection:determine.need.consumption,include_move_items:0
+#: selection:determine.need.consumption,include_zero_items:0
+msgid "Yes"
+msgstr "نعم"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:130
 #, python-format
-msgid "You can not confirm request because all quality quantities is 0.0 !!"
-msgstr "لايمكنك إعتماد الطلب لأن كل الكميات المجازة من الفحص 0.0"
+msgid "You can not Confirm with inithial qty 0 !!"
+msgstr "  لايمكن اعتماد الاستلام المبدئي لان الكمية المبدئية 0"
 
 #. module: kamil_inventory
 #: code:addons/kamil_inventory/wizard/stock_immediate_transfer.py:20
@@ -1654,39 +3034,132 @@ msgid "You can not connfirm request because all reserved quantities is 0.0 !!"
 msgstr "لا يمكنك تأكيد الطلب لأن جميع الكميات المحجوزة !!"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/new_item.py:133
+#: code:addons/kamil_inventory/models/stock.py:568
+#, python-format
+msgid "You can not insert QC qty greatest than initial qty !!"
+msgstr "لايمكن ان تكون الكمية المجازة من الفحص اكبر من الكمية المبدئية"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:559
+#, python-format
+msgid "You can not insert initial qty received greatest than initial qty !!"
+msgstr "لايمكن اضافة كمية مبدئية مستلمة اكبر من الكمية المبدئية"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:552
+#, python-format
+msgid "You can not insert initial qty received greatest than onhand qty !!"
+msgstr "لايمكن اضافة كمية مبدئية مستلمة اكبر من الكمية في اليد"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:577
+#, python-format
+msgid "You can not insert qty done greatest than QC qty !!"
+msgstr "لايمكن اضافة الكمية تم اكبر من الكمية المجازة في الجودة"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/stock.py:515
+#, python-format
+msgid "You can not insert qty done greatest than reserved qty !!"
+msgstr "لايمكن اضافة كمية نهائية اكبر من الكمية المحجوزة"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/receive_indirect.py:237
+#, python-format
+msgid "You can not insert qty greatest than onhand qty !!"
+msgstr "لا يمكن ادخال كمية اكبر من الكمية المتاحة"
+
+#. module: kamil_inventory
+#: code:addons/kamil_inventory/models/new_item.py:194
 #, python-format
 msgid "You cannot delete done itme."
 msgstr "لا يمكن حذف المنتجات التي تمت"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:307
+#: code:addons/kamil_inventory/models/need_request.py:468
 #, python-format
 msgid "You cannot delete request in '%s' state , only on 'draft' or 'cancel' ."
 msgstr "لايمكن حذف الطلب في حالة \"%s\" ,فقط يمكن الحذف في المسودة او الغاء"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:148
+#: code:addons/kamil_inventory/models/stock.py:201
 #, python-format
 msgid "You have not stock journal !!!"
 msgstr "ليس لديك يومية مخزن!!!!"
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/stock.py:255
+#: code:addons/kamil_inventory/models/stock.py:422
 #, python-format
 msgid "You have not transit location in '%s' branch to transfer please define !!! "
 msgstr "ليس هنالك مخزن وسيط في فرع '%s' للتحويل الرجاء إدخالة !!! "
 
 #. module: kamil_inventory
-#: code:addons/kamil_inventory/models/need_request.py:110
-#: code:addons/kamil_inventory/models/new_item.py:120
+#: code:addons/kamil_inventory/models/need_request.py:164
+#: code:addons/kamil_inventory/models/new_item.py:173
+#: code:addons/kamil_inventory/models/temporary_covenant.py:30
 #, python-format
 msgid "You have to set at least one product from request !"
+msgstr "يرجي اضافة التفاصيل"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "____________________"
 msgstr ""
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_auto_adjust
 msgid "auto.adjust"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.actions.report,name:kamil_inventory.book_balance_report
+msgid "book balance"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_book_balance_wizard
+msgid "book.balance.wizard"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_branches_delivery_wizard
+msgid "branches.delivery.wizard"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_commit_commit
+msgid "commit.commit"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_consumption_report_wizard
+msgid "consumption report wizard"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_determine_need_consumption
+msgid "determine.need.consumption"
+msgstr ""
+
+#. module: kamil_inventory
+#: selection:indirect.receive,operation_type:0
+msgid "donation"
+msgstr " تبرع"
+
+#. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.indirect_receive_action
+msgid "indirect receive action"
+msgstr "عملية الصرف غير المباشر"
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_indirect_receive
+msgid "indirect.receive"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_indirect_receive_line
+msgid "indirect.receive.line"
 msgstr ""
 
 #. module: kamil_inventory
@@ -1697,7 +3170,7 @@ msgstr "المخزن"
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_need_requisition
 msgid "need.requisition"
-msgstr ""
+msgstr "طلب الحوجة"
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_need_requisition_line
@@ -1707,11 +3180,31 @@ msgstr ""
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_new_product
 msgid "new.product"
-msgstr ""
+msgstr "إضافة/تعديل صنف"
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_new_product_line
 msgid "new.product.line"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_product_line
+msgid "product.line"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_report_kamil_inventory_balance_report_view
+msgid "report.kamil_inventory.balance_report_view"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_report_kamil_inventory_branches_delivery_report_view
+msgid "report.kamil_inventory.branches_delivery_report_view"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_report_kamil_inventory_consumption_report
+msgid "report.kamil_inventory.consumption_report"
 msgstr ""
 
 #. module: kamil_inventory
@@ -1720,14 +3213,36 @@ msgid "report.kamil_inventory.item_card_template"
 msgstr ""
 
 #. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_report_kamil_inventory_item_move
+msgid "report.kamil_inventory.item_move"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_report_kamil_inventory_item_run_out
+msgid "report.kamil_inventory.item_run_out"
+msgstr ""
+
+#. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_report_kamil_inventory_stock_inventory_report_view
 msgid "report.kamil_inventory.stock_inventory_report_view"
 msgstr ""
 
 #. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_report_kamil_inventory_temporary_covenant_tem
+msgid "report.kamil_inventory.temporary_covenant_tem"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.view_need_requisition_form
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_stock_picking_form_inherit
 msgid "reset to draft"
 msgstr "إعادة التعيين لمسودة"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
+msgid "return"
+msgstr "إرجاع"
 
 #. module: kamil_inventory
 #: model:ir.model,name:kamil_inventory.model_scrap_inventory
@@ -1745,9 +3260,73 @@ msgid "stock.inventory.wizard"
 msgstr ""
 
 #. module: kamil_inventory
+#: model:ir.actions.act_window,name:kamil_inventory.action_temporary_covenant
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_form
+msgid "temporary covenant"
+msgstr "العهد المؤقتة"
+
+#. module: kamil_inventory
+#: model:ir.actions.report,name:kamil_inventory.temporary_covenant_report
+msgid "temporary covenant Report"
+msgstr "تقرير العهد المؤقتة"
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_temporary_covenant
+msgid "temporary.covenant"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_temporary_covenant_wizard
+msgid "temporary.covenant.wizard"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model,name:kamil_inventory.model_temporary_line
+msgid "temporary.line"
+msgstr ""
+
+#. module: kamil_inventory
 #: model:ir.model.fields,field_description:kamil_inventory.field_item_card_test__product_uom_qty
 msgid "uom Quantity "
 msgstr "كمية وحدة القياس"
+
+#. module: kamil_inventory
+#: selection:new.product,state:0
+msgid "warehouse Manager HQ"
+msgstr "مسؤول المخازن بالرئاسة"
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "إسم الصنف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__product_ids
+#: selection:stock.inventory.wizard,type:0
+msgid "اختيار الأصناف يدوى"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "اسم الصنف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "اسم المستلم"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "الإدارة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "الاجمالي"
+msgstr ""
 
 #. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
@@ -1755,13 +3334,166 @@ msgid "الباقي بالعهدة"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "البيان"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
 msgid "التاريخ"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "التاريخ :"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "التوقيع :"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "الجملة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+msgid "الحوجة الكلية للفرع"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "الرصيد"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "الرصيد الافتتاحي"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
+msgid "الرصيد السابق"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "الرقم المتسلسل"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "السعر"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "الصندوق القومي للتأمين الصحي\n"
+"                         <br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+msgid "الصندوق القومي للتأمين الصحي\n"
+"                        <br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid "الصندوق القومي للتأمين الصحي<br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "الصندوق القومي للتأمين الصحي<br/>\n"
+"                            قسم المخازن<br/>\n"
+"                        	تقرير الاصناف علي وشك النفاذ"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_report_view
+msgid "الصندوق القومي للتامين الصحي\n"
+"                    <br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid "الصنف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "الفترة :"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+msgid "الفرع"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "الفرع :"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "القسم"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+msgid "القيمة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "القيمة الكلية"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "الكمية"
+msgstr ""
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_report_view
 msgid "الكمية في اليد"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid "الكميه"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+msgid "الكود"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+msgid "المتبقي للفرع"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "المجموع"
 msgstr ""
 
 #. module: kamil_inventory
@@ -1771,8 +3503,26 @@ msgid "المخزن"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "المخزن :"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "المسؤول :"
+msgstr ""
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
 msgid "المقدار"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "المكان :"
 msgstr ""
 
 #. module: kamil_inventory
@@ -1782,8 +3532,14 @@ msgid "المنتج"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
 msgid "المنصرف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__type
+msgid "النوع"
 msgstr ""
 
 #. module: kamil_inventory
@@ -1792,8 +3548,169 @@ msgid "الوارد"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "الوحدة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid "الي"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "امين المخزن :"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "تاريخ إعادة العهدة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "تاريخ إنتهاء الصلاحية"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "تاريخ استلام العهدة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+msgid "تاريخ انتهاء الصلاحية"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.actions.report,name:kamil_inventory.transfer_stock
+msgid "تحويل من مخزن"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+msgid "تفاصيل تسليم الفروع"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "تقرير العهد المؤقتة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "تقرير تحويل من مخزن"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid "تقرير حركات الاصناف للفئة<br/>"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "تقرير فاتورة الوارد"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "تقرير فاتورة منصرف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "جملة دائن"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "جملة مدين"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "حالة الإرجاع"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__stock_quant
+#: selection:stock.inventory.wizard,type:0
+msgid "حزمة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "دائن"
+msgstr ""
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
 msgid "رقم الاذن"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "رقم التشغيلة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "رقم الصنف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "سعر الشراء"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "سعر المنصرف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+msgid "سعر الوحدة"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.determine_need_consumption_form
+msgid "شهر"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+msgid "صرف ل"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__product_id
+#: selection:stock.inventory.wizard,type:0
+msgid "صنف واحد"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_stock_picking_form_inherit
+msgid "طباعة تقرير تحويل من مخزن"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_stock_picking_form_inherit
+msgid "طباعة تقرير فاتورة الوارد"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.view_stock_picking_form_inherit
+msgid "طباعة تقرير فاتورة منصرف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
+msgid "فئة الصنف"
 msgstr ""
 
 #. module: kamil_inventory
@@ -1802,8 +3719,36 @@ msgid "فئة المنتج"
 msgstr ""
 
 #. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__product_category
+#: selection:stock.inventory.wizard,type:0
+msgid "فئة صنف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.actions.report,name:kamil_inventory.incoming_invoice
+msgid "فاتورة التوريد"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.actions.report,name:kamil_inventory.outgoing_invoice
+msgid "فاتورة المنصرف"
+msgstr ""
+
+#. module: kamil_inventory
+#: selection:stock.inventory.wizard,type:0
+msgid "كل الأصناف"
+msgstr ""
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_report_view
 msgid "لا تــــــوجـــد بيــانات"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.branches_delivery_report_view
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_run_out
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.temporary_covenant_tem
+msgid "لا تـــوجـــــــد بيــانات"
 msgstr ""
 
 #. module: kamil_inventory
@@ -1812,11 +3757,43 @@ msgid "محجوز"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "مدين"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.transfer_stock_report_view
+msgid "مسلسسل"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.item_move
+msgid "من"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "منصرف"
+msgstr ""
+
+#. module: kamil_inventory
+#: model:ir.model.fields,field_description:kamil_inventory.field_stock_inventory_wizard__partner_id
+#: selection:stock.inventory.wizard,type:0
+msgid "مورد واحد"
+msgstr ""
+
+#. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.balance_report_view
+msgid "وارد"
+msgstr ""
+
+#. module: kamil_inventory
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.item_card_template
 msgid "وارد او منصرف الي"
 msgstr ""
 
 #. module: kamil_inventory
+#: model_terms:ir.ui.view,arch_db:kamil_inventory.consumption_report
 #: model_terms:ir.ui.view,arch_db:kamil_inventory.stock_inventory_report_view
 msgid "وحدة القياس"
 msgstr ""

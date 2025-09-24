@@ -48,6 +48,11 @@
         <field name="category_id" ref="module_category_kamil_inventory"/>
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
     </record>
+    <record id="group_indirect_receive" model="res.groups">
+        <field name="name">Indirect Receive</field>
+        <field name="category_id" ref="module_category_kamil_inventory"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
 
 
     <!-- Rule-->

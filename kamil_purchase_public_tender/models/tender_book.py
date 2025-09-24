@@ -221,7 +221,7 @@ class PurchaseOrder(models.Model):
 					'parent_budget_item_id':parent_budget_item_id,
 					'accounts_receivable_types':accounts_receivable,
 					'branch_id':company_id.id,
-					'deduction_ids':tax_data
+					# 'deduction_ids':tax_data
 					}))
 			self.is_raft = True
 		ctx = {

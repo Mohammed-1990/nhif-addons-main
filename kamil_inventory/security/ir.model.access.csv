@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_scrap_inventory_manager,scrap.inventory,model_scrap_inventory,stock.group_stock_manager,1,1,1,1
+access_indirect_receive,indirect_receive,model_indirect_receive,,1,1,1,1
 access_scrap_inventory_user,scrap.inventory,model_scrap_inventory,stock.group_stock_user,1,1,1,0
 access_scrap_inventory_manager_line,scrap.inventory.line,model_scrap_inventory_line,stock.group_stock_manager,1,1,1,1
 access_scrap_inventory_user_line,scrap.inventory.line,model_scrap_inventory_line,stock.group_stock_user,1,1,1,0
@@ -33,3 +33,7 @@ purchase.access_product_product_purchase_manager,product.product purchase_manage
 ,,,,,,,
 account.access_product_product_account_manager,product.product.account.manager,product.model_product_product,account.group_account_manager,1,0,0,0
 account.access_product_template_account_manager,product.template.account.manager,product.model_product_template,account.group_account_manager,1,0,0,0
+,,,,,,,
+access_indirect_receive,indirect_receive,model_indirect_receive,,1,1,1,
+access_indirect_receive_line,indirect_receive_line,model_indirect_receive_line,,1,1,1,
+,,,,,,,

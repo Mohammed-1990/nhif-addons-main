@@ -21,6 +21,14 @@ class KamilNeedRequisition(models.Model):
 		department = employee.department_id.id
 		return department
 
+
+	def _get_warehouse(self):
+		warehouse = self.env['stock.warehouse'].search(
+			[('company_id', '=', self.env.user.company_id.id)],
+			limit=1
+		)
+		return warehouse.id if warehouse else False
+
 	def get_company_id(self):
 		return self.env.user.company_id.id
 
@@ -54,7 +62,24 @@ class KamilNeedRequisition(models.Model):
 							  ('done','Done'),
 							  ('cancel','Cancel')], string="State", default="draft",  track_visibility='onchange')
 	current_user_logged = fields.Many2one('res.users',string="Current Login", default=lambda self: self.env.user)
-		# user_id = fields.Many2one('res.users', string='Salesperson', track_visibility='onchange', default=lambda self: self.env.user)
+	warehouse_type = fields.Selection([('tasks','Tasks Warehouse'),('laboratories','Laboratories Warehouse'),('medical_supplies','Medical Supplies Warehouse'),('medicine','Medicine Warehouse')],default='tasks',)
+	warehouse_id = fields.Many2one(
+		'stock.warehouse',
+		string="Warehouse",
+		default=lambda self: self._get_warehouse()
+	)
+	warehouse_root_location_id = fields.Many2one(
+		'stock.location',
+		compute='_compute_warehouse_root_location',
+		store=True
+	)
+
+	@api.depends('warehouse_id')
+	def _compute_warehouse_root_location(self):
+		for rec in self:
+			rec.warehouse_root_location_id = rec.warehouse_id.view_location_id.id if rec.warehouse_id else False
+
+	# user_id = fields.Many2one('res.users', string='Salesperson', track_visibility='onchange', default=lambda self: self.env.user)
 
 	requests_line = fields.Many2one('need.requisition.line')
 	line_ids = fields.One2many('need.requisition.line','requests',string="Request Lines")
@@ -76,6 +101,8 @@ class KamilNeedRequisition(models.Model):
 
 
 
+
+
 	# @api.model
 	# def create(self, vals):
 	# 	create_id = super(KamilNeedRequisition, self).create(vals)
@@ -86,7 +113,7 @@ class KamilNeedRequisition(models.Model):
 	# 		user = self.env['res.users'].browse(current_uid)
 	# 		employee = self.env['hr.employee'].search([('user_id.id','=',user.id)],limit=1)
 	# 		department = employee.department_id
-	# 		seq_code = 'need.requisition.' + str(user.name or False) + ' / '+ '.' +  str(department.name or False) 
+	# 		seq_code = 'need.requisition.' + str(user.name or False) + ' / '+ '.' +  str(department.name or False)
 	# 		seq = self.env['ir.sequence'].next_by_code( seq_code )
 	# 		if not seq:
 	# 			self.env['ir.sequence'].create({
@@ -99,18 +126,18 @@ class KamilNeedRequisition(models.Model):
 	# 				'padding' : 4,
 	# 				})
 	# 			seq = self.env['ir.sequence'].next_by_code( seq_code )
-	# 		create_id.request = seq 
+	# 		create_id.request = seq
 
 	# 	return create_id
 
 	@api.multi
-	def action_draft(self):		
+	def action_draft(self):
 		if self.state == 'draft':
 			if not any(line.line_ids for line in self):
 				raise UserError(_('You have to set at least one product from request !'))
 
 			if self.request == 'New':
-				seq_code = 'need.requisition.seq' 
+				seq_code = 'need.requisition.seq'
 				seq = self.env['ir.sequence'].next_by_code( seq_code )
 				if not seq:
 					self.env['ir.sequence'].create({
@@ -124,7 +151,7 @@ class KamilNeedRequisition(models.Model):
 						})
 				seq = self.env['ir.sequence'].next_by_code( seq_code )
 				self.request = seq
-				# self.request = self.env['ir.sequence'].next_by_code('need.requisition.seq')			
+				# self.request = self.env['ir.sequence'].next_by_code('need.requisition.seq')
 			self.write({'state' : 'dept_manager'})
 
 	@api.multi
@@ -166,7 +193,7 @@ class KamilNeedRequisition(models.Model):
 					product_quant = rec.env['stock.quant'].search([('company_id','=',rec.company_id.id),('location_id','=',location_id.id),('product_id','=',line.item_id.id)])
 					quant_locs = rec.env['stock.quant'].search([('product_id', '=', line.item_id.id),('location_id','=',rec.location_id.id)], limit=1)
 
-					
+
 					if line.qty > quant_locs.quantity:
 						po_lines.append((0,0,{
 							'product_id':line.item_id.id,
@@ -184,7 +211,7 @@ class KamilNeedRequisition(models.Model):
 			picking_type_id = rec.env['stock.picking.type'].search([('code','ilike','outgoing'),('warehouse_id','=',warehouse.id),('for_emloyees_request','=',True),('default_location_src_id','=',rec.location_id.id)],limit=1)
 			if not picking_type_id:
 				raise ValidationError(_('There\'s a problem with the configuration. No picking type is found to handle employees need requests!!'))
-			
+
 
 			# location_id = self.env['stock.location'].search([('usage','=','internal'),('company_id','=',self.company_id.id)],limit=1)
 			location_id = rec.location_id
@@ -223,7 +250,7 @@ class KamilNeedRequisition(models.Model):
 			sp_lines = rec._prepare_sp_lines()
 			po = rec.env['purchase.request']
 			sp = rec.env['stock.picking']
-		
+
 			if sp_lines:
 				warehouse = rec.env['stock.warehouse'].search([('company_id','=',rec.company_id.id)],limit=1)
 				picking_type_id = rec.env['stock.picking.type'].search([('code','ilike','outgoing'),('for_emloyees_request','=',True),('warehouse_id','=',warehouse.id),('default_location_src_id','=',rec.location_id.id)],limit=1)
@@ -251,7 +278,7 @@ class KamilNeedRequisition(models.Model):
 							'move_ids_without_package':sp_lines,
 							'need_request_id':rec.id})
 				sp.action_assign()
-			
+
 			if po_lines:
 				po = po.create({
 							'company_id':rec.company_id.id,
@@ -261,6 +288,8 @@ class KamilNeedRequisition(models.Model):
 							'state':'purchase_department',
 							'line_ids':po_lines,
 							'need_request_id':rec.id,
+							'is_need_request':True
+
 							})
 
 			if sp and not po:
@@ -272,7 +301,7 @@ class KamilNeedRequisition(models.Model):
 
 	def action_view_picking(self):
 		sp = self.env['stock.picking'].search([('need_request_id','=',self.id)])
-		if sp:	
+		if sp:
 			return {
 			'name':_('Issuing Order'),
 			'type':'ir.actions.act_window',
@@ -287,7 +316,7 @@ class KamilNeedRequisition(models.Model):
 
 	def action_view_purchase(self):
 		pr = self.env['purchase.request'].search([('need_request_id','=',self.id)])
-		if pr:	
+		if pr:
 			return {
 			'name':_('Purchase Request'),
 			'type':'ir.actions.act_window',
@@ -299,7 +328,7 @@ class KamilNeedRequisition(models.Model):
 			}
 		else:
 			raise UserError(_('There\'s no associated purchase request to this need request, please check with purchasing department!!'))
-		
+
 
 
 	def unlink(self):
@@ -320,3 +349,24 @@ class KamilNeedRequisitionLine(models.Model):
 	date = fields.Date(string="Scheduled Date", required=True)
 	requests = fields.Many2one('need.requisition')
 
+	@api.onchange('item_id')
+	def _onchange_item_id(self):
+		if self.requests.warehouse_type:
+			warehouse_type = self.requests.warehouse_type
+			# البحث عن التصنيفات اللي ليها نفس نوع المخزن
+			categories = self.env['product.category'].search([('warehouse_type', '=', warehouse_type)])
+			if categories:
+				products = self.env['product.product'].search([('categ_id', 'in', categories.ids)])
+				return {
+					'domain': {
+						'item_id': [('id', 'in', products.ids)]
+					}
+				}
+			else:
+				raise ValidationError('--------------------------------')
+		# في حالة ما لقى حاجة، يرجع دومين فاضي (يعني مافي تقييد)
+		# return {
+		# 	'domain': {
+		# 		'item_id': []
+		# 	}
+		# }
