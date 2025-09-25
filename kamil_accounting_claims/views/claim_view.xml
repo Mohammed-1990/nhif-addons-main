@@ -91,6 +91,7 @@
 							<!-- <field name="amount_after_audit" required="1"/> -->
 							<field name="total_amount" required="1"/>
 							<field name="total_amount_in_words" required="1"/>
+							<field name="attachment"/>
 						</group>
 						<group>
 							<field name="claim_type" required="1"/>

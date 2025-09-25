@@ -1,0 +1,36 @@
+<odoo>
+	<data>
+		<record id="merge_product_wizard_form" model="ir.ui.view">
+			<field name='name'>Report merge product</field>
+			<field name='model'>merge.product.wizard</field>
+			<field name='arch' type='xml'>
+    			<form>
+    			    <sheet>
+                        <group col="4">
+                            <field name="company_id" readonly="1"/>
+                        </group>
+            	        <group col="4">
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+            	        </group>
+                        <footer>
+                            <button name='get_report' string='Print' type='object' class="oe_highlight"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+        			</sheet>
+                </form>
+    	    </field>
+        </record>
+
+        <record id="action_merge_product_wizard" model="ir.actions.act_window">
+            <field name="name">Report merge product</field>
+            <field name="res_model">merge.product.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+       </record>
+
+
+        <menuitem name="Report merge product" id="merge_product_wiz_menu" parent="stock.menu_warehouse_report" action="action_merge_product_wizard" sequence="162"/>
+
+	</data>
+</odoo>

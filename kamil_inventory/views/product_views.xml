@@ -10,7 +10,16 @@
                 <field name="parent_id"/>
                 <field name="warehouse_type"/>
             </field>
-        </field>
+
+        <xpath expr="//group" position="before">
+          <group col="4">
+              <field name="long_name" invisible="True" force_save="1"/>
+            <field name="short_code" required="True"/>
+            <field name="code" readonly="True" force_save="1"/>
+<!--              <field name="active" invisible="1"/>-->
+          </group>
+        </xpath>
+         </field>
     </record>
 
     <!--    -->

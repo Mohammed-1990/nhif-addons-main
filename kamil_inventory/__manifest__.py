@@ -33,6 +33,7 @@
         'data/scrap_data.xml',
         'data/stock_picking_data.xml',
         'data/determine_need_consumption_sequence.xml',
+        'data/short_code_seq.xml',
 
         'views/res_config_views.xml',
         'views/need_request_views.xml',

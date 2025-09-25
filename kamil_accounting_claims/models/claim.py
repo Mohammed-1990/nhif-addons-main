@@ -24,6 +24,8 @@ class Claim(models.Model):
 	state = fields.Selection([('draft','Draft'),('Auditors Audited','Auditors Audited'),('Internal Auditor Audited', 'Internal Auditor Audited'),('General Manager Approved', 'General Manager Approved'),('Transfered to Director of Financial and Administrative Affairs', 'Transfered to Director of Financial and Administrative Affairs'),('Transfered to Director of Financial Affairs', 'Transfered to Director of Financial  Affairs'), ('Transfered to Ratifications Department', 'Transfered to Ratifications Department') ], default='draft',track_visibility='always')
 	line_ids = fields.One2many('claim.line', 'claim_id', copy=True)
 	ratification_line_ids = fields.One2many('ratification.line', 'claim_id', copy=True)
+	attachment = fields.Binary( track_visibility="always")
+
 
 	company_id = fields.Many2one('res.company', default= lambda self:self.env.user.company_id.id)
 	

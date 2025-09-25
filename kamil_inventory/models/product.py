@@ -12,10 +12,53 @@ class productCategory(models.Model):
     warehouse_type = fields.Selection([('tasks', 'Tasks Warehouse'), ('laboratories', 'Laboratories Warehouse'),
                                        ('medical_supplies', 'Medical Supplies Warehouse'),
                                        ('medicine', 'Medicine Warehouse')], default='tasks', )
+    short_code = fields.Char(size=2, )
+    code = fields.Char(compute='set_code_name', store=True)
+    long_name = fields.Char(string="Display Name", compute='set_code_name', store=True)
+    active = fields.Boolean(default=True)
+
 
     @api.onchange('property_account_expense_categ_id')
     def onchange_property_account_expense_categ_id(self):
         self.budget_item_id = self.property_account_expense_categ_id.parent_budget_item_id.id
+
+    @api.onchange('short_code')
+    def _onchange_short_code(self):
+        try:
+            int(self.short_code)
+            if self.short_code and len(self.short_code) != 2:
+                raise UserError(_('Please make code 2 integers'))
+        except:
+            raise UserError(_('Please make code 2 integers'))
+
+    @api.onchange('name', 'short_code', 'warehouse_type')
+    def set_code_name(self):
+        for rec in self:
+            if rec.warehouse_type and rec.short_code:
+                if rec.warehouse_type == 'tasks':
+                    rec.code = "TA"+ '' + str(rec.short_code)
+                elif rec.warehouse_type == 'laboratories':
+                    rec.code = "LA"+ '' + str(rec.short_code)
+                elif rec.warehouse_type == 'medicine':
+                    rec.code = "M"+ '' + str(rec.short_code)
+                elif rec.warehouse_type == 'medical_supplies':
+                    rec.code = "MS"+ '' + str(rec.short_code)
+            else:
+                rec.code = 'NEW'
+            # if rec.code != 'NEW' and rec.name:
+            if not rec.warehouse_type and rec.name:
+                rec.long_name = '[' + rec.code + '] ' + rec.name
+
+    def update_products_code(self):
+        # Change products code
+        if self.code:
+            for product in self.env['product.template'].search([('categ_id', '=', self.id)]):
+                if product.categ_id and product.short_code:
+                    product.write({'code': self.code + '' + str(product.short_code)})
+                else:
+                    product.code = 'NEW'
+                if product.code != 'NEW' and product.name:
+                    product.write({'long_name': '[' + product.code + '] ' + product.name})
 
 
 class productProduct(models.Model):

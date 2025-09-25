@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+	<!-- merge product Report-->
+	<report
+		id="merge_product_report"
+		model="merge.product.wizard"
+		string="merge Product Report"
+		report_type="qweb-html"
+		name="merge_products.merge_product_tem"
+	/>
+
+
+	<!-- merge product Template-->
+	<template id="merge_product_tem">
+		<t t-call="web.external_layout">
+			<t t-call="web.html_container">
+			<div class="page" style="page-break-inside: avoid;">
+                <div class="text-center" style="font:700;">
+                        <strong>
+                        	تقرير دمج الاصناف
+                        </strong>
+                    </div><br/>
+                    <table style="margin:10px;width:100%;" dir="rtl">
+                      
+                        <th class="text-right" >التاريخ  من : <span t-esc="date_from"/></th>
+                        <th class="text-right" >التاريخ الي : <span t-esc="date_to"/></th>
+                        <th class="text-right">الفرع : <span t-esc="company_id"/></th>
+
+                    </table>
+                    <!-- </div> -->
+                <table style="margin:10px;width:100%;" dir="rtl" class="table-bordered">
+                     <thead style="display: table-header-group;">
+                        <tr class="table-active">
+                          <th class="text-center fit">#</th>
+                          <th class="text-center fit">الرقم المتسلسل</th>
+                          <th class="text-center fit">الصنف الذي تم دمجه</th>
+                          <th class="text-center fit">الفئة</th>
+                            <th class="text-center fit">الموقع</th>
+                          <th class="text-center fit">الكمية</th>
+                          <th class="text-center fit">الصنف الجديد</th>
+                            <th class="text-center fit">الفئة</th>
+                            <th class="text-center fit">الموقع</th>
+                          <th class="text-center fit">الكمية</th>
+                         <th class="text-center fit">الكمية بعد الدمج</th>
+                         <th class="text-center fit">تاريخ الدمج</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="count" t-value="1"/>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr style="page-break-inside: avoid;">
+                                <td class="text-center">
+                                    <span t-esc="count"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['name']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['remove_product_id']"/>
+                                </td> 
+                                <td class="text-center">
+                                    <span t-esc="doc['remove_product_categ']"/>
+                                </td>
+                                 <td class="text-center">
+                                    <span t-esc="doc['remove_product_location']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['remove_product_qty']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['new_product_id']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['new_product_categ']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['new_product_location']"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="doc['new_product_qty']"/>
+                                </td>
+
+                                <td class="text-center">
+                                    <span t-esc="doc['total']"/>
+                                </td>
+
+                                <td class="text-center">
+                                    <span t-esc="doc['date']"/>
+                                </td>
+                            </tr>
+                            <t t-set="count" t-value="count+1"/>
+                        </t>
+                        <t t-if="docs==[]">
+                            <tr>
+                                <td colspan="9" class="text-center">لا تـــوجـــــــد بيــانات</td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

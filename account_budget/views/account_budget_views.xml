@@ -86,6 +86,7 @@ Budgets
                     <group>
                         <group>
                             <field name="user_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="attachment" attrs="{'readonly':[('state','!=','draft')]}"/>
                         </group>
                         <group>
                             <label for="date_from" string="Period"/>

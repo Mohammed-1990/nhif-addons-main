@@ -1,0 +1,12 @@
+<odoo>
+	<data>
+        <record id="product_short_code" model="ir.sequence">
+            <field name="name">product short code</field>
+            <field name="code">product.short.code</field>
+            <field name="prefix"></field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

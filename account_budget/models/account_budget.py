@@ -59,6 +59,8 @@ class CrossoveredBudget(models.Model):
         states={'done': [('readonly', True)]}, copy=True)
     company_id = fields.Many2one('res.company', 'Company', required=True,
         default=lambda self: self.env['res.company']._company_default_get('account.budget.post'))
+    attachment = fields.Binary(track_visibility="always")
+
 
     @api.multi
     def action_budget_confirm(self):
